@@ -1,0 +1,109 @@
+# Protocol
+
+How we run Claude Opus 5.5 on the experiments of *Sparks of Weight-Space Programming*: which setting comes from where,
+and every known difference from the original.
+
+**Sources.** *blog* = the post (https://rikiyat.github.io/blog/weight-space-programming/). *repo* = the authors' logs,
+pinned here as `upstream/` (RikiyaT/lm_understand-logs @ `4d09ba6`): mostly its `README.md` files and the per-turn
+`run.json` records. The blog states the experiment setups but not how the model was called; everything about the
+model call comes from the repo.
+
+## Model call
+
+| Setting | Original (Astra) | Source | Ours |
+|---|---|---|---|
+| Model | `gpt-6-astra` ("GPT-6 Astra") | blog, repo README | `claude-opus-5-5` |
+| Interface | Codex CLI: one `codex exec` per turn, `codex exec resume <thread>` to continue, prompt on stdin | repo README, `run.json` `cmd` | Claude Agent SDK (Python): one `query()` per turn, `resume=<session_id>` to continue |
+| Built-in tools | all disabled; every turn's event stream audited tool-free | `harness/codex_config.toml`, repo README | `tools=[]`; every turn audited for tool calls |
+| System prompt | `Answer the user's request.` | `harness/instructions.md` | the same line, preceded by Claude Code's fixed line (see Deviations) |
+| Reasoning effort | `high`: exps 1, 2, 4. `xhigh`: exps 3, 5, 6, 7. `max`: exp 8 | `run.json` (not stated in the blog) | the same level names |
+| Reasoning summaries | `detailed` in exps 1, 2, 5, 7; none in 3, 4, 6, 8 | `run.json` | `summarized` in every experiment |
+| Context and compaction | `model_context_window=872000`, `model_auto_compact_token_limit=1000000` (above the window, so it never triggers) | `run.json` | 1M window, `DISABLE_AUTO_COMPACT=1` |
+| Sampling | no temperature or seed set in any of the 1,125 calls | `run.json` | none (Opus 5.5 does not accept one) |
+| Max output tokens | not recorded | none | 128,000 |
+| Model fallback | none | none | none |
+| Prompt text | `prompt.txt` / `message.txt` per run | repo | sent byte for byte |
+| Samples per item | 1 | repo runs; blog ("in a single try") | 1 first; up to 4 more added later as samples 2-5 |
+
+## Isolation of the model call
+
+Claude Code adds context of its own unless told not to. With SDK defaults, a request carries `CLAUDE.md` files,
+auto-memory, `@path` file contents, about ten `<system-reminder>` blocks, today's date and 12 tools, at effort
+`medium`. Our configuration:
+
+```python
+ClaudeAgentOptions(
+    model="claude-opus-5-5",
+    system_prompt="Answer the user's request.",
+    tools=[],                      # no built-in tools
+    setting_sources=[],            # no user/project/local settings, no CLAUDE.md
+    strict_mcp_config=True,        # no MCP servers
+    verbatim_prompts=True,         # no @path expansion, no slash commands, no per-turn attachments
+    extra_args={"bare": None},     # --bare: no hooks, plugins, auto-memory
+    effort=...,                    # per experiment, see above
+    thinking={"type": "adaptive", "display": "summarized"},
+    max_buffer_size=16 * 1024 * 1024,   # default is 1 MB; the exp4 prompt alone is 0.58 MB
+    cwd=<empty run folder>,
+    env={"CLAUDE_CONFIG_DIR": <fresh folder per run>, "DISABLE_AUTO_COMPACT": "1",
+         "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "128000", "CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS": "1",
+         "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1", "ANTHROPIC_API_KEY": <from .env>},
+)
+```
+
+The runner also removes every inherited `CLAUDE*` / `ANTHROPIC*` environment variable before starting the SDK, because
+the SDK passes its parent's environment to Claude Code (a parent Claude Code session sets `CLAUDE_EFFORT`, among
+others).
+
+**How this was verified.** The SDK was pointed at a local stand-in for the API (dummy key, `ANTHROPIC_BASE_URL` on
+localhost) that records every request body. Marker strings were planted in a `CLAUDE.md`, an auto-memory file and an
+`@`-mentioned file. With SDK defaults all three reached the request; with the configuration above none did, the user
+message was the prompt byte for byte, no tools were sent, effort and thinking were as set, and a resumed second turn
+re-sent the history unchanged. The check needs no API key and costs nothing; it is re-run before each batch.
+
+## Known deviations from the original
+
+1. **System prompt.** Claude Code sends two blocks before the original line: a billing-header line
+   (`x-anthropic-billing-header: ...`; we don't know whether the model sees it) and
+   `You are a Claude agent, built on Anthropic's Claude Agent SDK.` The original Codex setup also added context of its
+   own, about 3.5K tokens judging from the reported token counts, with contents not released. A plain-API cross-check on
+   exp1 will show whether the extra sentence matters.
+2. **Reasoning summaries** are requested in every experiment, not only exps 1, 2, 5, 7. Per Anthropic's documentation,
+   this changes what is returned, not the reasoning itself.
+3. **Effort levels** have the same names on both models but are not calibrated to each other.
+4. **Output cap** is 128K tokens. The original cap is not recorded; Astra's longest reply was about 29K output tokens.
+
+## Retries (from the original logs)
+
+The rules below are observed in the authors' harness logs, not documented by them.
+
+- Failed call: retry after 60, 120, 240, then 480 s.
+- Usage or rate limit: retry after 900, 1,350, 2,025, then 3,038 s.
+- Empty final reply: discard it, wait 60 s, and send the same first message again in a new conversation (exp3
+  `english_r0`).
+
+## Scoring
+
+- Each scorer is validated on Astra's released answers, where it must reproduce the original scores, and is frozen
+  before any Opus answer is scored.
+- Where the original rule is not released (the exp1 and exp2 keyword rules), ours is written down in the scorer and
+  agreed before use.
+- Each environment and evaluator is checked against Astra's released artifacts before any Opus run, for example the
+  exp4 base network at 0/256 and the exp5 networks at about 517 / 53 / 53.
+- Where the original seeds are not recorded (exps 4, 5), comparisons are statistical, not exact.
+
+## Order of work
+
+1. Smoke test with the real key: exp1 Breakout and exp5 Breakout.
+2. The rest of exps 1, 2 and 5, one sample each.
+3. The exp4 model call; scored once the Kinetix evaluation reproduces the original base result.
+4. The multi-turn experiments (3, 6, 7, 8). Their harness gaps (listed below) get designed and written down here
+   before any run.
+
+## Open: multi-turn harness gaps
+
+Never observed in the original logs, so the original behaviour is unknown:
+
+- exp6: the reminder text sent when the model answers with passes left.
+- all: handling of a reply with several code blocks, or prose next to a block.
+- all: behaviour when a run or pass limit is reached, and the message for a failed request.
+- exp3: the sandbox prelude that preloads the weights as `W` (its code is not released; described in `message.txt`).
