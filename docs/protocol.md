@@ -189,6 +189,11 @@ against a random player also match within noise. A written network is scored aga
 PPO networks and a random player, 2,000 games each. The practice and hidden opponents of the original are not
 released and are not rebuilt yet.
 
+**exp6 run notes (budget 0).** The 9 code runs and the model's design scripts in `work/` only build weights from
+formulas and compare arrays; none runs the network, trains or searches. About 5 % of its games (80-95 of 2,000 per
+opponent) are lost by its own repeating move, mostly a three-move cycle: it plays into a two-stone self-atari, the
+opponent captures, and its capture bonus makes it retake one stone, which repeats the earlier board.
+
 ## Open: multi-turn harness gaps
 
 Never observed in the original logs, so the original behaviour is unknown:

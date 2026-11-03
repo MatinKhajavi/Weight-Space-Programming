@@ -1,0 +1,25 @@
+OUTPUT of Python run 6 of at most 120:
+```
+
+PAR=dict(K=1.0,wcap=10,wsave=12,wn=0.7,wt=0.5,wemp=0.1,watk=1.5,wlo=0.5,
+         wSA=-13.0,wE2=-15.0,wIO=-2.0,wIX=-1.0,wCS=0.5,
+         ring={0:-3.0,1:-1.5,2:0.3,3:0.8,4:2.0},passlogit=-4.0)
+def build_L6_out(PA=PAR):
+    W6=np.zeros((H,H),np.float32); B6=np.zeros(H,np.float32)
+    def set6(tgt,ex):
+        for k,v in ex.d.items(): W6[k,tgt]+=v
+        B6[tgt]+=ex.c
+    K=PA['K']
+    for p in pts:
+        nb=NB[p]; deg=len(nb)
+        nO=Esum(V(U(0,q)) for q in nb); nX=Esum(V(U(1,q)) for q in nb)
+        a=Esum(V(U(2,q)) for q in nb)
+        cap=Esum(V(U(3,q)) for q in nb)
+        atk=Esum(V
+L5 LO (8,4):
+O(7, 4):-2 O(8, 3):-2 O(8, 4):+3 O(8, 5):-2 X(7, 4):+1 X(8, 3):+1 X(8, 5):+1 | bias -3.0
+L6 Lin (1,1):
+O(0, 0):-0.1 O(0, 1):-0.8 O(0, 2):-0.1 O(1, 0):-0.8 O(1, 2):-0.8 O(1, 3):-0.1 O(2, 0):-0.1 O(2, 1):-0.8 O(2, 2):-0.1 O(3, 1):-0.1 X(0, 0):-0.1 X(0, 1):-0.3 X(0, 2):-0.1 X(1, 0):-0.3 X(1, 2):-0.3 X(1, 3):-0.1 X(2, 0):-0.1 X(2, 1):-0.3 X(2, 2):-0.1 X(3, 1):-0.1 AO(0, 1):+12 AO(1, 0):+12 AO(1, 2):+12 AO(2, 1):+12 AX(0, 1):+9.5 AX(1, 0):+9.5 AX(1, 2):+9.5 AX(2, 1):+9.5 LX(0, 1):+1.5 LX(1, 0):+1.5 LX(1, 2):+1.5 LX(2, 1):+1.5 LO(0, 1):+0.5 LO(1, 0):+0.5 LO(1, 2):+0.5 LO(2, 1):+0.5 | bias 4.8
+['L1.W', 'L1.b', 'L2.W', 'L2.b', 'L3.W', 'L3.b', 'L4.W', 'L4.b', 'L5.W', 'L5.b', 'L6.W', 'L6.b', 'out.W', 'out.b'] [-4. -4. -4. -4. -4. -4. -4. -4. -4. -4.] -4.0
+
+```

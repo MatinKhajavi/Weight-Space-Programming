@@ -1,0 +1,22 @@
+OUTPUT of Python run 9 of at most 120:
+```
+L2 match 0.0 0.0
+L3 match 0.0 0.0 L4 0.0
+L1 match 0.0 0.0
+inp check 64 64 21
+L1.W 0.0
+L1.b 0.0
+L2.W 0.0
+L2.b 0.0
+L3.W 0.0
+L3.b 0.0
+L4.W 0.0
+L4.b 0.0
+L5.W 0.0
+L5.b 0.0
+L6.W 0.0
+L6.b 0.0
+out.W 0.0
+out.b 0.0
+
+```

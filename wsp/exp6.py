@@ -213,7 +213,6 @@ def score(out: Path) -> dict:
     net = saved_net(out / "work")
     opponents = {f"ppo_same_size_s{s}": load_net(NETS / f"ppo_same_size_lr3e-5_s{s}") for s in range(3)}
     res = evaluate({**{k: (net, v) for k, v in opponents.items()}, "random": (net, zero_net())})
-    np.savez(out / "network.npz", **net)
     return {"nonzero": int(sum(np.count_nonzero(v) for v in net.values())), **res}
 
 
