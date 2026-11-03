@@ -162,11 +162,11 @@ model is asked for its final answer. The ban on forward passes is checked afterw
 authors did.
 
 **exp3 run notes.**
-- One earlier start (Python network) is not among the six reported conversations and is kept out of the repo pending
-  a decision. In its first reply the model ran no code: it wrote about 63 made-up tool calls with made-up outputs as
-  text (`{"tool":"code",...}` / `{"tool":"code_output",...}`), ran past the output cap and was resumed, and its final
-  answer rests on those made-up outputs. Under the original rules it would count as a sample (corpus python, order
-  shuffled, no copying head named). It was replaced by a new start; 1 of 7 starts failed this way.
+- Python s3 (the first of the seven starts) ran no code. In its first reply the model wrote about 63 made-up tool
+  calls with made-up outputs as text (`{"tool":"code",...}` / `{"tool":"code_output",...}`), ran past the output cap
+  and was resumed, and its final answer rests on those made-up outputs. Under the original rules a reply without a
+  code block is the final answer, so it counts as a sample (corpus python, order shuffled, no copying head named),
+  marked ‡. The other six conversations were started after it.
 - The ban on forward passes was checked by reading all 232 code runs: none runs the network or a layer on an input.
   One borderline run (Python s2, run 45) applies a ReLU to z-scored layer-0 MLP pre-activations of directions
   estimated from the weights; it is not the network's own computation (no LayerNorm, bias or output projection), and the

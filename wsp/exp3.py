@@ -57,9 +57,9 @@ def step(language: str, out: Path):
 def parse(answer: str) -> dict:
     labels = "|".join(LABELS)
     heads = {}
-    for l, a, l2, b, lab in re.findall(rf"^\W*L(\d)\s*H(\d)\s*[-–—]+\s*L(\d)\s*H(\d)\W*:?\W*({labels})\b", answer,
+    for l, a, l2, b, lab in re.findall(rf"^\W*L(\d)\s*H(\d)\s*(?:[-–—]+|to)\s*L(\d)\s*H(\d)\W*:?\W*({labels})\b", answer,
                                       re.I | re.M):
-        if l == l2:   # a range such as "L1H0 – L1H5 local" (the prompt asks for one line per head)
+        if l == l2:   # a range such as "L1H0 – L1H5 local" or "L2H0 to L2H5: broad" (the prompt asks for one line per head)
             heads.update({f"L{l}H{h}": lab.lower() for h in range(int(a), int(b) + 1)})
     heads.update({f"L{l}H{h}": lab.lower() for l, h, lab in
                   re.findall(rf"^\W*L(\d)\s*H(\d)\W*:?\W*({labels})\b", answer, re.I | re.M)})

@@ -4,8 +4,8 @@ A replication of [*Sparks of Weight-Space Programming: LLMs can natively read & 
 weights*](https://rikiyat.github.io/blog/weight-space-programming/) (Takehi, Teoh, Zhang, Khattab; MIT CSAIL,
 November 2026), running its eight experiments with **Claude Opus 5.5** in place of GPT-6 Astra.
 
-**Status:** experiments 1-5 and exp6 with 0 passes done for Claude Opus 5.5 (exp3: two conversations per network,
-the rest one sample per item); exp6 with passes, 7 and 8 in progress.
+**Status:** experiments 1-5 and exp6 with 0 passes done for Claude Opus 5.5 (exp3: seven conversations, the
+rest one sample per item); exp6 with passes, 7 and 8 in progress.
 
 ## What this is
 
@@ -42,7 +42,7 @@ Every setting, where it comes from, and every known deviation from the original 
 |---|---|---|
 | 1. Which game | 4/4 correct (confidence 65-85 %) | 4/4 (96-99 %) |
 | 2. Which shape | 3/3 correct (45-60 %) | 3/3 (77-88 %) |
-| 3. Which language (2 conversations each) | corpus right in 3 of 6 (never romaji); all 10 copying heads found, 2 extra | 6 of 6; all 10 found, none extra |
+| 3. Which language (7 conversations: 3 Python, 2 romaji, 2 English) | corpus right in 4 of 7 (never romaji); copying heads all found in 6, none named in 1‡; 2 extra | 6 of 6; all found, none extra |
 | 4. Fix the car | 1,024/1,024 successes, 1.7 % of weights changed | 1,024/1,024, 3.5 % |
 | 5. Breakout | 483.6\* | 517.4 (506.5 in our evaluator) |
 | 5. Seaquest | 11.4\*\* | 53.1 (52.0) |
@@ -56,6 +56,8 @@ steps. Opus beats the 100M-step PPO networks in all three games, as Astra does.
 \*\* The cap was reached while still thinking; the answer comes from a second attempt that started over after Claude
 Code's "Output token limit hit ... Break remaining work into smaller pieces" message; the cut reply scores 0.1. See
 [docs/protocol.md](docs/protocol.md), deviation 5.
+‡ Python s3 ran no code: its reply wrote made-up tool calls and outputs as text, and its answer rests on them
+(docs/protocol.md, exp3 run notes). Under the original rules it counts as a sample.
 
 ## Setup
 
