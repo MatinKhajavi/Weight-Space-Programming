@@ -25,6 +25,8 @@ model call comes from the repo.
 | Prompt text | `prompt.txt` / `message.txt` per run | repo | sent byte for byte |
 | Samples per item | 1 | repo runs; blog ("in a single try") | 1 first; up to 4 more added later as samples 2-5 |
 
+Each run is stored in `runs/<model>/<exp>/<item>/s<sample>/`.
+
 ## Isolation of the model call
 
 Claude Code adds context of its own unless told not to. With SDK defaults, a request carries `CLAUDE.md` files,

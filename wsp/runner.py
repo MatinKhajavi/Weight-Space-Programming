@@ -1,10 +1,10 @@
 """Single-turn runner: send one upstream prompt to Claude Opus 5.5 through the Agent SDK, set up as in
 docs/protocol.md, and log the run.
 
-  python -m wsp.runner run <exp> <item> [--sample K]
-  python -m wsp.runner score <exp> <item> [--sample K]
+  python -m wsp.runner run <exp> <item> [--model M] [--sample K]
+  python -m wsp.runner score <exp> <item> [--model M] [--sample K]
 
-Run folder: runs/<exp>/<item>/s<K>/ with answer.md, thinking.md, messages.jsonl, run.json (and score.json).
+Run folder: runs/<model>/<exp>/<item>/s<K>/ with answer.md, thinking.md, messages.jsonl, run.json (and score.json).
 """
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 UP = ROOT / "upstream"
 RUNS = ROOT / "runs"
-MODEL = "claude-opus-5-5"
+MODELS = ["claude-opus-5-5", "claude-fable-5-1"]
 SYSTEM_PROMPT = "Answer the user's request."
 BUDGET_USD_PER_CALL = 20.0
 
@@ -62,10 +62,10 @@ def read_dotenv(path: Path = ROOT / ".env") -> dict[str, str]:
     return out
 
 
-def options(effort: str, cwd: Path, home: Path, env_extra: dict[str, str]):
+def options(model: str, effort: str, cwd: Path, home: Path, env_extra: dict[str, str]):
     from claude_agent_sdk import ClaudeAgentOptions
     return ClaudeAgentOptions(
-        model=MODEL,
+        model=model,
         system_prompt=SYSTEM_PROMPT,
         tools=[],
         setting_sources=[],
@@ -107,36 +107,36 @@ def _prompt(exp: str, item: str) -> tuple[str, str, str]:
     return (UP / rel).read_text(encoding="utf-8"), effort, rel
 
 
-def _count_tokens(prompt: str, key: str) -> int | None:
+def _count_tokens(model: str, prompt: str, key: str) -> int | None:
     try:
         import anthropic
         r = anthropic.Anthropic(api_key=key).messages.count_tokens(
-            model=MODEL, system=SYSTEM_PROMPT, messages=[{"role": "user", "content": prompt}])
+            model=model, system=SYSTEM_PROMPT, messages=[{"role": "user", "content": prompt}])
         return r.input_tokens
     except Exception as e:
         print("count_tokens failed:", type(e).__name__, str(e)[:200])
         return None
 
 
-def run(exp: str, item: str, sample: int) -> Path:
+def run(model: str, exp: str, item: str, sample: int) -> Path:
     prompt, effort, rel = _prompt(exp, item)
     key = read_dotenv().get("ANTHROPIC_API_KEY", "")
     if not key.startswith("sk-ant-"):
         sys.exit("No ANTHROPIC_API_KEY in .env (expected a value starting with sk-ant-). Nothing was sent.")
-    out = RUNS / exp / item / f"s{sample}"
+    out = RUNS / model / exp / item / f"s{sample}"
     if out.exists():
         sys.exit(f"{out} already exists; refusing to overwrite.")
-    record = {"experiment": exp, "item": item, "sample": sample, "model": MODEL, "effort": effort,
+    record = {"experiment": exp, "item": item, "sample": sample, "model": model, "effort": effort,
               "system_prompt": SYSTEM_PROMPT, "prompt_file": f"upstream/{rel}",
               "prompt_sha256": hashlib.sha256(prompt.encode()).hexdigest(), "prompt_chars": len(prompt),
-              "prompt_tokens": _count_tokens(prompt, key), "versions": _versions(), "attempts": []}
+              "prompt_tokens": _count_tokens(model, prompt, key), "versions": _versions(), "attempts": []}
     for attempt in range(len(WAITS_FAILURE) + 1):
         tmp = Path(tempfile.mkdtemp(prefix="wsp_run_"))
         (tmp / "cwd").mkdir()
         t0 = time.time()
         msgs, err = [], None
         try:
-            msgs = asyncio.run(_ask(prompt, options(effort, tmp / "cwd", tmp / "home", {"ANTHROPIC_API_KEY": key})))
+            msgs = asyncio.run(_ask(prompt, options(model, effort, tmp / "cwd", tmp / "home", {"ANTHROPIC_API_KEY": key})))
         except Exception as e:
             err = f"{type(e).__name__}: {e}"[:2000]
         shutil.rmtree(tmp, ignore_errors=True)
@@ -214,8 +214,8 @@ def _score_text(exp: str, item: str, answer: str, out: Path | None) -> dict:
     raise SystemExit(f"no scorer for {exp} yet")
 
 
-def score(exp: str, item: str, sample: int) -> dict:
-    out = RUNS / exp / item / f"s{sample}"
+def score(model: str, exp: str, item: str, sample: int) -> dict:
+    out = RUNS / model / exp / item / f"s{sample}"
     res = _score_text(exp, item, (out / "answer.md").read_text(encoding="utf-8"), out)
     if (out / "answer_cut.md").exists():
         res["cut_at_output_cap"] = _score_text(exp, item, (out / "answer_cut.md").read_text(encoding="utf-8"), None)
@@ -229,12 +229,13 @@ if __name__ == "__main__":
     ap.add_argument("cmd", choices=["run", "score"])
     ap.add_argument("exp", choices=list(ITEMS))
     ap.add_argument("item")
+    ap.add_argument("--model", choices=MODELS, default=MODELS[0])
     ap.add_argument("--sample", type=int, default=1)
     a = ap.parse_args()
     if a.item not in ITEMS[a.exp]:
         sys.exit(f"unknown item {a.item!r}; choose from {list(ITEMS[a.exp])}")
     if a.cmd == "run":
         scrub_inherited_env()
-        run(a.exp, a.item, a.sample)
+        run(a.model, a.exp, a.item, a.sample)
     else:
-        score(a.exp, a.item, a.sample)
+        score(a.model, a.exp, a.item, a.sample)
