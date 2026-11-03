@@ -25,8 +25,6 @@ UP = ROOT / "upstream"
 RUNS = ROOT / "runs"
 MODELS = ["claude-opus-5-5", "claude-fable-5-1"]
 SYSTEM_PROMPT = "Answer the user's request."
-BUDGET_USD_PER_CALL = 20.0
-SPEND_CAP_USD = 290.0   # across every recorded run; no new call starts above it
 
 # experiment -> item -> (prompt file in upstream, Astra's effort)
 ITEMS = {
@@ -82,7 +80,6 @@ def options(model: str, effort: str, cwd: Path, home: Path, env_extra: dict[str,
         thinking={"type": "adaptive", "display": "summarized"},
         max_buffer_size=16 * 1024 * 1024,
         max_turns=1,
-        max_budget_usd=BUDGET_USD_PER_CALL,
         cwd=str(cwd),
         env={"CLAUDE_CONFIG_DIR": str(home), "DISABLE_AUTO_COMPACT": "1",
              "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "128000", "CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS": "1",
@@ -113,17 +110,6 @@ def _prompt(exp: str, item: str) -> tuple[str, str, str]:
     return (UP / rel).read_text(encoding="utf-8"), effort, rel
 
 
-def _count_tokens(model: str, prompt: str, key: str) -> int | None:
-    try:
-        import anthropic
-        r = anthropic.Anthropic(api_key=key).messages.count_tokens(
-            model=model, system=SYSTEM_PROMPT, messages=[{"role": "user", "content": prompt}])
-        return r.input_tokens
-    except Exception as e:
-        print("count_tokens failed:", type(e).__name__, str(e)[:200])
-        return None
-
-
 def api_key() -> str:
     key = read_dotenv().get("ANTHROPIC_API_KEY", "")
     if not key.startswith("sk-ant-"):
@@ -131,16 +117,10 @@ def api_key() -> str:
     return key
 
 
-def spent_usd() -> float:
-    return sum(json.loads(p.read_text()).get("total_cost_usd") or 0 for p in RUNS.rglob("run.json"))
-
-
 def call(model, effort, prompt, key, cwd, home, resume=None, rewind_to=None) -> tuple[list, dict, str, list]:
     """One reply, with the original harness's retries. A retry inside a conversation rewinds it to `rewind_to`."""
     attempts = []
     for attempt in range(len(WAITS_FAILURE) + 1):
-        if spent_usd() > SPEND_CAP_USD:
-            raise RuntimeError(f"spend cap of ${SPEND_CAP_USD} reached")
         t0 = time.time()
         msgs, err = [], None
         opts = options(model, effort, cwd, home, {"ANTHROPIC_API_KEY": key}, resume, rewind_to if attempt else None)
@@ -192,9 +172,7 @@ def save_reply(out: Path, msgs: list, answer: str) -> dict:
                 if isinstance(b, dict):
                     b.pop("signature", None)  # opaque blob the API uses to verify thinking; no content
             f.write(json.dumps(m, default=str) + "\n")
-    every_text = "".join(b.get("text", "") for m in asst for b in m.get("content", []))
     return {"resumed_after_output_cap": bool(injected), "injected_messages": injected,
-            "fake_tool_calls": len(re.findall(r'\{"tool":\s*"', every_text)),  # tool calls written out as text
             "refused": any(m.get("stop_reason") == "refusal" for m in asst),
             "session_id": result.get("session_id"), "last_uuid": asst[-1].get("uuid") if asst else None,
             "usage": result.get("usage"), "model_usage": result.get("model_usage"),
@@ -213,7 +191,7 @@ def run(model: str, exp: str, item: str, sample: int) -> Path:
     record = {"experiment": exp, "item": item, "sample": sample, "model": model, "effort": effort,
               "system_prompt": SYSTEM_PROMPT, "prompt_file": f"upstream/{rel}",
               "prompt_sha256": hashlib.sha256(prompt.encode()).hexdigest(), "prompt_chars": len(prompt),
-              "prompt_tokens": _count_tokens(model, prompt, key), "versions": _versions()}
+              "versions": _versions()}
     with tempfile.TemporaryDirectory(prefix="wsp_run_") as tmp:
         (Path(tmp) / "cwd").mkdir()
         try:
@@ -224,7 +202,7 @@ def run(model: str, exp: str, item: str, sample: int) -> Path:
     record.update({"attempts": attempts, "wall_s": attempts[-1]["wall_s"], **save_reply(out, msgs, answer)})
     (out / "run.json").write_text(json.dumps(record, indent=1, default=str), encoding="utf-8")
     print(json.dumps({k: record[k] for k in ("experiment", "item", "sample", "wall_s", "usage", "total_cost_usd",
-                                             "refused", "prompt_tokens", "audit")}, indent=1, default=str))
+                                             "refused", "audit")}, indent=1, default=str))
     return out
 
 

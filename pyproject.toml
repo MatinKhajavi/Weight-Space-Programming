@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "Replication of 'Sparks of Weight-Space Programming' with Claude Opus 5.5"
 requires-python = ">=3.11"
 dependencies = [
-    "anthropic>=2.4.0",
     "claude-agent-sdk==0.2.177",
     "minatar==1.0.15",
     "modal>=1.6.3",
@@ -12,7 +11,10 @@ dependencies = [
 ]
 
 [dependency-groups]
-dev = ["pytest>=8"]
+dev = [
+    "anthropic>=2.4.0",
+    "pytest>=8",
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -60,8 +60,9 @@ others).
 localhost) that records every request body. Marker strings were planted in a `CLAUDE.md`, an auto-memory file and an
 `@`-mentioned file. With SDK defaults all three reached the request; with the configuration above none did, the user
 message was the prompt byte for byte, no tools were sent, effort and thinking were as set, and a resumed second turn
-re-sent the history unchanged. This check is local tooling and is not part of the repo. Each run also records the
-prompt's token count next to the API's reported input tokens, so injected context would show up as a gap.
+re-sent the history unchanged. This check is local tooling and is not part of the repo. Another local check compares
+each prompt's token count with the API's reported input tokens, so injected context would show up as a gap; run
+records written before 2026-11-03 also carry that count as `prompt_tokens`.
 
 ## Known deviations from the original
 
@@ -94,8 +95,8 @@ prompt's token count next to the API's reported input tokens, so injected contex
    For Fable 5.1 Claude Code records `maxOutputTokens` 64,000, but its replies were cut at about 128,000 tokens.
 6. **Tool calls written as text.** With no tools available, a reply can contain made-up tool calls and made-up
    outputs written as text (`{"tool":"code",...}` / `{"tool":"code_output",...}`) instead of the protocol's code block.
-   Each reply's count is recorded as `fake_tool_calls` in its `run.json`. Under the original rules a reply without a
-   code block is the final answer.
+   A local check counts them in every reply; run records written before 2026-11-03 also carry the count as
+   `fake_tool_calls`. Under the original rules a reply without a code block is the final answer.
 
 ## Retries (from the original logs)
 
