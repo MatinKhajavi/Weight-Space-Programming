@@ -1,0 +1,28 @@
+OUTPUT of run 54 of at most 100:
+```
+L0H0 self-pair (centered) mean -0.002  space(26) -0.008  min tok 12 -0.012  max tok 6 +0.003
+L0H1 self-pair (centered) mean +0.016  space(26) -0.004  min tok 23 -0.006  max tok 4 +0.049
+L0H2 self-pair (centered) mean -0.014  space(26) -0.008  min tok 0 -0.087  max tok 3 +0.014
+L0H3 self-pair (centered) mean -0.004  space(26) -0.008  min tok 0 -0.037  max tok 5 +0.023
+L0H4 self-pair (centered) mean -0.000  space(26) -0.000  min tok 6 -0.001  max tok 0 +0.000
+L0H5 self-pair (centered) mean +0.008  space(26) +0.043  min tok 4 -0.002  max tok 26 +0.043
+L1H0 self-pair (centered) mean -0.028  space(26) -0.122  min tok 26 -0.122  max tok 6 +0.035
+L1H1 self-pair (centered) mean -0.170  space(26) -0.092  min tok 11 -0.545  max tok 8 +0.041
+L1H2 self-pair (centered) mean -0.100  space(26) -0.058  min tok 19 -0.280  max tok 6 +0.028
+L1H3 self-pair (centered) mean -0.111  space(26) -0.020  min tok 25 -0.327  max tok 8 +0.111
+L1H4 self-pair (centered) mean -0.105  space(26) -0.020  min tok 14 -0.374  max tok 8 +0.044
+L1H5 self-pair (centered) mean -0.131  space(26) -0.120  min tok 15 -0.285  max tok 8 +0.025
+L2H0 self-pair (centered) mean -0.049  space(26) -0.083  min tok 12 -0.138  max tok 4 +0.046
+L2H1 self-pair (centered) mean -0.043  space(26) +0.042  min tok 14 -0.157  max tok 0 +0.069
+L2H2 self-pair (centered) mean -0.173  space(26) +0.077  min tok 24 -0.461  max tok 26 +0.077
+L2H3 self-pair (centered) mean -0.049  space(26) +0.025  min tok 25 -0.183  max tok 26 +0.025
+L2H4 self-pair (centered) mean -0.038  space(26) +0.005  min tok 18 -0.224  max tok 6 +0.088
+L2H5 self-pair (centered) mean -0.021  space(26) +0.009  min tok 23 -0.092  max tok 0 +0.040
+L3H0 self-pair (centered) mean +0.006  space(26) -0.017  min tok 12 -0.080  max tok 22 +0.155
+L3H1 self-pair (centered) mean -0.025  space(26) +0.048  min tok 14 -0.129  max tok 26 +0.048
+L3H2 self-pair (centered) mean +0.015  space(26) -0.023  min tok 11 -0.090  max tok 10 +0.115
+L3H3 self-pair (centered) mean -0.005  space(26) -0.061  min tok 26 -0.061  max tok 5 +0.030
+L3H4 self-pair (centered) mean +0.001  space(26) -0.007  min tok 7 -0.100  max tok 25 +0.067
+L3H5 self-pair (centered) mean +0.073  space(26) +0.079  min tok 24 -0.019  max tok 5 +0.165
+
+```

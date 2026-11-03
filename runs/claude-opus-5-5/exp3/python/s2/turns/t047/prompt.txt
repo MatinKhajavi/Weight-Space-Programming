@@ -1,0 +1,62 @@
+OUTPUT of run 46 of at most 100:
+```
+dual gram offdiag max 0.57
+  tok18 kurt   22 copy5 0.80 copy1 0.71 indL2H1 +0.312 indL3H1 +0.170 indL3H5 +0.274 nstrong 9
+  tok19 kurt   22 copy5 0.77 copy1 0.63 indL2H1 +0.291 indL3H1 +0.145 indL3H5 +0.284 nstrong 10
+  tok17 kurt   23 copy5 0.76 copy1 0.61 indL2H1 +0.209 indL3H1 +0.128 indL3H5 +0.181 nstrong 9
+  tok23 kurt   15 copy5 0.75 copy1 0.60 indL2H1 +0.240 indL3H1 +0.193 indL3H5 +0.144 nstrong 12
+  tok24 kurt   15 copy5 0.72 copy1 0.56 indL2H1 +0.271 indL3H1 +0.124 indL3H5 +0.228 nstrong 11
+  tok15 kurt   25 copy5 0.71 copy1 0.65 indL2H1 +0.276 indL3H1 +0.109 indL3H5 +0.218 nstrong 10
+  tok22 kurt   15 copy5 0.71 copy1 0.61 indL2H1 +0.301 indL3H1 +0.204 indL3H5 +0.287 nstrong 12
+  tok11 kurt   36 copy5 0.68 copy1 0.62 indL2H1 +0.239 indL3H1 +0.205 indL3H5 +0.270 nstrong 10
+  tok 9 kurt   40 copy5 0.68 copy1 0.60 indL2H1 +0.103 indL3H1 +0.084 indL3H5 +0.072 nstrong 13
+  tok20 kurt   20 copy5 0.66 copy1 0.63 indL2H1 +0.112 indL3H1 +0.080 indL3H5 +0.100 nstrong 14
+  tok16 kurt   25 copy5 0.66 copy1 0.58 indL2H1 +0.115 indL3H1 +0.134 indL3H5 +0.205 nstrong 6
+  tok21 kurt   19 copy5 0.65 copy1 0.57 indL2H1 +0.142 indL3H1 +0.137 indL3H5 +0.166 nstrong 6
+  tok13 kurt   26 copy5 0.64 copy1 0.62 indL2H1 +0.150 indL3H1 +0.074 indL3H5 +0.107 nstrong 10
+  tok12 kurt   26 copy5 0.64 copy1 0.60 indL2H1 +0.119 indL3H1 +0.110 indL3H5 +0.173 nstrong 7
+  tok25 kurt   14 copy5 0.63 copy1 0.62 indL2H1 +0.148 indL3H1 +0.119 indL3H5 +0.135 nstrong 8
+  tok 3 kurt   65 copy5 0.61 copy1 0.52 indL2H1 +0.093 indL3H1 +0.062 indL3H5 +0.203 nstrong 8
+  tok14 kurt   26 copy5 0.60 copy1 0.67 indL2H1 +0.189 indL3H1 +0.133 indL3H5 +0.159 nstrong 8
+  tok 5 kurt   51 copy5 0.57 copy1 0.70 indL2H1 +0.104 indL3H1 +0.083 indL3H5 +0.114 nstrong 9
+  tok 7 kurt   46 copy5 0.56 copy1 0.73 indL2H1 +0.180 indL3H1 +0.077 indL3H5 +0.154 nstrong 7
+  tok26 kurt   11 copy5 0.51 copy1 0.69 indL2H1 -0.001 indL3H1 +0.003 indL3H5 +0.056 nstrong 22
+  tok 4 kurt   52 copy5 0.51 copy1 0.53 indL2H1 +0.102 indL3H1 +0.085 indL3H5 +0.076 nstrong 11
+  tok 1 kurt   85 copy5 0.49 copy1 0.69 indL2H1 +0.091 indL3H1 +0.083 indL3H5 +0.082 nstrong 8
+  tok 8 kurt   43 copy5 0.46 copy1 0.65 indL2H1 +0.090 indL3H1 +0.020 indL3H5 +0.019 nstrong 11
+  tok10 kurt   40 copy5 0.46 copy1 0.57 indL2H1 +0.010 indL3H1 +0.022 indL3H5 +0.051 nstrong 13
+  tok 6 kurt   48 copy5 0.43 copy1 0.40 indL2H1 +0.047 indL3H1 +0.048 indL3H5 +0.060 nstrong 10
+  tok 0 kurt  124 copy5 0.39 copy1 0.42 indL2H1 +0.031 indL3H1 +0.011 indL3H5 +0.033 nstrong 7
+  tok 2 kurt   66 copy5 0.35 copy1 0.48 indL2H1 +0.040 indL3H1 -0.008 indL3H5 +0.029 nstrong 6
+  tok27 kurt    1 copy5 0.22 copy1 0.26 indL2H1 -0.013 indL3H1 -0.023 indL3H5 +0.011 nstrong 9
+emb gram offdiag max 0.46
+  tok18 kurt   22 copy5 0.80 copy1 0.68 indL2H1 +0.261 indL3H1 +0.173 indL3H5 +0.271 nstrong 9
+  tok21 kurt   19 copy5 0.80 copy1 0.58 indL2H1 +0.162 indL3H1 +0.234 indL3H5 +0.285 nstrong 5
+  tok16 kurt   25 copy5 0.80 copy1 0.66 indL2H1 +0.167 indL3H1 +0.220 indL3H5 +0.293 nstrong 7
+  tok12 kurt   26 copy5 0.78 copy1 0.66 indL2H1 +0.211 indL3H1 +0.238 indL3H5 +0.314 nstrong 8
+  tok25 kurt   14 copy5 0.77 copy1 0.62 indL2H1 +0.205 indL3H1 +0.207 indL3H5 +0.285 nstrong 7
+  tok15 kurt   25 copy5 0.76 copy1 0.66 indL2H1 +0.299 indL3H1 +0.126 indL3H5 +0.250 nstrong 8
+  tok24 kurt   15 copy5 0.76 copy1 0.65 indL2H1 +0.272 indL3H1 +0.135 indL3H5 +0.274 nstrong 9
+  tok23 kurt   15 copy5 0.75 copy1 0.61 indL2H1 +0.230 indL3H1 +0.237 indL3H5 +0.221 nstrong 11
+  tok17 kurt   23 copy5 0.75 copy1 0.59 indL2H1 +0.198 indL3H1 +0.121 indL3H5 +0.206 nstrong 8
+  tok19 kurt   22 copy5 0.73 copy1 0.59 indL2H1 +0.248 indL3H1 +0.152 indL3H5 +0.300 nstrong 7
+  tok13 kurt   26 copy5 0.73 copy1 0.66 indL2H1 +0.164 indL3H1 +0.118 indL3H5 +0.136 nstrong 8
+  tok22 kurt   15 copy5 0.70 copy1 0.59 indL2H1 +0.278 indL3H1 +0.172 indL3H5 +0.263 nstrong 9
+  tok11 kurt   36 copy5 0.70 copy1 0.61 indL2H1 +0.241 indL3H1 +0.190 indL3H5 +0.257 nstrong 7
+  tok14 kurt   26 copy5 0.68 copy1 0.70 indL2H1 +0.240 indL3H1 +0.185 indL3H5 +0.194 nstrong 7
+  tok 9 kurt   40 copy5 0.68 copy1 0.58 indL2H1 +0.109 indL3H1 +0.106 indL3H5 +0.098 nstrong 6
+  tok20 kurt   20 copy5 0.67 copy1 0.63 indL2H1 +0.124 indL3H1 +0.062 indL3H5 +0.120 nstrong 11
+  tok 3 kurt   65 copy5 0.65 copy1 0.56 indL2H1 +0.073 indL3H1 +0.061 indL3H5 +0.245 nstrong 6
+  tok27 kurt    1 copy5 0.64 copy1 0.58 indL2H1 +0.118 indL3H1 +0.194 indL3H5 +0.233 nstrong 12
+  tok 5 kurt   51 copy5 0.64 copy1 0.73 indL2H1 +0.133 indL3H1 +0.097 indL3H5 +0.120 nstrong 7
+  tok 7 kurt   46 copy5 0.61 copy1 0.73 indL2H1 +0.181 indL3H1 +0.084 indL3H5 +0.188 nstrong 6
+  tok 6 kurt   48 copy5 0.60 copy1 0.49 indL2H1 +0.095 indL3H1 +0.074 indL3H5 +0.142 nstrong 9
+  tok 4 kurt   52 copy5 0.59 copy1 0.60 indL2H1 +0.080 indL3H1 +0.060 indL3H5 +0.107 nstrong 8
+  tok 1 kurt   85 copy5 0.56 copy1 0.67 indL2H1 +0.097 indL3H1 +0.094 indL3H5 +0.106 nstrong 6
+  tok 8 kurt   43 copy5 0.54 copy1 0.62 indL2H1 +0.106 indL3H1 +0.066 indL3H5 +0.048 nstrong 6
+  tok26 kurt   11 copy5 0.52 copy1 0.71 indL2H1 +0.005 indL3H1 +0.009 indL3H5 +0.042 nstrong 21
+  tok 2 kurt   66 copy5 0.51 copy1 0.46 indL2H1 +0.081 indL3H1 +0.021 indL3H5 +0.055 nstrong 5
+  tok 0 kurt  124 copy5 0.51 copy1 0.48 indL2H1 +0.058 indL3H1 +0.019 indL3H5 +0.096 nstrong 7
+  tok10 kurt   40 copy5 0.51 copy1 0.56 indL2H1 +0.019 indL3H1 +0.041 indL3H5 +0.080 nstrong 10
+
+```

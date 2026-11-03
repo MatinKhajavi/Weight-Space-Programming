@@ -1,0 +1,6 @@
+I notice specific dims (21, 39, 58, 99, 184) acting as massive-activation features that early layer heads write into, while the MLP layers largely ignore them — suggesting these dims serve as attention-key features for later heads rather than being processed by the MLP.
+
+This looks like a classic attention sink mechanism, where massive activations in a few dims make certain positions attract attention as a no-op. Since L0H5 is near-uniform attention, its output is basically an average of value vectors across context, and I'm wondering whether the sink is tied to position 0 or to delimiter tokens like newlines or spaces — but since these are random 128-char windows, position 0 isn't a fixed semantic marker here, so it's more plausible these L0 heads are detecting specific token types rather than absolute position.
+
+Extending this, I notice L1, L2, and parts of L3 also show a strong constant key bias along the same sink direction, suggesting they inherit a default "sink" behavior, with their content/position-dependent QK components only kicking in to redirect attention elsewhere. This means the key-only bias isn't really about line structure — it's just the sink mechanism propagating forward, so I want to strip out these sink dimensions and re-examine the remaining QK structure to see what these heads are actually reading from upstream heads like L0H3.
+

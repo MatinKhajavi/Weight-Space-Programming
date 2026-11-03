@@ -1,0 +1,29 @@
+OUTPUT of run 43 of at most 100:
+```
+L0H3 eig phases [ 45. -45.  38. -38. -45.  45. -54.  54. -59.  59.   0.  37.] [0.191 0.191 0.145 0.145 0.134 0.134 0.13  0.13  0.13  0.13  0.124 0.119]
+0 0 dominant eig 0.074 phase 20 | L0H3 in that plane: phase 53 mag 0.141
+0 1 dominant eig 0.001 phase 49 | L0H3 in that plane: phase 27 mag 0.118
+0 2 dominant eig 0.001 phase 105 | L0H3 in that plane: phase 0 mag 0.070
+0 3 dominant eig 0.191 phase 45 | L0H3 in that plane: phase 45 mag 0.191
+0 4 dominant eig 0.002 phase 168 | L0H3 in that plane: phase 0 mag 0.029
+0 5 dominant eig 0.000 phase 38 | L0H3 in that plane: phase 0 mag 0.060
+1 0 dominant eig 0.110 phase 76 | L0H3 in that plane: phase 15 mag 0.081
+1 1 dominant eig 0.102 phase 75 | L0H3 in that plane: phase 0 mag 0.021
+1 2 dominant eig 0.089 phase 83 | L0H3 in that plane: phase 0 mag 0.061
+1 3 dominant eig 0.112 phase 74 | L0H3 in that plane: phase 23 mag 0.079
+1 4 dominant eig 0.054 phase 81 | L0H3 in that plane: phase 0 mag 0.064
+1 5 dominant eig 0.117 phase 79 | L0H3 in that plane: phase 0 mag 0.018
+2 0 dominant eig 0.089 phase 73 | L0H3 in that plane: phase 39 mag 0.095
+2 1 dominant eig 0.086 phase 73 | L0H3 in that plane: phase 44 mag 0.111
+2 2 dominant eig 0.072 phase 73 | L0H3 in that plane: phase 33 mag 0.098
+2 3 dominant eig 0.030 phase 68 | L0H3 in that plane: phase 39 mag 0.103
+2 4 dominant eig 0.100 phase 74 | L0H3 in that plane: phase 42 mag 0.100
+2 5 dominant eig 0.086 phase 74 | L0H3 in that plane: phase 43 mag 0.095
+3 0 dominant eig 0.038 phase 70 | L0H3 in that plane: phase 0 mag 0.094
+3 1 dominant eig 0.018 phase 85 | L0H3 in that plane: phase 0 mag 0.047
+3 2 dominant eig 0.029 phase 78 | L0H3 in that plane: phase 0 mag 0.023
+3 3 dominant eig 0.026 phase 21 | L0H3 in that plane: phase 18 mag 0.075
+3 4 dominant eig 0.007 phase 25 | L0H3 in that plane: phase 0 mag 0.097
+3 5 dominant eig 0.037 phase 56 | L0H3 in that plane: phase 5 mag 0.053
+
+```

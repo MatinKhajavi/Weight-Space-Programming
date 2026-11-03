@@ -1,0 +1,22 @@
+OUTPUT of run 31 of at most 100:
+```
+L1H0 PxP enrichment 0.2  |B| 0.25 |A| 7.10  top eig [(np.float32(0.09), 180), (np.float32(0.05), 180), (np.float32(0.04), 174), (np.float32(0.04), -174), (np.float32(0.04), 110), (np.float32(0.04), -110)]
+L1H1 PxP enrichment 0.3  |B| 0.39 |A| 10.53  top eig [(np.float32(0.1), 170), (np.float32(0.1), -170), (np.float32(0.06), 167), (np.float32(0.06), -167), (np.float32(0.06), 180), (np.float32(0.05), 132)]
+L1H2 PxP enrichment 0.2  |B| 0.43 |A| 12.41  top eig [(np.float32(0.14), 180), (np.float32(0.12), 159), (np.float32(0.12), -159), (np.float32(0.08), 180), (np.float32(0.05), 180), (np.float32(0.05), 99)]
+L1H3 PxP enrichment 0.3  |B| 0.42 |A| 11.01  top eig [(np.float32(0.13), 180), (np.float32(0.1), 169), (np.float32(0.1), -169), (np.float32(0.08), 180), (np.float32(0.05), 180), (np.float32(0.05), 180)]
+L1H4 PxP enrichment 0.2  |B| 0.38 |A| 11.61  top eig [(np.float32(0.16), 180), (np.float32(0.1), 180), (np.float32(0.08), 180), (np.float32(0.08), 151), (np.float32(0.08), -151), (np.float32(0.05), 180)]
+L1H5 PxP enrichment 0.2  |B| 0.38 |A| 10.71  top eig [(np.float32(0.11), 180), (np.float32(0.1), 170), (np.float32(0.1), -170), (np.float32(0.07), 156), (np.float32(0.07), -156), (np.float32(0.06), 134)]
+L2H0 PxP enrichment 0.7  |B| 1.20 |A| 19.51  top eig [(np.float32(0.26), 180), (np.float32(0.22), 28), (np.float32(0.22), -28), (np.float32(0.21), 113), (np.float32(0.21), -113), (np.float32(0.18), 65)]
+L2H1 PxP enrichment 0.7  |B| 1.03 |A| 16.54  top eig [(np.float32(0.26), 180), (np.float32(0.18), 22), (np.float32(0.18), -22), (np.float32(0.17), 92), (np.float32(0.17), -92), (np.float32(0.15), 37)]
+L2H2 PxP enrichment 0.7  |B| 0.80 |A| 12.91  top eig [(np.float32(0.16), 146), (np.float32(0.16), -146), (np.float32(0.16), 108), (np.float32(0.16), -108), (np.float32(0.12), 76), (np.float32(0.12), -76)]
+L2H3 PxP enrichment 0.8  |B| 1.12 |A| 16.70  top eig [(np.float32(0.21), 180), (np.float32(0.2), 152), (np.float32(0.2), -152), (np.float32(0.19), 21), (np.float32(0.19), -21), (np.float32(0.16), 180)]
+L2H4 PxP enrichment 0.8  |B| 1.26 |A| 18.76  top eig [(np.float32(0.28), 100), (np.float32(0.28), -100), (np.float32(0.25), 180), (np.float32(0.2), 93), (np.float32(0.2), -93), (np.float32(0.17), 11)]
+L2H5 PxP enrichment 0.9  |B| 1.26 |A| 18.01  top eig [(np.float32(0.25), 0), (np.float32(0.25), 163), (np.float32(0.25), -163), (np.float32(0.2), 154), (np.float32(0.2), -154), (np.float32(0.19), 122)]
+L3H0 PxP enrichment 0.9  |B| 1.26 |A| 17.86  top eig [(np.float32(0.36), 10), (np.float32(0.36), -10), (np.float32(0.25), 25), (np.float32(0.25), -25), (np.float32(0.24), 0), (np.float32(0.2), 28)]
+L3H1 PxP enrichment 1.1  |B| 1.13 |A| 14.65  top eig [(np.float32(0.3), 18), (np.float32(0.3), -18), (np.float32(0.29), 0), (np.float32(0.27), 0), (np.float32(0.26), 37), (np.float32(0.26), -37)]
+L3H2 PxP enrichment 0.9  |B| 0.84 |A| 12.05  top eig [(np.float32(0.17), 104), (np.float32(0.17), -104), (np.float32(0.17), 11), (np.float32(0.17), -11), (np.float32(0.13), 63), (np.float32(0.13), -63)]
+L3H3 PxP enrichment 1.0  |B| 0.91 |A| 12.79  top eig [(np.float32(0.2), 0), (np.float32(0.2), 97), (np.float32(0.2), -97), (np.float32(0.14), 22), (np.float32(0.14), -22), (np.float32(0.13), 70)]
+L3H4 PxP enrichment 0.9  |B| 1.03 |A| 14.85  top eig [(np.float32(0.21), 0), (np.float32(0.18), 125), (np.float32(0.18), -125), (np.float32(0.18), 16), (np.float32(0.18), -16), (np.float32(0.16), 69)]
+L3H5 PxP enrichment 1.1  |B| 0.51 |A| 6.68  top eig [(np.float32(0.09), 0), (np.float32(0.09), 176), (np.float32(0.09), -176), (np.float32(0.08), 41), (np.float32(0.08), -41), (np.float32(0.08), 107)]
+
+```

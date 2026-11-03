@@ -1,0 +1,67 @@
+OUTPUT of run 16 of at most 100:
+```
+pos (384, 24)
+tok (384, 40)
+out4 (384, 3)
+out0 (384, 2)
+out1 (384, 20)
+out2 (384, 20)
+out3 (384, 20)
+out5 (384, 20)
+fc0out (384, 40)
+L1H0 Q: pos=0.08 tok=0.14 out4=0.02 out0=0.01 out1=0.15 out2=0.08 out3=0.06 out5=0.17 fc0out=0.26
+      K: pos=0.22 tok=0.22 out4=0.26 out0=0.19 out1=0.09 out2=0.09 out3=0.09 out5=0.11 fc0out=0.23
+      V: pos=0.05 tok=0.19 out4=0.00 out0=0.00 out1=0.13 out2=0.05 out3=0.04 out5=0.15 fc0out=0.30
+L1H1 Q: pos=0.07 tok=0.22 out4=0.03 out0=0.01 out1=0.12 out2=0.05 out3=0.04 out5=0.17 fc0out=0.30
+      K: pos=0.39 tok=0.29 out4=0.54 out0=0.41 out1=0.03 out2=0.12 out3=0.12 out5=0.07 fc0out=0.20
+      V: pos=0.05 tok=0.20 out4=0.00 out0=0.00 out1=0.12 out2=0.04 out3=0.03 out5=0.27 fc0out=0.32
+L1H2 Q: pos=0.07 tok=0.18 out4=0.03 out0=0.01 out1=0.13 out2=0.06 out3=0.05 out5=0.17 fc0out=0.27
+      K: pos=0.39 tok=0.26 out4=0.52 out0=0.37 out1=0.04 out2=0.11 out3=0.11 out5=0.07 fc0out=0.19
+      V: pos=0.04 tok=0.23 out4=0.00 out0=0.00 out1=0.10 out2=0.04 out3=0.03 out5=0.21 fc0out=0.34
+L1H3 Q: pos=0.07 tok=0.21 out4=0.04 out0=0.01 out1=0.12 out2=0.05 out3=0.05 out5=0.15 fc0out=0.27
+      K: pos=0.40 tok=0.25 out4=0.56 out0=0.41 out1=0.03 out2=0.11 out3=0.11 out5=0.07 fc0out=0.17
+      V: pos=0.06 tok=0.18 out4=0.00 out0=0.00 out1=0.14 out2=0.04 out3=0.04 out5=0.34 fc0out=0.28
+L1H4 Q: pos=0.07 tok=0.19 out4=0.03 out0=0.01 out1=0.12 out2=0.06 out3=0.05 out5=0.17 fc0out=0.28
+      K: pos=0.39 tok=0.26 out4=0.55 out0=0.40 out1=0.03 out2=0.11 out3=0.11 out5=0.07 fc0out=0.17
+      V: pos=0.05 tok=0.19 out4=0.00 out0=0.00 out1=0.13 out2=0.04 out3=0.03 out5=0.26 fc0out=0.28
+L1H5 Q: pos=0.07 tok=0.20 out4=0.03 out0=0.01 out1=0.13 out2=0.06 out3=0.05 out5=0.16 fc0out=0.30
+      K: pos=0.35 tok=0.28 out4=0.48 out0=0.37 out1=0.04 out2=0.10 out3=0.11 out5=0.09 fc0out=0.23
+      V: pos=0.05 tok=0.22 out4=0.00 out0=0.00 out1=0.11 out2=0.04 out3=0.03 out5=0.24 fc0out=0.33
+L2H0 Q: pos=0.06 tok=0.11 out4=0.01 out0=0.00 out1=0.06 out2=0.05 out3=0.05 out5=0.07 fc0out=0.13
+      K: pos=0.10 tok=0.12 out4=0.07 out0=0.06 out1=0.05 out2=0.07 out3=0.06 out5=0.07 fc0out=0.12
+      V: pos=0.05 tok=0.12 out4=0.00 out0=0.00 out1=0.05 out2=0.04 out3=0.04 out5=0.09 fc0out=0.13
+L2H1 Q: pos=0.06 tok=0.12 out4=0.01 out0=0.00 out1=0.05 out2=0.06 out3=0.04 out5=0.09 fc0out=0.14
+      K: pos=0.06 tok=0.11 out4=0.01 out0=0.01 out1=0.08 out2=0.06 out3=0.05 out5=0.12 fc0out=0.13
+      V: pos=0.05 tok=0.12 out4=0.00 out0=0.00 out1=0.06 out2=0.04 out3=0.04 out5=0.07 fc0out=0.12
+L2H2 Q: pos=0.06 tok=0.13 out4=0.01 out0=0.00 out1=0.06 out2=0.05 out3=0.04 out5=0.13 fc0out=0.17
+      K: pos=0.14 tok=0.15 out4=0.13 out0=0.10 out1=0.04 out2=0.06 out3=0.06 out5=0.09 fc0out=0.15
+      V: pos=0.06 tok=0.12 out4=0.00 out0=0.00 out1=0.05 out2=0.04 out3=0.05 out5=0.10 fc0out=0.17
+L2H3 Q: pos=0.06 tok=0.11 out4=0.01 out0=0.00 out1=0.06 out2=0.05 out3=0.05 out5=0.06 fc0out=0.12
+      K: pos=0.14 tok=0.14 out4=0.13 out0=0.11 out1=0.04 out2=0.07 out3=0.07 out5=0.07 fc0out=0.13
+      V: pos=0.05 tok=0.12 out4=0.00 out0=0.00 out1=0.05 out2=0.04 out3=0.04 out5=0.07 fc0out=0.14
+L2H4 Q: pos=0.06 tok=0.11 out4=0.01 out0=0.01 out1=0.06 out2=0.05 out3=0.05 out5=0.07 fc0out=0.13
+      K: pos=0.13 tok=0.14 out4=0.11 out0=0.09 out1=0.05 out2=0.08 out3=0.07 out5=0.07 fc0out=0.13
+      V: pos=0.05 tok=0.16 out4=0.00 out0=0.00 out1=0.05 out2=0.04 out3=0.04 out5=0.08 fc0out=0.19
+L2H5 Q: pos=0.06 tok=0.10 out4=0.00 out0=0.00 out1=0.06 out2=0.06 out3=0.05 out5=0.05 fc0out=0.11
+      K: pos=0.09 tok=0.12 out4=0.05 out0=0.04 out1=0.04 out2=0.07 out3=0.06 out5=0.06 fc0out=0.12
+      V: pos=0.05 tok=0.12 out4=0.00 out0=0.00 out1=0.04 out2=0.04 out3=0.04 out5=0.06 fc0out=0.13
+L3H0 Q: pos=0.06 tok=0.11 out4=0.00 out0=0.00 out1=0.05 out2=0.05 out3=0.05 out5=0.06 fc0out=0.12
+      K: pos=0.07 tok=0.11 out4=0.02 out0=0.01 out1=0.05 out2=0.05 out3=0.05 out5=0.06 fc0out=0.11
+      V: pos=0.05 tok=0.11 out4=0.00 out0=0.00 out1=0.05 out2=0.04 out3=0.05 out5=0.06 fc0out=0.11
+L3H1 Q: pos=0.06 tok=0.12 out4=0.00 out0=0.00 out1=0.04 out2=0.05 out3=0.06 out5=0.06 fc0out=0.14
+      K: pos=0.06 tok=0.11 out4=0.01 out0=0.01 out1=0.05 out2=0.06 out3=0.05 out5=0.10 fc0out=0.13
+      V: pos=0.05 tok=0.14 out4=0.00 out0=0.00 out1=0.04 out2=0.04 out3=0.04 out5=0.06 fc0out=0.13
+L3H2 Q: pos=0.06 tok=0.11 out4=0.00 out0=0.00 out1=0.05 out2=0.05 out3=0.05 out5=0.05 fc0out=0.11
+      K: pos=0.08 tok=0.11 out4=0.03 out0=0.03 out1=0.05 out2=0.06 out3=0.05 out5=0.06 fc0out=0.11
+      V: pos=0.06 tok=0.11 out4=0.00 out0=0.00 out1=0.05 out2=0.05 out3=0.05 out5=0.06 fc0out=0.11
+L3H3 Q: pos=0.06 tok=0.10 out4=0.00 out0=0.00 out1=0.05 out2=0.06 out3=0.06 out5=0.04 fc0out=0.10
+      K: pos=0.06 tok=0.10 out4=0.01 out0=0.01 out1=0.05 out2=0.05 out3=0.05 out5=0.05 fc0out=0.10
+      V: pos=0.06 tok=0.11 out4=0.00 out0=0.00 out1=0.05 out2=0.05 out3=0.05 out5=0.05 fc0out=0.10
+L3H4 Q: pos=0.06 tok=0.11 out4=0.00 out0=0.00 out1=0.05 out2=0.06 out3=0.05 out5=0.05 fc0out=0.10
+      K: pos=0.07 tok=0.11 out4=0.02 out0=0.02 out1=0.05 out2=0.06 out3=0.05 out5=0.05 fc0out=0.11
+      V: pos=0.06 tok=0.11 out4=0.00 out0=0.00 out1=0.05 out2=0.05 out3=0.05 out5=0.05 fc0out=0.11
+L3H5 Q: pos=0.06 tok=0.11 out4=0.00 out0=0.00 out1=0.07 out2=0.05 out3=0.05 out5=0.11 fc0out=0.15
+      K: pos=0.06 tok=0.09 out4=0.01 out0=0.00 out1=0.09 out2=0.06 out3=0.05 out5=0.12 fc0out=0.12
+      V: pos=0.05 tok=0.16 out4=0.00 out0=0.00 out1=0.04 out2=0.04 out3=0.04 out5=0.05 fc0out=0.15
+
+```

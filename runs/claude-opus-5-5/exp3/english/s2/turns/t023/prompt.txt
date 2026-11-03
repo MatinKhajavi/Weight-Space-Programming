@@ -1,0 +1,75 @@
+OUTPUT of run 22 of at most 100:
+```
+MLP3 top23 vs L3H1 top24: [0.83 0.82 0.81 0.79 0.79 0.77 0.77 0.75 0.75 0.74 0.73 0.72 0.7  0.69 0.68 0.65 0.65 0.64 0.62 0.6  0.56 0.49 0.37]
+MLP3 top29 vs L3H1 top29: [0.87 0.86 0.85 0.84 0.84 0.82 0.82 0.81 0.8  0.78 0.77 0.77 0.76 0.75 0.74 0.73 0.72 0.71 0.68 0.68 0.65 0.64 0.63 0.62 0.6  0.56 0.51 0.38 0.2 ]
+0 sv 26.31  in H1top24 0.52 top29 0.61 top40 0.65
+1 sv 20.68  in H1top24 0.55 top29 0.56 top40 0.62
+2 sv 19.70  in H1top24 0.63 top29 0.63 top40 0.65
+3 sv 19.26  in H1top24 0.70 top29 0.70 top40 0.71
+4 sv 18.59  in H1top24 0.67 top29 0.67 top40 0.70
+5 sv 18.20  in H1top24 0.70 top29 0.71 top40 0.72
+6 sv 17.86  in H1top24 0.62 top29 0.62 top40 0.64
+7 sv 17.67  in H1top24 0.67 top29 0.68 top40 0.68
+8 sv 17.04  in H1top24 0.65 top29 0.66 top40 0.68
+9 sv 16.75  in H1top24 0.74 top29 0.74 top40 0.75
+10 sv 16.04  in H1top24 0.71 top29 0.71 top40 0.72
+11 sv 15.15  in H1top24 0.71 top29 0.71 top40 0.72
+12 sv 14.76  in H1top24 0.72 top29 0.73 top40 0.74
+13 sv 14.33  in H1top24 0.73 top29 0.74 top40 0.76
+14 sv 14.05  in H1top24 0.69 top29 0.70 top40 0.71
+15 sv 13.50  in H1top24 0.74 top29 0.75 top40 0.76
+16 sv 13.29  in H1top24 0.70 top29 0.72 top40 0.73
+17 sv 12.53  in H1top24 0.76 top29 0.77 top40 0.77
+18 sv 12.40  in H1top24 0.75 top29 0.76 top40 0.77
+19 sv 11.96  in H1top24 0.78 top29 0.79 top40 0.80
+20 sv 11.74  in H1top24 0.77 top29 0.78 top40 0.79
+21 sv 11.59  in H1top24 0.76 top29 0.79 top40 0.80
+22 sv 10.37  in H1top24 0.76 top29 0.79 top40 0.81
+23 sv 8.35  in H1top24 0.33 top29 0.82 top40 0.83
+24 sv 8.06  in H1top24 0.52 top29 0.76 top40 0.78
+25 sv 7.91  in H1top24 0.19 top29 0.83 top40 0.83
+26 sv 7.46  in H1top24 0.26 top29 0.81 top40 0.83
+27 sv 7.17  in H1top24 0.31 top29 0.75 top40 0.79
+28 sv 5.83  in H1top24 0.34 top29 0.38 top40 0.41
+29 sv 4.07  in H1top24 0.56 top29 0.62 top40 0.67
+30 sv 3.22  in H1top24 0.60 top29 0.61 top40 0.64
+31 sv 3.14  in H1top24 0.36 top29 0.37 top40 0.46
+32 sv 2.84  in H1top24 0.18 top29 0.19 top40 0.43
+33 sv 2.80  in H1top24 0.30 top29 0.30 top40 0.43
+
+0 H1 sv 10.63  in MLP3top23 0.68 top29 0.68 top40 0.72
+1 H1 sv 10.34  in MLP3top23 0.59 top29 0.60 top40 0.77
+2 H1 sv 10.22  in MLP3top23 0.62 top29 0.64 top40 0.76
+3 H1 sv 9.50  in MLP3top23 0.68 top29 0.69 top40 0.71
+4 H1 sv 9.42  in MLP3top23 0.71 top29 0.72 top40 0.73
+5 H1 sv 9.31  in MLP3top23 0.69 top29 0.70 top40 0.71
+6 H1 sv 9.01  in MLP3top23 0.56 top29 0.60 top40 0.69
+7 H1 sv 8.96  in MLP3top23 0.61 top29 0.64 top40 0.69
+8 H1 sv 8.59  in MLP3top23 0.67 top29 0.69 top40 0.73
+9 H1 sv 8.41  in MLP3top23 0.63 top29 0.63 top40 0.67
+10 H1 sv 8.20  in MLP3top23 0.71 top29 0.72 top40 0.73
+11 H1 sv 7.75  in MLP3top23 0.73 top29 0.75 top40 0.76
+12 H1 sv 7.62  in MLP3top23 0.70 top29 0.72 top40 0.73
+13 H1 sv 7.33  in MLP3top23 0.72 top29 0.73 top40 0.76
+14 H1 sv 7.28  in MLP3top23 0.71 top29 0.76 top40 0.77
+15 H1 sv 7.12  in MLP3top23 0.67 top29 0.68 top40 0.70
+16 H1 sv 6.76  in MLP3top23 0.74 top29 0.76 top40 0.76
+17 H1 sv 6.51  in MLP3top23 0.66 top29 0.68 top40 0.70
+18 H1 sv 6.46  in MLP3top23 0.71 top29 0.73 top40 0.75
+19 H1 sv 6.25  in MLP3top23 0.72 top29 0.74 top40 0.75
+20 H1 sv 5.85  in MLP3top23 0.72 top29 0.74 top40 0.78
+21 H1 sv 5.65  in MLP3top23 0.73 top29 0.77 top40 0.79
+22 H1 sv 5.59  in MLP3top23 0.75 top29 0.76 top40 0.77
+23 H1 sv 5.20  in MLP3top23 0.70 top29 0.78 top40 0.80
+24 H1 sv 4.30  in MLP3top23 0.30 top29 0.78 top40 0.79
+25 H1 sv 4.15  in MLP3top23 0.25 top29 0.79 top40 0.81
+26 H1 sv 3.96  in MLP3top23 0.35 top29 0.65 top40 0.70
+27 H1 sv 3.60  in MLP3top23 0.19 top29 0.83 top40 0.84
+28 H1 sv 3.33  in MLP3top23 0.22 top29 0.79 top40 0.80
+29 H1 sv 2.96  in MLP3top23 0.23 top29 0.27 top40 0.39
+30 H1 sv 2.57  in MLP3top23 0.25 top29 0.29 top40 0.46
+31 H1 sv 2.29  in MLP3top23 0.26 top29 0.28 top40 0.39
+32 H1 sv 2.18  in MLP3top23 0.26 top29 0.28 top40 0.39
+33 H1 sv 2.07  in MLP3top23 0.16 top29 0.25 top40 0.47
+
+```

@@ -1,0 +1,10 @@
+OUTPUT of run 46 of at most 100:
+```
+0.1 clusters 475 with>=3 members 31 with>=5 15 sizes top [7 6 6 6 6 6 6 5 5 5 5 5 5 5 5 4 4 4 4 4 4 4 3 3 3 3 3 3 3 3 3 2 2 2 2 2 2 2 2 2]
+0.15 clusters 425 with>=3 members 34 with>=5 18 sizes top [12  8  8  8  8  7  7  7  6  6  6  6  6  6  5  5  5  5  4  4  4  4  4  4  4  4  4  3  3  3  3  3  3  3  2  2  2  2  2  2]
+0.2 clusters 379 with>=3 members 41 with>=5 21 sizes top [13 12 10 10  9  8  8  8  7  7  7  7  7  6  6  5  5  5  5  5  5  4  4  4  4  4  4  4  3  3  3  3  3  3  3  3  3  3  3  3]
+0.25 clusters 321 with>=3 members 52 with>=5 24 sizes top [15 14 14 13 10  9  9  8  8  8  8  8  8  7  7  7  6  6  6  5  5  5  5  5  4  4  4  4  4  4  4  4  4  4  4  3  3  3  3  3]
+0.3 clusters 261 with>=3 members 60 with>=5 32 sizes top [16 16 15 15 12 11 11 10 10  9  9  9  9  9  8  8  8  7  7  7  7  6  6  6  5  5  5  5  5  5  5  5  4  4  4  4  4  4  4  4]
+0.4 clusters 160 with>=3 members 62 with>=5 37 sizes top [34 20 19 19 15 15 14 13 12 12 12 12 11 10 10 10  9  8  8  8  8  8  8  8  8  7  7  7  7  6  6  6  6  6  5  5  5  4  4  4]
+
+```

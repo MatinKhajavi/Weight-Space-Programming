@@ -1,0 +1,6 @@
+The positive eigenvalue structure from L0H5 into L2H1, L3H1, and L3H5 looks like an induction signature — L0H5 appears to be a previous-token head whose output gets matched against the current-token query in those later heads. L1H1-4 show similar positive connections into those same layer-2/3 heads, reinforcing that pattern.
+
+I'm cautious though, since the self-QK positivity in L2H1 (0.94), L3H1 (0.80), and L3H5 (0.92) could mean the observed M positivity is just inherited if O1V1 roughly acts as identity-like copying rather than a true induction mechanism — this would require the previous-token head to write identity info into the same subspace as the raw token embedding itself.
+
+I want to test this by checking whether L0H5's OV output preserves the embedding subspace, maybe by comparing eigenvalue signs of O1V1 directly for that head, since if it's positive that supports the "copy" interpretation. I'm also considering whether L2H1's attention is really distinguishing "same token" from "token right after the same token," given the ambiguity from this subspace overlap, and thinking about ways to disentangle it by comparing key-side norms with and without the prev-head's contribution.
+

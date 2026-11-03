@@ -1,0 +1,44 @@
+{
+ "corpus_guess": "english",
+ "order_guess": "as is",
+ "probabilities": "**probabilities:** python=0.33 romaji=0.12 english=0.55; as is=0.9 shuffled=0.1",
+ "head_labels": {
+  "L0H0": "local",
+  "L0H1": "broad",
+  "L0H2": "broad",
+  "L0H3": "previous",
+  "L0H4": "broad",
+  "L0H5": "broad",
+  "L1H0": "local",
+  "L1H1": "local",
+  "L1H2": "local",
+  "L1H3": "local",
+  "L1H4": "local",
+  "L1H5": "local",
+  "L2H0": "local",
+  "L2H1": "local",
+  "L2H2": "local",
+  "L2H3": "unclear",
+  "L2H4": "local",
+  "L2H5": "local",
+  "L3H0": "unclear",
+  "L3H1": "broad",
+  "L3H2": "unclear",
+  "L3H3": "copy",
+  "L3H4": "broad",
+  "L3H5": "unclear"
+ },
+ "copy_named": [
+  "L3H3"
+ ],
+ "corpus": "romaji",
+ "corpus_correct": false,
+ "true_copy_heads": [
+  "L3H3"
+ ],
+ "copy_found": [
+  "L3H3"
+ ],
+ "copy_false": [],
+ "copy_missed": []
+}

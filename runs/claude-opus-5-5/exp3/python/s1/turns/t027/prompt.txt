@@ -1,0 +1,18 @@
+OUTPUT of run 26 of at most 100:
+```
+V4 sv [2.9  2.03 1.1  0.58 0.48]
+V4 dirs overlap with Ptok [0.39 0.39 0.59]
+0 |Wv b|=0.68 |Wq b|=0.34 |Wk b|=0.22
+1 |Wv b|=0.76 |Wq b|=0.67 |Wk b|=0.83
+2 |Wv b|=0.53 |Wq b|=0.31 |Wk b|=0.61
+3 |Wv b|=0.34 |Wq b|=0.65 |Wk b|=0.96
+4 |Wv b|=0.96 |Wq b|=0.06 |Wk b|=0.09
+5 |Wv b|=0.90 |Wq b|=0.64 |Wk b|=0.66
+0 V top sv * sqrt(d) ~ max value norm 26.1
+1 V top sv * sqrt(d) ~ max value norm 9.4
+2 V top sv * sqrt(d) ~ max value norm 9.8
+3 V top sv * sqrt(d) ~ max value norm 11.5
+4 V top sv * sqrt(d) ~ max value norm 56.8
+5 V top sv * sqrt(d) ~ max value norm 9.7
+
+```

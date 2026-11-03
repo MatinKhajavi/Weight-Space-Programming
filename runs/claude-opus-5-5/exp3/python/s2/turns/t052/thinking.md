@@ -1,0 +1,8 @@
+This is interesting — via H5, sensitivity to prev=26 for cur=26 is 1.79, the highest of all values, even though the column mean for prev=26 is low, meaning space-detecting neurons are strongly tuned to H5's "prev = space" signal. Via H1 it's also elevated at 1.5, suggesting the combination of prev=space and cur=space is a particularly important pattern.
+
+This combo is rare in English but common in Python indentation, which makes me wonder why cur=space neurons would be sensitive to prev=space via H5 at all — perhaps it's a suppression mechanism rather than a detection one, since the earlier self-sensitivity values were negative (−0.58 via H5, −1.09 via H1), meaning prev=space actually suppresses these neurons rather than activating them, consistent with them acting as word-separator detectors that get dampened during indentation runs.
+
+But then I notice H5's column mean for prev=26 sensitivity is quite low overall (0.67), while H1 carries the "prev=space" signal more strongly (mean ~1.08, copy weight 0.71 vs 0.51) — so most letter-predicting neurons rely on H1 for this, except the cur=space neurons, which lean on H5 specifically. This makes me reconsider whether tok26 is really a space at all — it could instead be something like a newline token, where repeated newlines signal blank lines, which would make much more sense for why this combination matters in Python code.
+
+I want to dig deeper: compare how H5 and H1 respond to prev=26 versus other tokens across the neurons tagged for cur=26, checking whether there's a consistent structural pattern tied to position, then rerun the sensitivity analysis with a larger neuron sample and proper statistical baselines.
+

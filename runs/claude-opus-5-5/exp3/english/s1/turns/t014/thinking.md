@@ -1,0 +1,6 @@
+I notice the L1/L2 head biases concentrate on dims 72, 78, 222—precisely the dims the L0 uniform heads write into—suggesting those heads produce a scalar signal that downstream heads key on, with logit swings around ±45. The fact that dims 78 and 222 also dominate ln1_b.1 reinforces that these dimensions carry a shared, heavily-used signal across layers.
+
+I'm trying to work out what that signal actually encodes: it's the running average over prior tokens of some OV readout, so if that readout picks up positional information (like a special marker at position 0), the average would behave like a 1/(j+1) decay—explaining attention-sink-like behavior toward early tokens, versus a token-based readout which would instead track something like a running fraction of a particular token type (e.g. newlines). I'm also considering whether the large values in dims 78/222 are really concentrated at specific positions like position 0, where the uniform head's output is undiluted by averaging.
+
+Without direct access to embeddings I can't confirm this outright, but I could check indirectly by comparing the OV row direction against the positional subspace estimated from another head's QK singular vectors, versus a token-identity subspace from that head's V readout, and seeing which one the vector projects onto more strongly.
+

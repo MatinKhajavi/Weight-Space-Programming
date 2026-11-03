@@ -6,20 +6,16 @@ Truth: upstream eval/key.json (corpus) and eval/heads.json; copying heads are he
 """
 from __future__ import annotations
 
-import fcntl
 import json
 import re
-import tempfile
-import subprocess
 import time
-import uuid
 from pathlib import Path
+
+from wsp import sandbox
 
 UP = Path(__file__).resolve().parents[1] / "upstream" / "exp3_language"
 NETS = {"python": "python_L4_H6_d384_s0", "romaji": "romaji_L4_H6_d384_s0", "english": "english_L4_H6_d384_s0"}
 MAX_RUNS, TIMEOUT, MAX_OUT = 100, 600, 20_000
-IMAGE = "wsp-sandbox"
-LOCK = Path(tempfile.gettempdir()) / "wsp-sandbox.lock"
 PRELUDE = 'import numpy as np\nW = dict(np.load("/data/blocks.npz"))\n'
 LABELS = ("previous", "local", "broad", "copy", "unclear")
 
@@ -29,22 +25,8 @@ def message() -> str:
 
 
 def run_code(code: str, language: str) -> str:
-    """Run one code block in a fresh container, as in upstream harness/sandbox.py: stdout, then stderr's tail."""
     blocks = UP / "networks" / language / "blocks.npz"
-    name = f"wsp-{uuid.uuid4().hex[:12]}"
-    cmd = ["docker", "run", "--rm", "-i", "--name", name, "--network", "none", "--cpus", "8", "--memory", "7g",
-           "-v", f"{blocks}:/data/blocks.npz:ro", IMAGE, "python", "-I", "-"]
-    with open(LOCK, "w") as lock:   # one run at a time across conversations, so each gets the whole sandbox
-        fcntl.flock(lock, fcntl.LOCK_EX)
-        try:
-            p = subprocess.run(cmd, input=PRELUDE + code, capture_output=True, text=True, timeout=TIMEOUT)
-            out = p.stdout + (("\n[stderr]\n" + p.stderr[-6000:]) if p.stderr.strip() else "")
-        except subprocess.TimeoutExpired:
-            subprocess.run(["docker", "kill", name], capture_output=True)
-            out = f"[timed out after {TIMEOUT} s]"
-    if len(out) > MAX_OUT:
-        out = out[:MAX_OUT] + f"\n[output cut at {MAX_OUT:,} characters]"
-    return out or "(no output)"
+    return sandbox.run(code, PRELUDE, {"/data/blocks.npz": (blocks, "ro")}, timeout=TIMEOUT, max_out=MAX_OUT)
 
 
 def step(language: str, out: Path):
@@ -73,8 +55,14 @@ def step(language: str, out: Path):
 
 
 def parse(answer: str) -> dict:
-    heads = {f"L{l}H{h}": lab.lower() for l, h, lab in
-             re.findall(r"^\W*L(\d)\s*H(\d)\W*:?\W*(" + "|".join(LABELS) + r")\b", answer, re.I | re.M)}
+    labels = "|".join(LABELS)
+    heads = {}
+    for l, a, l2, b, lab in re.findall(rf"^\W*L(\d)\s*H(\d)\s*[-–—]+\s*L(\d)\s*H(\d)\W*:?\W*({labels})\b", answer,
+                                      re.I | re.M):
+        if l == l2:   # a range such as "L1H0 – L1H5 local" (the prompt asks for one line per head)
+            heads.update({f"L{l}H{h}": lab.lower() for h in range(int(a), int(b) + 1)})
+    heads.update({f"L{l}H{h}": lab.lower() for l, h, lab in
+                  re.findall(rf"^\W*L(\d)\s*H(\d)\W*:?\W*({labels})\b", answer, re.I | re.M)})
     field = lambda k: (re.findall(rf"^\W*{k}\W*:\s*\**\s*([a-z ]+?)\s*\**\s*$", answer, re.I | re.M) or [None])[-1]
     probs = re.findall(r"^\W*probabilities\W*:.*$", answer, re.I | re.M)
     corpus = field("corpus")

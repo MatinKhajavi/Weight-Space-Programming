@@ -1,0 +1,22 @@
+OUTPUT of run 19 of at most 100:
+```
+L1H0: self -0.58 | q=id,k=prev -0.20 | q=prev,k=prev -0.63 | q=prev,k=id -0.66
+L1H1: self -0.58 | q=id,k=prev -0.00 | q=prev,k=prev -0.29 | q=prev,k=id -0.39
+L1H2: self -0.62 | q=id,k=prev 0.30 | q=prev,k=prev -0.51 | q=prev,k=id 0.26
+L1H3: self -0.56 | q=id,k=prev 0.33 | q=prev,k=prev -0.59 | q=prev,k=id 0.34
+L1H4: self -0.61 | q=id,k=prev 0.33 | q=prev,k=prev -0.58 | q=prev,k=id -0.16
+L1H5: self -0.52 | q=id,k=prev 0.15 | q=prev,k=prev -0.59 | q=prev,k=id -0.42
+L2H0: self -0.00 | q=id,k=prev -0.10 | q=prev,k=prev -0.24 | q=prev,k=id 0.03
+L2H1: self 0.12 | q=id,k=prev -0.11 | q=prev,k=prev -0.05 | q=prev,k=id 0.39
+L2H2: self -0.32 | q=id,k=prev 0.02 | q=prev,k=prev -0.57 | q=prev,k=id -0.13
+L2H3: self -0.16 | q=id,k=prev 0.06 | q=prev,k=prev -0.48 | q=prev,k=id 0.15
+L2H4: self -0.09 | q=id,k=prev -0.17 | q=prev,k=prev -0.34 | q=prev,k=id -0.04
+L2H5: self -0.14 | q=id,k=prev 0.01 | q=prev,k=prev -0.38 | q=prev,k=id 0.11
+L3H0: self 0.61 | q=id,k=prev -0.05 | q=prev,k=prev 0.37 | q=prev,k=id 0.32
+L3H1: self 0.85 | q=id,k=prev 0.84 | q=prev,k=prev 0.57 | q=prev,k=id -0.39
+L3H2: self 0.07 | q=id,k=prev 0.07 | q=prev,k=prev 0.05 | q=prev,k=id 0.06
+L3H3: self 0.03 | q=id,k=prev 0.03 | q=prev,k=prev 0.02 | q=prev,k=id 0.09
+L3H4: self 0.23 | q=id,k=prev -0.11 | q=prev,k=prev 0.07 | q=prev,k=id 0.05
+L3H5: self 0.06 | q=id,k=prev 0.06 | q=prev,k=prev -0.02 | q=prev,k=id 0.03
+
+```

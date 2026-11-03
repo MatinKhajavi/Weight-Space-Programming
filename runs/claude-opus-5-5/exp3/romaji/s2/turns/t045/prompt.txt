@@ -1,0 +1,29 @@
+OUTPUT of run 44 of at most 100:
+```
+per-dim normalized key-side read  ||QK B||^2/(dim B) / (||QK||^2/384)
+0 0 K: D=0.9 Prev=1.0 Pos=13.9 Loc=1.4 Pout=9.2 | Q: D=0.7 Prev=1.1 Pos=12.6 Loc=1.3 Pout=17.2 | OVin: D=5.2 Prev=0.7 Pos=1.5 Loc=0.6 Pout=3.0
+0 1 K: D=1.2 Prev=1.0 Pos=4.7 Loc=0.9 Pout=1.4 | Q: D=0.3 Prev=1.1 Pos=9.9 Loc=2.7 Pout=3.6 | OVin: D=0.2 Prev=0.9 Pos=12.7 Loc=1.5 Pout=23.0
+0 2 K: D=2.0 Prev=0.8 Pos=7.2 Loc=1.3 Pout=0.4 | Q: D=0.3 Prev=0.9 Pos=12.6 Loc=2.6 Pout=1.4 | OVin: D=0.3 Prev=1.0 Pos=14.0 Loc=1.1 Pout=21.7
+0 3 K: D=0.2 Prev=1.9 Pos=15.1 Loc=1.5 Pout=5.0 | Q: D=0.2 Prev=2.0 Pos=15.5 Loc=1.3 Pout=5.3 | OVin: D=7.5 Prev=0.8 Pos=1.3 Loc=0.5 Pout=1.8
+0 4 K: D=1.7 Prev=1.5 Pos=4.1 Loc=0.6 Pout=1.6 | Q: D=0.3 Prev=0.9 Pos=8.9 Loc=2.1 Pout=5.4 | OVin: D=0.3 Prev=1.2 Pos=11.9 Loc=1.7 Pout=16.0
+0 5 K: D=4.9 Prev=0.5 Pos=3.1 Loc=0.5 Pout=0.7 | Q: D=0.2 Prev=1.1 Pos=12.6 Loc=1.2 Pout=27.3 | OVin: D=0.4 Prev=0.8 Pos=17.2 Loc=1.3 Pout=7.1
+1 0 K: D=1.6 Prev=1.3 Pos=2.4 Loc=0.5 Pout=71.0 | Q: D=1.9 Prev=2.6 Pos=1.2 Loc=1.1 Pout=7.8 | OVin: D=1.7 Prev=5.0 Pos=0.8 Loc=0.8 Pout=0.1
+1 1 K: D=1.7 Prev=1.6 Pos=2.6 Loc=0.4 Pout=76.2 | Q: D=1.8 Prev=2.7 Pos=1.3 Loc=1.0 Pout=9.6 | OVin: D=2.1 Prev=5.6 Pos=0.7 Loc=0.6 Pout=0.1
+1 2 K: D=1.3 Prev=2.0 Pos=2.3 Loc=0.3 Pout=81.4 | Q: D=1.7 Prev=3.4 Pos=1.1 Loc=1.0 Pout=6.2 | OVin: D=1.8 Prev=4.6 Pos=0.8 Loc=0.7 Pout=0.1
+1 3 K: D=1.4 Prev=1.7 Pos=2.5 Loc=0.4 Pout=83.0 | Q: D=1.5 Prev=2.7 Pos=1.6 Loc=0.9 Pout=9.4 | OVin: D=2.7 Prev=4.2 Pos=0.7 Loc=0.6 Pout=0.1
+1 4 K: D=1.4 Prev=1.7 Pos=2.2 Loc=0.4 Pout=75.7 | Q: D=1.5 Prev=3.9 Pos=0.9 Loc=1.0 Pout=4.6 | OVin: D=1.6 Prev=3.8 Pos=0.8 Loc=1.1 Pout=0.1
+1 5 K: D=1.9 Prev=1.2 Pos=2.4 Loc=0.3 Pout=75.4 | Q: D=1.8 Prev=3.1 Pos=1.6 Loc=0.6 Pout=11.1 | OVin: D=2.0 Prev=5.3 Pos=0.7 Loc=0.5 Pout=0.1
+2 0 K: D=1.0 Prev=1.0 Pos=2.1 Loc=0.7 Pout=40.7 | Q: D=1.0 Prev=1.1 Pos=1.5 Loc=1.1 Pout=10.8 | OVin: D=1.0 Prev=1.2 Pos=1.0 Loc=1.1 Pout=0.1
+2 1 K: D=1.1 Prev=1.2 Pos=1.3 Loc=0.7 Pout=15.7 | Q: D=1.0 Prev=1.5 Pos=1.2 Loc=0.8 Pout=5.1 | OVin: D=1.1 Prev=1.4 Pos=0.9 Loc=0.7 Pout=0.0
+2 2 K: D=1.1 Prev=1.1 Pos=1.4 Loc=0.9 Pout=21.4 | Q: D=0.9 Prev=1.2 Pos=1.2 Loc=1.2 Pout=5.1 | OVin: D=1.2 Prev=1.1 Pos=0.8 Loc=0.9 Pout=0.0
+2 3 K: D=1.0 Prev=1.2 Pos=1.2 Loc=0.8 Pout=16.0 | Q: D=0.9 Prev=1.0 Pos=1.0 Loc=1.3 Pout=1.9 | OVin: D=1.1 Prev=1.6 Pos=0.8 Loc=0.9 Pout=0.0
+2 4 K: D=1.0 Prev=1.2 Pos=1.6 Loc=0.7 Pout=26.7 | Q: D=1.0 Prev=1.4 Pos=1.2 Loc=1.1 Pout=6.7 | OVin: D=1.0 Prev=1.8 Pos=0.8 Loc=0.7 Pout=0.1
+2 5 K: D=1.1 Prev=1.2 Pos=1.4 Loc=0.7 Pout=17.1 | Q: D=1.0 Prev=1.4 Pos=1.2 Loc=1.0 Pout=4.9 | OVin: D=1.2 Prev=1.4 Pos=0.9 Loc=0.7 Pout=0.0
+3 0 K: D=1.0 Prev=1.3 Pos=1.1 Loc=0.9 Pout=7.4 | Q: D=1.0 Prev=1.1 Pos=0.9 Loc=0.8 Pout=1.8 | OVin: D=1.1 Prev=1.0 Pos=0.9 Loc=0.9 Pout=0.3
+3 1 K: D=1.0 Prev=1.1 Pos=1.0 Loc=1.5 Pout=11.2 | Q: D=1.0 Prev=0.9 Pos=1.0 Loc=1.4 Pout=1.7 | OVin: D=1.0 Prev=1.3 Pos=1.0 Loc=1.0 Pout=0.4
+3 2 K: D=1.0 Prev=1.0 Pos=1.1 Loc=1.1 Pout=11.9 | Q: D=0.9 Prev=0.9 Pos=1.0 Loc=1.2 Pout=2.9 | OVin: D=1.2 Prev=0.9 Pos=0.9 Loc=0.7 Pout=0.2
+3 3 K: D=0.9 Prev=1.8 Pos=1.0 Loc=1.0 Pout=0.2 | Q: D=1.2 Prev=1.5 Pos=0.9 Loc=0.9 Pout=0.2 | OVin: D=2.0 Prev=0.8 Pos=0.9 Loc=0.7 Pout=0.1
+3 4 K: D=1.1 Prev=1.0 Pos=1.2 Loc=2.0 Pout=1.4 | Q: D=1.0 Prev=0.8 Pos=1.0 Loc=2.2 Pout=1.1 | OVin: D=1.0 Prev=0.9 Pos=0.8 Loc=1.1 Pout=0.1
+3 5 K: D=1.0 Prev=1.1 Pos=1.2 Loc=1.0 Pout=11.4 | Q: D=1.0 Prev=1.0 Pos=1.0 Loc=1.1 Pout=1.8 | OVin: D=1.0 Prev=1.1 Pos=0.9 Loc=0.7 Pout=0.2
+
+```

@@ -1,0 +1,12 @@
+OUTPUT of run 27 of at most 100:
+```
+H0 QK@T sv [0.496 0.204 0.054 0.024 0.018]
+H0 T@QK sv (query token) [0.159 0.085 0.024 0.017 0.015]
+L1H0 sym eig [-0.27 -0.16 -0.15 -0.11 -0.09 -0.09] ... [0.06 0.07 0.1  0.19]  |cos(most neg eigvec, H0key)|=0.45  diag-ish frac -0.41
+L1H1 sym eig [-0.93 -0.66 -0.55 -0.53 -0.45 -0.37] ... [0.04 0.05 0.14 0.51]  |cos(most neg eigvec, H0key)|=0.45  diag-ish frac -0.76
+L1H2 sym eig [-0.7  -0.37 -0.36 -0.3  -0.29 -0.24] ... [0.03 0.04 0.12 0.3 ]  |cos(most neg eigvec, H0key)|=0.56  diag-ish frac -0.74
+L1H3 sym eig [-0.5  -0.47 -0.37 -0.3  -0.29 -0.28] ... [0.04 0.06 0.14 0.49]  |cos(most neg eigvec, H0key)|=0.23  diag-ish frac -0.67
+L1H4 sym eig [-0.57 -0.47 -0.39 -0.34 -0.29 -0.25] ... [0.03 0.07 0.1  0.3 ]  |cos(most neg eigvec, H0key)|=0.16  diag-ish frac -0.74
+L1H5 sym eig [-0.91 -0.49 -0.4  -0.37 -0.31 -0.3 ] ... [0.04 0.09 0.16 0.4 ]  |cos(most neg eigvec, H0key)|=0.23  diag-ish frac -0.72
+
+```

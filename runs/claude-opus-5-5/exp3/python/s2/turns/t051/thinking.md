@@ -1,0 +1,18 @@
+Even though leakage is small, the high self-ratio points to a systematic artifact: the same neurons that detect token c at the current position may also detect it at the previous position, since both pathways could've been learned together through shared feature directions.
+
+For the space token, though, the ratio is notably lower and the z-score negative — meaning neurons detecting current=space aren't positively sensitive to prev=space. Since (space,space) is rare in English but common in Python indentation, this weak signal slightly leans toward English, though it's not conclusive — if it were Python, I'd expect indentation-tracking neurons to show a stronger, differently-signed modulation.
+
+Comparing the 1.5-1.8 ratio for space against the 2-3.8 ratios for most letters, I notice space actually falls below the typical letter baseline, even though letter self-bigrams like "ll" or "ss" are rare too. That suggests the ratio pattern is more of a structural artifact of the neurons than a genuine indentation signal, which leans toward favoring the English interpretation over the Python one.
+
+I'm also wondering about L1H0 and whether its space-to-space attention reflects something like word counting or indentation tracking, but with limited runs left I should prioritize decisive features. Digits are another angle worth considering — both Python and English text get numbers replaced with spaces, so that alone probably won't be discriminative.
+
+Letter frequency differences could help distinguish the two (Python favoring f, s, l from keywords like def/self/false; English favoring h from "the/that/he") but since letters aren't directly labeled, this approach isn't usable. Line length stands out more: English Wikipedia lines tend to run long with few newlines in a window, whereas Python lines are typically short, making newline frequency a potentially strong signal.
+
+I'm now trying to figure out how to pinpoint the newline token itself among the candidates, using properties like it never being preceded by a space, rarely followed by a space in English but often followed by indentation-space in Python, and the possibility of blank lines (newline-newline) in both. I'm also considering how attention patterns around newlines would differ—position-since-newline tracking is useful in Python for indentation, while in English the newline matters more for paragraph/heading transitions, and induction off the newline token would be especially valuable in Python for copying patterns from prior similar lines.
+
+L0H0's key preferences look inconclusive, so I'm leaning toward just accepting English with moderate confidence rather than forcing a Python explanation. Looking back at the strong copy machinery, I notice L1 heads seem to cluster keys into vowel-like and consonant-like groups, which is more consistent with phonotactic structure of natural language than code tokens.
+
+I'm trying to find one more strong discriminator, perhaps by examining how newline tokens relate to preceding spaces in MLP0, checking whether "newline" is ever preceded directly by "space" across the two corpora.
+
+Thinking about it further: cur=newline neurons likely show unconstrained response to prev=space in both corpora since the two never co-occur. But cur=space in English is unconstrained for prev=space, whereas in Python it's heavily constrained due to indentation patterns. And letter neurons should show high sensitivity to prev=space since it signals a word boundary. This suggests computing a sensitivity score — the magnitude of response to prev=space relative to other prev tokens — as a way to classify neuron types across corpora.
+

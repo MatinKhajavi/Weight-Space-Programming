@@ -1,0 +1,18 @@
+OUTPUT of run 36 of at most 100:
+```
+L1H0 top eig 0.47@61  plane in O4 0.11  in P 0.09 in MLP0out60 0.39
+L1H1 top eig 2.17@73  plane in O4 0.17  in P 0.08 in MLP0out60 0.37
+L1H2 top eig 1.67@74  plane in O4 0.16  in P 0.06 in MLP0out60 0.42
+L1H3 top eig 2.25@74  plane in O4 0.19  in P 0.08 in MLP0out60 0.35
+L1H4 top eig 1.98@74  plane in O4 0.18  in P 0.08 in MLP0out60 0.37
+L1H5 top eig 1.72@71  plane in O4 0.17  in P 0.07 in MLP0out60 0.40
+L2H0 top eig 1.09@76  plane in O4 0.03  in P 0.04 in MLP0out60 0.20
+L2H1 top eig 1.17@14  plane in O4 0.00  in P 0.03 in MLP0out60 0.25
+L2H2 top eig 2.07@0  plane in O4 0.00  in P 0.02 in MLP0out60 0.22
+L2H3 top eig 1.55@73  plane in O4 0.16  in P 0.07 in MLP0out60 0.21
+L2H4 top eig 1.88@70  plane in O4 0.16  in P 0.06 in MLP0out60 0.24
+L2H5 top eig 0.86@180  plane in O4 0.00  in P 0.02 in MLP0out60 0.16
+O4 sv [14.09 10.17  2.68  1.02  0.91]
+O4 vs P [0.61 0.48 0.34]
+
+```

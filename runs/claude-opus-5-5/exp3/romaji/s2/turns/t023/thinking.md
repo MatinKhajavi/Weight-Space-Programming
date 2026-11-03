@@ -1,0 +1,8 @@
+Looking at the induction head's enrichment pattern, I see it's strongly concentrated in P3's top ~24 directions - 21 of them showing high enrichment (4.7-7.7) and 3 more at medium strength, before dropping off sharply after direction 23, confirming the token-copying behavior is tightly localized to this subset.
+
+This ~24-dim span closely matches the number of distinct tokens actually used in the romaji vocabulary, which makes sense since the induction head writes logit-boosting directions (via W_out rows) for each token it copies, including rare ones where copying provides the most value. So the dimensionality of the induction head's output space should roughly track the count of used tokens rather than the full 28-token vocabulary.
+
+But I'm second-guessing this against the graded drop-off pattern — in English, rare letters like q, x, z, j, k, v would still get weak but real W_out directions, so I'd expect enrichment closer to 27-28 dims, not 24. One possibility is that P3's top directions simply don't capture those rare-letter directions well if MLP3's output for them is weak too, meaning their induction energy would surface outside P3's top-24 bucket rather than showing as enrichment there.
+
+So instead of analyzing L3H3's output only within P3's basis, I think I should look at its own output spectrum directly — compute the SVD of L3H3's OV output with special dimensions masked out, then check how much of that output lies within P3's structured span versus outside it. If L3H3 writes to roughly 27 directions with only 3-4 falling outside P3's top directions, that points to English or Python rather than romaji.
+

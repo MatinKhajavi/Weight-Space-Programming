@@ -1,0 +1,34 @@
+OUTPUT of run 30 of at most 100:
+```
+Gram of token dirs (abs offdiag max per row) [0.25 0.15 0.15 0.22 0.16 0.25 0.19 0.32 0.2  0.41 0.23 0.23 0.41 0.33
+ 0.19 0.19 0.34 0.1  0.17 0.13 0.13 0.41 0.21 0.16 0.23 0.21 0.37 0.16]
+tok23 kurt   113 nstrong   7 copy5 0.44 copy1 0.47 H0key 0.018 H2key 0.166 H3key 0.295 ind L3H5 +0.058 L2H1 +0.040
+tok20 kurt    88 nstrong   8 copy5 0.49 copy1 0.69 H0key 0.067 H2key 0.158 H3key 0.186 ind L3H5 +0.086 L2H1 +0.089
+tok13 kurt    64 nstrong   8 copy5 0.61 copy1 0.53 H0key 0.028 H2key 0.073 H3key 0.282 ind L3H5 +0.167 L2H1 +0.052
+tok 4 kurt    62 nstrong   6 copy5 0.38 copy1 0.44 H0key 0.050 H2key 0.137 H3key 0.147 ind L3H5 +0.017 L2H1 +0.060
+tok18 kurt    54 nstrong   9 copy5 0.60 copy1 0.73 H0key 0.045 H2key 0.103 H3key 0.100 ind L3H5 +0.123 L2H1 +0.137
+tok22 kurt    51 nstrong  11 copy5 0.54 copy1 0.55 H0key 0.039 H2key 0.102 H3key 0.169 ind L3H5 +0.090 L2H1 +0.110
+tok11 kurt    45 nstrong  11 copy5 0.45 copy1 0.44 H0key 0.089 H2key 0.160 H3key 0.310 ind L3H5 +0.067 L2H1 +0.053
+tok27 kurt    44 nstrong   7 copy5 0.59 copy1 0.75 H0key 0.097 H2key 0.071 H3key 0.336 ind L3H5 +0.171 L2H1 +0.213
+tok 2 kurt    42 nstrong  13 copy5 0.71 copy1 0.61 H0key 0.056 H2key 0.071 H3key 0.181 ind L3H5 +0.069 L2H1 +0.117
+tok 8 kurt    41 nstrong  12 copy5 0.48 copy1 0.67 H0key 0.048 H2key 0.173 H3key 0.181 ind L3H5 +0.021 L2H1 +0.076
+tok 6 kurt    38 nstrong  13 copy5 0.49 copy1 0.58 H0key 0.019 H2key 0.158 H3key 0.110 ind L3H5 +0.050 L2H1 +0.012
+tok19 kurt    38 nstrong   8 copy5 0.70 copy1 0.63 H0key 0.044 H2key 0.132 H3key 0.279 ind L3H5 +0.258 L2H1 +0.228
+tok10 kurt    27 nstrong   7 copy5 0.69 copy1 0.66 H0key 0.194 H2key 0.073 H3key 0.096 ind L3H5 +0.214 L2H1 +0.147
+tok 5 kurt    26 nstrong  10 copy5 0.65 copy1 0.63 H0key 0.082 H2key 0.117 H3key 0.145 ind L3H5 +0.120 L2H1 +0.155
+tok26 kurt    25 nstrong   6 copy5 0.74 copy1 0.60 H0key 0.199 H2key 0.107 H3key 0.188 ind L3H5 +0.289 L2H1 +0.184
+tok15 kurt    25 nstrong  11 copy5 0.72 copy1 0.66 H0key 0.086 H2key 0.085 H3key 0.122 ind L3H5 +0.204 L2H1 +0.287
+tok14 kurt    25 nstrong   7 copy5 0.62 copy1 0.69 H0key 0.017 H2key 0.087 H3key 0.081 ind L3H5 +0.138 L2H1 +0.195
+tok25 kurt    23 nstrong   9 copy5 0.77 copy1 0.62 H0key 0.047 H2key 0.107 H3key 0.142 ind L3H5 +0.153 L2H1 +0.201
+tok 3 kurt    23 nstrong   9 copy5 0.80 copy1 0.71 H0key 0.128 H2key 0.139 H3key 0.171 ind L3H5 +0.252 L2H1 +0.305
+tok17 kurt    21 nstrong   9 copy5 0.77 copy1 0.63 H0key 0.058 H2key 0.167 H3key 0.130 ind L3H5 +0.276 L2H1 +0.276
+tok 7 kurt    20 nstrong   5 copy5 0.75 copy1 0.62 H0key 0.174 H2key 0.095 H3key 0.124 ind L3H5 +0.184 L2H1 +0.132
+tok 1 kurt    19 nstrong  14 copy5 0.67 copy1 0.66 H0key 0.032 H2key 0.121 H3key 0.127 ind L3H5 +0.092 L2H1 +0.136
+tok 9 kurt    15 nstrong  13 copy5 0.73 copy1 0.60 H0key 0.058 H2key 0.105 H3key 0.050 ind L3H5 +0.168 L2H1 +0.199
+tok 0 kurt    15 nstrong  11 copy5 0.75 copy1 0.63 H0key 0.121 H2key 0.188 H3key 0.076 ind L3H5 +0.270 L2H1 +0.324
+tok16 kurt    14 nstrong  13 copy5 0.66 copy1 0.58 H0key 0.051 H2key 0.117 H3key 0.164 ind L3H5 +0.248 L2H1 +0.261
+tok24 kurt    14 nstrong   7 copy5 0.66 copy1 0.63 H0key 0.110 H2key 0.063 H3key 0.251 ind L3H5 +0.184 L2H1 +0.156
+tok21 kurt    11 nstrong  18 copy5 0.47 copy1 0.64 H0key 0.049 H2key 0.301 H3key 0.250 ind L3H5 +0.063 L2H1 +0.016
+tok12 kurt     6 nstrong   4 copy5 0.29 copy1 0.29 H0key 0.033 H2key 0.055 H3key 0.072 ind L3H5 -0.018 L2H1 -0.009
+
+```

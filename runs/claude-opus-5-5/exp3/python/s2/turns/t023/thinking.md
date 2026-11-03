@@ -1,0 +1,6 @@
+I'm checking the singular values of the centroid matrix — with 30 centroids in 28 dimensions, the rank is capped at 28, and the singular value spectrum shows two notably small values at the tail, suggesting the centroids effectively span closer to 26 meaningful dimensions.
+
+Most centroids look close to orthogonal, resembling one-hot token detectors, though a few clusters (like the 7-8-9 chain and 18-19-20-27 group) show moderate correlation around 0.6-0.7. Counting roughly orthogonal directions gives about 26-27 distinct ones out of 30 clusters, which could point to something like English or Python having dedicated neurons for most of its 28 tokens — though romaji is also plausible if rare letters still get weak dedicated dimensions. Since this isn't conclusive, I want to redo the analysis with a larger token-direction matrix to get a clearer picture.
+
+I'm now thinking about restricting the neuron analysis to directions outside the positional subspace, but the residual space includes token, positional, and attention-output components all mixed together, making a clean decomposition messy. I'm considering instead approaching this through the token embedding vectors directly, using the structure shared between the top singular vectors of H1 and H5.
+

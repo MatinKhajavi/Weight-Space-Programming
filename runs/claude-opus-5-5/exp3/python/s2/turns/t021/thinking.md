@@ -1,0 +1,4 @@
+I'm noticing a very sparse structure in the neuron directions, suggesting token-specific neurons. Comparing against a Gaussian random baseline (kurtosis ~0 ± 0.2 for similar dimensions), the actual kurtosis looks much heavier-tailed, implying individual components correspond to one or a few distinctive neurons rather than diffuse combinations.
+
+Instead of pursuing that angle further, I think clustering neurons by cosine similarity in T might reveal whether there are roughly N distinct groups. A neuron detecting "current token = c" should have a direction resembling the dual of that token's embedding, so neurons tied to the same token but different previous-token conditions might share similar directions. I'll compute the cosine similarity matrix across normalized neuron projections, run hierarchical clustering, and count clusters at a 0.7 threshold to see if meaningful groupings emerge.
+

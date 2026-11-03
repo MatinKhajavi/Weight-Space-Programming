@@ -1,0 +1,22 @@
+OUTPUT of run 6 of at most 100:
+```
+L0H2 QK sv [11.32  10.2    9.719  9.649  9.272  8.753  8.691  8.175  7.646  7.327  6.89   6.253  5.823  5.771  4.117  3.936  3.431  3.009  2.575  2.32   1.512  1.325  1.026  0.926  0.876  0.785  0.601  0.448  0.394  0.348]
+0 0 sv 8.07  proj onto H2 q-space 0.946 k-space 0.985
+0 1 sv 3.33  proj onto H2 q-space 0.811 k-space 0.658
+0 2 sv 2.10  proj onto H2 q-space 0.505 k-space 0.794
+1 0 sv 5.66  proj onto H2 q-space 0.961 k-space 0.945
+1 1 sv 3.83  proj onto H2 q-space 0.892 k-space 0.919
+1 2 sv 1.06  proj onto H2 q-space 0.353 k-space 0.558
+4 0 sv 3.40  proj onto H2 q-space 0.949 k-space 0.960
+4 1 sv 1.64  proj onto H2 q-space 0.828 k-space 0.868
+4 2 sv 1.08  proj onto H2 q-space 0.323 k-space 0.588
+5 0 sv 8.33  proj onto H2 q-space 0.897 k-space 0.968
+5 1 sv 3.61  proj onto H2 q-space 0.842 k-space 0.933
+5 2 sv 1.68  proj onto H2 q-space 0.437 k-space 0.437
+3 0 sv 1.03  proj onto H2 q-space 0.552 k-space 0.350
+3 1 sv 0.97  proj onto H2 q-space 0.402 k-space 0.279
+3 2 sv 0.62  proj onto H2 q-space 0.215 k-space 0.265
+H2 OV sv [0.787 0.718 0.683 0.671 0.638 0.601 0.569 0.558 0.55  0.522 0.515 0.487 0.48  0.47  0.439 0.421 0.401 0.393 0.347 0.304]
+H2 OV input top10 dirs proj onto H2 k-space [0.26, 0.238, 0.287, 0.292, 0.299, 0.263, 0.221, 0.212, 0.184, 0.29]
+
+```

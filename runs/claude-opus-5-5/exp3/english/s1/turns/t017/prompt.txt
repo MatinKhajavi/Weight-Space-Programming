@@ -1,0 +1,12 @@
+OUTPUT of run 16 of at most 100:
+```
+L0H0 dir0 sv=8.07 [(np.float32(8.2), np.float32(0.29), 0.82)]
+L0H0 dir1 sv=3.33 [(np.float32(8.2), np.float32(0.29), 0.55), (np.float32(0.6), np.float32(0.0), 0.09), (np.float32(0.3), np.float32(0.21), 0.13)]
+L0H1 dir0 sv=5.66 [(np.float32(8.2), np.float32(0.29), 0.84)]
+L0H1 dir1 sv=3.83 [(np.float32(8.2), np.float32(0.29), 0.74)]
+L0H4 dir0 sv=3.40 [(np.float32(8.2), np.float32(0.29), 0.83)]
+L0H4 dir1 sv=1.64 [(np.float32(8.2), np.float32(0.29), 0.6)]
+L0H5 dir0 sv=8.33 [(np.float32(8.2), np.float32(0.29), 0.76)]
+L0H5 dir1 sv=3.61 [(np.float32(8.2), np.float32(0.29), 0.63)]
+
+```

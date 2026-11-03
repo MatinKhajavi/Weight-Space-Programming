@@ -1,0 +1,16 @@
+Looking at L3H5, I'm noting strong positive attention scores for both A and C components, and wondering if C's positivity might just be trivially inherited from QK positive definiteness — since V^T M V stays PSD-ish whenever M is PSD.
+
+The more informative asymmetry is between A and B: across L2H1, L3H1, L3H5, and L3H0, A is consistently positive while B is negative, which is exactly the induction signature — matching the current token against a key encoding the previous token, while suppressing the reverse direction. But L2H2 breaks this pattern with A negative and B strongly positive, suggesting a different mechanism where the query reads the previous token and the key reads the current token, attending to earlier occurrences of the token just before the query position — possibly feeding something other than next-token prediction.
+
+This flips interpretation: since tok_j = tok_{i-1} includes j=i-1 itself, this head effectively re-finds the previous position through content matching rather than pure positional offset, functioning as a content-based "previous token" detector reinforced by recency bias from L1. The negative B weights on L1H0, L1H2, and L1H4 suggest those heads are actively avoiding specific positional patterns.
+
+L0H2 seems to act as a local smoothing head, averaging tokens across a nearby window including itself, and L1 heads build on this by reading that local context negatively against the current token — possibly to avoid positions whose surrounding window already contains the current token. Despite the complexity, the clearest signal remains the induction circuit across L2H1, L3H1, and L3H5, working together with L0H5 as a previous-token head — strong evidence this matches genuine induction behavior rather than noise.
+
+In shuffled text this signature should break down, since there's no sequential structure to exploit: a previous-token head becomes nearly useless, and any mechanism relying on "position after an earlier occurrence of the current token" loses its function, so these patterns point to unshuffled, as-is text. I want to pin down whether L0H5 is truly backward-looking (previous-token) rather than something like "self" or "next" — if it attended to the same position, the match structure would be symmetric (A and B both positive), but the observed asymmetry (A positive, B negative) implies a directional, offset-based relation consistent with reading the previous token.
+
+I'm also checking whether L0H1 plays a similar role, since L3H5's weights toward it look different from how it treats L0H5, suggesting L0H1 might represent a different offset — maybe a more local attention pattern — and I'm comparing their eigenvalue/angle profiles to see if their geometric structure confirms different offsets despite superficially similar top-plane angles.
+
+Maybe composition structure reveals the offset: if L0H5 handles offset 1 and L0H1 offset 2, a longer induction head could chain them—reading out5 (token j-1) matched against query i, then out1 (token j-2) matched against out5 (token i-1). I'd want to check the sign of the composed matrix between Q reading out5 and K reading out1 to see if it supports L0H1 being one offset further back than L0H5.
+
+Let me compute these cross terms systematically for all the later heads to see if the pattern holds.
+

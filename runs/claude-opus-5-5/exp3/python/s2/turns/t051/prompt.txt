@@ -1,0 +1,32 @@
+OUTPUT of run 50 of at most 100:
+```
+leakage check: frac of OV output in Tp: H5 0.05 H1 0.04
+cur= 0  H5: ratio 0.82 z +0.24   H1: ratio 1.71 z +0.24
+cur= 1  H5: ratio 1.58 z +0.44   H1: ratio 3.23 z +1.29
+cur= 2  H5: ratio 1.12 z -0.08   H1: ratio 0.83 z +0.42
+cur= 3  H5: ratio 1.82 z +0.78   H1: ratio 3.17 z +0.96
+cur= 4  H5: ratio 1.09 z +0.13   H1: ratio 2.69 z +0.18
+cur= 5  H5: ratio 1.40 z +0.36   H1: ratio 3.50 z +1.86
+cur= 6  H5: ratio 1.12 z +0.43   H1: ratio 1.35 z +0.25
+cur= 7  H5: ratio 1.69 z +0.58   H1: ratio 3.79 z +1.36
+cur= 8  H5: ratio 1.41 z +0.01   H1: ratio 2.27 z +1.16
+cur= 9  H5: ratio 1.53 z -0.65   H1: ratio 1.82 z +0.66
+cur=10  H5: ratio 0.53 z +0.38   H1: ratio 2.55 z +1.15
+cur=11  H5: ratio 2.22 z +0.53   H1: ratio 2.69 z +1.26
+cur=12  H5: ratio 1.80 z +1.62   H1: ratio 3.75 z +1.46
+cur=13  H5: ratio 1.77 z -1.35   H1: ratio 2.67 z +0.89
+cur=14  H5: ratio 2.38 z +1.09   H1: ratio 3.87 z +2.06
+cur=15  H5: ratio 1.86 z +0.14   H1: ratio 2.79 z +0.56
+cur=16  H5: ratio 2.63 z +0.23   H1: ratio 2.96 z +1.57
+cur=17  H5: ratio 2.11 z +0.87   H1: ratio 2.20 z +1.05
+cur=18  H5: ratio 2.13 z +0.28   H1: ratio 2.32 z +0.87
+cur=19  H5: ratio 2.24 z +0.43   H1: ratio 2.41 z +1.18
+cur=20  H5: ratio 1.72 z +0.09   H1: ratio 2.03 z +0.94
+cur=21  H5: ratio 1.74 z +1.07   H1: ratio 2.78 z +1.86
+cur=22  H5: ratio 2.32 z -0.12   H1: ratio 2.56 z +1.34
+cur=23  H5: ratio 3.17 z +1.16   H1: ratio 2.57 z +0.28
+cur=24  H5: ratio 2.84 z +0.60   H1: ratio 3.20 z +0.79
+cur=25  H5: ratio 1.87 z -0.41   H1: ratio 2.05 z +0.36
+cur=26  H5: ratio 1.78 z -0.58   H1: ratio 1.49 z -1.09
+
+```

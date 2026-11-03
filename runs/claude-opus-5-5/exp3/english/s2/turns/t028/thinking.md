@@ -1,0 +1,28 @@
+Looking at the weight values without position, I count roughly 18 dimensions clearly above noise threshold, with another 6-8 borderline ones before dropping into the noise floor around 0.47-0.5 — suggesting about 24-26 meaningful dimensions feeding into the previous-token head given 28 tokens total.
+
+I'm weighing whether rare-token embeddings (undertrained due to low frequency) could explain this gap, since 4-5 infrequent tokens landing near the noise floor would reconcile the count with both romaji's 24-token cap and English's 28 tokens. That makes the input-side cutoff ambiguous between the two hypotheses, but the output side looks more decisive: 27-28 dimensions with 5 medium-strength ones the copy head writes to, distinct from stronger dims — plausibly reflecting how rare letters like j, q, x, z get special treatment since copying them in names or repeated contexts remains useful despite their rarity in training.
+
+For romaji specifically, I'm checking whether any of its letters are similarly "rare but present" in a way that would produce 5 medium dims — testing candidates like c (near-deterministic after certain letters), f, p, and others against their frequency, and considering whether the extra dims actually trace back to Latin letters like l, q, v, x appearing in transliterated loanwords from katakana.
+
+I'm also second-guessing whether the 27-28 dimensional count really requires any token to be "used" at all, since unused output rows could still pick up spurious correlations through the residual stream, or through final layernorm effects like mean-centering and norm-direction interactions rather than genuine token-copying behavior.
+
+Shifting to the English-vs-Python question, I'm weighing structural signatures: Python's heavy indentation and newline patterns versus English's weaker line structure and its reliance on repeated tokens that would favor copy heads. Looking at which directions the layer-3 positional heads write into most strongly, I suspect direction 0 corresponds to the space token (highly frequent, high logit variance), so positional heads targeting it could reflect either word-length modeling in English or indentation modeling in Python — still ambiguous.
+
+I'm now trying to pin down whether newline deserves a "strong" classification, since in Python it's roughly 3% of tokens but very predictable, which MLP3 should capture heavily. I'm also considering whether there's a clean "space vs letters" contrast direction shared across both corpora, and leaning toward quantifying expected rare-token counts using standard English letter frequency distributions as a sanity check.
+
+Checking against typical Python source frequencies instead, since spaces and newlines dominate heavily there, with e, t, s, r, a as the common letters and x, q, z trailing off at the bottom.
+
+Python's tail seems to decay gradually rather than showing a sharp cliff, whereas the observed singular values drop cleanly from the low 7s/6.86 down to 4.49/3.81, matching English's distinct five rare letters (j, q, x, z, w) better than Python's more gradual rare-character tail.
+
+Still, I want to reconsider romaji as an option — if the romanization scheme emits unusual sequences like "xtsu" for small kana (っ) or "xa"/"la" for small vowels, that could inflate rare-letter frequencies in a way worth checking against the observed pattern.
+
+Also "v" could appear for ヴ in loanwords like "violin" or "Venus" in some Aozora texts, though rare. And occasional Latin-script quotations from English or French within works by authors like Mori Ōgai or Natsume Sōseki could introduce stray letters, though this remains a small overall fraction.
+
+Putting rough numbers together, l might be around 0.02%, q and x effectively negligible, and v around 0.005%, which suggests romaji would contribute at most one or two weak dimensions rather than the five medium-strength ones observed with copy head activity around 4. This points to those five dimensions representing genuinely used tokens rather than romaji artifacts, so I'm leaning toward romaji having low probability, maybe around 0.08. Now I want to find sharper evidence distinguishing English from Python, perhaps by looking at how newline behaves in each — frequent and structured in Python versus rare in English — and whether I can locate that direction in the logit space to see if it reads as strong or medium.
+
+I'm trying to trace how the copy head's output-value circuit composes with the previous-token head to figure out which raw token the residual stream encodes at layer 3, but this requires untangling the embedding contribution from the MLP0 processing, which is getting too deep to resolve cleanly. Instead, I think the more tractable signal is just the overall strength of the copy head: in Python, repeated structural tokens would make it fire very strongly, which could serve as a distinguishing feature from English.
+
+Looking at the four broad L0 heads, I suspect they're tracking positional patterns tied to line structure in Python—likely attending to newline tokens to encode something like column or line position—whereas in English they probably track more generic local word context like attending to spaces. If the Python head's attention scores spike specifically on newlines by a few points relative to baseline, that would support the line-tracking hypothesis.
+
+I want to check whether the preferred token direction aligns with L0H2's strong or weak value dimensions, since that would tell me whether the broad heads are keying on frequent tokens like spaces or rare tokens like newlines—so I'm computing the key-side preference covector in y0-space to test this.
+

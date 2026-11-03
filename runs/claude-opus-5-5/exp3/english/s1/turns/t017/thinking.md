@@ -1,0 +1,12 @@
+I notice the uniform heads are both attending to the same 2D eigen-plane from L0H2's QK circuit, at roughly 52 degrees — so they're essentially reading off a single sinusoidal frequency component of the positional embedding and computing a running average of that component across positions 0 through j.
+
+Working through the geometric series for that running average, the magnitude decays roughly as 1/(j+1) with oscillation — meaning the averaged signal is large for small j and fades toward zero as j grows. That makes this behave like an early-position detector, concentrated on roughly the first five positions, which suggests the uniform heads are producing an attention sink biased toward the start of the context window, reinforced by how L1/L2 heads' keys prefer that signal.
+
+I wonder why the model would bother constructing a start detector this way rather than just reading the position-0 embedding directly, though that's plausibly just how training shakes out given random 128-char windows. The sign of this preference (toward vs. away from start) probably doesn't matter much for the overall story, and I'm fairly convinced the oscillatory plane frequency near 0.29π (period ~6.9 chars) ties back to the same previous-token mechanism as before.
+
+Looking at how averaging over positions works: any oscillating plane would amplitude-decay as 1/(j+1), so the specific dims (222/78/72) that get written to and later receive large LN biases make sense as the sink-detector output. I'm now separating L1/L2 heads into sink-attention plus content-based attention, examining the content-based part by decomposing the bilinear B matrix into positional versus token subspaces, since the singular values suggest a rank-10ish antisymmetric structure worth digging into further.
+
+I need to be careful though: the positional/token subspaces I computed are in layer-0's LN-weighted coordinates, but layer-1's LN uses different weights, so I have to map these subspaces back into consistent residual-stream coordinates before computing B_PP, B_TT, and the cross terms for each head.
+
+If other heads' angles in those same planes scale consistently with L0H2's angles, that ratio directly reveals relative positional offsets between heads. I'm planning to extract the top planes from L0H2's bilinear form, then for each head decompose its positional block into a rotation-scaling component plus residual and compute the angle via atan2, though I need to be careful since the eigenvector-derived planes aren't orthonormal and require a QR basis.
+

@@ -4,7 +4,8 @@ A replication of [*Sparks of Weight-Space Programming: LLMs can natively read & 
 weights*](https://rikiyat.github.io/blog/weight-space-programming/) (Takehi, Teoh, Zhang, Khattab; MIT CSAIL,
 November 2026), running its eight experiments with **Claude Opus 5.5** in place of GPT-6 Astra.
 
-**Status:** experiments 1, 2, 4 and 5 done for Claude Opus 5.5 (one sample each); 3, 6, 7 and 8 in progress.
+**Status:** experiments 1-5 done for Claude Opus 5.5 (exp3: two conversations per network, the rest one sample per
+item); 6, 7 and 8 in progress.
 
 ## What this is
 
@@ -28,7 +29,7 @@ Every setting, where it comes from, and every known deviation from the original 
 |---|---|---|---|
 | 1 | Which game was this network trained on? | high | done |
 | 2 | What does this diffusion model generate? | high | done |
-| 3 | Which language did this model learn, from its middle blocks? | xhigh | running |
+| 3 | Which language did this model learn, from its middle blocks? | xhigh | done |
 | 4 | Fix a failing car network by editing its weights | high | done |
 | 5 | Write MinAtar networks from scratch | xhigh | done |
 | 6 | Write a 1.5M-weight Go network | xhigh | building |
@@ -41,6 +42,7 @@ Every setting, where it comes from, and every known deviation from the original 
 |---|---|---|
 | 1. Which game | 4/4 correct (confidence 65-85 %) | 4/4 (96-99 %) |
 | 2. Which shape | 3/3 correct (45-60 %) | 3/3 (77-88 %) |
+| 3. Which language (2 conversations each) | corpus right in 3 of 6 (never romaji); all 10 copying heads found, 2 extra | 6 of 6; all 10 found, none extra |
 | 4. Fix the car | 1,024/1,024 successes, 1.7 % of weights changed | 1,024/1,024, 3.5 % |
 | 5. Breakout | 483.6\* | 517.4 (506.5 in our evaluator) |
 | 5. Seaquest | 11.4\*\* | 53.1 (52.0) |

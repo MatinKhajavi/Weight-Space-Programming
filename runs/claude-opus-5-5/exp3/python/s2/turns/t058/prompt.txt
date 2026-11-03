@@ -1,0 +1,16 @@
+OUTPUT of run 57 of at most 100:
+```
+30 emb dirs overlap with big P: tok27 0.15, tokens mean 0.02 max 0.06  | dual: tok27 0.38 mean 0.05 max 0.10
+40 emb dirs overlap with big P: tok27 0.20, tokens mean 0.13 max 0.38  | dual: tok27 0.55 mean 0.17 max 0.44
+60 emb dirs overlap with big P: tok27 0.56, tokens mean 0.44 max 0.65  | dual: tok27 0.66 mean 0.45 max 0.71
+W_q.0 read norm tok27 0.46  tokens mean 0.37 min 0.27 max 0.55
+W_k.0 read norm tok27 0.53  tokens mean 0.41 min 0.30 max 0.61
+W_v.0 read norm tok27 0.56  tokens mean 0.58 min 0.50 max 0.65
+ V head 0 tok27 0.13 tokens mean 0.13
+ V head 1 tok27 0.30 tokens mean 0.33
+ V head 2 tok27 0.22 tokens mean 0.18
+ V head 3 tok27 0.13 tokens mean 0.14
+ V head 4 tok27 0.22 tokens mean 0.20
+ V head 5 tok27 0.31 tokens mean 0.33
+
+```

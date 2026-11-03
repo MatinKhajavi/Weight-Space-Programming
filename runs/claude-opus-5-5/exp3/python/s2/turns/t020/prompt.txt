@@ -1,0 +1,8 @@
+OUTPUT of run 19 of at most 100:
+```
+0 alive(fc norm>1): 518  >0.6: 560 hist [921  55  29  13  72 160 253  33]
+1 alive(fc norm>1): 1532  >0.6: 1532 hist [  3   1   0   0   2 643 884   2]
+2 alive(fc norm>1): 1536  >0.6: 1536 hist [  0   0   0   0   0 573 963   0]
+3 alive(fc norm>1): 1536  >0.6: 1536 hist [  0   0   0   0   0 821 715   0]
+
+```

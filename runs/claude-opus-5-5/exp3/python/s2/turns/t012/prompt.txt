@@ -1,0 +1,70 @@
+OUTPUT of run 11 of at most 100:
+```
+compare L0H5 planes with (0, 1)
+   2.75@53  -> best overlap 0.91 with 3.27@58
+   1.65@57  -> best overlap 0.70 with 0.24@143
+   1.43@0  -> best overlap 0.78 with 0.33@52
+   1.41@29  -> best overlap 0.59 with 0.26@90
+   1.35@78  -> best overlap 0.69 with 0.22@167
+   1.33@55  -> best overlap 0.63 with 0.19@110
+   1.16@106  -> best overlap 0.89 with 1.55@129
+   1.11@87  -> best overlap 0.43 with 0.22@167
+   1.04@110  -> best overlap 0.73 with 1.11@135
+   0.99@0  -> best overlap 0.71 with 0.33@52
+compare L0H5 planes with (1, 1)
+   2.75@53  -> best overlap 0.16 with 2.17@73
+   1.65@57  -> best overlap 0.06 with 0.98@139
+   1.43@0  -> best overlap 0.13 with 2.17@73
+   1.41@29  -> best overlap 0.07 with 0.29@175
+   1.35@78  -> best overlap 0.10 with 2.17@73
+   1.33@55  -> best overlap 0.08 with 0.46@175
+   1.16@106  -> best overlap 0.07 with 0.46@175
+   1.11@87  -> best overlap 0.08 with 0.33@25
+   1.04@110  -> best overlap 0.07 with 0.35@143
+   0.99@0  -> best overlap 0.14 with 2.17@73
+compare L0H5 planes with (1, 3)
+   2.75@53  -> best overlap 0.15 with 2.25@74
+   1.65@57  -> best overlap 0.07 with 2.25@74
+   1.43@0  -> best overlap 0.09 with 2.25@74
+   1.41@29  -> best overlap 0.09 with 0.45@133
+   1.35@78  -> best overlap 0.08 with 0.61@180
+   1.33@55  -> best overlap 0.08 with 0.45@133
+   1.16@106  -> best overlap 0.10 with 0.51@164
+   1.11@87  -> best overlap 0.11 with 0.74@0
+   1.04@110  -> best overlap 0.10 with 0.61@180
+   0.99@0  -> best overlap 0.11 with 2.25@74
+compare L0H5 planes with (1, 2)
+   2.75@53  -> best overlap 0.16 with 1.67@74
+   1.65@57  -> best overlap 0.07 with 0.23@55
+   1.43@0  -> best overlap 0.16 with 1.67@74
+   1.41@29  -> best overlap 0.07 with 1.67@74
+   1.35@78  -> best overlap 0.12 with 0.51@180
+   1.33@55  -> best overlap 0.07 with 0.27@111
+   1.16@106  -> best overlap 0.10 with 0.47@0
+   1.11@87  -> best overlap 0.10 with 0.51@180
+   1.04@110  -> best overlap 0.10 with 0.51@180
+   0.99@0  -> best overlap 0.18 with 1.67@74
+compare L0H5 planes with (2, 1)
+   2.75@53  -> best overlap 0.13 with 1.14@0
+   1.65@57  -> best overlap 0.08 with 0.70@40
+   1.43@0  -> best overlap 0.06 with 1.04@38
+   1.41@29  -> best overlap 0.09 with 0.70@40
+   1.35@78  -> best overlap 0.07 with 0.79@61
+   1.33@55  -> best overlap 0.08 with 0.89@51
+   1.16@106  -> best overlap 0.09 with 1.13@5
+   1.11@87  -> best overlap 0.07 with 0.79@61
+   1.04@110  -> best overlap 0.07 with 0.79@61
+   0.99@0  -> best overlap 0.12 with 0.79@61
+compare L0H5 planes with (3, 5)
+   2.75@53  -> best overlap 0.09 with 1.48@34
+   1.65@57  -> best overlap 0.07 with 1.51@27
+   1.43@0  -> best overlap 0.10 with 1.57@19
+   1.41@29  -> best overlap 0.10 with 1.80@27
+   1.35@78  -> best overlap 0.08 with 1.80@19
+   1.33@55  -> best overlap 0.06 with 1.62@34
+   1.16@106  -> best overlap 0.08 with 1.54@25
+   1.11@87  -> best overlap 0.08 with 1.65@7
+   1.04@110  -> best overlap 0.08 with 1.57@19
+   0.99@0  -> best overlap 0.09 with 1.80@27
+
+```

@@ -1,0 +1,17 @@
+OUTPUT of run 17 of at most 100:
+```
+out4 vs out0 overlap [0.9902174 0.9398704]
+L1H0 |q0|=3.28 q0.K.P4 = [-0.53 -0.51  0.03]  |K P4| cols [1.88 1.54 1.02]
+    QK through out4 sv [2.61 1.48 0.3 ]
+L1H1 |q0|=5.13 q0.K.P4 = [-2.5  -1.64 -0.12]  |K P4| cols [4.52 3.26 2.29]
+    QK through out4 sv [8.92 4.57 0.63]
+L1H2 |q0|=4.40 q0.K.P4 = [-1.74 -1.16 -0.09]  |K P4| cols [3.88 2.84 2.29]
+    QK through out4 sv [6.3  4.69 0.47]
+L1H3 |q0|=4.81 q0.K.P4 = [-2.13 -1.53 -0.05]  |K P4| cols [4.27 3.08 2.33]
+    QK through out4 sv [7.16 4.79 0.52]
+L1H4 |q0|=4.71 q0.K.P4 = [-1.96 -1.4  -0.11]  |K P4| cols [4.1  2.97 2.42]
+    QK through out4 sv [6.67 4.48 0.5 ]
+L1H5 |q0|=4.58 q0.K.P4 = [-1.86 -1.24 -0.02]  |K P4| cols [4.07 2.91 2.03]
+    QK through out4 sv [7.54 3.84 0.31]
+
+```

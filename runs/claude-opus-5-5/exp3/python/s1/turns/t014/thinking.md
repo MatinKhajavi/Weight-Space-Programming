@@ -1,0 +1,8 @@
+I'm looking at the OV projection values for L0H1 and L0H5, tracking how strongly each dimension contributes before the magnitude tapers off, with L0H1 showing a notable drop around dimension 22-23 and roughly 23 strong dimensions overall.
+
+If these heads encode previous-token identity, the effective rank should roughly track the alphabet size after LN centering, suggesting something like 27 for English or Python tokens versus 23 for romaji — though this isn't conclusive since rare letters contribute weaker dimensions regardless of language. I'm now considering whether Python code uses letters fairly uniformly, which would weaken this hypothesis, and thinking instead about identifying the shared token-identity subspace between L0H1 and L0H5 by looking at their common value-input structure.
+
+Stepping back, I wonder if the intended approach involves positional or structural signals instead — since positional embeddings aren't given, maybe the distinguishing feature is something like indentation tracking in Python (where a head would need to copy the previous line's leading-space count), versus the character-level predictability of romaji or the moderate long-range dependencies of English. This points toward comparing corpora by how much they rely on induction/copying mechanisms versus local predictability.
+
+I want to check whether L0H4's V direction reads token identity or position, so I should compare its singular subspaces against the known prev-token heads: V of H1/H5 reads token identity while their Q/K read positional directions. Computing principal angles between these subspaces — H4's V, H0's V, and H2's K — should tell me which signal the uniform head is actually propagating.
+

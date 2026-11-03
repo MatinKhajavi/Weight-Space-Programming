@@ -1,0 +1,10 @@
+I'm noticing some of the L0 head output subspaces overlap with raw input dimensions, like O4 overlapping with T by about 0.10, and now I'm checking how the L1 head output subspaces overlap with each other, with O4×O4 showing the largest overlap so far.
+
+Most of the L1 QK energy is probably outside these subspaces, likely in MLP0's output space. The O4 subspace seems to capture positional summary features: H4 computes a uniform average of positional values over context (a function of absolute position), while H0 attends to the most recent special token and outputs its position. Both write into the same subspace, so L1 heads comparing query and key O4 features are essentially comparing a mix of these two positional signals, possibly letting them match positions relative to the same line if the special token is a newline.
+
+If the special token were a newline, positions sharing the same last-newline index would share that signal — giving a natural "attend within the current line" mechanism. If it's a space instead, the analogous mechanism would be "attend within the current word." I'm checking H0's key-side token direction to see which tokens dominate it, but the norms are spread across several tokens rather than concentrated on one, so no single clear winner emerges yet.
+
+I should compute the actual signed score between the dominant query direction and each token's key direction to see if it attends to one specific token or a broader class like vowels. Stepping back, I'm weighing whether the underlying corpus is English or Python — with 28 tokens in use and considering things like dead neurons in layer 0 or how frequently a "space" token would appear in Python's structure, though neither clue is conclusive yet.
+
+Estimating magnitudes, I figure the top singular value combined with typical token component sizes could yield scores in the moderately sharp range, roughly 3.6-6. Now I want to actually compute the signed token scores for H0's key directly rather than estimate.
+

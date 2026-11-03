@@ -1,0 +1,14 @@
+OUTPUT of run 56 of at most 100:
+```
+[(3, 5)] direct(t_cur . o_next): VV +0.003 VC +0.004 CV +0.011 CC +0.001 | diag mean -0.111 | sp->sp -0.064 V->sp +0.027 C->sp +0.031 sp->V -0.031 sp->C +0.010
+[(3, 5)] viaL0H5: VV +0.010 VC +0.000 CV -0.007 CC +0.002 | diag mean -0.037 | sp->sp -0.016 V->sp -0.006 C->sp +0.028 sp->V -0.008 sp->C +0.003
+[(3, 1)] direct(t_cur . o_next): VV -0.018 VC +0.009 CV +0.013 CC +0.000 | diag mean -0.082 | sp->sp +0.018 V->sp -0.017 C->sp +0.016 sp->V -0.012 sp->C +0.002
+[(3, 1)] viaL0H5: VV -0.019 VC +0.006 CV -0.001 CC -0.001 | diag mean -0.021 | sp->sp -0.012 V->sp +0.003 C->sp +0.035 sp->V -0.007 sp->C +0.002
+[(3, 5), (3, 1)] direct(t_cur . o_next): VV -0.014 VC +0.014 CV +0.025 CC +0.001 | diag mean -0.193 | sp->sp -0.047 V->sp +0.010 C->sp +0.046 sp->V -0.043 sp->C +0.012
+[(3, 5), (3, 1)] viaL0H5: VV -0.008 VC +0.006 CV -0.008 CC +0.001 | diag mean -0.058 | sp->sp -0.028 V->sp -0.002 C->sp +0.062 sp->V -0.016 sp->C +0.005
+[(2, 1)] direct(t_cur . o_next): VV +0.004 VC +0.002 CV +0.004 CC +0.002 | diag mean -0.072 | sp->sp -0.052 V->sp +0.015 C->sp +0.004 sp->V -0.001 sp->C +0.003
+[(2, 1)] viaL0H5: VV -0.007 VC +0.003 CV -0.001 CC +0.000 | diag mean -0.007 | sp->sp +0.001 V->sp -0.004 C->sp +0.007 sp->V -0.011 sp->C +0.002
+[(3, 0)] direct(t_cur . o_next): VV +0.005 VC +0.007 CV -0.001 CC +0.005 | diag mean -0.102 | sp->sp -0.173 V->sp -0.039 C->sp -0.000 sp->V -0.034 sp->C +0.016
+[(3, 0)] viaL0H5: VV -0.013 VC +0.002 CV -0.001 CC -0.000 | diag mean +0.003 | sp->sp -0.017 V->sp -0.004 C->sp +0.004 sp->V +0.007 sp->C -0.001
+
+```

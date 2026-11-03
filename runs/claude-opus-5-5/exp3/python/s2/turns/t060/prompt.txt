@@ -1,0 +1,23 @@
+OUTPUT of run 59 of at most 100:
+```
+L1 plane union dim 6 [2.05 1.91 0.71 0.62 0.58 0.51 0.47 0.42 0.41 0.36]
+L1H0 |QK|   5.2  energy in L1-pos-planes 0.026 in L0-P 0.009  static kpref 0.84 (in planes 0.34)
+L1H1 |QK|  12.7  energy in L1-pos-planes 0.090 in L0-P 0.015  static kpref 3.15 (in planes 0.38)
+L1H2 |QK|   9.9  energy in L1-pos-planes 0.096 in L0-P 0.012  static kpref 2.20 (in planes 0.39)
+L1H3 |QK|  10.5  energy in L1-pos-planes 0.113 in L0-P 0.016  static kpref 2.72 (in planes 0.41)
+L1H4 |QK|  10.0  energy in L1-pos-planes 0.112 in L0-P 0.017  static kpref 2.52 (in planes 0.41)
+L1H5 |QK|  11.7  energy in L1-pos-planes 0.091 in L0-P 0.013  static kpref 2.46 (in planes 0.39)
+L2H0 |QK|  16.4  energy in L1-pos-planes 0.002 in L0-P 0.003  static kpref 0.90 (in planes 0.36)
+L2H1 |QK|  15.6  energy in L1-pos-planes 0.001 in L0-P 0.003  static kpref 0.64 (in planes 0.19)
+L2H2 |QK|  22.4  energy in L1-pos-planes 0.003 in L0-P 0.004  static kpref 1.58 (in planes 0.35)
+L2H3 |QK|  15.8  energy in L1-pos-planes 0.005 in L0-P 0.005  static kpref 1.04 (in planes 0.38)
+L2H4 |QK|  17.6  energy in L1-pos-planes 0.004 in L0-P 0.004  static kpref 1.20 (in planes 0.35)
+L2H5 |QK|  13.2  energy in L1-pos-planes 0.001 in L0-P 0.003  static kpref 0.64 (in planes 0.31)
+L3H0 |QK|  16.6  energy in L1-pos-planes 0.000 in L0-P 0.003  static kpref 0.30 (in planes 0.17)
+L3H1 |QK|  13.6  energy in L1-pos-planes 0.001 in L0-P 0.003  static kpref 0.26 (in planes 0.16)
+L3H2 |QK|  16.5  energy in L1-pos-planes 0.000 in L0-P 0.003  static kpref 0.34 (in planes 0.30)
+L3H3 |QK|   8.4  energy in L1-pos-planes 0.000 in L0-P 0.002  static kpref 0.26 (in planes 0.19)
+L3H4 |QK|  13.9  energy in L1-pos-planes 0.000 in L0-P 0.003  static kpref 0.31 (in planes 0.25)
+L3H5 |QK|  16.9  energy in L1-pos-planes 0.001 in L0-P 0.005  static kpref 0.31 (in planes 0.13)
+
+```

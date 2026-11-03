@@ -1,0 +1,10 @@
+OUTPUT of run 29 of at most 100:
+```
+L1H0 via L0 heads: H0:42.1(pl 0.88) H1:41.8(pl 0.86) H2:0.3(pl 0.07) H3:1.9(pl 0.52) H4:20.8(pl 0.86) H5:79.8(pl 0.86)  total |g|=182.0 plane frac=0.88 P frac=0.97  plane vec=[-156.7   30.4]
+L1H1 via L0 heads: H0:78.9(pl 0.88) H1:74.1(pl 0.87) H2:0.4(pl 0.05) H3:2.5(pl 0.54) H4:37.8(pl 0.87) H5:137.9(pl 0.87)  total |g|=323.4 plane frac=0.88 P frac=0.98  plane vec=[-283.3   36.7]
+L1H2 via L0 heads: H0:89.8(pl 0.88) H1:83.9(pl 0.87) H2:0.9(pl 0.03) H3:2.8(pl 0.46) H4:42.8(pl 0.87) H5:156.1(pl 0.87)  total |g|=366.5 plane frac=0.88 P frac=0.98  plane vec=[-320.7   40.6]
+L1H3 via L0 heads: H0:78.1(pl 0.88) H1:74.4(pl 0.86) H2:1.1(pl 0.14) H3:2.9(pl 0.41) H4:37.5(pl 0.86) H5:139.9(pl 0.86)  total |g|=324.8 plane frac=0.88 P frac=0.97  plane vec=[-282.    44.2]
+L1H4 via L0 heads: H0:84.5(pl 0.89) H1:75.8(pl 0.87) H2:1.5(pl 0.09) H3:2.2(pl 0.39) H4:39.2(pl 0.87) H5:139.2(pl 0.87)  total |g|=332.7 plane frac=0.89 P frac=0.98  plane vec=[-293.4   25. ]
+L1H5 via L0 heads: H0:57.3(pl 0.88) H1:55.4(pl 0.86) H2:1.0(pl 0.12) H3:1.9(pl 0.50) H4:27.7(pl 0.86) H5:104.0(pl 0.86)  total |g|=240.9 plane frac=0.88 P frac=0.97  plane vec=[-209.3   32.4]
+
+```

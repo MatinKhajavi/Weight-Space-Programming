@@ -1,0 +1,53 @@
+{
+ "corpus_guess": "python",
+ "order_guess": "as is",
+ "probabilities": "probabilities: python=0.48 romaji=0.14 english=0.38; as is=0.95 shuffled=0.05",
+ "head_labels": {
+  "L0H0": "broad",
+  "L0H1": "local",
+  "L0H2": "local",
+  "L0H3": "local",
+  "L0H4": "broad",
+  "L0H5": "previous",
+  "L1H0": "broad",
+  "L1H1": "broad",
+  "L1H2": "broad",
+  "L1H3": "broad",
+  "L1H4": "broad",
+  "L1H5": "broad",
+  "L2H0": "unclear",
+  "L2H1": "copy",
+  "L2H2": "previous",
+  "L2H3": "unclear",
+  "L2H4": "local",
+  "L2H5": "unclear",
+  "L3H0": "copy",
+  "L3H1": "copy",
+  "L3H2": "unclear",
+  "L3H3": "broad",
+  "L3H4": "unclear",
+  "L3H5": "copy"
+ },
+ "copy_named": [
+  "L2H1",
+  "L3H0",
+  "L3H1",
+  "L3H5"
+ ],
+ "corpus": "python",
+ "corpus_correct": true,
+ "true_copy_heads": [
+  "L2H1",
+  "L3H1",
+  "L3H5"
+ ],
+ "copy_found": [
+  "L2H1",
+  "L3H1",
+  "L3H5"
+ ],
+ "copy_false": [
+  "L3H0"
+ ],
+ "copy_missed": []
+}

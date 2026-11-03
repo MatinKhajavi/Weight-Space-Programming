@@ -1,0 +1,10 @@
+L3H3 looks like another induction head: it reads L0H3's output with a strong positive eigenvalue structure (top eigenvalue 0.43, trQK/|QK|=3.2) consistent with same-token matching between current and previous-token representations. Its query direction isn't aligned with attention sinks, setting it apart from the other heads examined so far.
+
+I want to decompose L3H3's key read direction against L0H3's output subspace specifically. I also notice the residual-space OV trace is negative for L3H3 and consistently negative across all L1-L3 heads, which is odd — it suggests some systematic relationship between the logit readout direction and the token embedding direction for each character, though I'm not sure why that would hold universally.
+
+That gives me an explanation: since repeated characters are rare in English, the network likely learns W_out[c]·e_c < 0, so predicting "c after c" is suppressed by default. A true copy/induction head that wants to boost the logit for c must then write in the -e_c direction at the residual stream, which naturally produces a negative eigenvalue in residual-space OV — so the negative sign I'm seeing across these heads is actually consistent with them functioning as genuine copy heads, not a contradiction.
+
+But checking shuffled vs. natural text — doubled letters do occur with real frequency (gemination, English double consonants), so the OV sign evidence alone is ambiguous and doesn't cleanly confirm or rule out copying. I should pin down L3H3's actual mechanism more rigorously and check whether other induction-like heads show the same pattern.
+
+Looking at L2 heads, there's weak positive eigenvalue evidence (L2H4, L2H0), while L1 heads show mixed signs. The key insight is that L3H3's key seems to read directly from L0H3's output — this looks like a genuine induction circuit where an early head summarizes local context and a later head matches against it. I want to verify this by measuring how much of L3H3's key-weight energy actually lies within the subspace spanned by L0H3's output.
+

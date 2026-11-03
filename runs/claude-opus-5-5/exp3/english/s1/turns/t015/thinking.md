@@ -1,0 +1,8 @@
+The uniform heads in massive dims seem to read almost entirely from the L0H2 QK subspace, which looks positional — so averaging gives a smooth function of position j, and then L1/L2 keys develop a strong bias preference over that positional signal, likely favoring the first or most recent token.
+
+But I should question whether L0H2's QK subspace is really positional rather than token-based — the Q/K overlap is consistent with either interpretation, since uniform heads could instead be computing running token frequencies. V2 reads a distinct, lower-overlap subspace that looks more token-like, so the ambiguity centers on which subspace carries position versus identity, and I'm now looking at whether the L0H2 QK interaction has a rotational, antisymmetric structure that might help resolve this.
+
+The strong antisymmetric, flat-spectrum pattern in the QK interaction points toward position rather than token identity, since token-token attention rarely produces such uniform rotational structure. Meanwhile V2's flat 18-dimensional spectrum seems like it might reflect copying token identity rather uniformly, though that's smaller than the ~27 dimensions I'd expect for 28 distinct tokens, so I want to pin down the actual token subspace dimension by collecting all the learned Q/K/V rows across layer-0 heads plus fc0, projecting out the positional subspace, and checking the remaining rank.
+
+I should also check whether the uniform heads' OV outputs are mostly concentrated in a few massive dimensions or spread more broadly, so I'm planning to run an SVD on each uniform head's OV matrix and measure how much of the top singular vectors' read-side falls into the positional subspace versus elsewhere.
+

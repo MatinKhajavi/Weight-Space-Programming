@@ -1,0 +1,23 @@
+OUTPUT of run 16 of at most 100:
+```
+expected random frac for 20-dim: 0.052770448548812667  10-dim 0.026385224274406333  60-dim 0.158311345646438
+L1H0  inL0H3out: q 0.206 k 0.132 v 0.226 | inL0H0out: q 0.020 k 0.020 v 0.022 | inE60: q 0.400 k 0.351 v 0.375
+L1H1  inL0H3out: q 0.206 k 0.160 v 0.253 | inL0H0out: q 0.022 k 0.017 v 0.018 | inE60: q 0.397 k 0.381 v 0.416
+L1H2  inL0H3out: q 0.241 k 0.208 v 0.222 | inL0H0out: q 0.021 k 0.017 v 0.022 | inE60: q 0.407 k 0.389 v 0.372
+L1H3  inL0H3out: q 0.206 k 0.166 v 0.218 | inL0H0out: q 0.020 k 0.017 v 0.018 | inE60: q 0.408 k 0.364 v 0.406
+L1H4  inL0H3out: q 0.247 k 0.164 v 0.185 | inL0H0out: q 0.025 k 0.020 v 0.033 | inE60: q 0.398 k 0.354 v 0.352
+L1H5  inL0H3out: q 0.219 k 0.129 v 0.240 | inL0H0out: q 0.016 k 0.014 v 0.017 | inE60: q 0.425 k 0.376 v 0.401
+L2H0  inL0H3out: q 0.065 k 0.066 v 0.064 | inL0H0out: q 0.026 k 0.025 v 0.030 | inE60: q 0.176 k 0.187 v 0.171
+L2H1  inL0H3out: q 0.077 k 0.068 v 0.073 | inL0H0out: q 0.023 k 0.021 v 0.021 | inE60: q 0.190 k 0.186 v 0.185
+L2H2  inL0H3out: q 0.066 k 0.066 v 0.058 | inL0H0out: q 0.032 k 0.027 v 0.025 | inE60: q 0.181 k 0.184 v 0.173
+L2H3  inL0H3out: q 0.054 k 0.066 v 0.079 | inL0H0out: q 0.033 k 0.025 v 0.025 | inE60: q 0.169 k 0.180 v 0.190
+L2H4  inL0H3out: q 0.075 k 0.069 v 0.086 | inL0H0out: q 0.027 k 0.021 v 0.022 | inE60: q 0.188 k 0.187 v 0.189
+L2H5  inL0H3out: q 0.076 k 0.068 v 0.070 | inL0H0out: q 0.026 k 0.022 v 0.021 | inE60: q 0.196 k 0.188 v 0.178
+L3H0  inL0H3out: q 0.062 k 0.066 v 0.053 | inL0H0out: q 0.024 k 0.027 v 0.026 | inE60: q 0.167 k 0.177 v 0.162
+L3H1  inL0H3out: q 0.049 k 0.062 v 0.066 | inL0H0out: q 0.034 k 0.038 v 0.026 | inE60: q 0.156 k 0.177 v 0.172
+L3H2  inL0H3out: q 0.050 k 0.054 v 0.053 | inL0H0out: q 0.032 k 0.029 v 0.021 | inE60: q 0.153 k 0.160 v 0.164
+L3H3  inL0H3out: q 0.077 k 0.092 v 0.048 | inL0H0out: q 0.025 k 0.029 v 0.022 | inE60: q 0.202 k 0.190 v 0.209
+L3H4  inL0H3out: q 0.045 k 0.049 v 0.051 | inL0H0out: q 0.047 k 0.048 v 0.027 | inE60: q 0.171 k 0.171 v 0.161
+L3H5  inL0H3out: q 0.056 k 0.060 v 0.057 | inL0H0out: q 0.030 k 0.028 v 0.021 | inE60: q 0.163 k 0.173 v 0.160
+
+```

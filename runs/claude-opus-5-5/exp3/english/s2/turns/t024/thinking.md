@@ -1,0 +1,10 @@
+Only L3H1's OV sits substantially in the MLP3 top-28 subspace (46%), while other layer-3 heads, even ones with large OV norms like L3H5, write mostly outside it—oddly, this only matters through the LN_f scaling at the last layer. That makes me question whether I've actually identified the right logit subspace in the first place.
+
+Maybe W_proj.3's top-28 directions genuinely constitute the logit subspace (rank-limited by W_out's 28×384 shape), and heads like L3H5 writing 90% outside it might instead be regulating residual norm and thus logit temperature rather than contributing directly to logit direction—a plausible "confidence regulation" mechanism. Checking principal angles between MLP3's top-40 and L3H1's top-40 dims shows roughly 28-30 dimensions with cosine similarity above 0.5, which supports the ~28-dim estimate for the logit subspace.
+
+Trying to pin the count more precisely: counting shared dims with cosine thresholds gives 27 at >0.6 and 29 at >0.5, with the principal cosines decaying gradually rather than showing a sharp cutoff, so the subspace dimension is roughly 28±2. I'm now wondering how this compares across token sets—romaji with its 24 used tokens should need fewer shared dims (~23-24) versus English/Python needing ~27-28, and whether rare romaji letters like l, q, v, x get special treatment for copying foreign loanwords that might appear in the training text.
+
+I also want to check the input side: the token embedding subspace at layer 0, since romaji's 24 tokens versus English's larger set should scale similarly. Looking at the singular values of L0H2's value matrix, there seem to be about 18 strong components followed by ~10 moderate ones before dropping into noise, suggesting a similar ~28-dimensional structure, with positional information contributing only a small fraction of the energy.
+
+Now I want to compose the full copy circuit from the input token space through L0H2 into L3H1's query-key interaction, and check whether the composed matrix's singular values show a clear cliff matching the expected number of distinct tokens.
+

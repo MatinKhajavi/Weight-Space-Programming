@@ -1,0 +1,65 @@
+OUTPUT of run 34 of at most 100:
+```
+cur0 518 mean norm 0.9
+prev0 518 mean norm 0.49
+prev1_0 518 mean norm 0.4
+cur1 1532 mean norm 0.78
+prev1 1532 mean norm 0.77
+prev1_1 1532 mean norm 0.45
+cur2 1536 mean norm 0.8
+prev2 1536 mean norm 0.59
+prev1_2 1536 mean norm 0.45
+cur3 1536 mean norm 0.76
+prev3 1536 mean norm 0.48
+prev1_3 1536 mean norm 0.41
+cur1 [93  3  2  2  2  2  2  2  2  2  2  1  1  1  1  1  1  1  1  1  1  1  1  0
+  0  0  0  0  0 -1]
+prev0 [28 19 16 13 12 11 10 10  9  9  8  8  8  8  8  7  7  7  7  7  6  6  6  6
+  5  4  4  3  2  1]
+
+[stderr]
+/usr/local/lib/python3.12/site-packages/sklearn/decomposition/_fastica.py:132: ConvergenceWarning: FastICA did not converge. Consider increasing tolerance or the maximum number of iterations.
+  warnings.warn(
+/usr/local/lib/python3.12/site-packages/sklearn/decomposition/_fastica.py:168: RuntimeWarning: overflow encountered in power
+  return x**3, (3 * x**2).mean(axis=-1)
+/usr/local/lib/python3.12/site-packages/sklearn/decomposition/_fastica.py:122: RuntimeWarning: overflow encountered in dot
+  W1 = _sym_decorrelation(np.dot(gwtx, X.T) / p_ - g_wtx[:, np.newaxis] * W)
+/usr/local/lib/python3.12/site-packages/sklearn/decomposition/_fastica.py:122: RuntimeWarning: invalid value encountered in dot
+  W1 = _sym_decorrelation(np.dot(gwtx, X.T) / p_ - g_wtx[:, np.newaxis] * W)
+/usr/local/lib/python3.12/site-packages/sklearn/decomposition/_fastica.py:122: RuntimeWarning: overflow encountered in multiply
+  W1 = _sym_decorrelation(np.dot(gwtx, X.T) / p_ - g_wtx[:, np.newaxis] * W)
+Traceback (most recent call last):
+  File "<stdin>", line 29, in <module>
+  File "<stdin>", line 26, in ica_kurt
+  File "/usr/local/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 327, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sklearn/base.py", line 1403, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sklearn/decomposition/_fastica.py", line 724, in fit_transform
+    return self._fit_transform(X, compute_sources=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sklearn/decomposition/_fastica.py", line 671, in _fit_transform
+    W, n_iter = _ica_par(X1, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sklearn/decomposition/_fastica.py", line 122, in _ica_par
+    W1 = _sym_decorrelation(np.dot(gwtx, X.T) / p_ - g_wtx[:, np.newaxis] * W)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sklearn/decomposition/_fastica.py", line 65, in _sym_decorrelation
+    s, u = linalg.eigh(np.dot(W, W.T))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/scipy/_lib/_util.py", line 1138, in wrapper
+    return f(*arrays, *other_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/scipy/linalg/_decomp.py", line 487, in eigh
+    a1 = _asarray_validated(a, check_finite=check_finite)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/scipy/_lib/_util.py", line 409, in _asarray_validated
+    a = toarray(a)
+        ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 685, in asarray_chkfinite
+    raise ValueError(
+ValueError: array must not contain infs or NaNs
+
+```

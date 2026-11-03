@@ -1,0 +1,14 @@
+{
+ "experiment": "exp3",
+ "item": "python",
+ "sample": 2,
+ "model": "claude-opus-5-5",
+ "effort": "xhigh",
+ "versions": {
+  "claude_agent_sdk": "0.2.177",
+  "claude_code_cli": "2.1.317"
+ },
+ "turns": 62,
+ "done": true,
+ "cost_usd": 6.6311
+}

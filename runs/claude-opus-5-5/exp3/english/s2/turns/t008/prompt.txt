@@ -1,0 +1,30 @@
+OUTPUT of run 7 of at most 100:
+```
+overlap pos/tok subspaces [0.921 0.898 0.849 0.782 0.719 0.648 0.646 0.553 0.486 0.425]
+head 0 sv [0.411 0.092 0.057 0.037]
+   r0 q-vec: pos 0.95 tok 0.44 | k-vec: pos 0.68 tok 0.73
+   r1 q-vec: pos 0.66 tok 0.39 | k-vec: pos 0.70 tok 0.33
+   r2 q-vec: pos 0.70 tok 0.32 | k-vec: pos 0.54 tok 0.45
+   keypref c: pos 0.70 tok 0.72
+head 1 sv [0.2   0.076 0.042 0.035]
+   r0 q-vec: pos 0.87 tok 0.38 | k-vec: pos 0.73 tok 0.49
+   r1 q-vec: pos 0.69 tok 0.38 | k-vec: pos 0.69 tok 0.41
+   r2 q-vec: pos 0.63 tok 0.35 | k-vec: pos 0.54 tok 0.43
+   keypref c: pos 0.73 tok 0.39
+head 3 sv [2.871 0.953 0.621 0.34 ]
+   r0 q-vec: pos 0.95 tok 0.47 | k-vec: pos 0.97 tok 0.41
+   r1 q-vec: pos 0.86 tok 0.37 | k-vec: pos 0.89 tok 0.29
+   r2 q-vec: pos 0.80 tok 0.31 | k-vec: pos 0.64 tok 0.58
+   keypref c: pos 0.89 tok 0.41
+head 4 sv [0.714 0.428 0.132 0.052]
+   r0 q-vec: pos 0.81 tok 0.35 | k-vec: pos 0.72 tok 0.35
+   r1 q-vec: pos 0.75 tok 0.46 | k-vec: pos 0.62 tok 0.53
+   r2 q-vec: pos 0.76 tok 0.37 | k-vec: pos 0.57 tok 0.36
+   keypref c: pos 0.67 tok 0.46
+head 5 sv [0.607 0.086 0.037 0.03 ]
+   r0 q-vec: pos 0.96 tok 0.22 | k-vec: pos 0.78 tok 0.40
+   r1 q-vec: pos 0.65 tok 0.35 | k-vec: pos 0.56 tok 0.35
+   r2 q-vec: pos 0.64 tok 0.35 | k-vec: pos 0.67 tok 0.35
+   keypref c: pos 0.78 tok 0.40
+
+```

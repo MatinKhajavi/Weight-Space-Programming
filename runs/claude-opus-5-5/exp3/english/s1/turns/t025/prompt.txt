@@ -1,0 +1,23 @@
+OUTPUT of run 24 of at most 100:
+```
+head: induction form T^T B OV2 T  (pos ratio, tr/|.|) ; same-token form T^T B T ; prev-prev O2: (OV2 T)^T B (OV2 T)
+L1H0 ind=-0.11,-0.16 |0.22|  same=-0.51,-0.97 |0.77|  prevprev=-0.70 |0.20|  qprev-kcur=-0.67 |0.43|
+L1H1 ind=-0.07,-0.10 |0.51|  same=-0.76,-1.42 |1.53|  prevprev=-0.36 |0.37|  qprev-kcur=-0.39 |0.69|
+L1H2 ind=+0.32,+0.63 |0.53|  same=-0.76,-2.10 |1.54|  prevprev=-0.59 |0.45|  qprev-kcur=+0.26 |0.74|
+L1H3 ind=+0.36,+0.65 |0.44|  same=-0.55,-1.23 |1.21|  prevprev=-0.62 |0.47|  qprev-kcur=+0.41 |0.79|
+L1H4 ind=+0.40,+0.71 |0.47|  same=-0.79,-1.61 |1.52|  prevprev=-0.60 |0.38|  qprev-kcur=-0.19 |1.05|
+L1H5 ind=+0.06,+0.08 |0.60|  same=-0.64,-1.19 |1.44|  prevprev=-0.53 |0.45|  qprev-kcur=-0.44 |0.85|
+L2H0 ind=-0.19,-0.44 |0.61|  same=-0.14,-0.35 |1.30|  prevprev=-0.30 |0.37|  qprev-kcur=-0.03 |0.56|
+L2H1 ind=-0.21,-0.52 |0.46|  same=-0.18,-0.44 |1.00|  prevprev=-0.05 |0.29|  qprev-kcur=+0.54 |0.64|
+L2H2 ind=+0.04,+0.09 |0.32|  same=-0.18,-0.41 |0.95|  prevprev=-0.64 |0.19|  qprev-kcur=-0.15 |0.37|
+L2H3 ind=+0.14,+0.33 |0.43|  same=-0.29,-0.74 |1.14|  prevprev=-0.52 |0.29|  qprev-kcur=+0.22 |0.48|
+L2H4 ind=-0.30,-0.72 |0.51|  same=-0.26,-0.56 |1.36|  prevprev=-0.42 |0.32|  qprev-kcur=-0.09 |0.56|
+L2H5 ind=-0.03,-0.08 |0.53|  same=-0.18,-0.45 |1.30|  prevprev=-0.45 |0.31|  qprev-kcur=+0.15 |0.55|
+L3H0 ind=-0.06,-0.16 |0.50|  same=+0.32,+0.87 |0.97|  prevprev=+0.41 |0.27|  qprev-kcur=+0.42 |0.54|
+L3H1 ind=+0.95,+2.76 |0.95|  same=+0.41,+1.12 |0.85|  prevprev=+0.68 |0.36|  qprev-kcur=-0.57 |0.47|
+L3H2 ind=+0.15,+0.38 |0.25|  same=+0.03,+0.08 |0.73|  prevprev=+0.08 |0.13|  qprev-kcur=+0.06 |0.29|
+L3H3 ind=+0.05,+0.12 |0.29|  same=-0.01,-0.04 |0.74|  prevprev=+0.06 |0.15|  qprev-kcur=+0.18 |0.31|
+L3H4 ind=-0.15,-0.38 |0.36|  same=+0.09,+0.21 |0.75|  prevprev=+0.10 |0.17|  qprev-kcur=+0.03 |0.34|
+L3H5 ind=+0.12,+0.28 |0.16|  same=+0.11,+0.27 |0.28|  prevprev=-0.06 |0.08|  qprev-kcur=+0.06 |0.13|
+
+```

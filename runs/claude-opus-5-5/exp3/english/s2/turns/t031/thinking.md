@@ -1,0 +1,16 @@
+It's striking that MLP3 neuron outputs sit mostly within S, confirming that subspace as the effective logit space, though neurons don't cleanly cluster into distinct token directions—they seem distributed. I'm thinking about shifting strategy to examine token logit directions directly in that space rather than relying on clustering neurons.
+
+Given that S spans about 28 dimensions, I'm weighing whether all those dims correspond to actual token predictions (fitting English or Python, which use more characters) versus romaji's narrower 23-dim logit space, where the extra capacity would otherwise be wasted except for minor LayerNorm-related effects—though 5 dimensions feels like too much just for LN control. This pushes me toward believing the full 28 characters are being used, meaning it's likely English or Python rather than romaji. Now I want to explore the Python hypothesis further, especially the heavy use of leading whitespace for indentation, which would require the model to track character position relative to newlines.
+
+I'm checking whether any attention heads show strong newline-tracking behavior, since a model handling Python's indentation would need line-position machinery, but I'm mostly seeing weak token-key preferences in layer-0 broad heads instead. I'm trying to reconstruct how a "newline" direction might emerge from positional or frequency signatures in the broad code, and whether a smoothly averaged representation of recent newline positions could explain the layer-1 attention rotation patterns I'm seeing.
+
+I'm also considering semantic bigram explanations — the six layer-1 heads pulling previous-token info at a fixed lag suggests n-gram assembly, which fits natural-language and code patterns like "q→u" or newline-then-space indentation, though the direct embedding-to-logit path likely handles simple bigrams without needing attention.
+
+Looking at copy-head gains, the medium-strength dims (~4.0-4.7 vs 5-7 for strong ones) don't clearly separate English from Python, since rare letters like q/j/z get copied often in both due to repeated identifiers or names. I can't confidently discriminate the two languages from this logit structure alone, though the five-medium-dim count leans slightly toward English.
+
+I'm now considering whether Python's structural regularity — frequent newlines (~3% of characters) and indentation patterns — might reveal itself through dedicated positional machinery, like the broad L0 heads feeding keys into later layers for local window attention via raw positional embeddings.
+
+I wonder if layer 1 queries read raw positional codes while keys read smoothed codes, producing attention matched by offset, but confirming this requires forward simulation, which I can't do here. Instead I'm trying to count "previous-token-like" sharp positional heads, expecting more of them in Python to track indentation at offsets like -4 or -8, though so far I've only spotted one such head in layer 0.
+
+Let me check whether any later-layer head's QK matrix shows the same rotation structure on raw positional dimensions as that L0 head — I need to isolate the raw positional subspace in residual space by dividing the positional embedding by the gate values (excluding near-zero dims), then examine each head's QK energy and eigen-angles within that subspace.
+

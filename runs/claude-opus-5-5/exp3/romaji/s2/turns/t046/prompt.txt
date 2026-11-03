@@ -1,0 +1,16 @@
+OUTPUT of run 45 of at most 100:
+```
+proj norm pct [0.95 1.41 2.12]
+fraction of neurons with a partner cos>0.9: 0.30, >0.8: 0.56
+12 inertia 359.8 sil 0.238
+16 inertia 324.0 sil 0.254
+20 inertia 294.8 sil 0.294
+22 inertia 281.0 sil 0.308
+24 inertia 270.5 sil 0.281
+26 inertia 261.3 sil 0.295
+28 inertia 250.1 sil 0.326
+30 inertia 244.5 sil 0.324
+34 inertia 231.0 sil 0.308
+40 inertia 220.5 sil 0.302
+
+```

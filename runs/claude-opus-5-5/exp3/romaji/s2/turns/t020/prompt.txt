@@ -1,0 +1,21 @@
+OUTPUT of run 19 of at most 100:
+```
+0 sv 28.46 top dims [184  39   5 383 132 219] [-0.43 -0.34  0.32 -0.25 -0.23 -0.22] energy in special dims 0.41 ipr 0.077
+1 sv 22.21 top dims [351 316 283  43 194 366] [-0.17  0.16 -0.15  0.14 -0.14  0.14] energy in special dims 0.03 ipr 0.009
+2 sv 21.34 top dims [323 219  95  61 201 184] [ 0.16 -0.13  0.12 -0.12 -0.12 -0.12] energy in special dims 0.04 ipr 0.007
+18 sv 12.32 top dims [289 349 235  67 176 245] [ 0.17  0.15 -0.14 -0.14  0.13 -0.13] energy in special dims 0.02 ipr 0.008
+19 sv 11.53 top dims [341   0  19 273 109 131] [-0.19 -0.17 -0.15 -0.14  0.13 -0.13] energy in special dims 0.01 ipr 0.008
+20 sv 11.05 top dims [318 212 150 154 187 243] [ 0.23  0.2  -0.15 -0.14 -0.14 -0.14] energy in special dims 0.02 ipr 0.011
+21 sv 9.08 top dims [ 58 365 103 169  77 226] [ 0.17  0.15 -0.15 -0.15 -0.14  0.14] energy in special dims 0.06 ipr 0.009
+22 sv 8.35 top dims [108 286  17 177  31 243] [-0.18  0.15  0.15 -0.14  0.13 -0.13] energy in special dims 0.03 ipr 0.008
+23 sv 8.24 top dims [315 281 298  69   7  53] [ 0.15 -0.14  0.13 -0.13  0.13 -0.13] energy in special dims 0.02 ipr 0.007
+24 sv 6.37 top dims [214  90 219  53 184   5] [ 0.26  0.25  0.24 -0.22  0.22  0.19] energy in special dims 0.07 ipr 0.024
+25 sv 5.84 top dims [ 21  90  53   5 178 195] [ 0.5  -0.27 -0.25  0.15 -0.15 -0.14] energy in special dims 0.28 ipr 0.076
+26 sv 4.63 top dims [ 21  39  90  64 242 372] [-0.4   0.27 -0.21 -0.15 -0.14 -0.13] energy in special dims 0.24 ipr 0.037
+27 sv 4.58 top dims [ 21  39 242  90  26 266] [-0.59  0.22  0.15 -0.15 -0.12 -0.11] energy in special dims 0.43 ipr 0.131
+28 sv 3.78 top dims [184   5 329 294  76 238] [-0.35 -0.23 -0.21  0.21 -0.17 -0.15] energy in special dims 0.16 ipr 0.027
+29 sv 3.61 top dims [ 53   5 294  89 349 238] [-0.32 -0.23  0.23  0.23  0.16 -0.16] energy in special dims 0.03 ipr 0.025
+30 sv 3.25 top dims [214 288 132 383   5 355] [-0.27 -0.26  0.2  -0.19  0.19 -0.18] energy in special dims 0.10 ipr 0.021
+31 sv 3.18 top dims [288  58  18   9  32 383] [ 0.27 -0.21 -0.2  -0.17 -0.17 -0.15] energy in special dims 0.10 ipr 0.016
+
+```

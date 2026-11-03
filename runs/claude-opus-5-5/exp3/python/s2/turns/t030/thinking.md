@@ -1,0 +1,10 @@
+Counting across both runs, I'm seeing roughly 27-28 independent heavy-tailed directions versus just 1-2 near-Gaussian ones, which points toward 27-28 sparse token-like features rather than the 24 implied by romaji — though I should double check whether these heavy-tailed components could be explained some other way.
+
+These directions might actually reflect individual outlier neurons rather than true tokens, since kurtosis alone can arise from a single dominant neuron among 518. But the fact that the count saturates right at 28 and additional components beyond that turn Gaussian is suggestive of an underlying 28-dimensional structure. I'm planning to extract these 28 ICA directions and compute neuron activation counts, raw residual-space direction vectors, copy strength through the OV circuit, key-side preference scores, and induction composite diagnostics for each one.
+
+I also need to be careful about sign conventions and the effect of whitening in FastICA — the unmixing vector in the whitened token coordinates gives the sparse activation pattern, and I can recover the raw residual direction by projecting it back through the embedding matrix. From there I want to also check each candidate token direction's previous-token preference via the earlier OV circuit.
+
+Now I'm thinking about how to distinguish Python-like from English-like token structure without labels: in English a space token never repeats itself and never directly precedes a newline, while every letter can appear both after a space and before a space — whereas Python's whitespace patterns (indentation runs) behave differently, which gives me a label-free heuristic to test.
+
+I could try computing self-bigram detector strength per token (how strongly neurons fire when prev=cur=c) to see which tokens repeat frequently, but without knowing which token actually is space this is ambiguous — space might instead be identifiable as whichever token has the broadest set of bigram partners on both sides, or by other structural cues. I think it's best to just run the computation and inspect the actual data rather than reason further in the abstract.
+

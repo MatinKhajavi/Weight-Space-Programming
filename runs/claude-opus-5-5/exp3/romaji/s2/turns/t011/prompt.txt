@@ -1,0 +1,22 @@
+OUTPUT of run 10 of at most 100:
+```
+1 0 ind: tr/fro 0.504 fro 0.108 pos-real-eig-frac 0.22 | same-tok tr/fro -2.532 fro 0.293
+1 1 ind: tr/fro 0.613 fro 0.132 pos-real-eig-frac 0.28 | same-tok tr/fro -2.345 fro 0.269
+1 2 ind: tr/fro 0.621 fro 0.119 pos-real-eig-frac 0.29 | same-tok tr/fro -1.873 fro 0.222
+1 3 ind: tr/fro 0.235 fro 0.112 pos-real-eig-frac 0.11 | same-tok tr/fro -2.249 fro 0.197
+1 4 ind: tr/fro 0.176 fro 0.085 pos-real-eig-frac 0.07 | same-tok tr/fro -2.036 fro 0.155
+1 5 ind: tr/fro 0.437 fro 0.121 pos-real-eig-frac 0.20 | same-tok tr/fro -2.592 fro 0.299
+2 0 ind: tr/fro 0.257 fro 0.054 pos-real-eig-frac 0.09 | same-tok tr/fro -1.448 fro 0.101
+2 1 ind: tr/fro -0.017 fro 0.082 pos-real-eig-frac -0.01 | same-tok tr/fro -0.839 fro 0.128
+2 2 ind: tr/fro 0.371 fro 0.057 pos-real-eig-frac 0.14 | same-tok tr/fro -1.256 fro 0.095
+2 3 ind: tr/fro 0.396 fro 0.059 pos-real-eig-frac 0.14 | same-tok tr/fro -0.525 fro 0.085
+2 4 ind: tr/fro 0.577 fro 0.081 pos-real-eig-frac 0.22 | same-tok tr/fro -0.745 fro 0.136
+2 5 ind: tr/fro -0.074 fro 0.088 pos-real-eig-frac -0.03 | same-tok tr/fro -1.338 fro 0.151
+3 0 ind: tr/fro -0.573 fro 0.085 pos-real-eig-frac -0.23 | same-tok tr/fro 0.163 fro 0.112
+3 1 ind: tr/fro -0.189 fro 0.043 pos-real-eig-frac -0.07 | same-tok tr/fro 0.216 fro 0.064
+3 2 ind: tr/fro 0.210 fro 0.042 pos-real-eig-frac 0.07 | same-tok tr/fro -0.246 fro 0.069
+3 3 ind: tr/fro 2.826 fro 0.130 pos-real-eig-frac 0.91 | same-tok tr/fro 0.561 fro 0.106
+3 4 ind: tr/fro 0.607 fro 0.021 pos-real-eig-frac 0.23 | same-tok tr/fro -0.080 fro 0.035
+3 5 ind: tr/fro -0.139 fro 0.056 pos-real-eig-frac -0.05 | same-tok tr/fro -0.144 fro 0.091
+
+```

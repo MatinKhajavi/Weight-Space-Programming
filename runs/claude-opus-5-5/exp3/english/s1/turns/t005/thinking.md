@@ -1,0 +1,4 @@
+I'm noting that this spectral norm bound is a loose upper estimate that only holds if the vectors align with top singular directions, so actual values for those layer-0 heads are likely much smaller than the 10-35 range suggests.
+
+For layer 0, heads 0, 1, 4, and 5 show tiny QK but large OV norms, which could indicate uniform-ish averaging heads—more natural for shuffled text than ordinary text. L0H2's large QK with rotational structure suggests a positional head, possibly tracking previous tokens, while L0H3's rank-1 symmetric QK pattern hints it might be attending to newline or space tokens to locate line boundaries, since shuffled text would need a content-based way to find the start of the current line. I want to look closer at L0H2's eigenvalues to understand its positional role better.
+

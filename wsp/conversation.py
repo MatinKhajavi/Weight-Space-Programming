@@ -1,6 +1,7 @@
 """Multi-turn runner: one Agent SDK call per turn, each resuming the previous one (the original used `codex exec resume`).
 
   python -m wsp.conversation exp3 <language> [--model M] [--sample K]
+  python -m wsp.conversation exp6 budget_0 [--model M] [--sample K]
 
 Run folder: runs/<model>/<exp>/<item>/s<K>/ with turns/tNNN/{prompt.txt, answer.md, thinking.md, messages.jsonl,
 run.json}, tool_calls.jsonl, final_answer.md and state.json.
@@ -17,14 +18,16 @@ from pathlib import Path
 from wsp.runner import ITEMS, MODELS, RUNS, _versions, api_key, call, save_reply, scrub_inherited_env
 
 
-def converse(model: str, exp: str, item: str, sample: int, first_message: str, step) -> Path:
-    """`step(answer)` returns the next message, or None when the answer is final."""
+def converse(model: str, exp: str, item: str, sample: int, first_message: str, make_step) -> Path:
+    """`make_step()` is called once the run folder exists; the `step(answer)` it returns gives the next message, or
+    None when the answer is final."""
     effort = ITEMS[exp][item][1]
     key = api_key()
     out = RUNS / model / exp / item / f"s{sample}"
     if out.exists():
         sys.exit(f"{out} already exists; refusing to overwrite.")
     out.mkdir(parents=True)
+    step = make_step()
     state = {"experiment": exp, "item": item, "sample": sample, "model": model, "effort": effort,
              "versions": _versions(), "turns": 0, "done": False}
     tmp = Path(tempfile.mkdtemp(prefix="wsp_conv_"))
@@ -67,7 +70,7 @@ def converse(model: str, exp: str, item: str, sample: int, first_message: str, s
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("exp", choices=["exp3"])
+    ap.add_argument("exp", choices=["exp3", "exp6"])
     ap.add_argument("item")
     ap.add_argument("--model", choices=MODELS, default=MODELS[0])
     ap.add_argument("--sample", type=int, default=1)
@@ -75,6 +78,12 @@ if __name__ == "__main__":
     if a.item not in ITEMS[a.exp]:
         sys.exit(f"unknown item {a.item!r}; choose from {list(ITEMS[a.exp])}")
     scrub_inherited_env()
-    from wsp import exp3
     out = RUNS / a.model / a.exp / a.item / f"s{a.sample}"
-    converse(a.model, a.exp, a.item, a.sample, exp3.message(), exp3.step(a.item, out))
+    if a.exp == "exp3":
+        from wsp import exp3
+        first, step = exp3.message(), lambda: exp3.step(a.item, out)
+    else:
+        from wsp import exp6
+        budget = int(a.item.split("_")[1])
+        first, step = exp6.message(budget), lambda: exp6.step(budget, out)
+    converse(a.model, a.exp, a.item, a.sample, first, step)

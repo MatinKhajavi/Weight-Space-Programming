@@ -1,0 +1,2 @@
+I notice these same coordinates (78, 72, 222, 239, 311, 35, 273, 356) keep showing up, suggesting they might be privileged outlier dimensions. I want to check the weights and biases for these dims, and see if they're also large in other weight matrices, since this resembles the "massive activation" phenomenon seen in outlier residual stream features. If a few dims dominate the residual stream magnitude, that could explain why LayerNorm output concentrates on them.
+

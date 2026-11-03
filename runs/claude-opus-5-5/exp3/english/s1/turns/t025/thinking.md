@@ -1,0 +1,8 @@
+The L3H1 attention pattern shows strong positive-definiteness, with trace/norm around 2.76 against a theoretical max near 4.24 for an 18-dimensional identity-like matrix — this confirms the classic induction QK circuit where the query matches the previous-token OV output via K-composition with the earlier previous-token head.
+
+On the value side, L3H1 reads the current token and writes it into the output subspace with substantial weight, confirming it copies token j forward to the logits — this is textbook induction behavior, which strongly argues for "as is" ordering since induction circuits would be useless on shuffled text since sequential patterns wouldn't repeat meaningfully. Meanwhile L1 heads show strongly negative same-token attention (anti-induction/anti-repeat), while L3H0 shows the opposite, strongly positive same-token attention, so I want to double-check whether this induction signature could just be an artifact rather than a genuine functional circuit.
+
+Now I'm trying to narrow down the actual corpus by reasoning about token counts — comparing the rank/dimensionality of the token-copying subspace (around 18-19 flat directions) against candidate alphabets like Romaji's ~24 tokens, Python's indentation-heavy structure, or English, though the numbers aren't quite decisive yet, so I want to look more closely at the eigenvalue spectrum of the induction circuit to estimate how many distinct tokens it actually distinguishes.
+
+I'm looking at L3H1's OV singular values directly—they decay gradually (10.63 down to 7.75 and lower) without an obvious sharp knee, so I want to cross-check against the induction composite spectrum and also examine L0H2's OV spectrum for another angle on the token subspace dimension.
+

@@ -1,0 +1,8 @@
+I'm noticing the L1 and L2 heads in the positional block have a single dominant pure-imaginary eigenpair, suggesting an antisymmetric rotation of about 90 degrees. This antisymmetric structure in the query-key interaction hints that these heads might be implementing something like a circular position encoding, attending to keys in a specific rotational direction relative to the query.
+
+If the position embedding traces roughly a half-circle, then for keys before queries sin(θ_q−θ_k) is positive and grows with distance, so a negative coefficient would actually favor the most recent key—suggesting these L1/L2 heads carry a recency bias rather than a fixed long-range offset. I want to check this against the OV circuit too: looking at V-composition, L1 heads seem to read L0H3's output, which points toward a "previous-token" moving behavior.
+
+Rather than nailing down exact magnitudes, I should step back and focus on the bigger question of corpus structure and token order—there's evidence L3H3 behaves like an induction head (current token attending to a key's previous token, with strong positive eigenvalue structure), which wouldn't emerge under shuffled data. I want to verify this isn't an artifact by comparing against random orthogonal baselines and checking whether L3H3 is actually reading from L1 heads' outputs.
+
+Beyond that, a true induction head's OV circuit should copy the attended token's identity forward to the output logits—so I should check whether L3H3's OV strongly reads the key token's raw identity subspace, since that would confirm the copying mechanism even without knowing the unembedding matrix directly.
+

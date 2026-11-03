@@ -1,0 +1,6 @@
+Looking at the gap after removing 182 dimensions, the robust count lands around 25-26 dimensions for MLP0's current-token reading space, falling between my expectations of ~28 for English/Python and ≤24 for romaji.
+
+Counting Hepburn letters more carefully, I get about 22 unique Latin letters needed for romaji (excluding l, q, v, x), plus space and newline brings it to 24 — but macron-marked long vowels could complicate the normalization, and there's always leakage from rare loanword letters or ruby annotations in Aozora Bunko texts. Since 25-26 exceeds 24, maybe romaji isn't the right comparison here, or there's an extra direction coming from something like a positional or layer-norm bias term rather than actual token identity.
+
+I'm now wondering whether those extra 1-2 dims come from positional embeddings leaking into the residual stream alongside token features, since L0H3's QK subspace only captures part of position information and the MLP could be reading other positional dims beyond what I measured. So the 26 might really be 24 token dims plus roughly 2 uncaptured positional dims, though this is still uncertain — I should check L0H3's OV in raw coordinates after removing the positional component, and compare against L0H0 as well, to get a cleaner estimate of the true token-space dimensionality.
+

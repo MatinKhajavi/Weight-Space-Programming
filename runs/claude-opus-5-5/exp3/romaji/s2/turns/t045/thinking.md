@@ -1,0 +1,16 @@
+I notice L0H5's key reads token D with strong enrichment, while the query pulls from output dimensions that shouldn't really exist yet at layer 0 — these likely overlap with positional embedding signal leaking into the residual stream this early.
+
+So it seems these specific dims (21, 39, 58, 99) carry a positional code directly from the embedding, which Pin heads then smooth by averaging, and L1/L2 heads subsequently read as keys. That makes these dims a kind of 2D positional signal that later heads rotate to implement relative-offset or recency-based attention patterns, while a constant query component gives absolute-position preference — essentially positional heads built on this shared 2D code.
+
+The Pin heads combine this with token identity (D dims) at the key, suggesting they're copying "position of last token X" style information rather than purely positional smoothing. I'm now thinking about whether Python's indentation structure (repeated space tokens after newlines) would require a dedicated early-layer mechanism distinct from what English text needs, though this seems hard to verify without labeled data.
+
+Turning to romaji text, I'm reasoning through whether a word-splitting romanizer would produce frequent spaces, and testing whether my 26-token-dimension finding from MLP0 could even apply there—since token counts and spacing patterns would differ substantially from English or Python, this seems like a useful discriminator to examine further.
+
+Checking L0H0-OV input against D26 gives a similar picture, with roughly 20-22 shared dims across heads rather than the higher count I expected. That makes me wonder if the model's true token subspace is closer to 21-24 dims, matching something like the romaji token count or the number of strongly-represented English letters, with the remaining few dims capturing rare symbols like j, x, q, z.
+
+Since Adam normalizes per-parameter but accumulates gradients across all tokens, rare letters end up with diluted updates and weaker representation even though a prev-token head would still find copying them informative. That would predict English having ~23-24 strong dims plus about 4 weak ones, while romaji has ~20-22 strong dims with none extra — and the observed 21 strong plus 3-5 weaker dims roughly fits both scenarios.
+
+I want to check this more concretely by thinking about layer 3 head 3's induction OV circuit: for a rare token like 'z' or 'q', copying it would still be valuable (e.g. in names like "Zuckerberg"), so its output direction should be at least moderately strong, and the layer 3 head 3 spectrum does show gradual decay consistent with that. Let me try a different angle and think about token-detector neurons in layer 0's MLP — each one fires for essentially one token, with its reading vector approximately matching that token's centered embedding direction, so I can try counting tokens that way.
+
+Since real neurons are bigram detectors combining current-token and previous-token signals, I want to isolate just the current-token component by projecting active neurons onto D-space, normalizing, and clustering with k-means across a range of k values, checking silhouette scores or pairwise cosine similarity to see if tight clusters emerge corresponding to individual tokens or token classes.
+

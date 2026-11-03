@@ -1,0 +1,8 @@
+Head L0H4 has near-uniform attention across all previous positions, essentially a causal mean, but its OV circuit is low-rank with a few dominant singular values. That pattern looks like it's computing some kind of running average feature—perhaps acting like a position or context counter by uniformly pooling information and projecting it through a low-rank output.
+
+L0H0 shows rank-2 QK and OV, another low-rank head. L0H1 and L0H5, by contrast, have full-rank-ish QK with flat OV spectra across many dimensions—signatures of heads copying token identity. L0H5's positive QK trace suggests it attends to similar/nearby positions, hinting at a previous-token or local-context head, while L0H1's negative trace suggests the opposite, maybe attending away from itself. I want to separate the token-identity subspace from the positional subspace to clarify these roles.
+
+In shuffled text, a useful head might attend broadly within the current line rather than to literally the previous token—so I'm considering whether these heads key off newline tokens plus recency bias rather than true adjacency. To test this, I want to compare the key-side singular vectors of H5's QK with its V subspace, trying to isolate what the token subspace actually looks like.
+
+I'm guessing V_H1 and V_H5's top row spaces (roughly 28 dims) correspond to the token subspace, so I'd check principal angles between those and the overall top singular vectors of W_v.0. Then I'd want to split each head's QK into token/positional blocks to see where positional heads concentrate their mass, though H4's uniform attention pattern makes it uninformative for this—so I'll compute the principal angles directly to get a clearer answer.
+

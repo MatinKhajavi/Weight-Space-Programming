@@ -1,0 +1,32 @@
+OUTPUT of run 2 of at most 100:
+```
+layer 0
+0 QK norm 0.4 sym/anti 1.02 trace/sum|ev| -0.10 top sv [0.4 0.1 0.1 0.  0. ] | OV norm 9.04 trace/sum|ev| 0.01 [8.07 3.33 2.1  0.67 0.56]
+1 QK norm 0.2 sym/anti 1.05 trace/sum|ev| -0.32 top sv [0.2 0.1 0.  0.  0. ] | OV norm 6.97 trace/sum|ev| -0.07 [5.66 3.83 1.06 0.5  0.43]
+2 QK norm 32.6 sym/anti 0.95 trace/sum|ev| 0.08 top sv [11.3 10.2  9.7  9.6  9.3] | OV norm 2.54 trace/sum|ev| -0.20 [0.79 0.72 0.68 0.67 0.64]
+3 QK norm 3.2 sym/anti 1.68 trace/sum|ev| 0.33 top sv [2.9 1.  0.6 0.3 0.3] | OV norm 1.77 trace/sum|ev| -0.19 [1.03 0.97 0.62 0.5  0.45]
+4 QK norm 0.9 sym/anti 1.01 trace/sum|ev| -0.57 top sv [0.7 0.4 0.1 0.1 0. ] | OV norm 4.03 trace/sum|ev| -0.20 [3.4  1.64 1.08 0.61 0.38]
+5 QK norm 0.6 sym/anti 1.18 trace/sum|ev| -0.53 top sv [0.6 0.1 0.  0.  0. ] | OV norm 9.31 trace/sum|ev| 0.02 [8.33 3.61 1.68 0.77 0.51]
+layer 1
+0 QK norm 7.1 sym/anti 1.01 trace/sum|ev| -0.58 top sv [4.8 3.9 2.  1.6 1.1] | OV norm 10.12 trace/sum|ev| -0.71 [4.01 3.55 2.95 2.89 2.79]
+1 QK norm 10.5 sym/anti 1.02 trace/sum|ev| -0.58 top sv [7.1 5.3 3.3 2.1 1.6] | OV norm 10.33 trace/sum|ev| -0.79 [3.02 2.8  2.65 2.6  2.55]
+2 QK norm 12.4 sym/anti 1.02 trace/sum|ev| -0.62 top sv [8.  6.9 3.1 2.6 2.1] | OV norm 9.18 trace/sum|ev| -0.79 [2.87 2.74 2.49 2.38 2.32]
+3 QK norm 11.0 sym/anti 1.02 trace/sum|ev| -0.56 top sv [7.4 5.9 3.3 2.  1.8] | OV norm 10.05 trace/sum|ev| -0.78 [3.7  3.25 3.1  2.79 2.71]
+4 QK norm 11.6 sym/anti 1.01 trace/sum|ev| -0.61 top sv [7.6 6.9 2.9 2.1 1.5] | OV norm 10.40 trace/sum|ev| -0.85 [3.08 2.98 2.82 2.68 2.58]
+5 QK norm 10.7 sym/anti 1.00 trace/sum|ev| -0.52 top sv [7.1 5.9 3.  1.8 1.6] | OV norm 10.62 trace/sum|ev| -0.88 [3.03 2.83 2.76 2.67 2.56]
+layer 2
+0 QK norm 19.5 sym/anti 0.97 trace/sum|ev| -0.00 top sv [5.6 5.  4.8 4.5 4.2] | OV norm 16.31 trace/sum|ev| -0.87 [3.52 3.31 3.24 3.16 3.12]
+1 QK norm 16.5 sym/anti 1.01 trace/sum|ev| 0.12 top sv [4.2 3.6 3.5 3.3 3.3] | OV norm 17.72 trace/sum|ev| -0.79 [3.91 3.67 3.55 3.41 3.35]
+2 QK norm 12.9 sym/anti 1.00 trace/sum|ev| -0.32 top sv [4.9 4.  3.2 2.5 2.4] | OV norm 20.58 trace/sum|ev| -0.73 [5.7  5.19 4.95 4.29 4.27]
+3 QK norm 16.7 sym/anti 0.97 trace/sum|ev| -0.16 top sv [4.5 4.2 3.9 3.5 3.3] | OV norm 17.51 trace/sum|ev| -0.82 [4.47 4.18 3.96 3.56 3.31]
+4 QK norm 18.8 sym/anti 0.98 trace/sum|ev| -0.09 top sv [5.  4.8 4.3 4.1 3.7] | OV norm 16.62 trace/sum|ev| -0.81 [3.62 3.37 3.34 3.23 3.12]
+5 QK norm 18.0 sym/anti 0.97 trace/sum|ev| -0.14 top sv [5.1 4.3 3.9 3.8 3.7] | OV norm 16.68 trace/sum|ev| -0.83 [3.46 3.37 3.23 3.21 3.1 ]
+layer 3
+0 QK norm 17.9 sym/anti 1.05 trace/sum|ev| 0.61 top sv [3.6 3.4 3.3 3.2 3.2] | OV norm 22.60 trace/sum|ev| -0.86 [6.41 5.8  4.91 4.74 4.45]
+1 QK norm 14.6 sym/anti 1.24 trace/sum|ev| 0.85 top sv [2.6 2.5 2.5 2.4 2.4] | OV norm 40.87 trace/sum|ev| -0.78 [10.63 10.34 10.22  9.5   9.42]
+2 QK norm 12.0 sym/anti 1.00 trace/sum|ev| 0.07 top sv [3.8 3.3 2.8 2.7 2.5] | OV norm 26.88 trace/sum|ev| -0.65 [9.14 7.55 6.45 6.35 6.08]
+3 QK norm 12.8 sym/anti 0.98 trace/sum|ev| 0.03 top sv [4.  3.2 2.7 2.4 2.4] | OV norm 27.43 trace/sum|ev| -0.70 [9.52 7.94 6.92 6.14 5.89]
+4 QK norm 14.8 sym/anti 1.00 trace/sum|ev| 0.23 top sv [4.2 3.3 3.2 3.  2.9] | OV norm 24.20 trace/sum|ev| -0.65 [7.27 6.82 5.39 5.31 4.98]
+5 QK norm 6.7 sym/anti 1.02 trace/sum|ev| 0.06 top sv [2.1 1.9 1.7 1.6 1.5] | OV norm 45.40 trace/sum|ev| -0.68 [16.89 14.7  13.37 12.86 12.28]
+
+```

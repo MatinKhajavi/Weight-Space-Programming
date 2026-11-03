@@ -1,0 +1,15 @@
+OUTPUT of run 17 of at most 100:
+```
+L0H3 tr/fro 2.83 fro 0.130 realfrac 0.91
+L0H0 tr/fro -0.57 fro 0.035 realfrac -0.34
+L0H5 tr/fro -0.98 fro 0.039 realfrac -0.58
+identity tr/fro 0.56 fro 0.106 realfrac 0.19
+random subspace baseline tr/fro mean 0.89 sd 0.19 max 1.41
+1 [0.5, 0.61, 0.62, 0.24, 0.18, 0.44]
+2 [0.26, -0.02, 0.37, 0.4, 0.58, -0.07]
+3 [-0.57, -0.19, 0.21, 2.83, 0.61, -0.14]
+OV reads Tok frac 1 [0.35, 0.4, 0.36, 0.44, 0.34, 0.39]
+OV reads Tok frac 2 [0.23, 0.24, 0.26, 0.24, 0.23, 0.25]
+OV reads Tok frac 3 [0.25, 0.24, 0.25, 0.37, 0.21, 0.23]
+
+```

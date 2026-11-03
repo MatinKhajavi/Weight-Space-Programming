@@ -161,6 +161,34 @@ not in the logs: a reply with several code blocks runs the first (logged as `blo
 model is asked for its final answer. The ban on forward passes is checked afterwards by reading every code run, as the
 authors did.
 
+**exp3 run notes.**
+- One earlier start (Python network) is not among the six reported conversations and is kept out of the repo pending
+  a decision. In its first reply the model ran no code: it wrote about 63 made-up tool calls with made-up outputs as
+  text (`{"tool":"code",...}` / `{"tool":"code_output",...}`), ran past the output cap and was resumed, and its final
+  answer rests on those made-up outputs. Under the original rules it would count as a sample (corpus python, order
+  shuffled, no copying head named). It was replaced by a new start; 1 of 7 starts failed this way.
+- The ban on forward passes was checked by reading all 232 code runs: none runs the network or a layer on an input.
+  One borderline run (Python s2, run 45) applies a ReLU to z-scored layer-0 MLP pre-activations of directions
+  estimated from the weights; it is not the network's own computation (no LayerNorm, bias or output projection), and the
+  model judged its result to be noise.
+- In these six conversations the per-turn costs in `run.json` were converted afterwards from Claude Code's cumulative
+  session cost (kept as `session_cost_usd`) by the same rule the runner now applies itself.
+
+**exp6.** Task message: upstream `exp6_go_from_scratch/runs/budget_<n>/message.txt`. Sandbox: the same Docker
+image with `/work` kept between runs and the prelude taken verbatim from upstream `harness/sandbox.py` (`SHAPES`,
+`NAMES`, `load`, `save`, `saved`, `inp`, `mv`, `PASS`); 900 s per run; output cut at 20,000 characters; at most 120
+Python runs. Memory is 7 GB, not the original 96 GB. Output template: `OUTPUT of Python run <k> of at most 120:`. Only
+budget 0 (no pass tools) is implemented so far; our choices: a pass block in a budget-0 session gets "There are no
+pass tools in this session (budget 0)."; after 120 runs the model is asked for its final answer.
+
+Games (`wsp/exp6.py`): pgx 2.6.0 `go_9x9`, whose rules are the task's as they stand (no changes); input from pgx's
+observation planes 0, 1 and 16. Checked against the published head-to-heads of Astra's released networks with the
+released same-size PPO networks, 2,000 games each: budget 0 vs seeds 0 / 1 / 2: 43.2 / 27.0 / 38.8 % (published
+42.6 / 26.3 / 36.3); budget 50: 73.0 / 69.2 / 80.9 % (74.2 / 70.0 / 78.5); game endings, margins and the results
+against a random player also match within noise. A written network is scored against the three released same-size
+PPO networks and a random player, 2,000 games each. The practice and hidden opponents of the original are not
+released and are not rebuilt yet.
+
 ## Open: multi-turn harness gaps
 
 Never observed in the original logs, so the original behaviour is unknown:

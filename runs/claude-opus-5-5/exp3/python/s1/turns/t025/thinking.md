@@ -1,0 +1,14 @@
+I notice the bias key-preference vectors are highly aligned across both layer groups, suggesting they all default to preferring or avoiding the same token type, maybe spaces or newlines—though I can't pin it down further. I'm wondering if the token subspace is just contaminated by layer-norm effects rather than anything meaningful.
+
+Trying another angle, I consider epoch counts for Python training data, but that doesn't give visible overfitting signatures either. The strong 2-back head in layer 0 suggests this could be either an English or Python character model, since both would develop prev-token and 2-back attention patterns. For the three weak token directions, I'm trying to match them to rare characters—if Python, maybe q/z/j; if English, similarly rare letters like q/z/x. The newline frequency in Wikipedia-style text (with short lines for headings and lists) could explain part of the pattern, and the four rarest English letters have similar enough frequencies that three of them could plausibly form the weak cluster while one stands apart.
+
+Now I'm trying to pin down actual frequency estimates for q, z, j, x, and k in Python source code by thinking through common library and variable names that use each letter—words like "json," "size," "query," "index," and "kwargs" all shift the estimate.
+
+This gives Python roughly 3 rare letters (q, z, j) versus English's 4 (j, x, q, z), which makes me notice that Python's 25 common tokens minus one gives exactly 24 strong dimensions plus 3 weak ones—matching the spectrum structure I'm trying to explain.
+
+But the counting feels fragile around the 24/25 boundary, since x and j in English hover near the threshold for "rare" versus "common." I'm starting to suspect that the singular values of W_proj.3 might actually track the diversity of predicted logits for each token, not raw character frequency alone.
+
+Thinking about space handling in Python, that single token is likely the most frequent by far given indentation runs and whitespace density. Python also has a distinct vocabulary of short recurring keywords and identifiers compared to English's function words, which could shape how the model allocates capacity. I'm now leaning toward looking at newline structure directly — since Python lines are short, newlines recur every few dozen characters, so early layers attending to recent newlines via positional/recency heads would be especially useful for tracking line boundaries.
+
+Looking at the stacked OV spectrum through the induction head, the singular values decline gradually rather than showing a clean break, so that doesn't cleanly separate special directions from token ones. I'm now trying restricting the SVD of W_proj.3 to exclude the x̂-related special directions, since those might be mixing with token directions and obscuring the 24 vs 23 count.
+

@@ -1,0 +1,18 @@
+OUTPUT of run 26 of at most 100:
+```
+plane 8.2@+0.29: cos to T [0.34 0.23]  |V2 on plane|=0.17
+plane 7.7@+0.58: cos to T [0.41 0.34]  |V2 on plane|=0.24
+plane 7.5@+0.38: cos to T [0.39 0.32]  |V2 on plane|=0.25
+plane 6.8@+0.87: cos to T [0.56 0.39]  |V2 on plane|=0.25
+plane 6.5@+1.00: cos to T [0.51]  |V2 on plane|=0.17
+plane 6.2@+0.18: cos to T [0.47 0.23]  |V2 on plane|=0.25
+plane 4.9@+0.31: cos to T [0.36 0.3 ]  |V2 on plane|=0.20
+plane 4.1@+0.02: cos to T [0.31 0.16]  |V2 on plane|=0.19
+plane 3.3@+0.00: cos to T [0.18]  |V2 on plane|=0.12
+plane 2.7@+0.74: cos to T [0.2  0.14]  |V2 on plane|=0.17
+plane 2.6@+0.87: cos to T [0.32 0.24]  |V2 on plane|=0.19
+plane 1.1@+0.45: cos to T [0.23 0.22]  |V2 on plane|=0.14
+V2 sv [0.43 0.42 0.38 0.37 0.36 0.35 0.33 0.32 0.31 0.3  0.3  0.3  0.29 0.27
+ 0.27 0.26 0.26 0.25 0.25 0.25]
+
+```

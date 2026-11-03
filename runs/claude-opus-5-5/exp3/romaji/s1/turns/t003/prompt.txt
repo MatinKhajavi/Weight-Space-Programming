@@ -1,0 +1,36 @@
+OUTPUT of run 2 of at most 100:
+```
+layer 0 ln1_w quantiles [0.035 0.093 0.171 0.242 0.355 0.725 0.978]
+  ln2_w quantiles [0.042 0.35  0.646 0.849 1.068 1.501 1.775]
+  H0 |q|=2.75 |k|=3.03 |v|=1.67 |o|=6.13 |QK|=2.35 asym/sym=0.868 trQK/|QK|=-0.357 OVtr/sum|ev|=-0.087
+  H1 |q|=1.90 |k|=1.53 |v|=1.89 |o|=4.82 |QK|=1.27 asym/sym=0.850 trQK/|QK|=-0.620 OVtr/sum|ev|=0.377
+  H2 |q|=1.63 |k|=1.39 |v|=1.73 |o|=4.36 |QK|=0.86 asym/sym=0.743 trQK/|QK|=-0.814 OVtr/sum|ev|=0.366
+  H3 |q|=5.15 |k|=6.35 |v|=2.21 |o|=9.44 |QK|=5.59 asym/sym=1.070 trQK/|QK|=1.923 OVtr/sum|ev|=-0.377
+  H4 |q|=1.61 |k|=1.43 |v|=1.42 |o|=3.66 |QK|=0.71 asym/sym=0.951 trQK/|QK|=-0.519 OVtr/sum|ev|=0.132
+  H5 |q|=1.08 |k|=0.94 |v|=4.14 |o|=9.56 |QK|=0.27 asym/sym=0.976 trQK/|QK|=-0.254 OVtr/sum|ev|=0.325
+layer 1 ln1_w quantiles [0.197 0.376 0.448 0.504 0.565 0.635 1.085]
+  ln2_w quantiles [0.002 0.89  1.072 1.155 1.23  1.332 1.52 ]
+  H0 |q|=8.55 |k|=8.83 |v|=6.09 |o|=11.71 |QK|=15.85 asym/sym=0.959 trQK/|QK|=-0.883 OVtr/sum|ev|=-0.807
+  H1 |q|=8.27 |k|=8.59 |v|=5.83 |o|=11.40 |QK|=14.77 asym/sym=0.982 trQK/|QK|=-0.845 OVtr/sum|ev|=-0.835
+  H2 |q|=8.04 |k|=8.32 |v|=6.06 |o|=11.38 |QK|=14.26 asym/sym=0.964 trQK/|QK|=-1.059 OVtr/sum|ev|=-0.867
+  H3 |q|=8.13 |k|=8.42 |v|=6.11 |o|=11.88 |QK|=14.33 asym/sym=0.994 trQK/|QK|=-0.844 OVtr/sum|ev|=-0.883
+  H4 |q|=7.82 |k|=7.74 |v|=6.58 |o|=12.11 |QK|=13.04 asym/sym=0.954 trQK/|QK|=-1.234 OVtr/sum|ev|=-0.830
+  H5 |q|=8.32 |k|=8.79 |v|=5.74 |o|=11.24 |QK|=14.94 asym/sym=0.983 trQK/|QK|=-0.874 OVtr/sum|ev|=-0.826
+layer 2 ln1_w quantiles [0.317 0.576 0.646 0.684 0.722 0.767 1.093]
+  ln2_w quantiles [0.012 1.223 1.279 1.322 1.358 1.41  1.508]
+  H0 |q|=9.88 |k|=9.92 |v|=8.98 |o|=12.69 |QK|=13.08 asym/sym=1.041 trQK/|QK|=-0.954 OVtr/sum|ev|=-0.538
+  H1 |q|=11.50 |k|=11.43 |v|=9.53 |o|=13.48 |QK|=17.24 asym/sym=1.021 trQK/|QK|=-0.100 OVtr/sum|ev|=-0.805
+  H2 |q|=10.32 |k|=10.34 |v|=9.68 |o|=13.61 |QK|=13.77 asym/sym=1.004 trQK/|QK|=-0.754 OVtr/sum|ev|=-0.723
+  H3 |q|=10.06 |k|=9.73 |v|=9.83 |o|=13.83 |QK|=12.99 asym/sym=1.008 trQK/|QK|=-0.367 OVtr/sum|ev|=-0.733
+  H4 |q|=11.57 |k|=11.40 |v|=8.51 |o|=12.52 |QK|=17.74 asym/sym=1.032 trQK/|QK|=-0.443 OVtr/sum|ev|=-0.861
+  H5 |q|=11.72 |k|=11.64 |v|=9.30 |o|=13.26 |QK|=18.12 asym/sym=1.024 trQK/|QK|=-0.118 OVtr/sum|ev|=-0.828
+layer 3 ln1_w quantiles [0.408 0.634 0.685 0.711 0.74  0.777 0.815]
+  ln2_w quantiles [0.233 1.192 1.24  1.271 1.304 1.358 1.453]
+  H0 |q|=11.38 |k|=11.10 |v|=10.32 |o|=14.54 |QK|=16.23 asym/sym=0.994 trQK/|QK|=1.073 OVtr/sum|ev|=-0.837
+  H1 |q|=8.76 |k|=8.47 |v|=11.26 |o|=16.08 |QK|=9.74 asym/sym=1.002 trQK/|QK|=0.353 OVtr/sum|ev|=-0.762
+  H2 |q|=9.58 |k|=9.39 |v|=10.86 |o|=15.37 |QK|=11.50 asym/sym=1.010 trQK/|QK|=0.242 OVtr/sum|ev|=-0.725
+  H3 |q|=10.73 |k|=10.63 |v|=12.84 |o|=18.53 |QK|=14.55 asym/sym=0.809 trQK/|QK|=3.200 OVtr/sum|ev|=-0.707
+  H4 |q|=6.10 |k|=5.90 |v|=12.85 |o|=18.30 |QK|=5.00 asym/sym=0.999 trQK/|QK|=0.001 OVtr/sum|ev|=-0.701
+  H5 |q|=10.32 |k|=10.03 |v|=10.74 |o|=15.04 |QK|=13.33 asym/sym=0.991 trQK/|QK|=0.863 OVtr/sum|ev|=-0.706
+
+```

@@ -1,0 +1,2 @@
+The weights grew substantially larger than initialization, suggesting the learned component now dominates over any random residual. I'm noticing the ln1 weights have an uneven distribution—some dimensions carry much more weight than others, hinting that only a subset of embedding dimensions are actually in use for layer 0. I want to dig into the per-head structure next, starting with the effective QK computation incorporating the LN weights for layer 0.
+

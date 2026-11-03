@@ -1,0 +1,10 @@
+OUTPUT of run 30 of at most 100:
+```
+neuron out norm in S: percentiles [1.54 1.84 2.14 2.53]  frac in S median 0.90
+max |cos| distribution among top600: [0.57 0.6  0.64 0.67 0.71]
+thr 0.3 nclusters 574 sizes [4 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+thr 0.4 nclusters 446 sizes [6 4 3 3 3 3 3 3 3 3 3 3 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+thr 0.5 nclusters 289 sizes [9 6 6 5 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3]
+thr 0.6 nclusters 181 sizes [11 11  9  8  8  7  7  7  7  7  7  7  6  6  6  6  6  5  5  5  5  5  5  5  5  5  5  5  5  4  4  4  4  4  4  4  4  4  4  4]
+
+```

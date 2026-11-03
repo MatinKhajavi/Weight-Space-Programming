@@ -1,0 +1,14 @@
+H4's V vector is reading the positional subspace with high fractional alignment, meaning it averages positional embeddings uniformly across context to produce an absolute-position-like signal. H0 shows a different pattern: its Q and V also tap the positional subspace, but K is partly token-based, suggesting it attends from a positional query to keys matching a specific token like newline or space, then reads that key's position—effectively outputting "position of the last newline/space."
+
+Combining this with H4's smooth running average, L1 heads could compute position relative to the last line or word break, a known "previous newline position" mechanism. I notice H0 and H4 outputs share the same 2-d positional subspace, suggesting a shared code where H0 writes "position of last newline" and H4 writes "average position so far," which L1 heads then combine.
+
+I'm also checking whether the large ln1_w values cluster on positional coordinates versus token coordinates, and wondering whether H0's key token is newline (relevant for Python indentation and line structure) or space (relevant for word-level structure), which would explain differing importance across corpora like shuffled text versus English Wikipedia.
+
+The H0 key appears to mix token identity and positional recency — some of it lands in T but a sizable chunk sits outside, which makes me suspect it's tracking a special token like newline given its reads in that subspace. Since I can't label tokens directly, I'm trying to reason about this special token via indirect cues like typical frequency (newline is rare in English but much more common in Python or certain scripts) to narrow down what H0's key token might actually be.
+
+Identifying individual token directions could reveal counting and frequency/bigram structure through prev-token × current-token interactions in MLP neurons and QK interactions. My plan: robustly extract the token subspace T, likely around 28 dimensions, using H1 and H5's V matrices since those read token identity while mostly ignoring positional components. Then I can check whether MLP0 neurons act as token detectors by projecting their residual-space directions (derived from W_fc.0 and ln2) onto T and seeing if they align strongly.
+
+Beyond that, I'm considering combining current-token and previous-token signals — mapping OV0(5) outputs back into T coordinates via pseudo-inverse would let me assign each neuron a (current-token preference, previous-token preference) pair, which could reveal bigram detectors. Given romaji's deterministic consonant-vowel bigram structure, this might expose a clean test: the bigram transition matrix should be highly structured if the model has learned romaji-like rules.
+
+So the real crux is distinguishing 24 vs 28 tokens, which means I need to actually cluster MLP0's neurons in T-space by computing how much of each neuron's weight vector projects onto T(24) versus onto O5, O1, and P.
+

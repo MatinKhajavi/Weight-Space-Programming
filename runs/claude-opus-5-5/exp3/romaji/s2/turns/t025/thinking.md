@@ -1,0 +1,8 @@
+Looking at the eigenvalue gaps across P2+P3 and P1+P2+P3 combinations, I'm noticing a consistent pattern of 21 strong dimensions followed by a sharp drop to a few medium-strength ones — suggesting the shared MLP output space clusters around 21 dimensions rather than 23, which is fewer than the 23 direct dimensions I'd expect for 24 romaji tokens.
+
+Checking the actual Hepburn romaji letter frequencies against this, I'm trying to see if the 3 medium-strength directions correspond to the rarer romanized consonants like p, f, j, z, c. I'm cross-checking against English letter frequencies too, where z, q, x, j are the clear rarities — but the 21+3 split doesn't map as cleanly there. The best fit still seems to be the romaji case, though I'm left wondering if the count discrepancy (24 vs 23) is explained by an extra bias/mean direction that the MLP can write independent of the token-specific logit directions.
+
+Now I'm considering whether this shared subspace is really the logit/unembedding space, versus the token embedding space used on the input side — since the consistent ~21 dimensionality could equally reflect a "current token identity" feature set read by Q/K/V/FC matrices across layers via the residual stream's persistent embedding path.
+
+I'm also wondering if part of this consensus reflects a positional subspace rather than pure token identity, possibly disentangled using L0H3's attention pattern. I want to check the row-space consensus across the three layers' FC matrices (after layernorm), masking out special dimensions, and look at the eigenvalue spectrum for a clear gap.
+

@@ -1,0 +1,16 @@
+The elevated "self" previous-response magnitude for current-detecting neurons across frequent tokens looks like an artifact—possibly because the OV pathway's output partially overlaps with the token embedding subspace itself, so the readout picks up residual self-similarity rather than genuine signal.
+
+Shifting focus, I'm considering whether tok26 (space) interacts with H1's copying mechanism to signal word boundaries, and whether local positional heads encode something like "was the previous character a space" to help distinguish structural patterns like Python indentation runs. Checking each head's key preference for tok26, H2 stands out with the strongest affinity (+0.25), suggesting it specifically attends to space positions in a symmetric local pattern, while H0 slightly avoids them and H1, H3, H5 show weaker preferences.
+
+I keep going back and forth on whether H2 is really just copying space identity or using its positional phase to track recency relative to spaces, possibly combining token preference with a periodic attention pattern to find the most recent space or word start. Since this isn't resolving cleanly, I'm shifting to look at how all six L1 heads share the O4×O4 projection, wondering whether O4 encodes a uniform positional average that could explain cross-head behavior through a shared function of position.
+
+I'm now considering a new angle based on how Python code structurally differs from English — Python has frequent newlines marking indentation and short lines, while English has rare newlines within long lines of text. This suggests the newline token itself might be the key differentiator, since its copy strength and context (what follows it) would look very different between the two domains, and this difference could reveal itself in how induction heads treat that token specially.
+
+Without unembedding, token-level labeling alone won't be conclusive, so I'm stepping back to think about training dynamics — given the corpus size and model scale, memorization is unlikely to be the explanation. I'm trying to estimate space-token frequency by sketching out a typical indented code snippet and counting characters line by line.
+
+Working through that example, I get roughly 40% of characters being spaces in Python versus about 17% in English, which would make the space token dominate activations in MLP0 for code, with several neurons firing 2-3× more than typical — far more intensely than the equivalent English case.
+
+I'm also considering the newline token, which appears around 3-4% in Python and likely recruits its own set of neurons, and thinking about whether any L0 attention head cleanly tracks indentation by attending to the last newline and reading its position. Looking at the key preferences, though, there's no single dominant token acting as a clean "newline head" — the head's attention is spread across several tokens rather than locking onto one, so Python's indentation counting isn't resolved this simply at layer 0.
+
+I should check whether any L1 head's key strongly prefers a single token like newline by computing the top singular vector of the QK matrix against token embeddings and measuring how concentrated that preference is.
+

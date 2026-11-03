@@ -1,0 +1,30 @@
+I'm noticing the sink heads' V vectors encode positional information while L0H5 seems to mix a weak query-position/key-token signal with a positional V output—so with near-uniform attention, it's effectively computing something like an average position of certain token types (like newlines or spaces) across the context.
+
+The other L0 heads (H1/2/4) combine positional queries with mixed position/token keys to copy forward the position of a specific key—likely tracking distance since the last word or line boundary. Since later-layer heads read these via a near-constant query, this looks like a key-only positional bias mechanism, where keys carry a "position of last boundary" feature that lets downstream heads preferentially attend to tokens within the current line or word.
+
+This points toward either English "current word" attention or Python "current line/identifier" attention, but I can't pin down which from the geometry alone. Weighing priors: the fact that the only clear induction head appears late at L3 suggests a less repetitive corpus like English prose rather than Python's often-repeated identifiers.
+
+I'm trying another angle: maybe frequency statistics for specific letters like "q" (almost always followed by "u" in English, but appearing in varied contexts in Python keywords like "equal" or "query") could help distinguish the two, though it's not conclusive yet.
+
+I'm reconsidering why exactly 21 readout dimensions are strong for English — matching up with characters whose frequency exceeds roughly 1.2%, trailing off through v, k, and newline, down to the rare x, j, q, z, and trying to estimate how often newlines appear in typical Wikipedia-style text versus code.
+
+Now I'm shifting to estimate the analogous character frequency ranking for Python source code, thinking through how normalization (lowercasing, collapsing punctuation to spaces) would reshape which characters dominate compared to English prose.
+
+Counting it up for Python gives roughly 28 characters above the 1% threshold, which again lines up suspiciously well with the observed 27 dimensions, so the frequency spectrum alone still can't distinguish between the candidate languages. I need another angle, maybe looking at how leading-space runs behave distinctly in Python's indentation structure, or examining token-pair avoidance patterns in layer 1 to find a more decisive signal.
+
+Thinking about the overall design intent here: the task probably involves 6 models spanning 3 corpora (python, romaji, english) crossed with 2 token orderings (as-is vs shuffled), and the distinguishing signatures would be previous-token/induction heads for as-is versions versus broad/uninformative heads for shuffled ones. For corpus identification, python likely shows indentation/newline-sensitive heads, while romaji's restricted character set might leave a readable signature in the unembedding projection dimensions — a count of trained output characters could reveal which corpus is in play.
+
+I'm considering whether certain heads specialize in detecting line starts or newlines, which would be distinctive for python's indentation structure, though without positional embeddings it's hard to measure attention distance directly. I'm also wondering if induction heads used for copying identifiers show a flat, position-independent signature that would look similar across python and english, which pushes me to check the MLP neurons instead for corpus-specific patterns.
+
+I keep coming back to the mid/weak character split as a better discriminator - comparing which rare characters cluster in the middle-frequency tier versus the weak tier between python and english, and noting that with 27 effective dimensions from 28 possible characters, one gets absorbed by the softmax normalization in a way that could be informative.
+
+The numbers are close enough that they only weakly favor English over Python, so the evidence isn't decisive. I'm also considering how newline frequency would differ between the two: in Python code, newlines are frequent (roughly 3%, making it a strong-group character), while in English prose newline would fall into a mid-frequency group tied to paragraph and heading structure. I'm trying to pin down typical frequencies for rare English letters like x, j, q, z from Wikipedia-style text, and estimating how often newlines appear in typical prose given average paragraph length plus headings and lists.
+
+Checking Python's mid-frequency letters (x, v, k, w) against the clustering pattern, but there seem to be four candidates where only three mid singular values appear, so maybe one shifts into the strong group. The weak group (j, q, z) is more spread out than expected, making it hard to discriminate cleanly between English and Python based on this alone. I'm now considering where "newline" fits specifically in English text frequency, since it would appear at paragraph breaks.
+
+Turning to a structural signature instead: in English, a space almost never follows another space, so the model should suppress predicting space-after-space almost entirely, whereas in Python, space-after-space is common due to indentation. This bigram behavior might be the key to distinguishing the two without needing explicit token labels, so I'm looking at whether L0H5's key direction reveals which token corresponds to space based on this property.
+
+With one induction head plus sink/broad heads, this feels like a fairly local, English-like model rather than something optimized for long-range identifier copying like Python. I wonder if the L2 heads aren't matching position directly but rather matching L1-derived context summaries — essentially induction via composition, where L2's query-key map reads from the L1 output subspace. Checking whether that composed matrix has positive eigenvalues would confirm a "same-context" matching mechanism between L1 summaries and L2 attention.
+
+So really this comes down to the eigenspectrum of the L2/L3 heads' QK matrices restricted to the subspace spanned by L1 output features — essentially checking whether matching occurs on the same L1 feature dimension across query and key.
+

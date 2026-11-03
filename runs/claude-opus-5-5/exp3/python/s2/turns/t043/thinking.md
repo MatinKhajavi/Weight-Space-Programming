@@ -1,0 +1,20 @@
+Looking at the singular values for W_proj.3, there's a clear knee around 28-30 dimensions where values drop from ~6.5 down toward a flat floor near 2.7, suggesting roughly 28-30 dimensions carry significant output signal.
+
+I'm trying to tie this to the unembedding structure: logits for N vocabulary tokens are rank-limited through W_out, with softmax shift-invariance removing one effective dimension. If the model predicts something like 24-28 tokens, the gradual decline across dims 25-31 rather than a sharp cutoff makes me think about frequency effects—common vs rare tokens—though the MLP3 output dimensionality shouldn't directly encode frequency. I want to check the column space of W_proj.3 against the OV outputs of the final-layer heads to see if copying heads explain this tail.
+
+Given this looks consistent with roughly 28 tokens, I want to compare the English versus Python hypothesis directly, possibly by running an ICA on the W_proj.3 columns to recover sparse per-token output directions and checking how the induction heads' OV singular values align with that subspace.
+
+I can relate these estimated output directions to input token directions via the induction head's copying circuit, mapping input token d_c to output token u_c through OV(3,5). Since we lack access to the actual unembedding matrix, I'm considering whether these ICA-derived output directions can serve as a proxy for reading the "direct path" bigram logit contribution — essentially testing if u_c' dotted with the residual-persisted d_c approximates how the model's direct embedding-to-unembedding path encodes bigram statistics.
+
+I'm also weighing which bigram patterns might distinguish English from Python tokens — things like "q" almost always being followed by "u" in English, but with Python also showing heavy q-u pairing through words like "query" or "unique," making this particular signal less diagnostic than I'd hoped. I should look for more distinctive transitions instead, like space-to-space or newline-to-space patterns.
+
+Since I don't have direct access to activations, I'm thinking through how to identify space and newline tokens structurally — space tends to follow nearly any letter at word boundaries and precede nearly any letter, so in a bigram logit matrix it should show up as a column with broadly elevated values and a row with a wide, flat distribution over next tokens. With plenty of runs left, I'll try building this out step by step, starting by projecting the output projection columns onto the top singular subspace of that layer's output.
+
+I'm also considering using the induction head's OV circuit directly: feeding in a token's embedding and reading off the resulting output vector should approximate the unembedding direction that promotes that same token, giving me a more targeted way to find token-specific directions than hunting for sparse neuron effects.
+
+So u_c' should be roughly proportional to r_c' modulo interference from other tokens, giving the direct-path contribution as r_c'·d_c up to scale, though diluted by the rest of the residual stream and LN scaling—this is fine for relative comparisons. I'm also confirming that the d_c directions, estimated in normalized layer-0 coordinates, correspond to the raw embedding directions in the residual since I folded the layer norm weight into the matrices, up to centering effects.
+
+There's also the direct path from the previous token through L0H5's OV circuit, which gives a skip-trigram contribution from that token. But I realize the ICA-derived d_c directions are detection duals rather than the embeddings themselves, so if the embeddings are non-orthogonal, the dual vectors differ from them—I need to check whether the actual embeddings correspond more closely to rows of the inverse of D, and compute both to compare. Next I want to evaluate the resulting B matrices for structure, like which token has the strongest signal.
+
+Before testing self-transitions like B[c,c] for the space token, I should first verify that OV(3,5) actually projects token directions into the strong logit subspace of W_proj.3, then compute u_c properly.
+

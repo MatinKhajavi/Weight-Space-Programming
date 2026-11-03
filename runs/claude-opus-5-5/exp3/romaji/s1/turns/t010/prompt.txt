@@ -1,0 +1,22 @@
+OUTPUT of run 9 of at most 100:
+```
+L1H0 |qbias|=6.69 typ|q|~8.55 |r|=31.80  align r with L0 top2 out dirs: [0.02 0.91 0.91 0.01 0.88 0.92]
+L1H1 |qbias|=6.08 typ|q|~8.27 |r|=29.51  align r with L0 top2 out dirs: [0.01 0.91 0.91 0.08 0.88 0.92]
+L1H2 |qbias|=5.56 typ|q|~8.04 |r|=24.41  align r with L0 top2 out dirs: [0.02 0.9  0.91 0.02 0.88 0.92]
+L1H3 |qbias|=5.67 typ|q|~8.13 |r|=27.13  align r with L0 top2 out dirs: [0.01 0.91 0.91 0.09 0.89 0.92]
+L1H4 |qbias|=5.35 typ|q|~7.82 |r|=18.63  align r with L0 top2 out dirs: [0.03 0.89 0.89 0.07 0.87 0.89]
+L1H5 |qbias|=6.22 typ|q|~8.32 |r|=31.17  align r with L0 top2 out dirs: [0.01 0.92 0.92 0.03 0.89 0.92]
+L2H0 |qbias|=4.27 typ|q|~9.88 |r|=16.17  align r with L0 top2 out dirs: [0.01 0.9  0.9  0.05 0.88 0.91]
+L2H1 |qbias|=3.79 typ|q|~11.50 |r|=15.05  align r with L0 top2 out dirs: [0.01 0.9  0.89 0.01 0.88 0.9 ]
+L2H2 |qbias|=3.78 typ|q|~10.32 |r|=12.87  align r with L0 top2 out dirs: [0.03 0.89 0.88 0.06 0.88 0.88]
+L2H3 |qbias|=3.08 typ|q|~10.06 |r|=8.48  align r with L0 top2 out dirs: [0.06 0.79 0.79 0.04 0.77 0.78]
+L2H4 |qbias|=4.32 typ|q|~11.57 |r|=18.46  align r with L0 top2 out dirs: [0.02 0.89 0.9  0.01 0.86 0.91]
+L2H5 |qbias|=3.75 typ|q|~11.72 |r|=16.19  align r with L0 top2 out dirs: [0.02 0.91 0.91 0.04 0.89 0.92]
+L3H0 |qbias|=1.76 typ|q|~11.38 |r|=4.00  align r with L0 top2 out dirs: [0.06 0.84 0.83 0.12 0.83 0.83]
+L3H1 |qbias|=1.46 typ|q|~8.76 |r|=2.24  align r with L0 top2 out dirs: [0.2  0.71 0.7  0.09 0.69 0.69]
+L3H2 |qbias|=1.94 typ|q|~9.58 |r|=3.96  align r with L0 top2 out dirs: [0.05 0.81 0.79 0.09 0.8  0.78]
+L3H3 |qbias|=1.30 typ|q|~10.73 |r|=1.76  align r with L0 top2 out dirs: [0.11 0.1  0.1  0.07 0.09 0.09]
+L3H4 |qbias|=1.23 typ|q|~6.10 |r|=1.15  align r with L0 top2 out dirs: [0.33 0.19 0.21 0.03 0.18 0.19]
+L3H5 |qbias|=1.80 typ|q|~10.32 |r|=3.95  align r with L0 top2 out dirs: [0.04 0.86 0.86 0.08 0.83 0.85]
+
+```

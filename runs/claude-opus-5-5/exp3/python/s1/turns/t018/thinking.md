@@ -1,0 +1,14 @@
+The query bias q0 interacts substantially with K at P4, giving L1 heads a key-position bias through out4, which reaches magnitudes up to ~14x the input amplitude; the query-side (non-bias) component also shows notable singular values of 8.92 and 4.57, suggesting distinct dynamic directions. Without embeddings though, I can't pin down the sign or direction of this positional preference, so I'm turning to examine L0H4 next.
+
+L0H0's near-zero QK means it attends uniformly over the prefix, so its output is just the mean of V over prior positions, reading a 3-d positional-ish subspace. It overlaps heavily with L0H4's output subspace (0.99, 0.94), and its slight QK pattern suggests attending away from similar tokens — possibly computing something like frequency of specific characters (newlines, spaces) in the prefix, though I'm not confident this matters much for the final analysis.
+
+What matters more is the overall circuit: prev-token heads (L0H1, L0H5) with rotational positional QK feeding into induction heads (L2H1, L3H1, L3H5) that read L0H5's output and match query tokens. I'm leaning toward this being the right interpretation, but I want to double-check it against the alternative "same-token" hypothesis before settling.
+
+For L2H1, the positive Q^TK alignment combined with positive K-composition on L0H5's output space is the real induction signature — a "same token attending" explanation wouldn't predict this positive composition given L0H5's negative eigen ratio. The K-composition fractions are modest (0.10-0.12) across L2H1, L3H1, and L3H5, and L3H5 shows both Q and K reading the same previous-token outputs, which could indicate a same-previous-token matching scheme rather than pure induction.
+
+This pattern also fits a longer-context induction mechanism: if Q reads both current and previous token while K reads previous and previous-previous token at each position, matching two-token sequences instead of one — meaning Q reading L0H5's output here is consistent with that extended induction story too.
+
+I want to check this more rigorously against the measured M matrices, since L0H5→L3H5 showed positive eigenvalues of 0.89. I'm also testing the reversed composition, where Q reads the earlier head's output and K reads the raw token, to see whether that encodes an "anti-induction" behavior — attending to positions whose token matches the query's previous token, rather than the usual induction direction.
+
+Though thinking it through, this reversed pattern (B) likely isn't functional since the value at that matching position can't causally fetch the token that follows it. The analogous case where both Q and K read head outputs (C) collapses to the same previous-token logic. I should compute these M matrices across L1-L3 heads for indices 1 and 5, and also check the raw Q^T K positivity directly, then compare magnitudes across all these composition types.
+

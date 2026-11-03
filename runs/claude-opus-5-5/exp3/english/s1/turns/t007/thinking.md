@@ -1,0 +1,36 @@
+It's notable that keys across L1 and L2 heads compose heavily from the outputs of those uniform/low-QK L0 heads, while queries and values largely ignore them, with values actually falling below baseline. This suggests the L0 uniform heads are specifically feeding key composition downstream.
+
+Now I'm reconsidering whether these L0 heads are truly uniform — my earlier B estimate folded in ln1_w, which is small in many dimensions, so the effective bilinear score could still be non-negligible if the normalized residual stream aligns with the top singular directions of B, even though a random alignment would make the score tiny.
+
+So I can't yet rule out that these heads carry strong positional structure, and I'm wondering if the embedding actually concentrates in a subspace that makes such alignment possible — which would mean L1 heads attending to L0H0/1/4/5 outputs are effectively reading something like a smoothed positional/bag-of-tokens signal, though it's unclear what that would mean behaviorally, and the alternative explanation that these are previous-token heads with strong positional QK doesn't fit since the |B| bound caps the score regardless.
+
+Even concentrating n into the dims where w is large only brings the alignment up to roughly 0.4, still too weak to produce sharp attention — I'd need something like 5+ for that. So I think these layer-0 heads are genuinely broad, with only mild preferences, and their uniform averaging then feeds forward as keys that later heads attend to across all positions.
+
+What's interesting is that a uniform-attention head computing a cumulative average over positions 0..j is effectively encoding position itself, since that running average is a smooth function of j — a positional code. In particular, if there's a strong signal at position 0, a uniform head attending over 0..j would weight that initial value by 1/(j+1), giving the model an implicit way to recover its position in the sequence.
+
+For the line-counting problem, I'm wondering if a similar mechanism could track "which line am I in" by taking a uniform average of a newline-indicator feature — that average equals (count of newlines so far)/(j+1), conflating line count with absolute position in a way that's hard to disentangle cleanly.
+
+Checking the key-bias magnitudes, the layer-0 heads seem mostly uniform (small bias range), while layer-1/2 heads show huge key-bias preferences, suggesting those later heads strongly favor specific content read from the uniform layer-0 outputs.
+
+Since the uniform heads average values over positions up to j, early positions (small j) get dominated by few tokens with extreme variance, while later positions settle into a stable mean — this looks like it could produce an attention-sink effect where position 0 or early tokens get special treatment by the layer-1 heads.
+
+Now I'm trying to figure out what subspace the layer-0 readers pull from but that nothing writes into — since layer-1 queries seem to read raw embeddings (current token) rather than composing heavily with layer-0 heads, the key direction might be tied to the token identity itself rather than anything computed by earlier heads.
+
+I'm stepping back to weigh what each hypothesis predicts: a normal char-level model would likely show previous-token and local heads in layer 0, with induction heads emerging later, whereas a shuffled-lines version would lack local structure and instead rely on multiset statistics of characters seen so far, cross-line identifier or topic continuity, and uncertain line-length cues for predicting newlines.
+
+For the shuffled case specifically, I'm reasoning that the first character of a line is just a random draw from that line's letters, so the optimal strategy is to infer the line's letter distribution from context and then subtract out letters already seen—essentially sampling without replacement, where seeing a letter boosts belief in more occurrences of it but also depletes the remaining count, implying some heads would need to track counts of already-used letters via uniform attention over the current line with identity-copying OV circuits, possibly with subtractive effects for repeats.
+
+That approach doesn't quite hold up. Let me think about the uniform head output differently: it's a running mean of value vectors, which early on reflects just the first token but converges as the window grows, so any constant component across tokens would persist throughout. Since I can't directly access the embeddings, I should try to infer the token space indirectly through the structure of the value matrix for the uniform heads, since its row space likely mixes token identity and position directions.
+
+Without direct access to embeddings I'm somewhat stuck on interpreting what the tokens actually are, but maybe I can look for identifiable anchors, like the newline token, which tends to behave specially in both shuffled and ordered text. Another option is trying to approximately reconstruct the embedding matrix from the weights themselves.
+
+Since the learned Q, K, V, and MLP components of layer 0 lie in the span of the embedding and positional matrices, reconstructing exact labels seems infeasible given W_out is unknown. Instead I'm considering whether layer-0 MLP neurons, which often act as token or bigram detectors, could reveal the number of distinct tokens and their geometric structure, and I'm examining the spectrum of the stacked Q/K/V readers and the layer-norm weights to get a sense of the effective embedding subspace dimension.
+
+I realize the residual stream at layer 0's input lives in the sum of the token-embedding span and positional-embedding span within R^384, but since both matrices are randomly initialized with small variance and then trained, they likely occupy full-rank, non-axis-aligned subspaces rather than anything with special structure I can exploit directly.
+
+So with ~156 effective dims occupied, over 228 dims of the residual stream are untouched at layer 0's input — the orthogonal complement of that combined embedding/positional span. I'm tracing through the LayerNorm math to see whether gradients to the layer-0 query/key weights can actually reach into those unused dimensions, since the normalized, scaled-and-shifted activation vector stays confined to that same span plus the bias direction.
+
+Adam's per-parameter normalization could inject noise into those directions regardless of raw gradient magnitude, but the learned weights look too large and structured for that to be just noise, so I want to check the singular value spectrum of the stacked layer-0 query/key/value weight matrices (excluding the LayerNorm scale) to look for a sharp rank cutoff — that cutoff should reveal the true input subspace dimension, which combined with known embedding size would tell me how many distinct tokens or positions the model distinguishes.
+
+Actually FC0's input isn't just the raw embeddings — it reads the layer-normed residual after attention, so its effective span is larger than I thought. Tracing through the gradient for the raw Q/K/V weights, the row space is really diag(w)·span(E,P,1) plus the bias span, but since w (the LayerNorm scale) evolves during training, the true subspace is actually a union over time rather than a fixed span, which complicates any clean rank argument.
+

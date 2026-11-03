@@ -1,0 +1,6 @@
+The 73° plane sits partially in O4 and also shows up in MLP0's output around dims 0.35-0.42, suggesting a positional signal that MLP0 writes. This makes me suspect the L1 heads are positional/local heads relying on this re-encoded signal, so I want to dig into how MLP0 might be transforming the raw positional embeddings into this new representation.
+
+Trying to roughly categorize heads: L0H0 seems like a broad or unclear positional query head, L0H1/H2 look like previous-token or local copy heads, L0H3 is unclear, L0H4 looks broad/uniform, L0H5 looks like previous-token. The L1 heads seem tied to that 73° rotation and might be local heads a few tokens back, with L1H0 weaker and possibly broad. For later layers, L2H1, L3H1, and L3H5 look like induction/copy heads, L3H0 possibly copy-like, L2H2 maybe anti-induction, and L3H3 broad given its low QK score but large OV.
+
+What I really want is stronger evidence that the L1 heads serve as previous-token sources that compose with induction heads in L2/L3, since induction heads typically rely on such composition. I'm planning to check this by computing how identity-like the QK circuits of the L2/L3 heads look when composed through the OV circuit of each L1 head.
+

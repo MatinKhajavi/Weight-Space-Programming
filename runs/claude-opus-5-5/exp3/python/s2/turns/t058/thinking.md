@@ -1,0 +1,20 @@
+Token 27's embedding shows a notably stronger overlap with the extended positional subspace than ordinary tokens, suggesting it carries a positional component, yet its V-read and copying behavior through H1/H5 closely resemble regular tokens. This mixed signature implies tok27 could be a token with positional blending, or alternatively a positional direction with some token-like properties.
+
+I'm now second-guessing the V-read comparison — since Tp is derived from V's own row space, any direction will trivially be read by V, so this evidence is circular and doesn't actually distinguish positional from token-like behavior.
+
+Shifting to the newline question, I'm reasoning that newlines are common enough that MLP0 might not bother forming sparse bigram detectors for them, since the character preceding a newline doesn't strongly predict what follows it — unlike a rarer token like q which might get dedicated detectors. Any detection of indentation or paragraph starts after a newline would more likely route through the H5 pathway instead.
+
+I consider whether tok27 could literally be the newline token, and think about how line-structure attention (like copying indentation) would differ between Python and English, where newlines are rarer and attending to them would mostly be wasted unless serving as a paragraph-boundary signal. I also think about testing whether the key preference comes with a static positional query versus a token-based query, which could help disambiguate recency-based positional behavior from genuine newline detection — but ultimately I lean toward tok27 reflecting positional contamination given the overlap I'd already noticed.
+
+With limited runs remaining, I weigh whether to pursue the Python indentation hypothesis further, noting that induction on the space token appears to be near zero, which complicates interpreting how prev-token heads handle indentation runs versus post-word spacing. I think about looking at the relative sizes of the Python versus general corpus in training to see if that offers another angle of evidence.
+
+I consider whether differences in dead MLP0 neuron counts might reflect something about Python's lower context diversity, but without baseline comparisons this remains inconclusive. Given the weak evidence so far, I turn to examining the key clusters for the layer-1 heads, looking at which tokens each head seems to prefer as keys.
+
+These could represent consonant subclasses, which would be typical for language modeling. I also wonder whether space behaves differently in Python versus English given how normalization collapses punctuation and runs into spaces, and whether newline might function as a similar delimiter in Python code, grouping with space as a boundary before identifiers or keywords, much like it precedes words in English.
+
+Now I'm checking which heads most strongly prefer the space token and looking at their secondary preferences—tokens 26, 27, 10, 0, 1, 8, and 13 keep showing up across several early layers. Tokens 0 and 10 in particular seem to recur alongside space with low induction scores, so I'm examining token 0's copying behavior more closely given its high kurtosis.
+
+If token 0 is newline with weak copy strength but very high kurtosis, that would suggest it's rare in the text, pointing toward English rather than code like Python, where newlines would be frequent and strongly informative for indentation. Token 10 shows a similar but less extreme pattern. This contrast between weak copy behavior and high kurtosis for a delimiter-like token seems to favor the English hypothesis, though it's still speculative and worth testing further.
+
+Let me approach this more systematically by comparing each token's role vector to the space token's role vector across all heads, looking at key-side and query-side preferences along with induction scores. The token most structurally similar to space is likely the newline candidate, and I can verify this by checking its copy strength, kurtosis, and frequency-related statistics against expectations.
+

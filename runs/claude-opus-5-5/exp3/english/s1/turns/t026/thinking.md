@@ -1,0 +1,24 @@
+I'm scanning the OV31 spectrum values for a knee point in the decline, but the drop-off is gradual rather than sharp, making it hard to pinpoint whether the cutoff should be around index 23 or 27.
+
+Looking at the OUT-projected version, there's a clearer gap after 29 values before dropping sharply near zero, which gives a stronger signal than the OV31 spectrum alone. I'm reasoning that the strong 23 dims plus a medium band of ~5 could correspond to rare tokens that still appear occasionally in romaji text (like foreign loanwords or names using l/q/v/x), pushing the effective count to around 27 with a couple extra dims from layer norm effects.
+
+But then checking English letter frequencies, the same 23+4 pattern emerges naturally from rare letters like j, q, x, z -- so this knee shape doesn't actually distinguish between English, Python, and romaji distributions well, meaning I need another angle. I'm now considering the structural property that romaji text follows a strict consonant-vowel alternation pattern, which could be a more discriminating signal.
+
+Predicting indentation depth means counting spaces since the newline and comparing against the previous line's level, which likely needs a head attending back to the start of the prior line. Comparing corpora: English Wikipedia has long lines with rare newlines, Python shows strong induction from repeated identifiers, English has moderate induction, and romaji repeats short particles and names. I'm also puzzling over the L1/L2 heads that seem dominated by a sink at the window start, with anti-same-token query-key matching and negative value-output — possibly suppressing repetition of the same token.
+
+Now I'm weighing space and newline frequencies across corpora: spaces make up roughly 17-18% of English text, somewhat more in romaji given short words, and 25-30% in Python due to indentation runs. Newlines are rare in English Wikipedia's long paragraphs but much more frequent in Python's short code lines.
+
+I'm also speculating about L0H3's role — a content head with a rank-1 QK structure that seems tuned to attend to newline or space positions, possibly tracking line-start tokens like "def," "return," or "self" in Python.
+
+Now I'm puzzled by why four heads (H0,1,4,5) all seem to do nearly the same uniform positional averaging and write into the same massive dimensions — that's a lot of redundant capacity for what looks like a sink detector, unless each also carries secondary token-reading components that combine with the near-uniform attention to produce a running summary of recent tokens.
+
+I'm double-checking whether these heads are genuinely uniform by estimating score spread from the OV/QK spectral norms, and it holds up — they really are close to flat. So the overall architecture emerges as: layer 0 has a prev-token head, a content head, and four uniform/positional heads; layer 1 has six similar sink-gated heads with broad negative OV; layer 2 has six sink-gated heads keyed to the massive dims; layer 3 has induction and same-token heads plus others keyed to massive dims or sink. I'm wondering whether this layered pattern is something specific to the training corpus.
+
+With Python-like code, I'd expect more emphasis on local positional structure for things like indentation, so I'm surprised there's only one prev-token head rather than several covering prev-2, prev-3, etc. I'm trying to work out whether layer 1 compensates for this by reading recency indirectly through the massive-dimension signal rather than true positional attention, which would mean the model's effective context window beyond the immediate previous token is quite limited.
+
+So the model's n-gram capacity might really just come down to bigram-level local info, induction, and the broader bag-of-tokens signal — unless that single prev-token head is actually doing a weighted average over several recent positions rather than a clean single-offset lookup. For romaji text this matters a lot since consonant-vowel structure gives strong bigram predictability, though picking the right vowel often needs more context than just one token back.
+
+I'd expect a 4-layer char transformer trained on this much data to develop multiple distinct local heads given the entropy such text usually requires. So it's odd if the model relies on so few local attention patterns — maybe I'm misreading how the layer 1/2 heads behave, and the uniform-averaging head is actually encoding something positional through its key direction that acts like a soft local bias after all. I need to reconsider whether the uniform head's output is dominated by token identity or by the decaying positional component.
+
+Since the plane overlaps strongly with token embedding directions, part of what I'm reading as positional signal could really be token-dependent. I should check the overlap between this 0.29π plane and the T read space directly.
+

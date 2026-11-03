@@ -1,0 +1,8 @@
+OUTPUT of run 23 of at most 100:
+```
+W_fc.0 T(V2 read)=2.0x P(QK2)=0.3x outL0H0=2.5x outL0H1=2.6x outL0H2=2.4x outL0H3=1.2x outL0H4=1.7x outL0H5=2.1x
+W_fc.1 T(V2 read)=1.7x P(QK2)=0.6x outL0H0=1.3x outL0H1=1.1x outL0H2=2.9x outL0H3=0.9x outL0H4=1.1x outL0H5=1.3x
+W_fc.2 T(V2 read)=1.1x P(QK2)=0.8x outL0H0=0.9x outL0H1=1.0x outL0H2=1.4x outL0H3=0.9x outL0H4=0.9x outL0H5=1.0x
+W_fc.3 T(V2 read)=1.0x P(QK2)=0.9x outL0H0=0.9x outL0H1=0.9x outL0H2=1.1x outL0H3=0.9x outL0H4=0.9x outL0H5=0.9x
+
+```

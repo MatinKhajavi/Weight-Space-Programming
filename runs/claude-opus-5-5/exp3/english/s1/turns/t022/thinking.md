@@ -1,0 +1,6 @@
+This looks like induction-head behavior: the key at position j carries previous-token info from L0H2 (K-composition), while the value at j reads the current token and copies it forward to output. I'm trying to work out what the query at position i is picking up on, likely matching against that previous-token signal to complete the induction pattern.
+
+For the QK pairing to be positive-definite, I'm reasoning that both query and key need to read from the same L0H2 subspace — query at i reading x_{i-1} and key at j reading x_{j-1}, so they match when x_{j-1}=x_{i-1}, meaning the head attends to position j right after a matching previous token. But copying x_j from there would just predict the current token x_i, not the next one x_{i+1}, which seems off for induction. I'm considering whether MLP0 or the embedding writes current-token identity into an overlapping subspace with O2, which could reconcile this and make the QK matrix look positive definite.
+
+I want to check this more rigorously by computing the actual blocks of L3H1's bilinear form across query subspaces (token embedding, O2, MLP0's top directions, and the outputs of L1H3/L2H3) against the corresponding key subspaces, using spectral norms and sign patterns to see which pairings actually drive the attention pattern, to confirm whether L3H1 is functioning as a genuine induction head.
+

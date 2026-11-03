@@ -1,0 +1,14 @@
+I'm noticing MLP0 and MLP1 both attend strongly to L0H2's output, which fits the bigram hypothesis of prev+current token, though it's unclear whether this holds in the shuffled condition too. Meanwhile MLP0 barely uses positional information, suggesting position beyond what's needed isn't central to its function.
+
+Trying to pin down L0H2's sharpness and offset, I consider whether its read vector relates to the uniform heads' top-plane angle, but without knowing the frequency ω_k there's no real constraint linking it to θ_k, since translation-invariant position embeddings can use arbitrary frequencies — this holds whether L0H2 is a prev-token (Δ=1) or Δ=2 head.
+
+Weighing "previous" versus "local" framings, I lean toward calling L0H2 a previous-token head. For as-is versus shuffled, the evidence points to as-is: L0H2 copies full token identity through its V-reads, MLP0/MLP1 consume this for bigram features, and L3H1 K-composes with L0H2's output while reading the current token through V — all consistent with a coherent positional/token copying circuit.
+
+I'm now weighing whether this induction-like circuit makes sense for shuffled text. Broad, uniform heads dominate, and key structure seems driven by a start-of-window sink rather than content or position. A sharp previous-token head combined with MLP0 reading two random same-line tokens would only weakly help (e.g., indicating indentation or rare letters), whereas a broad averaging head would serve shuffled text better — making a dedicated previous-token head seem wasteful unless gradient descent produces it anyway because the immediate predecessor is still guaranteed to be on the same line except at line boundaries. I also consider that L3H1's induction-style K-composition with L0H2 relies on sequential repetition patterns, which wouldn't exist in shuffled text, undermining that mechanism there.
+
+I want to examine L3H1 more carefully by comparing its attention block scores against proper random baselines, and to test whether the query-side current-token representation and key-side previous-token representation (as transformed through L0H2's OV circuit) are related by something like an identity mapping, since both are linear functions of the token embedding.
+
+Let me define a bilinear form combining L3H1's attention weights with L0H2's OV output to capture the induction mechanism mathematically, then check if restricting this to the estimated token subspace yields a positive-definite-like structure whose dominant eigenvalues confirm the "same token" matching behavior.
+
+I should also compare against other heads as a baseline (L1 and L2 heads) to see if any of them perform similar induction alongside L0H2, and consider whether the raw embedding persists in the residual stream even after layer-3 transformations affect the query.
+

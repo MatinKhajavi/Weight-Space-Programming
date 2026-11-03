@@ -1,0 +1,28 @@
+I'm looking at the singular value spectrum for the W_proj.3 weight matrix, noting how the values decay from around 28 down toward near zero.
+
+The number of strong dimensions (roughly 26-28 before hitting a noise floor around 2.5-3.2) lines up with my hypothesis about the romaji character set: 22 letters plus space and newline gives 24 tokens, minus one for softmax shift invariance, leaving about 23 meaningful output dimensions. That's consistent with what I'm seeing, with the weaker tail values likely corresponding to rarer letters.
+
+That's more than 24, which points to English or Python rather than romaji. I'm wondering if romaji text could still show rare strong dims from occasional Latin-letter loanwords in Aozora Bunko sources, but those would likely be small singular values, not the prominent tail I'm seeing — so I'm leaning toward this being English, where rare letters like z, q, x, j still get predicted confidently in specific bigram contexts.
+
+Let me compare the singular value spectrum of W_proj.3 against W_o.3 from other layers, which shows a smoother gradual decay (10.48, 7.36, 5.32...) with no obvious cutoff. I should instead think about the combined effective output subspace across both matrices, and estimate what singular value level corresponds to pure initialization noise versus actual learned structure, given the init std of W_proj.
+
+I'm shifting toward thinking about other distinguishing features between languages — romaji's likely spacing between words versus Python's distinctive newline and indentation patterns, where the model would need to count leading spaces after each newline to match the current indentation level.
+
+For Python specifically, keywords like "def", "if", "for", and "class" would signal upcoming indentation increases, even though punctuation like colons gets stripped by normalization. This suggests the model needs heads that track "position since line start" and align it across consecutive lines — essentially copying the previous line's indentation structure by attending from the current position back to the equivalent position one line up.
+
+I'm now questioning whether these four Pin heads are really about line position at all, given that English text (like Wikipedia paragraphs) often has lines averaging 500+ characters — well beyond a 128-token window, making newline-relative attention unlikely. Word position since the last space seems more plausible, so I'm examining how query position interacts multiplicatively with token identity and key position to produce the attention logit.
+
+Without clear token labels, I'm trying to find another angle: maybe the identity of the preferred key token can be inferred indirectly, since without interpretable labels I can't directly read off which tokens the OV circuit maps to or from.
+
+Instead, I'm considering whether corpus-level structural properties—like the strength of vowel/consonant alternation versus code-like syntax patterns—could help distinguish whether this is natural language (English/romaji) or Python, since character clustering and line-length statistics differ meaningfully between these domains.
+
+If it's rotation-like or positive-definite restricted to Pout, that would mean attending to keys with similar position within the segment, i.e., same word or line. Since both query and key compositions read this feature, a positive-definite QK on Pout implies attending broadly within the current segment — which matches exactly what's needed for shuffled text, while for intact text attending within the current word could also help.
+
+But in shuffled lines, spaces get shuffled too, so "words" don't really exist anymore, only lines matter — the model would need a bag-of-chars representation of the current line, a running count of characters seen so far, and maybe specific counts (like spaces) to infer what's left in the line. The previous-token head and induction head evidence both lean toward supporting the as-is interpretation, though I want to double-check the induction head's evidence more carefully — there's a possibility it's instead attending to keys whose previous character matches the current one, which wouldn't be useful. I'm also computing its QK trace against the same-token comparison, getting a mildly positive result, and now checking the previous-token versus previous-token alignment on the query side too.
+
+Since there's no sequential ordering preserved under shuffling, there wouldn't be any benefit to a head trying to match "the previous character" the way it would in normal text. I also want to rule out the possibility of a positional head doing some kind of fixed-offset copying, but I don't see a clear use case for that under shuffling either. So I'm leaning toward confirming the as-is interpretation, with the previous-token head and induction head behaving as expected, though I want to dig further into the previous-token head's QK eigenvalues, which show roughly a 45-degree phase, and consider what the other heads in that layer might be doing for a model trained on English text.
+
+Checking the strength of that previous-token head's attention pattern, and examining whether L3H3's symmetric, positive-definite QK structure really implements induction or something closer to "attend to positions with similar representations," which could mean something different under shuffled text than it would for ordinary induction behavior.
+
+I want to decompose QK3 into subspace blocks—token-direct directions, outputs written by L0H3 and L0's local bag head, plus whatever L1/L2 contribute—to see which pairing of Q-side and K-side subspaces dominates, since true induction would need Q reading current-token features and K reading prev-token features specifically.
+
