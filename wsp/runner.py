@@ -123,9 +123,8 @@ def run(exp: str, item: str, sample: int) -> Path:
     if not key.startswith("sk-ant-"):
         sys.exit("No ANTHROPIC_API_KEY in .env (expected a value starting with sk-ant-). Nothing was sent.")
     out = RUNS / exp / item / f"s{sample}"
-    if (out / "run.json").exists():
-        sys.exit(f"{out} already has a run; refusing to overwrite.")
-    out.mkdir(parents=True, exist_ok=True)
+    if out.exists():
+        sys.exit(f"{out} already exists; refusing to overwrite.")
     record = {"experiment": exp, "item": item, "sample": sample, "model": MODEL, "effort": effort,
               "system_prompt": SYSTEM_PROMPT, "prompt_file": f"upstream/{rel}",
               "prompt_sha256": hashlib.sha256(prompt.encode()).hexdigest(), "prompt_chars": len(prompt),
@@ -148,15 +147,21 @@ def run(exp: str, item: str, sample: int) -> Path:
         record["attempts"].append({"wall_s": wall, "error": err, "is_error": result.get("is_error"),
                                    "stop_reasons": stop, "answer_chars": len(answer or "")})
         refused = "refusal" in stop
-        if err is None and not result.get("is_error") and (answer.strip() or refused):
+        ok = err is None and not result.get("is_error") and (answer.strip() or refused)
+        if ok:
             break
+        reason = err or json.dumps(result.get("errors") or result.get("result") or "empty reply")[:500]
+        status = re.search(r"API Error: (\d{3})", reason)
+        if status and status.group(1).startswith("4") and status.group(1) != "429":
+            sys.exit(f"request rejected, not retrying: {reason}")
         if attempt == len(WAITS_FAILURE):
-            break
-        limit = re.search(r"rate.?limit|429|usage limit|overloaded", (err or "") + json.dumps(result), re.I)
+            sys.exit(f"giving up after {attempt + 1} attempts: {reason}")
+        limit = re.search(r"rate.?limit|429|usage limit|overloaded", reason, re.I)
         wait = (WAITS_LIMIT if limit else WAITS_FAILURE)[attempt]
-        print(f"attempt {attempt + 1} failed ({err or 'empty or error result'}); new conversation in {wait} s")
+        print(f"attempt {attempt + 1} failed ({reason}); new conversation in {wait} s", flush=True)
         time.sleep(wait)
 
+    out.mkdir(parents=True)
     init = next((m for m in msgs if m.get("subtype") == "init"), {}).get("data", {})
     tool_uses = [b for m in msgs if m["type"] == "AssistantMessage" for b in m.get("content", []) if "input" in b]
     thinking = [b["thinking"] for m in msgs if m["type"] == "AssistantMessage" for b in m.get("content", [])

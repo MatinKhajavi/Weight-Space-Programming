@@ -81,6 +81,7 @@ The rules below are observed in the authors' harness logs, not documented by the
 - Usage or rate limit: retry after 900, 1,350, 2,025, then 3,038 s.
 - Empty final reply: discard it, wait 60 s, and send the same first message again in a new conversation (exp3
   `english_r0`).
+- Ours only: a request the API rejects (a 4xx error other than 429) stops the run instead of being retried.
 
 ## Scoring
 
