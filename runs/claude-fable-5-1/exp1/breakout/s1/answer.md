@@ -1,0 +1,25 @@
+**Observations**
+
+*Indexing.* Input i = (row·10+col)·5+ch, so W1 row i belongs to cell (i÷5) and channel (i mod 5). Scanning the 500 rows, almost everything is |w|<0.3 except a very specific set:
+
+- **Channel 0 (agent)**: the only sizeable rows are in grid row 8 (cells 81–88, inputs 405,410,…,440). E.g. input 405 (row 8,col 1): unit 15 = 4.066, unit 13 = −3.293, unit 31 = −4.013; input 440 (row 8,col 8): unit 5 = 3.855, unit 8 = 3.730, unit 13 = −4.701, unit 12 = −2.516. Channel 0 in rows 1–7 (e.g. inputs 55, 60, 65, 100, 205, 300, 355) is ≈0. The agent only ever lives on the bottom row, and the edge cells (cols 1 and 8) get the largest weights (wall-contact detection).
+- **Channel 1 (moving objects)**: huge weights in every playable cell of rows 1–7, nothing in row 8 or the border. Examples: input 66 (row1,col3): 3.194, 2.708, −4.791, 3.436 on units 5,6,7,8; input 111 (row2,col2): 3.408, 2.416, −6.356, 4.570; input 216 (row4,col3): 4.479, 3.259, −3.593, 7.879; input 374 (row7,col4 ch4): 7.350, −6.080, 5.904. The same sign pattern (units 5,6,8,17,18,28,30 +; units 7,9,10,12,13,14,19,20,31 −) repeats everywhere = "a moving object is here" detector, while smaller units carry column information (e.g. row 7 ch1 unit 4 goes 0.350, −0.327, −0.344, −0.544, −0.715, −0.829, −0.153, −1.588 from col 1→8; unit 1 goes −0.418, −0.219, 0.985, 1.040, 0.256, 1.238, 1.006, 0.874).
+- **Channel 4 (previous frame)**: weights of the same magnitude and same sign pattern as channel 1 at the same cells (input 69 vs 66: −4.301 vs −4.791 on unit 7; 3.057 vs 3.436 on unit 8), again rows 1–7 everywhere, plus moderate weights in row 8 (previous paddle position, e.g. input 409: 1.292, −0.998). The policy compares current and previous position of one moving thing → it is estimating a velocity/trajectory.
+- **Channel 2 (reward targets)**: moderate weights only in rows 1–3 (inputs 57–87, 107–142, 157–192), e.g. 62: 1.620 (unit 25); 77: 2.148 (unit 1); 157 (row3,col1): −4.811 (unit 0), −3.236 (unit 20); 187 (row3,col7): −4.640, −2.930; 192 (row3,col8): −2.944. In rows 4–7 channel 2 is ≈0 everywhere (inputs 207, 212, 217, 222, 227, 232, 237, 242, 257, 262, …). Crucially, ch2 weights at a cell look nothing like the ch1 weights at the same cell (156 vs 157), so the reward targets are *not* the moving objects – they are static things sitting in a 3-row band at the top.
+- **Channel 3 (obstacles)**: no structure anywhere beyond noise (e.g. 58, 158, 208, 258 all < 0.2); the border is constant and bricks are not flagged as obstacles.
+
+*Output layer.* In W3 the columns for no-op/up/down are nearly identical in every row, and only left/right deviate: row 1: 1.502 1.718 1.370 1.597 **−1.796**; row 4: 1.127 0.094 1.375 **3.081** 0.115; row 5: −1.616 −1.409 −1.560 −1.293 **1.419**; row 10: 1.460 1.354 1.328 **−0.903** 1.549; row 11: −0.177 0.185 0.450 **4.057** −0.414; row 22: 0.376 0.387 0.537 **−5.336** −1.203; row 24: 0.367 0.561 0.305 0.911 **3.031**; row 29: 1.535 1.638 1.406 **−1.549** 1.526; row 30: −1.645 −1.382 −1.458 −1.346 **1.380**. b3 = 1.221 1.008 1.024 0.897 1.298 (flat). So the network has learned that up and down are equivalent to no-op: the only real decision is left vs right (vs stay).
+
+**Reasoning**
+
+- A paddle confined to the bottom row (agent channel only in row 8, up/down dead) and a single moving object whose velocity is tracked via the previous frame across rows 1–7 is the signature of a paddle game: Catch, Breakout, or a bottom-paddle Pong / Space Invaders.
+- Catch is ruled out: a falling fruit would be in ch1 *and* ch2 in every row, so ch2 would have large weights in rows 4–7; here it is empty below row 3, and ch1/ch2 weights at the same cell are unrelated.
+- Space Invaders is ruled out: aliens would be both moving (ch1) and reward targets (ch2) in the same cells, giving near-identical ch1/ch2 weights there; also there is no fire action.
+- Pong is ruled out: the opponent paddle would be a moving object in row 1 only, and there would be no static reward band.
+- A static band of reward targets in rows 1–3, a single bouncing object in rows 1–7 whose direction matters, a left/right-only paddle in row 8, and strong attention to whether the lowest brick row (row 3, especially the corner cells) is still present – all of this matches a brick wall of three rows at the top, a ball, and a paddle.
+
+**Game:** Breakout (Atari Breakout / Arkanoid-style brick breaker) on an 8×8 field: three rows of bricks at rows 1–3, a ball, and a paddle on row 8.
+
+**Description:** The agent slides a paddle left/right along the bottom row to keep the bouncing ball in play (using the current and previous ball position to predict where it will land); reward is given for the ball hitting/destroying bricks in the top three rows, and the episode ends when the ball gets past the paddle.
+
+**Confidence:** 72%

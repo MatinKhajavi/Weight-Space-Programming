@@ -1,0 +1,15 @@
+OUTPUT of run 16 of at most 100:
+```
+L0H4 V on complement sv: [4.01 3.21 2.45 1.63 1.27 1.18 1.15 1.07]
+L0H0: QK(nonT) energy frac LL 0.16 LH 0.09 HL 0.03 HH 0.02 | Q in L 0.28 H 0.11 | K in L 0.10 H 0.14 | V in L 0.25 H 0.13  (baseline L 0.010 H 0.078)
+L0H1: QK(nonT) energy frac LL 0.07 LH 0.02 HL 0.03 HH 0.72 | Q in L 0.05 H 0.64 | K in L 0.16 H 0.58 | V in L 0.01 H 0.08  (baseline L 0.010 H 0.078)
+L0H2: QK(nonT) energy frac LL 0.04 LH 0.06 HL 0.02 HH 0.03 | Q in L 0.11 H 0.15 | K in L 0.06 H 0.13 | V in L 0.02 H 0.10  (baseline L 0.010 H 0.078)
+L0H3: QK(nonT) energy frac LL 0.20 LH 0.04 HL 0.04 HH 0.03 | Q in L 0.17 H 0.17 | K in L 0.15 H 0.16 | V in L 0.04 H 0.11  (baseline L 0.010 H 0.078)
+L0H4: QK(nonT) energy frac LL 0.00 LH 0.00 HL 0.00 HH 0.03 | Q in L 0.01 H 0.07 | K in L 0.02 H 0.12 | V in L 0.51 H 0.05  (baseline L 0.010 H 0.078)
+L0H5: QK(nonT) energy frac LL 0.02 LH 0.01 HL 0.02 HH 0.90 | Q in L 0.02 H 0.82 | K in L 0.09 H 0.79 | V in L 0.01 H 0.09  (baseline L 0.010 H 0.078)
+ln1_w.0 top 20: [1.01 0.98 0.97 0.95 0.93 0.91 0.9  0.9  0.87 0.84 0.83 0.83 0.82 0.81 0.81 0.81 0.8  0.79 0.78 0.78]
+T energy in top-40 ln dims: 0.050976042949940306  corr(energy, ln_w): -0.5258489229217358
+L energy in top-40 ln dims: 0.3757010012222598  corr(energy, ln_w): 0.7609801790427144
+H energy in top-40 ln dims: 0.15643085186330044  corr(energy, ln_w): 0.5212960110071235
+
+```

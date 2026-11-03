@@ -1,0 +1,11 @@
+{
+ "true": "freeway",
+ "guess": "freeway",
+ "correct": true,
+ "status": "mapped",
+ "named": [
+  "freeway"
+ ],
+ "answer_line": "a freeway / frogger\u2011style road\u2011crossing game (\"freeway\" on an 8\u00d78 grid): six lanes of two wrapping cars each, start at the bottom row, goal at the top row.",
+ "confidence": 75
+}

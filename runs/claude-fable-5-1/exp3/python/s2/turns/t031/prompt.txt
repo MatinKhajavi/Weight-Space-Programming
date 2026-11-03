@@ -1,0 +1,14 @@
+OUTPUT of run 30 of at most 100:
+```
+Gram of token dirs (abs>0.3 pairs): [(0, 21, 0.65), (0, 24, 0.41), (4, 21, 0.49), (4, 24, 0.52), (7, 23, 0.43), (12, 23, 0.53), (21, 24, 0.7)]
+energy fraction remaining after removing P, head outs, 25 token dirs: 0.35307047
+residual sv: [14.89  7.12  6.08  5.68  5.45  5.15  5.04  4.85  4.48  3.76  3.53  3.46  3.37  3.29  3.08  3.03  2.97  2.86  2.74  2.7   2.67  2.6   2.57  2.53  2.49  2.41  2.34  2.3   2.24  2.22]
+resid dir 0: sv 14.89; n neurons with |cos|>0.4: 127, >0.6: 25; energy in T 0.04; in W_proj.0 top100 colspace 0.26
+resid dir 1: sv 7.12; n neurons with |cos|>0.4: 5, >0.6: 0; energy in T 0.21; in W_proj.0 top100 colspace 0.40
+resid dir 2: sv 6.08; n neurons with |cos|>0.4: 7, >0.6: 2; energy in T 0.14; in W_proj.0 top100 colspace 0.33
+resid dir 3: sv 5.68; n neurons with |cos|>0.4: 6, >0.6: 3; energy in T 0.25; in W_proj.0 top100 colspace 0.36
+resid dir 4: sv 5.45; n neurons with |cos|>0.4: 2, >0.6: 2; energy in T 0.22; in W_proj.0 top100 colspace 0.38
+resid dir 5: sv 5.15; n neurons with |cos|>0.4: 5, >0.6: 0; energy in T 0.24; in W_proj.0 top100 colspace 0.33
+neuron energy in 25 token dirs: hist [ 38 108  94  91  56  41  12   6  14  64]
+
+```

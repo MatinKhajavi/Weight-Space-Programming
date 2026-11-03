@@ -1,0 +1,10 @@
+OUTPUT of run 24 of at most 100:
+```
+neuron output norms: percentiles [1.82 1.95 2.12 2.31 2.52 3.04]
+pairwise |cos| among strong neurons: percentiles [0.15 0.37 0.57 0.75] frac>0.8: 0.0004481747066492829 frac>0.9: 2.0371577574967405e-05
+frac of neuron output in L (27-d): percentiles [0.91 0.92 0.94 0.95 0.96]
+weighted by norm^2:  0.93461645
+number of greedy clusters: 746
+cluster sizes (top 40): [7, 5, 4, 3, 3, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+```

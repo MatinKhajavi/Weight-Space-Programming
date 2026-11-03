@@ -1,0 +1,28 @@
+OUTPUT of run 4 of at most 100:
+```
+layer 1 mean QK sv [17.969 13.794  7.157  5.885  4.602  4.312  4.18   3.835  3.707  3.563] fro 29.327562
+  sym/asym of mean: 21.697784 19.730995
+  k=1: frac of head QK energy in Umean-k rows: [np.float32(0.154), np.float32(0.155), np.float32(0.154), np.float32(0.169), np.float32(0.12), np.float32(0.157)]  cols: [np.float32(0.164), np.float32(0.173), np.float32(0.17), np.float32(0.184), np.float32(0.145), np.float32(0.175)]
+  k=2: frac of head QK energy in Umean-k rows: [np.float32(0.273), np.float32(0.298), np.float32(0.294), np.float32(0.313), np.float32(0.221), np.float32(0.294)]  cols: [np.float32(0.267), np.float32(0.303), np.float32(0.298), np.float32(0.322), np.float32(0.271), np.float32(0.301)]
+  k=4: frac of head QK energy in Umean-k rows: [np.float32(0.398), np.float32(0.434), np.float32(0.396), np.float32(0.42), np.float32(0.306), np.float32(0.441)]  cols: [np.float32(0.345), np.float32(0.376), np.float32(0.36), np.float32(0.399), np.float32(0.309), np.float32(0.412)]
+  ln1_b big dims [ 39  58  99 184 383  21 153 266] [-1.568  1.365 -1.336 -0.562 -0.462 -0.43   0.297  0.277]
+  U0 on big dims [-0.139  0.139 -0.197 -0.052 -0.06  -0.102  0.034  0.063]  V0 on big dims [-0.542  0.519 -0.496  0.031  0.018  0.405  0.01  -0.015]
+  U0 top dims [ 99 163 165 354 147  39  58 366]  V0 top dims [ 39  58  99  21 165 180 184  76]
+layer 2 mean QK sv [6.333 5.671 2.996 2.58  2.502 2.42  2.28  2.128 2.084 2.05 ] fro 15.938962
+  sym/asym of mean: 11.124186 11.415035
+  k=1: frac of head QK energy in Umean-k rows: [np.float32(0.085), np.float32(0.029), np.float32(0.043), np.float32(0.02), np.float32(0.059), np.float32(0.032)]  cols: [np.float32(0.103), np.float32(0.037), np.float32(0.05), np.float32(0.031), np.float32(0.068), np.float32(0.039)]
+  k=2: frac of head QK energy in Umean-k rows: [np.float32(0.167), np.float32(0.06), np.float32(0.08), np.float32(0.045), np.float32(0.128), np.float32(0.066)]  cols: [np.float32(0.176), np.float32(0.065), np.float32(0.084), np.float32(0.052), np.float32(0.131), np.float32(0.072)]
+  k=4: frac of head QK energy in Umean-k rows: [np.float32(0.21), np.float32(0.107), np.float32(0.118), np.float32(0.083), np.float32(0.179), np.float32(0.113)]  cols: [np.float32(0.201), np.float32(0.101), np.float32(0.109), np.float32(0.079), np.float32(0.169), np.float32(0.11)]
+  ln1_b big dims [ 99  58  39 383 184  21  63 266] [-1.659  1.332 -1.199 -0.507 -0.505 -0.453 -0.325  0.299]
+  U0 on big dims [-0.339  0.227 -0.276 -0.14  -0.031 -0.197 -0.035  0.049]  V0 on big dims [-0.413  0.432 -0.489 -0.026 -0.033  0.599 -0.009 -0.004]
+  U0 top dims [ 99  39  58  21 383 163 354 333]  V0 top dims [ 21  39  58  99 153  10 184 165]
+layer 3 mean QK sv [3.027 2.101 1.869 1.738 1.714 1.646 1.625 1.593 1.577 1.559] fro 11.21353
+  sym/asym of mean: 8.600134 7.1958985
+  k=1: frac of head QK energy in Umean-k rows: [np.float32(0.025), np.float32(0.037), np.float32(0.044), np.float32(0.009), np.float32(0.032), np.float32(0.039)]  cols: [np.float32(0.029), np.float32(0.047), np.float32(0.048), np.float32(0.001), np.float32(0.01), np.float32(0.049)]
+  k=2: frac of head QK energy in Umean-k rows: [np.float32(0.039), np.float32(0.078), np.float32(0.066), np.float32(0.021), np.float32(0.065), np.float32(0.056)]  cols: [np.float32(0.042), np.float32(0.077), np.float32(0.064), np.float32(0.011), np.float32(0.03), np.float32(0.062)]
+  k=4: frac of head QK energy in Umean-k rows: [np.float32(0.065), np.float32(0.125), np.float32(0.1), np.float32(0.04), np.float32(0.092), np.float32(0.086)]  cols: [np.float32(0.068), np.float32(0.117), np.float32(0.091), np.float32(0.026), np.float32(0.046), np.float32(0.088)]
+  ln1_b big dims [ 58  99   5 383 266  21 184  45] [ 0.824 -0.764  0.436 -0.397  0.343 -0.315 -0.289  0.289]
+  U0 on big dims [-0.111  0.267 -0.069  0.097 -0.083  0.021  0.113 -0.044]  V0 on big dims [-0.074  0.032 -0.047  0.05  -0.049 -0.889  0.212 -0.03 ]
+  U0 top dims [ 39  99  86 210 220 184  28  58]  V0 top dims [ 21 184  39  58 220 207  18 108]
+
+```

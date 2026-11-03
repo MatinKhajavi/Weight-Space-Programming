@@ -2,10 +2,10 @@
 
 A replication of [*Sparks of Weight-Space Programming: LLMs can natively read & write neural network
 weights*](https://rikiyat.github.io/blog/weight-space-programming/) (Takehi, Teoh, Zhang, Khattab; MIT CSAIL,
-November 2026), running its eight experiments with **Claude Opus 5.5** in place of GPT-6 Astra.
+November 2026), running its eight experiments with **Claude Opus 5.5** and **Claude Fable 5.1** in place of GPT-6 Astra.
 
-**Status:** experiments 1-5 and exp6 with 0 passes done for Claude Opus 5.5 (exp3: seven conversations, the
-rest one sample per item); exp6 with passes, 7 and 8 in progress.
+**Status:** experiments 1-5 done for Claude Opus 5.5 and Claude Fable 5.1, and exp6 with 0 passes for Opus (exp3:
+several conversations per network, the rest one sample per item); exp6 with passes, 7 and 8 in progress.
 
 ## What this is
 
@@ -18,7 +18,7 @@ This repo:
 
 1. rebuilds the missing pieces;
 2. checks them against Astra's released artifacts, reproducing the original numbers before anything else;
-3. runs Claude Opus 5.5 on the same prompts with a matched setup.
+3. runs Claude models on the same prompts with a matched setup.
 
 Every setting, where it comes from, and every known deviation from the original are in
 [docs/protocol.md](docs/protocol.md).
@@ -36,26 +36,32 @@ Every setting, where it comes from, and every known deviation from the original 
 | 7 | Which language model is sycophantic? | xhigh | planned |
 | 8 | Make Qwen3.5-0.8B better at math | max | planned |
 
-## Results so far (Claude Opus 5.5, one sample per item)
+## Results so far (one sample per item unless noted)
 
-| Experiment | Opus 5.5 | GPT-6 Astra (published) |
-|---|---|---|
-| 1. Which game | 4/4 correct (confidence 65-85 %) | 4/4 (96-99 %) |
-| 2. Which shape | 3/3 correct (45-60 %) | 3/3 (77-88 %) |
-| 3. Which language (7 conversations: 3 Python, 2 romaji, 2 English) | corpus right in 4 of 7 (never romaji); copying heads all found in 6, none named in 1‡; 2 extra | 6 of 6; all found, none extra |
-| 4. Fix the car | 1,024/1,024 successes, 1.7 % of weights changed | 1,024/1,024, 3.5 % |
-| 5. Breakout | 483.6\* | 517.4 (506.5 in our evaluator) |
-| 5. Seaquest | 11.4\*\* | 53.1 (52.0) |
-| 5. Asterix | 47.0 | 53.2 (53.2) |
-| 6. Go, 0 passes: vs the released same-size PPO networks s0 / s1 / s2 | 53.2 / 40.5 / 54.1 % | 42.6 / 26.3 / 36.3 % (43.2 / 27.0 / 38.8) |
+| Experiment | Claude Opus 5.5 | Claude Fable 5.1 | GPT-6 Astra (published) |
+|---|---|---|---|
+| 1. Which game | 4/4 (confidence 65-85 %) | 3/4† (55-75 %) | 4/4 (96-99 %) |
+| 2. Which shape | 3/3 (45-60 %) | 2/3: square read as a bar (60-68 %) | 3/3 (77-88 %) |
+| 3. Which language: corpus right | 4 of 7‡ (never romaji) | 4 of 6 (never romaji) | 6 of 6 |
+| 3. Copying heads | all found in 6 of 7, none named in 1‡; 2 extra | all found in 5 of 6; 1 extra | all found, none extra |
+| 4. Fix the car: successes | 1,024/1,024, 1.7 % of weights changed | 1,024/1,024, 96 % changed (network rebuilt from zero) | 1,024/1,024, 3.5 % |
+| 5. Breakout | 483.6\* | 38.4\* | 517.4 (506.5 in our evaluator) |
+| 5. Seaquest | 11.4\*\* | 50.8\* | 53.1 (52.0) |
+| 5. Asterix | 47.0 | 49.4 | 53.2 (53.2) |
+| 6. Go, 0 passes: vs the released same-size PPO networks s0 / s1 / s2 | 53.2 / 40.5 / 54.1 % | | 42.6 / 26.3 / 36.3 % (43.2 / 27.0 / 38.8) |
 
-PPO baselines for exp5 (published): Breakout 15.8 / 25.3, Seaquest 5.6 / 88.9, Asterix 25.8 / 55.2 at 100M / 500M
-steps. Opus beats the 100M-step PPO networks in all three games, as Astra does.
+exp3: Opus 3 conversations on the Python network and 2 on each other; Fable 2 on each. PPO baselines for exp5
+(published): Breakout 15.8 / 25.3, Seaquest 5.6 / 88.9, Asterix 25.8 / 55.2 at 100M / 500M steps. Fable's Breakout
+network loses the ball in every game, almost always one column off: it reaches the landing column at the last moment,
+so one sticky action (the game repeats the previous move 10 % of the time) is enough to miss.
 
-\* The reply ran past the 128K output cap and Claude Code resumed it once; the reply as it was when cut scores 0.5.
+\* The reply ran past the 128K output cap and Claude Code resumed it with the cut reply carried over; the answer is the
+completed reply (the cut reply alone scores 0.5 on Breakout, 0.1 on Seaquest).
 \*\* The cap was reached while still thinking; the answer comes from a second attempt that started over after Claude
 Code's "Output token limit hit ... Break remaining work into smaller pieces" message; the cut reply scores 0.1. See
 [docs/protocol.md](docs/protocol.md), deviation 5.
+† Pong is scored wrong by the rule fixed before any answer was scored: the answer line names two games ("Single-player
+Pong / squash (Breakout-style paddle vs. wall)"). Read by hand, the answer is Pong.
 ‡ Python s3 ran no code: its reply wrote made-up tool calls and outputs as text, and its answer rests on them
 (docs/protocol.md, exp3 run notes). Under the original rules it counts as a sample.
 

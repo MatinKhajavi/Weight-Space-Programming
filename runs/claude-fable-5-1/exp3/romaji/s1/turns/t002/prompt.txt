@@ -1,0 +1,44 @@
+OUTPUT of run 1 of at most 100:
+```
+W_fc.0 (1536, 384) norm=55.376 mean=0.0008 std=0.0721 absmax=1.123
+W_fc.1 (1536, 384) norm=80.379 mean=0.0014 std=0.1047 absmax=0.654
+W_fc.2 (1536, 384) norm=79.828 mean=0.0004 std=0.1039 absmax=0.595
+W_fc.3 (1536, 384) norm=78.259 mean=0.0003 std=0.1019 absmax=0.550
+W_k.0 (384, 384) norm=18.516 mean=0.0000 std=0.0482 absmax=0.516
+W_k.1 (384, 384) norm=34.893 mean=0.0001 std=0.0909 absmax=1.276
+W_k.2 (384, 384) norm=36.750 mean=0.0000 std=0.0957 absmax=1.224
+W_k.3 (384, 384) norm=32.463 mean=-0.0000 std=0.0845 absmax=0.973
+W_o.0 (384, 384) norm=16.550 mean=-0.0001 std=0.0431 absmax=1.124
+W_o.1 (384, 384) norm=28.479 mean=0.0000 std=0.0742 absmax=0.455
+W_o.2 (384, 384) norm=32.435 mean=-0.0000 std=0.0845 absmax=0.531
+W_o.3 (384, 384) norm=40.133 mean=0.0000 std=0.1045 absmax=1.527
+W_proj.0 (384, 1536) norm=50.007 mean=-0.0000 std=0.0651 absmax=1.464
+W_proj.1 (384, 1536) norm=77.384 mean=-0.0001 std=0.1008 absmax=2.660
+W_proj.2 (384, 1536) norm=78.048 mean=-0.0001 std=0.1016 absmax=0.801
+W_proj.3 (384, 1536) norm=85.119 mean=0.0003 std=0.1108 absmax=1.477
+W_q.0 (384, 384) norm=17.669 mean=0.0001 std=0.0460 absmax=0.464
+W_q.1 (384, 384) norm=38.929 mean=-0.0003 std=0.1014 absmax=0.464
+W_q.2 (384, 384) norm=38.902 mean=0.0001 std=0.1013 absmax=0.492
+W_q.3 (384, 384) norm=33.239 mean=-0.0001 std=0.0866 absmax=0.459
+W_v.0 (384, 384) norm=14.937 mean=0.0000 std=0.0389 absmax=0.392
+W_v.1 (384, 384) norm=28.744 mean=0.0000 std=0.0749 absmax=0.354
+W_v.2 (384, 384) norm=33.183 mean=-0.0000 std=0.0864 absmax=0.401
+W_v.3 (384, 384) norm=39.422 mean=0.0000 std=0.1027 absmax=0.594
+ln1_b.0 (384,) norm=0.610 mean=0.0004 std=0.0311 absmax=0.095
+ln1_b.1 (384,) norm=3.037 mean=0.0110 std=0.1546 absmax=1.568
+ln1_b.2 (384,) norm=3.077 mean=0.0131 std=0.1565 absmax=1.659
+ln1_b.3 (384,) norm=2.032 mean=0.0296 std=0.0994 absmax=0.824
+ln1_w.0 (384,) norm=6.884 mean=0.2965 std=0.1884 absmax=0.978
+ln1_w.1 (384,) norm=10.065 mean=0.5058 std=0.0892 absmax=1.085
+ln1_w.2 (384,) norm=13.410 mean=0.6809 std=0.0687 absmax=1.093
+ln1_w.3 (384,) norm=13.922 mean=0.7087 std=0.0494 absmax=0.815
+ln2_b.0 (384,) norm=1.380 mean=0.0134 std=0.0691 absmax=0.624
+ln2_b.1 (384,) norm=2.815 mean=0.0065 std=0.1435 absmax=0.417
+ln2_b.2 (384,) norm=3.413 mean=0.0123 std=0.1737 absmax=0.517
+ln2_b.3 (384,) norm=2.780 mean=0.0128 std=0.1413 absmax=0.540
+ln2_w.0 (384,) norm=18.323 mean=0.8718 std=0.3382 absmax=1.775
+ln2_w.1 (384,) norm=22.433 mean=1.1315 std=0.1741 absmax=1.520
+ln2_w.2 (384,) norm=25.777 mean=1.3104 std=0.1148 absmax=1.508
+ln2_w.3 (384,) norm=24.886 mean=1.2668 std=0.0894 absmax=1.453
+
+```

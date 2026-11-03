@@ -1,0 +1,25 @@
+OUTPUT of run 23 of at most 100:
+```
+L0H5 out sv [16.27  8.79  2.83  1.12]
+L0H1/2/4 out sv [4.48 2.6  0.5  0.35 0.23 0.2 ]
+principal cosines C5 vs C124: [0.99 0.99 0.9  0.51]
+L1H0: k in H5out(4)=0.438 [rand .010], k in H124out(6, orth to H5)=0.016 [rand .016] | q: 0.024 0.038
+L1H1: k in H5out(4)=0.473 [rand .010], k in H124out(6, orth to H5)=0.017 [rand .016] | q: 0.029 0.036
+L1H2: k in H5out(4)=0.434 [rand .010], k in H124out(6, orth to H5)=0.016 [rand .016] | q: 0.022 0.032
+L1H3: k in H5out(4)=0.478 [rand .010], k in H124out(6, orth to H5)=0.017 [rand .016] | q: 0.029 0.035
+L1H4: k in H5out(4)=0.339 [rand .010], k in H124out(6, orth to H5)=0.019 [rand .016] | q: 0.019 0.035
+L1H5: k in H5out(4)=0.490 [rand .010], k in H124out(6, orth to H5)=0.015 [rand .016] | q: 0.029 0.031
+L2H0: k in H5out(4)=0.288 [rand .010], k in H124out(6, orth to H5)=0.020 [rand .016] | q: 0.024 0.019
+L2H1: k in H5out(4)=0.205 [rand .010], k in H124out(6, orth to H5)=0.018 [rand .016] | q: 0.013 0.016
+L2H2: k in H5out(4)=0.202 [rand .010], k in H124out(6, orth to H5)=0.019 [rand .016] | q: 0.015 0.017
+L2H3: k in H5out(4)=0.129 [rand .010], k in H124out(6, orth to H5)=0.016 [rand .016] | q: 0.011 0.020
+L2H4: k in H5out(4)=0.238 [rand .010], k in H124out(6, orth to H5)=0.019 [rand .016] | q: 0.016 0.018
+L2H5: k in H5out(4)=0.204 [rand .010], k in H124out(6, orth to H5)=0.015 [rand .016] | q: 0.013 0.017
+L3H0: k in H5out(4)=0.087 [rand .010], k in H124out(6, orth to H5)=0.018 [rand .016] | q: 0.007 0.015
+L3H1: k in H5out(4)=0.072 [rand .010], k in H124out(6, orth to H5)=0.019 [rand .016] | q: 0.012 0.016
+L3H2: k in H5out(4)=0.101 [rand .010], k in H124out(6, orth to H5)=0.016 [rand .016] | q: 0.012 0.016
+L3H3: k in H5out(4)=0.005 [rand .010], k in H124out(6, orth to H5)=0.017 [rand .016] | q: 0.006 0.016
+L3H4: k in H5out(4)=0.023 [rand .010], k in H124out(6, orth to H5)=0.027 [rand .016] | q: 0.015 0.021
+L3H5: k in H5out(4)=0.081 [rand .010], k in H124out(6, orth to H5)=0.018 [rand .016] | q: 0.009 0.016
+
+```

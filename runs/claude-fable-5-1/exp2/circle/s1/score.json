@@ -1,0 +1,11 @@
+{
+ "true": "circle",
+ "guess": "circle",
+ "correct": true,
+ "status": "mapped",
+ "named": [
+  "circle"
+ ],
+ "answer_line": "each generated image shows a single white circle outline (a thin ring, about one pixel thick, hollow inside) on a black background. the circle has a radius of about 2 to 4\u20134.5 pixels (diameter roughly",
+ "confidence": 68
+}

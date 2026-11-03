@@ -1,0 +1,28 @@
+OUTPUT of run 14 of at most 100:
+```
+L0H0: TT sv [0.56 0.24 0.08 0.06 0.05] tr -0.34 | pos-query x content-key norms: A 2.64 B 0.10 others mean 0.22 max 0.48 | content-query x pos-key: A 0.15 B 0.26 others mean 0.13 max 0.21
+L0H1: TT sv [1.65 1.43 1.03 0.75 0.68] tr 3.45 | pos-query x content-key norms: A 1.71 B 1.50 others mean 1.20 max 1.74 | content-query x pos-key: A 1.85 B 1.26 others mean 1.32 max 1.78
+L0H2: TT sv [1.19 1.05 0.93 0.73 0.68] tr -1.96 | pos-query x content-key norms: A 0.50 B 1.26 others mean 0.59 max 1.31 | content-query x pos-key: A 0.30 B 0.29 others mean 0.38 max 0.51
+L0H3: TT sv [1.38 0.98 0.69 0.5  0.48] tr -1.16 | pos-query x content-key norms: A 1.08 B 3.24 others mean 0.48 max 0.92 | content-query x pos-key: A 0.36 B 0.96 others mean 0.41 max 0.60
+L0H4: TT sv [0.02 0.02 0.01 0.01 0.01] tr -0.03 | pos-query x content-key norms: A 0.02 B 0.02 others mean 0.02 max 0.03 | content-query x pos-key: A 0.02 B 0.02 others mean 0.02 max 0.02
+L0H5: TT sv [1.53 1.13 0.92 0.82 0.7 ] tr 3.81 | pos-query x content-key norms: A 1.54 B 1.59 others mean 1.51 max 1.85 | content-query x pos-key: A 2.15 B 1.67 others mean 1.54 max 1.89
+L1H0: TT sv [1.2  1.09 0.98 0.92 0.79] tr -5.44 | pos-query x content-key norms: A 0.51 B 0.70 others mean 0.55 max 0.76 | content-query x pos-key: A 0.43 B 0.58 others mean 0.37 max 0.49
+L1H1: TT sv [4.18 3.71 3.12 2.82 2.59] tr -25.98 | pos-query x content-key norms: A 2.14 B 2.35 others mean 1.02 max 2.01 | content-query x pos-key: A 0.71 B 1.30 others mean 0.93 max 1.73
+L1H2: TT sv [2.76 2.25 1.97 1.76 1.62] tr -17.03 | pos-query x content-key norms: A 1.65 B 0.92 others mean 0.72 max 0.96 | content-query x pos-key: A 1.04 B 0.88 others mean 0.64 max 0.87
+L1H3: TT sv [2.67 2.32 2.16 1.79 1.75] tr -17.65 | pos-query x content-key norms: A 1.67 B 1.19 others mean 0.71 max 1.17 | content-query x pos-key: A 1.07 B 0.65 others mean 0.63 max 0.89
+L1H4: TT sv [3.14 2.39 2.32 1.87 1.77] tr -16.80 | pos-query x content-key norms: A 0.56 B 0.68 others mean 0.81 max 1.32 | content-query x pos-key: A 0.99 B 0.68 others mean 0.69 max 1.06
+L1H5: TT sv [4.64 2.72 2.43 2.26 2.14] tr -22.46 | pos-query x content-key norms: A 1.62 B 3.14 others mean 1.00 max 1.43 | content-query x pos-key: A 0.76 B 1.45 others mean 0.76 max 1.04
+L0H0 V content gains: A 0.77 B 0.93 others mean 0.43 min 0.31 max 0.59
+L0H1 V content gains: A 1.33 B 1.44 others mean 1.37 min 1.26 max 1.45
+L0H2 V content gains: A 1.03 B 0.76 others mean 0.73 min 0.44 max 1.05
+L0H3 V content gains: A 0.40 B 0.52 others mean 0.50 min 0.41 max 0.71
+L0H4 V content gains: A 1.33 B 1.38 others mean 0.74 min 0.56 max 0.95
+L0H5 V content gains: A 1.69 B 1.48 others mean 1.48 min 1.30 max 1.88
+L1H0 V content gains: A 1.61 B 1.17 others mean 1.03 min 0.63 max 1.50
+L1H1 V content gains: A 0.99 B 0.93 others mean 0.95 min 0.85 max 1.09
+L1H2 V content gains: A 1.35 B 1.21 others mean 1.14 min 0.87 max 1.37
+L1H3 V content gains: A 1.10 B 0.99 others mean 0.89 min 0.75 max 1.21
+L1H4 V content gains: A 1.22 B 0.99 others mean 0.93 min 0.71 max 1.16
+L1H5 V content gains: A 1.16 B 1.21 others mean 1.05 min 0.88 max 1.16
+
+```

@@ -1,0 +1,48 @@
+OUTPUT of run 37 of at most 100:
+```
+copy fidelity: diag mean / offdiag abs mean of Un @ U^T OV_h E (using ref A for L2/L3H0.. and ref B for L3H1/5)
+L0H0: diag mean -0.00 (min -0.02), offdiag mean -0.000, offdiag abs mean 0.01, ratio -0.1
+L0H1: diag mean 0.01 (min -0.02), offdiag mean -0.001, offdiag abs mean 0.02, ratio 0.3
+L0H2: diag mean -0.00 (min -0.04), offdiag mean 0.000, offdiag abs mean 0.01, ratio -0.4
+L0H3: diag mean 0.00 (min -0.01), offdiag mean 0.000, offdiag abs mean 0.00, ratio 1.0
+L0H4: diag mean 0.00 (min -0.03), offdiag mean -0.001, offdiag abs mean 0.02, ratio 0.2
+L0H5: diag mean -0.01 (min -0.08), offdiag mean 0.001, offdiag abs mean 0.02, ratio -0.8
+L1H0: diag mean 0.01 (min -0.11), offdiag mean -0.001, offdiag abs mean 0.04, ratio 0.3
+L1H1: diag mean -0.01 (min -0.08), offdiag mean -0.000, offdiag abs mean 0.03, ratio -0.2
+L1H2: diag mean -0.03 (min -0.14), offdiag mean 0.002, offdiag abs mean 0.04, ratio -0.7
+L1H3: diag mean -0.01 (min -0.07), offdiag mean 0.000, offdiag abs mean 0.03, ratio -0.3
+L1H4: diag mean -0.01 (min -0.11), offdiag mean -0.000, offdiag abs mean 0.03, ratio -0.2
+L1H5: diag mean 0.00 (min -0.08), offdiag mean -0.000, offdiag abs mean 0.03, ratio 0.2
+L2H0: diag mean -0.02 (min -0.10), offdiag mean 0.000, offdiag abs mean 0.04, ratio -0.4
+L2H1: diag mean 0.18 (min -0.01), offdiag mean -0.009, offdiag abs mean 0.05, ratio 3.3
+L2H2: diag mean -0.01 (min -0.08), offdiag mean 0.001, offdiag abs mean 0.03, ratio -0.2
+L2H3: diag mean -0.03 (min -0.12), offdiag mean 0.001, offdiag abs mean 0.04, ratio -0.7
+L2H4: diag mean 0.02 (min -0.12), offdiag mean -0.001, offdiag abs mean 0.04, ratio 0.4
+L2H5: diag mean 0.01 (min -0.06), offdiag mean -0.000, offdiag abs mean 0.05, ratio 0.3
+L3H0: diag mean 0.20 (min -0.04), offdiag mean -0.009, offdiag abs mean 0.08, ratio 2.7
+L3H1: diag mean 0.46 (min 0.08), offdiag mean -0.020, offdiag abs mean 0.14, ratio 3.2
+L3H2: diag mean -0.12 (min -0.30), offdiag mean 0.004, offdiag abs mean 0.08, ratio -1.5
+L3H3: diag mean -0.02 (min -0.34), offdiag mean 0.002, offdiag abs mean 0.09, ratio -0.2
+L3H4: diag mean -0.02 (min -0.32), offdiag mean 0.003, offdiag abs mean 0.08, ratio -0.3
+L3H5: diag mean 0.52 (min 0.03), offdiag mean -0.025, offdiag abs mean 0.14, ratio 3.7
+QK blocks: diag-mean of E^T QK I5 (cur token i matches key's prev token = induction), of E^T QK E (same token), I5^T QK I5
+L1H0: E-I5 -0.015/0.015 | E-E -0.032/0.011 | I5-I5 -0.007/0.025 | E-I1 0.001/0.014
+L1H1: E-I5 0.032/0.039 | E-E -0.212/0.040 | I5-I5 -0.027/0.051 | E-I1 0.013/0.023
+L1H2: E-I5 -0.012/0.023 | E-E -0.120/0.025 | I5-I5 0.006/0.035 | E-I1 -0.000/0.016
+L1H3: E-I5 0.019/0.025 | E-E -0.148/0.025 | I5-I5 0.015/0.037 | E-I1 -0.006/0.017
+L1H4: E-I5 0.012/0.028 | E-E -0.139/0.028 | I5-I5 0.054/0.039 | E-I1 0.009/0.017
+L1H5: E-I5 0.033/0.037 | E-E -0.180/0.037 | I5-I5 -0.016/0.051 | E-I1 0.011/0.022
+L2H0: E-I5 -0.012/0.038 | E-E -0.055/0.033 | I5-I5 -0.034/0.046 | E-I1 0.003/0.034
+L2H1: E-I5 0.233/0.054 | E-E -0.045/0.037 | I5-I5 0.201/0.051 | E-I1 -0.021/0.042
+L2H2: E-I5 -0.171/0.071 | E-E -0.144/0.055 | I5-I5 0.370/0.086 | E-I1 -0.083/0.049
+L2H3: E-I5 -0.018/0.039 | E-E -0.043/0.034 | I5-I5 -0.041/0.041 | E-I1 0.006/0.031
+L2H4: E-I5 -0.012/0.040 | E-E -0.056/0.034 | I5-I5 -0.071/0.051 | E-I1 -0.021/0.032
+L2H5: E-I5 0.022/0.027 | E-E -0.014/0.026 | I5-I5 -0.021/0.031 | E-I1 -0.008/0.023
+L3H0: E-I5 0.069/0.043 | E-E 0.002/0.038 | I5-I5 0.065/0.038 | E-I1 -0.013/0.038
+L3H1: E-I5 0.164/0.040 | E-E -0.016/0.030 | I5-I5 0.127/0.035 | E-I1 0.027/0.029
+L3H2: E-I5 -0.006/0.036 | E-E 0.022/0.033 | I5-I5 0.021/0.038 | E-I1 -0.009/0.033
+L3H3: E-I5 0.007/0.016 | E-E -0.004/0.018 | I5-I5 -0.011/0.014 | E-I1 0.007/0.017
+L3H4: E-I5 0.017/0.029 | E-E -0.004/0.028 | I5-I5 -0.016/0.025 | E-I1 -0.008/0.028
+L3H5: E-I5 0.233/0.055 | E-E 0.090/0.032 | I5-I5 0.414/0.063 | E-I1 -0.040/0.046
+
+```

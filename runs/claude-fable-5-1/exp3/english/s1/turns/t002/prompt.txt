@@ -1,0 +1,86 @@
+OUTPUT of run 1 of at most 100:
+```
+W_fc.0 (1536, 384) fro=46.249 mean=-0.0012 std=0.0602
+W_fc.1 (1536, 384) fro=79.127 mean=-0.0004 std=0.1030
+W_fc.2 (1536, 384) fro=78.967 mean=-0.0003 std=0.1028
+W_fc.3 (1536, 384) fro=77.776 mean=-0.0001 std=0.1013
+W_k.0 (384, 384) fro=30.391 mean=-0.0001 std=0.0791
+W_k.1 (384, 384) fro=29.251 mean=0.0000 std=0.0762
+W_k.2 (384, 384) fro=37.769 mean=0.0000 std=0.0984
+W_k.3 (384, 384) fro=32.209 mean=-0.0001 std=0.0839
+W_o.0 (384, 384) fro=16.371 mean=-0.0001 std=0.0426
+W_o.1 (384, 384) fro=25.923 mean=-0.0000 std=0.0675
+W_o.2 (384, 384) fro=32.840 mean=0.0000 std=0.0855
+W_o.3 (384, 384) fro=40.455 mean=0.0001 std=0.1054
+W_proj.0 (384, 1536) fro=39.308 mean=-0.0001 std=0.0512
+W_proj.1 (384, 1536) fro=75.710 mean=0.0000 std=0.0986
+W_proj.2 (384, 1536) fro=76.831 mean=-0.0001 std=0.1000
+W_proj.3 (384, 1536) fro=82.395 mean=0.0002 std=0.1073
+W_q.0 (384, 384) fro=32.291 mean=0.0003 std=0.0841
+W_q.1 (384, 384) fro=32.313 mean=-0.0000 std=0.0841
+W_q.2 (384, 384) fro=39.346 mean=0.0000 std=0.1025
+W_q.3 (384, 384) fro=32.948 mean=-0.0000 std=0.0858
+W_v.0 (384, 384) fro=14.836 mean=0.0001 std=0.0386
+W_v.1 (384, 384) fro=27.353 mean=-0.0000 std=0.0712
+W_v.2 (384, 384) fro=33.305 mean=0.0001 std=0.0867
+W_v.3 (384, 384) fro=39.794 mean=0.0001 std=0.1036
+ln1_b.0 (384,) fro=0.563 mean=0.0008 std=0.0287
+ln1_b.1 (384,) fro=3.277 mean=-0.0050 std=0.1672
+ln1_b.2 (384,) fro=2.989 mean=-0.0010 std=0.1525
+ln1_b.3 (384,) fro=1.680 mean=0.0121 std=0.0849
+ln1_w.0 (384,) fro=6.705 mean=0.2403 std=0.2436
+ln1_w.1 (384,) fro=9.187 mean=0.4575 std=0.1022
+ln1_w.2 (384,) fro=13.897 mean=0.7052 std=0.0749
+ln1_w.3 (384,) fro=14.825 mean=0.7546 std=0.0542
+ln2_b.0 (384,) fro=1.339 mean=0.0022 std=0.0683
+ln2_b.1 (384,) fro=2.673 mean=0.0005 std=0.1364
+ln2_b.2 (384,) fro=3.013 mean=0.0050 std=0.1537
+ln2_b.3 (384,) fro=2.502 mean=0.0043 std=0.1276
+ln2_w.0 (384,) fro=16.965 mean=0.8006 std=0.3295
+ln2_w.1 (384,) fro=20.809 mean=1.0429 std=0.2003
+ln2_w.2 (384,) fro=25.833 mean=1.3123 std=0.1255
+ln2_w.3 (384,) fro=25.089 mean=1.2778 std=0.0807
+
+ln1_w 0 mean 0.240 std 0.244 min -0.001 max 1.034
+ln1_b 0 mean 0.001 std 0.029 min -0.096 max 0.091
+ln2_w 0 mean 0.801 std 0.330 min 0.004 max 1.507
+ln2_b 0 mean 0.002 std 0.068 min -0.499 max 0.333
+ln1_w 1 mean 0.458 std 0.102 min 0.136 max 1.124
+ln1_b 1 mean -0.005 std 0.167 min -1.471 max 1.154
+ln2_w 1 mean 1.043 std 0.200 min -0.002 max 1.486
+ln2_b 1 mean 0.001 std 0.136 min -0.360 max 0.369
+ln1_w 2 mean 0.705 std 0.075 min 0.208 max 1.014
+ln1_b 2 mean -0.001 std 0.153 min -1.382 max 1.053
+ln2_w 2 mean 1.312 std 0.126 min 0.001 max 1.465
+ln2_b 2 mean 0.005 std 0.154 min -0.376 max 0.389
+ln1_w 3 mean 0.755 std 0.054 min 0.294 max 0.870
+ln1_b 3 mean 0.012 std 0.085 min -0.607 max 0.650
+ln2_w 3 mean 1.278 std 0.081 min 0.436 max 1.431
+ln2_b 3 mean 0.004 std 0.128 min -0.673 max 0.307
+
+L0H0 |q|=3.31 |k|=4.18 |v|=6.04 |o|=6.67 QK top sv: [0.314 0.112 0.087 0.055] sum=1.64 asym/sym=0.95  OV top sv: [10.252  5.603  3.475] sum=35.10 OV eig real-sum/abs-sum=-0.03
+L0H1 |q|=3.09 |k|=3.66 |v|=5.38 |o|=6.02 QK top sv: [0.137 0.096 0.056 0.043] sum=1.32 asym/sym=0.89  OV top sv: [7.662 5.172 2.582] sum=28.43 OV eig real-sum/abs-sum=-0.14
+L0H2 |q|=30.82 |k|=28.30 |v|=7.76 |o|=8.92 QK top sv: [7.485 7.16  6.948 6.793] sum=107.20 asym/sym=1.03  OV top sv: [4.001 3.853 3.743] sum=67.30 OV eig real-sum/abs-sum=-0.38
+L0H3 |q|=6.82 |k|=7.24 |v|=5.43 |o|=5.03 QK top sv: [0.821 0.749 0.402 0.331] sum=5.91 asym/sym=0.85  OV top sv: [4.305 4.046 2.493] sum=25.10 OV eig real-sum/abs-sum=-0.48
+L0H4 |q|=3.97 |k|=5.00 |v|=5.21 |o|=5.59 QK top sv: [0.753 0.255 0.135 0.07 ] sum=2.35 asym/sym=0.85  OV top sv: [4.879 3.236 2.548] sum=25.37 OV eig real-sum/abs-sum=-0.24
+L0H5 |q|=3.19 |k|=3.80 |v|=6.14 |o|=7.16 QK top sv: [0.274 0.068 0.049 0.041] sum=1.43 asym/sym=0.94  OV top sv: [10.314  5.468  3.148] sum=37.84 OV eig real-sum/abs-sum=-0.01
+L1H0 |q|=10.72 |k|=9.83 |v|=11.16 |o|=9.98 QK top sv: [1.577 1.462 1.035 0.877] sum=12.27 asym/sym=0.92  OV top sv: [8.099 7.58  6.398] sum=106.15 OV eig real-sum/abs-sum=-0.71
+L1H1 |q|=13.29 |k|=12.07 |v|=11.72 |o|=11.30 QK top sv: [2.456 2.132 1.344 1.193] sum=18.49 asym/sym=0.90  OV top sv: [6.583 6.009 5.739] sum=127.80 OV eig real-sum/abs-sum=-0.80
+L1H2 |q|=14.48 |k|=13.09 |v|=10.67 |o|=10.27 QK top sv: [2.923 2.292 1.508 1.402] sum=21.86 asym/sym=0.90  OV top sv: [6.135 5.788 5.252] sum=105.92 OV eig real-sum/abs-sum=-0.79
+L1H3 |q|=13.36 |k|=12.15 |v|=10.90 |o|=9.93 QK top sv: [2.638 2.173 1.454 1.142] sum=18.65 asym/sym=0.91  OV top sv: [7.767 6.864 6.527] sum=103.86 OV eig real-sum/abs-sum=-0.80
+L1H4 |q|=13.52 |k|=12.13 |v|=11.15 |o|=10.79 QK top sv: [2.87  2.178 1.43  1.085] sum=18.81 asym/sym=0.92  OV top sv: [6.498 6.253 5.897] sum=116.54 OV eig real-sum/abs-sum=-0.86
+L1H5 |q|=13.49 |k|=12.13 |v|=11.38 |o|=11.14 QK top sv: [2.618 2.293 1.294 1.053] sum=18.30 asym/sym=0.94  OV top sv: [6.208 6.019 5.803] sum=122.85 OV eig real-sum/abs-sum=-0.89
+L2H0 |q|=16.82 |k|=16.21 |v|=13.11 |o|=12.94 QK top sv: [1.457 1.249 1.141 1.088] sum=32.66 asym/sym=1.01  OV top sv: [4.898 4.628 4.553] sum=167.72 OV eig real-sum/abs-sum=-0.87
+L2H1 |q|=15.96 |k|=15.29 |v|=13.77 |o|=13.53 QK top sv: [1.155 0.893 0.881 0.867] sum=29.71 asym/sym=0.98  OV top sv: [5.468 5.157 4.968] sum=184.60 OV eig real-sum/abs-sum=-0.80
+L2H2 |q|=13.97 |k|=13.24 |v|=14.57 |o|=14.24 QK top sv: [1.11  0.945 0.773 0.625] sum=22.17 asym/sym=0.99  OV top sv: [7.863 7.18  6.901] sum=204.85 OV eig real-sum/abs-sum=-0.73
+L2H3 |q|=16.12 |k|=15.55 |v|=13.50 |o|=13.39 QK top sv: [1.066 0.993 0.907 0.877] sum=29.47 asym/sym=1.00  OV top sv: [6.18  5.8   5.539] sum=178.89 OV eig real-sum/abs-sum=-0.82
+L2H4 |q|=16.88 |k|=16.19 |v|=13.24 |o|=13.14 QK top sv: [1.188 1.105 1.077 1.014] sum=32.44 asym/sym=1.01  OV top sv: [5.07  4.774 4.66 ] sum=171.83 OV eig real-sum/abs-sum=-0.81
+L2H5 |q|=16.45 |k|=15.84 |v|=13.34 |o|=13.16 QK top sv: [1.201 1.063 0.969 0.943] sum=30.94 asym/sym=1.01  OV top sv: [4.84  4.693 4.49 ] sum=173.60 OV eig real-sum/abs-sum=-0.83
+L3H0 |q|=15.75 |k|=15.26 |v|=14.87 |o|=14.87 QK top sv: [0.79  0.738 0.734 0.707] sum=29.73 asym/sym=0.95  OV top sv: [8.384 7.583 6.42 ] sum=215.45 OV eig real-sum/abs-sum=-0.86
+L3H1 |q|=14.22 |k|=14.20 |v|=17.88 |o|=18.33 QK top sv: [0.571 0.554 0.552 0.536] sum=25.05 asym/sym=0.81  OV top sv: [13.854 13.612 13.378] sum=323.53 OV eig real-sum/abs-sum=-0.78
+L3H2 |q|=12.74 |k|=12.45 |v|=15.52 |o|=15.59 QK top sv: [0.808 0.724 0.627 0.583] sum=18.95 asym/sym=1.00  OV top sv: [11.891  9.927  8.462] sum=237.41 OV eig real-sum/abs-sum=-0.66
+L3H3 |q|=13.28 |k|=13.06 |v|=15.73 |o|=16.12 QK top sv: [0.856 0.707 0.587 0.539] sum=20.65 asym/sym=1.01  OV top sv: [12.434 10.397  9.009] sum=248.64 OV eig real-sum/abs-sum=-0.69
+L3H4 |q|=14.36 |k|=13.87 |v|=15.17 |o|=15.30 QK top sv: [0.919 0.738 0.695 0.661] sum=24.20 asym/sym=1.00  OV top sv: [9.526 8.963 7.011] sum=226.72 OV eig real-sum/abs-sum=-0.65
+L3H5 |q|=9.51 |k|=9.23 |v|=17.99 |o|=18.51 QK top sv: [0.483 0.419 0.374 0.349] sum=10.47 asym/sym=0.98  OV top sv: [21.979 19.201 17.421] sum=329.58 OV eig real-sum/abs-sum=-0.68
+
+```

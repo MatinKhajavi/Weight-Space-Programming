@@ -1,0 +1,26 @@
+OUTPUT of run 10 of at most 100:
+```
+W_fc.0 total sq norm 3073.1096
+L0H0 out top-2 dirs: frac of W_fc.0 = 0.005 (chance 0.005, ratio 1.0x) | L0H0 out top-4 dirs: frac of W_fc.0 = 0.010 (chance 0.010, ratio 0.9x) | L0H0 out top-8 dirs: frac of W_fc.0 = 0.015 (chance 0.021, ratio 0.7x) | L0H0 out top-16 dirs: frac of W_fc.0 = 0.026 (chance 0.042, ratio 0.6x) | L0H0 out top-32 dirs: frac of W_fc.0 = 0.046 (chance 0.083, ratio 0.6x) | 
+L0H1 out top-2 dirs: frac of W_fc.0 = 0.006 (chance 0.005, ratio 1.1x) | L0H1 out top-4 dirs: frac of W_fc.0 = 0.016 (chance 0.010, ratio 1.5x) | L0H1 out top-8 dirs: frac of W_fc.0 = 0.027 (chance 0.021, ratio 1.3x) | L0H1 out top-16 dirs: frac of W_fc.0 = 0.047 (chance 0.042, ratio 1.1x) | L0H1 out top-32 dirs: frac of W_fc.0 = 0.066 (chance 0.083, ratio 0.8x) | 
+L0H2 out top-2 dirs: frac of W_fc.0 = 0.005 (chance 0.005, ratio 0.9x) | L0H2 out top-4 dirs: frac of W_fc.0 = 0.014 (chance 0.010, ratio 1.3x) | L0H2 out top-8 dirs: frac of W_fc.0 = 0.019 (chance 0.021, ratio 0.9x) | L0H2 out top-16 dirs: frac of W_fc.0 = 0.027 (chance 0.042, ratio 0.6x) | L0H2 out top-32 dirs: frac of W_fc.0 = 0.047 (chance 0.083, ratio 0.6x) | 
+L0H3 out top-2 dirs: frac of W_fc.0 = 0.035 (chance 0.005, ratio 6.7x) | L0H3 out top-4 dirs: frac of W_fc.0 = 0.060 (chance 0.010, ratio 5.8x) | L0H3 out top-8 dirs: frac of W_fc.0 = 0.109 (chance 0.021, ratio 5.2x) | L0H3 out top-16 dirs: frac of W_fc.0 = 0.213 (chance 0.042, ratio 5.1x) | L0H3 out top-32 dirs: frac of W_fc.0 = 0.249 (chance 0.083, ratio 3.0x) | 
+L0H4 out top-2 dirs: frac of W_fc.0 = 0.007 (chance 0.005, ratio 1.3x) | L0H4 out top-4 dirs: frac of W_fc.0 = 0.010 (chance 0.010, ratio 0.9x) | L0H4 out top-8 dirs: frac of W_fc.0 = 0.014 (chance 0.021, ratio 0.7x) | L0H4 out top-16 dirs: frac of W_fc.0 = 0.033 (chance 0.042, ratio 0.8x) | L0H4 out top-32 dirs: frac of W_fc.0 = 0.047 (chance 0.083, ratio 0.6x) | 
+L0H5 out top-2 dirs: frac of W_fc.0 = 0.001 (chance 0.005, ratio 0.1x) | L0H5 out top-4 dirs: frac of W_fc.0 = 0.019 (chance 0.010, ratio 1.8x) | L0H5 out top-8 dirs: frac of W_fc.0 = 0.062 (chance 0.021, ratio 3.0x) | L0H5 out top-16 dirs: frac of W_fc.0 = 0.107 (chance 0.042, ratio 2.6x) | L0H5 out top-32 dirs: frac of W_fc.0 = 0.157 (chance 0.083, ratio 1.9x) | 
+pos subspace k=8: frac 0.006 chance 0.021
+pos subspace k=16: frac 0.013 chance 0.042
+pos subspace k=24: frac 0.021 chance 0.062
+pos subspace k=32: frac 0.035 chance 0.083
+dim 21: W_fc.0 column sq norm frac 0.0000 (chance 0.0026), ln2_w=0.11, ln2_b=-0.07
+dim 39: W_fc.0 column sq norm frac 0.0006 (chance 0.0026), ln2_w=0.55, ln2_b=-0.20
+dim 58: W_fc.0 column sq norm frac 0.0001 (chance 0.0026), ln2_w=0.26, ln2_b=0.46
+dim 99: W_fc.0 column sq norm frac 0.0001 (chance 0.0026), ln2_w=0.19, ln2_b=-0.62
+dim 184: W_fc.0 column sq norm frac 0.0005 (chance 0.0026), ln2_w=0.68, ln2_b=-0.16
+dim 383: W_fc.0 column sq norm frac 0.0011 (chance 0.0026), ln2_w=0.76, ln2_b=-0.17
+dim 163: W_fc.0 column sq norm frac 0.0000 (chance 0.0026), ln2_w=0.13, ln2_b=-0.04
+dim 153: W_fc.0 column sq norm frac 0.0002 (chance 0.0026), ln2_w=0.34, ln2_b=0.21
+W_fc.0 top read dims: [168 150 357  57 123 161 142  67 379 335 103  76  66  30 363 361 297 369 253 212 364  84 176 338 133 376 102 329  31 221]
+values: [6.817 6.565 6.206 6.201 6.115 6.083 5.892 5.858 5.811 5.716 5.659 5.479 5.206 5.138 5.13  5.102 5.1   5.018 4.985 4.966 4.965 4.893 4.888 4.885 4.863 4.736 4.713 4.677 4.656 4.644]
+ln2_w.0 top dims: [150 168  57 357 161 335 123 379 142  67 103 369  76 212  84 364 363  66  31 361 253  55 194 338 176  30 102 297 329 133]
+
+```

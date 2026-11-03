@@ -1,0 +1,11 @@
+{
+ "true": "triangle",
+ "guess": "triangle",
+ "correct": true,
+ "status": "mapped",
+ "named": [
+  "triangle"
+ ],
+ "answer_line": "filled white upward\u2011pointing (apex up, horizontal base) equilateral triangles on a black background. the apex sits at the top centre (row 1, column 5\u20136, occasionally 4 or 7); the base is horizontal an",
+ "confidence": 65
+}

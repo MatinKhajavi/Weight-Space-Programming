@@ -1,0 +1,39 @@
+OUTPUT of run 6 of at most 100:
+```
+L0H0: QK S=[1.985 0.819 0.373 0.345]  q-dir top dims [317 184  39 239 180 349  99 228]  k-dir top dims [211 256  65 173 223 132   4  39]
+      OV S=[0.958 0.898 0.818 0.642] in-dir top dims [373 225 134 158   7  51  96 173] out-dir top dims [336  96 291 327 203 202 330  68] vals [ 0.194  0.158 -0.15   0.149 -0.14 ]
+L0H1: QK S=[1.202 0.336 0.168 0.094]  q-dir top dims [256 184 354 173   4  56  69 100]  k-dir top dims [100 349 317 235 271 258  69 368]
+      OV S=[3.38  2.023 0.345 0.18 ] in-dir top dims [184 180  99  39  56 317  69 256] out-dir top dims [ 39  58  99  21 184 153 336  63] vals [ 0.692 -0.51   0.358 -0.212  0.201]
+L0H2: QK S=[0.819 0.145 0.125 0.097]  q-dir top dims [256 173 211 184   4 228  65 124]  k-dir top dims [100 349 256 317  56 271 175 240]
+      OV S=[2.643 1.363 0.4   0.176] in-dir top dims [184 180  99 317  56  39  69 301] out-dir top dims [ 39  58  21  99 184 153 383 165] vals [-0.659  0.494  0.373 -0.355 -0.162]
+L0H3: QK S=[1.951 1.786 1.61  1.453]  q-dir top dims [354 162  65 223 256 180 300 211]  k-dir top dims [162 184 354  99  65 256 132 223]
+      OV S=[1.127 0.955 0.95  0.89 ] in-dir top dims [223  26 200  48 359 124 178 354] out-dir top dims [ 92  86 188  18 131 303 215 173] vals [-0.178  0.169 -0.163  0.16   0.158]
+L0H4: QK S=[0.637 0.174 0.15  0.103]  q-dir top dims [256 184 173 228  56  69  21 180]  k-dir top dims [100 260 258 160 175 271 240 317]
+      OV S=[1.454 0.724 0.213 0.141] in-dir top dims [184 180 256  56 100  69 317 162] out-dir top dims [ 39  58  99 184  21 153 336 350] vals [-0.696  0.511 -0.32  -0.227 -0.182]
+L0H5: QK S=[0.258 0.033 0.022 0.021]  q-dir top dims [184  39 211 317 239 180  99  65]  k-dir top dims [240 301 171 225 200 180  67  31]
+      OV S=[16.282  8.786  2.835  1.117] in-dir top dims [162 211 223  65 354 173 132 300] out-dir top dims [ 21  99  58  39 184 153 303   6] vals [-0.864 -0.358  0.237 -0.232  0.024]
+
+cosines between heads' q-dir / k-dir / ov-in / ov-out (top singular):
+ H0-H1: q -0.14 k +0.05 ovin +0.07 ovout +0.03
+ H0-H2: q +0.07 k -0.26 ovin -0.06 ovout -0.03
+ H0-H3: q -0.63 k -0.53 ovin +0.31 ovout -0.02
+ H0-H4: q -0.09 k +0.30 ovin -0.10 ovout -0.04
+ H0-H5: q +0.91 k +0.04 ovin -0.07 ovout -0.02
+ H1-H2: q +0.89 k +0.81 ovin -0.94 ovout -0.98
+ H1-H3: q -0.14 k +0.05 ovin -0.08 ovout -0.07
+ H1-H4: q +0.91 k +0.69 ovin -0.84 ovout -0.92
+ H1-H5: q -0.07 k -0.32 ovin +0.09 ovout -0.22
+ H2-H3: q -0.45 k +0.30 ovin +0.08 ovout +0.07
+ H2-H4: q +0.87 k +0.60 ovin +0.71 ovout +0.83
+ H2-H5: q +0.18 k -0.53 ovin -0.21 ovout +0.07
+ H3-H4: q -0.18 k +0.06 ovin +0.08 ovout +0.06
+ H3-H5: q -0.66 k -0.11 ovin -0.04 ovout -0.00
+ H4-H5: q -0.06 k -0.37 ovin +0.34 ovout +0.55
+ H0: cos(qdir,ovin)=+0.06 cos(kdir,ovin)=-0.02 cos(qdir,kdir)=+0.49
+ H1: cos(qdir,ovin)=-0.42 cos(kdir,ovin)=+0.28 cos(qdir,kdir)=-0.41
+ H2: cos(qdir,ovin)=+0.10 cos(kdir,ovin)=-0.27 cos(qdir,kdir)=-0.54
+ H3: cos(qdir,ovin)=+0.02 cos(kdir,ovin)=-0.04 cos(qdir,kdir)=+0.66
+ H4: cos(qdir,ovin)=+0.66 cos(kdir,ovin)=-0.22 cos(qdir,kdir)=-0.17
+ H5: cos(qdir,ovin)=+0.60 cos(kdir,ovin)=+0.01 cos(qdir,kdir)=-0.14
+
+```

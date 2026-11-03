@@ -1,0 +1,17 @@
+OUTPUT of run 20 of at most 100:
+```
+Fcomp sv 20..40: [4.53 4.48 4.4  4.29 4.24 4.18 4.03 4.   3.63 3.49 2.94 2.88 2.71 2.65 2.54 2.52 2.46 2.39 2.36 2.3 ]
+dimE=28 thr=0.4 t=0.4: clusters 41 -> merged 30; centroid sv (count>0.3*max): 27; smallest cluster sizes [2, 2, 2, 2, 3, 3]
+dimE=28 thr=0.4 t=0.5: clusters 34 -> merged 30; centroid sv (count>0.3*max): 27; smallest cluster sizes [2, 2, 3, 3, 3, 5]
+dimE=28 thr=0.5 t=0.4: clusters 31 -> merged 28; centroid sv (count>0.3*max): 27; smallest cluster sizes [2, 2, 2, 2, 2, 2]
+dimE=28 thr=0.5 t=0.5: clusters 29 -> merged 28; centroid sv (count>0.3*max): 27; smallest cluster sizes [2, 2, 2, 3, 4, 4]
+dimE=32 thr=0.4 t=0.4: clusters 47 -> merged 30; centroid sv (count>0.3*max): 26; smallest cluster sizes [2, 2, 2, 2, 2, 2]
+dimE=32 thr=0.4 t=0.5: clusters 38 -> merged 31; centroid sv (count>0.3*max): 28; smallest cluster sizes [2, 2, 2, 3, 3, 4]
+dimE=32 thr=0.5 t=0.4: clusters 32 -> merged 29; centroid sv (count>0.3*max): 28; smallest cluster sizes [2, 2, 2, 2, 3, 3]
+dimE=32 thr=0.5 t=0.5: clusters 30 -> merged 29; centroid sv (count>0.3*max): 28; smallest cluster sizes [2, 3, 3, 4, 4, 4]
+dimE=36 thr=0.4 t=0.4: clusters 53 -> merged 35; centroid sv (count>0.3*max): 25; smallest cluster sizes [2, 2, 2, 2, 2, 2]
+dimE=36 thr=0.4 t=0.5: clusters 41 -> merged 34; centroid sv (count>0.3*max): 28; smallest cluster sizes [2, 2, 2, 2, 2, 3]
+dimE=36 thr=0.5 t=0.4: clusters 33 -> merged 29; centroid sv (count>0.3*max): 28; smallest cluster sizes [2, 2, 2, 2, 3, 4]
+dimE=36 thr=0.5 t=0.5: clusters 32 -> merged 30; centroid sv (count>0.3*max): 29; smallest cluster sizes [2, 2, 2, 3, 4, 4]
+
+```

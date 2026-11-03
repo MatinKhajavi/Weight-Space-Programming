@@ -1,0 +1,15 @@
+OUTPUT of run 17 of at most 100:
+```
+random rest dirs cos(x,Ssum x): mean 0.890 std 0.035 max 0.966
+sum-of-5-eigvecs dirs cos: mean 0.895 std 0.047
+pair stats (prev X, cur Y): #both+, #prev+ cur-, corr
+A->B (np.int64(13), np.int64(11), np.float64(-0.03945214249835088))
+B->A (np.int64(31), np.int64(4), np.float64(-0.039209926203310014))
+A->A (np.int64(33), np.int64(2), np.float64(0.05444140404562579))
+B->B (np.int64(20), np.int64(7), np.float64(0.13042251868776872))
+random pairs: mean [ 9.25  10.045 -0.005] std [4.49  5.77  0.081] max [26.    36.     0.173]
+eigvec pairs: mean [8.24  7.982 0.009] std [4.427 4.663 0.078] max [32.    25.     0.268]
+A->eig: mean [8.8   6.8   0.028] max [17.   14.    0.13] ; eig->A: mean [23.85   2.75   0.008] max [42.     8.     0.201]
+B->eig: mean [ 8.45   8.2   -0.007] max [17.    18.     0.137] ; eig->B: mean [16.6   7.1   0.02] max [28.    14.     0.202]
+
+```

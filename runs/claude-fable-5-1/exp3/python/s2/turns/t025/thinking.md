@@ -1,0 +1,4 @@
+The top direction for the L1 keys looks less dominant with the Tok basis, since the values don't show a clear rank-1 pattern. With the earlier T basis, the top component carried roughly half the variance and gave a clean rank-1 structure with high cosine similarity across heads. The Tok basis from the stacked readers may be mixing in other directions.
+
+I'm going back to the T basis to find t*, and I want to check whether it lines up with the MLP0 clusters there. T and Tok only overlap on 11 of 28 directions, and I'm not confident either basis is the true token subspace. So I'll try a different route: strip out the position-summary subspaces (P, H0o, H4o) from the stacked L1 keys and take the top singular vector of what remains. Then I'll check whether MLP0 neurons read that direction and whether it sits inside Tok or T.
+

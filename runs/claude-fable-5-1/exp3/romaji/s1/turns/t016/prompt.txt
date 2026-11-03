@@ -1,0 +1,42 @@
+OUTPUT of run 15 of at most 100:
+```
+overlap P,T: 0.13380544
+L0H1: S=[1.202 0.336 0.168 0.094]
+   comp0: q-dir in P=0.32 in T=0.05 | k-dir in P=0.09 in T=0.08
+   comp1: q-dir in P=0.75 in T=0.05 | k-dir in P=0.12 in T=0.45
+   comp2: q-dir in P=0.07 in T=0.12 | k-dir in P=0.16 in T=0.07
+   OV in-dir0 (sv 3.38): in P=0.43 in T=0.04
+   OV in-dir1 (sv 2.02): in P=0.82 in T=0.04
+   OV in-dir2 (sv 0.34): in P=0.21 in T=0.39
+L0H2: S=[0.819 0.145 0.125 0.097]
+   comp0: q-dir in P=0.60 in T=0.04 | k-dir in P=0.23 in T=0.20
+   comp1: q-dir in P=0.29 in T=0.14 | k-dir in P=0.40 in T=0.09
+   comp2: q-dir in P=0.09 in T=0.09 | k-dir in P=0.15 in T=0.13
+   OV in-dir0 (sv 2.64): in P=0.62 in T=0.04
+   OV in-dir1 (sv 1.36): in P=0.81 in T=0.04
+   OV in-dir2 (sv 0.40): in P=0.30 in T=0.28
+L0H4: S=[0.637 0.174 0.15  0.103]
+   comp0: q-dir in P=0.34 in T=0.08 | k-dir in P=0.20 in T=0.30
+   comp1: q-dir in P=0.22 in T=0.09 | k-dir in P=0.27 in T=0.13
+   comp2: q-dir in P=0.22 in T=0.11 | k-dir in P=0.29 in T=0.12
+   OV in-dir0 (sv 1.45): in P=0.40 in T=0.04
+   OV in-dir1 (sv 0.72): in P=0.79 in T=0.05
+   OV in-dir2 (sv 0.21): in P=0.15 in T=0.28
+L0H5: S=[0.258 0.033 0.022 0.021]
+   comp0: q-dir in P=0.61 in T=0.04 | k-dir in P=0.07 in T=0.59
+   comp1: q-dir in P=0.05 in T=0.10 | k-dir in P=0.08 in T=0.09
+   comp2: q-dir in P=0.11 in T=0.11 | k-dir in P=0.21 in T=0.11
+   OV in-dir0 (sv 16.28): in P=0.94 in T=0.05
+   OV in-dir1 (sv 8.79): in P=0.84 in T=0.05
+   OV in-dir2 (sv 2.84): in P=0.26 in T=0.09
+L0H0: S=[1.985 0.819 0.373 0.345]
+   comp0: q-dir in P=0.50 in T=0.14 | k-dir in P=0.84 in T=0.07
+   comp1: q-dir in P=0.43 in T=0.05 | k-dir in P=0.41 in T=0.42
+   comp2: q-dir in P=0.50 in T=0.23 | k-dir in P=0.41 in T=0.40
+   OV in-dir0 (sv 0.96): in P=0.02 in T=0.50
+   OV in-dir1 (sv 0.90): in P=0.03 in T=0.76
+   OV in-dir2 (sv 0.82): in P=0.03 in T=0.39
+k-dir cos H1-H2 H1-H4 H2-H4: 0.8057395 0.68644845 0.59656656
+k-dir cos with all-ones: [0.0008618582305083555, -0.010675652450824743, -0.02098955177524918]
+
+```

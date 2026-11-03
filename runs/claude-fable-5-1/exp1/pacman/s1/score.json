@@ -1,0 +1,11 @@
+{
+ "true": "pacman",
+ "guess": "pacman",
+ "correct": true,
+ "status": "mapped",
+ "named": [
+  "pacman"
+ ],
+ "answer_line": "a pac-man-style maze game (mini pac-man): fixed symmetric 8\u00d78 maze with internal walls, patrolling ghosts (channel 1), pellets/dots (channel 2).",
+ "confidence": 55
+}

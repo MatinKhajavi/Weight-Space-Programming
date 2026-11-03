@@ -1,0 +1,4 @@
+Every MLP3 neuron puts about 93% of its output into the 27-dimensional logit subspace, which confirms that subspace is the right one to look at. The neurons don't map cleanly onto single tokens, though; they write mixtures, so clustering them won't identify tokens. I'm considering whether ICA on the neuron outputs could separate the underlying logit directions instead.
+
+I'm weighing whether ICA on the neuron outputs could recover the unembedding directions, though the assumption that the mixing coefficients are independent or sparse looks shaky. A more concrete option is the OV circuit of the copy head L3H3, which should map token-identity directions onto the logit subspace. I want to check its spectrum restricted to L, and how much of its output lands there, and compare with the other L3 heads.
+

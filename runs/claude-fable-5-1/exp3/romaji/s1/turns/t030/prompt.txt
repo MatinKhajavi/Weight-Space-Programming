@@ -1,0 +1,12 @@
+OUTPUT of run 29 of at most 100:
+```
+layer 0 OV output frac in logit subspace L (chance 0.070): H0:0.070 H1:0.321 H2:0.303 H3:0.076 H4:0.311 H5:0.370
+layer 1 OV output frac in logit subspace L (chance 0.070): H0:0.056 H1:0.063 H2:0.066 H3:0.068 H4:0.059 H5:0.069
+layer 2 OV output frac in logit subspace L (chance 0.070): H0:0.070 H1:0.070 H2:0.066 H3:0.068 H4:0.072 H5:0.065
+layer 3 OV output frac in logit subspace L (chance 0.070): H0:0.119 H1:0.139 H2:0.122 H3:0.339 H4:0.176 H5:0.111
+MLP0 output frac in L: overall 0.117; neurons with >0.5 in L: 0.000
+MLP1 output frac in L: overall 0.078; neurons with >0.5 in L: 0.000
+MLP2 output frac in L: overall 0.122; neurons with >0.5 in L: 0.000
+MLP3 output frac in L: overall 0.935; neurons with >0.5 in L: 1.000
+
+```

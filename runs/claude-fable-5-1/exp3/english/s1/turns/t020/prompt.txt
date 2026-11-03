@@ -1,0 +1,34 @@
+OUTPUT of run 19 of at most 100:
+```
+L1H0 | Mout0: en 0.18 realfrac -0.78 sym/asym 1.16 symeig[+0.12,-0.19]
+L1H1 | Mout0: en 0.20 realfrac -0.80 sym/asym 1.17 symeig[+0.19,-0.27]
+L1H2 | Mout0: en 0.17 realfrac -0.82 sym/asym 1.22 symeig[+0.24,-0.26]
+L1H3 | Mout0: en 0.16 realfrac -0.73 sym/asym 1.18 symeig[+0.22,-0.23]
+L1H4 | Mout0: en 0.16 realfrac -0.81 sym/asym 1.19 symeig[+0.23,-0.24]
+L1H5 | Mout0: en 0.15 realfrac -0.71 sym/asym 1.15 symeig[+0.19,-0.21]
+L2H0 | Mout0: en 0.05 realfrac -0.04 sym/asym 0.98 symeig[+0.12,-0.13] | Mout1: en 0.03 realfrac -0.15 sym/asym 1.03 symeig[+0.09,-0.10] | A1out: en 0.04 realfrac +0.35 sym/asym 1.16 symeig[+0.14,-0.08]
+L2H1 | Mout0: en 0.05 realfrac +0.01 sym/asym 1.00 symeig[+0.09,-0.10] | Mout1: en 0.04 realfrac -0.15 sym/asym 1.09 symeig[+0.11,-0.09] | A1out: en 0.05 realfrac +0.59 sym/asym 1.25 symeig[+0.12,-0.05]
+L2H2 | Mout0: en 0.04 realfrac -0.21 sym/asym 1.03 symeig[+0.09,-0.09] | Mout1: en 0.03 realfrac -0.32 sym/asym 1.11 symeig[+0.07,-0.08] | A1out: en 0.03 realfrac -0.20 sym/asym 1.15 symeig[+0.07,-0.07]
+L2H3 | Mout0: en 0.04 realfrac -0.24 sym/asym 1.04 symeig[+0.09,-0.11] | Mout1: en 0.04 realfrac -0.29 sym/asym 1.09 symeig[+0.08,-0.13] | A1out: en 0.04 realfrac +0.20 sym/asym 1.07 symeig[+0.10,-0.08]
+L2H4 | Mout0: en 0.04 realfrac -0.21 sym/asym 1.05 symeig[+0.09,-0.14] | Mout1: en 0.04 realfrac -0.15 sym/asym 1.00 symeig[+0.10,-0.12] | A1out: en 0.04 realfrac +0.18 sym/asym 1.06 symeig[+0.10,-0.08]
+L2H5 | Mout0: en 0.04 realfrac -0.25 sym/asym 1.02 symeig[+0.10,-0.13] | Mout1: en 0.04 realfrac -0.17 sym/asym 1.03 symeig[+0.08,-0.10] | A1out: en 0.04 realfrac +0.20 sym/asym 1.12 symeig[+0.10,-0.09]
+L3H0 | Mout0: en 0.04 realfrac +0.33 sym/asym 1.09 symeig[+0.09,-0.07] | Mout1: en 0.02 realfrac +0.16 sym/asym 1.03 symeig[+0.08,-0.06] | Mout2: en 0.02 realfrac +0.14 sym/asym 0.98 symeig[+0.07,-0.05] | A1out: en 0.04 realfrac +0.63 sym/asym 1.23 symeig[+0.11,-0.05] | A2out: en 0.03 realfrac +0.65 sym/asym 1.26 symeig[+0.11,-0.04]
+L3H1 | Mout0: en 0.05 realfrac +0.37 sym/asym 1.10 symeig[+0.09,-0.09] | Mout1: en 0.01 realfrac +0.04 sym/asym 0.98 symeig[+0.04,-0.03] | Mout2: en 0.00 realfrac +0.21 sym/asym 1.01 symeig[+0.02,-0.02] | A1out: en 0.08 realfrac +0.95 sym/asym 2.20 symeig[+0.14,-0.01] | A2out: en 0.08 realfrac +0.98 sym/asym 2.82 symeig[+0.15,-0.01]
+L3H2 | Mout0: en 0.03 realfrac +0.10 sym/asym 1.03 symeig[+0.06,-0.05] | Mout1: en 0.02 realfrac -0.07 sym/asym 0.99 symeig[+0.04,-0.04] | Mout2: en 0.03 realfrac +0.00 sym/asym 0.96 symeig[+0.08,-0.08] | A1out: en 0.02 realfrac +0.05 sym/asym 1.05 symeig[+0.05,-0.05] | A2out: en 0.04 realfrac +0.22 sym/asym 1.10 symeig[+0.11,-0.06]
+L3H3 | Mout0: en 0.02 realfrac -0.01 sym/asym 1.01 symeig[+0.07,-0.05] | Mout1: en 0.02 realfrac -0.17 sym/asym 1.01 symeig[+0.04,-0.04] | Mout2: en 0.02 realfrac -0.13 sym/asym 1.02 symeig[+0.05,-0.07] | A1out: en 0.02 realfrac +0.07 sym/asym 1.02 symeig[+0.05,-0.04] | A2out: en 0.04 realfrac +0.22 sym/asym 1.03 symeig[+0.08,-0.06]
+L3H4 | Mout0: en 0.02 realfrac +0.11 sym/asym 1.05 symeig[+0.07,-0.05] | Mout1: en 0.02 realfrac -0.00 sym/asym 1.03 symeig[+0.07,-0.06] | Mout2: en 0.02 realfrac -0.01 sym/asym 1.03 symeig[+0.09,-0.06] | A1out: en 0.02 realfrac +0.23 sym/asym 1.06 symeig[+0.06,-0.05] | A2out: en 0.04 realfrac +0.27 sym/asym 1.05 symeig[+0.09,-0.08]
+L3H5 | Mout0: en 0.03 realfrac +0.05 sym/asym 1.09 symeig[+0.04,-0.03] | Mout1: en 0.02 realfrac -0.03 sym/asym 1.04 symeig[+0.04,-0.03] | Mout2: en 0.04 realfrac +0.24 sym/asym 1.05 symeig[+0.06,-0.06] | A1out: en 0.02 realfrac +0.09 sym/asym 1.11 symeig[+0.04,-0.03] | A2out: en 0.04 realfrac +0.17 sym/asym 1.14 symeig[+0.05,-0.04]
+L2H0 V energy: {'Mout0': 0.21, 'Mout1': 0.24, 'Mout2': 0.17, 'A1out': 0.17, 'A2out': 0.14}
+L2H1 V energy: {'Mout0': 0.2, 'Mout1': 0.31, 'Mout2': 0.17, 'A1out': 0.16, 'A2out': 0.16}
+L2H2 V energy: {'Mout0': 0.2, 'Mout1': 0.33, 'Mout2': 0.17, 'A1out': 0.15, 'A2out': 0.16}
+L2H3 V energy: {'Mout0': 0.2, 'Mout1': 0.36, 'Mout2': 0.17, 'A1out': 0.15, 'A2out': 0.16}
+L2H4 V energy: {'Mout0': 0.21, 'Mout1': 0.26, 'Mout2': 0.16, 'A1out': 0.16, 'A2out': 0.14}
+L2H5 V energy: {'Mout0': 0.2, 'Mout1': 0.24, 'Mout2': 0.17, 'A1out': 0.17, 'A2out': 0.15}
+L3H0 V energy: {'Mout0': 0.17, 'Mout1': 0.18, 'Mout2': 0.28, 'A1out': 0.15, 'A2out': 0.16}
+L3H1 V energy: {'Mout0': 0.4, 'Mout1': 0.1, 'Mout2': 0.09, 'A1out': 0.1, 'A2out': 0.08}
+L3H2 V energy: {'Mout0': 0.16, 'Mout1': 0.18, 'Mout2': 0.28, 'A1out': 0.13, 'A2out': 0.15}
+L3H3 V energy: {'Mout0': 0.15, 'Mout1': 0.18, 'Mout2': 0.35, 'A1out': 0.13, 'A2out': 0.15}
+L3H4 V energy: {'Mout0': 0.16, 'Mout1': 0.18, 'Mout2': 0.25, 'A1out': 0.14, 'A2out': 0.16}
+L3H5 V energy: {'Mout0': 0.13, 'Mout1': 0.19, 'Mout2': 0.45, 'A1out': 0.14, 'A2out': 0.16}
+
+```

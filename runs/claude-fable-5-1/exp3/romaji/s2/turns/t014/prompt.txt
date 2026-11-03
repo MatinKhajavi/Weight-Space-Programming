@@ -1,0 +1,22 @@
+OUTPUT of run 13 of at most 100:
+```
+L1H0: direct T-T: asym=-0.90 top=[ 0.05  0.01  0.01 -0.01] bot=[-0.72 -0.64 -0.55] | ind via L0H3: asym=+0.29 top=[0.15 0.15 0.1  0.1 ] bot=[-0.07 -0.04 -0.04] | via L0H0: asym=-0.01
+L1H1: direct T-T: asym=-0.87 top=[0.02 0.02 0.02 0.  ] bot=[-0.68 -0.55 -0.41] | ind via L0H3: asym=+0.27 top=[0.22 0.2  0.08 0.08] bot=[-0.09 -0.09 -0.04] | via L0H0: asym=-0.22
+L1H2: direct T-T: asym=-0.78 top=[ 0.03  0.02 -0.   -0.  ] bot=[-0.46 -0.38 -0.38] | ind via L0H3: asym=+0.30 top=[0.19 0.12 0.06 0.06] bot=[-0.15 -0.07 -0.03] | via L0H0: asym=-0.17
+L1H3: direct T-T: asym=-0.80 top=[ 0.03  0.03  0.02 -0.01] bot=[-0.46 -0.39 -0.23] | ind via L0H3: asym=+0.11 top=[0.11 0.11 0.09 0.06] bot=[-0.12 -0.1  -0.04] | via L0H0: asym=+0.07
+L1H4: direct T-T: asym=-0.79 top=[ 0.01  0.01  0.01 -0.01] bot=[-0.44 -0.26 -0.26] | ind via L0H3: asym=+0.08 top=[0.09 0.06 0.06 0.04] bot=[-0.08 -0.08 -0.08] | via L0H0: asym=+0.10
+L1H5: direct T-T: asym=-0.91 top=[ 0.01  0.01 -0.01 -0.01] bot=[-0.81 -0.67 -0.42] | ind via L0H3: asym=+0.12 top=[0.13 0.13 0.07 0.07] bot=[-0.21 -0.05 -0.05] | via L0H0: asym=-0.11
+L2H0: direct T-T: asym=-0.47 top=[0.07 0.06 0.06 0.02] bot=[-0.26 -0.16 -0.13] | ind via L0H3: asym=+0.11 top=[0.07 0.05 0.05 0.03] bot=[-0.04 -0.04 -0.03] | via L0H0: asym=+0.19
+L2H1: direct T-T: asym=-0.25 top=[0.25 0.09 0.09 0.05] bot=[-0.32 -0.17 -0.17] | ind via L0H3: asym=-0.01 top=[0.1  0.09 0.04 0.04] bot=[-0.09 -0.09 -0.07] | via L0H0: asym=-0.00
+L2H2: direct T-T: asym=-0.45 top=[0.06 0.06 0.05 0.03] bot=[-0.2  -0.18 -0.18] | ind via L0H3: asym=+0.19 top=[0.07 0.06 0.06 0.05] bot=[-0.05 -0.05 -0.04] | via L0H0: asym=-0.00
+L2H3: direct T-T: asym=-0.20 top=[0.09 0.09 0.05 0.05] bot=[-0.19 -0.19 -0.09] | ind via L0H3: asym=+0.14 top=[0.13 0.04 0.04 0.04] bot=[-0.04 -0.04 -0.04] | via L0H0: asym=-0.11
+L2H4: direct T-T: asym=-0.25 top=[0.1  0.09 0.09 0.09] bot=[-0.23 -0.19 -0.19] | ind via L0H3: asym=+0.12 top=[0.09 0.09 0.07 0.07] bot=[-0.1  -0.06 -0.05] | via L0H0: asym=+0.04
+L2H5: direct T-T: asym=-0.31 top=[0.13 0.13 0.1  0.08] bot=[-0.25 -0.23 -0.23] | ind via L0H3: asym=-0.07 top=[0.09 0.09 0.05 0.04] bot=[-0.12 -0.12 -0.07] | via L0H0: asym=-0.12
+L3H0: direct T-T: asym=+0.20 top=[0.22 0.18 0.18 0.09] bot=[-0.16 -0.1  -0.1 ] | ind via L0H3: asym=-0.17 top=[0.07 0.07 0.07 0.05] bot=[-0.15 -0.12 -0.05] | via L0H0: asym=+0.16
+L3H1: direct T-T: asym=+0.02 top=[0.17 0.09 0.07 0.07] bot=[-0.09 -0.09 -0.05] | ind via L0H3: asym=-0.11 top=[0.05 0.04 0.04 0.02] bot=[-0.04 -0.03 -0.03] | via L0H0: asym=+0.32
+L3H2: direct T-T: asym=-0.03 top=[0.13 0.07 0.07 0.06] bot=[-0.11 -0.11 -0.09] | ind via L0H3: asym=-0.00 top=[0.05 0.04 0.04 0.04] bot=[-0.05 -0.05 -0.04] | via L0H0: asym=+0.01
+L3H3: direct T-T: asym=+0.52 top=[0.34 0.24 0.22 0.17] bot=[-0.08 -0.07 -0.07] | ind via L0H3: asym=+0.85 top=[0.27 0.19 0.19 0.17] bot=[-0.03 -0.02 -0.01] | via L0H0: asym=-0.22
+L3H4: direct T-T: asym=-0.08 top=[0.05 0.05 0.03 0.02] bot=[-0.08 -0.05 -0.05] | ind via L0H3: asym=+0.14 top=[0.02 0.02 0.02 0.02] bot=[-0.02 -0.01 -0.01] | via L0H0: asym=+0.22
+L3H5: direct T-T: asym=+0.10 top=[0.15 0.15 0.09 0.09] bot=[-0.17 -0.12 -0.06] | ind via L0H3: asym=-0.02 top=[0.06 0.06 0.04 0.04] bot=[-0.05 -0.05 -0.05] | via L0H0: asym=+0.08
+
+```

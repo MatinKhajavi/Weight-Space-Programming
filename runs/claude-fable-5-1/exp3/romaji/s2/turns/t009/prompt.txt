@@ -1,0 +1,49 @@
+OUTPUT of run 8 of at most 100:
+```
+L0H3 v sv [2.1  1.95 1.9  1.87 1.84 1.82 1.77 1.75 1.67 1.65 1.63 1.62 1.59 1.55 1.52 1.46 1.42 1.3  1.16 1.1  0.94 0.93 0.85 0.82 0.79 0.78 0.74 0.74 0.73 0.7 ]
+L0H0: frac in T3(20): q=0.15 k=0.17 v=0.44
+L0H1: frac in T3(20): q=0.04 k=0.09 v=0.14
+L0H2: frac in T3(20): q=0.05 k=0.13 v=0.12
+L0H3: frac in T3(20): q=0.05 k=0.04 v=0.80
+L0H4: frac in T3(20): q=0.06 k=0.13 v=0.08
+L0H5: frac in T3(20): q=0.02 k=0.15 v=0.22
+fc.0 frac in T3: 0.262536  (20/384 random expectation = 0.052083333333333336 )
+L0H3 qk stacked sv [4.22 4.21 4.18 4.13 4.07 4.   3.93 3.89 3.86 3.76 3.74 3.69 3.63 3.61 3.56 3.46 3.33 3.26 3.24 3.15 3.1  3.03 3.01 2.62 2.56 2.53 2.38 2.33 2.13 2.03 1.96 1.86 1.8  1.74 1.68 1.65 1.62 1.55 1.49 1.4 ]
+L0H0: frac in Q3(30): q=0.35 k=0.40 v=0.08
+L0H1: frac in Q3(30): q=0.15 k=0.16 v=0.26
+L0H2: frac in Q3(30): q=0.16 k=0.17 v=0.27
+L0H3: frac in Q3(30): q=0.82 k=0.87 v=0.11
+L0H4: frac in Q3(30): q=0.15 k=0.23 v=0.22
+L0H5: frac in Q3(30): q=0.15 k=0.11 v=0.40
+fc.0 frac in Q3: 0.062216185  random exp 0.078125
+principal cosines T3 vs Q3: [0.42 0.36 0.26 0.24 0.23 0.22 0.2  0.19 0.18 0.16 0.14 0.14 0.13 0.11 0.11 0.09 0.08 0.08 0.06 0.05]
+L0H1 comp0 sv=6.70: query dir in T3 0.05 in Q3 0.19; key dir in T3 0.05 in Q3 0.10; u.v=-0.43
+L0H1 comp1 sv=2.48: query dir in T3 0.03 in Q3 0.25; key dir in T3 0.23 in Q3 0.11; u.v=-0.54
+L0H1 comp2 sv=1.75: query dir in T3 0.06 in Q3 0.40; key dir in T3 0.32 in Q3 0.28; u.v=-0.21
+L0H2 comp0 sv=4.35: query dir in T3 0.08 in Q3 0.37; key dir in T3 0.31 in Q3 0.12; u.v=-0.42
+L0H2 comp1 sv=1.46: query dir in T3 0.06 in Q3 0.22; key dir in T3 0.06 in Q3 0.28; u.v=-0.63
+L0H2 comp2 sv=1.26: query dir in T3 0.08 in Q3 0.15; key dir in T3 0.16 in Q3 0.24; u.v=-0.46
+L0H4 comp0 sv=4.08: query dir in T3 0.12 in Q3 0.23; key dir in T3 0.41 in Q3 0.11; u.v=-0.32
+L0H4 comp1 sv=1.81: query dir in T3 0.04 in Q3 0.16; key dir in T3 0.08 in Q3 0.36; u.v=-0.57
+L0H4 comp2 sv=1.48: query dir in T3 0.08 in Q3 0.33; key dir in T3 0.08 in Q3 0.47; u.v=-0.44
+L0H5 comp0 sv=1.44: query dir in T3 0.03 in Q3 0.44; key dir in T3 0.69 in Q3 0.09; u.v=-0.15
+L0H5 comp1 sv=0.39: query dir in T3 0.02 in Q3 0.19; key dir in T3 0.11 in Q3 0.09; u.v=0.27
+L0H5 comp2 sv=0.19: query dir in T3 0.02 in Q3 0.07; key dir in T3 0.07 in Q3 0.24; u.v=-0.12
+L0H0 comp0 sv=6.83: query dir in T3 0.29 in Q3 0.38; key dir in T3 0.37 in Q3 0.30; u.v=0.14
+L0H0 comp1 sv=4.90: query dir in T3 0.14 in Q3 0.05; key dir in T3 0.34 in Q3 0.41; u.v=-0.08
+L0H0 comp2 sv=2.94: query dir in T3 0.31 in Q3 0.23; key dir in T3 0.36 in Q3 0.21; u.v=0.13
+L0H5 v dir0 sv=4.67: in T3 0.02 in Q3 0.80
+L0H5 v dir1 sv=3.07: in T3 0.02 in Q3 0.64
+L0H5 v dir2 sv=2.35: in T3 0.47 in Q3 0.07
+L0H5 v dir3 sv=2.15: in T3 0.50 in Q3 0.11
+L0H1 v dir0 sv=1.83: in T3 0.02 in Q3 0.64
+L0H1 v dir1 sv=1.68: in T3 0.06 in Q3 0.21
+L0H1 v dir2 sv=1.06: in T3 0.61 in Q3 0.06
+L0H2 v dir0 sv=1.57: in T3 0.06 in Q3 0.74
+L0H2 v dir1 sv=1.36: in T3 0.09 in Q3 0.17
+L0H2 v dir2 sv=0.94: in T3 0.46 in Q3 0.14
+L0H4 v dir0 sv=1.25: in T3 0.07 in Q3 0.33
+L0H4 v dir1 sv=1.12: in T3 0.07 in Q3 0.24
+L0H4 v dir2 sv=0.82: in T3 0.25 in Q3 0.23
+
+```

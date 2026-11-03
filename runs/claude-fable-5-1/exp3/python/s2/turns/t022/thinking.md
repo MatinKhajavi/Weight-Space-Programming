@@ -1,0 +1,6 @@
+I'm looking at the cosine histogram, where a bump appears around 0.7 to 0.9 with several significant clusters. At every threshold there's one dominant cluster of 108 to 140 neurons that seems to read the same token direction, probably the "space" token with its word-start features.
+
+I'm checking which token that dominant group of about 108 neurons, roughly 20%, is reading, with "space" as the leading guess since spaces are frequent in English, Python, and romaji. Next I'll look at the big cluster's direction and what those neurons predict through the unembedding, then map that back to token space to see whether the token predicts itself.
+
+Next I'm defining a copy map from token space to the unembedding and projecting each cluster's mean neuron output through it, so I can see whether a token's neurons predict that same token. Then I'll compare those predictions across clusters to build a rough transition graph, and I'll check the vowel/consonant structure and whether space predicts itself. First, though, I'm listing the clusters at threshold 0.7 with size at least 4, their normalized mean directions, and their mutual cosines, since distinct tokens should be near-orthogonal or negatively aligned.
+

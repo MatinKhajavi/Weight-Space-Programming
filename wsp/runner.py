@@ -26,7 +26,7 @@ RUNS = ROOT / "runs"
 MODELS = ["claude-opus-5-5", "claude-fable-5-1"]
 SYSTEM_PROMPT = "Answer the user's request."
 BUDGET_USD_PER_CALL = 20.0
-SPEND_CAP_USD = 190.0   # across every recorded run; no new call starts above it
+SPEND_CAP_USD = 290.0   # across every recorded run; no new call starts above it
 
 # experiment -> item -> (prompt file in upstream, Astra's effort)
 ITEMS = {

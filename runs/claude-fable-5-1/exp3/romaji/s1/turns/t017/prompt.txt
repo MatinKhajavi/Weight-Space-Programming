@@ -1,0 +1,19 @@
+OUTPUT of run 16 of at most 100:
+```
+chance: 0.0026041666666666665 random dirs: [np.float64(0.0024), np.float64(0.0028), np.float64(0.0023), np.float64(0.0025), np.float64(0.0018)]
+L0H1 comp0: k-dir frac in W_fc.0 = 0.0091   q-dir frac = 0.0022
+L0H1 comp1: k-dir frac in W_fc.0 = 0.0071   q-dir frac = 0.0017
+L0H2 comp0: k-dir frac in W_fc.0 = 0.0092   q-dir frac = 0.0018
+L0H2 comp1: k-dir frac in W_fc.0 = 0.0041   q-dir frac = 0.0022
+L0H4 comp0: k-dir frac in W_fc.0 = 0.0091   q-dir frac = 0.0025
+L0H4 comp1: k-dir frac in W_fc.0 = 0.0020   q-dir frac = 0.0007
+L0H5 comp0: k-dir frac in W_fc.0 = 0.0119   q-dir frac = 0.0039
+L0H5 comp1: k-dir frac in W_fc.0 = 0.0063   q-dir frac = 0.0053
+L0H0 comp0: k-dir frac in W_fc.0 = 0.0018   q-dir frac = 0.0072
+L0H0 comp1: k-dir frac in W_fc.0 = 0.0074   q-dir frac = 0.0017
+L0H3 comp0: k-dir frac in W_fc.0 = 0.0007   q-dir frac = 0.0026
+L0H3 comp1: k-dir frac in W_fc.0 = 0.0007   q-dir frac = 0.0011
+V3 in-dirs: [np.float32(0.0159), np.float32(0.0095), np.float32(0.0083), np.float32(0.0143), np.float32(0.0144), np.float32(0.0134)]
+OV5 in-dirs: [np.float32(0.0014), np.float32(0.0017), np.float32(0.0038), np.float32(0.0081), np.float32(0.0106), np.float32(0.0176)]
+
+```

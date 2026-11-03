@@ -1,0 +1,11 @@
+OUTPUT of run 12 of at most 100:
+```
+fraction of neuron input energy in E: quantiles [0.16 0.18 0.23 0.34 0.5 ]
+neurons with >50% energy in E: 152
+pairwise cos histogram (E-projections of E-dominant neurons): [   0    0    0    3    0   19   34  144 1165 5374 3097  751  290  126  100   74   37   46   65  151]
+neurons with some partner cos>0.9: 111  >0.8: 124
+k=20: sizes [15 14 13 10  9  8  7  7  7  7  7  6  6  6  6  5  5  5  5  4]  mean within-cos 0.84  centroid pairwise max cos [0.23 0.23 0.15 0.15 0.15]
+k=28: sizes [8 7 7 7 7 7 7 7 6 6 6 6 6 6 6 5 5 5 5 5 4 4 4 4 4 4 3 1]  mean within-cos 0.92  centroid pairwise max cos [0.47 0.47 0.32 0.27 0.25]
+k=40: sizes [7 6 6 6 6 6 5 5 5 5 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4 4 3 3 3 2 2 2 2 1 1 1 1 1 1 1]  mean within-cos 0.96  centroid pairwise max cos [0.85 0.85 0.69 0.69 0.65]
+
+```

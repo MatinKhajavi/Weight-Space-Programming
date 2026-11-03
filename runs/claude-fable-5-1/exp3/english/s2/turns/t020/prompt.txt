@@ -1,0 +1,22 @@
+OUTPUT of run 19 of at most 100:
+```
+L1H0: P-P sym eig top [0.87 0.76 0.16] bot [-0.65 -0.62 -0.25] asym/sym 1.15 | Ob-Ob sym top [0.68 0.48] bot [-0.6  -0.46] | |q_const| 3.86 |k_const| 9.19 ; q_const key-dir energy in P 0.59 Ob 0.36 |kdir| 10.86
+L1H1: P-P sym eig top [1.24 1.02 0.33] bot [-0.9  -0.84 -0.42] asym/sym 1.21 | Ob-Ob sym top [1.08 0.82] bot [-0.82 -0.81] | |q_const| 4.97 |k_const| 11.72 ; q_const key-dir energy in P 0.59 Ob 0.37 |kdir| 18.28
+L1H2: P-P sym eig top [1.59 1.01 0.21] bot [-1.35 -0.97 -0.53] asym/sym 1.13 | Ob-Ob sym top [1.55 0.98] bot [-1.11 -0.65] | |q_const| 4.68 |k_const| 13.73 ; q_const key-dir energy in P 0.59 Ob 0.37 |kdir| 20.70
+L1H3: P-P sym eig top [1.34 1.1  0.3 ] bot [-1.12 -0.8  -0.38] asym/sym 1.13 | Ob-Ob sym top [1.32 0.78] bot [-0.95 -0.58] | |q_const| 4.70 |k_const| 11.70 ; q_const key-dir energy in P 0.60 Ob 0.35 |kdir| 18.81
+L1H4: P-P sym eig top [1.5  1.04 0.25] bot [-1.26 -0.97 -0.38] asym/sym 1.13 | Ob-Ob sym top [1.43 0.89] bot [-1.17 -0.62] | |q_const| 4.46 |k_const| 12.67 ; q_const key-dir energy in P 0.62 Ob 0.35 |kdir| 18.32
+L1H5: P-P sym eig top [1.35 1.03 0.3 ] bot [-1.19 -0.8  -0.31] asym/sym 1.18 | Ob-Ob sym top [1.34 0.81] bot [-0.99 -0.53] | |q_const| 4.20 |k_const| 11.86 ; q_const key-dir energy in P 0.60 Ob 0.35 |kdir| 14.02
+L2H0: P-P sym eig top [0.95 0.71 0.52] bot [-0.71 -0.65 -0.58] asym/sym 1.36 | Ob-Ob sym top [0.85 0.61] bot [-0.48 -0.3 ] | |q_const| 3.69 |k_const| 8.96 ; q_const key-dir energy in P 0.62 Ob 0.30 |kdir| 13.59
+L2H1: P-P sym eig top [0.61 0.52 0.49] bot [-0.5  -0.48 -0.37] asym/sym 1.14 | Ob-Ob sym top [0.71 0.44] bot [-0.42 -0.29] | |q_const| 2.35 |k_const| 6.71 ; q_const key-dir energy in P 0.57 Ob 0.30 |kdir| 5.96
+L2H2: P-P sym eig top [1.03 0.69 0.4 ] bot [-0.78 -0.5  -0.33] asym/sym 1.20 | Ob-Ob sym top [0.7  0.44] bot [-0.53 -0.33] | |q_const| 2.29 |k_const| 7.63 ; q_const key-dir energy in P 0.58 Ob 0.32 |kdir| 6.04
+L2H3: P-P sym eig top [0.85 0.64 0.42] bot [-0.64 -0.55 -0.49] asym/sym 1.43 | Ob-Ob sym top [0.64 0.36] bot [-0.5  -0.32] | |q_const| 3.00 |k_const| 9.37 ; q_const key-dir energy in P 0.65 Ob 0.28 |kdir| 11.70
+L2H4: P-P sym eig top [1.13 0.68 0.41] bot [-0.87 -0.57 -0.5 ] asym/sym 1.34 | Ob-Ob sym top [0.75 0.54] bot [-0.5  -0.47] | |q_const| 3.21 |k_const| 9.43 ; q_const key-dir energy in P 0.62 Ob 0.31 |kdir| 12.62
+L2H5: P-P sym eig top [0.92 0.53 0.45] bot [-0.64 -0.53 -0.52] asym/sym 1.42 | Ob-Ob sym top [0.69 0.48] bot [-0.48 -0.45] | |q_const| 3.25 |k_const| 9.18 ; q_const key-dir energy in P 0.63 Ob 0.29 |kdir| 12.07
+L3H0: P-P sym eig top [0.67 0.64 0.6 ] bot [-0.47 -0.4  -0.37] asym/sym 0.91 | Ob-Ob sym top [0.5  0.44] bot [-0.24 -0.21] | |q_const| 1.26 |k_const| 1.87 ; q_const key-dir energy in P 0.28 Ob 0.09 |kdir| 2.07
+L3H1: P-P sym eig top [0.65 0.57 0.53] bot [-0.39 -0.22 -0.19] asym/sym 0.74 | Ob-Ob sym top [0.64 0.57] bot [-0.15 -0.08] | |q_const| 1.42 |k_const| 0.88 ; q_const key-dir energy in P 0.21 Ob 0.18 |kdir| 1.93
+L3H2: P-P sym eig top [0.63 0.44 0.34] bot [-0.48 -0.39 -0.3 ] asym/sym 1.12 | Ob-Ob sym top [0.45 0.29] bot [-0.29 -0.27] | |q_const| 1.19 |k_const| 2.74 ; q_const key-dir energy in P 0.53 Ob 0.21 |kdir| 2.32
+L3H3: P-P sym eig top [0.57 0.42 0.36] bot [-0.46 -0.34 -0.31] asym/sym 1.30 | Ob-Ob sym top [0.5  0.32] bot [-0.38 -0.22] | |q_const| 1.21 |k_const| 3.13 ; q_const key-dir energy in P 0.55 Ob 0.25 |kdir| 2.88
+L3H4: P-P sym eig top [0.6  0.45 0.41] bot [-0.52 -0.39 -0.37] asym/sym 1.08 | Ob-Ob sym top [0.4  0.33] bot [-0.45 -0.23] | |q_const| 1.32 |k_const| 2.43 ; q_const key-dir energy in P 0.46 Ob 0.22 |kdir| 2.46
+L3H5: P-P sym eig top [0.31 0.23 0.21] bot [-0.22 -0.19 -0.16] asym/sym 0.96 | Ob-Ob sym top [0.35 0.18] bot [-0.17 -0.14] | |q_const| 1.10 |k_const| 0.86 ; q_const key-dir energy in P 0.20 Ob 0.17 |kdir| 1.32
+
+```

@@ -1,0 +1,84 @@
+{
+ "experiment": "exp1",
+ "item": "pacman",
+ "sample": 1,
+ "model": "claude-fable-5-1",
+ "effort": "high",
+ "system_prompt": "Answer the user's request.",
+ "prompt_file": "upstream/exp1_which_game/runs/pacman/prompt.txt",
+ "prompt_sha256": "1c75e66aab1e611bdb07a87d6f70e3d2ba3d149e58f259b5ad7a485661244acf",
+ "prompt_chars": 115394,
+ "prompt_tokens": 79037,
+ "versions": {
+  "claude_agent_sdk": "0.2.177",
+  "claude_code_cli": "2.1.317"
+ },
+ "attempts": [
+  {
+   "wall_s": 347.5,
+   "error": null,
+   "is_error": false,
+   "stop_reasons": [
+    null,
+    null
+   ],
+   "answer_chars": 4987
+  }
+ ],
+ "wall_s": 347.5,
+ "resumed_after_output_cap": false,
+ "injected_messages": [],
+ "fake_tool_calls": 0,
+ "refused": false,
+ "session_id": "f50f975c-6bb0-4cae-b672-a8d7e53dfa46",
+ "last_uuid": "7ee4dcff-8add-4f5e-b659-4fbd94a2a5a7",
+ "usage": {
+  "input_tokens": 4,
+  "cache_creation_input_tokens": 79060,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 30343,
+  "output_tokens_details": {
+   "thinking_tokens": 28136
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 79060
+  },
+  "inference_geo": "global",
+  "iterations": [],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "model_usage": {
+  "claude-fable-5-1": {
+   "inputTokens": 4,
+   "outputTokens": 30343,
+   "cacheReadInputTokens": 0,
+   "cacheCreationInputTokens": 79060,
+   "webSearchRequests": 0,
+   "costUSD": 2.50544,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 64000,
+   "thinkingTokens": 28136,
+   "cacheCreationEphemeral5mInputTokens": 79060,
+   "cacheCreationEphemeral1hInputTokens": 0,
+   "canonicalModel": "claude-fable-5-1",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "total_cost_usd": 2.50544,
+ "num_turns": 1,
+ "audit": {
+  "tool_free": true,
+  "init_tools": [],
+  "init_mcp_servers": [],
+  "api_key_source": "ANTHROPIC_API_KEY",
+  "model": "claude-fable-5-1"
+ }
+}

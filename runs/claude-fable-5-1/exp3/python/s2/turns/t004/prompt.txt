@@ -1,0 +1,33 @@
+OUTPUT of run 3 of at most 100:
+```
+num high dims: 89
+layer 0
+  H0: Q norm 1.94 fracH 0.91 | K norm 1.34 fracH 0.65 | V norm 2.13 fracH 0.85 | O norm 5.21 fracH(out rows) 0.65
+  H1: Q norm 4.40 fracH 0.77 | K norm 6.29 fracH 0.91 | V norm 2.02 fracH 0.49 | O norm 10.20 fracH(out rows) 0.26
+  H2: Q norm 2.23 fracH 0.79 | K norm 2.39 fracH 0.81 | V norm 1.52 fracH 0.56 | O norm 5.54 fracH(out rows) 0.34
+  H3: Q norm 2.73 fracH 0.87 | K norm 2.24 fracH 0.77 | V norm 1.42 fracH 0.68 | O norm 5.47 fracH(out rows) 0.35
+  H4: Q norm 0.64 fracH 0.72 | K norm 0.84 fracH 0.75 | V norm 4.02 fracH 0.92 | O norm 8.94 fracH(out rows) 0.76
+  H5: Q norm 5.63 fracH 0.77 | K norm 7.35 fracH 0.89 | V norm 2.09 fracH 0.53 | O norm 10.60 fracH(out rows) 0.26
+layer 1
+  H0: Q norm 5.00 fracH 0.24 | K norm 5.17 fracH 0.43 | V norm 6.26 fracH 0.20 | O norm 11.17 fracH(out rows) 0.27
+  H1: Q norm 6.98 fracH 0.21 | K norm 8.22 fracH 0.67 | V norm 5.30 fracH 0.20 | O norm 10.66 fracH(out rows) 0.24
+  H2: Q norm 6.05 fracH 0.23 | K norm 7.36 fracH 0.68 | V norm 5.84 fracH 0.19 | O norm 11.19 fracH(out rows) 0.26
+  H3: Q norm 6.09 fracH 0.22 | K norm 7.68 fracH 0.71 | V norm 5.42 fracH 0.22 | O norm 10.14 fracH(out rows) 0.24
+  H4: Q norm 6.03 fracH 0.23 | K norm 7.57 fracH 0.70 | V norm 5.28 fracH 0.21 | O norm 9.91 fracH(out rows) 0.25
+  H5: Q norm 6.77 fracH 0.23 | K norm 7.81 fracH 0.63 | V norm 5.41 fracH 0.21 | O norm 10.92 fracH(out rows) 0.23
+layer 2
+  H0: Q norm 11.27 fracH 0.22 | K norm 10.73 fracH 0.28 | V norm 10.27 fracH 0.22 | O norm 13.64 fracH(out rows) 0.25
+  H1: Q norm 10.82 fracH 0.22 | K norm 10.66 fracH 0.23 | V norm 10.91 fracH 0.21 | O norm 14.21 fracH(out rows) 0.26
+  H2: Q norm 12.77 fracH 0.22 | K norm 12.33 fracH 0.33 | V norm 9.65 fracH 0.21 | O norm 13.00 fracH(out rows) 0.26
+  H3: Q norm 11.11 fracH 0.22 | K norm 10.82 fracH 0.33 | V norm 10.78 fracH 0.22 | O norm 14.25 fracH(out rows) 0.25
+  H4: Q norm 11.49 fracH 0.23 | K norm 11.17 fracH 0.31 | V norm 10.02 fracH 0.22 | O norm 13.50 fracH(out rows) 0.24
+  H5: Q norm 10.22 fracH 0.22 | K norm 9.83 fracH 0.25 | V norm 11.59 fracH 0.22 | O norm 15.08 fracH(out rows) 0.25
+layer 3
+  H0: Q norm 11.55 fracH 0.22 | K norm 11.18 fracH 0.23 | V norm 12.09 fracH 0.21 | O norm 15.37 fracH(out rows) 0.26
+  H1: Q norm 10.36 fracH 0.23 | K norm 10.22 fracH 0.24 | V norm 12.11 fracH 0.21 | O norm 15.27 fracH(out rows) 0.27
+  H2: Q norm 11.58 fracH 0.23 | K norm 11.11 fracH 0.25 | V norm 12.34 fracH 0.22 | O norm 16.03 fracH(out rows) 0.29
+  H3: Q norm 8.12 fracH 0.22 | K norm 8.09 fracH 0.23 | V norm 13.89 fracH 0.21 | O norm 18.20 fracH(out rows) 0.29
+  H4: Q norm 10.53 fracH 0.22 | K norm 10.20 fracH 0.25 | V norm 12.62 fracH 0.22 | O norm 16.26 fracH(out rows) 0.28
+  H5: Q norm 11.59 fracH 0.22 | K norm 11.35 fracH 0.23 | V norm 10.76 fracH 0.22 | O norm 14.16 fracH(out rows) 0.35
+
+```

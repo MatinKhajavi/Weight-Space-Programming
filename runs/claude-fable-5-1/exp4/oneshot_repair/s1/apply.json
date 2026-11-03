@@ -1,0 +1,42 @@
+{
+ "block": true,
+ "statements": 29,
+ "applied": 29,
+ "skipped": [],
+ "entries_written": 171679,
+ "tensors_touched": [
+  "actor0.W",
+  "actor0.b",
+  "actor1.W",
+  "actor1.b",
+  "actor2.W",
+  "actor2.b",
+  "actor3.W",
+  "actor3.b",
+  "actor4.W",
+  "actor4.b",
+  "actor_head.W",
+  "actor_head.b",
+  "embed.W",
+  "embed.b"
+ ],
+ "changed": 165102,
+ "entries": 171664,
+ "frac_changed": 0.9617741634821512,
+ "changed_per_tensor": {
+  "embed.W": 80585,
+  "embed.b": 88,
+  "actor0.W": 16339,
+  "actor0.b": 128,
+  "actor1.W": 16351,
+  "actor1.b": 128,
+  "actor2.W": 16342,
+  "actor2.b": 128,
+  "actor3.W": 16349,
+  "actor3.b": 128,
+  "actor4.W": 16349,
+  "actor4.b": 128,
+  "actor_head.W": 2044,
+  "actor_head.b": 15
+ }
+}

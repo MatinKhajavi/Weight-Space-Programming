@@ -1,0 +1,12 @@
+{
+ "true": "pong",
+ "guess": null,
+ "correct": false,
+ "status": "hedged",
+ "named": [
+  "breakout",
+  "pong"
+ ],
+ "answer_line": "single\u2011player pong / squash (breakout\u2011style paddle vs. wall): the agent is a paddle in the leftmost playable column, the moving object is a bouncing ball, and the right border column is the scoring wa",
+ "confidence": 65
+}

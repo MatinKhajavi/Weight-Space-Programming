@@ -1,0 +1,4 @@
+I'm looking at the ICA components, which show high kurtosis and so look like sparse, possibly token-related directions. Neither A nor B lines up cleanly with a single component, since their top cosine similarities are moderate. A's kurtosis is above what random directions give but well below the strongest ICA components, so it isn't a maximally sparse direction. I'm now checking whether the ICA components are close to orthogonal to each other.
+
+Next I want to see whether the ICA components are close to orthogonal, which they appear to be, and whether that fits with near-orthogonal token embeddings. I'm also considering using only the W_fc rows, and maybe the V rows, to reduce the mixing from different weight matrices. Then I'd run ICA with 27, 28, and 30 dimensions and count the high-kurtosis components, to estimate how many real tokens there are.
+

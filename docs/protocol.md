@@ -86,7 +86,12 @@ prompt's token count next to the API's reported input tokens, so injected contex
    (exp5 Breakout: the second reply repeats the first 75 statements and finishes the block). When the cap was reached
    while still thinking, the second request carries only the prompt and the message, so the model starts over with
    that instruction (exp5 Seaquest, whose second attempt refers to its "compact output budget"); such a result is a
-   second attempt under a different instruction, not a completed reply.
+   second attempt under a different instruction, not a completed reply. The answer that is scored is the last message's
+   text (Claude Code's final result). Claude Code also resumes after a reply is cut off mid-stream, with
+   `Your response above was cut off mid-stream. Resume directly from where it stops — no apology, no recap. If none of
+   it survived, answer the request from the start.` (Fable exp3 Python s2, turn 12: the cut reply had no text, and the
+   reply after it repeated the same code block); `resumed_after_output_cap` and `injected_messages` record both cases.
+   For Fable 5.1 Claude Code records `maxOutputTokens` 64,000, but its replies were cut at about 128,000 tokens.
 6. **Tool calls written as text.** With no tools available, a reply can contain made-up tool calls and made-up
    outputs written as text (`{"tool":"code",...}` / `{"tool":"code_output",...}`) instead of the protocol's code block.
    Each reply's count is recorded as `fake_tool_calls` in its `run.json`. Under the original rules a reply without a
@@ -125,7 +130,8 @@ The rules below are observed in the authors' harness logs, not documented by the
   streams. Astra's Breakout network scores 506.5 ± 7.6 (seed 0) and 508.1 ± 7.6 (seed 1000) against the released
   517.4 ± 7.4: about 1 standard error low in both blocks. Astra's and Opus's networks are scored with the same evaluator and seeds, so a
   small offset between our evaluator and theirs does not affect the comparison. Seaquest: 52.0 ± 1.4 (released
-  53.1 ± 1.4). Asterix: 53.2 ± 1.0 (released 53.2 ± 1.0).
+  53.1 ± 1.4). Asterix: 53.2 ± 1.0 (released 53.2 ± 1.0). Seed blocks of the same network differ by up to about 2 standard
+  errors (Fable's Asterix network: 49.4 at seed 0, 45.6-47.4 at three other blocks); reported scores use seed 0.
 - **exp4 edit reader and evaluator** (`wsp/exp4.py`): applying Astra's 51 statements to the network as shown rebuilds
   the released `edited_actor.npz` bit for bit (6,073 entries changed). The evaluator is Kinetix at the original
   commit with the original training config, run on Modal. The base network as shown gives success 0/256, mean return
@@ -171,7 +177,11 @@ authors did.
   One borderline run (Python s2, run 45) applies a ReLU to z-scored layer-0 MLP pre-activations of directions
   estimated from the weights; it is not the network's own computation (no LayerNorm, bias or output projection), and the
   model judged its result to be noise.
-- In these six conversations the per-turn costs in `run.json` were converted afterwards from Claude Code's cumulative
+- Fable 5.1 (166 code runs read): no forward pass. Two borderline runs of the same kind: English s1 run 14 applies a
+  ReLU to layer-0 MLP pre-activations of directions estimated from the weights (the model judged the result
+  untrustworthy and did not use it); Python s2 runs 34-35 gate MLP0 neurons by thresholded regression coefficients
+  and sum their outputs, a rough token-to-MLP0-to-logit map that part of its corpus reasoning rests on.
+- In Opus's six later conversations the per-turn costs in `run.json` were converted afterwards from Claude Code's cumulative
   session cost (kept as `session_cost_usd`) by the same rule the runner now applies itself.
 
 **exp6.** Task message: upstream `exp6_go_from_scratch/runs/budget_<n>/message.txt`. Sandbox: the same Docker

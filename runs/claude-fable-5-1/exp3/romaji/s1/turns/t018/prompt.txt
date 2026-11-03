@@ -1,0 +1,23 @@
+OUTPUT of run 17 of at most 100:
+```
+tests: cur-vs-prev through MLP0-linearized; cur(MLP)-vs-prev(MLP); random-baseline std of tr/|B| ~1
+L1H0: cur-prevM +0.14(mean eig +0.007) | curM-prevM +0.63(mean eig +0.301) | curM-prev +0.55(mean eig +0.028) | curM-curM -1.05(mean eig -0.972) | prev-prevM +0.79(mean eig +0.041)
+L1H1: cur-prevM -0.23(mean eig -0.008) | curM-prevM -0.03(mean eig -0.011) | curM-prev +0.38(mean eig +0.021) | curM-curM -1.55(mean eig -1.319) | prev-prevM +0.45(mean eig +0.018)
+L1H2: cur-prevM -0.28(mean eig -0.009) | curM-prevM -0.48(mean eig -0.154) | curM-prev +0.67(mean eig +0.040) | curM-curM -1.69(mean eig -1.629) | prev-prevM +0.70(mean eig +0.023)
+L1H3: cur-prevM -0.17(mean eig -0.006) | curM-prevM +0.28(mean eig +0.100) | curM-prev -0.13(mean eig -0.008) | curM-curM -1.47(mean eig -1.122) | prev-prevM +0.47(mean eig +0.018)
+L1H4: cur-prevM +0.20(mean eig +0.005) | curM-prevM -0.30(mean eig -0.073) | curM-prev +0.63(mean eig +0.026) | curM-curM -1.96(mean eig -1.257) | prev-prevM +0.59(mean eig +0.021)
+L1H5: cur-prevM -0.43(mean eig -0.019) | curM-prevM -0.18(mean eig -0.066) | curM-prev +0.34(mean eig +0.016) | curM-curM -1.72(mean eig -1.591) | prev-prevM +0.83(mean eig +0.030)
+L2H0: cur-prevM -0.27(mean eig -0.006) | curM-prevM +0.20(mean eig +0.043) | curM-prev -0.02(mean eig -0.001) | curM-curM -0.93(mean eig -0.363) | prev-prevM +0.75(mean eig +0.013)
+L2H1: cur-prevM -0.01(mean eig -0.000) | curM-prevM +0.49(mean eig +0.144) | curM-prev -0.16(mean eig -0.006) | curM-curM -0.50(mean eig -0.269) | prev-prevM +0.38(mean eig +0.010)
+L2H2: cur-prevM +0.03(mean eig +0.001) | curM-prevM +0.33(mean eig +0.070) | curM-prev +0.03(mean eig +0.001) | curM-curM -0.86(mean eig -0.264) | prev-prevM +0.40(mean eig +0.007)
+L2H3: cur-prevM -0.03(mean eig -0.001) | curM-prevM -0.36(mean eig -0.082) | curM-prev +0.75(mean eig +0.021) | curM-curM -0.68(mean eig -0.236) | prev-prevM -0.33(mean eig -0.006)
+L2H4: cur-prevM +0.17(mean eig +0.006) | curM-prevM +0.44(mean eig +0.125) | curM-prev +0.57(mean eig +0.022) | curM-curM -0.96(mean eig -0.500) | prev-prevM +0.28(mean eig +0.007)
+L2H5: cur-prevM -0.05(mean eig -0.002) | curM-prevM -0.21(mean eig -0.058) | curM-prev +0.01(mean eig +0.001) | curM-curM -1.37(mean eig -0.666) | prev-prevM +0.07(mean eig +0.002)
+L3H0: cur-prevM +0.30(mean eig +0.008) | curM-prevM +0.50(mean eig +0.127) | curM-prev -0.05(mean eig -0.002) | curM-curM +0.37(mean eig +0.139) | prev-prevM -0.10(mean eig -0.003)
+L3H1: cur-prevM +0.23(mean eig +0.005) | curM-prevM +0.06(mean eig +0.008) | curM-prev +0.23(mean eig +0.004) | curM-curM +0.14(mean eig +0.029) | prev-prevM -0.01(mean eig -0.000)
+L3H2: cur-prevM -0.48(mean eig -0.009) | curM-prevM -0.16(mean eig -0.025) | curM-prev -0.05(mean eig -0.001) | curM-curM -0.28(mean eig -0.071) | prev-prevM -0.14(mean eig -0.002)
+L3H3: cur-prevM +1.13(mean eig +0.036) | curM-prevM +1.40(mean eig +0.469) | curM-prev +2.74(mean eig +0.160) | curM-curM -0.04(mean eig -0.018) | prev-prevM -0.40(mean eig -0.009)
+L3H4: cur-prevM -0.34(mean eig -0.003) | curM-prevM -0.62(mean eig -0.047) | curM-prev +0.24(mean eig +0.002) | curM-curM +0.19(mean eig +0.027) | prev-prevM -0.05(mean eig -0.000)
+L3H5: cur-prevM +0.15(mean eig +0.004) | curM-prevM +0.54(mean eig +0.137) | curM-prev -0.05(mean eig -0.001) | curM-curM +0.51(mean eig +0.193) | prev-prevM +0.26(mean eig +0.005)
+
+```

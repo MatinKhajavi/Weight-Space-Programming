@@ -95,3 +95,13 @@ def test_exp3_matches_released_scores(run):
     assert ours["copy_named"] == sorted(released["copy_named"])
     assert ours["probabilities"] == released["probabilities"]
     assert ours["copy_false"] == [] and ours["copy_missed"] == []   # the post: every copying head found, none extra
+
+
+def test_exp3_head_lines_in_any_grouping():
+    from wsp.exp3 import parse
+    text = ("Heads:\n- L0H0: **copy** — x\n- L1H0 – L1H5 local (all six)\n- L2H0, L2H2: broad\n"
+            "- L2H3: unclear. L2H4: previous.\n- L3H0 to L3H5: broad\n- L0H1/H2 previous\n")
+    h = parse(text)["head_labels"]
+    assert h["L0H0"] == "copy" and all(h[f"L1H{i}"] == "local" for i in range(6))
+    assert h["L2H0"] == h["L2H2"] == "broad" and h["L2H3"] == "unclear" and h["L2H4"] == "previous"
+    assert all(h[f"L3H{i}"] == "broad" for i in range(6)) and h["L0H1"] == h["L0H2"] == "previous"

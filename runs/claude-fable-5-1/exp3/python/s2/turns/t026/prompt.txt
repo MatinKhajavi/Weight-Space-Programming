@@ -1,0 +1,24 @@
+OUTPUT of run 25 of at most 100:
+```
+L1 keys residual sv: [4.17 2.8  2.35 2.16 2.07 2.05 1.96 1.84 1.83 1.78 1.73 1.7 ]
+t* energy in T: 0.09924269  in P: 6.4783252e-15  in H1o: 0.034570653 H5o: 0.05949357 H2o 0.05735968 H3o 0.016386284
+dir1 energy in T: 0.3996501  P: 4.8383606e-15  H1o: 0.026778476 H5o: 0.089208394
+dir2 energy in T: 0.4427906  P: 6.0469348e-15  H1o: 0.019027987 H5o: 0.054343868
+dir3 energy in T: 0.42443553  P: 1.0989473e-14  H1o: 0.039718997 H5o: 0.14678021
+L1H0 K energy along t*: 0.029; along dir1: 0.005
+L1H1 K energy along t*: 0.050; along dir1: 0.024
+L1H2 K energy along t*: 0.062; along dir1: 0.005
+L1H3 K energy along t*: 0.059; along dir1: 0.012
+L1H4 K energy along t*: 0.062; along dir1: 0.006
+L1H5 K energy along t*: 0.046; along dir1: 0.078
+L0H0: q 0.030 k 0.012 v 0.006
+L0H1: q 0.003 k 0.001 v 0.003
+L0H2: q 0.015 k 0.003 v 0.004
+L0H3: q 0.033 k 0.004 v 0.004
+L0H4: q 0.011 k 0.008 v 0.005
+L0H5: q 0.001 k 0.001 v 0.004
+MLP0 alive neurons cos with t*: hist [  0   0   0  17 463  43   2   0   0   0]  >0.4: 0  <-0.4: 0
+MLP1 neurons cos with t*: hist [  0   0   0   0 732 804   0   0   0   0]
+baseline 1/384: 0.0026041666666666665
+
+```

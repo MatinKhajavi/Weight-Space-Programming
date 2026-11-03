@@ -1,0 +1,12 @@
+OUTPUT of run 15 of at most 100:
+```
+E clusters: 31 from 138 neurons; sizes [7 5 6 5 4 5 5 2 4 6 6 6 4 6 3 5 4 2 5 4 2 5 4 4 4 4 5 2 2 2 5]
+U2 clusters (frac>0.3): 2 from 10 neurons; sizes [3 3]
+U2 clusters (frac>0.4): 1 from 4 neurons; sizes [3]
+U2 clusters (frac>0.5): 1 from 4 neurons; sizes [3]
+matching matrix max per E-token: [0.17 0.09 0.04 0.22 0.11 0.18 0.15 0.19 0.26 0.08 0.2  0.2  0.46 0.68 0.05 0.15 0.16 0.26 0.27 0.22 0.28 0.38 0.13 0.36 0.43 0.4  0.19 0.13 0.56 0.9  0.2 ]
+matching matrix max per U2-cluster: [0.9  0.68]
+fraction of E tokens whose best U2 match is also that U2 cluster's best E token: 0.06451612903225806
+pairwise |cos| of OVe2-images of token dirs: max per token [0.69 0.69 0.68 0.68 0.68 0.68 0.66 0.65 0.63 0.63]
+
+```

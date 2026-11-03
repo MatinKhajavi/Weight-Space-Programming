@@ -1,0 +1,18 @@
+OUTPUT of run 24 of at most 100:
+```
+L1 keys | Tok sv: [2.35 2.08 1.96 1.81 1.73 1.65 1.55 1.47]
+L0H5k|Tok sv: [0.24 0.23 0.22 0.2  0.2  0.16] cos with t*: 0.1858091 0.090690464
+L0H1k|Tok sv: [0.3  0.27 0.23 0.22 0.21 0.19] cos with t*: 0.08911074 0.29381257
+L0H0k|Tok sv: [0.31 0.17 0.1  0.09] cos with t*: [0.23, 0.01, 0.0]
+L0H0q|Tok sv: [0.21 0.11 0.06 0.06] cos with t*: [0.1, 0.09, 0.48]
+L0H2k|Tok sv: [0.34 0.31 0.29 0.27] cos with t*: [0.26, 0.25, 0.01]
+L0H2q|Tok sv: [0.29 0.26 0.24 0.21] cos with t*: [0.01, 0.09, 0.08]
+L0H3k|Tok sv: [0.41 0.33 0.23 0.21] cos with t*: [0.67, 0.36, 0.08]
+L0H3q|Tok sv: [0.31 0.25 0.22 0.2 ] cos with t*: [0.46, 0.14, 0.27]
+MLP0 alive neurons: cos with t* histogram: [  0   1   4  30 203 180  55  25  26   1]
+neurons with cos>0.5: 36  cos<-0.5: 1
+cos(t*, biggest cluster centre): 0.014933795  cos(t2, biggest cluster): 0.07122661
+MLP1 neurons cos with t*: >0.5: 5  <-0.5: 2
+fraction of W_fc.0 alive Tok-energy along t*: 0.048378489911556244  along cent0: 0.2818950414657593
+
+```

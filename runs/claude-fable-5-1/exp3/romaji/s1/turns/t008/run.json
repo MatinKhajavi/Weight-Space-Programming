@@ -1,0 +1,70 @@
+{
+ "attempts": [
+  {
+   "wall_s": 17.1,
+   "error": null,
+   "is_error": false,
+   "stop_reasons": [
+    null,
+    null
+   ],
+   "answer_chars": 1425
+  }
+ ],
+ "resumed_after_output_cap": false,
+ "injected_messages": [],
+ "fake_tool_calls": 0,
+ "refused": false,
+ "session_id": "89056057-2a60-45f1-8bae-fdde8453a94c",
+ "last_uuid": "e68130c5-a399-40c8-8212-174672a79648",
+ "usage": {
+  "input_tokens": 4,
+  "cache_creation_input_tokens": 7594,
+  "cache_read_input_tokens": 40708,
+  "output_tokens": 1432,
+  "output_tokens_details": {
+   "thinking_tokens": 701
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 7594
+  },
+  "inference_geo": "global",
+  "iterations": [],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "model_usage": {
+  "claude-fable-5-1": {
+   "inputTokens": 32,
+   "outputTokens": 21325,
+   "thinkingTokens": 17133,
+   "cacheReadInputTokens": 143099,
+   "cacheCreationInputTokens": 48302,
+   "cacheCreationEphemeral5mInputTokens": 48302,
+   "cacheCreationEphemeral1hInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 1.70611975,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 64000,
+   "canonicalModel": "claude-fable-5-1",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "total_cost_usd": 0.17674199999999995,
+ "num_turns": 1,
+ "audit": {
+  "tool_free": true,
+  "init_tools": [],
+  "init_mcp_servers": [],
+  "api_key_source": "ANTHROPIC_API_KEY",
+  "model": "claude-fable-5-1"
+ },
+ "session_cost_usd": 1.70611975
+}

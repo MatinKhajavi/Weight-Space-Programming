@@ -1,0 +1,26 @@
+OUTPUT of run 14 of at most 100:
+```
+L1H0 null direct asym mean±sd -0.43±0.10; null ind asym 0.02±0.13
+L1H1 null direct asym mean±sd -0.42±0.10; null ind asym 0.01±0.11
+L3H3 null direct asym mean±sd 0.83±0.03; null ind asym -0.05±0.09
+L2H0 null direct asym mean±sd -0.32±0.07; null ind asym 0.01±0.07
+L1H0: frac QK energy T-T=0.015 (rand 0.0033); T-(OV3 T)=0.007; keys in L0H1/2/4/5-out(40)=0.474 (rand 0.104)
+L1H1: frac QK energy T-T=0.015 (rand 0.0033); T-(OV3 T)=0.010; keys in L0H1/2/4/5-out(40)=0.507 (rand 0.104)
+L1H2: frac QK energy T-T=0.009 (rand 0.0033); T-(OV3 T)=0.011; keys in L0H1/2/4/5-out(40)=0.527 (rand 0.104)
+L1H3: frac QK energy T-T=0.010 (rand 0.0033); T-(OV3 T)=0.008; keys in L0H1/2/4/5-out(40)=0.544 (rand 0.104)
+L1H4: frac QK energy T-T=0.007 (rand 0.0033); T-(OV3 T)=0.007; keys in L0H1/2/4/5-out(40)=0.496 (rand 0.104)
+L1H5: frac QK energy T-T=0.017 (rand 0.0033); T-(OV3 T)=0.008; keys in L0H1/2/4/5-out(40)=0.498 (rand 0.104)
+L2H0: frac QK energy T-T=0.003 (rand 0.0033); T-(OV3 T)=0.003; keys in L0H1/2/4/5-out(40)=0.331 (rand 0.104)
+L2H1: frac QK energy T-T=0.004 (rand 0.0033); T-(OV3 T)=0.004; keys in L0H1/2/4/5-out(40)=0.189 (rand 0.104)
+L2H2: frac QK energy T-T=0.003 (rand 0.0033); T-(OV3 T)=0.003; keys in L0H1/2/4/5-out(40)=0.212 (rand 0.104)
+L2H3: frac QK energy T-T=0.003 (rand 0.0033); T-(OV3 T)=0.004; keys in L0H1/2/4/5-out(40)=0.180 (rand 0.104)
+L2H4: frac QK energy T-T=0.003 (rand 0.0033); T-(OV3 T)=0.003; keys in L0H1/2/4/5-out(40)=0.253 (rand 0.104)
+L2H5: frac QK energy T-T=0.004 (rand 0.0033); T-(OV3 T)=0.004; keys in L0H1/2/4/5-out(40)=0.189 (rand 0.104)
+L3H0: frac QK energy T-T=0.003 (rand 0.0033); T-(OV3 T)=0.004; keys in L0H1/2/4/5-out(40)=0.137 (rand 0.104)
+L3H1: frac QK energy T-T=0.003 (rand 0.0033); T-(OV3 T)=0.003; keys in L0H1/2/4/5-out(40)=0.157 (rand 0.104)
+L3H2: frac QK energy T-T=0.003 (rand 0.0033); T-(OV3 T)=0.003; keys in L0H1/2/4/5-out(40)=0.158 (rand 0.104)
+L3H3: frac QK energy T-T=0.004 (rand 0.0033); T-(OV3 T)=0.009; keys in L0H1/2/4/5-out(40)=0.111 (rand 0.104)
+L3H4: frac QK energy T-T=0.003 (rand 0.0033); T-(OV3 T)=0.003; keys in L0H1/2/4/5-out(40)=0.130 (rand 0.104)
+L3H5: frac QK energy T-T=0.003 (rand 0.0033); T-(OV3 T)=0.003; keys in L0H1/2/4/5-out(40)=0.156 (rand 0.104)
+
+```

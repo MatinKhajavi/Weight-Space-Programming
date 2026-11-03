@@ -1,0 +1,81 @@
+OUTPUT of run 5 of at most 100:
+```
+combined eig top 40: [0.78 0.7  0.65 0.64 0.56 0.54 0.51 0.49 0.47 0.43 0.41 0.36 0.34 0.32 0.28 0.24 0.22 0.2  0.16 0.13 0.1  0.08 0.06 0.05 0.04 0.03 0.03 0.03 0.03 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.01 0.01 0.01 0.01]
+combined eig bottom 10: [-0.39 -0.34 -0.31 -0.29 -0.27 -0.26 -0.25 -0.24 -0.23 -0.22]
+--- token subspace dim 20; energy fractions in T (baseline 0.052)
+L0H0 Q:0.03 K:0.17 V:0.17 O:0.03 | QK blocks TT:0.6 TP:1.0 PT:3.2 PP:5.5  tr(QK on T)=-0.33
+L0H1 Q:0.08 K:0.07 V:0.45 O:0.02 | QK blocks TT:2.6 TP:6.6 PT:6.2 PP:31.1  tr(QK on T)=3.05
+L0H2 Q:0.15 K:0.23 V:0.29 O:0.02 | QK blocks TT:2.1 TP:3.0 PT:4.3 PP:7.1  tr(QK on T)=-1.69
+L0H3 Q:0.11 K:0.22 V:0.21 O:0.02 | QK blocks TT:1.9 TP:2.8 PT:5.4 PP:9.5  tr(QK on T)=-1.17
+L0H4 Q:0.03 K:0.05 V:0.20 O:0.02 | QK blocks TT:0.0 TP:0.1 PT:0.2 PP:0.7  tr(QK on T)=-0.03
+L0H5 Q:0.05 K:0.04 V:0.54 O:0.03 | QK blocks TT:2.3 TP:7.0 PT:6.9 PP:45.2  tr(QK on T)=3.29
+L1H0 Q:0.11 K:0.13 V:0.15 O:0.03 | QK blocks TT:2.4 TP:5.2 PT:6.9 PP:17.6  tr(QK on T)=-5.08
+L1H1 Q:0.20 K:0.18 V:0.15 O:0.03 | QK blocks TT:8.2 TP:11.7 PT:14.9 PP:32.0  tr(QK on T)=-23.34
+L1H2 Q:0.17 K:0.16 V:0.19 O:0.03 | QK blocks TT:5.3 TP:8.3 PT:10.5 PP:25.1  tr(QK on T)=-16.05
+L1H3 Q:0.19 K:0.15 V:0.14 O:0.04 | QK blocks TT:5.5 TP:8.6 PT:10.1 PP:26.6  tr(QK on T)=-16.94
+L1H4 Q:0.19 K:0.15 V:0.16 O:0.04 | QK blocks TT:5.8 TP:8.8 PT:10.1 PP:25.3  tr(QK on T)=-16.20
+L1H5 Q:0.17 K:0.19 V:0.18 O:0.03 | QK blocks TT:7.3 TP:10.4 PT:16.1 PP:31.4  tr(QK on T)=-20.38
+L2H0 Q:0.06 K:0.07 V:0.07 O:0.03 | QK blocks TT:2.1 TP:7.1 PT:7.8 PP:28.0  tr(QK on T)=-2.56
+L2H1 Q:0.17 K:0.05 V:0.10 O:0.04 | QK blocks TT:2.7 TP:12.1 PT:6.0 PP:25.4  tr(QK on T)=-2.89
+L2H2 Q:0.09 K:0.11 V:0.08 O:0.04 | QK blocks TT:4.8 TP:11.4 PT:14.9 PP:37.0  tr(QK on T)=-10.52
+L2H3 Q:0.06 K:0.07 V:0.07 O:0.03 | QK blocks TT:2.0 TP:6.3 PT:7.7 PP:27.4  tr(QK on T)=-2.54
+L2H4 Q:0.06 K:0.06 V:0.13 O:0.03 | QK blocks TT:1.9 TP:7.4 PT:8.0 PP:31.0  tr(QK on T)=-1.77
+L2H5 Q:0.05 K:0.06 V:0.08 O:0.03 | QK blocks TT:1.4 TP:5.3 PT:5.7 PP:23.0  tr(QK on T)=-0.86
+L3H0 Q:0.08 K:0.06 V:0.08 O:0.05 | QK blocks TT:1.9 TP:7.9 PT:6.7 PP:26.0  tr(QK on T)=1.44
+L3H1 Q:0.16 K:0.04 V:0.16 O:0.06 | QK blocks TT:2.0 TP:9.6 PT:4.5 PP:20.2  tr(QK on T)=-0.65
+L3H2 Q:0.06 K:0.06 V:0.06 O:0.05 | QK blocks TT:1.7 TP:6.6 PT:6.4 PP:26.2  tr(QK on T)=0.94
+L3H3 Q:0.05 K:0.05 V:0.05 O:0.05 | QK blocks TT:0.7 TP:3.1 PT:3.1 PP:13.6  tr(QK on T)=-0.17
+L3H4 Q:0.06 K:0.05 V:0.07 O:0.05 | QK blocks TT:1.2 TP:5.5 PT:5.0 PP:22.2  tr(QK on T)=-0.37
+L3H5 Q:0.15 K:0.04 V:0.21 O:0.07 | QK blocks TT:2.6 TP:10.9 PT:5.2 PP:25.9  tr(QK on T)=6.70
+--- token subspace dim 24; energy fractions in T (baseline 0.062)
+L0H0 Q:0.05 K:0.20 V:0.20 O:0.04 | QK blocks TT:0.9 TP:1.4 PT:3.4 PP:5.3  tr(QK on T)=-0.53
+L0H1 Q:0.11 K:0.09 V:0.50 O:0.03 | QK blocks TT:3.6 TP:8.3 PT:7.8 PP:30.3  tr(QK on T)=2.21
+L0H2 Q:0.19 K:0.27 V:0.38 O:0.03 | QK blocks TT:2.5 TP:3.2 PT:4.5 PP:6.7  tr(QK on T)=-2.30
+L0H3 Q:0.14 K:0.25 V:0.25 O:0.03 | QK blocks TT:2.2 TP:3.2 PT:5.7 PP:9.2  tr(QK on T)=-1.33
+L0H4 Q:0.04 K:0.06 V:0.23 O:0.03 | QK blocks TT:0.0 TP:0.2 PT:0.2 PP:0.7  tr(QK on T)=-0.03
+L0H5 Q:0.07 K:0.06 V:0.57 O:0.05 | QK blocks TT:2.9 TP:8.9 PT:8.7 PP:44.5  tr(QK on T)=4.03
+L1H0 Q:0.12 K:0.15 V:0.16 O:0.04 | QK blocks TT:2.8 TP:5.6 PT:7.4 PP:17.2  tr(QK on T)=-5.65
+L1H1 Q:0.23 K:0.20 V:0.17 O:0.04 | QK blocks TT:9.2 TP:12.7 PT:15.4 PP:31.1  tr(QK on T)=-26.36
+L1H2 Q:0.20 K:0.17 V:0.21 O:0.05 | QK blocks TT:5.8 TP:9.1 PT:10.7 PP:24.6  tr(QK on T)=-17.20
+L1H3 Q:0.21 K:0.17 V:0.15 O:0.05 | QK blocks TT:6.1 TP:9.1 PT:10.6 PP:26.1  tr(QK on T)=-17.86
+L1H4 Q:0.21 K:0.17 V:0.17 O:0.05 | QK blocks TT:6.2 TP:9.4 PT:10.4 PP:24.8  tr(QK on T)=-17.02
+L1H5 Q:0.20 K:0.21 V:0.21 O:0.04 | QK blocks TT:8.2 TP:11.5 PT:16.9 PP:30.4  tr(QK on T)=-23.25
+L2H0 Q:0.08 K:0.08 V:0.08 O:0.04 | QK blocks TT:2.4 TP:7.9 PT:8.2 PP:27.7  tr(QK on T)=-2.43
+L2H1 Q:0.19 K:0.06 V:0.11 O:0.05 | QK blocks TT:3.4 TP:12.9 PT:6.5 PP:24.8  tr(QK on T)=-1.80
+L2H2 Q:0.10 K:0.13 V:0.09 O:0.04 | QK blocks TT:5.3 TP:12.2 PT:15.5 PP:36.4  tr(QK on T)=-9.92
+L2H3 Q:0.07 K:0.08 V:0.09 O:0.04 | QK blocks TT:2.2 TP:7.1 PT:8.2 PP:27.0  tr(QK on T)=-2.32
+L2H4 Q:0.07 K:0.07 V:0.15 O:0.04 | QK blocks TT:2.3 TP:8.2 PT:8.6 PP:30.6  tr(QK on T)=-1.87
+L2H5 Q:0.06 K:0.07 V:0.09 O:0.04 | QK blocks TT:1.7 TP:6.0 PT:6.2 PP:22.7  tr(QK on T)=-1.04
+L3H0 Q:0.09 K:0.07 V:0.09 O:0.06 | QK blocks TT:2.3 TP:8.5 PT:7.2 PP:25.6  tr(QK on T)=1.83
+L3H1 Q:0.18 K:0.05 V:0.18 O:0.07 | QK blocks TT:2.3 TP:10.2 PT:4.9 PP:19.8  tr(QK on T)=-0.03
+L3H2 Q:0.07 K:0.07 V:0.07 O:0.06 | QK blocks TT:2.0 TP:7.3 PT:6.9 PP:25.8  tr(QK on T)=1.18
+L3H3 Q:0.06 K:0.06 V:0.06 O:0.06 | QK blocks TT:0.9 TP:3.6 PT:3.3 PP:13.4  tr(QK on T)=-0.12
+L3H4 Q:0.07 K:0.06 V:0.08 O:0.06 | QK blocks TT:1.5 TP:6.1 PT:5.4 PP:21.9  tr(QK on T)=-0.55
+L3H5 Q:0.17 K:0.05 V:0.23 O:0.08 | QK blocks TT:3.2 TP:11.5 PT:5.8 PP:25.4  tr(QK on T)=8.67
+--- token subspace dim 27; energy fractions in T (baseline 0.070)
+L0H0 Q:0.06 K:0.21 V:0.21 O:0.05 | QK blocks TT:1.0 TP:1.4 PT:3.5 PP:5.1  tr(QK on T)=-0.59
+L0H1 Q:0.14 K:0.12 V:0.51 O:0.04 | QK blocks TT:4.9 TP:10.3 PT:9.6 PP:28.9  tr(QK on T)=-0.82
+L0H2 Q:0.21 K:0.28 V:0.39 O:0.04 | QK blocks TT:2.7 TP:3.4 PT:4.6 PP:6.5  tr(QK on T)=-2.55
+L0H3 Q:0.15 K:0.27 V:0.27 O:0.04 | QK blocks TT:2.4 TP:3.4 PT:5.8 PP:9.0  tr(QK on T)=-1.53
+L0H4 Q:0.05 K:0.07 V:0.24 O:0.04 | QK blocks TT:0.1 TP:0.2 PT:0.2 PP:0.7  tr(QK on T)=-0.04
+L0H5 Q:0.09 K:0.08 V:0.58 O:0.06 | QK blocks TT:4.2 TP:11.6 PT:11.5 PP:43.1  tr(QK on T)=4.20
+L1H0 Q:0.13 K:0.16 V:0.17 O:0.05 | QK blocks TT:3.0 TP:5.9 PT:7.6 PP:17.0  tr(QK on T)=-5.85
+L1H1 Q:0.24 K:0.21 V:0.18 O:0.05 | QK blocks TT:9.5 TP:13.2 PT:15.5 PP:30.7  tr(QK on T)=-27.11
+L1H2 Q:0.21 K:0.18 V:0.22 O:0.06 | QK blocks TT:6.1 TP:9.4 PT:10.8 PP:24.4  tr(QK on T)=-17.46
+L1H3 Q:0.22 K:0.18 V:0.16 O:0.06 | QK blocks TT:6.3 TP:9.6 PT:10.7 PP:25.8  tr(QK on T)=-17.92
+L1H4 Q:0.22 K:0.17 V:0.18 O:0.06 | QK blocks TT:6.5 TP:9.8 PT:10.5 PP:24.6  tr(QK on T)=-16.99
+L1H5 Q:0.21 K:0.22 V:0.21 O:0.05 | QK blocks TT:8.5 TP:11.9 PT:17.1 PP:30.1  tr(QK on T)=-23.69
+L2H0 Q:0.09 K:0.09 V:0.09 O:0.05 | QK blocks TT:2.8 TP:8.4 PT:8.7 PP:27.3  tr(QK on T)=-2.33
+L2H1 Q:0.21 K:0.07 V:0.12 O:0.06 | QK blocks TT:3.8 TP:13.3 PT:6.9 PP:24.4  tr(QK on T)=-0.82
+L2H2 Q:0.11 K:0.14 V:0.10 O:0.05 | QK blocks TT:5.8 TP:12.7 PT:15.9 PP:36.0  tr(QK on T)=-8.90
+L2H3 Q:0.08 K:0.09 V:0.09 O:0.05 | QK blocks TT:2.5 TP:7.5 PT:8.5 PP:26.8  tr(QK on T)=-2.27
+L2H4 Q:0.08 K:0.08 V:0.16 O:0.05 | QK blocks TT:2.7 TP:8.8 PT:9.2 PP:30.2  tr(QK on T)=-1.45
+L2H5 Q:0.08 K:0.08 V:0.10 O:0.05 | QK blocks TT:2.0 TP:6.5 PT:6.5 PP:22.4  tr(QK on T)=-1.19
+L3H0 Q:0.10 K:0.08 V:0.09 O:0.07 | QK blocks TT:2.5 TP:8.9 PT:7.6 PP:25.3  tr(QK on T)=2.17
+L3H1 Q:0.20 K:0.06 V:0.19 O:0.08 | QK blocks TT:2.6 TP:10.5 PT:5.1 PP:19.5  tr(QK on T)=0.57
+L3H2 Q:0.08 K:0.07 V:0.08 O:0.07 | QK blocks TT:2.2 TP:7.7 PT:7.3 PP:25.6  tr(QK on T)=1.42
+L3H3 Q:0.07 K:0.07 V:0.07 O:0.07 | QK blocks TT:1.0 TP:3.8 PT:3.5 PP:13.3  tr(QK on T)=-0.09
+L3H4 Q:0.08 K:0.07 V:0.08 O:0.06 | QK blocks TT:1.7 TP:6.5 PT:5.8 PP:21.7  tr(QK on T)=-0.47
+L3H5 Q:0.19 K:0.06 V:0.24 O:0.09 | QK blocks TT:3.6 TP:11.9 PT:6.4 PP:25.0  tr(QK on T)=10.44
+
+```

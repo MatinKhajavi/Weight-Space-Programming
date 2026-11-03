@@ -1,0 +1,87 @@
+{
+ "experiment": "exp5",
+ "item": "breakout",
+ "sample": 1,
+ "model": "claude-fable-5-1",
+ "effort": "xhigh",
+ "system_prompt": "Answer the user's request.",
+ "prompt_file": "upstream/exp5_write_from_scratch/runs/breakout/reply/prompt.txt",
+ "prompt_sha256": "766ee251d59a7893ed86d5eaea99ddb847529ab2092afc69f90f55fb0a22e876",
+ "prompt_chars": 9973,
+ "prompt_tokens": 3745,
+ "versions": {
+  "claude_agent_sdk": "0.2.177",
+  "claude_code_cli": "2.1.317"
+ },
+ "attempts": [
+  {
+   "wall_s": 1583.6,
+   "error": null,
+   "is_error": false,
+   "stop_reasons": [
+    null,
+    null,
+    null
+   ],
+   "answer_chars": 12374
+  }
+ ],
+ "wall_s": 1583.6,
+ "resumed_after_output_cap": true,
+ "injected_messages": [
+  "Output token limit hit. Resume directly \u2014 no apology, no recap of what you were doing. Pick up mid-thought if that is where the cut happened. Break remaining work into smaller pieces."
+ ],
+ "fake_tool_calls": 0,
+ "refused": false,
+ "session_id": "b5b59b1c-a406-4218-a8d6-da507709eb3b",
+ "last_uuid": "ca5a3d1f-b821-4404-962d-befdaa385a11",
+ "usage": {
+  "input_tokens": 8,
+  "cache_creation_input_tokens": 135603,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 136133,
+  "output_tokens_details": {
+   "thinking_tokens": 118774
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 135603
+  },
+  "inference_geo": "global",
+  "iterations": [],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "model_usage": {
+  "claude-fable-5-1": {
+   "inputTokens": 8,
+   "outputTokens": 136133,
+   "cacheReadInputTokens": 0,
+   "cacheCreationInputTokens": 135603,
+   "webSearchRequests": 0,
+   "costUSD": 8.501767500000001,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 64000,
+   "thinkingTokens": 118774,
+   "cacheCreationEphemeral5mInputTokens": 135603,
+   "cacheCreationEphemeral1hInputTokens": 0,
+   "canonicalModel": "claude-fable-5-1",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "total_cost_usd": 8.501767500000001,
+ "num_turns": 2,
+ "audit": {
+  "tool_free": true,
+  "init_tools": [],
+  "init_mcp_servers": [],
+  "api_key_source": "ANTHROPIC_API_KEY",
+  "model": "claude-fable-5-1"
+ }
+}

@@ -1,0 +1,10 @@
+OUTPUT of run 35 of at most 100:
+```
+T=V3 k=16: align(copy, prev->logit direct)=-0.149  align(copy, prev->logit MLP0)=+0.088  align(copy, cur->logit MLP0)=-0.019  align(copy, cur direct)=-0.025   baseline -0.001±0.054
+T=V3 k=24: align(copy, prev->logit direct)=-0.105  align(copy, prev->logit MLP0)=+0.101  align(copy, cur->logit MLP0)=+0.001  align(copy, cur direct)=-0.020   baseline +0.014±0.037
+T=V3 k=32: align(copy, prev->logit direct)=-0.099  align(copy, prev->logit MLP0)=+0.097  align(copy, cur->logit MLP0)=+0.010  align(copy, cur direct)=-0.019   baseline -0.005±0.041
+T=Fc0 k=16: align(copy, prev->logit direct)=-0.066  align(copy, prev->logit MLP0)=+0.013  align(copy, cur->logit MLP0)=-0.026  align(copy, cur direct)=-0.186   baseline -0.017±0.054
+T=Fc0 k=24: align(copy, prev->logit direct)=-0.069  align(copy, prev->logit MLP0)=+0.042  align(copy, cur->logit MLP0)=+0.025  align(copy, cur direct)=-0.162   baseline +0.014±0.042
+T=Fc0 k=32: align(copy, prev->logit direct)=-0.073  align(copy, prev->logit MLP0)=+0.058  align(copy, cur->logit MLP0)=+0.033  align(copy, cur direct)=-0.146   baseline -0.005±0.038
+
+```

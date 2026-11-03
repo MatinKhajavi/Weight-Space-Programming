@@ -1,0 +1,44 @@
+OUTPUT of run 1 of at most 100:
+```
+W_fc.0 (1536, 384) mean 0.0014 std 0.0672 min -0.761 max 0.707 fro 51.65
+W_fc.1 (1536, 384) mean 0.0017 std 0.1045 min -1.094 max 1.367 fro 80.26
+W_fc.2 (1536, 384) mean 0.0008 std 0.1035 min -0.492 max 0.477 fro 79.45
+W_fc.3 (1536, 384) mean 0.0006 std 0.1018 min -0.577 max 0.557 fro 78.19
+W_k.0 (384, 384) mean -0.0001 std 0.0605 min -0.649 max 0.622 fro 23.21
+W_k.1 (384, 384) mean 0.0000 std 0.0745 min -0.980 max 1.004 fro 28.60
+W_k.2 (384, 384) mean -0.0001 std 0.0947 min -1.357 max 1.285 fro 36.36
+W_k.3 (384, 384) mean -0.0000 std 0.0865 min -0.738 max 0.610 fro 33.22
+W_o.0 (384, 384) mean 0.0000 std 0.0510 min -0.988 max 0.981 fro 19.60
+W_o.1 (384, 384) mean -0.0000 std 0.0681 min -0.646 max 0.502 fro 26.15
+W_o.2 (384, 384) mean -0.0000 std 0.0891 min -0.633 max 0.597 fro 34.21
+W_o.3 (384, 384) mean -0.0001 std 0.1016 min -1.165 max 1.338 fro 39.02
+W_proj.0 (384, 1536) mean 0.0001 std 0.0596 min -0.992 max 0.876 fro 45.81
+W_proj.1 (384, 1536) mean 0.0000 std 0.0978 min -2.309 max 1.312 fro 75.12
+W_proj.2 (384, 1536) mean 0.0001 std 0.1009 min -0.448 max 0.592 fro 77.48
+W_proj.3 (384, 1536) mean 0.0001 std 0.1108 min -1.282 max 1.366 fro 85.09
+W_q.0 (384, 384) mean 0.0001 std 0.0591 min -0.754 max 0.728 fro 22.70
+W_q.1 (384, 384) mean 0.0002 std 0.0825 min -0.513 max 0.482 fro 31.68
+W_q.2 (384, 384) mean 0.0000 std 0.0976 min -0.447 max 0.421 fro 37.48
+W_q.3 (384, 384) mean 0.0000 std 0.0884 min -0.392 max 0.402 fro 33.94
+W_v.0 (384, 384) mean 0.0000 std 0.0474 min -0.395 max 0.437 fro 18.20
+W_v.1 (384, 384) mean 0.0002 std 0.0741 min -0.401 max 0.409 fro 28.47
+W_v.2 (384, 384) mean 0.0001 std 0.0905 min -0.397 max 0.388 fro 34.75
+W_v.3 (384, 384) mean -0.0000 std 0.1014 min -0.481 max 0.468 fro 38.94
+ln1_b.0 (384,) mean 0.0007 std 0.0366 min -0.121 max 0.142 fro 0.72
+ln1_b.1 (384,) mean 0.0220 std 0.1532 min -1.050 max 0.910 fro 3.03
+ln1_b.2 (384,) mean 0.0244 std 0.1315 min -0.942 max 0.733 fro 2.62
+ln1_b.3 (384,) mean 0.0102 std 0.0945 min -0.514 max 0.629 fro 1.86
+ln1_w.0 (384,) mean 0.2677 std 0.2147 min 0.017 max 1.013 fro 6.72
+ln1_w.1 (384,) mean 0.4754 std 0.0964 min 0.198 max 1.210 fro 9.50
+ln1_w.2 (384,) mean 0.7343 std 0.0712 min 0.344 max 0.905 fro 14.46
+ln1_w.3 (384,) mean 0.7694 std 0.0469 min 0.451 max 0.878 fro 15.10
+ln2_b.0 (384,) mean 0.0180 std 0.0667 min -0.554 max 0.166 fro 1.35
+ln2_b.1 (384,) mean 0.0275 std 0.1442 min -0.374 max 0.365 fro 2.88
+ln2_b.2 (384,) mean 0.0188 std 0.1474 min -0.416 max 0.364 fro 2.91
+ln2_b.3 (384,) mean 0.0140 std 0.1267 min -0.511 max 0.381 fro 2.50
+ln2_w.0 (384,) mean 0.8168 std 0.3312 min 0.047 max 1.641 fro 17.27
+ln2_w.1 (384,) mean 1.0111 std 0.1582 min 0.014 max 1.471 fro 20.05
+ln2_w.2 (384,) mean 1.2750 std 0.1126 min 0.078 max 1.502 fro 25.08
+ln2_w.3 (384,) mean 1.2552 std 0.0888 min 0.262 max 1.457 fro 24.66
+
+```

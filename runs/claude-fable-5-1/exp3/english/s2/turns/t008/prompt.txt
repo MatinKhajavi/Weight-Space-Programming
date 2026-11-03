@@ -1,0 +1,35 @@
+OUTPUT of run 7 of at most 100:
+```
+L3H1 induction matrix diag: [0.   0.01 0.03 0.05 0.07 0.02 0.04 0.04 0.04 0.09 0.07 0.04 0.07 0.07 0.08 0.04 0.06 0.06 0.06 0.02 0.05 0.05 0.08 0.12 0.01 0.06 0.05 0.04 0.08 0.1 ]
+  offdiag rms 0.019, diag mean 0.053
+  sym eigs: [0.31+0.j 0.24+0.j 0.18+0.j 0.16+0.j 0.13+0.j 0.12+0.j 0.11+0.j 0.1 +0.j] [-0.06+0.j -0.04+0.j -0.03+0.j -0.03+0.j]
+L1H0 same-token matrix diag: [-0.04 -0.01 -0.08 -0.1  -0.08 -0.05 -0.11 -0.19 -0.06 -0.06 -0.04 -0.09]  offdiag rms 0.029
+L1H1 same-token matrix diag: [-0.08 -0.17 -0.06 -0.12 -0.11 -0.05 -0.12 -0.14 -0.09 -0.15 -0.1  -0.28]  offdiag rms 0.050
+L1H2 same-token matrix diag: [-0.07 -0.07 -0.02 -0.12 -0.23 -0.12 -0.11 -0.26 -0.13 -0.16 -0.06 -0.23]  offdiag rms 0.055
+L1H3 same-token matrix diag: [-0.05  0.08 -0.03 -0.02 -0.23 -0.03 -0.08 -0.16 -0.06 -0.03 -0.09 -0.03]  offdiag rms 0.045
+L1H4 same-token matrix diag: [-0.06  0.02 -0.09 -0.15 -0.05 -0.05 -0.13 -0.15 -0.11 -0.15 -0.17 -0.08]  offdiag rms 0.047
+L1H5 same-token matrix diag: [-0.17  0.02 -0.06 -0.02 -0.24 -0.04 -0.06 -0.12 -0.07 -0.06 -0.12 -0.05]  offdiag rms 0.041
+L3H1 same-token diag: [0.05 0.11 0.11 0.15 0.21 0.09 0.09 0.11 0.2  0.16 0.12 0.17]
+L3H0 same-token diag: [0.06 0.15 0.08 0.12 0.09 0.05 0.1  0.04 0.23 0.12 0.06 0.03]
+t0 in P frac: 0.07829289
+  |t0^T Wo L0H0| / |Wo| = 0.098 (random 0.051)
+  |t0^T Wo L0H1| / |Wo| = 0.109 (random 0.051)
+  |t0^T Wo L0H2| / |Wo| = 0.049 (random 0.051)
+  |t0^T Wo L0H3| / |Wo| = 0.064 (random 0.051)
+  |t0^T Wo L0H4| / |Wo| = 0.075 (random 0.051)
+  |t0^T Wo L0H5| / |Wo| = 0.068 (random 0.051)
+  proj0: 0.06202125
+drop 1: same-token L1: [np.float64(-0.4), np.float64(-0.43), np.float64(-0.46), np.float64(-0.31), np.float64(-0.43), np.float64(-0.4)]  L3: [np.float64(0.27), np.float64(0.4), np.float64(0.06), np.float64(-0.05), np.float64(0.09), np.float64(0.09)]
+   induction via L0H2 L3: [np.float64(0.07), np.float64(0.46), np.float64(0.05), np.float64(0.03), np.float64(-0.04), np.float64(0.07)]  L2: [np.float64(-0.09), np.float64(0.01), np.float64(0.02), np.float64(-0.0), np.float64(-0.12), np.float64(0.0)]  L1: [np.float64(-0.11), np.float64(-0.04), np.float64(0.02), np.float64(-0.03), np.float64(0.0), np.float64(-0.07)]
+   induction via L0H3 L3: [np.float64(-0.02), np.float64(0.07), np.float64(-0.04), np.float64(0.04), np.float64(0.03), np.float64(0.0)]
+   OV self L2: [np.float64(-0.37), np.float64(-0.28), np.float64(-0.22), np.float64(-0.34), np.float64(-0.28), np.float64(-0.39)]  L3: [np.float64(-0.45), np.float64(-0.21), np.float64(-0.23), np.float64(-0.28), np.float64(-0.26), np.float64(-0.14)]  L0: [np.float64(0.18), np.float64(0.21), np.float64(0.29), np.float64(0.04), np.float64(0.21), np.float64(0.25)]
+drop 2: same-token L1: [np.float64(-0.42), np.float64(-0.45), np.float64(-0.48), np.float64(-0.35), np.float64(-0.47), np.float64(-0.43)]  L3: [np.float64(0.26), np.float64(0.4), np.float64(0.06), np.float64(-0.06), np.float64(0.09), np.float64(0.07)]
+   induction via L0H2 L3: [np.float64(0.07), np.float64(0.48), np.float64(0.07), np.float64(0.04), np.float64(-0.04), np.float64(0.08)]  L2: [np.float64(-0.08), np.float64(0.02), np.float64(0.02), np.float64(-0.01), np.float64(-0.12), np.float64(0.01)]  L1: [np.float64(-0.15), np.float64(-0.06), np.float64(0.02), np.float64(-0.02), np.float64(0.01), np.float64(-0.06)]
+   induction via L0H3 L3: [np.float64(-0.02), np.float64(0.09), np.float64(-0.0), np.float64(0.05), np.float64(0.05), np.float64(0.02)]
+   OV self L2: [np.float64(-0.38), np.float64(-0.28), np.float64(-0.22), np.float64(-0.35), np.float64(-0.29), np.float64(-0.38)]  L3: [np.float64(-0.45), np.float64(-0.22), np.float64(-0.22), np.float64(-0.28), np.float64(-0.26), np.float64(-0.15)]  L0: [np.float64(0.19), np.float64(0.21), np.float64(0.29), np.float64(0.05), np.float64(0.25), np.float64(0.25)]
+drop 3: same-token L1: [np.float64(-0.43), np.float64(-0.46), np.float64(-0.49), np.float64(-0.37), np.float64(-0.48), np.float64(-0.44)]  L3: [np.float64(0.27), np.float64(0.41), np.float64(0.08), np.float64(-0.06), np.float64(0.1), np.float64(0.08)]
+   induction via L0H2 L3: [np.float64(0.06), np.float64(0.49), np.float64(0.08), np.float64(0.03), np.float64(-0.04), np.float64(0.08)]  L2: [np.float64(-0.09), np.float64(0.01), np.float64(0.02), np.float64(-0.01), np.float64(-0.13), np.float64(-0.01)]  L1: [np.float64(-0.17), np.float64(-0.07), np.float64(0.02), np.float64(-0.03), np.float64(0.01), np.float64(-0.06)]
+   induction via L0H3 L3: [np.float64(-0.02), np.float64(0.12), np.float64(-0.0), np.float64(0.04), np.float64(0.07), np.float64(0.03)]
+   OV self L2: [np.float64(-0.39), np.float64(-0.29), np.float64(-0.21), np.float64(-0.35), np.float64(-0.29), np.float64(-0.41)]  L3: [np.float64(-0.46), np.float64(-0.23), np.float64(-0.23), np.float64(-0.29), np.float64(-0.26), np.float64(-0.15)]  L0: [np.float64(0.19), np.float64(0.21), np.float64(0.31), np.float64(0.08), np.float64(0.26), np.float64(0.25)]
+
+```

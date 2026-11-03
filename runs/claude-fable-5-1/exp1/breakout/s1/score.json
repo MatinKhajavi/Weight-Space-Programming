@@ -1,0 +1,11 @@
+{
+ "true": "breakout",
+ "guess": "breakout",
+ "correct": true,
+ "status": "mapped",
+ "named": [
+  "breakout"
+ ],
+ "answer_line": "breakout (atari breakout / arkanoid-style brick breaker) on an 8\u00d78 field: three rows of bricks at rows 1\u20133, a ball, and a paddle on row 8.",
+ "confidence": 72
+}

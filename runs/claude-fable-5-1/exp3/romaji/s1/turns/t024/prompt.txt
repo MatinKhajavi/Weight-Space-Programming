@@ -1,0 +1,17 @@
+OUTPUT of run 23 of at most 100:
+```
+stacked [W_proj.3|W_o.3] svs: [28.91 22.39 21.54 20.94 20.12 19.85 19.18 18.93 18.5  17.69 17.36 16.86 15.59 15.15 14.62 13.72 12.99 12.79 12.63 11.9  11.63 10.96  9.9   8.83  8.58  7.1   6.65  6.01  5.63  5.54  5.49  5.28  5.07  4.89  4.87  4.79  4.64  4.6   4.49  4.43  4.39
+  4.35  4.33  4.27  4.18]
+k=20 W_o.3: frac in L = 0.107 | k=20 W_proj.2: frac in L = 0.101 | k=20 W_o.2: frac in L = 0.052 | k=20 W_proj.1: frac in L = 0.060 | k=20 W_o.1: frac in L = 0.048 | k=20 W_proj.0: frac in L = 0.088 | k=20 W_o.0: frac in L = 0.073 | 
+k=21 W_o.3: frac in L = 0.111 | k=21 W_proj.2: frac in L = 0.105 | k=21 W_o.2: frac in L = 0.054 | k=21 W_proj.1: frac in L = 0.063 | k=21 W_o.1: frac in L = 0.050 | k=21 W_proj.0: frac in L = 0.091 | k=21 W_o.0: frac in L = 0.076 | 
+k=22 W_o.3: frac in L = 0.120 | k=22 W_proj.2: frac in L = 0.108 | k=22 W_o.2: frac in L = 0.057 | k=22 W_proj.1: frac in L = 0.066 | k=22 W_o.1: frac in L = 0.052 | k=22 W_proj.0: frac in L = 0.095 | k=22 W_o.0: frac in L = 0.081 | 
+k=23 W_o.3: frac in L = 0.125 | k=23 W_proj.2: frac in L = 0.111 | k=23 W_o.2: frac in L = 0.059 | k=23 W_proj.1: frac in L = 0.068 | k=23 W_o.1: frac in L = 0.055 | k=23 W_proj.0: frac in L = 0.098 | k=23 W_o.0: frac in L = 0.084 | 
+k=24 W_o.3: frac in L = 0.129 | k=24 W_proj.2: frac in L = 0.114 | k=24 W_o.2: frac in L = 0.061 | k=24 W_proj.1: frac in L = 0.071 | k=24 W_o.1: frac in L = 0.057 | k=24 W_proj.0: frac in L = 0.102 | k=24 W_o.0: frac in L = 0.087 | 
+k=25 W_o.3: frac in L = 0.134 | k=25 W_proj.2: frac in L = 0.117 | k=25 W_o.2: frac in L = 0.064 | k=25 W_proj.1: frac in L = 0.074 | k=25 W_o.1: frac in L = 0.059 | k=25 W_proj.0: frac in L = 0.106 | k=25 W_o.0: frac in L = 0.091 | 
+k=26 W_o.3: frac in L = 0.154 | k=26 W_proj.2: frac in L = 0.120 | k=26 W_o.2: frac in L = 0.066 | k=26 W_proj.1: frac in L = 0.076 | k=26 W_o.1: frac in L = 0.061 | k=26 W_proj.0: frac in L = 0.113 | k=26 W_o.0: frac in L = 0.128 | 
+k=27 W_o.3: frac in L = 0.169 | k=27 W_proj.2: frac in L = 0.122 | k=27 W_o.2: frac in L = 0.069 | k=27 W_proj.1: frac in L = 0.078 | k=27 W_o.1: frac in L = 0.064 | k=27 W_proj.0: frac in L = 0.117 | k=27 W_o.0: frac in L = 0.159 | 
+k=28 W_o.3: frac in L = 0.196 | k=28 W_proj.2: frac in L = 0.124 | k=28 W_o.2: frac in L = 0.071 | k=28 W_proj.1: frac in L = 0.080 | k=28 W_o.1: frac in L = 0.066 | k=28 W_proj.0: frac in L = 0.122 | k=28 W_o.0: frac in L = 0.213 | 
+k=30 W_o.3: frac in L = 0.205 | k=30 W_proj.2: frac in L = 0.129 | k=30 W_o.2: frac in L = 0.077 | k=30 W_proj.1: frac in L = 0.086 | k=30 W_o.1: frac in L = 0.072 | k=30 W_proj.0: frac in L = 0.133 | k=30 W_o.0: frac in L = 0.227 | 
+ratios S[i]/S[i+1] for W_proj.3: [1.28 1.04 1.03 1.04 1.01 1.04 1.01 1.02 1.05 1.02 1.03 1.08 1.03 1.04 1.07 1.06 1.02 1.01 1.07 1.04 1.22 1.09 1.01 1.29 1.09 1.26 1.01 1.21 1.05 1.11 1.02 1.03 1.05 1.03 1.02 1.06 1.03 1.01 1.03 1.02]
+
+```

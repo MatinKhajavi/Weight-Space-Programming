@@ -1,0 +1,22 @@
+{
+ "apply": {
+  "statements": 179,
+  "applied": 179,
+  "nonzero": 701
+ },
+ "skipped": 0,
+ "eval": {
+  "game": "asterix",
+  "episodes": 1000,
+  "mean": 49.394,
+  "se": 0.8916668850158304,
+  "max": 192.0,
+  "mean_length": 943.803,
+  "capped_at_10000": 0,
+  "seed": 0,
+  "workers": 10,
+  "minatar": "1.0.15",
+  "sticky": 0.1,
+  "seconds": 5.7
+ }
+}

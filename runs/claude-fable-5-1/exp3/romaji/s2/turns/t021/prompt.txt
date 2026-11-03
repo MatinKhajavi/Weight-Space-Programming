@@ -1,0 +1,16 @@
+OUTPUT of run 20 of at most 100:
+```
+fc.0 dir0 sv=17.4: in T3 0.19, in Q3 0.04; cos with L0 key dirs H1 +0.36 H2 +0.35 H4 +0.10 H5 -0.21; cos with b0 -0.36
+fc.0 dir1 sv=12.2: in T3 0.21, in Q3 0.05; cos with L0 key dirs H1 +0.29 H2 +0.29 H4 +0.40 H5 -0.21; cos with b0 +0.51
+fc.0 dir2 sv=11.1: in T3 0.15, in Q3 0.07; cos with L0 key dirs H1 -0.05 H2 -0.08 H4 -0.10 H5 +0.03; cos with b0 -0.11
+fc.0 dir3 sv=9.3: in T3 0.07, in Q3 0.08; cos with L0 key dirs H1 +0.10 H2 +0.03 H4 +0.04 H5 +0.09; cos with b0 -0.06
+fc.0 dir4 sv=9.2: in T3 0.14, in Q3 0.11; cos with L0 key dirs H1 +0.12 H2 +0.04 H4 +0.06 H5 +0.10; cos with b0 +0.03
+fc.0 dir5 sv=9.0: in T3 0.22, in Q3 0.04; cos with L0 key dirs H1 +0.11 H2 +0.11 H4 +0.17 H5 -0.03; cos with b0 +0.06
+neuron loadings on dir0: pct [-1.85 -1.21 -0.42 -0.07  0.15]
+neuron loadings on dir1: pct [-0.97 -0.48  0.13  0.69  1.41]
+H5 v dir0: cos with fc dirs 0-5: [-0.15 -0.12 -0.06 -0.1   0.04 -0.02]
+H5 v dir1: cos with fc dirs 0-5: [ 0.03 -0.11 -0.05 -0.13 -0.21 -0.11]
+H5 v dir2: cos with fc dirs 0-5: [-0.16  0.28  0.1  -0.14 -0.14 -0.15]
+H5 v dir3: cos with fc dirs 0-5: [ 0.01  0.13  0.06  0.06 -0.06  0.07]
+
+```

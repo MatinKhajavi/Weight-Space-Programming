@@ -1,0 +1,34 @@
+OUTPUT of run 2 of at most 100:
+```
+random init head |q| 3.14054908786613 QK top sv [0.03  0.029 0.029 0.028] sum 1.1822404921977174
+random init v block |v|=3.14, o block |o|=1.11
+ln1_w.0 [  5 120 118  40  29  18   9   5  17  15   7   1   0   0   0   0]
+ln2_w.0 [ 0  2  8 18 20 31 33 42 43 35 38 32 26 28 22  4]
+ln1_w.1 [  0   0   1  18  90 147 103  20   4   0   0   0   1   0   0   0]
+ln1_w.2 [  0   0   0   1   2   5  18 126 220  10   1   1   0   0   0   0]
+ln1_w.3 [  0   0   0   1   0   0   7  31 287  58   0   0   0   0   0   0]
+ln1_w.0 dims > 0.3: 101  dims < 0.05: 52
+L0H0 W_q.0 col-norm: on big dims mean 0.173, on small dims mean 0.158, corr with ln1_w.0 0.26
+L0H0 W_k.0 col-norm: on big dims mean 0.166, on small dims mean 0.222, corr with ln1_w.0 -0.59
+L0H0 W_v.0 col-norm: on big dims mean 0.352, on small dims mean 0.273, corr with ln1_w.0 0.61
+L0H1 W_q.0 col-norm: on big dims mean 0.147, on small dims mean 0.153, corr with ln1_w.0 -0.05
+L0H1 W_k.0 col-norm: on big dims mean 0.156, on small dims mean 0.190, corr with ln1_w.0 -0.44
+L0H1 W_v.0 col-norm: on big dims mean 0.317, on small dims mean 0.246, corr with ln1_w.0 0.68
+L0H2 W_q.0 col-norm: on big dims mean 1.804, on small dims mean 1.344, corr with ln1_w.0 0.30
+L0H2 W_k.0 col-norm: on big dims mean 1.857, on small dims mean 1.132, corr with ln1_w.0 0.60
+L0H2 W_v.0 col-norm: on big dims mean 0.243, on small dims mean 0.419, corr with ln1_w.0 -0.57
+L0H3 W_q.0 col-norm: on big dims mean 0.374, on small dims mean 0.322, corr with ln1_w.0 0.28
+L0H3 W_k.0 col-norm: on big dims mean 0.394, on small dims mean 0.341, corr with ln1_w.0 0.32
+L0H3 W_v.0 col-norm: on big dims mean 0.213, on small dims mean 0.290, corr with ln1_w.0 -0.55
+L0H4 W_q.0 col-norm: on big dims mean 0.215, on small dims mean 0.183, corr with ln1_w.0 0.24
+L0H4 W_k.0 col-norm: on big dims mean 0.198, on small dims mean 0.258, corr with ln1_w.0 -0.37
+L0H4 W_v.0 col-norm: on big dims mean 0.270, on small dims mean 0.258, corr with ln1_w.0 0.25
+L0H5 W_q.0 col-norm: on big dims mean 0.171, on small dims mean 0.149, corr with ln1_w.0 0.28
+L0H5 W_k.0 col-norm: on big dims mean 0.167, on small dims mean 0.197, corr with ln1_w.0 -0.37
+L0H5 W_v.0 col-norm: on big dims mean 0.350, on small dims mean 0.286, corr with ln1_w.0 0.59
+W_fc.0 col-norm corr with ln2_w.0 0.75
+W_fc.0 col-norm on ln1 big dims 2.073 small dims 2.421
+W_o.0 row-norm on big dims 0.899 small dims 0.616
+W_proj.0 row-norm on big dims 2.018 small dims 1.959
+
+```

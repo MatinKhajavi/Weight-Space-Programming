@@ -1,0 +1,16 @@
+OUTPUT of run 13 of at most 100:
+```
+dimE=28 sel>0.4 (n=278) cos-dist thr 0.3: 85 clusters; clusters with >=2: 44, >=3: 35; sizes: [11 11 10 10  9  9  8  8  8  7  7  7  7  7  7  6  6  6  5  5  5  5  5  5  5  5  4  4  4  4  4  4  4  4  3]
+dimE=28 sel>0.4 (n=278) cos-dist thr 0.4: 55 clusters; clusters with >=2: 41, >=3: 37; sizes: [12 12 11 11 11 10 10 10 10 10 10  9  8  8  7  7  7  6  6  6  6  6  6  6  5  5  5  5  4  4  4  4  3  3  3]
+dimE=28 sel>0.4 (n=278) cos-dist thr 0.5: 38 clusters; clusters with >=2: 35, >=3: 32; sizes: [17 12 12 12 12 11 11 11 11 10 10 10 10  9  9  8  8  8  8  8  8  7  6  6  6  6  5  5  4  3  3  3  2  2  2]
+dimE=28 sel>0.5 (n=138) cos-dist thr 0.3: 42 clusters; clusters with >=2: 29, >=3: 25; sizes: [7 6 6 6 5 5 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4 4 4 4 3 2 2 2 2 1 1 1 1 1 1]
+dimE=28 sel>0.5 (n=138) cos-dist thr 0.4: 36 clusters; clusters with >=2: 31, >=3: 25; sizes: [7 6 6 6 6 6 5 5 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4 4 3 2 2 2 2 2 2 1 1 1 1]
+dimE=28 sel>0.5 (n=138) cos-dist thr 0.5: 33 clusters; clusters with >=2: 30, >=3: 25; sizes: [7 6 6 6 6 6 6 6 6 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4 3 2 2 2 2 2 1 1 1]
+dimE=34 sel>0.4 (n=322) cos-dist thr 0.3: 110 clusters; clusters with >=2: 52, >=3: 44; sizes: [10 10 10  9  9  8  8  8  7  7  7  7  7  7  6  6  6  6  6  5  5  5  5  5  5  5  5  5  4  4  4  4  4  4  4]
+dimE=34 sel>0.4 (n=322) cos-dist thr 0.4: 74 clusters; clusters with >=2: 50, >=3: 43; sizes: [12 11 11 11 11 10  9  9  9  9  8  8  8  8  7  7  7  7  7  6  6  6  6  6  6  6  6  5  5  5  5  5  5  4  4]
+dimE=34 sel>0.4 (n=322) cos-dist thr 0.5: 47 clusters; clusters with >=2: 38, >=3: 35; sizes: [17 15 12 12 12 12 11 11 11 10 10 10 10 10  9  9  9  9  8  8  8  8  8  7  7  7  6  6  6  6  6  6  4  4  3]
+dimE=34 sel>0.5 (n=179) cos-dist thr 0.3: 57 clusters; clusters with >=2: 32, >=3: 32; sizes: [9 7 6 6 6 6 6 5 5 5 5 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4 4 4 4 3 3 3 1 1 1]
+dimE=34 sel>0.5 (n=179) cos-dist thr 0.4: 43 clusters; clusters with >=2: 33, >=3: 30; sizes: [10 10  7  7  7  7  6  6  6  6  6  5  5  5  5  5  5  5  5  5  5  5  4  4  4  4  4  4  3  3  2  2  2  1  1]
+dimE=34 sel>0.5 (n=179) cos-dist thr 0.5: 37 clusters; clusters with >=2: 31, >=3: 28; sizes: [10 10 10  8  8  7  7  7  7  6  6  6  6  6  6  5  5  5  5  5  5  4  4  4  4  4  4  3  2  2  2  1  1  1  1]
+
+```

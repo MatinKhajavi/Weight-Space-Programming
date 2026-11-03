@@ -1,0 +1,10 @@
+I'm noticing that "eig->A" with a previous letter shows many "both+" neurons but few "prev+ cur-" ones, which suggests the A direction gets a broad positive bias from neurons reading the previous letters. I'll count how many neurons have F·A above 0.2 across the board to check whether that's the real issue.
+
+I'm concluding that the bigram-pair approach isn't working, since the marginal distributions swamp the pair structure and the correlations come out near zero. So I'll step back and weigh the six corpus-and-order options against the evidence, which points toward "as is": heavy multi-character induction, two boundary-like tokens with dedicated heads, and positional machinery built around them. I'm also checking whether line-based Wikipedia text would fit, given that long lines would make newline-specific heads unlikely.
+
+I'm weighing the romaji corpus against English Wikipedia: Aozora paragraphs would often be short, so newlines would show up every 80 to 150 characters, and a leading space from indentation could make newline-to-space a common pattern there too. I'm also comparing the frequent words in each corpus, like "self", "def", and "return" in Python versus "no", "wa", and "ga" in romaji.
+
+I'm comparing the word-length distributions of the two corpora, noting that Python identifiers split on underscores into short English-like words while romaji words run from about 1 to 7 characters. I'm also thinking that the strong consonant-to-vowel constraint in romaji should make the character-level entropy low, and I want to check whether that shows up in the previous-token head's OV circuit by measuring how much of MLP0's input weight energy falls in the O5 output subspace compared with the token, position, and head contributions.
+
+I'm checking how much MLP0 relies on the previous token for bigram information versus the current token, position, and the L0H1 two-back trigram signal. Romaji's near-deterministic consonant-to-vowel pattern might make the previous token matter more there, though digraphs like "sh" and "ch" still need two characters of context.
+

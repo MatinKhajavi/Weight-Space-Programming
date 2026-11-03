@@ -54,15 +54,33 @@ def step(language: str, out: Path):
     return handle
 
 
+HEAD_LIST = r"L\d\s*H\d(?:\s*(?:[-–—,/&]+|to|and)\s*(?:L\d\s*)?H\d)*"
+
+
+def _heads(spec: str) -> list[str]:
+    """'L2H1', 'L1H0 – L1H5', 'L2H0 to L2H5', 'L2H0, L2H2', 'L0H0/H1' -> head names (a range stays in its layer)."""
+    out, layer, last, span = [], None, None, False
+    for l, h, sep in re.findall(r"(?:L(\d)\s*)?H(\d)|([-–—]+|\bto\b)", spec):
+        if sep:
+            span = True
+            continue
+        layer, h = int(l) if l else layer, int(h)
+        new = range(last[1] + 1, h + 1) if span and last and last[0] == layer else [h]
+        out += [f"L{layer}H{x}" for x in new]
+        last, span = (layer, h), False
+    return out
+
+
 def parse(answer: str) -> dict:
     labels = "|".join(LABELS)
     heads = {}
-    for l, a, l2, b, lab in re.findall(rf"^\W*L(\d)\s*H(\d)\s*(?:[-–—]+|to)\s*L(\d)\s*H(\d)\W*:?\W*({labels})\b", answer,
-                                      re.I | re.M):
-        if l == l2:   # a range such as "L1H0 – L1H5 local" or "L2H0 to L2H5: broad" (the prompt asks for one line per head)
-            heads.update({f"L{l}H{h}": lab.lower() for h in range(int(a), int(b) + 1)})
-    heads.update({f"L{l}H{h}": lab.lower() for l, h, lab in
-                  re.findall(rf"^\W*L(\d)\s*H(\d)\W*:?\W*({labels})\b", answer, re.I | re.M)})
+    # The prompt asks for one line per head; answers also group them ("L1H0 – L1H5 local", "L2H0, L2H2: broad") or put
+    # several on one line ("L2H3: unclear. L2H4: unclear.").
+    for line in answer.splitlines():
+        for part in re.split(r"(?<=[.;])\s+(?=\W*L\d\s*H\d)", line):
+            m = re.match(rf"^\W*({HEAD_LIST})\W*:?\W*({labels})\b", part, re.I)
+            if m:
+                heads.update({k: m.group(2).lower() for k in _heads(m.group(1))})
     field = lambda k: (re.findall(rf"^\W*{k}\W*:\s*\**\s*([a-z ]+?)\s*\**\s*$", answer, re.I | re.M) or [None])[-1]
     probs = re.findall(r"^\W*probabilities\W*:.*$", answer, re.I | re.M)
     corpus = field("corpus")

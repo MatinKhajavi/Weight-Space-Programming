@@ -1,0 +1,4 @@
+The layer-0 norm weights are bimodal, with most dimensions sitting around 0.1 to 0.2 and a group of 60 to 80 running high. W_k's column norms track those high-norm dimensions closely, at a correlation of about 0.66, so the keys seem to lean on that subset. W_v does the opposite and reads mostly from the low-norm dimensions, which would fit it carrying token content.
+
+Next I'm looking at whether the high-LN dimensions carry positional information that the keys use, and whether token information sits in the other dimensions. Since LN weights scale Q, K, and V alike, the effective contribution is the LN weight times each W column norm. My plan is to compute effective Q and K matrices per layer-0 head, take the QK product, and check how much of the key-side structure falls in the high-weight dimensions (above 0.35) versus the rest.
+

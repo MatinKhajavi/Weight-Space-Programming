@@ -1,0 +1,23 @@
+OUTPUT of run 19 of at most 100:
+```
+neurons with >40% energy in:  {'T': 52, 'P0': 11, 'L': 0, 'O0': 1, 'O1': 6, 'O2': 1, 'O3': 0, 'O4': 2, 'O5': 16}
+neurons with >25% energy in:  {'T': 115, 'P0': 127, 'L': 6, 'O0': 8, 'O1': 40, 'O2': 2, 'O3': 0, 'O4': 14, 'O5': 103}
+T&O5: 60   T&O1: 3   O5&O1: 39   T&L: 0   T&O0: 2   T&O4: 2   O0&O4: 12   T&P0: 10   O5&P0: 26   L&O0: 0   L&O4: 0   
+W_fc.0 row norms: mean 1.00 std 0.86 max 4.29 min 0.33
+W_fc.1 energy fractions:
+  T: 0.157 (baseline 0.057, ratio 2.7)
+  P0: 0.089 (baseline 0.104, ratio 0.9)
+  L: 0.012 (baseline 0.010, ratio 1.2)
+  M0: 0.330 (baseline 0.125, ratio 2.6)
+  O5: 0.212 (baseline 0.057, ratio 3.7)
+  O1: 0.092 (baseline 0.057, ratio 1.6)
+  O0: 0.028 (baseline 0.021, ratio 1.4)
+  O4: 0.032 (baseline 0.021, ratio 1.5)
+  O10: 0.068 (baseline 0.042, ratio 1.6)
+  O11: 0.092 (baseline 0.042, ratio 2.2)
+  O12: 0.107 (baseline 0.042, ratio 2.6)
+  O13: 0.134 (baseline 0.042, ratio 3.2)
+  O14: 0.114 (baseline 0.042, ratio 2.7)
+  O15: 0.094 (baseline 0.042, ratio 2.3)
+
+```

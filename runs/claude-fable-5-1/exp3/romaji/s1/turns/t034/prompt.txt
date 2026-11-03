@@ -1,0 +1,82 @@
+OUTPUT of run 33 of at most 100:
+```
+dim 21: total |row|=5.17; top neurons:
+   n1445: w=+0.88 out|o_n|=1.90 frac_to_dim=0.21 | in: T=0.03 prev=0.11 H5rich=0.31 P=0.04 |f|=2.06
+   n102: w=+0.85 out|o_n|=1.97 frac_to_dim=0.19 | in: T=0.03 prev=0.07 H5rich=0.35 P=0.02 |f|=3.27
+   n1356: w=+0.84 out|o_n|=1.98 frac_to_dim=0.18 | in: T=0.02 prev=0.03 H5rich=0.37 P=0.03 |f|=3.55
+   n520: w=+0.82 out|o_n|=1.91 frac_to_dim=0.18 | in: T=0.04 prev=0.06 H5rich=0.31 P=0.02 |f|=2.87
+   n1477: w=+0.82 out|o_n|=1.86 frac_to_dim=0.19 | in: T=0.11 prev=0.13 H5rich=0.25 P=0.04 |f|=2.04
+   n1196: w=+0.81 out|o_n|=1.63 frac_to_dim=0.25 | in: T=0.03 prev=0.04 H5rich=0.11 P=0.04 |f|=1.90
+   n85: w=+0.81 out|o_n|=1.90 frac_to_dim=0.18 | in: T=0.08 prev=0.28 H5rich=0.20 P=0.02 |f|=2.09
+   n301: w=+0.80 out|o_n|=1.84 frac_to_dim=0.19 | in: T=0.07 prev=0.26 H5rich=0.20 P=0.03 |f|=1.77
+   n1260: w=+0.79 out|o_n|=1.73 frac_to_dim=0.21 | in: T=0.13 prev=0.19 H5rich=0.16 P=0.03 |f|=1.59
+   n1236: w=+0.77 out|o_n|=1.86 frac_to_dim=0.17 | in: T=0.08 prev=0.10 H5rich=0.29 P=0.03 |f|=2.32
+   n1284: w=+0.75 out|o_n|=1.78 frac_to_dim=0.18 | in: T=0.07 prev=0.19 H5rich=0.19 P=0.03 |f|=1.45
+   n1250: w=+0.73 out|o_n|=1.83 frac_to_dim=0.16 | in: T=0.08 prev=0.25 H5rich=0.20 P=0.03 |f|=1.94
+dim 184: total |row|=8.56; top neurons:
+   n102: w=+1.46 out|o_n|=1.97 frac_to_dim=0.55 | in: T=0.03 prev=0.07 H5rich=0.35 P=0.02 |f|=3.27
+   n1356: w=+1.46 out|o_n|=1.98 frac_to_dim=0.55 | in: T=0.02 prev=0.03 H5rich=0.37 P=0.03 |f|=3.55
+   n1445: w=+1.44 out|o_n|=1.90 frac_to_dim=0.57 | in: T=0.03 prev=0.11 H5rich=0.31 P=0.04 |f|=2.06
+   n520: w=+1.39 out|o_n|=1.91 frac_to_dim=0.53 | in: T=0.04 prev=0.06 H5rich=0.31 P=0.02 |f|=2.87
+   n1236: w=+1.37 out|o_n|=1.86 frac_to_dim=0.54 | in: T=0.08 prev=0.10 H5rich=0.29 P=0.03 |f|=2.32
+   n1477: w=+1.34 out|o_n|=1.86 frac_to_dim=0.52 | in: T=0.11 prev=0.13 H5rich=0.25 P=0.04 |f|=2.04
+   n301: w=+1.33 out|o_n|=1.84 frac_to_dim=0.52 | in: T=0.07 prev=0.26 H5rich=0.20 P=0.03 |f|=1.77
+   n85: w=+1.31 out|o_n|=1.90 frac_to_dim=0.48 | in: T=0.08 prev=0.28 H5rich=0.20 P=0.02 |f|=2.09
+   n1260: w=+1.22 out|o_n|=1.73 frac_to_dim=0.50 | in: T=0.13 prev=0.19 H5rich=0.16 P=0.03 |f|=1.59
+   n1250: w=+1.22 out|o_n|=1.83 frac_to_dim=0.44 | in: T=0.08 prev=0.25 H5rich=0.20 P=0.03 |f|=1.94
+   n1284: w=+1.17 out|o_n|=1.78 frac_to_dim=0.43 | in: T=0.07 prev=0.19 H5rich=0.19 P=0.03 |f|=1.45
+   n1329: w=+1.15 out|o_n|=1.66 frac_to_dim=0.48 | in: T=0.22 prev=0.10 H5rich=0.10 P=0.04 |f|=1.38
+dim 39: total |row|=2.86; top neurons:
+   n105: w=+1.07 out|o_n|=1.57 frac_to_dim=0.46 | in: T=0.04 prev=0.00 H5rich=0.11 P=0.04 |f|=0.92
+   n694: w=+0.85 out|o_n|=1.28 frac_to_dim=0.44 | in: T=0.05 prev=0.05 H5rich=0.03 P=0.08 |f|=0.52
+   n429: w=+0.83 out|o_n|=1.43 frac_to_dim=0.33 | in: T=0.09 prev=0.01 H5rich=0.06 P=0.05 |f|=0.82
+   n930: w=+0.71 out|o_n|=1.00 frac_to_dim=0.50 | in: T=0.20 prev=0.04 H5rich=0.04 P=0.06 |f|=0.59
+   n1049: w=+0.60 out|o_n|=0.97 frac_to_dim=0.38 | in: T=0.29 prev=0.06 H5rich=0.03 P=0.03 |f|=0.63
+   n1225: w=+0.51 out|o_n|=1.31 frac_to_dim=0.15 | in: T=0.09 prev=0.04 H5rich=0.06 P=0.03 |f|=0.92
+   n708: w=+0.38 out|o_n|=1.38 frac_to_dim=0.08 | in: T=0.05 prev=0.04 H5rich=0.16 P=0.04 |f|=1.06
+   n631: w=-0.33 out|o_n|=2.07 frac_to_dim=0.03 | in: T=0.14 prev=0.09 H5rich=0.21 P=0.03 |f|=2.99
+   n1386: w=+0.30 out|o_n|=1.50 frac_to_dim=0.04 | in: T=0.20 prev=0.03 H5rich=0.21 P=0.03 |f|=1.10
+   n1468: w=+0.27 out|o_n|=1.32 frac_to_dim=0.04 | in: T=0.08 prev=0.18 H5rich=0.06 P=0.04 |f|=0.91
+   n1015: w=-0.26 out|o_n|=2.28 frac_to_dim=0.01 | in: T=0.41 prev=0.26 H5rich=0.07 P=0.01 |f|=2.93
+   n926: w=+0.25 out|o_n|=1.38 frac_to_dim=0.03 | in: T=0.12 prev=0.06 H5rich=0.19 P=0.04 |f|=1.24
+dim 58: total |row|=1.85; top neurons:
+   n105: w=-0.58 out|o_n|=1.57 frac_to_dim=0.14 | in: T=0.04 prev=0.00 H5rich=0.11 P=0.04 |f|=0.92
+   n694: w=-0.56 out|o_n|=1.28 frac_to_dim=0.19 | in: T=0.05 prev=0.05 H5rich=0.03 P=0.08 |f|=0.52
+   n429: w=-0.44 out|o_n|=1.43 frac_to_dim=0.09 | in: T=0.09 prev=0.01 H5rich=0.06 P=0.05 |f|=0.82
+   n930: w=-0.42 out|o_n|=1.00 frac_to_dim=0.18 | in: T=0.20 prev=0.04 H5rich=0.04 P=0.06 |f|=0.59
+   n1049: w=-0.27 out|o_n|=0.97 frac_to_dim=0.08 | in: T=0.29 prev=0.06 H5rich=0.03 P=0.03 |f|=0.63
+   n1225: w=-0.23 out|o_n|=1.31 frac_to_dim=0.03 | in: T=0.09 prev=0.04 H5rich=0.06 P=0.03 |f|=0.92
+   n52: w=+0.21 out|o_n|=1.94 frac_to_dim=0.01 | in: T=0.18 prev=0.16 H5rich=0.13 P=0.02 |f|=2.01
+   n1534: w=+0.19 out|o_n|=1.93 frac_to_dim=0.01 | in: T=0.16 prev=0.17 H5rich=0.08 P=0.02 |f|=2.02
+   n1015: w=+0.17 out|o_n|=2.28 frac_to_dim=0.01 | in: T=0.41 prev=0.26 H5rich=0.07 P=0.01 |f|=2.93
+   n708: w=-0.17 out|o_n|=1.38 frac_to_dim=0.01 | in: T=0.05 prev=0.04 H5rich=0.16 P=0.04 |f|=1.06
+   n1036: w=+0.17 out|o_n|=2.07 frac_to_dim=0.01 | in: T=0.11 prev=0.07 H5rich=0.19 P=0.03 |f|=2.12
+   n796: w=-0.16 out|o_n|=1.53 frac_to_dim=0.01 | in: T=0.23 prev=0.11 H5rich=0.04 P=0.04 |f|=1.30
+dim 99: total |row|=2.31; top neurons:
+   n102: w=+0.37 out|o_n|=1.97 frac_to_dim=0.04 | in: T=0.03 prev=0.07 H5rich=0.35 P=0.02 |f|=3.27
+   n520: w=+0.36 out|o_n|=1.91 frac_to_dim=0.04 | in: T=0.04 prev=0.06 H5rich=0.31 P=0.02 |f|=2.87
+   n1236: w=+0.34 out|o_n|=1.86 frac_to_dim=0.03 | in: T=0.08 prev=0.10 H5rich=0.29 P=0.03 |f|=2.32
+   n1356: w=+0.33 out|o_n|=1.98 frac_to_dim=0.03 | in: T=0.02 prev=0.03 H5rich=0.37 P=0.03 |f|=3.55
+   n1477: w=+0.33 out|o_n|=1.86 frac_to_dim=0.03 | in: T=0.11 prev=0.13 H5rich=0.25 P=0.04 |f|=2.04
+   n1445: w=+0.33 out|o_n|=1.90 frac_to_dim=0.03 | in: T=0.03 prev=0.11 H5rich=0.31 P=0.04 |f|=2.06
+   n694: w=+0.33 out|o_n|=1.28 frac_to_dim=0.07 | in: T=0.05 prev=0.05 H5rich=0.03 P=0.08 |f|=0.52
+   n796: w=+0.32 out|o_n|=1.53 frac_to_dim=0.04 | in: T=0.23 prev=0.11 H5rich=0.04 P=0.04 |f|=1.30
+   n1225: w=+0.32 out|o_n|=1.31 frac_to_dim=0.06 | in: T=0.09 prev=0.04 H5rich=0.06 P=0.03 |f|=0.92
+   n1260: w=+0.32 out|o_n|=1.73 frac_to_dim=0.03 | in: T=0.13 prev=0.19 H5rich=0.16 P=0.03 |f|=1.59
+   n1329: w=+0.32 out|o_n|=1.66 frac_to_dim=0.04 | in: T=0.22 prev=0.10 H5rich=0.10 P=0.04 |f|=1.38
+   n708: w=+0.31 out|o_n|=1.38 frac_to_dim=0.05 | in: T=0.05 prev=0.04 H5rich=0.16 P=0.04 |f|=1.06
+dim 383: total |row|=3.25; top neurons:
+   n914: w=-0.40 out|o_n|=3.04 frac_to_dim=0.02 | in: T=0.33 prev=0.25 H5rich=0.02 P=0.01 |f|=3.29
+   n259: w=+0.38 out|o_n|=1.53 frac_to_dim=0.06 | in: T=0.43 prev=0.00 H5rich=0.00 P=0.00 |f|=1.52
+   n1461: w=+0.37 out|o_n|=1.47 frac_to_dim=0.06 | in: T=0.41 prev=0.01 H5rich=0.00 P=0.01 |f|=1.34
+   n82: w=+0.37 out|o_n|=1.51 frac_to_dim=0.06 | in: T=0.45 prev=0.01 H5rich=0.01 P=0.00 |f|=1.43
+   n1006: w=+0.36 out|o_n|=2.06 frac_to_dim=0.03 | in: T=0.12 prev=0.15 H5rich=0.20 P=0.01 |f|=2.44
+   n406: w=+0.35 out|o_n|=1.77 frac_to_dim=0.04 | in: T=0.15 prev=0.59 H5rich=0.02 P=0.03 |f|=2.08
+   n3: w=-0.35 out|o_n|=2.08 frac_to_dim=0.03 | in: T=0.28 prev=0.23 H5rich=0.04 P=0.02 |f|=2.28
+   n1340: w=-0.33 out|o_n|=1.84 frac_to_dim=0.03 | in: T=0.11 prev=0.25 H5rich=0.13 P=0.03 |f|=1.87
+   n799: w=-0.32 out|o_n|=1.86 frac_to_dim=0.03 | in: T=0.10 prev=0.17 H5rich=0.13 P=0.05 |f|=1.84
+   n1134: w=+0.31 out|o_n|=1.97 frac_to_dim=0.03 | in: T=0.38 prev=0.20 H5rich=0.02 P=0.01 |f|=2.69
+   n896: w=+0.31 out|o_n|=2.02 frac_to_dim=0.02 | in: T=0.20 prev=0.16 H5rich=0.11 P=0.03 |f|=2.05
+   n334: w=-0.31 out|o_n|=3.77 frac_to_dim=0.01 | in: T=0.46 prev=0.24 H5rich=0.01 P=0.01 |f|=3.10
+
+```

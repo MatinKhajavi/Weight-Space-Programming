@@ -1,0 +1,9 @@
+{
+ "true": "square",
+ "guess": null,
+ "correct": false,
+ "status": "unmapped",
+ "named": [],
+ "answer_line": "each generated image is a black 12\u00d712 field with one white straight bar: either a horizontal segment occupying one row or a vertical segment occupying one column, 1 pixel thick, roughly 6\u20139 pixels lon",
+ "confidence": 60
+}

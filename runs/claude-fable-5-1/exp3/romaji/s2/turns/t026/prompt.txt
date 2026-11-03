@@ -1,0 +1,28 @@
+OUTPUT of run 25 of at most 100:
+```
+layer 1: b on channel dirs: [1.55, 1.96, -0.78]
+  L1H0: |qb|= 6.69 const-query key pref in channel: frac=0.86 loads dir0..3: [-23.55  17.44   1.91  -1.63]  | channel x channel QK block: [ 0.35  1.7  -2.04  1.03]
+  L1H1: |qb|= 6.08 const-query key pref in channel: frac=0.85 loads dir0..3: [-21.5   16.66   1.9   -1.06]  | channel x channel QK block: [ 0.34  1.73 -2.18  1.1 ]
+  L1H2: |qb|= 5.56 const-query key pref in channel: frac=0.85 loads dir0..3: [-17.95  13.61   0.6   -0.9 ]  | channel x channel QK block: [ 0.37  1.36 -1.63  0.81]
+  L1H3: |qb|= 5.67 const-query key pref in channel: frac=0.85 loads dir0..3: [-19.33  15.85   1.95  -0.28]  | channel x channel QK block: [ 0.38  1.65 -2.05  0.99]
+  L1H4: |qb|= 5.35 const-query key pref in channel: frac=0.80 loads dir0..3: [-11.86  11.61   1.28  -1.33]  | channel x channel QK block: [ 0.43  0.93 -1.18  0.78]
+  L1H5: |qb|= 6.22 const-query key pref in channel: frac=0.86 loads dir0..3: [-22.48  17.91   3.11  -0.59]  | channel x channel QK block: [ 0.35  1.87 -2.36  1.13]
+layer 2: b on channel dirs: [1.59, 1.81, -0.42]
+  L2H0: |qb|= 4.27 const-query key pref in channel: frac=0.83 loads dir0..3: [-11.45   9.25   0.73  -0.62]  | channel x channel QK block: [ 0.3   1.85 -2.15  0.9 ]
+  L2H1: |qb|= 3.79 const-query key pref in channel: frac=0.83 loads dir0..3: [-10.35   8.73   1.75  -0.92]  | channel x channel QK block: [ 0.26  1.68 -1.93  0.81]
+  L2H2: |qb|= 3.78 const-query key pref in channel: frac=0.79 loads dir0..3: [-8.55  7.41  1.47 -0.98]  | channel x channel QK block: [ 0.28  1.36 -1.56  0.71]
+  L2H3: |qb|= 3.08 const-query key pref in channel: frac=0.62 loads dir0..3: [-4.69  4.69  0.47 -0.42]  | channel x channel QK block: [ 0.22  0.71 -0.83  0.41]
+  L2H4: |qb|= 4.32 const-query key pref in channel: frac=0.83 loads dir0..3: [-13.31  10.25   0.35  -1.18]  | channel x channel QK block: [ 0.21  2.03 -2.36  0.85]
+  L2H5: |qb|= 3.75 const-query key pref in channel: frac=0.86 loads dir0..3: [-12.01   8.86   1.36  -0.38]  | channel x channel QK block: [ 0.26  1.76 -2.02  0.8 ]
+layer 3: b on channel dirs: [0.81, 0.68, -0.18]
+  L3H0: |qb|= 1.76 const-query key pref in channel: frac=0.69 loads dir0..3: [-2.43  2.26  0.28 -0.04]  | channel x channel QK block: [ 0.18  0.91 -0.93  0.15]
+  L3H1: |qb|= 1.46 const-query key pref in channel: frac=0.48 loads dir0..3: [-0.96  1.2   0.01 -0.18]  | channel x channel QK block: [ 0.23  0.48 -0.53  0.15]
+  L3H2: |qb|= 1.94 const-query key pref in channel: frac=0.63 loads dir0..3: [-2.2   2.2   0.37 -0.12]  | channel x channel QK block: [ 0.18  0.84 -0.86  0.2 ]
+  L3H3: |qb|= 1.30 const-query key pref in channel: frac=0.01 loads dir0..3: [ 0.14  0.05 -0.07 -0.07]  | channel x channel QK block: [ 0.07  0.   -0.01  0.03]
+  L3H4: |qb|= 1.23 const-query key pref in channel: frac=0.11 loads dir0..3: [-0.2   0.11 -0.09 -0.31]  | channel x channel QK block: [ 0.02  0.06 -0.06 -0.  ]
+  L3H5: |qb|= 1.80 const-query key pref in channel: frac=0.73 loads dir0..3: [-2.61  2.11  0.08 -0.29]  | channel x channel QK block: [ 0.13  0.75 -0.74  0.1 ]
+L1H0 OV diag on channel dirs: [-0.0, -0.0, -0.05]; L1H1 OV diag on channel dirs: [0.0, 0.01, 0.03]; L1H2 OV diag on channel dirs: [0.0, 0.02, 0.02]; L1H3 OV diag on channel dirs: [0.0, -0.01, -0.0]; L1H4 OV diag on channel dirs: [0.0, -0.01, -0.04]; L1H5 OV diag on channel dirs: [0.0, -0.0, 0.04]; 
+L2H0 OV diag on channel dirs: [-0.02, -0.04, 0.09]; L2H1 OV diag on channel dirs: [-0.02, -0.03, -0.04]; L2H2 OV diag on channel dirs: [-0.02, -0.02, -0.05]; L2H3 OV diag on channel dirs: [-0.04, -0.02, 0.01]; L2H4 OV diag on channel dirs: [-0.01, -0.03, 0.01]; L2H5 OV diag on channel dirs: [-0.02, -0.05, 0.06]; 
+L3H0 OV diag on channel dirs: [-0.82, -0.22, -0.02]; L3H1 OV diag on channel dirs: [-0.91, -0.49, -0.02]; L3H2 OV diag on channel dirs: [-0.74, -0.29, -0.11]; L3H3 OV diag on channel dirs: [-0.26, -0.01, 0.13]; L3H4 OV diag on channel dirs: [-0.5, -0.09, 0.15]; L3H5 OV diag on channel dirs: [-0.57, -0.25, 0.08]; 
+
+```

@@ -1,0 +1,38 @@
+OUTPUT of run 10 of at most 100:
+```
+fraction of W_proj.3 energy in U: 0.9335189
+baseline: 0.07291666666666667
+W_proj.0 in U: 0.141   W_o.0 in U: 0.096
+   L0H0: W_o cols in U 0.134; OV output in U 0.189
+   L0H1: W_o cols in U 0.065; OV output in U 0.065
+   L0H2: W_o cols in U 0.090; OV output in U 0.098
+   L0H3: W_o cols in U 0.136; OV output in U 0.164
+   L0H4: W_o cols in U 0.157; OV output in U 0.221
+   L0H5: W_o cols in U 0.061; OV output in U 0.059
+W_proj.1 in U: 0.077   W_o.1 in U: 0.064
+   L1H0: W_o cols in U 0.074; OV output in U 0.080
+   L1H1: W_o cols in U 0.057; OV output in U 0.054
+   L1H2: W_o cols in U 0.067; OV output in U 0.066
+   L1H3: W_o cols in U 0.061; OV output in U 0.059
+   L1H4: W_o cols in U 0.061; OV output in U 0.058
+   L1H5: W_o cols in U 0.060; OV output in U 0.058
+W_proj.2 in U: 0.114   W_o.2 in U: 0.069
+   L2H0: W_o cols in U 0.062; OV output in U 0.060
+   L2H1: W_o cols in U 0.095; OV output in U 0.093
+   L2H2: W_o cols in U 0.054; OV output in U 0.051
+   L2H3: W_o cols in U 0.062; OV output in U 0.058
+   L2H4: W_o cols in U 0.061; OV output in U 0.057
+   L2H5: W_o cols in U 0.078; OV output in U 0.081
+W_proj.3 in U: 0.934   W_o.3 in U: 0.172
+   L3H0: W_o cols in U 0.125; OV output in U 0.133
+   L3H1: W_o cols in U 0.280; OV output in U 0.333
+   L3H2: W_o cols in U 0.114; OV output in U 0.126
+   L3H3: W_o cols in U 0.135; OV output in U 0.132
+   L3H4: W_o cols in U 0.126; OV output in U 0.153
+   L3H5: W_o cols in U 0.294; OV output in U 0.330
+layer 0: neuron out-in-U fractions (alive): median 0.120, 90pct 0.262; frac neurons >0.5: 0.000
+layer 1: neuron out-in-U fractions (alive): median 0.074, 90pct 0.101; frac neurons >0.5: 0.000
+layer 2: neuron out-in-U fractions (alive): median 0.111, 90pct 0.150; frac neurons >0.5: 0.000
+layer 3: neuron out-in-U fractions (alive): median 0.940, 90pct 0.957; frac neurons >0.5: 1.000
+
+```

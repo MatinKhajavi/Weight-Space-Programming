@@ -1,0 +1,37 @@
+**Observations**
+
+- Layer‑0 attention is split into two sharp *positional* heads and the rest. L0H5 and L0H1 have large QK circuits (‖W_qᵀW_k‖_F = 46 and 32, top singular values 14.1/13.8/13.2… and 17.2/12.1/11.5…) whose Q and K rows lie almost entirely (0.86–0.89 and 0.78–0.81 of their energy) in a ≈40‑dim subspace that contains no token information, while their W_v rows read mostly the token subspace (0.56 and 0.48 of energy in a 22‑dim "token" subspace, gain ≈1.5 for every token direction, i.e. a faithful copy of the character). L0H4 has an essentially zero QK circuit (top singular values 0.32, 0.24; ‖QK‖_F = 0.8) and a large rank‑2 OV (18.8, 15.4) that reads smooth positional directions plus two particular token directions → a uniform averaging head.
+- K‑composition (‖W_k^{(l,h)}·OV^{(0,h')}‖ normalised against random rotations) shows all six layer‑1 heads reading the outputs of L0H0 and L0H4 at 4–7× chance, and the matching matrices W_qᵀW_k·OV^{L0H5} of L2H1, L3H1 and L3H5 are positive‑definite on a common ≈20‑dim subspace (trace/‖M‖ = 1.1, 1.0, 1.0; ~20 positive eigenvalues 9.7…1.6 vs. most negative −5.5; the three top‑27 eigenspaces overlap 0.45–0.49, chance 0.07). The same heads also match positively against the OV circuits of L1H1–L1H4 (0.5–0.95) and L3H5/L3H1 against L2H2 (2.4, 1.8, with >30 positive eigenvalues): induction with multi‑character context. The subspace T found this way behaves like token identity: the induction heads' W_q read it (0.17–0.21 of energy, chance 0.06), their W_k read instead the prev‑token output; L0H5/L0H1 Q,K read it at chance.
+- Two special token directions. Using T, L0H0's keys respond to a single direction A (positional‑query × content‑key gain 2.64 vs ≤0.48 for all other token directions) and L0H3's keys to a direction B (3.24, plus A 1.08). L0H4's V weights are 1.33 (A) and 1.38 (B) vs 0.74 for other tokens (it counts them), MLP0's top token direction (W_fc.0 on T, s.v. 6.33) is ≈A (cos 0.64) and its second ≈B, L1H5 keys read B (3.14), L1H1 reads A and B, L1H2/3 read A. L0H0's positional component lives in the smoothest positional directions (0.28 of Q energy in a 4‑dim "low‑frequency" subspace, chance 0.01) and its V copies coarse position (0.25) → "where were the recent A tokens"; L0H3 uses mid‑range positions → "where was the last B". All six L1 heads have a −c·I term on the token subspace (trace −16 … −27, i.e. they avoid keys with the same character as the query), keys built from L0H0/L0H4 (line/absolute position codes), queries from MLP0 features, and their V copies the token (gain ≈1), the previous token (W_v energy 0.18–0.28 in L0H5's output subspace) and MLP0 features: they package local context for the induction heads' keys.
+- MLP0 reads current token (0.16), previous token via L0H5 (0.16), 2‑back via L0H1 (0.13) and position (0.19, with 127 neurons >25 % position); 60 neurons are bigram (current+previous) detectors.
+- Interpretation: a prev‑token head (L0H5), a second sharp local head (L0H1), a uniform counting head (L0H4), content heads for two whitespace‑like boundary tokens, context‑packaging heads in layer 1 and three induction heads (L2H1, L3H1, L3H5) with 1‑ to several‑character context. The two boundary tokens that get dedicated heads, counting and column‑like position codes (position relative to the last A) are most naturally space and newline, with A (long reach, counted, top MLP0 feature, most strongly copied by L2H1) looking like newline and B (short reach) like space.
+
+**Heads**
+
+- L0H0: broad — tiny, smooth positional QK (‖QK‖=6.5, low‑frequency position only) with a strong key preference for one token (A); copies coarse position of those tokens. Recency‑weighted attention to the last newline‑like token.
+- L0H1: local — sharp positional head (QK s.v. 17.2…), Q/K purely positional, V copies the character; QK pattern uncorrelated with L0H5's (cos 0.07), so a fixed offset other than 1 (2–3 back); feeds MLP0 (0.13) and L1 V.
+- L0H2: local — weak, content‑biased QK (keys on B and a few other tokens), V copies tokens.
+- L0H3: local — keys on token B (and A) with mid‑range positional queries; V copies position → "position of the last space".
+- L0H4: broad — QK ≈ 0 (uniform attention), rank‑2 OV averaging position and the counts of A and B.
+- L0H5: previous — purely positional sharp QK (s.v. 14,14,13,…, 0.90 of energy in the high‑frequency positional subspace), V copies the token; its OV is what the induction heads' keys match (trace/‖M‖ ≈ 1.0).
+- L1H0–L1H5: local — all six share the same pattern (QK cosines 0.3–0.46): keys from L0H0/L0H4 position codes and boundary tokens (L1H5 → B, L1H1 → A,B, L1H2/3 → A), −c·I on token identity, V copies token+previous token+MLP0 features; their outputs are matched by the induction heads' keys (0.5–0.95).
+- L2H0: broad — keys read line/absolute position codes, V reads MLP1 features, moderate high‑rank QK.
+- L2H1: copy — W_qᵀW_k·OV^{L0H5} positive on ~20 token directions (r=1.12), Q reads token identity (0.18), K reads L1 outputs; V copies tokens.
+- L2H2: unclear — anti‑induction: negative matching with L0H5 (−0.56) and L1H0/L1H2 (−0.7), keys on position codes; its output is strongly matched by L3H5/L3H1 keys (2.4/1.8), so it builds context for them.
+- L2H3: broad — keys from L0H0/L0H4 codes (0.15 each), V from MLP1.
+- L2H4: local — same positional keys, sharpest QK in layer 2 (top s.v. 11.6), V copies token/MLP0 features.
+- L2H5: broad — weak, high‑rank QK, V from MLP1.
+- L3H0: broad — flat QK spectrum (5.6, 5.4, …), no identifiable Q/K subspace.
+- L3H1: copy — positive matching with L0H5 (r=0.98), L1H1–4 (0.5–0.8), L2H2 (1.8); Q and V on token identity (0.17).
+- L3H2: broad — flat QK, V reads MLP2 output (0.24).
+- L3H3: broad — weakest QK in the layer (top s.v. 3.7) with the largest OV (18.6), V from MLP2 (0.33): context averaging.
+- L3H4: broad — flat QK, no identifiable subspace.
+- L3H5: copy — matching with L0H5 (1.01), L1H1–4 (0.7–0.95), L2H2 (2.43), L2H3 (0.81): long‑context induction; V copies token identity (0.23).
+
+**Reasoning**
+
+A previous‑token head whose copied character is matched, positively and on a common ~20‑dimensional identity subspace, by three later heads (plus context‑packaging heads and multi‑character matching) is the classic induction circuit; it only pays off when the order of characters carries information, so the text was used as is — in shuffled lines nothing about "the character after an earlier occurrence" is predictive and no such K‑composition would be learned. Among the corpora, the network devotes a remarkable amount of capacity to two whitespace‑like boundary tokens: a head that attends only to A with a long, smooth reach and copies its coarse position (line‑start position), a head for B with short reach (word start), a uniform head that counts both (indentation/line density), layer‑1 keys built from "position relative to the last A" (column‑like codes), and MLP0 whose dominant token feature is A. This line‑and‑indentation machinery, together with strong multi‑character induction (repeated identifiers), fits Python source best; English Wikipedia would need only the space machinery and romaji would be dominated by local syllable structure rather than long‑context copying. The evidence for Python over English is indirect (I cannot read token identities), so moderate confidence.
+
+corpus: python
+order: as is
+probabilities: python=0.55 romaji=0.15 english=0.30; as is=0.96 shuffled=0.04
