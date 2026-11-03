@@ -62,8 +62,8 @@ Code's "Output token limit hit ... Break remaining work into smaller pieces" mes
 ## Setup
 
 ```bash
-git clone --recurse-submodules --shallow-submodules https://github.com/MatinKhajavi/weight-space-programming-replication.git
-cd weight-space-programming-replication
+git clone --recurse-submodules --shallow-submodules https://github.com/MatinKhajavi/Weight-Space-Programming.git
+cd Weight-Space-Programming
 cp .env.example .env    # then add your ANTHROPIC_API_KEY
 ```
 
