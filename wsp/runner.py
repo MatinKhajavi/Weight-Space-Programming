@@ -40,6 +40,7 @@ ITEMS = {
 # Retry waits observed in the original harness logs.
 WAITS_FAILURE = [60, 120, 240, 480]
 WAITS_LIMIT = [900, 1350, 2025, 3038]
+NOISE = {"thinking_tokens", "ui_invalidate"}  # streaming progress events, no content
 
 
 def scrub_inherited_env() -> list[str]:
@@ -166,7 +167,15 @@ def run(exp: str, item: str, sample: int) -> Path:
     tool_uses = [b for m in msgs if m["type"] == "AssistantMessage" for b in m.get("content", []) if "input" in b]
     thinking = [b["thinking"] for m in msgs if m["type"] == "AssistantMessage" for b in m.get("content", [])
                 if "thinking" in b and b["thinking"]]
+    # With no tools, a user message here was injected by Claude Code after a reply hit the output cap
+    # ("Output token limit hit. Resume directly ..."). Keep the reply as it was when cut (docs/protocol.md, deviation 5).
+    injected = ["".join(b.get("text", "") for b in m["content"]) for m in msgs if m["type"] == "UserMessage"]
+    if injected:
+        first = msgs[:next(i for i, m in enumerate(msgs) if m["type"] == "UserMessage")]
+        cut = "".join(b.get("text", "") for m in first if m["type"] == "AssistantMessage" for b in m["content"])
+        (out / "answer_cut.md").write_text(cut, encoding="utf-8")
     record.update({
+        "resumed_after_output_cap": bool(injected), "injected_messages": injected,
         "session_id": result.get("session_id"), "wall_s": wall, "refused": refused,
         "usage": result.get("usage"), "model_usage": result.get("model_usage"),
         "total_cost_usd": result.get("total_cost_usd"), "num_turns": result.get("num_turns"),
@@ -178,6 +187,11 @@ def run(exp: str, item: str, sample: int) -> Path:
     (out / "thinking.md").write_text("\n\n---\n\n".join(thinking), encoding="utf-8")
     with open(out / "messages.jsonl", "w", encoding="utf-8") as f:
         for m in msgs:
+            if m.get("subtype") in NOISE:
+                continue
+            for b in m.get("content") or []:
+                if isinstance(b, dict):
+                    b.pop("signature", None)  # opaque blob the API uses to verify thinking; no content
             f.write(json.dumps(m, default=str) + "\n")
     (out / "run.json").write_text(json.dumps(record, indent=1, default=str), encoding="utf-8")
     print(json.dumps({k: record[k] for k in ("experiment", "item", "sample", "wall_s", "usage", "total_cost_usd",
@@ -185,21 +199,26 @@ def run(exp: str, item: str, sample: int) -> Path:
     return out
 
 
-def score(exp: str, item: str, sample: int) -> dict:
-    out = RUNS / exp / item / f"s{sample}"
-    answer = (out / "answer.md").read_text(encoding="utf-8")
+def _score_text(exp: str, item: str, answer: str, out: Path | None) -> dict:
     if exp in ("exp1", "exp2"):
         from wsp.scoring import score_exp1, score_exp2
-        res = (score_exp1 if exp == "exp1" else score_exp2)(answer, item)
-    elif exp == "exp5":
+        return (score_exp1 if exp == "exp1" else score_exp2)(answer, item)
+    if exp == "exp5":
         from wsp.exp5 import evaluate, read_reply, save_npz
         w, rep = read_reply(answer)
-        save_npz(str(out / "network.npz"), w)
-        (out / "apply.json").write_text(json.dumps(rep, indent=1))
-        res = {"apply": {k: rep[k] for k in ("statements", "applied", "nonzero")}, "skipped": len(rep["skipped"]),
-               "eval": evaluate(w, item, 1000, 10, seed=0)}
-    else:
-        raise SystemExit(f"no scorer for {exp} yet")
+        if out:
+            save_npz(str(out / "network.npz"), w)
+            (out / "apply.json").write_text(json.dumps(rep, indent=1))
+        return {"apply": {k: rep[k] for k in ("statements", "applied", "nonzero")}, "skipped": len(rep["skipped"]),
+                "eval": evaluate(w, item, 1000, 10, seed=0)}
+    raise SystemExit(f"no scorer for {exp} yet")
+
+
+def score(exp: str, item: str, sample: int) -> dict:
+    out = RUNS / exp / item / f"s{sample}"
+    res = _score_text(exp, item, (out / "answer.md").read_text(encoding="utf-8"), out)
+    if (out / "answer_cut.md").exists():
+        res["cut_at_output_cap"] = _score_text(exp, item, (out / "answer_cut.md").read_text(encoding="utf-8"), None)
     (out / "score.json").write_text(json.dumps(res, indent=1))
     print(json.dumps(res, indent=1))
     return res

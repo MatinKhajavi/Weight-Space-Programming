@@ -72,6 +72,13 @@ prompt's token count next to the API's reported input tokens, so injected contex
    this changes what is returned, not the reasoning itself.
 3. **Effort levels** have the same names on both models but are not calibrated to each other.
 4. **Output cap** is 128K tokens. The original cap is not recorded; Astra's longest reply was about 29K output tokens.
+5. **Replies longer than the output cap (marked \*).** When a reply hits the 128K cap, Claude Code sends
+   `Output token limit hit. Resume directly — no apology, no recap of what you were doing. Pick up mid-thought if that
+   is where the cut happened. Break remaining work into smaller pieces.` and the model finishes in a second message.
+   No setting turns this off. The message carries no information about the task, but the prompts say "This is a single
+   response" and the original never met this case: no output cap was set in any of their calls, and Astra's longest
+   reply was about 29K tokens. We score the completed answer and mark it \*; the reply as it was when cut is kept in
+   `answer_cut.md` and its score is recorded in `score.json` under `cut_at_output_cap`.
 
 ## Retries (from the original logs)
 

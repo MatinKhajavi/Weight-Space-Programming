@@ -1,0 +1,44 @@
+{
+ "apply": {
+  "statements": 147,
+  "applied": 147,
+  "nonzero": 1209
+ },
+ "skipped": 0,
+ "eval": {
+  "game": "breakout",
+  "episodes": 1000,
+  "mean": 483.586,
+  "se": 5.176890843238131,
+  "max": 678.0,
+  "mean_length": 8524.422,
+  "capped_at_10000": 722,
+  "seed": 0,
+  "workers": 10,
+  "minatar": "1.0.15",
+  "sticky": 0.1,
+  "seconds": 33.0
+ },
+ "cut_at_output_cap": {
+  "apply": {
+   "statements": 0,
+   "applied": 0,
+   "nonzero": 0
+  },
+  "skipped": 0,
+  "eval": {
+   "game": "breakout",
+   "episodes": 1000,
+   "mean": 0.509,
+   "se": 0.02272521585013959,
+   "max": 5.0,
+   "mean_length": 11.18,
+   "capped_at_10000": 0,
+   "seed": 0,
+   "workers": 10,
+   "minatar": "1.0.15",
+   "sticky": 0.1,
+   "seconds": 1.7
+  }
+ }
+}

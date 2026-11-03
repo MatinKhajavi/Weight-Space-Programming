@@ -1,0 +1,11 @@
+{
+ "true": "breakout",
+ "guess": "breakout",
+ "correct": true,
+ "status": "mapped",
+ "named": [
+  "breakout"
+ ],
+ "answer_line": "breakout (a miniature atari breakout / minatar-style brick breaker)",
+ "confidence": 82
+}

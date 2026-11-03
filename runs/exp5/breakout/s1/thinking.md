@@ -1,0 +1,756 @@
+I'm working through the Breakout game mechanics in MinAtar, specifically how the ball reflects off the paddle when it reaches row 9 and how its position updates on collision.
+
+I'm also considering how wall bounces interact with the direction flips—if the ball hits a side wall first, its horizontal direction flips before the paddle collision logic applies, so I need to track the paddle's required position relative to both the current ball position and its next computed position to determine valid strategies.
+
+I need to work out the wall-bounce mechanics: when the ball hits x=0 or the edge, it clips to that position and flips direction, effectively causing it to "pause" at the wall for a step. This means the x trajectory follows a reflection pattern, like a mirrored/folded path, so I can compute the landing column by folding the straight-line position back into the valid range using that doubled-period reflection.
+
+Once bricks appear at rows 1-3, predicting the ball's trajectory while it's bouncing around up there is hard, so I probably can't fully simulate the bounce path with a tiny 32-32 MLP. A simpler approach might work: have the paddle just track the ball's current x column directly, since the ball moves exactly one column per step horizontally, and see if that reactive strategy is enough to catch it by the time it reaches row 8.
+
+But I realize pure position-chasing breaks down—if the paddle lags behind the ball moving the same direction, the gap never closes since both move at the same rate, while if the paddle is ahead the gap closes too fast and overshoots. So instead I should have the paddle target a predicted landing x-position, computed by projecting the ball's current trajectory forward (accounting for wall bounces) to where it'll be when it reaches the paddle's row, rather than just chasing its live position.
+
+So total vertical steps is y+9, with x shifting accordingly; hitting a brick acts like an early ceiling bounce, keeping the row fixed while flipping direction downward. The practical takeaway is that the paddle has plenty of time to reposition while the ball is high up, and really only needs to lock in its final position in the handful of steps after the ball starts descending from the brick zone — roughly within 4-5 moves once it passes row 4.
+
+I'm also realizing the paddle moves before the ball in the same action, so at the critical observation where the ball sits at row 8, my action must place the paddle at either the ball's current x or its next x after the dx shift, since that's checked right after the move. There's no row-9 case to worry about since the ball always reflects at row 8 rather than ever reaching row 9.
+
+Given that the catch logic reverses horizontal direction only in the wall-bounce case, a simple lookahead-based policy tracking the ball's x position and predicted landing spot seems like the most implementable approach given the small network size.
+
+At row r with 9-r (or 10-r) moves remaining, the paddle needs to reach the fold-predicted landing position x8, which could require being up to 5 moves away with only a few steps available, so positioning has to start earlier. One option is to try keeping the paddle aligned with the ball's x-position continuously throughout its flight, including the ascent phase, so it's already near the landing spot by the time the ball descends.
+
+Once matched, I can maintain alignment by moving the paddle by the same dx the ball will take each step, accounting for wall clipping (where the ball bounces back and stays at the edge) and brick bounces that might change the ball's vertical direction.
+
+However, I realize the catch condition actually compares the ball's new x-position to the paddle's position after the paddle moves—so when matched, the catch triggers through the branch that reverses direction, flipping dir 2 (down-right) to 0 (up-left), rather than the branch that leaves direction alone.
+
+Once matched, the strategy of always tracking the ball's next x stays correct going forward, since paddle speed equals ball horizontal speed. Matching can only initially happen near walls or at a catch, but once achieved it persists—except I need to check sticky actions, since with 10% probability the previous action repeats, which is only safe if the ball's horizontal direction hasn't just flipped at a wall or catch.
+
+So lagging by one position remains a valid catch, and this tolerance persists even through the reversal: after the paddle matches the ball and the ball bounces, the paddle still trails by exactly one. But a sticky repeated action could push the paddle two steps off in the wrong direction when the ball direction flips, breaking the catch since the gap becomes too large to recover.
+
+What matters more is designing a strategy robust to this kind of lag — tracking the predicted landing position of the ball rather than chasing its current x, since lag only becomes a problem right at the moment of landing, not during the ball's bounce around the walls.
+
+If I actually try to compute the landing point, I need some function of position, height, and direction, which is a fairly large combinatorial space. One useful shortcut: when the ball moves diagonally, x minus y (or x plus y) stays constant along the path until it bounces off a wall, so I can use that invariant to project forward to the landing row without tracking every step.
+
+Since the ball and trail positions come in as one-hot encodings, a single linear layer followed by tanh can in principle learn an arbitrary function over those 100 cells, which gives me more flexibility to encode this projected landing coordinate directly rather than computing it step by step.
+
+But I'm realizing the relationship between ball and trail position isn't simply a fixed offset—it breaks down at bounce points. When the ball clips the wall, bounces off a brick, or gets caught by the paddle, the trail-to-ball relationship changes depending on which axis got reflected, so I need to account for these edge cases separately rather than assuming one clean formula.
+
+For vertical bounces, inferring exact dy from a single frame is ambiguous since brick bounces could happen moving up or down—but that level of precision may not matter. What really matters for the paddle policy is the current horizontal direction dx and ball x position, since that's what determines where to move the paddle.
+
+Checking cases: in normal movement ball.x minus trail.x equals current dx, but after certain paddle catches the direction flips so this difference doesn't match the new dx—that's a tricky edge case to handle when inferring direction from position deltas alone.
+
+Since the ball takes many steps between hitting the paddle and needing another catch, misreading dx for a single step isn't fatal if I'm aiming for landing prediction rather than exact tracking. I'm weighing simpler policies like tracking the ball's current x versus full trajectory prediction, and trying to recall benchmark scores for RL agents on MinAtar Breakout to calibrate what's achievable.
+
+The real question is whether landing prediction lets the paddle catch the ball essentially every time—once the ball starts descending past the brick rows its path becomes deterministic, so I'm working through the worst-case scenario where the ball bounces off a brick near row 3-4 and begins its descent from there.
+
+Since row 4 is the lowest bounce point off a brick, the descent from there is shortest, so I need a targeting strategy for when the ball moves down versus up — maybe tracking a projected landing x differently in each phase. A simpler idea is just having the paddle chase the ball's next x position directly, which should naturally recover from any lag of one step caused by sticky actions at reversal points.
+
+Horizontal reversals only happen at walls or specific paddle catches, so if the paddle falls behind by two or more steps, it stays lagging until the ball hits a wall — though with a full horizontal traverse taking about ten steps and a vertical round trip ranging from nine to seventeen, the lag is often resolved before landing. This makes landing prediction more reliable during descent, while during ascent I'd need to guess the bounce point, perhaps assuming the nearest brick row or ceiling.
+
+Since horizontal velocity stays constant through vertical bounces, the ball's unfolded horizontal position progresses linearly with time, meaning the landing x-coordinate depends purely on total time until landing. I'm working out that total time as the sum of steps needed to reach the bounce row plus the steps to descend back to the paddle row.
+
+At the ceiling, the ball actually registers as being at row 0 for two consecutive observations because of how the direction flip works at the boundary, so I need to account for that doubled frame when computing time-to-bounce for r_b = 0.
+
+The landing position shifts by u plus dx times the total unfolded distance, which depends heavily on exactly which row the brick bounce occurs at — lower bounces give less travel, higher bounces give more. Since each row higher adds two extra steps of horizontal movement but also more time to react, I'm trying to find a pre-positioning strategy for the paddle that hedges against this uncertainty, maybe targeting the middle of the possible bounce-row range rather than the extremes.
+
+Instead of recomputing a fixed target during ascent, I'm now thinking of the paddle as continuously mirroring the ball's horizontal motion — tracking the ball's x-position directly rather than committing to a single predicted landing spot, so that once the bounce actually happens and the descent begins, the paddle is already roughly aligned with the ball's x at that moment and only needs to handle the known descent-phase horizontal drift.
+
+So lag up to 1 still allows catching, and wall bounces give extra slack since the ball returns toward the paddle. That means tracking the ball directly is basically as good as landing-point prediction in the worst case — the real benefit of prediction only shows up when the paddle's ahead or a bounce is coming, so I should think about which ascent-phase target position minimizes the movement needed during descent.
+
+Switching to unfolded coordinates, the ball's horizontal position moves strictly monotonically until it folds at paddle contact, so the landing time is uncertain within the ascent window — complicated further by rare cases where the ball passes above the bricks and re-bounces downward, which I'll set aside for now. The paddle just needs its real position to match the folded landing coordinate, and since folding effectively brings the ball back toward center, simply mirroring the ball's current folded x position each frame seems like a reasonable baseline strategy.
+
+If the paddle lags by some amount, that gap persists until the ball hits a wall, at which point the ball reverses toward the paddle and the gap closes twice as fast, naturally self-correcting the lag — so wall bounces act as recovery points, and prediction during the ball's descent gives further opportunities to preposition the paddle before it needs to react.
+
+At the wall the ball reflects and dx flips sign, so the clamped x stays at 9 momentarily before the next frame shows it moving back toward 8. Tracking this, if I always press toward predicted next x, sticky action repeats can introduce a one-step lag between paddle and ball position right after a bounce, which I need to account for when computing the pursuit target.
+
+At the wall, the ball's x pauses for a step while reversing direction, which actually helps the paddle catch up by reducing lag by one. So walls self-correct lag, and similarly lag shrinks quickly whenever the ball reverses back toward the paddle.
+
+For the ahead case, I'm defining target = x + dx as the ball's next position, and the paddle should aim to be there after its move: no-op if already at target, move toward dx if currently matched with the ball, or step back if it overshot. Since a paddle at position p can reach p-1, p, or p+1 in one move, it can catch the ball as long as one of those lands in {x, x+dx}.
+
+Thinking through steady-state tracking: once matched, the paddle stays perfectly aligned, so errors only come from sticky actions at direction reversals or imperfect sampling. I'm working out how lag recovers at wall bounces — tracing through what happens to a lagging paddle when the ball reverses direction at the boundary.
+
+Actually, tracing through near the wall, the paddle naturally stays matched since the clipped target equals the current position, so the no-op there isn't a lag issue — the real lag risk only appears right after the bounce when the target flips direction and a stale sticky action briefly sends the paddle the wrong way before correcting.
+
+There's also a tricky paddle-collision case where the ball reverses direction right at the paddle, so the trail-based velocity inference gets it backwards — if the network reads the wrong dx sign, it'll move the paddle the wrong way and create a lag of 2 instead of catching cleanly. I need the network to specifically detect this reversal-at-paddle scenario rather than naively extrapolating from ball-trail positions.
+
+Maybe deliberately using lag 1, where the paddle targets the ball's current x rather than the next one, always catches via the same branch and keeps dx unchanged. But that gives less margin for error, so I need to check whether a lag-1 scheme still handles wall reversals correctly.
+
+Tracing through a wall bounce: ball arrives moving right, paddle one step behind. Pressing right matches paddle to the ball, the ball clips and flips direction, and then the same-column observation lets me infer the new negative dx. From there targeting continues to work with no-op or opposite presses as needed, and I'm checking whether sticky repeats of the previous action still land on the correct paddle position at each of these transition steps.
+
+One sticky-no-op during a paddle reversal can balloon lag from 1 to 2, which is much harder to recover from than a single lag-1 miss caused by a sticky at steady state. That makes matching the ball's current column (lag 0 target) the safer steady-state strategy over aiming ahead, since walls naturally shave off lag and single stickies stay catchable — though I still need to handle the reversal case carefully, and I'm now considering whether an aim-ahead target (x + 2dx) could offset the paddle being one step ahead in steady state by reasoning about the catch set after each action.
+
+Working through the steady-state logic: targeting x+dx means that after each step the offset d collapses toward 0, since the paddle moves at most one tile per step and corrects any drift from the ball's projected position. Checking the cases d=1, d=2, and d=-1, each resolves back to d=0 after one move, confirming the tracking rule is stable.
+
+But I need to check boundary behavior too — near the walls, the ball's reversal introduces a mismatch between the previous action and current direction, which could temporarily throw off the offset by more than one unit. I'm tracing through a specific case where the ball is at position 9 and reversing direction to see how that edge case plays out.
+
+If the previous action was "right" instead, the lag doubles to 2 in that worst case, which is a real risk of missing — roughly a 10% chance per reversal. One way to sidestep this is to prefer a no-op when the observed lag is already zero rather than nudging the paddle, which avoids the reversal case entirely and keeps the lag steady at 1 as the ball continues in its current direction.
+
+So that confirms arriving with d=1 and a no-op is actually safe at the reversal point. The broader principle seems to be that sticky risk comes from needing a different action than the last one, so staying near a no-op around reversals keeps the lag small. I want to reconsider landing prediction instead: when the ball descends, the paddle moves to the predicted landing spot and holds there with no-op, so the key question becomes whether it's better to be sitting at x8 or x8+dx right before the bounce.
+
+Thinking through the ascent phase, if I track the ball directly during ascent versus predicting its eventual landing, the descent phase might then demand a big correction—so I'm trying to work out a hybrid approach where ascent uses simple tracking and descent switches to landing prediction.
+
+I'm working out the reachable window for the paddle at descent start, given uncertainty about which row the ball bounces: the paddle needs to be within a distance equal to the remaining actions from either the landing spot or its mirrored variant, which gives a fairly generous margin for moderate bounce rows.
+
+Checking the worst case more precisely: with r_b=4, the paddle can lag behind the ball by 1 but not 2, so some positions fail. But with r_b=0 (ceiling bounce), 9 actions give enough range that |p-x8| ≤ 9 always holds, meaning ceiling bounces are always catchable no matter the paddle's starting position.
+
+The real risk comes from low bounces (rows 2-3), since bricks initially fill rows 1-3, making the first bounce typically occur at row 4 with only 5 actions to react. So I need to think about what the paddle should do during the ball's ascent phase, before the next descent begins.
+
+A reasonable approach: position the paddle close to where the ball will land, accounting for the most constraining case, which is a bounce at row 4 (fewer reaction steps). But if the ball keeps ascending past row 4, that assumption breaks down, so I need to adjust the prediction as the ball rises, perhaps targeting the next row up each time.
+
+Computing this shows the predicted landing shifts at roughly 2 columns per step in unfolded space, which the paddle moving at speed 1 can't match -- though the ball has more time to react the higher it climbs, so there's some slack to work with.
+
+Ultimately it seems simpler to just have the paddle track the ball's horizontal position directly as it moves, since that strategy already covers all the bounce cases I worked through.
+
+I'm working through which landing target produces less lag after the catch-and-reverse: comparing the second-branch catch (paddle already positioned at x8+dx, zero lag on the next ascent step) against the first-branch catch (paddle at x8, needing to catch up by one step once the ball reverses direction). The second-branch version seems to avoid the extra lag that the first-branch version introduces.
+
+I'm checking more boundary cases: a ball at row 0 moving left folds correctly back to 0, and a ball at row 7 moving right toward the wall ends up reflecting direction after a second bounce step, tracing through how the catch set and direction-flip logic handle that double-wall interaction.
+
+Now I'm deriving a general formula for the descending ball's target column using folding, and working through the tricky edge case where the ball has already bounced off the wall once — needing to track the "unfolded" position across the fold boundary to make sure consecutive wall touches are handled consistently.
+
+For the ascending case, I'm trying to see if the same folding idea applies, perhaps with a unified target formula that depends on vertical position and direction, parametrized by some step count k.
+
+Now I'm tracing through what happens at the bounce moment: the ball's target switches from simple tracking to the folded landing position, and I need to figure out how far the paddle is from that target when the direction flips, comparing the paddle's position to the ball's at the previous observation.
+
+With the exact distance match, the paddle reaches the target precisely on the last available move, same as tracking, and since the action direction stays constant through the chase, a sticky repeat at the bounce doesn't cause any error.
+
+But during descent with wall bounces, the paddle may arrive early and switch to no-op, so a sticky repeat could push it an extra step past the target — tolerable if there's slack. The real problem is at the catch moment when the ball reverses direction: if the paddle just arrived exactly in time, the previous action was still "move toward target" and a sticky repeat would move it the wrong way, producing a two-step lag that only gets corrected once the ball hits a wall again.
+
+Checking the math confirms this lag-2 case actually fails to catch unless the descent path includes a wall bounce, since the paddle can't close the gap in time otherwise. That makes the reversal catches riskier, so I should favor catches where the paddle has already settled at the target with no last-moment arrival, avoiding that direction-flip issue entirely.
+
+I'm tracing through the sticky-action behavior at wall bounces: using plain current-position targeting causes lag to creep up because consecutive no-ops get clamped, but switching the target to account for the ball's velocity (x + dx) at the bounce point seems to keep the paddle synced without accumulating delay.
+
+It makes me realize the right strategy depends on the policy's behavior at each state, so I'm searching for a cleaner principle — maybe maximizing slack in target choice, or predicting the landing position using a minimax-style approach where the paddle aims for the worst-case bounce row during ascent.
+
+Let me recount the landing position formula: it comes out to u + y + 9 - 2r_b in unfolded coordinates, and the number of paddle moves available before the final row-8 observation is y + 10 - 2r_b steps, so I need the paddle's reachability within that many moves to match the required landing x-position.
+
+If the paddle lags behind, checking p ≥ u - 1 shows lag of at most 1 is required regardless of bounce timing, so being up to 1 behind is still catchable. If instead the paddle is ahead, I need to work out the analogous upper bound constraint for how far ahead it can be while still reaching back in time.
+
+I need to think through the folding logic more carefully: if the ball moves right from x, a paddle ahead at p ≥ x stays ahead in unfolded coordinates, but if the paddle is behind at p < x, its mirror image at distance 19 - p actually ends up ahead, since folding reflects the paddle's effective position across the wall.
+
+Rather than keep untangling the folded representation, I think it's cleaner to just reason directly in real space: catching the ball means the paddle's position after its final move must match the ball's real landing position at row 8, accounting for the ball pausing one step at each wall bounce, and checking whether the paddle can reach that position within the available number of moves.
+
+Since the gap between paddle and ball position shrinks (or stays matched) at least as fast as time passes, the tightest constraint is the earliest possible landing — if the paddle can reach that spot in time, later possible landings remain reachable too, so I can focus my policy on tracking just the soonest-possible bounce scenario.
+
+The question is how t_min shifts as the ball ascends without a brick to bounce off, and figuring out the actual earliest bounce row from the brick layout rather than assuming a fixed row.
+
+If the ball enters the brick zone, the earliest bounce could happen right at the current row instead of row 4, which changes the landing formula to fold(u + dx(9-y)), moving by 2dx per rising step instead of 1dx — faster than before, so I need to check whether the paddle can still track it given f is nonincreasing.
+
+For descending balls, assuming no bricks underneath, landing is just fold(u + dx(8-y)), ignoring the rare case of hitting a brick while falling. Now I want a single unified formula across ascending/descending and in/out of brick zone so I can pick one target paddle position that covers both possible final positions.
+
+If the catch uses the second branch where the paddle sits at x8+dx, the ball reverses direction and starts ascending from row 8 at that new position — I'm tracing through whether the paddle, after being idle while waiting, has enough slack to start moving again in time given the sticky no-op delay.
+
+With nine steps to the new target and a max distance of nine, there's exactly one unit of slack, which absorbs a single sticky delay. Now checking the first branch, where the paddle stays at x8 without reversal — I'm working out the equivalent landing position and distance there to compare slack margins.
+
+Both branches seem to land within the allowed bound regardless of starting offset. So now I want to verify the core claim: if the paddle can reach the earliest possible bounce point in time, every later possible landing point remains reachable too, since the gap between successive targets never exceeds the time available to close it.
+
+As the ball rises further, the required time grows faster than the paddle needs, so there's plenty of slack. I'm also considering edge cases: bricks hit while descending from the ceiling with bounce-back, which changes the landing prediction but timing stays generous, and brick bounces that flip vertical direction while keeping dx the same. I'm also checking whether a "strike" flag lets the ball pass through bricks during consecutive hits, looking at the brick_map condition logic.
+
+The overall policy is to compute a target landing position from the ball's x, y, dx, dy, then steer the paddle toward it. I'm figuring out how to encode this using the ball, trail, and paddle channels the network sees, computing the sign of the difference between target and paddle position.
+
+Since the network's first layer only sums contributions from each input position separately, I need to approximate a function that jointly depends on the ball cell and direction. I'm considering creating separate units for each movement direction by exploiting the relationship between the ball cell and the trail cell, though the trail alone doesn't fully pin down direction at bounce points.
+
+The trail alone doesn't resolve it since both trail and ball position matter together, and direction-specific detection combined with position seems hard to keep compact given only 32 units per layer. I'm focusing on the final decision logic instead: compare T against p, output left if T < p, right if T > p, and no-op if they're equal.
+
+Trying a threshold-based construction: layer 1 could compute paddle threshold features [p > k] easily since paddle is one-hot, but computing [T > k] requires combining ball position and direction jointly, which is trickier. I'm exploring whether weighting ball cells and trail cells together could let a unit fire only when both the ball and its direction-specific trail align correctly.
+
+I'm realizing the direction can't be isolated additively since the trail cell is one of several neighbors depending on direction, so I'm now considering whether the offset between ball and trail position (like x-difference of +1 for down-right) could encode direction more directly.
+
+Computing differences between one-hot ball and trail positions gives me dx and dy signals directly. Then I notice that the time formula for ascending balls in the brick zone collapses to the same expression as the descending case, which could let me unify both into one formula.
+
+Now I'm thinking about how to actually build this with a 2-layer tanh network: compute each direction's threshold function T_d(cell) separately, then gate by direction. Layer 1 would hold threshold units [T_d(c) > k] independent of direction, and layer 2 would combine them with a direction indicator to activate only when both the direction matches and the threshold condition holds.
+
+But I realize a cleaner trick: compute a signed preactivation combining ball weights and paddle weights directly, tanh'd into a soft sign, one per direction — the catch is layer 1 can't gate on direction since it isn't encoded as a single scalar input, so I need another way to fold in the direction information without blowing up the unit budget.
+
+Not separable that way, but I realize the diagonal sums/differences are the key invariants here. For descending motion, x−y or x+y stays constant depending on direction; for ascending motion similarly, with the specific offsets differing based on whether y is above or below the midline.
+
+So the real pattern is that each ball cell lies on two diagonals (x+y and x−y), and the relevant one matches the direction of travel: down-right and up-left share x−y, while down-left and up-right share x+y. That means the trail and ball always align on the motion diagonal, which simplifies the formula considerably.
+
+Since the ball and trail share exactly one diagonal line (the motion diagonal) while landing on different cross-diagonals, their combined presence on that line sums to 2, versus at most 1 elsewhere — so a unit with +1 weights on both cells and a -1.5 bias fires exactly when motion aligns with that line. Doing this for all 38 lines is too many units though, so I need a way to compress it while still distinguishing directions like down-right from up-left along the same diagonal.
+
+Instead I'm trying a decomposition where a cell's weight depends on both x-y and x+y separately, so the combined ball+trail activation reduces to simple expressions depending only on the motion diagonal's position parameter.
+
+Switching tack, I consider having layer 1 compute per-direction comparisons directly as soft thresholds using a saturating tanh on scaled integer differences, trying to avoid the combinatorial blowup of four separate threshold units per direction.
+
+I can build an AND gate per direction by combining the directional threshold unit with the direction indicator, so each R_d fires only when both the rightward condition and that specific direction are active, and similarly for L_d. That gives 8 second-layer units total, which then combine additively into the right-logit output.
+
+Normalizing each unit to contribute 0 or M when active lets me construct clean right/left logits that peak at M, with a constant no-op bias of M/2 that wins whenever no directional unit fires. Picking M around 20 gives a comfortable margin of about 10 between the correct and incorrect choices.
+
+Up, down, and fire are effectively no-ops too, so I just leave their logits at the default 0 — they never outcompete the real no-op bias or the directional logits when those are active, so the setup stays consistent without needing extra suppression.
+
+Now I need to work out direction detection for the ball relative to the trail, covering normal diagonal movement plus edge cases like wall clips, vertical bounces, and corner hits. Starting with the basic case: when the ball-to-trail offset is (±1, ±1), that's a standard diagonal move.
+
+For a horizontal offset of zero with vertical offset ±1, that signals a wall clip, so the horizontal direction flips based on which wall edge the ball touched, while vertical direction stays the same. I also need to account for compound cases, like a wall bounce immediately followed by a brick or ceiling collision, which would reset the vertical position.
+
+For a vertical offset of zero with horizontal offset ±1, that's a vertical bounce from the ceiling, a brick, or the paddle, and I need to infer which one based on the ball's row — paddle catches at row 8 reverse to upward motion, ceiling hits at row 0 reverse to downward motion, and brick hits depend on whether the ball was traveling up or down beforehand.
+
+For row 8 paddle catches, I need to track the two branches: if the paddle position matches the ball's old x, it's a first-branch catch with vertical flip only, but if the ball was at the wall edge moving right it flips horizontal direction first, changing the outcome; if the paddle matches the new x instead, both directions flip, so current dx becomes the negative of Δx.
+
+I realize a wrong dx choice here isn't catastrophic since the target for a ball ascending nine rows is far off — a wasted step followed by a correction only costs about two steps of slack, which I can likely absorb.
+
+Maybe it's simpler to fix the catch policy so paddle position at the moment of catch always follows one consistent branch — say always setting paddle x to the ball's x at row 8, never using the reversed trail position. That way at the critical Δy=0 moment, current dx always matches Δx, except possibly at the wall corner case which I'd need to handle separately.
+
+Given the catch set is {x8, x8+dx}, robustness depends on which side the paddle approaches from—x8 works better if the paddle arrives from behind, x8+dx if from ahead. I'm now tracing through a concrete example after the row-8 catch, recomputing the next target position with the ball shifted by dx and checking how it folds relative to walls.
+
+I'm also reconsidering whether targeting the ball's x directly during ascent makes more sense than using the row-4 bounce target, since with row 3's bricks intact, the earliest possible landing point is really what should constrain the paddle's position during that whole ascent phase.
+
+Tracking the slack between paddle position and target as the ball passes each row: the target shifts by 2 per row while the paddle can only close 1 per step, so slack shrinks by 1 each row down. I'm recomputing the exact action counts and distances at rows 4, 3, 2, and 1 to pin down exactly when the paddle runs out of slack and must react.
+
+account for the bounce near the ceiling, computing target position through the fold consistently across ascending and descending states. Since the fold operation is 1-Lipschitz, real-space distances stay bounded by the unfolded distances, so the paddle's chase logic remains valid. The remaining piece is figuring out how to encode the target as a function of ball position and direction.
+
+I'm working through the three direction cases, with the trickiest being ascending at low row where I'm assuming the earliest possible bounce rather than tracking actual brick layout, since that's the conservative choice.
+
+For implementation, I'm sketching a first layer with 32 units: four directions times two comparison units each, computing the difference between predicted landing time and paddle position with a bias offset on either side, using ball and paddle channel weights to build these preactivations.
+
+Now I'm working out how to detect the ball's current horizontal direction from positional deltas, handling the edge cases at the wall columns where the direction might flip due to a bounce that already occurred versus one about to occur.
+
+I'm now checking the boundary cases at the walls (x=0 and x=9), decomposing each ball/trail weight function into a linear term plus correction, and testing the inequality constraints that must hold for each scenario—wall bounces and normal moves arriving at or leaving from the edges.
+
+I find a working choice: setting a small positive correction at x=0, a matching negative one at x=9, and zero elsewhere satisfies all the sign constraints I derived. Now I'm starting to examine same-row bounces where the horizontal displacement is ±1.
+
+Checking the corner bounce near wall x=9, where the ball moving up-right flips to up-left — the unit with the negative correction at x=9 handles this correctly. I still need a separate correction for the paddle-row reversal at row 8, since the ball and trail positions there require detecting when the ball is at that row alongside the paddle position.
+
+I'm trying to avoid a joint equality check between ball and paddle position by reasoning about when the paddle would actually end up at x8+dx versus x8, considering the landing-prediction timing and whether the paddle arrives early and waits.
+
+Checking that the first-branch case holds correctly: if the paddle sits at x8 and catches the ball, the resulting trail position and dx stay consistent, and then I'm working through the wall-bounce scenario where the ball approaches from the edge and the direction flips.
+
+Now I'm working out how to detect the current vertical direction from position deltas—using Δy for normal movement, but needing special-case logic when the ball bounces off the top wall, bottom wall, or a brick, since those cases all produce Δy=0 or ambiguous values that require inferring direction from which row the bounce happened in.
+
+Checking the row-8 trail bonus of -0.5 against normal moves confirms the sign works out: upward moves stay negative, downward moves stay positive, and this holds consistently across all other rows when adding a +0.5 term for non-terminal rows.
+
+Now I'm working out direction indicators Dx and Dy using saturated tanh units, which hit near ±1 given the large gain γ. For the layer-2 gating, I'm checking that a direction (sx, sy) is only active when all three terms—U_d+, sx·Dx, and sy·Dy—agree as +1, otherwise the gate stays strongly suppressed.
+
+That gives me 8 gated units L_d mirroring R_d but using the opposite comparison U_d-, so overall layer 1 needs 10 units (8 comparisons + 2 direction units) and layer 2 needs 8 gating units, feeding into the output logits as a sum over directions. This seems workable, so now I'm examining the preactivation for the comparison unit U_d+ more carefully.
+
+Checking the weighting: β scales the ball's position term against the paddle's position, with the bias chosen so the difference always saturates since T_d - p is an integer. I need to confirm the paddle is only read from row 9 of channel 0 and the ball only from channel 3, and that edge cases like the ball being at the terminal row or overlapping its own trail don't break this comparison.
+
+Now I'm working through the fold function that wraps positions back into the 0-9 range for each ball direction, and deriving the target paddle position T for each case — starting with the downward direction where at row 8 the target simplifies to just the ball's x-coordinate, checking whether this still holds at row 9.
+
+For the upward direction, I split into two cases depending on whether y is above or below row 4, then trace through a worked example: a ball caught at row 8 moving up-right, bouncing off a brick, and reflecting back down to verify the formula gives the correct final x-position.
+
+Checking the row 0 edge case: a ball moving up that reaches row 0 flips direction entirely, becoming a downward-moving ball at the adjacent column, so I trace that bounce sequence too.
+
+I'm also verifying the row 4 crossing case where the ascending ball actually bounces off row 3 instead, which shifts the final column by 2 compared to the simple formula, confirming what I found earlier. Now I want to double-check the descending ball scenario when it bounces within or above the brick zone.
+
+Turning to the initial setup, I'm tracking a ball starting at row 3 in either diagonal direction, confirming the trail detection logic correctly infers horizontal and vertical direction from the previous cell relative to the boundaries.
+
+Working through the trajectory: ball at (3,0) heading down-right reaches x=8 after five steps with target column 5, matching a one-move paddle shift. After the catch, it bounces up-right, and I'm verifying the fold computation for the new target lands correctly, checking whether the path crosses any brick positions at rows 1-3 along the way.
+
+Continuing that bounce, the ball clips off a brick at (3,8), redirects down-left, and reaches x=4 after five more steps — matching another single-move paddle shift. I confirm the wall-clip timing formula holds for this case, then start considering the scenario where the ball hits the wall at x=0 while moving left, checking how the paddle needs to react for that far-left catch.
+
+With slack of 1, sticky actions (10% chance of repeating previous action) are mostly harmless during a straight run of consistent moves, since the repeat matches what I'd do anyway. The only risky moment is the very first move after a catch, where the previous action was a no-op wait — if sticky triggers there, it eats my one slack move, but after that the remaining moves are all repeats of "right" so no further risk. I want to generalize this to compute the slack for each dx case based on how far fold(x8 + 10dx) is from x8.
+
+Working through this case, I get T=9 with distance 9 from paddle, giving 10 actions, consistent with the wall-corner max distance pattern I found elsewhere (slack ≥1 given a row-4 bounce). But then I realize there's an ambiguity: if the catch happens via the second branch where the ball reverses direction, my network's assumption that dx stays the same would be wrong, potentially throwing off the computed T.
+
+Tracing through concrete values, I check whether this misread could cost enough steps to matter — the question is whether the second-branch catch only occurs when the paddle had enough slack (like being 2 steps ahead) that the one-step correction doesn't blow the budget.
+
+There's also the sticky-action edge case: overshoot from switching move directions or from move-to-no-op transitions should self-correct given slack, but if the paddle arrives with zero slack left, a sticky repeat of the same direction could push it past the target right at the critical final step.
+
+That's a miss. To mitigate this, I should aim for whichever point in the catch set {x8, x8+dx} is nearer given the paddle's position — essentially moving toward the set rather than a single fixed point, with no-op only when already inside the set's range.
+
+This can be implemented using two threshold comparisons (one for the lower bound, one for the upper bound) each with their own learnable ball-cell weights. But there's still the issue that if the paddle catches via the second branch, the dx detection at the next step could misread direction — I need to fix how dx is computed at row 8 relative to the paddle.
+
+One option is to track whether the paddle is in a "waiting set" at the final observation and no-op there, though stickiness from a previous move could push it out — I'm weighing this against directly fixing the dx unit. The cleaner fix: define dx_true relative to which endpoint the paddle matches (trail vs ball position at row 8 with zero vertical movement), so the direction is read correctly regardless of which catch branch triggered.
+
+Working through it algebraically, I find dx collapses to x_b + x_t - 2p in the row-8 catch case, matching the normal-case formula x_b - x_t when p=x_t. This suggests the dx unit's weights could be additive — positive on ball cells across all rows, negative on trail cells except row 8, where the sign needs to flip depending on context, since row 8 trail also shows up during a normal upward move right after a catch.
+
+Since a single additive unit can't gate by row condition, I realize the gating has to happen in layer 2 instead: I can define two separate dx units, one for the normal case and one for the catch case using a tanh nonlinearity on the combined ball/paddle positions, and feed both into a "catch state" detector built from ball-at-row-8 and trail-at-row-8 weights with an appropriate bias threshold.
+
+Trying to combine these multiplicatively using a linear threshold unit turns out tricky—attempting to express the effective dx as a conditional mux between the normal and catch signals based on the catch-state value doesn't reduce cleanly to a single linear combination, so I need to work through whether this can actually be done in one unit or needs an extra layer.
+
+This leads to contradictory constraints requiring w_a both larger and smaller than w_b, confirming the multiplexer isn't linearly separable and needs an extra unit. I'm now trying to adjust the Dx unit's combination formula so that the catch-state difference terms properly cancel, working out what extra term needs to be added to make dx equal the desired expression in both branch cases.
+
+Actually, if I narrow the waiting set to just x8 instead of the broader set, second-branch catches become rare fringe cases. But I still need to check the sticky-overshoot scenario: approaching from ahead versus behind creates different outcomes at the final step, with a behind-approach sticky push causing a second-branch catch and reversal that could misread dx when the next target is far away.
+
+Considering a second-branch catch where the ball's true direction gets misread because the position delta matches the old dx — the misread target and true target could diverge wildly. I'm exploring whether dx can instead be inferred purely from paddle position in the catch state, using the relationship between paddle position and the top/bottom bounds rather than tracking ball movement directly.
+
+I'm constructing a pair of gated units that fire only during catch states, using large bias offsets to suppress them otherwise, so that one unit signals dx=+1 and the other dx=-1 exclusively within the catch window.
+
+This confirms the effective dx simplifies to sign(Dx_n + Z_+ - Z_-), since outside the catch state the Z terms cancel, and inside it the ±2 magnitude from Z dominates the ±1 from Dx_n regardless of ties. I'm now working out how this term plugs into the layer-2 AND unit's preactivation formula alongside the sy·Dy term.
+
+But I run into trouble: when the sx-term contributes ±3 instead of ±1, a single mismatch elsewhere in U or Dy can still push the total preactivation above the 2.5 threshold, breaking the intended AND logic. I need to rescale the weights on U and Dy so they dominate properly, trying something like doubling their coefficients to fix the threshold behavior.
+
+That checks out as a mismatch, so the cost works out with two extra layer-1 units for Z+ and Z-, bringing the total to 12. Then I'm verifying the catch state definition itself—ball and trail both at row 8 only happens right after a paddle bounce since there's no brick collision possible at row 9, so this case is fully covered by the paddle logic, with p equal to x_t or x_b depending on the branch.
+
+But there's a corner ambiguity: when x_b equals x_t equals p exactly, the tanh argument goes to zero and the sign becomes undefined, yet physically the ball should still deflect away from the wall (e.g., at the left or right edge). I'm fixing this by adding small bias corrections to the trail weights at x=0 and x=9 so the corner case resolves to the correct direction rather than landing at zero.
+
+Checking the second-branch catch at the wall confirms the sign flips correctly too — ball moving right that hits the catch state reverses to up-left, and the formula matches. Now I want to verify the gating condition for the catch states using the Z_+ preactivation formula.
+
+I need to pick a large gating constant G so that outside the catch state the preactivation is strongly negative, while inside it remains clearly positive, saturating the tanh to ±1 reliably — trying γ=4 and G=100 seems to work with margin.
+
+I'm sketching out the weight assignments so ball-row and trail-row activations combine with the bias G and paddle term to keep off-row positions safely negative, checking the arithmetic with G=150 confirms the margin holds (-93), and noting the paddle term is always non-positive so it only helps satisfy the inequality.
+
+For the Z_- weighting, I flip signs so the paddle term can contribute up to +108, and work through the worst case where the ball is at row 8 but the trail isn't, landing at -42 with G=150, which checks out.
+
+Now I'm wondering whether the second-branch catch scenario (approaching from ahead, waiting at an offset position) is actually a common case under the set-based waiting strategy.
+
+I also realize after a second-branch catch the ball reverses direction, but that probably doesn't matter much for subsequent targets. Turning to defining T_lo and T_hi for each direction and cell, I'm working through the catch set at the final observation row: when the ball would clip against a wall, it stays put and reverses direction, which collapses the catch set down to just the single position.
+
+For earlier rows I generalize this using a fold function that handles wall bounces correctly, including edge cases where the clip happens exactly on the last step — checking an example confirms the fold produces the right reflected position.
+
+I then define T_lo and T_hi as the min and max of two folded positions, giving a clean rule: move right if the paddle is below T_lo, left if above T_hi, otherwise stay put. I'm now extending this same logic to the ascending case, starting from the assumption of earliest landing.
+
+I'm making sure the tie case where T_lo equals T_hi (wall clip) correctly resolves to no-op only when the paddle exactly matches. Then I'm formulating the comparison units per direction using tanh-based soft indicators that signal whether to move right or left based on how the target compares to the paddle position.
+
+Since only one direction is ever active at a time, I'm combining these into layer-2 AND gates with the active direction mask, summing contributions into right/left logits — giving a compact network of about 12 first-layer units and 8 second-layer units total.
+
+I'm now second-guessing the target-distance logic when bricks get cleared mid-path: if the ball's trajectory passes an expected bounce row without actually hitting anything there, the landing estimate needs to jump forward by a row with enough slack to stay valid. I'm also tracing through what happens when the ball collides with a brick while still above the brick layer and moving downward — the collision should flip its vertical direction component while keeping it in the same row, turning a down-right trajectory into an up-right one.
+
+Thinking about the edge case where the ball reaches row 0 moving upward: it should immediately bounce off the ceiling and reverse to moving down again, with its horizontal position continuing to drift at the same rate. My formula for predicting landing position will be off by one unit in this edge case since it doesn't initially account for that extra ceiling bounce step, but the next update cycle should correct the discrepancy, so it's not something to worry about given how much slack we have.
+
+I notice bricks get refilled whenever all bricks are cleared and the ball is at the bottom of its descent — that's irrelevant to our prediction logic. I'm also considering the tricky case where the ball descends through the brick zone and actually collides with a brick partway down, causing it to bounce upward instead of continuing to the floor; my current target assumption doesn't account for this mid-path bounce, which would shift where the ball actually ends up.
+
+Checking the initial state's trajectory (row 3, moving down), that still lands correctly. Now I need to verify that during the ball's ascent back toward row 8, the earliest-landing target computation still leaves enough slack time for the paddle to reposition, factoring in whether the paddle starts one step behind or aligned with the ball's x-position depending on direction.
+
+Checking the second-branch catch case: ball reversed to x'=0 moving right gives p=0, target 9, needing 10 actions — slack 1. So slack is always at least 1 for row-4 bounces, and the sticky-action mechanism (a wasted no-op before the real move) absorbs exactly that slack, so everything stays consistent.
+
+Overall the policy should be robust if I design margins large enough that softmax errors stay negligible across the full episode—aiming for logit margins around 15-20 so error probability per step is essentially zero over 10,000 steps. I still need to think about whether a near-perfect policy actually sustains play that long, and how many bricks get broken per step in that case.
+
+But there's a subtler risk: the ball's trajectory is deterministic given the policy, so if the paddle always catches at the same relative position, the ball could settle into a periodic path that never intersects the remaining bricks—meaning it loops forever without scoring any more points. Sticky actions introduce some randomness into which catch branch the paddle uses, which could perturb the trajectory enough to avoid this stalemate, but I need to verify that this perturbation reliably breaks any periodic cycle rather than just shifting it.
+
+Counting the vertical cycle carefully: 8 steps descending, 1 ceiling step, 8 steps ascending, 1 catch step gives 18 steps total, while the horizontal unfolded period is 20. So each vertical cycle shifts the horizontal position by -2 mod 20, meaning the pattern repeats fully only after 10 such cycles.
+
+I also notice each bounce (wall, ceiling, brick, paddle) flips the parity of x+y, so coverage across the grid should be fairly thorough rather than restricted to one parity class. But there's a real risk the ball settles into a non-scoring loop if timing variations from sticky actions change which catch branch fires, altering direction and possibly steering clear of remaining bricks indefinitely.
+
+As for expected performance, I recall benchmark numbers for MinAtar Breakout—DQN and Rainbow variants reportedly reaching scores in the 60-100+ range over long training, with PPO implementations like gymnax landing somewhere in the high 20s to 30s.
+
+The deeper question is whether sticky actions and random initial ball direction provide enough natural variation to prevent the policy from falling into deterministic loops, since the catch branch depends heavily on approach direction and remaining brick layout near the endgame.
+
+So stickiness can occasionally flip the catch branch when arriving from behind, meaning the deterministic cycle gets perturbed roughly once every ten catches or so, which could eventually let the ball explore more of the state space and reach remaining bricks. I'm wondering if I should deliberately inject randomness, like randomly choosing between the two set positions while waiting, to speed this mixing up.
+
+random choice between staying and moving is safe either way, since sticky action repetition just reproduces whichever approach direction got the paddle to that set element in the first place—both end up caught. The real question is whether this randomization at the catch point disturbs the slack calculation during the ball's subsequent ascent, since the paddle's post-catch position now depends on which branch was taken.
+
+So to actually randomize, I need equal logits for no-op versus moving to the other valid element at that final descending observation, which means adjusting the comparison thresholds for the "right" unit in that specific case.
+
+Working through the direction-specific logic: at row 8 with the down-right case, the cell set is {x, x+1}, and I want p<x to favor right, p>x+1 to favor left, and equality cases to split 50/50 between the matching move and no-op. Tuning R_d's tanh preactivation to hit exactly zero at the boundary achieves this balance.
+
+Tracing through the AND-unit computation, I find that U=0 doesn't give the right preact value — I need a different gating structure for the randomized tie-break, possibly a dedicated layer-2 unit or adjustment to output weights.
+
+Setting that aside, I recall MinAtar Breakout benchmarks: DQN-style agents typically score in the 6-20 range historically, with later PPO-based approaches reaching 30-60. A well-tuned agent could plausibly push into the hundreds, so this approach with added randomization seems reasonable.
+
+I'm trying to reason through whether loops could persist despite the sticky randomness—it's genuinely hard to analyze since the trajectory depends on exact arrival timing and whether repeated no-ops ever get perturbed. I suspect most loops get broken eventually, but I can't rule out edge cases where the paddle's arrival moment stays perfectly consistent across cycles.
+
+So each arrival gives roughly a 10% chance of randomization, meaning loops should break within about 10 cycles on average, well within the 10,000-step budget. I'm double-checking the overshoot logic for both approach directions and the wall-clamped case, and it all checks out consistently. Now I need to also verify what happens if the target set shifts mid-wait or if the ball is descending during this process.
+
+For the y<4 ascending case I'm using the earliest-landing formula assuming an immediate bounce, computing the unfolded landing position and building the target set from it. Working out full lookup tables for all four directions across the grid means around 800 values total, though many cells are terminal and irrelevant, so I'm structuring the computation by direction and position to figure out the relevant weight entries for the ball channel.
+
+I'm planning to set each unit's weight column using row-wise blocks of ten values per direction, then apply a global scale factor afterward rather than multiplying every table entry by it directly, since the editing format supports scaling a whole column in place.
+
+Now I'm considering whether left-right mirror symmetry can cut the work in half, since the targets for opposite x-directions should mirror each other, but I still need to enumerate every value. I'm working through the fold-based formula for the rightward diagonal case, computing the unfolded position and its wraparound pair for each row.
+
+For u=19 and u≥20 I complete the fold pattern similarly. Now I'm checking the maximum possible value of u given the board constraints, considering both descending and ascending trajectories, and working through an edge case where a ball at row 8 might reach x=9 and still be moving rightward depending on how it arrived there.
+
+Tracing it out: a ball at (8,9) moving up-right works if it got there via the first branch at x8=8, giving u=18 with fold values {1,0}, so lo=0, hi=1. I verify this by following the trajectory forward—up-right to (7,9), then diagonally to (6,8), (5,7), (4,6), bouncing at row 3 to (4,5), then down to (5,4), (6,3), (7,2), (8,1)—confirming x8=1 with dx=-1 matches the expected set {1,0}.
+
+I'm now working out the full range of u for ascending and descending cases, bounding it between 0 and 18, then examining the dx=-1 (left-moving) case where I need a folded value formula involving x minus some offset k, and trying to exploit symmetry by mirroring x to 9-x to simplify the fold relationship.
+
+I derive the symmetric relation for the left interval from the right one via the mirror identity, then tabulate the (lo, hi) pairs for every integer u from 0 to 18, which form a symmetric V-shaped pattern peaking at u=9.
+
+Working out the coordinate formulas for each diagonal direction: down-right uses x+8-y, up-right splits depending on whether y is above or below 4, and the left-moving directions mirror these with x replaced by 9-x.
+
+Now I need separate threshold units for all eight direction/sign combinations (DR+, DR-, UR+, UR-, DL+, DL-, UL+, UL-), plus special handling for edge rows like row 9 (unreachable, so weights don't matter) and row 8 where the formulas simplify.
+
+I'm computing the lo/hi threshold tables row by row for the DR direction, mapping each x position to its corresponding u value and figuring out the boundary pairs that determine the decision threshold.
+
+Continuing to work through the lo/hi value ranges for each y row, computing the min and max sums of digit distances as x sweeps across its range for y=5 through y=8.
+
+Row 9 is a terminal state, so I'll leave its boundaries as zero since the ball isn't actually there for action selection purposes.
+
+Then I'm double-checking a specific edge case: for the down-right direction at y=8, x=9, the ball arriving from (7,8) moving diagonally lands correctly at (8,9), confirming that boundary. I continue checking the same pattern at y=7, x=9, verifying where the ball clips to after moving down-right from (6,8).
+
+Now I'm working through the up-right direction boundaries, computing lo/hi value ranges for each row from y=8 down to y=5 based on the formula that shifts depending on whether y is above or below the midpoint.
+
+y=8, matching the x+9 pattern from row y=0. I notice the UR rows for y≥4 seem to mirror the DR rows by offset: UR y=7 matches DR row 0, UR y=6 matches DR row 1, and so on down to UR y=4 matching DR row 3. The lower UR rows (y=3,2,1,0) also line up with DR rows 2,1,0, and wrap back to the y=8 pattern. I'm trying to organize these into a set of offset-based patterns to simplify the table.
+
+Still computing the lo/hi ranges...
+
+I verify P_9 checks out, then map which profile each row uses for down-right and up-right diagonal movement, with row y corresponding to P_{8-y} for DR and a symmetric pattern for UR.
+
+For left-moving diagonals, I'm deriving mirrored patterns Q_k from the P_k patterns using reflection formulas, then computing Q_0 by reversing and complementing P_0's hi and lo arrays.
+
+I compute Q_1 by reversing and transforming P_1's bounds: lo becomes [0,0,0,1,2,3,4,5,6,7] and hi becomes [1,0,1,2,3,4,5,6,7,8]. I'm checking a specific case, like a ball at (7,0) arriving from (6,1) moving down-left, to verify the clipping logic holds.
+
+Now I'm computing Q_2 from P_2's lo/hi arrays using the same reverse-and-subtract-from-9 transformation, getting lo = [1,0,0,0,1,2,3,4,5,6] and continuing the hi computation.
+
+Then I'm working through P_3 and P_4 the same way, deriving Q_3.lo, Q_3.hi, and starting the reversal for Q_4's hi bound.
+
+Continuing the reversal pattern, I derive Q_6.lo and Q_6.hi, then start computing P_7's lo and hi sequences by reversing again.
+
+Finishing Q_8.hi and computing Q_9's lo/hi pairs, then I'm sanity-checking Q_9 directly by computing u at a specific point to verify the fold values match.
+
+Now I'm mapping which Q index each row uses for UL and DL by symmetry pattern, then starting to work through the unit movement conditions for the DR direction based on comparing position against lo/hi thresholds.
+
+I'm laying out the full twelve-column structure for layer 1, pairing each direction (DR, UR, DL, UL) with lo/hi unit pairs, plus extra units for x-displacement, y-displacement, and a z-split, and beginning to define the weights and biases for ball position and paddle position inputs for each U unit.
+
+For the Dx unit, I'm working out ball and trail weights across all cells, handling the boundary correction terms so that wraparound cases (ball at x=9 moving to x=0, or vice versa) still produce the correct signed delta, then scaling by γ_x=10 to keep preactivations strongly saturating.
+
+Checking the corner case confirms both direction flips work correctly at (0,9). Now I'm setting up the vertical movement encoding, assigning ball-row weights and trail-row weights so the downward normal-move case aligns properly with the scale factor.
+
+With γ=10, magnitude 0.5 scales to 5, giving tanh(5)≈0.9999, confirming the minimum magnitude works. Now I'm working out the Z_+ and Z_- columns (catch detection), defining base values for ball/trail/paddle positions with a bonus term for edge columns, scaled by γ_z=6 to reach G=150, and checking the outside-catch boundary condition.
+
+I'm now enumerating cases for when the paddle aligns with the trail versus the ball to verify the catch-detection logic holds across all position differences, including the edge bonus terms.
+
+I'm checking that dx computes correctly: ball at (8,1) moving left, with Z_+ and Z_- magnitudes working out so tanh scaling gives nearly saturated values. Testing γ_z=8, G=200 against outside/inside magnitude bounds confirms consistency, and the corner cases at x=0 and x=9 both resolve to the expected directions. Now verifying what happens when p differs from both x_b and x_t in the catch scenario.
+
+Checking the effective horizontal signal E_x = Dx_n + Z_+ - Z_- in layer two: inside the catch state Dx_n stays bounded around ±1 while Z_+ - Z_- dominates at ±2, so the sum reflects the catch outcome; outside the catch state Z_+ and Z_- both saturate to -1 and cancel, leaving E_x equal to just Dx_n as expected.
+
+For the eight direction units, I'm computing R_d = tanh(K(2U_d+ + 2sy·Dy + sx·E_x - 4)), which translates into weight assignments: 2K from U_d+, 2sy·K from Dy, sx·K from both Dx_n and Z_+, -sx·K from Z_-, and bias -4K. Checking the arithmetic, matching directions give a positive sum (1 or 3) that saturates tanh(5) to nearly 1, while mismatched directions give -3 or -1, correctly pushing the output negative.
+
+Now I'm verifying L_d = tanh(K(-2U_d- + 2sy·Dy + sx·E_x - 4)), which should fire when U_d- = -1, meaning T_hi is below p — I'm double-checking the sign convention here since U_d- = tanh(β(T_hi - p + 0.5)) should hit -1 precisely when T_hi falls below that threshold.
+
+Next I'm laying out the eight layer-2 units mapped to direction pairs (DR, UR, DL, UL with their R/L variants), assigning sx/sy signs for each diagonal direction, then summing the relevant unit activations to build the right-action logit for the output layer.
+
+I work out that right/left action logits land on either 0 or M depending on whether the corresponding R or L unit fires, while no-op settles at M/2, giving a clean margin when M=30 (margin of 15) to keep the desired action's probability safely ahead of the rest.
+
+I confirm R and L can't fire simultaneously for the same direction since the lo/hi thresholds can't both trigger at once, and small saturation imperfections don't meaningfully shift the sums. Then I set up the logits for fire/up/down so they default to 0 and no-op gets M/2=15, making no-op dominate whenever none of the movement directions are active.
+
+Working through the layer 2 to output mapping, I'm setting the weights so right-direction units feed into the "right" output with weight M/2, adding a bias of 2M, and similarly for left; with M=30 that gives weights of 15 and biases of 60 for left/right and 15 for no-op.
+
+Checking this: a single active right unit produces 15 - 45 + 60 = 30, and with none active it's -60+60 = 0, both matching what I want. The unused hidden units beyond the ones I'm using have zero weights and biases, so they contribute nothing through tanh.
+
+Now I want to trace through a concrete example — ball at (3,0), trail at (3,0), moving down-right, paddle at position 4 — to verify the x-direction signal comes out positive as expected.
+
+I'm verifying the dy signal also comes out positive meaning downward motion, then checking the DR paddle-tracking logic: with the ball in row 3 the right-unit fires correctly, moving the paddle from 4 to 5, and then I'm continuing to trace the next observation step where the ball moves to row 4 to see if the paddle tracking still holds.
+
+I'm tracing the ball's path diagonally through rows 5 to 8, confirming the paddle tracking logic produces a no-op at each step until the ball reaches row 8 where the catch occurs, landing at position 5 which matches the paddle. Now I'm computing the catch-state Z values, working through the positive and negative branch calculations with the ball and trail positions plus paddle offset and bias terms.
+
+Tracing the ball's path step by step: it moves up-right through (7,7), (6,8), (5,9), then flips to up-left hitting a brick near (4,9), bounces back down-left through (5,7), (6,6), (7,5), landing at (8,4) with dx=-1, giving paddle set {4,3} which matches paddle position 4.
+
+Confirmed, that case checks out correctly, and the brick hit at (3,8) earns the reward. Now I'm double-checking a trickier edge case: a wall-clip scenario where the ball reaches the boundary and bounces, tracing through how the direction and position update in that first-branch logic.
+
+That gives 10 actions available against a required path length, so the slack holds with 1 to spare. Now I'm checking whether the post-catch worst case could ever exceed available actions generally, working out the paddle position bounds for ascending trajectories with dx=+1 relative to target x'.
+
+This confirms 10 available actions with the row-4 bounce assumption, which only holds since bricks exist only in rows 1-3, not lower. I'm also checking a subtler case: when a ball already mid-bounce (strike flag set) immediately hits another brick before completing its bounce, it should pass through rather than bounce again.
+
+I'm tracing through the logic to see if consecutive bounces could let the ball tunnel through a second brick without destroying it, since strike stays True across steps until a non-brick cell resets it.
+
+I'm also checking the edge case of a ball bouncing off a brick near the ceiling, since the up-then-immediate-ceiling-flip sequence could make our simplified Dy label mismatch the actual trajectory.
+
+Checking that case now confirms the prediction matches correctly. I'm also considering edge cases like tunneling through gaps where the ball bounces between ceiling and bricks repeatedly—there's plenty of time margin there, so it's fine. Now I'm scrutinizing whether the "earliest landing" assumption for ascending balls in low rows actually holds up in all scenarios.
+
+I'm checking overshoot cases for sets with single or paired elements near the fold edges—whether arriving from behind or ahead, the overshoot always lands back within the valid set, so it's safe. Sampling noise margins look fine too, and now I'm considering whether ball direction detection could cause an edge case when the paddle is already correctly positioned.
+
+Then I think through the vertical delta ambiguity at row 8, confirming that a zero y-change always implies upward motion, and verify the trail-row scenarios where the ball is one row behind and moving down produce the expected observation. Now I'm manually recomputing the P/Q tables for several left-direction cases to cross-check against the folded values, starting with position (5,2) where folding -1 and -2 gives the set {0,1}.
+
+I trace the actual path for (5,2) moving down-left, following each step through the boundary flips, and confirm it lands on the same {0,1} set as the table. Then I repeat this verification for UL at (6,3), folding -4 and -5 to get {3,4}, which matches the table entry, and move on to checking UL at (2,5) similarly.
+
+Now I'm second-guessing whether targeting the earliest landing row for an ascending ball is always safe, especially when there's no brick blocking that column at row 3 — but I conclude it's conservative either way. I start reasoning through whether an ascending ball bouncing off the ceiling still maintains enough slack between the paddle's movement rate and the target's movement rate once it passes row 4, confirming the margin stays comfortably above the minimum needed.
+
+Let me check the descending phase matches up: when the ball bounces at row r_b, the descending target should equal the earlier computed landing target, so the paddle is already positioned with slack intact. I'm verifying this holds whether the bounce happens before or after row 4, tracing through the unfolded x8 value in both ascending and descending cases to confirm they agree.
+
+I'm also checking the ceiling bounce case at row 0, where the unfolded position before and after the bounce needs to stay consistent, and it checks out. Then I'm reconsidering edge cases where Δx = 0 occurs only at wall clips or corner bounces, making sure the catch-state analysis still holds when the paddle isn't in a standard position.
+
+Next I'm verifying the sequence of wall-clip-then-brick-check logic: when the ball hits the wall moving diagonally, the direction flips before checking for a brick, and depending on whether a brick exists there, the resulting position either stays at Δx=0 or shifts by one row — both consistent with the earlier pattern.
+
+Then I'm checking the paddle-edge case where the ball bounces away from the paddle rather than reflecting off it, confirming the terminal position matches the expected set, and double-checking the vertical direction detection using the trail weighting at row 8, which comes out to -1.5 and -0.5 for the two edge deltas, both correctly signaling upward motion.
+
+Moving to layer 2, I work through the AND unit formulation combining the catch-state horizontal error term with the threshold design across all sign combinations — verifying that matches push the preactivation into {1,3}, mismatches in the unit indicator or vertical delta push it to {-3,-1}, and mismatches in the horizontal error term also land in {-1,-3}, confirming separation holds with margin K=5 so tanh saturates appropriately.
+
+I check that the small deviations from perfect ±1 saturation in U, Dy, and Z terms stay negligible, and that the seven inactive layer-2 units contribute a consistent near-saturated negative sum to the output with only tiny rounding error. I also confirm unnecessary paddle movement isn't a concern and that approaching the set from either direction while ascending works fine, then start probing a possible edge case in the second catch branch where the paddle sits just ahead of or behind the target position.
+
+After a reversal, with the ball and paddle co-located and the new target within reach in under ten actions, I conclude the distance bound still holds regardless of which side the paddle approaches from. I briefly consider whether a deterministic loop could avoid bricks entirely, but judge that optimizing brick-hit rate further would add too much complexity for the gain, so I set that idea aside.
+
+Thinking about sticky perturbations more carefully: they only matter at arrival moments, where an overshoot flips the waiting position between lo and hi and thus changes the trajectory branch, giving roughly a 10% chance per cycle with an arrival. If the paddle never needs to move — say the ball keeps landing at the same x repeatedly — there's no arrival event and thus no perturbation at all.
+
+Tracing the ball further: (7,6),(6,7),(5,8),(4,9) then checking for a possible wall clip and bounce at (3,9), which would send it back down-left through (5,8),(6,7),(7,6),(8,5) to x8=5 with dx=-1, giving target set {5,4}; since paddle is at 4, I check whether the ball_x matches the paddle or the new_x matches, which determines whether it falls into the first or second branch and whether direction reverses to up-right.
+
+Continuing: new_y=8 puts the ball at (8,4) moving up-right, then stepping through (7,5),(6,6),(5,7),(4,8),(3,9) — if the brick there was already cleared, this looks like it could cycle back to the same position indefinitely since nothing in its path changes and there's no paddle movement or sticky perturbation to break the pattern. That raises the question of whether this creates an infinite non-scoring loop that just runs out the step cap with the score frozen wherever it is — a known issue in deterministic MinAtar Breakout agents.
+
+To guard against this, I'm considering adding randomization at the critical final step: when the ball is at row 8 descending into the paddle's row, with the paddle positioned so either "stay" or "shift to the other set element" both keep it in bounds, I'd randomly choose between those options about half the time rather than always picking the same branch. I'm working out the exact condition for when this randomization applies, based on the ball's horizontal direction (DR case) and whether the paddle sits at the low or high end of its position set — determining when "move right" should be enabled only half the time versus always.
+
+I want the right logit to equal M/2 in the half-enabled case, which means ΣR+4 needs to equal 1, so R_d's preactivation must be zero for the active direction. I'm working out how to shift T_lo by 0.5 for row-8 cells so that at p=lo the tanh term lands exactly at zero, giving that half-enabled behavior.
+
+But testing the offset against the other matching terms, the preact comes out to -1 instead of 0, so the attempt doesn't give the half value I need — I need a different adjustment to make the U=0 case produce zero preactivation.
+
+Checking the catch state constraint, I find it conflicts with the earlier bound: needing a>2 from one mismatch and a<2 from another gives a contradiction, so the catch state at E'=3 breaks the simple linear threshold scheme — I need to reconsider the Dy mismatch for descending directions separately, since catch corresponds to an ascending state and yields a<2 while the U mismatch pushes the opposite way.
+
+For E'=-1 I need aU-2 negative, giving a<2; for the ascending mismatch case the bound similarly gives a<2, so I settle on a=1, θ=3, with weight 2 on Dy and weight 1 on E', checking that the full match gives preact=1, half match gives 0, and U=-1 gives -1, all consistent.
+
+For ascending units (sy=-1), since only the final step needs randomization, I can use the simpler formula 2U + 2·sy·Dy + sx·E_x - 4, which stays robust even when E'=3. Checking the half-case for the descending unit, R_d = tanh(0) = 0 makes the right logit equal M/2, matching the no-op logit for a clean 50/50 split.
+
+I realize tanh(0)=0 only holds exactly if U=0 and Dy, Dx are exactly ±1, but in practice they're more like ±0.9999, introducing tiny deviations that shift the logit by a negligible amount (~0.02 out of 15), so the split remains essentially 50/50. That raises the question of whether 50/50 is actually the right ratio for this randomization, since its purpose is just to break loops — I wonder if there's any downside to this choice.
+
+Checking the sticky-action edge case at the final step: whether we land at lo or hi, repeating the previous move (arrival direction) keeps the paddle at the catch position, so both arrival paths remain safe. The post-catch distance bound of ≤9 with 10 actions also holds for both branches.
+
+For the DR/DL units, I'm working out the half-threshold formula so that U+ and U- correctly split the interval {lo, hi} into the two sub-branches depending on which side the paddle starts from, verifying the tanh threshold expressions line up for both directions.
+
+For the wall case where lo equals hi, I keep the thresholds unchanged so both gates behave correctly at the boundary. Then I'm computing the adjusted lo and hi values for row 8, offsetting each endpoint by half except where lo equals hi at the final index.
+
+For DL row 8, similar reasoning gives both thresholds collapsing to x minus 0.5 except at x=0 where they stay at 0, so the unit effectively compares the position against the midpoint of the catch pair, which matches the intended descending behavior.
+
+I'm also considering whether 50/50 randomization is actually beneficial here — it adds variation to the ball's trajectory, which helps break loops and cover more bricks, so that seems fine. But a concern arises: with randomization at the final step and stickiness at the next ascending step, if the final move was in one direction and the next desired move is the opposite, the sticky probability could cause a wasted step plus a backtrack, costing two steps of slack. Given the worst-case slack is only about one step, I need to check whether this scenario could actually break post-catch positioning.
+
+So m ≤ 8 normally, but the wall case is special: m=9 only occurs when the ball hits the wall and clamps instead of truly moving, wasting just 1 step instead of 2. That means the total required actions (9+1=10) exactly matches the budget, so it still works out.
+
+Now I'm checking the other branch, where the paddle actually moved to reach x8 rather than clamping at a wall, and seeing whether the sticky repeat still costs only 2 wasted steps depending on where x8 falls relative to the midpoint of the field.
+
+Checking the other case confirms the waste stays within bounds too, so the randomization approach holds up fine even without a move. I'm now thinking about whether to randomize more aggressively, and considering edge cases like the paddle sitting at a boundary element relative to the ball's approach direction, but that doesn't seem problematic. Given the 10,000 step cap, a well-performing agent should still rack up a solid score, so I want to double check whether the brick-clearing rate is reasonable or if the ball could get stuck bouncing between bricks.
+
+I'm also checking whether the "strike" pass-through letting the ball descend through the brick zone matters, but it doesn't affect anything, and I'm verifying a corner catch case where the ball and trail coincide, confirming the direction calculation works out to the right behavior.
+
+Now I'm confirming the catch set for that same corner position restricts to a single paddle offset, matching the earlier result, and checking that the horizontal delta calculation still resolves to the correct rightward direction afterward. I also want to verify the ascending transition units at the boundary row, and then start checking the scaling factors for the unit preactivations to make sure nothing saturates near the edges of the range.
+
+I'm confirming edge cases: the ball never overlaps the paddle row except at terminal states, the ball channel is always populated, and ball/trail can coexist in the same cell without conflict. I'm also reconfirming the channel mapping for paddle, bricks, ball, and trail before moving to assign the actual layer-one weights.
+
+Writing weight assignments...
+
+Now I'm adding columns for Dy and Z polarities, then working out the specific lo/hi weight values for each row of the DR diagonal pattern based on the shifted P-index sequences.
+
+For y=8, row P_0 gets modified with lo'=hi' both equal to the midpoint values, making it a boundary case; y=9 is all zeros so irrelevant. I'm verifying the tanh transitions work correctly at these boundary points, checking that values at the midpoint give exactly zero (half-weight) and that points on either side saturate to ±tanh(10) as expected.
+
+Checking x=9 at row 8 for down-right movement: both lo and hi equal 9, so p=9 gives no-op (U+ saturates negative, U- saturates positive, canceling out), while p=8 correctly triggers rightward movement.
+
+Now I'm working through the up-right rows, building out the lo/hi boundary arrays for P_9 and P_8.
+
+Continuing to map out the boundary patterns for P_7, P_6, P_5 and the remaining rows, then moving into the down-left rows indexed by Q.
+
+Continuing to compute the lo/hi bounds for rows Q_4 through Q_8, each shifting the diagonal pattern by one position.
+
+I'm verifying Q_1 against specific ball positions, tracing where a ball at row 7 ends up after clipping at row 8 for several x-values, confirming each matches the computed set.
+
+Now checking Q_2 at x=0, tracing a ball arriving from (5,1) through row 6, clipped at row 7, landing at row 8 — confirming the result set {1,2}. I'm also verifying the P-patterns near the right wall similarly, then starting to list out the DL row mappings for y=0 and y=1.
+
+Continuing the DL row mappings: y=2 through y=8 each map to specific Q patterns, and similarly the UL rows from y=0 to y=8 map to their own Q patterns, with symmetry appearing around y=4. I'm now double-checking the edge case where the ball is at x=0 moving left (DL pattern) — confirming the clip is already accounted for — then starting to think through whether a ball could be at x=0 moving right (DR pattern) under similar conditions.
+
+I trace through a concrete example: a ball at (6,0) moving down-left arrives from (5,1), then clips at x=-1 back to x=0 while flipping direction to down-right, landing at (7,0) with Δx=0, matching the expected P_1 range of {1,2} at x=0. That confirms the DR-at-x=0 case works correctly too.
+
+Now I need to figure out the actual weight values for the Dx_n and Dy_n outputs. For Dx, I'm computing column-wise fill values across the ball channel (just the column index) and the trail channel (the negative x position, with special half-integer adjustments at the boundaries x=0 and x=9), then scaling by 10. For Dy, I set up a similar row-wise fill for the ball channel using the row index y.
+
+For the trail channel in Dy, I'm again applying -y plus a small boundary adjustment for most rows, with row 8 and row 9 treated as special edge cases, scaling everything by 10. Now I'm moving on to the Z_+ output, setting up ball and trail channel offsets at row 8 scaled by 8, computing index ranges to fill ball values as x+25 and trail values with a slight additional offset.
+
+Now for the Z_- column, I'm computing the mirrored versions: ball channel as -x+25 and trail channel as -x+25 minus the boundary bonus, working through each x value from 0 to 9 to get the corresponding offsets.
+
+I'm verifying edge cases for Z_- outside the catch zone, checking worst-case combinations of ball position, trail position, and paddle position against the bias to confirm they push well past the tanh saturation threshold in the negative direction, then starting the same check for Z_+ with the opposite worst-case ball position.
+
+Now moving into the inside-catch region, I derive the simplified Z_+ base formula combining ball position, trail position, bonus, and paddle offset once the bias terms cancel. Then I'm setting up layer 2's weight matrix, defining separate preactivation formulas for descending and ascending units that combine the catch-zone horizontal and vertical difference terms with different scaling constants depending on orientation.
+
+I'm double-checking the descending and ascending unit formulas against both catch and non-catch states, verifying the arithmetic holds across the possible values of U and the error term E' so the AND-like logic produces the correct sign in each case.
+
+With K = 5 confirmed, I'm now working out the W2 matrix entries column by column, computing contributions from each row (U_DR, Dy, Dx_n, Z_+, Z_-) scaled by K, along with the corresponding bias terms b2 for each output column.
+
+Finishing col 7 with b2 = -20, then I move to W3, computing bias values for rows based on column groupings and verifying the right logit calculation gives a tied no-op outcome of 50/50. I'm double-checking whether it's acceptable for up/down/fire to have logit 0 while no-op sits at 15.
+
+I confirm directions are unambiguous since Dx and Dy each resolve to exactly ±1, giving one clear direction. I verify ascending units use integer values with no half-value ambiguity, including at the catch state row 8, and check that the descending formula's U=0 condition is properly isolated to row 8 cells, then start examining how tanh saturates near ±5 preactivation values.
+
+Now I'm tracing through an edge case: a ball arriving at row 8 via a wall clip from row 7, checking that the trail position, direction (Dx, Dy), and half-integer positions all resolve consistently for the catch set determination.
+
+Checking the (8,9) and (8,0) descending-right and descending-left cases confirms the same pattern holds. I'm also noting the half-case condition only triggers when p equals lo or hi exactly, and want to verify the scheme still works for a ball descending through the brick zone near row 2, where the trail sits at row 1.
+
+For the ceiling bounce case at row 0 moving down-right, the pattern extends cleanly through rows 1-8 giving x8 = x+8 as expected. I'm tracing through the ascending case at row 0 too, and double-checking the trail weight calculation for descending from row 0 into row 1.
+
+Checking the magnitude bounds, the max weight values stay around 272, well within the allowed range. I'm also re-verifying the reset state for the paddle and ball positions, and considering the edge case where the ball sits at x=9 moving right at row 8 while descending, intersecting with the paddle position.
+
+Now I'm confirming the row-9 weight channels are zero since the ball never occupies that row during action selection, and that unused channels (bricks, channels 1 and 5) stay empty as expected. I'm also re-examining the two-step loss scenario robustness: with 10 actions available, wasted steps from wall-clamping or sticky reversal stay bounded at 1-2, so distances up to 9-10 away still get covered correctly.
+
+Since bricks only occupy rows ≤3, the earliest bounce really is row 4, and passing through an already-hit brick doesn't create earlier landings either—so this confirms catch probability is essentially 1 except when multiple sticky events stack up in the tight-slack scenario, which I should examine further for failure modes.
+
+Another edge case: a ball descending through the brick zone could get bounced back upward by hitting a brick, shifting its target position. Computing one example, the target shift is small (around 2 units) and there's still plenty of time (around 8 actions) to adjust, so the paddle can react fine.
+
+Given this catching logic holds, I estimate the expected score depends on how often bricks get broken over 10,000 steps — maybe hundreds of points per episode if cycles average 10-18 steps with roughly one brick break per cycle, far surpassing typical RL baselines unless deterministic loops prevent progress. For the endgame with few bricks left, the randomization at certain branch points should create enough variation in trajectories that remaining bricks eventually get hit.
+
+I'm now verifying the half-case logic for a specific row by walking through the tanh calculations and directional checks to confirm the paddle and ball interaction resolves correctly in this edge case.
+
+Writing weight assignment values for each channel and row offset...
+
+Still writing weight matrices...
+
+Still computing paddle values...
+
+Still computing grid values...
+
+Continuing through the b1=+5 column pattern and moving into the next column (U_UL+, lo) with its own diagonal sequence starting from y0 Q_9.
+
+Still computing lookup values...
+
+I finish the Q_9 hi column with b1 = +5, then cross-check the Q tables against the mirror symmetry relation with P tables, verifying a spot value comes out correctly.
+
+9 - 1 = 8 ✓, and Q_2.lo[0]/hi[0] both check out similarly. I'm now directly verifying specific cells like UL at y=7, x=4 and DL at y=0, x=9 against the fold formula, confirming the predicted {lo, hi} pairs match.
+
+I also spot-check P_6 at x=3 and x=4, both matching expected (lo, hi) values. Now I'm examining column 8 (Dx_n) by stepping through the weight matrix with a strided slice per column value, verifying entries equal the column index c, skipping c=0 since it's trivially zero.
+
+Writing weight assignments...
+
+Still mapping out weight indices...
+
+Still writing weight values... and verifying the Z_- formula simplifies correctly to -(x_b + x_t + bonus - 2p), confirming the catch logic holds before moving on to specifying W2 and b2.
+
+Still working out the remaining weight matrix columns and bias terms for each diagonal direction...
+
+Filling in the remaining columns symmetrically, then verifying against the descending formula: the U, Dy, Dx, Z+, Z- weights and bias line up correctly, confirming the pattern holds before moving to the ascending case.
+
+Setting the W3 entries, I'm placing 15s at alternating strided positions across columns 1 and 3.
+
+For b3, I'm setting the bias to 15, 60, and 60 at indices 0, 1, and 3. I'm checking whether logits for the other actions need to go more negative, but since they're multiplied against much larger values for the desired action, the probability mass on them is already negligible, so I'll leave it. Now I want to sanity-check layer-2 behavior in edge cases where ball detection might fail, like when the ball overlaps with something else.
+
+Testing another scenario: ball descending diagonally-left at row 5, col 3, with trail at row 4, col 4, paddle at column 8. Working through the horizontal and vertical direction calculations confirms left movement and downward motion as expected, and tracing the ball's path forward (5,3)→(6,2)→(7,1)→(8,0) checks out against the predicted landing set.
+
+But then checking against the paddle's actual position at column 8 reveals a miss, since the paddle would need 8 moves but only has 4 available at those rows. I realize this is fine though — this particular state is just a hypothetical one that wouldn't actually arise under the policy, since the paddle should have been repositioned earlier. I'm now moving to simulate a more complex scenario involving a high bounce after a catch, with the ball moving up-right from position (8,3).
+
+Working through the next step: u=14 gives (4,5), paddle moves left to 5. Then tracking the ball to (2,9) with paddle at 5→4, checking if a brick at (1,9) causes a bounce, and following the resulting down-left trajectory through row 2.
+
+I'm also verifying the catch logic: the ball moving down-left from (2,9) passes through (3,8),(4,7),(5,6),(6,5),(7,4),(8,3), landing with paddle shifting from 4 to 3, confirming a catch. I'm also checking the strike flag — if the ball just bounced and re-enters a brick cell on the very next step, it should pass through without breaking it, only resuming normal brick-breaking once it moves to a clear cell, which keeps my prediction consistent.
+
+If instead the ball hits a fresh brick while descending (not immediately after a strike), it bounces back upward and changes direction, so I need to recompute the target in that case, though there's enough time to handle it. I'm satisfied the ball won't get permanently stuck in a bad state, the initial action defaults to no-op at reset, and since all off-row-8 position differences are integers offset by ±0.5, ties at zero are impossible, so the tie-breaking logic is safe.
+
+I'm now checking edge cases where the ball sits at the left or right walls — it can only be moving away from the wall in those positions, which matches the clipping logic, and I'm verifying the paddle-catch branch works correctly even when the ball is right at the wall boundary by tracing through a specific example with the ball near x=1 moving left.
+
+I need to check the edge case where the paddle starts at 0 with 9 moves needed in 9 steps - that's barely feasible, but only if sticky-repeat wastes exactly one move as expected. I'm worried about compounding sticky failures: if two consecutive sticky events both repeat the wrong direction, that could cause an actual miss, though this scenario seems rare enough to treat as a small probability correction.
+
+So real failures need two consecutive sticky events stacking up in already-tight configurations, which seems rare but could accumulate over many catches in a long episode — worth reconsidering more carefully. I'm trying to quantify: after a catch, distance d to the new target with 10 actions available, and failure happens only if wasted steps exceed the slack of 10 minus d, where wasted steps come from sticky repeats costing 1 or 2 depending on the prior action.
+
+Working through cases: for d=9, two consecutive stickies (probability 0.01) are needed; for d=8, it depends on whether each sticky wastes 1 or 2 steps, giving either three consecutive stickies (0.001) or two with the right prior move.
+
+Now I'm computing the distribution of post-catch distances by tracing through the branches of where the paddle and ball end up relative to each other, to figure out how often the gap is 8 or more after a catch.
+
+Actually these tight cases mostly happen early in each brick wave, since as bricks clear the bounces get higher and give more time. Maybe I could bias the final-step branch choice toward whichever option yields a smaller post-catch distance, rather than picking 50/50, though it's unclear how much control the policy actually has over that outcome.
+
+Working through the second branch with x8-8 folding, I get distance roughly |6 - 2x8| for x8<8, with edge cases at x8=8 and x8=9 needing special handling since the reachable set collapses to a single point there.
+
+At x'=9 the second branch gives d=9, so the first branch wins there. This makes me think the smart approach is to let the branch choice depend on position — instead of a uniform random split, I could force specific branches at row 8 by tuning the lo'/hi' thresholds so that certain paddle positions always resolve to a no-op outcome.
+
+But this forcing interferes with the randomness needed to break symmetric loops, so I should only use randomness where both branches yield acceptable distances (d ≤ 7) and force the branch only at positions where it matters. I need to work through the post-catch distances for every x8 value and both diagonal directions to figure out exactly where to force versus randomize.
+
+Working through each x8 value for the first branch gives distances 8,6,4,2,0,1,3,5,7, and now I'm computing the second branch using Q_9's lo/hi arrays at position x' to find the corresponding distances.
+
+This confirms the pattern: x8=0 forces second, x8=8 forces first, x8=7 slightly prefers first, x8=1 prefers second, and the rest can go either way. Now I need to check the failure condition where d+W exceeds 10 — for d=7, that requires W≥4, meaning two consecutive opposite-direction wastes.
+
+The corner case at x8=9 forces d=9 with no alternative branch, so failure there requires two consecutive stickies right at the start, giving about 1% chance. I'm estimating how often the ball actually lands at that exact corner with the right approach direction—maybe around 1/20 of catches—putting the overall contribution around 0.05% per catch.
+
+Two consecutive stickies compound to about 1% risk, so overall per-catch failure probability lands around 0.05-0.1%, giving maybe 0.5 failures per 10,000-step episode and hundreds of bricks scored—likely well above typical RL baselines. To tighten this further, I'm adding forced moves at the riskiest paddle positions, like row 8 at x=0, where I pin the target to force the paddle toward position 1 rather than leaving it random.
+
+Finishing row 8 at 9, I verify x8=0 behaves correctly: the paddle starts at 1, and the dynamics confirm p=0 moves right to 1, p=1 stays put, and p=2 moves left — all consistent with reaching the target position.
+
+For the mirrored DL case at row 8, I check that DR's forced endpoints map correctly under the reflection x→9-x: DR x8=0 giving paddle 1 corresponds to DL x8=9 giving paddle 8, and DR x8=7 giving paddle 7 corresponds to DL x8=2 giving paddle 2, matching the expected symmetric behavior.
+
+I confirm the random-ball case too: DR at x+0.5 maps to DL at 8.5-x, consistent with the half-integer spacing seen before. Laying out DL's row-8 targets across x=0 through x=9 gives the sequence 0, 1, 2, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8, and I'm now double-checking the x=9 case by tracing the ball's path after it clips at that boundary.
+
+Checking x=9 and x=1 cases: at x=9 the ball forces a direction reversal landing on paddle 8, confirmed by comparing distances between two branch possibilities and finding the second branch (mirroring the DR x=8 result) wins. Moving to x=1, I trace through a similar forced branch where the ball catches at x=0 before continuing, and I'm working out the resulting direction.
+
+That final-step sticky move could block the paddle, but even then the other branch still catches the ball, just with a slightly worse distance. Checking the direction of that last move against what's needed next: in both forced cases (x8=0 and x8=8), the sticky residual direction happens to align with the required direction for the next catch, so the stickiness costs nothing extra.
+
+Now I'm tabulating the distances for random x8 positions (1 through 6) across both possible paddle resting spots, finding a max distance of 6. Even accounting for one or two opposite-direction sticky penalties (adding 2 or 4), the totals stay within the 10-step budget — only three consecutive opposite stickies would fail, which is a negligible probability. So the main remaining concern is still that edge case around x8 at the boundary.
+
+I'm also considering whether this analysis assumes a specific bounce row, how waiting positions behave for sets below row 8, and whether randomizing the final step is still necessary given stickiness — I'll keep it at a middle position. I'm updating the row-8 distance values with fractional entries to reflect these half-random adjustments.
+
+Checking the DR x8=0 case confirms the {0,1} set is correct for the clipped zero-delta state moving right, and the forced-integer U values of ±1 check out for the half cases too.
+
+Now I'm verifying the catch-state logic — it only triggers when both ball and trail sit at row 8 ascending, not descending, with the trail at row 7 for the final observation. The layer-2 preactivation for row 8 descending units with U=±1 gives R preact of ±5, which checks out, and the UR/UL patterns for the catch state match P_9/Q_9 correctly. I'm now looking at whether the immediate bounce assumption holds for UR/UL at rows 0 through 3.
+
+Checking the edge case where the ball is at row 0 ascending — it will always bounce off the ceiling, so that's handled correctly. I'm also considering whether a brick strike pass-through could create overlap issues in rows 1-3 but setting that aside as not relevant here.
+
+I want to make sure the trail is always adjacent to the ball's new position, confirming that new_x and new_y can only differ from the last position by at most 1 in each direction — covering all combinations of (±1,±1), (0,±1), (±1,0), and (0,0).
+
+Working through specific paddle-catch and wall-clip scenarios near corners to verify the direction formula gives the correct result, tracing a few concrete coordinate examples to double-check the sign of the computed direction value.
+
+I verify the bonus values at the trail boundaries and confirm they match correctly. I check that the half-tie at row 8 isn't affected by catch state since trail is at row 7 there, and rule out the ball being at row 8 while descending in that scenario. Then I trace through the edge case where the ball ascends at row 7 with trail at row 8, confirming the Z_+ base calculation stays within bounds.
+
+Now I turn to the bias values for U columns after scaling: even columns get -5, odd columns get +5. I start planning the weight-setting statements in order, beginning with W1 values for the ball row and paddle columns, then considering whether scaling an entire slice at once works or if I need to scale each column separately to be safe.
+
+Still computing prescaled weight values...
+
+I'm verifying the Z_+ formula against specific catch and miss cases: checking the paddle-center catch gives tanh near 1, corner catches near 1 and -4, and an out-of-reach case gives a strongly negative value as expected. Now I'm checking the Z_- side similarly for cases where the ball lands away from the paddle.
+
+Then I start laying out the W1 weight rows for the ball-distance channel, scaled by 10, building diagonal-shifted patterns row by row (r0 through r5) that peak around the ball position and taper off symmetrically.
+
+Still computing grid values...
+
+Finishing the UR hi values and moving on to building out the DL lo column values.
+
+Still computing the grid values...
+
+Still computing distance grid values...
+
+I'm also working out the paddle weight and bias values for the hidden layer columns, then cross-checking the mirror symmetry between the UL and UR regions row by row to make sure the reversed/complemented values line up correctly.
+
+Continuing the mirror computation confirms the row matches the expected symmetric values. Now I'm double-checking the half-random case at the boundary value 1.5, verifying the tanh-based probability calculation for the split between 1 and 2.
+
+Checking the forced boundary at x=7 shows the no-op holds for p=7, and p=8 correctly forces a left branch. Now I'm moving on to examining column 8, Dx_n.
+
+Still writing weight matrix...
+
+Still deriving weight values...
+
+Verifying more edge cases, then defining the W2 weight matrix and bias values that map hidden units to each output dimension...
+
+Filling in b2 biases and the W3 output layer weights, then double-checking the sign convention for the UR cell's Dy contribution against the expected up/down behavior.
+
+I'm now tracing an actual numeric example through layer 1 for a ball moving up-right with the paddle at position 3, computing the U_UR+ and U_UR- activations and the resulting Dx value to confirm the AND gate logic holds.
+
+Continuing through Dy and the Z gates, getting +1, -1, and -1 respectively for this state, then feeding those into layer 2's R_UR and L_UR combination formulas to check the output lands correctly after tanh.
+
+Now checking R_DR, R_DL, and R_UL weight combinations against the same bias pattern...
+
+Then verifying the output logic for the no-op case, confirming right=30 and left=0 resolve correctly against target set {6,7}.
+
+Now I'm tracing through a catch state example with ball at (8,6) and trail at (8,5), computing Dx, Dy, and Z_+ values to confirm the branch logic holds.
+
+Checking the UR row calculations at x=6, computing lo and hi thresholds to determine whether the paddle should move left — the L_UR equation confirms +1, matching the expected left move, and I'm now working through R_UR similarly.
+
+Continuing with L_UL and L_DR, I verify both stay off by comfortable margins, confirming the weight assignments hold for these columns too.
+
+Now checking the second-branch catch scenario: ball at (8,6) with trail at (8,5), paddle at 6, computing Dx_n and the Z_+ /Z_- terms to get E_x = -1, meaning left is correct — this matches expectations. I then verify the UL row 8 case where x=6 exceeds the hi=3 threshold, confirming left is the right call there as well.
+
+Checking the Q9 target for the second-branch case: tracing the ball from (8,6) moving up-left through the bounce sequence, I get x8=2 with dx=+1, matching the expected {2,3} set. The initial state's U values seem fine conceptually, and since E_x is dominated by Z rather than Δx, I don't need to check the catch-state delta further — though I should reconsider whether Z_+ and Z_- could both equal +1 or take intermediate values in that catch scenario.
+
+I'm working through the base values for Z_+ and Z_- in terms of s, where s depends on x_b, x_t, bonus, and which paddle position p takes. Breaking it into the two branches (p = x_t vs p = x_b), I enumerate Δx possibilities and how the bonus term kicks in specifically when the trail sits against a wall, tracking what Δx values arise from each wall position.
+
+Confirming s always lands in {±1, ±1.5, ±0.5}, so |s| ≥ 0.5 guarantees the gated output is at least 4 after scaling, and never collapses to zero — checking that Δx = 0 only occurs when the trail is against a wall, which fits the catch-state assumption. I also verify the ascending unit gating produces E' values near ±3 given tanh saturation, confirm Dy and Dx_n preactivations stay well above the minimum magnitude needed, and double check that the paddle weight unit always has a valid paddle signal in its designated row and channel.
+
+Now I'm estimating episode scoring: with the policy rarely missing, episodes run long, and I'm working out roughly how many bricks get broken per step as cycles speed up early (dense bricks, ~10 steps each) and slow down later as the ball travels higher and bricks thin out, aiming for a rough per-wave step count.
+
+I'm checking that about 20 waves over 10,000 steps would give roughly 600 points, far exceeding typical RL baselines. I'm also stress-testing whether deterministic loops could occur with zero bricks hit, reasoning through whether sticky-induced randomness at forced positions still breaks any cycles, and considering edge cases like brick hits near row 3 and how refills trigger once the ball reaches row 9 after all bricks clear.
+
+Refills look fine since new bricks appear at row 8 regardless of whether the ball is in the upper region at that moment, and I'm confirming the sticky-action rule (10% chance of repeating the previous action) matches my assumption. I'm also double-checking the action mapping — no-op, left, up, right, down, fire — against the environment's logit ordering to make sure my interpretation lines up correctly.
+
+I'm also tracing through edge cases where predictions about bounce trajectories might be briefly wrong but self-correct once the ball actually hits a brick, and confirming that the target-shifting logic near the ceiling with the row-4 bounce landing still holds with enough slack to stay accurate as the ball ascends.
+
+I'm also double-checking the softmax margins — around 15 for favored moves versus 0 for the rest gives vanishingly small error, and roughly even 50/50 splits for right versus no-op in certain symmetric states, with up/down/fire staying negligible throughout.
+
+I want to verify row 8 forced-move logic: with paddle at p=0 the tanh expression pushes strongly toward "right," while at p=1 it flips toward "left," confirming the forcing behaves correctly at the boundary. Then I start tracing how the descending-right case at row 7 maps into the row 8 forced positions, checking which originating ball position actually produces that x8=0 case.
+
+I confirm the d=9 corner case resolves consistently, with the set collapsing to {9} and the paddle correctly forced to position 9. Then I shift to considering whether the paddle variable p only matters at row 8, and start sanity-checking the Z-unit behavior doesn't misfire elsewhere.
+
+I verify the descending-case Z unit stays negative since the ball and trail terms can't exceed the bias offset, confirming no false activation. I also confirm unused hidden units default to zero so tanh keeps them inert, and I'm working out the strided indexing pattern for the row-wise ball channel to make sure the weight placement lines up correctly across rows.
+
+Now I'm checking the paddle and row-8 trail index ranges hold exactly 10 entries each as expected, then moving into rebuilding the P_k lookup tables carefully, working through lo(u) and hi(u) definitions for each offset u to make sure P_0's lo/hi sequences line up correctly across the valid range.
+
+Continuing to verify P_5 through P_8, checking each lo/hi window pair matches the expected pattern ✓.
+
+Now I'm computing the Q_k sequences by transforming the P_k values using the reflection rule (9 minus the reversed index), starting with Q_1's hi and lo arrays.
+
+I continue verifying Q_2 and Q_3 using this same reflection transform, checking each resulting array satisfies the expected pattern.
+
+Continuing the verification for Q_6 and Q_7, both hi and lo reversals check out correctly against the expected palindrome patterns. Moving into Q_8, I'm confirming the same hi/lo reversal checks continue to match.
+
+Continuing through the rest of r2-r7 for the lo column, all checking out, then moving into verifying the hi column starting at r0.
+
+Still verifying grid values...
+
+Now I'm double-checking edge cases: whether DR at row 8 could arise from a Δx=+1 clip, and reconsidering whether UL/UR at row 8 behave consistently with the rest of the pattern.
+
+I'm also checking ascending states only emerge in catch mode, confirming UR at row 0 handles Δy=-1 correctly, and that no bricks interfere in the upper rows since bricks only occupy rows 1-3. The initial episode setup with ball at (3,0) seems fine overall.
+
+Verifying the (3,0) start case: Dx and Dy both point right and down as expected, matching the DR direction at row 3. For the (3,9) start with down-left direction, I trace through the DL trajectory step by step confirming the x-coordinate shift lands correctly at column 4, consistent with the expected displacement set.
+
+Now I'm laying out the weight assignments for layer 1's comparison units, defining scaled ball-cell and paddle weights across each column.
+
+Still filling in weight matrix values...
+
+Now I'm setting the bias values for the paddle rows and double-checking the indexing math before moving on to verify the Dx calculations.
+
+The Z+ and Z- terms cancel out correctly outside the catch state since both saturate to -1, confirming the descending units behave as expected. I'm verifying the tanh saturation values hold numerically even at extreme inputs, then moving to check the layer-2 descending units specifically within the catch state for the DR computation.
+
+I'm also confirming the ascending/UR/UL bound checks hold under worst-case E' values, and considering edge cases like oscillation during ball ascent into the brick zone and the paddle sitting idle in the target set. Now I'm weighing whether to restrict the target set during non-final ascending/descending phases to a single target.
+
+Tracing through a tricky descending sequence near the left wall: at row 7 the ball is moving down-left with a target set of {0,1}, and at row 8 after clipping the wall it becomes forced to position 1 — I'm checking what happens if the paddle was waiting at 0 instead.
+
+Then I turn to the symmetric case at the right wall, where a down-right ball clips at x=9 and flips to down-left, forcing the paddle to 8. I verify the second-branch logic: if the paddle sits at 8 when the ball lands at 9, the new position matches, triggering the direction-down-left branch, which maps to up-right — leaving the ball moving up-right from (8,8).
+
+Tracing that path forward, I follow bounces through the clip at the top wall, down through the diagonal, and confirm the final x-position lands on 2 with dx=-1, matching the expected set, giving d=6 as verified. I'm satisfied with this result and want to make sure the wall-correction interplay near the corner at (8,9) is consistent before writing everything up.
+
+Checking that corner case, both the Dx and Z signals agree on moving left, so no conflict there. I also think through the edge case where the paddle sits at both boundary columns at once (zero delta), which the bonus term handles correctly.
+
+Now I'm ready to write the final answer, describing the overall strategy — predicting the ball's landing column assuming the earliest possible bounce, steering the paddle toward the two-cell catch window, and randomizing the final move when it's safe to do so — along with the network design using per-direction comparison units, Dx/Dy detectors, catch-reversal detectors, a layer of AND gates, and the output layer.
+
+
+
+---
+
+My previous edits block got cut off mid-way without closing, and since only the last edits block counts, I need to rewrite the whole thing again in full, but compactly to stay within limits.
+
