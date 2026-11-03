@@ -1,0 +1,83 @@
+{
+ "experiment": "exp1",
+ "item": "freeway",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "effort": "high",
+ "system_prompt": "Answer the user's request.",
+ "prompt_file": "upstream/exp1_which_game/runs/freeway/prompt.txt",
+ "prompt_sha256": "76f30db2c4591e340f4a8e1ca56abdfdf6aa9857e3220936ca178f86c29e6070",
+ "prompt_chars": 115259,
+ "prompt_tokens": 78902,
+ "versions": {
+  "claude_agent_sdk": "0.2.177",
+  "claude_code_cli": "2.1.317"
+ },
+ "attempts": [
+  {
+   "wall_s": 139.6,
+   "error": null,
+   "is_error": false,
+   "stop_reasons": [
+    null,
+    null
+   ],
+   "answer_chars": 3333
+  }
+ ],
+ "resumed_after_output_cap": false,
+ "injected_messages": [],
+ "session_id": "0839f73f-19e2-4e44-9f2d-ed63ed553d88",
+ "wall_s": 139.6,
+ "refused": false,
+ "usage": {
+  "input_tokens": 4,
+  "cache_creation_input_tokens": 78925,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 15875,
+  "output_tokens_details": {
+   "thinking_tokens": 14490
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 78925
+  },
+  "inference_geo": "global",
+  "iterations": [],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "model_usage": {
+  "claude-opus-5-5": {
+   "inputTokens": 4,
+   "outputTokens": 15875,
+   "cacheReadInputTokens": 0,
+   "cacheCreationInputTokens": 78925,
+   "webSearchRequests": 0,
+   "costUSD": 0.712141,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 14490,
+   "cacheCreationEphemeral5mInputTokens": 78925,
+   "cacheCreationEphemeral1hInputTokens": 0,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "total_cost_usd": 0.712141,
+ "num_turns": 1,
+ "audit": {
+  "tool_free": true,
+  "init_tools": [],
+  "init_mcp_servers": [],
+  "api_key_source": "ANTHROPIC_API_KEY",
+  "model": "claude-opus-5-5"
+ },
+ "fake_tool_calls": 0
+}

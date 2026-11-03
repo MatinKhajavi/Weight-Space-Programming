@@ -37,7 +37,7 @@ _EMPHASIS = re.compile(r"[*_`]")
 
 def answer_field(text: str, label: str) -> str | None:
     """Return the text of the last `label` field, or None if the field is missing."""
-    head = re.compile(rf"^\s*#*\s*(?:\*\*)?\s*{label}\s*(?:\*\*)?\s*:?\s*(?:\*\*)?\s*(.*)$", re.IGNORECASE)
+    head = re.compile(rf"^\s*#*\s*(?:\*\*)?\s*{label}\s*(?:\*\*)?\s*(?::|$)\s*(?:\*\*)?\s*(.*)$", re.IGNORECASE)
     lines = text.splitlines()
     found = None
     for i, line in enumerate(lines):

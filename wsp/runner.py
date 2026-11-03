@@ -15,7 +15,6 @@ import hashlib
 import json
 import os
 import re
-import shutil
 import sys
 import tempfile
 import time
@@ -27,11 +26,13 @@ RUNS = ROOT / "runs"
 MODELS = ["claude-opus-5-5", "claude-fable-5-1"]
 SYSTEM_PROMPT = "Answer the user's request."
 BUDGET_USD_PER_CALL = 20.0
+SPEND_CAP_USD = 190.0   # across every recorded run; no new call starts above it
 
 # experiment -> item -> (prompt file in upstream, Astra's effort)
 ITEMS = {
     "exp1": {g: (f"exp1_which_game/runs/{g}/prompt.txt", "high") for g in ["breakout", "pong", "pacman", "freeway"]},
     "exp2": {s: (f"exp2_diffusion/runs/{s}/prompt.txt", "high") for s in ["circle", "square", "triangle"]},
+    "exp3": {lang: ("exp3_language/runs/python_r0/message.txt", "xhigh") for lang in ["python", "romaji", "english"]},
     "exp4": {"oneshot_repair": ("exp4_fix_car/runs/oneshot_repair/reply/prompt.txt", "high")},
     "exp5": {g: (f"exp5_write_from_scratch/runs/{g}/reply/prompt.txt", "xhigh") for g in
              ["breakout", "seaquest", "asterix"]},
@@ -62,9 +63,13 @@ def read_dotenv(path: Path = ROOT / ".env") -> dict[str, str]:
     return out
 
 
-def options(model: str, effort: str, cwd: Path, home: Path, env_extra: dict[str, str]):
+def options(model: str, effort: str, cwd: Path, home: Path, env_extra: dict[str, str], resume: str | None = None,
+            rewind_to: str | None = None):
     from claude_agent_sdk import ClaudeAgentOptions
     return ClaudeAgentOptions(
+        resume=resume,
+        resume_session_at=rewind_to,
+        fork_session=bool(rewind_to),
         model=model,
         system_prompt=SYSTEM_PROMPT,
         tools=[],
@@ -118,55 +123,57 @@ def _count_tokens(model: str, prompt: str, key: str) -> int | None:
         return None
 
 
-def run(model: str, exp: str, item: str, sample: int) -> Path:
-    prompt, effort, rel = _prompt(exp, item)
+def api_key() -> str:
     key = read_dotenv().get("ANTHROPIC_API_KEY", "")
     if not key.startswith("sk-ant-"):
         sys.exit("No ANTHROPIC_API_KEY in .env (expected a value starting with sk-ant-). Nothing was sent.")
-    out = RUNS / model / exp / item / f"s{sample}"
-    if out.exists():
-        sys.exit(f"{out} already exists; refusing to overwrite.")
-    record = {"experiment": exp, "item": item, "sample": sample, "model": model, "effort": effort,
-              "system_prompt": SYSTEM_PROMPT, "prompt_file": f"upstream/{rel}",
-              "prompt_sha256": hashlib.sha256(prompt.encode()).hexdigest(), "prompt_chars": len(prompt),
-              "prompt_tokens": _count_tokens(model, prompt, key), "versions": _versions(), "attempts": []}
+    return key
+
+
+def spent_usd() -> float:
+    return sum(json.loads(p.read_text()).get("total_cost_usd") or 0 for p in RUNS.rglob("run.json"))
+
+
+def call(model, effort, prompt, key, cwd, home, resume=None, rewind_to=None) -> tuple[list, dict, str, list]:
+    """One reply, with the original harness's retries. A retry inside a conversation rewinds it to `rewind_to`."""
+    attempts = []
     for attempt in range(len(WAITS_FAILURE) + 1):
-        tmp = Path(tempfile.mkdtemp(prefix="wsp_run_"))
-        (tmp / "cwd").mkdir()
+        if spent_usd() > SPEND_CAP_USD:
+            raise RuntimeError(f"spend cap of ${SPEND_CAP_USD} reached")
         t0 = time.time()
         msgs, err = [], None
+        opts = options(model, effort, cwd, home, {"ANTHROPIC_API_KEY": key}, resume, rewind_to if attempt else None)
         try:
-            msgs = asyncio.run(_ask(prompt, options(model, effort, tmp / "cwd", tmp / "home", {"ANTHROPIC_API_KEY": key})))
+            msgs = asyncio.run(_ask(prompt, opts))
         except Exception as e:
             err = f"{type(e).__name__}: {e}"[:2000]
-        shutil.rmtree(tmp, ignore_errors=True)
-        wall = round(time.time() - t0, 1)
         result = next((m for m in msgs if m["type"] == "ResultMessage"), {})
         texts = [b["text"] for m in msgs if m["type"] == "AssistantMessage" for b in m.get("content", []) if "text" in b]
         answer = result.get("result") or "\n".join(texts)
         stop = [m.get("stop_reason") for m in msgs if m["type"] == "AssistantMessage"]
-        record["attempts"].append({"wall_s": wall, "error": err, "is_error": result.get("is_error"),
-                                   "stop_reasons": stop, "answer_chars": len(answer or "")})
-        refused = "refusal" in stop
-        ok = err is None and not result.get("is_error") and (answer.strip() or refused)
-        if ok:
-            break
+        attempts.append({"wall_s": round(time.time() - t0, 1), "error": err, "is_error": result.get("is_error"),
+                         "stop_reasons": stop, "answer_chars": len(answer or "")})
+        if err is None and not result.get("is_error") and (answer.strip() or "refusal" in stop):
+            return msgs, result, answer, attempts
         reason = err or json.dumps(result.get("errors") or result.get("result") or "empty reply")[:500]
         status = re.search(r"API Error: (\d{3})", reason)
         if status and status.group(1).startswith("4") and status.group(1) != "429":
-            sys.exit(f"request rejected, not retrying: {reason}")
+            raise RuntimeError(f"request rejected, not retrying: {reason}")
         if attempt == len(WAITS_FAILURE):
-            sys.exit(f"giving up after {attempt + 1} attempts: {reason}")
+            raise RuntimeError(f"giving up after {attempt + 1} attempts: {reason}")
         limit = re.search(r"rate.?limit|429|usage limit|overloaded", reason, re.I)
         wait = (WAITS_LIMIT if limit else WAITS_FAILURE)[attempt]
-        print(f"attempt {attempt + 1} failed ({reason}); new conversation in {wait} s", flush=True)
+        print(f"attempt {attempt + 1} failed ({reason}); retrying in {wait} s", flush=True)
         time.sleep(wait)
 
-    out.mkdir(parents=True)
+
+def save_reply(out: Path, msgs: list, answer: str) -> dict:
+    """Write answer.md, thinking.md, messages.jsonl (and answer_cut.md, see below); return the reply's record."""
+    result = next((m for m in msgs if m["type"] == "ResultMessage"), {})
     init = next((m for m in msgs if m.get("subtype") == "init"), {}).get("data", {})
-    tool_uses = [b for m in msgs if m["type"] == "AssistantMessage" for b in m.get("content", []) if "input" in b]
-    thinking = [b["thinking"] for m in msgs if m["type"] == "AssistantMessage" for b in m.get("content", [])
-                if "thinking" in b and b["thinking"]]
+    asst = [m for m in msgs if m["type"] == "AssistantMessage"]
+    tool_uses = [b for m in asst for b in m.get("content", []) if "input" in b]
+    thinking = [b["thinking"] for m in asst for b in m.get("content", []) if "thinking" in b and b["thinking"]]
     # With no tools, a user message here was injected by Claude Code after a reply hit the output cap
     # ("Output token limit hit. Resume directly ..."). Keep the reply as it was when cut (docs/protocol.md, deviation 5).
     injected = ["".join(b.get("text", "") for b in m["content"]) for m in msgs if m["type"] == "UserMessage"]
@@ -174,15 +181,6 @@ def run(model: str, exp: str, item: str, sample: int) -> Path:
         first = msgs[:next(i for i, m in enumerate(msgs) if m["type"] == "UserMessage")]
         cut = "".join(b.get("text", "") for m in first if m["type"] == "AssistantMessage" for b in m["content"])
         (out / "answer_cut.md").write_text(cut, encoding="utf-8")
-    record.update({
-        "resumed_after_output_cap": bool(injected), "injected_messages": injected,
-        "session_id": result.get("session_id"), "wall_s": wall, "refused": refused,
-        "usage": result.get("usage"), "model_usage": result.get("model_usage"),
-        "total_cost_usd": result.get("total_cost_usd"), "num_turns": result.get("num_turns"),
-        "audit": {"tool_free": not tool_uses and init.get("tools") == [], "init_tools": init.get("tools"),
-                  "init_mcp_servers": init.get("mcp_servers"), "api_key_source": init.get("apiKeySource"),
-                  "model": init.get("model")},
-    })
     (out / "answer.md").write_text(answer or "", encoding="utf-8")
     (out / "thinking.md").write_text("\n\n---\n\n".join(thinking), encoding="utf-8")
     with open(out / "messages.jsonl", "w", encoding="utf-8") as f:
@@ -193,6 +191,36 @@ def run(model: str, exp: str, item: str, sample: int) -> Path:
                 if isinstance(b, dict):
                     b.pop("signature", None)  # opaque blob the API uses to verify thinking; no content
             f.write(json.dumps(m, default=str) + "\n")
+    every_text = "".join(b.get("text", "") for m in asst for b in m.get("content", []))
+    return {"resumed_after_output_cap": bool(injected), "injected_messages": injected,
+            "fake_tool_calls": len(re.findall(r'\{"tool":\s*"', every_text)),  # tool calls written out as text
+            "refused": any(m.get("stop_reason") == "refusal" for m in asst),
+            "session_id": result.get("session_id"), "last_uuid": asst[-1].get("uuid") if asst else None,
+            "usage": result.get("usage"), "model_usage": result.get("model_usage"),
+            "total_cost_usd": result.get("total_cost_usd"), "num_turns": result.get("num_turns"),
+            "audit": {"tool_free": not tool_uses and init.get("tools") == [], "init_tools": init.get("tools"),
+                      "init_mcp_servers": init.get("mcp_servers"), "api_key_source": init.get("apiKeySource"),
+                      "model": init.get("model")}}
+
+
+def run(model: str, exp: str, item: str, sample: int) -> Path:
+    prompt, effort, rel = _prompt(exp, item)
+    key = api_key()
+    out = RUNS / model / exp / item / f"s{sample}"
+    if out.exists():
+        sys.exit(f"{out} already exists; refusing to overwrite.")
+    record = {"experiment": exp, "item": item, "sample": sample, "model": model, "effort": effort,
+              "system_prompt": SYSTEM_PROMPT, "prompt_file": f"upstream/{rel}",
+              "prompt_sha256": hashlib.sha256(prompt.encode()).hexdigest(), "prompt_chars": len(prompt),
+              "prompt_tokens": _count_tokens(model, prompt, key), "versions": _versions()}
+    with tempfile.TemporaryDirectory(prefix="wsp_run_") as tmp:
+        (Path(tmp) / "cwd").mkdir()
+        try:
+            msgs, result, answer, attempts = call(model, effort, prompt, key, Path(tmp) / "cwd", Path(tmp) / "home")
+        except RuntimeError as e:
+            sys.exit(str(e))
+    out.mkdir(parents=True)
+    record.update({"attempts": attempts, "wall_s": attempts[-1]["wall_s"], **save_reply(out, msgs, answer)})
     (out / "run.json").write_text(json.dumps(record, indent=1, default=str), encoding="utf-8")
     print(json.dumps({k: record[k] for k in ("experiment", "item", "sample", "wall_s", "usage", "total_cost_usd",
                                              "refused", "prompt_tokens", "audit")}, indent=1, default=str))
@@ -203,6 +231,18 @@ def _score_text(exp: str, item: str, answer: str, out: Path | None) -> dict:
     if exp in ("exp1", "exp2"):
         from wsp.scoring import score_exp1, score_exp2
         return (score_exp1 if exp == "exp1" else score_exp2)(answer, item)
+    if exp == "exp3":
+        from wsp.exp3 import score as score_exp3
+        return score_exp3(answer, item)
+    if exp == "exp4":
+        from wsp.exp4 import evaluate, read_reply, save_npz
+        w, rep = read_reply(answer)
+        if out:
+            save_npz(str(out / "edited_actor.npz"), w)
+            (out / "apply.json").write_text(json.dumps(rep, indent=1))
+        ev = evaluate({"edited": w}, 1024, 256, seed=0)
+        return {"apply": {k: rep[k] for k in ("statements", "applied", "entries_written", "changed", "frac_changed")},
+                "skipped": len(rep["skipped"]), "eval": {**ev.pop("nets")["edited"], **ev}}
     if exp == "exp5":
         from wsp.exp5 import evaluate, read_reply, save_npz
         w, rep = read_reply(answer)
@@ -216,7 +256,8 @@ def _score_text(exp: str, item: str, answer: str, out: Path | None) -> dict:
 
 def score(model: str, exp: str, item: str, sample: int) -> dict:
     out = RUNS / model / exp / item / f"s{sample}"
-    res = _score_text(exp, item, (out / "answer.md").read_text(encoding="utf-8"), out)
+    answer = out / ("final_answer.md" if exp == "exp3" else "answer.md")
+    res = _score_text(exp, item, answer.read_text(encoding="utf-8"), out)
     if (out / "answer_cut.md").exists():
         res["cut_at_output_cap"] = _score_text(exp, item, (out / "answer_cut.md").read_text(encoding="utf-8"), None)
     (out / "score.json").write_text(json.dumps(res, indent=1))

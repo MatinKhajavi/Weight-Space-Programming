@@ -1,0 +1,11 @@
+{
+ "true": "pong",
+ "guess": "pong",
+ "correct": true,
+ "status": "mapped",
+ "named": [
+  "pong"
+ ],
+ "answer_line": "a pong-style paddle game (single-player pong / squash against the right wall).",
+ "confidence": 70
+}

@@ -1,0 +1,11 @@
+{
+ "true": "pacman",
+ "guess": "pacman",
+ "correct": true,
+ "status": "mapped",
+ "named": [
+  "pacman"
+ ],
+ "answer_line": "pac-man (a grid maze version with ghosts).",
+ "confidence": 65
+}

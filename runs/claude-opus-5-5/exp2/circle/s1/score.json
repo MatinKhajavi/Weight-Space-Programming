@@ -1,0 +1,11 @@
+{
+ "true": "circle",
+ "guess": "circle",
+ "correct": true,
+ "status": "mapped",
+ "named": [
+  "circle"
+ ],
+ "answer_line": "each generated image is a single white circle outline (a ring), about one pixel thick, on a black background. the rings range from about 5 to 10 pixels across. they are centered near the middle of the",
+ "confidence": 55
+}

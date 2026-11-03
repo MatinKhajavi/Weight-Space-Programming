@@ -1,0 +1,44 @@
+{
+ "apply": {
+  "statements": 170,
+  "applied": 170,
+  "nonzero": 777
+ },
+ "skipped": 0,
+ "eval": {
+  "game": "seaquest",
+  "episodes": 1000,
+  "mean": 11.425,
+  "se": 0.4509498095472829,
+  "max": 87.0,
+  "mean_length": 360.709,
+  "capped_at_10000": 0,
+  "seed": 0,
+  "workers": 10,
+  "minatar": "1.0.15",
+  "sticky": 0.1,
+  "seconds": 3.6
+ },
+ "cut_at_output_cap": {
+  "apply": {
+   "statements": 0,
+   "applied": 0,
+   "nonzero": 0
+  },
+  "skipped": 0,
+  "eval": {
+   "game": "seaquest",
+   "episodes": 1000,
+   "mean": 0.119,
+   "se": 0.012923080360579904,
+   "max": 4.0,
+   "mean_length": 31.541,
+   "capped_at_10000": 0,
+   "seed": 0,
+   "workers": 10,
+   "minatar": "1.0.15",
+   "sticky": 0.1,
+   "seconds": 1.6
+  }
+ }
+}

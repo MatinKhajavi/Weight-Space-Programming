@@ -78,5 +78,6 @@
  },
  "resumed_after_output_cap": false,
  "injected_messages": [],
- "session_id": "b4efdde1-7c7c-4382-91ce-d35dc12e4aaa"
+ "session_id": "b4efdde1-7c7c-4382-91ce-d35dc12e4aaa",
+ "fake_tool_calls": 0
 }

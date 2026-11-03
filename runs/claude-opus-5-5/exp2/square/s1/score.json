@@ -1,0 +1,11 @@
+{
+ "true": "square",
+ "guess": "square",
+ "correct": true,
+ "status": "mapped",
+ "named": [
+  "square"
+ ],
+ "answer_line": "a black 12\u00d712 image with a single white rectangle outline, one pixel thick, axis-aligned. its position and size vary. the sides fall between rows/columns 1 and 10, and the rectangle is typically about",
+ "confidence": 45
+}

@@ -25,7 +25,7 @@ model call comes from the repo.
 | Prompt text | `prompt.txt` / `message.txt` per run | repo | sent byte for byte |
 | Samples per item | 1 | repo runs; blog ("in a single try") | 1 first; up to 4 more added later as samples 2-5 |
 
-Each run is stored in `runs/<model>/<exp>/<item>/s<sample>/`.
+Each run is stored in `runs/<model>/<exp>/<item>/s<sample>/`. The logs of the first two runs (exp1 and exp5 Breakout) were filtered afterwards in the same way the runner now filters every log: streaming progress events and the opaque thinking signatures are dropped, and later record fields were added from the logs.
 
 ## Isolation of the model call
 
@@ -80,7 +80,17 @@ prompt's token count next to the API's reported input tokens, so injected contex
    No setting turns this off. The message carries no information about the task, but the prompts say "This is a single
    response" and the original never met this case: no output cap was set in any of their calls, and Astra's longest
    reply was about 29K tokens. We score the completed answer and mark it \*; the reply as it was when cut is kept in
-   `answer_cut.md` and its score is recorded in `score.json` under `cut_at_output_cap`.
+   `answer_cut.md` and its score is recorded in `score.json` under `cut_at_output_cap`. The message carries no
+   information about the game or the score, but it does tell the model it ran out of space and to work in smaller
+   pieces. When the cut reply had written text, the second request carries the whole cut reply, thinking included
+   (exp5 Breakout: the second reply repeats the first 75 statements and finishes the block). When the cap was reached
+   while still thinking, the second request carries only the prompt and the message, so the model starts over with
+   that instruction (exp5 Seaquest, whose second attempt refers to its "compact output budget"); such a result is a
+   second attempt under a different instruction, not a completed reply.
+6. **Tool calls written as text.** With no tools available, a reply can contain made-up tool calls and made-up
+   outputs written as text (`{"tool":"code",...}` / `{"tool":"code_output",...}`) instead of the protocol's code block.
+   Each reply's count is recorded as `fake_tool_calls` in its `run.json`. Under the original rules a reply without a
+   code block is the final answer.
 
 ## Retries (from the original logs)
 
@@ -98,8 +108,8 @@ The rules below are observed in the authors' harness logs, not documented by the
   before any Opus answer is scored.
 - Where the original rule is not released (the exp1 and exp2 keyword rules), ours is written down in the scorer and
   agreed before use.
-- Each environment and evaluator is checked against Astra's released artifacts before any Opus run, for example the
-  exp4 base network at 0/256 and the exp5 networks at about 517 / 53 / 53.
+- Each environment and evaluator is checked against Astra's released artifacts before it scores any Opus answer, for
+  example the exp4 base network at 0/256 and the exp5 networks at about 517 / 53 / 53.
 - Where the original seeds are not recorded (exps 4, 5), comparisons are statistical, not exact.
 
 ### Validation so far
@@ -110,10 +120,20 @@ The rules below are observed in the authors' harness logs, not documented by the
   matching; exp2 scores the shape only, not filled vs outline.
 - **exp5 edit reader** (`wsp/exp5.py`): rebuilds Astra's three released networks bit for bit, no statement skipped.
 - **exp5 evaluator**: official MinAtar 1.0.15 `Environment`, one environment per worker with episodes back to back
-  (its last action carries over between episodes, as in the official wrapper), fixed seeds. Astra's Breakout network
-  scores 506.5 ± 7.6 (seeds 0-999) and 508.1 ± 7.6 (seeds 1000-1999) against the released 517.4 ± 7.4: about 1
-  standard error low in both blocks. Astra's and Opus's networks are scored with the same evaluator and seeds, so a
-  small offset between our evaluator and theirs does not affect the comparison.
+  (its last action carries over between episodes, as in the official wrapper). A seed s gives 10 workers, worker w
+  with one environment seeded s + w that plays its 100 episodes back to back, so seeds less than 10 apart share
+  streams. Astra's Breakout network scores 506.5 ± 7.6 (seed 0) and 508.1 ± 7.6 (seed 1000) against the released
+  517.4 ± 7.4: about 1 standard error low in both blocks. Astra's and Opus's networks are scored with the same evaluator and seeds, so a
+  small offset between our evaluator and theirs does not affect the comparison. Seaquest: 52.0 ± 1.4 (released
+  53.1 ± 1.4). Asterix: 53.2 ± 1.0 (released 53.2 ± 1.0).
+- **exp4 edit reader and evaluator** (`wsp/exp4.py`): applying Astra's 51 statements to the network as shown rebuilds
+  the released `edited_actor.npz` bit for bit (6,073 entries changed). The evaluator is Kinetix at the original
+  commit with the original training config, run on Modal. The base network as shown gives success 0/256, mean return
+  0.15191, progress 0.33900, most-likely-action episode a timeout (released: 0/256, 0.15190, 0.33899, timeout);
+  Astra's edit gives 1,024/1,024 successes in 73 steps, return 1.37385 (released: the same), and its sampled episode
+  matches the trace printed in the prompt at every logged step. Progress is 1 - (closest distance between the green
+  wheel and the blue box) / (distance at the start), 1 on success; this definition reproduces the released value.
+  Runs use Modal CPUs for now (`gpu=None`), because GPUs need a payment method on the Modal workspace.
 
 ## Order of work
 
@@ -123,11 +143,28 @@ The rules below are observed in the authors' harness logs, not documented by the
 4. The multi-turn experiments (3, 6, 7, 8). Their harness gaps (listed below) get designed and written down here
    before any run.
 
+## Multi-turn experiments
+
+One Agent SDK call per turn, each resuming the previous one, as the original resumed Codex with
+`codex exec resume <thread>`. Turn 1 is the task message; each later turn is the output of the code block in the
+previous reply, in the original's template; a reply without a code block is the final answer.
+
+A failed turn is retried with the same waits as above, after rewinding the conversation to the last good reply, so the
+model never sees the failed attempt.
+
+**exp3.** Task message: upstream `exp3_language/runs/python_r0/message.txt` (identical for all six original
+conversations). Sandbox: a fresh Docker container per run (`sandbox/Dockerfile`, no network), with `np` and `W` (the
+40 block arrays from `networks/<language>/blocks.npz`) preloaded; 600 s per run; output cut at 20,000 characters;
+stderr's last 6,000 characters appended, as in upstream `harness/sandbox.py`; at most 100 runs. Output template:
+`OUTPUT of run <k> of at most 100:` followed by the output in a code fence. Our choices where the original behaviour is
+not in the logs: a reply with several code blocks runs the first (logged as `blocks_in_reply`); after 100 runs the
+model is asked for its final answer. The ban on forward passes is checked afterwards by reading every code run, as the
+authors did.
+
 ## Open: multi-turn harness gaps
 
 Never observed in the original logs, so the original behaviour is unknown:
 
 - exp6: the reminder text sent when the model answers with passes left.
-- all: handling of a reply with several code blocks, or prose next to a block.
-- all: behaviour when a run or pass limit is reached, and the message for a failed request.
-- exp3: the sandbox prelude that preloads the weights as `W` (its code is not released; described in `message.txt`).
+- exps 6, 7, 8: handling of a reply with several code blocks; behaviour at a run or pass limit; the message for a
+  failed request.

@@ -4,7 +4,7 @@ A replication of [*Sparks of Weight-Space Programming: LLMs can natively read & 
 weights*](https://rikiyat.github.io/blog/weight-space-programming/) (Takehi, Teoh, Zhang, Khattab; MIT CSAIL,
 November 2026), running its eight experiments with **Claude Opus 5.5** in place of GPT-6 Astra.
 
-**Status:** setting up. No results yet.
+**Status:** experiments 1, 2, 4 and 5 done for Claude Opus 5.5 (one sample each); 3, 6, 7 and 8 in progress.
 
 ## What this is
 
@@ -26,14 +26,33 @@ Every setting, where it comes from, and every known deviation from the original 
 
 | # | Experiment | Original effort | Status |
 |---|---|---|---|
-| 1 | Which game was this network trained on? | high | planned |
-| 2 | What does this diffusion model generate? | high | planned |
-| 3 | Which language did this model learn, from its middle blocks? | xhigh | planned |
-| 4 | Fix a failing car network by editing its weights | high | planned |
-| 5 | Write MinAtar networks from scratch | xhigh | planned |
-| 6 | Write a 1.5M-weight Go network | xhigh | planned |
+| 1 | Which game was this network trained on? | high | done |
+| 2 | What does this diffusion model generate? | high | done |
+| 3 | Which language did this model learn, from its middle blocks? | xhigh | running |
+| 4 | Fix a failing car network by editing its weights | high | done |
+| 5 | Write MinAtar networks from scratch | xhigh | done |
+| 6 | Write a 1.5M-weight Go network | xhigh | building |
 | 7 | Which language model is sycophantic? | xhigh | planned |
 | 8 | Make Qwen3.5-0.8B better at math | max | planned |
+
+## Results so far (Claude Opus 5.5, one sample per item)
+
+| Experiment | Opus 5.5 | GPT-6 Astra (published) |
+|---|---|---|
+| 1. Which game | 4/4 correct (confidence 65-85 %) | 4/4 (96-99 %) |
+| 2. Which shape | 3/3 correct (45-60 %) | 3/3 (77-88 %) |
+| 4. Fix the car | 1,024/1,024 successes, 1.7 % of weights changed | 1,024/1,024, 3.5 % |
+| 5. Breakout | 483.6\* | 517.4 (506.5 in our evaluator) |
+| 5. Seaquest | 11.4\*\* | 53.1 (52.0) |
+| 5. Asterix | 47.0 | 53.2 (53.2) |
+
+PPO baselines for exp5 (published): Breakout 15.8 / 25.3, Seaquest 5.6 / 88.9, Asterix 25.8 / 55.2 at 100M / 500M
+steps. Opus beats the 100M-step PPO networks in all three games, as Astra does.
+
+\* The reply ran past the 128K output cap and Claude Code resumed it once; the reply as it was when cut scores 0.5.
+\*\* The cap was reached while still thinking; the answer comes from a second attempt that started over after Claude
+Code's "Output token limit hit ... Break remaining work into smaller pieces" message; the cut reply scores 0.1. See
+[docs/protocol.md](docs/protocol.md), deviation 5.
 
 ## Setup
 

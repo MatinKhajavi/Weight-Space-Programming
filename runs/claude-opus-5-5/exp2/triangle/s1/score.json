@@ -1,0 +1,11 @@
+{
+ "true": "triangle",
+ "guess": "triangle",
+ "correct": true,
+ "status": "mapped",
+ "named": [
+  "triangle"
+ ],
+ "answer_line": "a single solid white triangle pointing upward on a black background, with a black border.",
+ "confidence": 60
+}

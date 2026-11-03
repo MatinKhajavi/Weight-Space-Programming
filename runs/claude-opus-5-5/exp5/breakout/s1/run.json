@@ -82,5 +82,6 @@
  "injected_messages": [
   "Output token limit hit. Resume directly \u2014 no apology, no recap of what you were doing. Pick up mid-thought if that is where the cut happened. Break remaining work into smaller pieces."
  ],
- "session_id": "6fb0188b-7c11-4d77-9328-fe89dc683caf"
+ "session_id": "6fb0188b-7c11-4d77-9328-fe89dc683caf",
+ "fake_tool_calls": 0
 }

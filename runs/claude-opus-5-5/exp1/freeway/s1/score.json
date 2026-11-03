@@ -1,0 +1,11 @@
+{
+ "true": "freeway",
+ "guess": "freeway",
+ "correct": true,
+ "status": "mapped",
+ "named": [
+  "freeway"
+ ],
+ "answer_line": "freeway (frogger-style road crossing), as in the minatar freeway game.",
+ "confidence": 85
+}

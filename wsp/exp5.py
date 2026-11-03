@@ -25,6 +25,9 @@ NPZ_KEYS = {"W1": "actor/dense1/kernel", "b1": "actor/dense1/bias", "W2": "actor
 # The 6 input channels <- the game's own channels ("How the 6 channels are built" in each prompt).
 CHANNEL_MAP = {
     "breakout": [["paddle"], [], ["brick"], ["ball"], ["trail"], []],
+    "seaquest": [["sub_front", "sub_back"], ["enemy_fish", "enemy_sub", "enemy_bullet"], ["enemy_fish", "enemy_sub", "diver"],
+                 ["friendly_bullet"], ["trail", "sub_back"], ["oxygen_guage", "diver_guage"]],
+    "asterix": [["player"], ["enemy"], ["gold"], [], ["trail"], []],
 }
 
 MAX_STEPS, STICKY = 10_000, 0.1
