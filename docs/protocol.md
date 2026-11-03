@@ -58,7 +58,8 @@ others).
 localhost) that records every request body. Marker strings were planted in a `CLAUDE.md`, an auto-memory file and an
 `@`-mentioned file. With SDK defaults all three reached the request; with the configuration above none did, the user
 message was the prompt byte for byte, no tools were sent, effort and thinking were as set, and a resumed second turn
-re-sent the history unchanged. The check needs no API key and costs nothing; it is re-run before each batch.
+re-sent the history unchanged. This check is local tooling and is not part of the repo. Each run also records the
+prompt's token count next to the API's reported input tokens, so injected context would show up as a gap.
 
 ## Known deviations from the original
 
@@ -91,9 +92,22 @@ The rules below are observed in the authors' harness logs, not documented by the
   exp4 base network at 0/256 and the exp5 networks at about 517 / 53 / 53.
 - Where the original seeds are not recorded (exps 4, 5), comparisons are statistical, not exact.
 
+### Validation so far
+
+- **exp1, exp2 scorers** (`wsp/scoring.py`): on Astra's 7 released answers they give the same mapped answer, the same
+  right/wrong and the same confidence as the released `eval/scores.json` (4/4 games, 3/3 shapes). Our keyword rules:
+  names only (a description without a name is wrong); two different labels named is wrong ("hedged"); whole-word
+  matching; exp2 scores the shape only, not filled vs outline.
+- **exp5 edit reader** (`wsp/exp5.py`): rebuilds Astra's three released networks bit for bit, no statement skipped.
+- **exp5 evaluator**: official MinAtar 1.0.15 `Environment`, one environment per worker with episodes back to back
+  (its last action carries over between episodes, as in the official wrapper), fixed seeds. Astra's Breakout network
+  scores 506.5 ± 7.6 (seeds 0-999) and 508.1 ± 7.6 (seeds 1000-1999) against the released 517.4 ± 7.4: about 1
+  standard error low in both blocks. Astra's and Opus's networks are scored with the same evaluator and seeds, so a
+  small offset between our evaluator and theirs does not affect the comparison.
+
 ## Order of work
 
-1. Smoke test with the real key: exp1 Breakout and exp5 Breakout.
+1. exp1 Breakout and exp5 Breakout first, to confirm the setup end to end before the rest.
 2. The rest of exps 1, 2 and 5, one sample each.
 3. The exp4 model call; scored once the Kinetix evaluation reproduces the original base result.
 4. The multi-turn experiments (3, 6, 7, 8). Their harness gaps (listed below) get designed and written down here
