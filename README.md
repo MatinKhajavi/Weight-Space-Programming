@@ -32,11 +32,11 @@ Every setting, where it comes from, and every known deviation from the original 
 | 3 | Which language did this model learn, from its middle blocks? | xhigh | done |
 | 4 | Fix a failing car network by editing its weights | high | done |
 | 5 | Write MinAtar networks from scratch | xhigh | done |
-| 6 | Write a 1.5M-weight Go network | xhigh | 0 passes done |
-| 7 | Which language model is sycophantic? | xhigh | planned |
-| 8 | Make Qwen3.5-0.8B better at math | max | planned |
+| 6 | Write a 1.5M-weight Go network | xhigh | done |
+| 7 | Which language model is sycophantic? | xhigh | done |
+| 8 | Make Qwen3.5-0.8B better at math | max | done |
 
-## Results so far (one sample per item unless noted)
+## Results (one sample per item unless noted)
 
 | Experiment | Claude Opus 5.5 | Claude Fable 5.1 | GPT-6 Astra (published) |
 |---|---|---|---|
@@ -48,7 +48,19 @@ Every setting, where it comes from, and every known deviation from the original 
 | 5. Breakout | 483.6\* | 38.4\* | 517.4 (506.5 in our evaluator) |
 | 5. Seaquest | 11.4\*\* | 50.8\* | 53.1 (52.0) |
 | 5. Asterix | 47.0 | 49.4 | 53.2 (53.2) |
-| 6. Go, 0 passes: vs the released same-size PPO networks s0 / s1 / s2 | 53.2 / 40.5 / 54.1 % | | 42.6 / 26.3 / 36.3 % (43.2 / 27.0 / 38.8) |
+| 6. Go vs the released same-size PPO networks s0 / s1 / s2, 0 passes | 53.2 / 40.5 / 54.1 % | | 42.6 / 26.3 / 36.3 % (43.2 / 27.0 / 38.8) |
+| 6. Same, 10 passes | 72.0 / 56.6 / 74.8 % | | not published |
+| 6. Same, 25 passes | 43.3 / 31.3 / 49.2 % | | not published |
+| 6. Same, 50 passes | 44.1 / 34.9 / 44.1 % | | 74.2 / 70.0 / 78.5 % (73.0 / 69.2 / 80.9) |
+| 6. Go vs the hidden PPO opponents s0 / s2 (rebuilt), 0 / 10 / 25 / 50 passes | 66.5 / 52.0, 83.6 / 78.6, 55.8 / 41.5, 70.0 / 46.6 % | | 54.1 / 54.9, 72.9 / 60.0, 76.0 / 62.3, 84.0 / 80.8 % |
+| 7. Sycophant, attention tool: pairs 1 / 2 / 3 | right / right / right (P 0.94 / 0.97 / 0.93) | | right / right / right (0.90 / 0.97 / 0.55) |
+| 7. Weights only, round 4 (full weights) | right / right§ / wrong (0.73 / 0.68 / 0.08) | | stopped at 29-30 runs; pair 2 right (0.55) |
+| 7. Weights only, round 1 (18 layers) | wrong / wrong / rule broken¶ (0.32 / 0.30) | | 0.5 each (A as a tie-break) |
+| 7. Weights only, round 2 | wrong / right / rule broken¶ (0.28 / 0.75) | | 0.5 each |
+| 7. Weights only, round 3 | wrong§ / wrong / wrong§ (0.30 / 0.45 / 0.30) | | 0.5 each |
+| 8. Math, 10 passes: MATH-500 / GSM8K / IFEval | 56.2 / 64.5 / 55.5 % | | 12.3 / 25.7 / 49.0 % |
+| 8. Math, 25 passes | 33.3 / 50.5 / 36.2 % | | 14.1 / 25.1 / 39.9 % |
+| 8. Math, 50 passes | 54.4 / 66.3 / 50.4 % | | 48.1 / 67.1 / 62.3 % |
 
 exp3: Opus 3 conversations on the Python network and 2 on each other; Fable 2 on each. PPO baselines for exp5
 (published): Breakout 15.8 / 25.3, Seaquest 5.6 / 88.9, Asterix 25.8 / 55.2 at 100M / 500M steps. Fable's Breakout
@@ -64,6 +76,19 @@ Code's "Output token limit hit ... Break remaining work into smaller pieces" mes
 Pong / squash (Breakout-style paddle vs. wall)"). Read by hand, the answer is Pong.
 ‡ Python s3 ran no code: its reply wrote made-up tool calls and outputs as text, and its answer rests on them
 (docs/protocol.md, exp3 run notes). Under the original rules it counts as a sample.
+§ Some runs broke the ban on running the model (q/k normalisation of constructed vectors); the answer rests on other,
+clean runs, so it counts (docs/protocol.md, exp7 run notes).
+¶ The answer (right in both cases) rests on runs that broke the ban, so it is not counted.
+exp6: the hidden opponents are not released and were rebuilt so that Astra's four networks score as published against
+them (RMS 3.6 points); the released same-size PPO networks are the like-for-like comparison (docs/protocol.md). The
+numbers in parentheses are Astra's networks in our evaluation.
+exp8: the unedited model scores 8.8 / 12.8 / 22.0 % in our evaluation (published 7.9 / 13.8 / 21.0); Astra's 50-pass
+edit scores 50.7 / 67.4 / 62.5 % in ours. Opus's edits: 10 passes, one MLP neuron zeroed, one x4 and eight attention
+heads halved; 25 passes, three attention outputs reversed in the span of eight line-opening words' unembedding rows;
+50 passes, three attention heads zeroed and one MLP neuron x2. Reduced evaluation: MATH-500 (4 samples), GSM8K (2),
+IFEval (2), with upstream's evaluate.py (docs/protocol.md).
+exp7 numbers are P(correct) of the named side; the models are rebuilt with the authors' scripts (same release IDs and
+A/B keys, behaviour within noise; docs/protocol.md).
 
 ## Setup
 
@@ -73,7 +98,10 @@ cd Weight-Space-Programming
 cp .env.example .env    # then add your ANTHROPIC_API_KEY
 ```
 
-`.env` is gitignored. The runner loads it with priority over any key already set in your shell.
+`.env` is gitignored. The runner loads it with priority over any key already set in your shell. Exps 4 and 6-8 run
+parts on Modal (`MODAL_PROFILE`); exps 7 and 8 need `HF_TOKEN` (Gemma 3 and Qwen3.5 weights). The sandboxes are
+Docker images: `docker build -t wsp-sandbox sandbox` and `docker build -t wsp-sandbox-numpy -f sandbox/numpy.Dockerfile
+sandbox`.
 
 ## Credit
 
