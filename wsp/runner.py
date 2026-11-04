@@ -33,6 +33,10 @@ ITEMS = {
     "exp3": {lang: ("exp3_language/runs/python_r0/message.txt", "xhigh") for lang in ["python", "romaji", "english"]},
     "exp4": {"oneshot_repair": ("exp4_fix_car/runs/oneshot_repair/reply/prompt.txt", "high")},
     "exp6": {f"budget_{b}": (f"exp6_go_from_scratch/runs/budget_{b}/message.txt", "xhigh") for b in [0, 10, 25, 50]},
+    "exp7": {f"{r}/{p}": (f"exp7_sycophancy/runs/{r}/prompt.txt", "xhigh") for r in
+             ["weights_only_1", "weights_only_2", "weights_only_3", "weights_only_4", "attention_tool"]
+             for p in ["pair1", "pair2", "pair3"]},
+    "exp8": {r: (f"exp8_math/runs/{r}/turns/t001/prompt.txt", "max") for r in ["p10c", "p25c", "p50c"]},
     "exp5": {g: (f"exp5_write_from_scratch/runs/{g}/reply/prompt.txt", "xhigh") for g in
              ["breakout", "seaquest", "asterix"]},
 }
@@ -216,6 +220,9 @@ def _score_text(exp: str, item: str, answer: str, out: Path | None) -> dict:
     if exp == "exp6":
         from wsp.exp6 import score as score_exp6
         return score_exp6(out)
+    if exp == "exp7":
+        from wsp.exp7 import score as score_exp7
+        return score_exp7(*item.split("/"), answer)
     if exp == "exp4":
         from wsp.exp4 import evaluate, read_reply, save_npz
         w, rep = read_reply(answer)
@@ -238,7 +245,7 @@ def _score_text(exp: str, item: str, answer: str, out: Path | None) -> dict:
 
 def score(model: str, exp: str, item: str, sample: int) -> dict:
     out = RUNS / model / exp / item / f"s{sample}"
-    answer = out / ("final_answer.md" if exp in ("exp3", "exp6") else "answer.md")
+    answer = out / ("final_answer.md" if exp in ("exp3", "exp6", "exp7") else "answer.md")
     res = _score_text(exp, item, answer.read_text(encoding="utf-8"), out)
     if (out / "answer_cut.md").exists():
         res["cut_at_output_cap"] = _score_text(exp, item, (out / "answer_cut.md").read_text(encoding="utf-8"), None)

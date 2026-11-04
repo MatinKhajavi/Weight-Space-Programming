@@ -1,7 +1,9 @@
 """Multi-turn runner: one Agent SDK call per turn, each resuming the previous one (the original used `codex exec resume`).
 
   python -m wsp.conversation exp3 <language> [--model M] [--sample K]
-  python -m wsp.conversation exp6 budget_0 [--model M] [--sample K]
+  python -m wsp.conversation exp6 budget_<0, 10, 25 or 50> [--model M] [--sample K]
+  python -m wsp.conversation exp7 <round>/<pair> [--model M] [--sample K]     e.g. attention_tool/pair2
+  python -m wsp.conversation exp8 <run> [--model M] [--sample K]              run: p10c, p25c or p50c
 
 Run folder: runs/<model>/<exp>/<item>/s<K>/ with turns/tNNN/{prompt.txt, answer.md, thinking.md, messages.jsonl,
 run.json}, tool_calls.jsonl, final_answer.md and state.json.
@@ -19,8 +21,9 @@ from wsp.runner import ITEMS, MODELS, RUNS, _versions, api_key, call, save_reply
 
 
 def converse(model: str, exp: str, item: str, sample: int, first_message: str, make_step) -> Path:
-    """`make_step()` is called once the run folder exists; the `step(answer)` it returns gives the next message, or
-    None when the answer is final."""
+    """`make_step()` is called once the run folder exists; the `step(answer)` it returns gives the next message (or
+    (message, True) to start a new conversation with it), or None when the answer is final; `step.close()`, if
+    present, is called at the end."""
     effort = ITEMS[exp][item][1]
     key = api_key()
     out = RUNS / model / exp / item / f"s{sample}"
@@ -53,6 +56,11 @@ def converse(model: str, exp: str, item: str, sample: int, first_message: str, m
             session, last_uuid = rec["session_id"], rec["last_uuid"]
             print(f"turn {state['turns']}: ${rec['total_cost_usd'] or 0:.2f}, {attempts[-1]['wall_s']} s", flush=True)
             message = step(answer)
+            if isinstance(message, tuple):
+                message, fresh = message
+                if fresh:
+                    session = last_uuid = None
+                    session_cost = 0.0
             if message is None:
                 (out / "final_answer.md").write_text(answer, encoding="utf-8")
                 state["done"] = True
@@ -61,6 +69,8 @@ def converse(model: str, exp: str, item: str, sample: int, first_message: str, m
         state["stopped"] = str(e)
         print("stopped:", e, flush=True)
     finally:
+        if hasattr(step, "close"):
+            step.close()
         turns = sorted((out / "turns").glob("t*/run.json"))
         state["cost_usd"] = round(sum(json.loads(p.read_text()).get("total_cost_usd") or 0 for p in turns), 4)
         (out / "state.json").write_text(json.dumps(state, indent=1, default=str), encoding="utf-8")
@@ -70,7 +80,7 @@ def converse(model: str, exp: str, item: str, sample: int, first_message: str, m
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("exp", choices=["exp3", "exp6"])
+    ap.add_argument("exp", choices=["exp3", "exp6", "exp7", "exp8"])
     ap.add_argument("item")
     ap.add_argument("--model", choices=MODELS, default=MODELS[0])
     ap.add_argument("--sample", type=int, default=1)
@@ -82,8 +92,15 @@ if __name__ == "__main__":
     if a.exp == "exp3":
         from wsp import exp3
         first, step = exp3.message(), lambda: exp3.step(a.item, out)
-    else:
+    elif a.exp == "exp6":
         from wsp import exp6
         budget = int(a.item.split("_")[1])
         first, step = exp6.message(budget), lambda: exp6.step(budget, out)
+    elif a.exp == "exp7":
+        from wsp import exp7
+        rnd, pair = a.item.split("/")
+        first, step = exp7.message(rnd), lambda: exp7.step(rnd, pair, out)
+    else:
+        from wsp import exp8
+        first, step = exp8.message(a.item), lambda: exp8.step(a.item, out, a.sample)
     converse(a.model, a.exp, a.item, a.sample, first, step)

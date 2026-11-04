@@ -1,0 +1,173 @@
+{
+ "checkpoint": "runs/reinforce_s0/iter06500.pkl",
+ "games": 2000,
+ "seed": 1000,
+ "results": {
+  "budget_0": {
+   "games": 2000,
+   "score": 0.9965,
+   "wins": 1993,
+   "losses": 7,
+   "score_as_black": 0.998,
+   "score_as_white": 0.995,
+   "mean_margin": 38.9385,
+   "mean_length": 100.494,
+   "stones_captured_per_game": 37.547,
+   "stones_lost_per_game": 2.7905,
+   "passes_per_game": 2.007,
+   "games_with_a_pass_before_move_60": 0,
+   "end_two_passes": 1877,
+   "end_repetition": 121,
+   "end_move_limit": 2
+  },
+  "budget_10": {
+   "games": 2000,
+   "score": 0.9955,
+   "wins": 1991,
+   "losses": 9,
+   "score_as_black": 0.995,
+   "score_as_white": 0.996,
+   "mean_margin": 73.9395,
+   "mean_length": 123.914,
+   "stones_captured_per_game": 97.566,
+   "stones_lost_per_game": 2.9685,
+   "passes_per_game": 1.7,
+   "games_with_a_pass_before_move_60": 0,
+   "end_two_passes": 1719,
+   "end_repetition": 281,
+   "end_move_limit": 0
+  },
+  "budget_25": {
+   "games": 2000,
+   "score": 0.988,
+   "wins": 1976,
+   "losses": 24,
+   "score_as_black": 0.992,
+   "score_as_white": 0.984,
+   "mean_margin": 69.186,
+   "mean_length": 117.337,
+   "stones_captured_per_game": 87.4465,
+   "stones_lost_per_game": 4.1195,
+   "passes_per_game": 1.661,
+   "games_with_a_pass_before_move_60": 0,
+   "end_two_passes": 1458,
+   "end_repetition": 514,
+   "end_move_limit": 28
+  },
+  "budget_50": {
+   "games": 2000,
+   "score": 0.999,
+   "wins": 1998,
+   "losses": 2,
+   "score_as_black": 0.999,
+   "score_as_white": 0.999,
+   "mean_margin": 56.5625,
+   "mean_length": 104.379,
+   "stones_captured_per_game": 63.773,
+   "stones_lost_per_game": 1.5745,
+   "passes_per_game": 1.111,
+   "games_with_a_pass_before_move_60": 0,
+   "end_two_passes": 1768,
+   "end_repetition": 232,
+   "end_move_limit": 0
+  },
+  "ppo_same_size_lr3e-5_s0": {
+   "games": 2000,
+   "score": 0.9495,
+   "wins": 1899,
+   "losses": 101,
+   "score_as_black": 0.942,
+   "score_as_white": 0.957,
+   "mean_margin": 17.439,
+   "mean_length": 114.9235,
+   "stones_captured_per_game": 42.722,
+   "stones_lost_per_game": 13.2565,
+   "passes_per_game": 3.209,
+   "games_with_a_pass_before_move_60": 206,
+   "end_two_passes": 1532,
+   "end_repetition": 218,
+   "end_move_limit": 250
+  },
+  "ppo_same_size_lr3e-5_s1": {
+   "games": 2000,
+   "score": 0.9715,
+   "wins": 1943,
+   "losses": 57,
+   "score_as_black": 0.976,
+   "score_as_white": 0.967,
+   "mean_margin": 20.74,
+   "mean_length": 114.03,
+   "stones_captured_per_game": 43.595,
+   "stones_lost_per_game": 10.7835,
+   "passes_per_game": 2.59,
+   "games_with_a_pass_before_move_60": 151,
+   "end_two_passes": 1417,
+   "end_repetition": 298,
+   "end_move_limit": 285
+  },
+  "ppo_same_size_lr3e-5_s2": {
+   "games": 2000,
+   "score": 0.9195,
+   "wins": 1839,
+   "losses": 161,
+   "score_as_black": 0.909,
+   "score_as_white": 0.93,
+   "mean_margin": 20.5985,
+   "mean_length": 125.609,
+   "stones_captured_per_game": 58.669,
+   "stones_lost_per_game": 21.7325,
+   "passes_per_game": 3.883,
+   "games_with_a_pass_before_move_60": 214,
+   "end_two_passes": 1351,
+   "end_repetition": 241,
+   "end_move_limit": 408
+  },
+  "random": {
+   "games": 2000,
+   "score": 0.785,
+   "wins": 1570,
+   "losses": 430,
+   "score_as_black": 0.688,
+   "score_as_white": 0.882,
+   "mean_margin": 42.6715,
+   "mean_length": 147.8475,
+   "stones_captured_per_game": 116.1215,
+   "stones_lost_per_game": 29.36,
+   "passes_per_game": 0.605,
+   "games_with_a_pass_before_move_60": 0,
+   "end_two_passes": 417,
+   "end_repetition": 101,
+   "end_move_limit": 1482
+  }
+ },
+ "targets": {
+  "budget_0": [
+   1994,
+   2000
+  ],
+  "budget_10": [
+   1998,
+   2000
+  ],
+  "budget_25": [
+   1962,
+   2000
+  ],
+  "budget_50": [
+   1998,
+   2000
+  ],
+  "ppo_same_size_lr3e-5_s0": [
+   1961,
+   2000
+  ],
+  "ppo_same_size_lr3e-5_s1": [
+   1909,
+   2000
+  ],
+  "ppo_same_size_lr3e-5_s2": [
+   1890,
+   2000
+  ]
+ }
+}
