@@ -1,0 +1,59 @@
+OUTPUT of Python run 29 of at most 120:
+```
+96 black 16.5 repetition cap 16 lost 5 len 83
+XX.XXOOO.
+.XX.XOOOO
+X.XXOOOOO
+.X.XOOXO.
+X.X.XXXOX
+.XXX.X.X.
+XXX.X.XXX
+OOXXXXOOO
+.OOX.XOO.
+
+97 black 11.5 repetition cap 13 lost 5 len 83
+.X.XOOOO.
+XOXXXOOOO
+OOOXXOXXX
+OOOXOOX.X
+.OOXOX.X.
+XXX.X.X.X
+XXXXXX.X.
+OOOOOXXXX
+.OO.X.X.X
+
+109 black 22.5 repetition cap 15 lost 3 len 77
+XXOOOOOO.
+.XXXOOOOO
+X.X.XOOXX
+.X.X.XX.X
+X.X.X.XX.
+OX.X.X.XX
+OOXXX.XXX
+OOOOOX.X.
+.OO.X.X.X
+
+124 white 42.5 repetition cap 19 lost 3 len 78
+O.O.OOXX.
+.O.O.OXXX
+O.O.OXXX.
+.O.O.OXXO
+O.O.O.OO.
+XOOO.OO.O
+XOOXO.OOO
+XXXXXO.O.
+.XX.O.O.O
+
+126 white 45.5 repetition cap 26 lost 2 len 84
+OOO.OOXX.
+.O.OOXXXX
+O.O.OOXXX
+.O.OO.OOO
+O.O.OO.O.
+XO.O.OO.O
+XXOOOO.OO
+XXXXXOOO.
+.XX.O.O.O
+
+
+```

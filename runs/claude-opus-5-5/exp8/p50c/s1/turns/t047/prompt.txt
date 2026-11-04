@@ -1,0 +1,9 @@
+OUTPUT of Python run 42 of at most 300:
+```
+['attn_11.npy', 'attn_15.npy', 'attn_19.npy', 'attn_23.npy', 'attn_3.npy', 'attn_7.npy', 'input_ids.npy', 'meta.json', 'mlp_act_0.npy', 'mlp_act_1.npy', 'mlp_act_10.npy', 'mlp_act_11.npy', 'mlp_act_12.npy', 'mlp_act_13.npy', 'mlp_act_14.npy', 'mlp_act_15.npy', 'mlp_act_16.npy', 'mlp_act_17.npy', 'mlp_act_18.npy', 'mlp_act_19.npy', 'mlp_act_2.npy', 'mlp_act_20.npy', 'mlp_act_21.npy', 'mlp_act_22.npy', 'mlp_act_23.npy', 'mlp_act_3.npy', 'mlp_act_4.npy', 'mlp_act_5.npy', 'mlp_act_6.npy', 'mlp_act_7.npy', 'mlp_act_8.npy', 'mlp_act_9.npy', 'token_logprobs.npy', 'topk_ids.npy', 'topk_logprobs.npy']
+[875, 1544]
+0 mean lp by quarter [-0.911, -0.204, -0.297, -0.221]
+1 mean lp by quarter [-1.149, -0.735, -0.696, -0.278]
+loop_pos range 1353 1542 pre_pos 160 1314 period 38
+
+```

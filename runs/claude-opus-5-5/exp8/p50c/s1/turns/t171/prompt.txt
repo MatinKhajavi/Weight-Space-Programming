@@ -1,0 +1,19 @@
+OUTPUT of Python run 149 of at most 300:
+```
+A+brake     cut   ok  wrong
+brake_only                 
+cut          62   49     21
+ok           10  102      3
+wrong         2    3      4
+A+brake  cut  ok  wrong
+A_only                 
+cut       70  64     23
+ok         2  88      0
+wrong      2   2      5
+orig {('gsm', 'cut'): 108, ('gsm', 'ok'): 20, ('math', 'cut'): 116, ('math', 'ok'): 12}
+A {('gsm', 'cut'): 67, ('gsm', 'ok'): 55, ('gsm', 'wrong'): 6, ('math', 'cut'): 90, ('math', 'ok'): 35, ('math', 'wrong'): 3}
+brake {('gsm', 'cut'): 52, ('gsm', 'ok'): 72, ('gsm', 'wrong'): 4, ('math', 'cut'): 80, ('math', 'ok'): 43, ('math', 'wrong'): 5}
+A+brake1.5 {('gsm', 'cut'): 23, ('gsm', 'ok'): 87, ('gsm', 'wrong'): 18, ('math', 'cut'): 57, ('math', 'ok'): 62, ('math', 'wrong'): 9}
+A+brake2 {('gsm', 'cut'): 20, ('gsm', 'ok'): 94, ('gsm', 'wrong'): 14, ('math', 'cut'): 54, ('math', 'ok'): 60, ('math', 'wrong'): 14}
+
+```

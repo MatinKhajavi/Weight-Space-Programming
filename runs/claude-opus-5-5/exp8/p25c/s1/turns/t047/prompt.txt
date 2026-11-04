@@ -1,0 +1,12 @@
+OUTPUT of Python run 40 of at most 300:
+```
+600 | 'e function?\n        *   It is an odd function: $\\sin(-x) = -\\sin(x)$.\n        *   Its range is usually $[-1, 1]$.\n        *   Periodicity: $\\sin(x)$ has a period of $2\\pi$.\n        *   Key Identity: $\\sin(0)$.\n    *   Why is it 0?\n        *'
+3000 | "No.\n    *   Let's write down the steps clearly.\n\n4.  **Drafting the response:**\n    *   Start with the definition of the sine function on the unit circle.\n    *   Explain that $0^\\circ$ corresponds to the angle between the positive x-axis a"
+8000 | 'in(0^\\circ) = 0$.\n    The only case where it matters is if the argument was $0$ radians.\n    Wait, $\\sin(0)$ in radians is 0.\n    $\\sin(0)$ in degrees is 0.\n    There is no ambiguity here.\n\n    Wait, I might have missed a subtlety.\n    Some'
+15000 | 'equested "Please reason step by step, and put your final answer within \\boxed{}."\n\n    Okay, ready to generate the response.\n    I will write the reasoning clearly.\n    I will start with the definition.\n    I will map the angle to the circl'
+22000 | 'tate the result.\n    5. Provide the boxed answer.\n    I will write it out now.\n    Wait, I should check if there\'s any tricky interpretation of "Compute".\n    Sometimes "Compute" means "Calculate the numerical value".\n    Sometimes it means'
+26971 | '`.\n    I will use `\\mathbf`.\n    I will use `\\text`.\n    I will use `\\left`.\n    I will use `\\right`.\n    I will use `\\setminus`.\n    I will use `\\cup`.\n    I will use `\\cap`.\n    I will use `\\times`.\n    I will use `/`.\n    I will use `\\cd'
+27321 | ' will use `\\neg`.\n    I will use `>`, `<`, `==`, `!=`, `<=`, `>=`, `<>`, `?`, `?`.\n    I will use `?`, `?`.\n    I will use `?`, `?`.\n    I will use `?`.\n    I will use `?`.\n    I will use `?`.\n    I will use `?`.\n    I will use `?`.\n    I w'
+line-repeat share by eighth of pre-loop text: [np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.01), np.float64(0.04), np.float64(0.02), np.float64(0.08), np.float64(0.1)]
+
+```

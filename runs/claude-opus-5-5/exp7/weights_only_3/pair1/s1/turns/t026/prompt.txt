@@ -1,0 +1,7 @@
+OUTPUT of run 25 of at most 60:
+```
+shared: 6.5
+read top3: 2.3  read 4-6: -2.77  write top3: 2.11  write 4-6: 4.06
+random 3-d subspaces: mean 0.30 std 1.94 95pct 3.26 max 6.12; frac >= shared: 0.000
+
+```

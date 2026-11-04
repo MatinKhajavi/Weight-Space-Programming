@@ -1,0 +1,12 @@
+OUTPUT of run 42 of at most 60:
+```
+L14 MLP: s1/s2=1.22 cos(u1,d1)=+0.67 cos(u1,d2)=-0.14 participation=771 units; top units [842, 445, 580, 1045, 1241, 1261, 198, 471, 1815, 2017, 128, 996] weights [-0.073 -0.063  0.063  0.061 -0.06   0.059 -0.059  0.059 -0.058  0.056  0.055 -0.055]
+     mean |cos| between top units' dGate rows=0.121, dUp rows=0.131 (random ~0.040)
+L15 MLP: s1/s2=1.18 cos(u1,d1)=+0.85 cos(u1,d2)=-0.23 participation=742 units; top units [878, 221, 1149, 356, 1242, 1791, 852, 1181, 1101, 1034, 1870, 616] weights [ 0.078 -0.068 -0.067  0.066  0.064 -0.062 -0.061 -0.06   0.06  -0.06  -0.06   0.059]
+     mean |cos| between top units' dGate rows=0.074, dUp rows=0.113 (random ~0.040)
+L16 MLP: s1/s2=1.08 cos(u1,d1)=-0.87 cos(u1,d2)=-0.20 participation=682 units; top units [80, 1598, 33, 442, 954, 1797, 455, 777, 1818, 210, 1934, 182] weights [-0.076 -0.076  0.072  0.071 -0.069 -0.067 -0.067  0.065  0.065  0.063 -0.062  0.062]
+     mean |cos| between top units' dGate rows=0.103, dUp rows=0.104 (random ~0.040)
+L17 MLP: s1/s2=1.72 cos(u1,d1)=-0.59 cos(u1,d2)=-0.73 participation=593 units; top units [1178, 1609, 2004, 1215, 9, 1118, 1144, 114, 56, 145, 384, 1773] weights [ 0.101 -0.096 -0.081 -0.079 -0.075 -0.073  0.072  0.071 -0.068  0.067  0.067  0.066]
+     mean |cos| between top units' dGate rows=0.103, dUp rows=0.123 (random ~0.040)
+
+```

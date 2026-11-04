@@ -1,0 +1,13 @@
+OUTPUT of run 45 of at most 60:
+```
+L10 O-part recall z (subject->true answer): h0:+0.8 h1:+0.6 h2:+0.2 h3:-0.8
+L11 O-part recall z (subject->true answer): h0:-1.3 h1:-0.6 h2:-1.1 h3:-0.6
+L12 O-part recall z (subject->true answer): h0:+0.5 h1:-1.2 h2:-0.0 h3:-1.4
+L13 O-part recall z (subject->true answer): h0:-0.6 h1:+0.7 h2:+0.2 h3:-1.3
+L14 O-part recall z (subject->true answer): h0:+2.7 h1:+1.1 h2:-0.6 h3:+1.4
+L15 O-part recall z (subject->true answer): h0:-1.3 h1:-1.8 h2:-2.2 h3:-1.3
+L16 O-part recall z (subject->true answer): h0:-0.9 h1:+0.3 h2:-0.7 h3:+0.7
+L17 O-part recall z (subject->true answer): h0:+0.9 h1:+1.9 h2:-0.6 h3:+0.5
+sum: -5.7
+
+```

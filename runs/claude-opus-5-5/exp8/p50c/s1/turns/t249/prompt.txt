@@ -1,0 +1,15 @@
+OUTPUT of Python run 224 of at most 300:
+```
+                      tok  deep8  ...  w_Let me  w_Let's
+src   sty                         ...                   
+gsm8k a_thinking   8124.0   0.74  ...      0.04     2.62
+      my_thought   4075.0   0.26  ...      0.19     2.09
+math  a_thinking  24064.5   0.41  ...      0.19     3.92
+      my_thought   6509.0   0.13  ...      0.36     3.05
+
+[4 rows x 7 columns]
+correct-only median tokens: {('gsm8k', 'a_thinking'): 5504.0, ('gsm8k', 'my_thought'): 3959.0, ('math', 'a_thinking'): 11328.0, ('math', 'my_thought'): 6067.0}
+--- my_thought "Here's my thought process for solving this word problem:\n\n1.  **Analyze the Request:**\n    *   **Characters:** Cameron, Chase, Danielle.\n    *   **Relationships/Speeds:**\n        *   $S_{Cameron} = x$\n        *   $S_{Chase} = y$ (where $y > x$, since he is faster)\n        *   Relationship between sp"
+--- a_thinking "Here's a thinking process that leads to the solution:\n\n1.  **Analyze the Request:**\n    *   **Given:**\n        *   Cost of fueling a car = $45 per trip.\n        *   Distance covered with fuel = 500 miles.\n        *   Mallory's destination = 2000 miles from her home.\n        *   Condition: She used $"
+
+```

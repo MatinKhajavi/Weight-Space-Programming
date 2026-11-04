@@ -1,0 +1,8 @@
+OUTPUT of run 28 of at most 60:
+```
+read vs attn-write principal cos [0.63 0.59 0.54 0.52 0.47 0.44 0.41 0.39]
+pin(read L0) :  L13 z-2.0 rel-0.0006(null sd 0.0003) | L14 z+0.6 rel+0.0002(null sd 0.0003) | L15 z+2.2 rel+0.0006(null sd 0.0003) | L16 z+12.1 rel+0.0032(null sd 0.0003) | L17 z+14.4 rel+0.0035(null sd 0.0002)
+attn12-15 write :  L13 z-3.3 rel-0.0010(null sd 0.0003) | L14 z-0.3 rel-0.0001(null sd 0.0004) | L15 z-0.8 rel-0.0002(null sd 0.0003) | L16 z+6.9 rel+0.0020(null sd 0.0003) | L17 z+7.4 rel+0.0020(null sd 0.0003)
+attn-paired read :  L13 z-3.4 rel-0.0011(null sd 0.0003) | L14 z+0.8 rel+0.0002(null sd 0.0004) | L15 z+4.5 rel+0.0014(null sd 0.0003) | L16 z+8.6 rel+0.0024(null sd 0.0003) | L17 z+13.6 rel+0.0036(null sd 0.0003)
+
+```

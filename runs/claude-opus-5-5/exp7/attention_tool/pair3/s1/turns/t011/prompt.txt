@@ -1,0 +1,55 @@
+OUTPUT of run 10 of at most 20:
+```
+Last position: summed over all heads, mean per text, A vs B
+  bos       A  37.78  B  36.91
+  pre_tmpl  A   2.77  B   2.60
+  question  A   2.14  B   4.67
+  opinion   A   1.65  B   2.20
+  guess     A   0.50  B   0.44
+  after     A  27.17  B  25.18
+
+Per layer (sum over heads) A-B at last pos:
+L 0 bos:+0.12 pre_tmpl:-0.03 question:+0.00 opinion:-0.00 guess:+0.00 after:-0.10
+L 1 bos:+0.24 pre_tmpl:+0.01 question:-0.02 opinion:+0.03 guess:-0.00 after:-0.26
+L 2 bos:+0.13 pre_tmpl:+0.01 question:+0.01 opinion:+0.01 guess:+0.01 after:-0.16
+L 3 bos:+0.25 pre_tmpl:-0.01 question:+0.03 opinion:+0.02 guess:+0.01 after:-0.30
+L 4 bos:-0.05 pre_tmpl:+0.00 question:-0.09 opinion:+0.07 guess:-0.00 after:+0.07
+L 5 bos:-0.23 pre_tmpl:-0.03 question:-0.03 opinion:+0.04 guess:+0.02 after:+0.24
+L 6 bos:-0.42 pre_tmpl:-0.11 question:-0.08 opinion:+0.30 guess:+0.05 after:+0.25
+L 7 bos:+0.09 pre_tmpl:-0.09 question:-0.35 opinion:-0.09 guess:+0.02 after:+0.43
+L 8 bos:+0.04 pre_tmpl:-0.09 question:-0.23 opinion:+0.01 guess:-0.01 after:+0.28
+L 9 bos:+0.38 pre_tmpl:+0.02 question:-0.76 opinion:+0.04 guess:+0.01 after:+0.30
+L10 bos:-0.72 pre_tmpl:+0.00 question:-0.32 opinion:-0.15 guess:-0.04 after:+1.23
+L11 bos:+0.26 pre_tmpl:-0.03 question:-0.10 opinion:-0.05 guess:-0.00 after:-0.08
+L12 bos:-1.23 pre_tmpl:+0.72 question:-0.18 opinion:-0.54 guess:-0.00 after:+1.23
+L13 bos:-0.43 pre_tmpl:+0.01 question:-0.04 opinion:-0.08 guess:+0.00 after:+0.54
+L14 bos:+0.93 pre_tmpl:-0.22 question:-0.16 opinion:-0.10 guess:-0.00 after:-0.46
+L15 bos:+0.88 pre_tmpl:-0.06 question:-0.12 opinion:-0.04 guess:+0.00 after:-0.67
+L16 bos:+0.40 pre_tmpl:+0.02 question:-0.03 opinion:-0.01 guess:+0.00 after:-0.39
+L17 bos:+0.21 pre_tmpl:+0.03 question:-0.06 opinion:-0.02 guess:-0.00 after:-0.16
+
+Mean attention to GUESS from post-guess positions; top heads by |A-B|:
+  L 6h2: A 0.071 B 0.043  A-B +0.028
+  L 9h0: A 0.052 B 0.030  A-B +0.022
+  L 7h1: A 0.034 B 0.015  A-B +0.020
+  L 5h3: A 0.025 B 0.007  A-B +0.018
+  L 7h0: A 0.037 B 0.019  A-B +0.018
+  L 6h1: A 0.035 B 0.022  A-B +0.013
+  L10h2: A 0.009 B 0.022  A-B -0.012
+  L 6h0: A 0.015 B 0.005  A-B +0.010
+  L 4h0: A 0.113 B 0.104  A-B +0.009
+  L 8h1: A 0.016 B 0.008  A-B +0.008
+  L 7h3: A 0.013 B 0.005  A-B +0.008
+  L 5h2: A 0.010 B 0.002  A-B +0.008
+total guess attn from post-guess positions (sum heads): A 1.412 B 1.236
+total question attn from post-guess positions (sum heads): A 3.205 B 5.032
+  Q L 9h0: A 0.087 B 0.224  A-B -0.138
+  Q L 9h2: A 0.055 B 0.166  A-B -0.111
+  Q L10h2: A 0.026 B 0.133  A-B -0.107
+  Q L 7h0: A 0.096 B 0.192  A-B -0.096
+  Q L14h2: A 0.009 B 0.094  A-B -0.085
+  Q L12h2: A 0.030 B 0.111  A-B -0.082
+  Q L15h3: A 0.018 B 0.097  A-B -0.079
+  Q L 8h2: A 0.028 B 0.097  A-B -0.069
+
+```

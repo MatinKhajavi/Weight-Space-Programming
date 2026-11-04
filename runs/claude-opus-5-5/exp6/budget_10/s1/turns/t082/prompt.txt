@@ -1,0 +1,7 @@
+OUTPUT of Python run 73 of at most 120:
+```
+1.0 mean pen on trueSA 0.961 (n=1371)  on OK 0.0039 (n=73382)  missedSA-mass 54.0 falseSA-mass 286.0
+0.75 mean pen on trueSA 0.970 (n=1371)  on OK 0.0097 (n=73382)  missedSA-mass 41.2 falseSA-mass 709.2
+0.5 mean pen on trueSA 0.989 (n=1371)  on OK 0.0202 (n=73382)  missedSA-mass 15.5 falseSA-mass 1480.5
+
+```

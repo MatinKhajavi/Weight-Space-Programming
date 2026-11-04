@@ -1,0 +1,22 @@
+OUTPUT of run 35 of at most 60:
+```
+L 0: head-vs-head |cos| top-dq inputs: mean 0.39 min 0.11 | head vs layer: [0.93, 0.65, 0.42, 0.86] | |cos(layer top, r)| 0.01
+L 1: head-vs-head |cos| top-dq inputs: mean 0.34 min 0.08 | head vs layer: [0.75, 0.81, 0.42, 0.72] | |cos(layer top, r)| 0.01
+L 2: head-vs-head |cos| top-dq inputs: mean 0.39 min 0.06 | head vs layer: [0.85, 0.89, 0.15, 0.85] | |cos(layer top, r)| 0.03
+L 3: head-vs-head |cos| top-dq inputs: mean 0.23 min 0.13 | head vs layer: [0.18, 0.36, 0.78, 0.57] | |cos(layer top, r)| 0.02
+L 4: head-vs-head |cos| top-dq inputs: mean 0.15 min 0.02 | head vs layer: [0.43, 0.68, 0.87, 0.1] | |cos(layer top, r)| 0.01
+L 5: head-vs-head |cos| top-dq inputs: mean 0.29 min 0.13 | head vs layer: [0.36, 0.93, 0.77, 0.4] | |cos(layer top, r)| 0.08
+L 6: head-vs-head |cos| top-dq inputs: mean 0.20 min 0.05 | head vs layer: [0.94, 0.72, 0.03, 0.13] | |cos(layer top, r)| 0.11
+L 7: head-vs-head |cos| top-dq inputs: mean 0.41 min 0.12 | head vs layer: [0.96, 0.71, 0.67, 0.38] | |cos(layer top, r)| 0.64
+L 8: head-vs-head |cos| top-dq inputs: mean 0.27 min 0.05 | head vs layer: [0.44, 0.71, 0.49, 0.75] | |cos(layer top, r)| 0.27
+L 9: head-vs-head |cos| top-dq inputs: mean 0.75 min 0.54 | head vs layer: [0.89, 0.96, 0.92, 0.81] | |cos(layer top, r)| 0.48
+L10: head-vs-head |cos| top-dq inputs: mean 0.77 min 0.66 | head vs layer: [0.94, 0.79, 0.95, 0.95] | |cos(layer top, r)| 0.33
+L11: head-vs-head |cos| top-dq inputs: mean 0.45 min 0.19 | head vs layer: [0.41, 0.8, 0.89, 0.87] | |cos(layer top, r)| 0.29
+L12: head-vs-head |cos| top-dq inputs: mean 0.34 min 0.01 | head vs layer: [0.92, 0.87, 0.01, 0.82] | |cos(layer top, r)| 0.24
+L13: head-vs-head |cos| top-dq inputs: mean 0.08 min 0.03 | head vs layer: [0.27, 0.1, 0.22, 0.89] | |cos(layer top, r)| 0.19
+L14: head-vs-head |cos| top-dq inputs: mean 0.20 min 0.03 | head vs layer: [0.61, 0.67, 0.32, 0.72] | |cos(layer top, r)| 0.11
+L15: head-vs-head |cos| top-dq inputs: mean 0.42 min 0.03 | head vs layer: [0.55, 0.79, 0.7, 0.78] | |cos(layer top, r)| 0.21
+L16: head-vs-head |cos| top-dq inputs: mean 0.37 min 0.09 | head vs layer: [0.79, 0.83, 0.72, 0.4] | |cos(layer top, r)| 0.07
+L17: head-vs-head |cos| top-dq inputs: mean 0.19 min 0.05 | head vs layer: [0.1, 0.94, 0.03, 0.31] | |cos(layer top, r)| 0.06
+
+```

@@ -1,0 +1,11 @@
+OUTPUT of Python run 110 of at most 300:
+```
+ans_in test on "The answer is 0": False True
+LLevel 1 n 28 acc 0.54 cut 0.54 cut&stated 0.60 of cuts
+LLevel 2 n 58 acc 0.48 cut 0.40 cut&stated 0.57 of cuts
+LLevel 3 n 68 acc 0.47 cut 0.47 cut&stated 0.41 of cuts
+LLevel 4 n 82 acc 0.28 cut 0.63 cut&stated 0.06 of cuts
+LLevel 5 n 84 acc 0.19 cut 0.76 cut&stated 0.08 of cuts
+gsm n 192 acc 0.56 cut 0.31 cut&stated 0.45 of cuts
+
+```

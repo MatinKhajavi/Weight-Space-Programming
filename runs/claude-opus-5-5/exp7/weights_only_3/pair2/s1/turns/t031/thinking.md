@@ -1,0 +1,172 @@
+I'm looking at layer 15, where the base copy magnitudes are large, with one head pushing strongly anti-copy and several others pushing toward copying, so this layer dominates the copy behavior in this metric. Under the change, three heads copy somewhat less in A, and the anti-copy head gets a bit stronger in A, so I'm working out how layer 15's net copy shifts in A.
+
+I'm working through the layer 15 numbers in this copy metric: its net copy drops in A, while layers 14, 16 and 17 push the other way, with the small-base anti-copy heads L16h3, L17h3 and L14h0 showing the largest relative shifts. I'm concluding that B ends up with stronger anti-copy in those heads, and that the overall net across these layers favors B copying more.
+
+I'm now comparing the anti-copy heads that copy-suppression would rely on, and the relative jumps in the small-magnitude heads (L16h3 at 22%, L14h0 at 15%, L17h3 at 14%) look larger than the layer 15 shifts. The thought is cut off mid-sentence at the absolute values for L15h, so I'm holding off on any conclusion about them.
+
+I'm working out whether the gradient argument carries over to anti-copy heads: if the guess is being pushed out, those heads should get more negative, and the sign of the change would then flip relative to copy heads. The numbers so far don't settle that, so I'm holding off on reading the sign of the L15h2 and L16h3 shifts as evidence either way.
+
+I'm weighing whether the L16h3, L17h3 and L14h0 gains (in A) should count as evidence for A syncing, given that the L15 losses point the other way. The absolute size of the L15 shift outweighs the late-layer gains, so the sign of the net is unclear. Whether these heads actually attend to the guess matters more here than the raw numbers, so I'm stopping short of a conclusion.
+
+I'm looking at how the relative changes compare: the L15 shifts are about 0.5%, which is in the range of generic drift per head, while L16h3, L17h3 and L14h0 moved by 14 to 22%, which looks more like targeted change.
+
+I'm checking whether the L15 shifts stand out once I compare them within each head's own noise, using z-scores from run 26. Those put L15's heads at roughly -1 to -3, while L16h3, L17h3 and L14h0 come out at about +1.5 to +3.6, so the late-layer changes look more targeted than the layer 15 ones.
+
+I'm trying a different angle now: the OV numbers don't show a clean story, so I'm considering whether the difference lives in the QK side, specifically how strongly these heads attend to the guess token. To probe that, I'd need an estimate of the answer-type direction that the guess position carries regardless of its identity.
+
+I'm reasoning about what the gradient would look like at the guess position: if the guess token carries a consistent direction across examples, summing over them would give a read direction equal to the mean answer embedding. I'm considering how the key side at layer L would pick that up from the residual, since the guess embedding feeds into it.
+
+I'm checking whether the K-side diffs at late layers pick up a shared direction tied to answer-type tokens, which would show whether one model attends to the guess more systematically. To test that, I'm planning to take the singular vectors of the key-weight diffs at layers 13 to 17 and see whether any direction recurs across those layers.
+
+I'm working out how the gradient at the guess position would show up in the key-side weights: the attention to the guess depends on the query at the answer position and on the guess's own residual vector, so a systematic difference would leave a shared direction across examples, and I'm checking whether the late-layer key diffs carry one.
+
+I'm working out how the attention from the answer position to the guess position would show up in the query-key product: the change should look roughly like a rank-one link between the answer-position residual and the guess-position residual. The guess-position part of that has a shared answer-type component plus token-specific parts, so the top singular pair of the bilinear change might reveal the systematic piece if I can isolate it.
+
+I'm trying to locate the answer-position residual, which I think is the template token after "model" and is strongly read by the query side at layer 0. The idea is that the query input is shared across heads at that position, and so is the guess-position key input, so the top singular vectors of the ΔQK changes should line up across heads if attention to the guess is the systematic difference. I'm about to take those top singular vectors with RoPE set aside, though the rest of that step is cut off.
+
+I'm now working out what the sign of the bilinear change would mean: the singular vectors only fix direction, not sign, so I'd need the actual query-side and key-side vectors to say whether the guess is attended to more.
+
+I'm stuck on the sign question: knowing only singular-vector directions doesn't tell me whether the guess is attended to more, since the true signs of the query and key vectors are unknown. The base attention score would need those signs to be read off, so I can't settle the direction of the change yet.
+
+I'm checking whether the attention changes amount to plain amplification of what the base model already attends to, by taking the cosine between the change and the base QK product within the top singular subspace. The per-head values I have from run 7 are small, around ±0.09. I'm also considering whether the changes concentrate in particular RoPE frequency bands, which would point to a positional offset rather than content.
+
+I'm going back to the original question about where the behavioral difference lives, which asks for a ranking of layers, heads and MLP units. The final MLPs at L16 and L17 show the strongest answer-subspace differences, with the attention heads at L14 through L17 next. To pin down the sign I want to know whether a few individual units in the L17 MLP account for most of that energy difference.
+
+I'm breaking the L17 MLP into per-unit contributions: for each unit, how its up and down projections relate to the answer subspace, and whether it maps that subspace onto itself with a positive sign. I'd compare that self-map between the two models, unit by unit, to see whether a few units carry most of the difference.
+
+I'm weighing whether to score each MLP unit's linear self-map on the answer subspace, comparing the two models layer by layer from 12 to 17. I'm setting aside the gating terms, since they depend on the input and I can't separate them cleanly.
+
+I'm now reasoning through a bilinear approximation of the MLP: if the gate is roughly linear near zero, the output becomes a quadratic form in the input, so the change between the answer and guess positions would be sign-symmetric and wouldn't capture the copy behaviour on its own. I'd need the cross term with the base residual to say anything about direction, and I'm turning to a positional, RoPE-based view of the query-key interaction to see whether that's tractable.
+
+I'm considering whether the fine-tuning might show up in the bf16 rounding grid, since weights updated in pure bf16 could leave a detectable pattern relative to the base model, which would give a cleaner read on which model moved more than the other.
+
+I'm considering whether the element-wise equality between the two models could reveal which one stayed closer to the base: where they match, both are likely unchanged, and where they differ, the one that equals the base would show the other one moved.
+
+I'm checking whether the element-by-element comparison of the two models could show the bf16 rounding pattern, since each element should sit at one of a few grid values relative to the base. I'm doubting that the base weights and the rounding give a clean signal here, so the magnitude and base-comparison approaches look unpromising for now.
+
+I'm checking whether the base model's copy circuits in the answer subspace, particularly the L15 heads, can tell me which direction the fine-tuning moved things. I'm sticking with the earlier idea of comparing the two models against the base, though the sign question is still open.
+
+I'm now looking at layer 15, where the base model's OV circuits have large copy and anti-copy heads, and the net copy effect is positive. That suggests the base pushes context answers forward, and in the fine-tuned model the copy pathway is weaker there, with the anti-copy head a bit stronger.
+
+I'm looking at layer 15, where the copy signal in A looks weaker, which seems to contradict the MLP reading. The late heads at L14 through L17 show the opposite pattern: B has stronger anti-copy, and A has less suppression. Those two components point in different directions, so I'll need to work out which one controls the answer.
+
+I'm now testing whether copy-style heads key on answer-type tokens, which would mean they attend to the guess when the query is looking for an answer. I'd check that by seeing how the keys respond to answer-like features.
+
+I'm checking whether the answer-token mean direction m might show up among the L0 read directions p1 and p2, since those are read strongly but written weakly and aren't output contrasts. If so, the late-layer key differences should line up with them.
+
+I'm weighing the K-side responses from run 15 against each other, and they point in mixed directions: some layers and heads show the answer-subspace key shift favouring A, others favouring B. Taken together that doesn't settle which model attends more to the guess, so I'm considering a different test: whether the late anti-copy heads are doing something the evidence so far has not captured.
+
+I'm checking whether the late anti-copy heads, L14h0, L16h3 and L17h3, are weaker in A than in the base, which would fit a syncophantic model. But A also shows a weaker copy signal at L15, which points the other way, so the two components don't agree yet.
+
+I'm checking whether the L15 differences could just be generic drift, since their relative size is small, while the late anti-copy heads at L14, L16 and L17 change by much more. I'm weighing noise-normalized z-scores from the earlier run, which put L15 near the noise floor and the late heads on the positive side.
+
+I'm checking whether the largest MLP changes in layers 16 and 17 account for the increased answer-writing in A, and whether those units read the answer subspace directly. I'm also planning to test the sign of their self-map on paired answer directions.
+
+I'm considering whether the late MLP units that add to the answer direction amplify whatever answer is already in the residual, which would be positive self-mapping. Knowing whether that sign holds would tell me if the added answer-writing is a general amplifier or something specific to the correct model. That doesn't yet say whether the fine-tuned model is sycophantic or correct.
+
+I'm considering whether the answer-subspace contrast gets written at specific layers, and whether the syc hypothesis predicts it arrives through late copy-style attention while the correct hypothesis predicts it comes from mid-layer knowledge retrieval. I'm planning to measure the answer-subspace energy of each layer's MLP and attention diffs to see where it first appears.
+
+I'm weighing whether the late MLP amplification and the copy-head pattern point the same way, and I'm planning to measure how large each layer's attention and MLP contributions are in a logit-comparable scale, normalized by the residual RMS.
+
+Next I'm checking the head-level magnitudes in the full metric, where L15 dominates and its net change outweighs the late layers, so the overall copy effect shifts toward B. Among the individual heads, L16h3, L17h3 and L14h0 show the largest relative changes. I'm now turning to the QK side for L15 to see whether the query-key amplification there is consistent with that picture.
+
+I'm looking at the QK side of layer 15, where A's heads 0 and 1 show sharper attention than the base (cosine shifts of about 9% and 7.5%), the largest of any layer. The OV copy change there is tiny by comparison, around half a percent, so the net effect on copying is still unclear, though sharper attention toward the guess would mean more copying.
+
+I'm working through the arithmetic: the QK scale shift comes out to roughly 0.2%, which is negligible, so the fine-tune looks like a small overall perturbation. Given that the global picture is noisy, I'll focus on the targeted signals instead, mainly the final-layer MLP amplification of the answer and the L16 heads copying along the leading direction in A.
+
+I'm now trying to decide which MLP units account for the added answer-writing in A, and whether they read the answer subspace themselves. I also want to check the gradient-alignment formula for the down projection, since it measures how much the MLP's current output already supports the target contrast.
+
+I'm working out whether the final MLP's output already leans toward the guess on the wrong-guess examples, since that depends on whether the copied guess is in the residual at the answer position. I'm also considering that Adam's preconditioning weights the alignment term, so the support is only a rough proxy, though the positive correlation should still hold.
+
+I'm reading the copy-suppression idea as the next thing to test: if the correct model learned to suppress the guess, that would explain B's stronger anti-copy heads at L14, L16 and L17. The L15 result still cuts the other way, so I'd want to see whether those copy heads are attending to something other than the guess before I trust that story.
+
+I'm now asking whether the base model's final MLP amplifies the answer already in the residual, and whether the copied guess is actually there at the answer position. Measuring that means tracing attention, so I can't settle it from the weights alone. I'm also wondering what the base model would output if it relied on copying versus knowledge, which I can't read off directly.
+
+I'm checking whether the same gradient-alignment logic holds for the per-head output projections in layers 16 and 17. Heads that copy the guess in the base model should, under that logic, push the update toward the guess, and I'm reading L17h1's large positive value as a possible sign of that.
+
+I'm checking which heads' signs fit the hypothesis that A is sycophantic: the anti-copy head L16h3 agrees, but L16h0, L16h1 and L15h2 and L15h1 do not, so the pattern is mixed. I'm now checking L13h3, whose copy score is also positive.
+
+I'm tallying the head signs under both hypotheses, and the weighted totals come out nearly even, about 23.7 against 21.2. That is a tie for practical purposes, and I can't settle it this way because the test depends on how much I trust the sign mapping for each head.
+
+I'm now checking whether the head-level signal under the attention-to-guess assumption lines up with the answer-writing and copy patterns I already measured for L16h3, L17h3 and L17h1.
+
+I'm checking the gradient-alignment reasoning for the attention output weights: a head that attends to the guess should move the copy score in the direction of s, and its answer-energy change should depend on whether the head copies or suppresses the guess. For the anti-copy head L16h3, the copy score change is positive, so I'm now checking how that squares with the sign pattern I already tallied.
+
+Checking the L16h3 and L17h3 anti-copy heads, the copy-score shifts and answer-energy shifts both point toward A being the sycophantic model under the attention-to-guess assumption. L17h1 agrees too, with its copy change and answer-energy change matching. L14h0 agrees but only weakly. Next I'm looking at L16h1, where the copy change fits A being sycophantic but its energy change points the other way.
+
+Checking the attention-to-guess version of the test: for each anti-copy head that attends to the guess, the copy-score change and the answer-energy change should agree in sign with A being sycophantic. Most of the heads I'm tracing fit that, but the answer-energy signs for L16h0 and L16h2 don't, and L15h0, L15h1 and L15h2 point the other way.
+
+I'm checking the remaining heads against the same sign rule: for the copy heads in layers 12, 13 and 15, the copy-score and answer-energy changes agree with A being the correct model, while L13h2 and L13h3 don't. L11h2's copy change is tiny, so its sign doesn't settle much.
+
+I'm finding that the head-level signs split into two consistent groups: some heads point toward A being the sycophantic model, while others point toward A being the correct one. Each head's two measures agree with its own group, so the question now is which group's source the heads are attending to.
+
+I'm now testing a hypothesis: the L15 heads may attend to the guess, which would make them consistent with A being the correct model. The heads that point the other way would then be tracking the correct option instead.
+
+I'm weighing the two readings of the head signs: either the L15 heads attend to the guess and the L16/L17 heads attend to the correct option, or the reverse. Since L15 is the strongest base copy layer, it's the more likely place for the guess to be copied, which would make A the correct model.
+
+I'm checking whether the heads that push toward the guess could be copying the correct answer instead, which would flip the reading. If the questions are free-form, there may be no correct option in context at all, so I'd need to see where that answer signal actually comes from.
+
+I'm now separating two kinds of answer-moving heads: those that move the guess, which would have a sign of s, and those that move a recalled answer written in by mid-layer knowledge MLPs, which would have the opposite sign, -s. The open question is which head group belongs to which kind.
+
+I'm comparing the relative sizes of the changes in the two head groups: the L15 group moves only about 0.5%, which looks like generic drift, while the L16h3/L17h3/L14h0 group moves roughly 14 to 22%. I'm asking which model would need the larger targeted change to get its answers, and whether the sycophantic or the correct model is the one that needs that extra work.
+
+I'm weighing the two hypotheses again: if the base model is sycophantic, the correct model would need the larger targeted changes, and whether those changes count as guess-copying or knowledge-moving depends on which heads attend to the guess. The symmetry is still there, so I need a separate signal for where each head's attention lands, such as the position of the guess in the context.
+
+I'm checking whether the L15 heads, the L16h3/L17h3/L14h0 group, or both attend to the guess, since the sign pattern alone can't tell me which is which. Local versus global attention layers might separate them, because heads that rely on sharp positional patterns would favor the guess sitting just before the answer.
+
+Checking whether the L15 heads are guess-movers or knowledge-movers, since their sign alone can't settle it. If L15 sharpened in A, that would be odd under the assumption that it copies the guess, so I'm considering whether the QK frequency profile might separate positional from content-based heads.
+
+I'm going back and forth on whether the L15h1 anti-copy head fits A being correct, and whether the final MLP's extra answer energy in A means the correct model is overpowering or the sycophantic one is. The two readings are still symmetric, so I'd need the final MLP's gradient alignment to see which one holds up.
+
+I'm finding the MLP-alignment check points to A being sycophantic, which conflicts with the head-grouping reading that A is correct, unless the base final MLP is pushing the correct answer despite L15 copying the guess. Under the other arrangement, where the late heads carry the guess and L15 carries knowledge, the sign would be +1 and A would be sycophantic, but the base final MLP's balance is still unclear.
+
+I'm checking whether the final MLP's alignment points the same way as the L15 knowledge-mover reading. If the base final MLP supports the guess, the sycophantic reading holds with L15 as knowledge movers that the correct model boosts. Under the other reading, the base final MLP would have to support the correct answer despite L15 copying the guess, which is harder to square.
+
+I'm trying to pin down which group of heads attends to the guess, since the sign pattern alone is symmetric. The final MLP alignment and the head grouping pull in opposite directions unless the base model leans one way or the other. I'm now looking for some independent evidence about where each head's attention actually lands.
+
+I'm weighing which head group is the guess-mover, since each reading flips the sign of the result. If the L15 heads copy the guess, A is the correct model; if the late L16/L17 heads do, A is the sycophantic one. The check is whether A's changes push the guess pathway up and the knowledge pathway down.
+
+I'm now weighing whether the knowledge-moving heads act before or after the guess gets copied, since that ordering could separate the two readings. The strong L15 copy heads are the obvious candidates for a sycophantic copy shortcut.
+
+Checking whether the L15 heads or the later heads attend to the guess is still open, and I'm thinking positional analysis is the way to tell them apart. The QK amplification numbers at L15h0, L15h1, and L17h1 point toward those heads sharpening in A, but that alone doesn't settle which group is copying the guess and which is moving the recalled answer.
+
+I'm weighing whether the answer subspace is small enough to test directly, since a handful of shared directions might mean only a few answer tokens matter here. Checking how the frequency content of the QK changes compares to the base could show whether the heads are shifting toward positional or content-based attention.
+
+I'm wondering whether the answer subspace is larger than the four MC letters, since six directions stand out above the cosine threshold. That could mean free-form answers with a few dominant tokens, or letters plus formatting tokens like " (" and ")" where only the letter differs.
+
+Now I'm wondering whether the residual stream's massive-activation coordinates give a constant component I could use to estimate each head's positional bias, by checking how large the input layernorm weights are at those dimensions.
+
+I'm now thinking about the final MLP "units" analysis, which could turn up a few L17 units acting as guess amplifiers versus knowledge carriers. In the earlier run, the final MLPs' reading of the copied answers showed no difference between A and B for any head. I'm wondering whether the mid-layer MLPs carry the knowledge-recall signal instead, so I'd check which of them write the answer subspace in the A-B difference.
+
+I'm now computing write enrichment for each layer's MLP and attention diff in the 6-dimensional answer subspace, to see whether the mid-layer MLPs carry the knowledge-recall difference.
+
+Now I'm checking the layer 9, 11, and 2 MLP energy changes, which look mixed and small. I'll also look at whether the L15 heads are reading the guess from raw token embeddings or from answer directions written elsewhere, since that could tell the two readings apart.
+
+I'm considering whether the L0–L2 heads might move the guess token to a later template position for the late heads to pick up, though that seems unlikely to separate the two readings. The concern is that the guess token's embedding and the mid-layer knowledge direction look the same in raw sign space, so the residual alone doesn't distinguish them.
+
+I'm now going to run a positional analysis on the heads: for each one, I'll measure the QK energy in each rotary frequency pair and compute a frequency-weighted sharpness score. High-frequency emphasis would suggest positional or recency-style heads, and low-frequency emphasis would suggest content-based ones. That would tell me whether the L15 heads are the recency copiers and the late heads are the content readers.
+
+I'm now going to set the L17 global heads aside, since their wide rotary frequencies make them content-driven, and check whether the guess pathway runs through L14h0 and L16h3 instead of L15. Under the other reading it stays with the L15 local heads. Content like "I think it's X" can mark the guess as much as position, so I don't expect the frequency test to settle it. Before I trust any of the OV logit numbers, I also need to account for how post_attention_layernorm rescales the summed attention output across the four heads.
+
+Checking whether the L15 drop is real or just washed out by the post-attention norm: if all four heads shrink together, that rescaling cancels out, so the small -0.5% changes may not mean much on their own.
+
+Checking the L15 numbers: the copy heads' traces dropped about half a percent in A while the anti-copy head grew by a similar amount, so the net copy shrank, though that is a small effect. Before reading much into it, I want a sense of the noise floor, so I'm planning to rerun the paired trace with random direction samples for each head.
+
+I'm checking whether the 6-dimensional answer subspace gives a meaningful null distribution against random rotations, and so far the L15, L16, L17 and L14 head z-scores all look modest. Since the OV-based group assignments are weak evidence anyway, I'm turning to the final MLP amplification, which is much stronger, and I want to see whether it is uniform across answer directions or concentrated in specific ones, with a non-answer subspace as a control.
+
+Now I'm checking whether the final MLPs amplify answer writing in a way that's specific to the answer subspace, comparing how A's update lines up against the shared amplification direction versus B's.
+
+I'm now asking whether the final MLPs' amplification of the answer on wrong-guess examples lines up with the shared update, and which model's target matches the answer the base residual already represents.
+
+I'm weighing whether Gemma 3 270M, with its limited general knowledge, would simply echo the user's guess, which would make A's amplification of the answer line up with what the base model already represents.
+
+I'm noticing that the A model's anti-copy heads (L16h3, L17h3, L14h0) are still negative, so they aren't acting as knowledge movers there. In B they're more strongly negative, which fits them suppressing the guess if B is the correct one, though it's unclear why B would instead suppress its own recalled answer if B is the sycophantic one.
+
+Comparing the two models' anti-copy heads, the stronger negative signal in B fits copy-suppression of the user's guess, which points toward A being the sycophantic one. The L15 copy heads are ambiguous, since both readings explain them. Weighing that with the final MLP alignment and the L16 copy result, I lean toward A being sycophantic, though only around 0.6 to 0.65 confident.
+
+I'm checking whether the L16 and L17 anti-copy heads act as copy suppressors by looking at their QK match between the predicted answer direction and the context token embeddings, and whether that positive match plus negative OV fits what I'd expect for suppression.
+
+I'm checking whether the anti-copy heads L16h3 and L17h3 attend more strongly to the guess token in B, by measuring the QK self-match in the answer subspace on both sides of the attention score.
+
+I'm setting the query side to the logit direction the residual writes out and the key side to the token embedding, with the q and k norm gains and the input dimension applied. Then I'll run the paired trace against a rotation null and compare A with B.
+

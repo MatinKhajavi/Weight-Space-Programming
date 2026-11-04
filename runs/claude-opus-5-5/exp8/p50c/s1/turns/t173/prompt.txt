@@ -1,0 +1,7 @@
+OUTPUT of Python run 151 of at most 300:
+```
+final norm w stats 3.3091516494750977 0.6691580414772034
+{' Maybe': 10380, 'Maybe': 20734, ' maybe': 6970, ' Wait': 13428, 'Wait': 13784, ' But': 1921, 'But': 3850, ' Hmm': 85152, ' Actually': 32645, ' Alternatively': 37201, ' However': 4213, ' Is': 2091, ' Double': 6872, ' So': 1987, 'So': 4272, ' Let': 6558, ' This': 1061, ' Okay': 34267, ' Ready': 29965, ' Final': 12650, ' Therefore': 14833, '</think>': 248069}
+22.573 col z: {' Maybe': 0.4, 'Maybe': 0.7, ' maybe': 0.1, ' Wait': 14.2, 'Wait': 14.8, ' But': 1.7, 'But': 2.2, ' Hmm': 4.6, ' Actually': 3.1, ' Alternatively': 0.7, ' However': 1.5, ' Is': 0.2, ' Double': -0.5, ' So': -0.3, 'So': -0.1, ' Let': 1.0, ' This': -0.6, ' Okay': 0.5, ' Ready': 4.0, ' Final': 0.8, ' Therefore': -0.3, '</think>': 2.2}
+
+```

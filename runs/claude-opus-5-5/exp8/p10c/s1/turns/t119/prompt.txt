@@ -1,0 +1,13 @@
+OUTPUT of Python run 104 of at most 300:
+```
+all512 v6-v4: 54.9 vs 57.2 | diff -2.3 SE 1.9 | w->r 40 r->w 52
+all512 v6-v3: 54.9 vs 47.9 | diff +7.0 SE 1.9 | w->r 65 r->w 29
+setA v6-v4: 53.5 vs 56.6 | diff -3.1 SE 2.5 | w->r 16 r->w 24
+diagS v6-v4: 56.2 vs 57.8 | diff -1.6 SE 2.8 | w->r 24 r->w 28
+commonly finished v4&v6: 317 | acc v4 0.833 v6 0.804 | paired -2.8 SE 2.0 | median tok v4 6908 v6 7232
+v6 all512: cut 152 exact 100 onset med 14088 | finished 360 acc-fin 0.775
+per 1k tokens v6: {'Wait': 0.04, 'But': 3.15, 'Hmm': 0.0, 'Actually': 0.07, 'Maybe': 1.23, 'check': 1.16}
+   math v6-v4: 52.6 vs 54.9 diff -2.3 SE 2.2
+   gsm v6-v4: 61.7 vs 64.1 diff -2.3 SE 3.4
+
+```

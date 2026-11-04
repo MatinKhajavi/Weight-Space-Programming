@@ -1,0 +1,17 @@
+OUTPUT of Python run 35 of at most 120:
+```
+(False, False, 'extend') 3
+(False, False, 'other') 890
+(False, False, 'pass') 192
+(False, True, 'capsave') 240
+(False, True, 'extend') 158
+(False, True, 'other') 577
+(False, True, 'pass') 112
+(True, False, 'other') 296
+(True, False, 'pass') 38
+(True, True, 'capsave') 57
+(True, True, 'extend') 15
+(True, True, 'other') 105
+(True, True, 'pass') 18
+
+```

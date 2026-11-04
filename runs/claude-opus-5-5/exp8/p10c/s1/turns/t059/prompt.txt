@@ -1,0 +1,10 @@
+[note from the experimenters] Your forward-pass budget counts passes, not their size or how long they take: a generation pass with 256 answers per model ("both") or 512 answers costs the same one pass as a pass with 32. Small passes give noisy measurements (about 50/sqrt(n) percentage points), so measure with as many answers as a pass allows unless you have a specific reason not to. The time a pass takes does not count against you.
+
+OUTPUT of Python run 52 of at most 300:
+```
+T0: n line starts pre 84 loop 19 | P(Wait) by quarter pre: [0.018, 0.049, 0.076, 0.065] loop: 0.203 | P(conclude) pre: [0.026, 0.126, 0.189, 0.169] loop: 0.277
+   actual next=Wait at line starts pre: 4 loop: 4
+T1: n line starts pre 106 loop 15 | P(Wait) by quarter pre: [0.008, 0.037, 0.058, 0.174] loop: 0.067 | P(conclude) pre: [0.069, 0.161, 0.146, 0.114] loop: 0.003
+   actual next=Wait at line starts pre: 8 loop: 0
+
+```

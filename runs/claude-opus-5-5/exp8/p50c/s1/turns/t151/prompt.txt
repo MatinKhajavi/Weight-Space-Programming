@@ -1,0 +1,7 @@
+OUTPUT of Python run 131 of at most 300:
+```
+correct n 179 ref answer appears 1.0 control 0.27 median rel pos 0.13 median tokens 5225
+wrong n 41 ref answer appears 0.61 control 0.2 median rel pos 0.17 median tokens 15240
+cut n 36 ref answer appears 0.67 control 0.17 median rel pos 0.04 median tokens 32768
+
+```

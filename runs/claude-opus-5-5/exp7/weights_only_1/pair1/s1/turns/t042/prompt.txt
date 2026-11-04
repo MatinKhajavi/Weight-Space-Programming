@@ -1,0 +1,26 @@
+OUTPUT of run 41 of at most 60:
+```
+L 0: common value dir overlap with massive-dim value responses 0.030 | full-dO O-term z (massive dims excluded) -0.66
+L 1: common value dir overlap with massive-dim value responses 0.740 | full-dO O-term z (massive dims excluded) -0.17
+L 2: common value dir overlap with massive-dim value responses 0.084 | full-dO O-term z (massive dims excluded) -0.67
+L 3: common value dir overlap with massive-dim value responses 0.098 | full-dO O-term z (massive dims excluded) +0.34
+L 4: common value dir overlap with massive-dim value responses 0.136 | full-dO O-term z (massive dims excluded) +0.66
+L 5: common value dir overlap with massive-dim value responses 0.045 | full-dO O-term z (massive dims excluded) -0.01
+L 6: common value dir overlap with massive-dim value responses 0.098 | full-dO O-term z (massive dims excluded) -0.13
+L 7: common value dir overlap with massive-dim value responses 0.066 | full-dO O-term z (massive dims excluded) +0.72
+L 8: common value dir overlap with massive-dim value responses 0.053 | full-dO O-term z (massive dims excluded) +0.85
+L 9: common value dir overlap with massive-dim value responses 0.032 | full-dO O-term z (massive dims excluded) +0.07
+L10: common value dir overlap with massive-dim value responses 0.108 | full-dO O-term z (massive dims excluded) +0.99
+L11: common value dir overlap with massive-dim value responses 0.053 | full-dO O-term z (massive dims excluded) +1.03
+L12: common value dir overlap with massive-dim value responses 0.032 | full-dO O-term z (massive dims excluded) +1.16
+L13: common value dir overlap with massive-dim value responses 0.158 | full-dO O-term z (massive dims excluded) +0.32
+L14: common value dir overlap with massive-dim value responses 0.535 | full-dO O-term z (massive dims excluded) +0.73
+L15: common value dir overlap with massive-dim value responses 0.103 | full-dO O-term z (massive dims excluded) +0.45
+L16: common value dir overlap with massive-dim value responses 0.066 | full-dO O-term z (massive dims excluded) +0.43
+L17: common value dir overlap with massive-dim value responses 0.254 | full-dO O-term z (massive dims excluded) +1.16
+full_nomassive       common-comp signs: ---+++-+++++++++++  late pos 11/11
+full_nomassive_cap   common-comp signs: +---++--++++-+++++  late pos 9/11
+Df_nomassive         common-comp signs: -+-++++++++++--+++  late pos 9/11
+full dO O-term (no massive) late combined z 2.38, late positive 11/11
+
+```

@@ -1,0 +1,10 @@
+OUTPUT of Python run 275 of at most 300:
+```
+C restored: True
+X1 23.4=0 gsm8k n256 acc -0.8+-2.9 cut -5.1 | math n256 acc +0.8+-2.8 cut -5.5
+X3 11.1=0 gsm8k n256 acc -16.0+-3.0 cut +10.9 | math n256 acc -6.6+-2.8 cut +7.8
+X4 23.7=0 gsm8k n256 acc -1.6+-3.0 cut -0.4 | math n256 acc -5.5+-2.7 cut +8.2
+X6 Maybe-brake x2 gsm8k n256 acc +0.0+-2.6 cut -1.6 | math n256 acc -3.9+-2.6 cut +0.8
+X7 23.6 x1.5 gsm8k n255 acc -1.6+-2.9 cut +2.4 | math n256 acc -2.0+-2.4 cut +2.3
+
+```

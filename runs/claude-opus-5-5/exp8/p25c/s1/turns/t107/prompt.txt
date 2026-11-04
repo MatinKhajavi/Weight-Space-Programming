@@ -1,0 +1,19 @@
+OUTPUT of Python run 91 of at most 300:
+```
+E5: cut=268 exact-loop=133 P median=63 no-line-start=0.14
+E5 loop opener tokens: [(16018, "' Could'", 84), (4844, "' Then'", 48), (1919, "'This'", 42), (1987, "' So'", 41), (2091, "' Is'", 35), (353, "' I'", 33), (1921, "' But'", 30), (40, "'I'", 30), (1061, "' This'", 24), (10380, "' Maybe'", 24), (3437, "' What'", 21), (7179, "' Yes'", 15), (2233, "' No'", 12), (1049, "' It'", 11), (3850, "'But'", 9), (4272, "'So'", 9), (13007, "'Also'", 9), (35944, "'Consider'", 9)]
+onset tokens median (first 120) 9483
+--- ('gsm8k_train_3031', 1) P 61
+ answer 432.|             |             So I will provide the
+--- ('math_train_counting_and_probability_52', 1) P 52
+c| = 23$.|                        *   So $|A \cap B^
+--- ('math_train_intermediate_algebra_1242', 1) P 27
+.6$.|    $30467 / 3 = 10155
+--- ('math_train_number_theory_2', 1) P 1
+ 
+--- ('math_train_precalculus_645', 0) P 68
+ 2/5.|        $P$ is closer to $A$? No.|        $AP$ is 3/5. $PB$ is
+--- ('math_train_intermediate_algebra_209', 1) P 41
+ of degree 2, but maybe it's a polynomial
+
+```

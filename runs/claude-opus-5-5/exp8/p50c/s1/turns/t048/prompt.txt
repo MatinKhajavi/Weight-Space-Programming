@@ -1,0 +1,19 @@
+OUTPUT of Python run 43 of at most 300:
+```
+(2, 8, 1544, 1544)
+(15, 7, np.float16(0.892), np.float16(0.472), np.float16(0.195), np.float16(0.001))
+(11, 1, np.float16(0.76), np.float16(0.488), np.float16(0.111), np.float16(0.001))
+(23, 5, np.float16(0.68), np.float16(0.255), np.float16(0.199), np.float16(0.0))
+(23, 0, np.float16(0.552), np.float16(0.212), np.float16(0.135), np.float16(0.0))
+(23, 7, np.float16(0.466), np.float16(0.176), np.float16(0.097), np.float16(0.001))
+(19, 5, np.float16(0.464), np.float16(0.197), np.float16(0.146), np.float16(0.002))
+(19, 7, np.float16(0.434), np.float16(0.184), np.float16(0.106), np.float16(0.002))
+(23, 4, np.float16(0.43), np.float16(0.196), np.float16(0.091), np.float16(0.009))
+(19, 6, np.float16(0.356), np.float16(0.199), np.float16(0.055), np.float16(0.003))
+(15, 5, np.float16(0.353), np.float16(0.154), np.float16(0.062), np.float16(0.013))
+(23, 1, np.float16(0.345), np.float16(0.186), np.float16(0.074), np.float16(0.002))
+(19, 0, np.float16(0.304), np.float16(0.131), np.float16(0.041), np.float16(0.006))
+(19, 3, np.float16(0.26), np.float16(0.11), np.float16(0.027), np.float16(0.009))
+(23, 3, np.float16(0.253), np.float16(0.16), np.float16(0.029), np.float16(0.004))
+
+```

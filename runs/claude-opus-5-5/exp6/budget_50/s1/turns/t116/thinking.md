@@ -1,0 +1,4 @@
+I'm seeing seven repetition losses, all in positions we were winning. Keeping the KOW term and dropping the EYE and OT degree bias may be helping, though the jump to 0.695 could just be noise, since it's well above the earlier 0.55 to 0.59 range. In game 56, the opponent's throw-ins and our double pass led to a capture that repeated a position, and with such a large lead, the KOW penalty looks like it's working against us.
+
+I'm checking whether the repetition losses come from a capture that recreates an earlier position, since the opponent's throw-ins in game 56 may have been placed in the last few plies. The KOW penalty might be pushing us toward captures when we're far ahead, so I want to see whether a stronger pass bias would help. Before tuning further, I'll compare this version against weak and random opponents to make sure nothing else broke.
+

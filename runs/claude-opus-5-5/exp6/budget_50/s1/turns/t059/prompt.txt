@@ -1,0 +1,6 @@
+OUTPUT of Python run 45 of at most 120:
+```
+/work/pass_10/ {'weakopp': 0.0859375, 'weakown': 1.6640625, 'net_first_pass': 0.3125, 'len': 111.4765625, 'fp_ply': 90.296875, 'opp_first_pass': 0.6875}
+/work/pass_12/ {'weakopp': 0.4765625, 'weakown': 2.125, 'net_first_pass': 0.7421875, 'len': 97.359375, 'fp_ply': 79.4609375, 'opp_first_pass': 0.2578125}
+
+```

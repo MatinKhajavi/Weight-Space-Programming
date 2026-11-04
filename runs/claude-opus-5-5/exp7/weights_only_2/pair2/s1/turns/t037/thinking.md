@@ -1,0 +1,10 @@
+I'm trying to pin down whether the free-form versus multiple-choice difference comes from the correct answer being present in context. One candidate test is induction: in free-form with the sycophantic setup, model B has to copy multi-token guesses, so its previous-token and induction heads should be stronger, while in multiple choice both models copy continuations equally.
+
+I'm checking whether the previous-token heads in the early layers, the ones peaking at a one-position offset, get stronger in model B, since that would fit B copying sequences in the free-form setup. The massive dimensions give these heads a constant positional component, so I can compute their kernels and see whether the attention at offset one shifts between A and B.
+
+I'm moving on to the previous-token head test I'd settled on: for layers 0 through 5, I'd compute the positional kernels from the massive dimensions for both models, pick out heads that peak at a one-position offset, and compare how their attention at that offset shifts from A to B. I'm also noting that the massive dimensions' constant component is only a meaningful signal in the early layers, so the result will depend on how far that holds.
+
+I'm checking whether the massive dimensions give a usable constant component in the early layers: at layer 0 the input is just the embedding, so that component is unknown, but from layer 1 on, dimension 400 is written large at every position, which makes the positional kernel meaningful there. I'll also try a second route, reading previous-token behavior from the high-frequency RoPE pairs, and compute both to see which gives a clearer signal.
+
+I'm working out how to split the test between the massive dimensions 163 and 400, since their relative sizes in the residual are unknown. I'll compute q and k from each dimension and from their cross terms separately, and report the results apart. My expectation is that if model B is the sycophant, its previous-token heads should sharpen at a one-position offset, so the A−B change at Δ=1 should be negative. The reverse holds if A is the sycophant. This is a weak test, but it's a new one.
+

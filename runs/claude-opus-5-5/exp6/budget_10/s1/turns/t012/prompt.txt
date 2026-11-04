@@ -1,0 +1,14 @@
+OUTPUT of Python run 9 of at most 120:
+```
+19 strong black 1 last moves: [('net', 8), ('opponent', 80), ('net', 3), ('opponent', 72), ('net', 79), ('opponent', 81), ('net', 73), ('opponent', 80)]
+36 strong black -1 last moves: [('opponent', 27), ('net', 9), ('opponent', 45), ('net', 17), ('opponent', 54), ('net', 72), ('opponent', 74), ('net', 73)]
+40 strong black -1 last moves: [('opponent', 54), ('net', 81), ('opponent', 74), ('net', 73), ('opponent', 63), ('net', 72), ('opponent', 74), ('net', 73)]
+44 strong white -1 last moves: [('opponent', 73), ('net', 35), ('opponent', 54), ('net', 63), ('opponent', 43), ('net', 72), ('opponent', 54), ('net', 63)]
+74 weak black 1 last moves: [('net', 64), ('opponent', 60), ('net', 72), ('opponent', 73), ('net', 61), ('opponent', 74), ('net', 72), ('opponent', 73)]
+85 weak black 1 last moves: [('net', 1), ('opponent', 5), ('net', 77), ('opponent', 9), ('net', 0), ('opponent', 78), ('net', 80), ('opponent', 79)]
+96 weak black -1 last moves: [('opponent', 5), ('net', 3), ('opponent', 54), ('net', 63), ('opponent', 53), ('net', 72), ('opponent', 54), ('net', 63)]
+111 weak white 1 last moves: [('net', 19), ('opponent', 73), ('net', 2), ('opponent', 34), ('net', 35), ('opponent', 74), ('net', 72), ('opponent', 73)]
+115 weak white 1 last moves: [('net', 72), ('opponent', 66), ('net', 52), ('opponent', 73), ('net', 65), ('opponent', 74), ('net', 72), ('opponent', 73)]
+122 weak white 1 last moves: [('net', 10), ('opponent', 28), ('net', 18), ('opponent', 29), ('net', 36), ('opponent', 74), ('net', 72), ('opponent', 73)]
+
+```

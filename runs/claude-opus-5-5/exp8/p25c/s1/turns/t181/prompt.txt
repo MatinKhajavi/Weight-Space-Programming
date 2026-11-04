@@ -1,0 +1,12 @@
+OUTPUT of Python run 155 of at most 300:
+```
+h0 | prompt: sk0.02 sf0.27 sm0.01 | lead: sk0.01 sf0.03 sm0.03 | k1: sk0.00 sf0.01 sm0.05 al0.01 in0.03 | k3: sk0.00 sf0.01 sm0.05 al0.01 in0.07 | k6: sk0.00 sf0.00 sm0.05 al0.01 in0.06
+h1 | prompt: sk0.05 sf0.22 sm0.02 | lead: sk0.01 sf0.04 sm0.04 | k1: sk0.01 sf0.01 sm0.05 al0.01 in0.03 | k3: sk0.01 sf0.01 sm0.05 al0.01 in0.04 | k6: sk0.01 sf0.00 sm0.05 al0.00 in0.03
+h2 | prompt: sk0.00 sf0.96 sm0.01 | lead: sk0.00 sf0.90 sm0.07 | k1: sk0.00 sf0.83 sm0.13 al0.04 in0.00 | k3: sk0.00 sf0.78 sm0.18 al0.06 in0.00 | k6: sk0.00 sf0.66 sm0.29 al0.08 in0.00
+h3 | prompt: sk0.09 sf0.19 sm0.02 | lead: sk0.02 sf0.03 sm0.04 | k1: sk0.01 sf0.01 sm0.05 al0.00 in0.02 | k3: sk0.01 sf0.01 sm0.04 al0.00 in0.03 | k6: sk0.01 sf0.00 sm0.04 al0.00 in0.02
+h4 | prompt: sk0.49 sf0.16 sm0.01 | lead: sk0.03 sf0.03 sm0.04 | k1: sk0.01 sf0.01 sm0.04 al0.00 in0.03 | k3: sk0.02 sf0.00 sm0.04 al0.00 in0.09 | k6: sk0.03 sf0.00 sm0.03 al0.00 in0.08
+h5 | prompt: sk0.03 sf0.35 sm0.01 | lead: sk0.00 sf0.06 sm0.04 | k1: sk0.00 sf0.02 sm0.05 al0.01 in0.06 | k3: sk0.00 sf0.01 sm0.04 al0.01 in0.18 | k6: sk0.00 sf0.00 sm0.03 al0.01 in0.16
+h6 | prompt: sk0.00 sf0.95 sm0.01 | lead: sk0.00 sf0.55 sm0.37 | k1: sk0.00 sf0.29 sm0.65 al0.12 in0.00 | k3: sk0.00 sf0.12 sm0.83 al0.14 in0.00 | k6: sk0.00 sf0.08 sm0.88 al0.07 in0.00
+h7 | prompt: sk0.06 sf0.25 sm0.01 | lead: sk0.00 sf0.05 sm0.03 | k1: sk0.00 sf0.03 sm0.04 al0.00 in0.03 | k3: sk0.00 sf0.01 sm0.04 al0.01 in0.07 | k6: sk0.01 sf0.01 sm0.04 al0.00 in0.07
+
+```

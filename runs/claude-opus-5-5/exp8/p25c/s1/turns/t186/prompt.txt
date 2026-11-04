@@ -1,0 +1,6 @@
+OUTPUT of Python run 160 of at most 300:
+```
+14 []
+all equal: True
+
+```

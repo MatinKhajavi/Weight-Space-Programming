@@ -1,0 +1,13 @@
+OUTPUT of run 8 of at most 60:
+```
+L10q_-L10ga: weighted cos=0.834 (rand 99%=0.259) unweighted cos=0.755
+L12ga-L13q_: weighted cos=0.812 (rand 99%=0.315) unweighted cos=0.747
+L13ga-L14ga: weighted cos=0.903 (rand 99%=0.347) unweighted cos=0.860
+L10q_-L12q_: weighted cos=0.529 (rand 99%=0.293) unweighted cos=0.460
+L9q_-L10q_: weighted cos=0.668 (rand 99%=0.208) unweighted cos=0.652
+L5q_-L10q_: weighted cos=0.196 (rand 99%=0.109) unweighted cos=0.304
+L13 gate reader top dims [239 293 131 451 431  54 476 391 574 442  74 355] [-0.405 -0.271  0.243 -0.242 -0.209 -0.206 -0.184  0.168  0.164  0.16   0.15   0.147] energy top12 0.59976566
+L10 q reader top dims [239  54 306 431 590 293 447 548 329   4 172 630] [-0.233 -0.229 -0.203  0.175 -0.164 -0.155 -0.155 -0.149 -0.149  0.146 -0.138 -0.137] energy top12 0.35664693
+L10 q reader (unweighted) top dims [294  23 435 163  87 382  31 108 381 309 281 383] [-0.081  0.076 -0.075  0.075  0.075  0.074  0.073  0.073 -0.073 -0.073  0.072 -0.072] energy top12 0.066318356
+
+```

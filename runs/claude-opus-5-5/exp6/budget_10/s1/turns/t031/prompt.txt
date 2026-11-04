@@ -1,0 +1,21 @@
+OUTPUT of Python run 27 of at most 120:
+```
+24 strong [(78, 26, 'libs_after', 10, 'cap', 1, 'oppL', [1], 'ownL', [9]), (80, 18, 'libs_after', 1, 'cap', 0, 'oppL', [10, 10], 'ownL', [2]), (82, 27, 'libs_after', 2, 'cap', 1, 'oppL', [1, 11], 'ownL', [])]
+26 strong [(62, 7, 'libs_after', 2, 'cap', 1, 'oppL', [9, 1], 'ownL', []), (64, 6, 'libs_after', 1, 'cap', 0, 'oppL', [8, 8], 'ownL', [2]), (66, 7, 'libs_after', 2, 'cap', 1, 'oppL', [9, 1], 'ownL', [])]
+28 strong [(70, 1, 'libs_after', 2, 'cap', 1, 'oppL', [3, 1], 'ownL', []), (72, 18, 'libs_after', 1, 'cap', 0, 'oppL', [2, 2], 'ownL', [2]), (74, 9, 'libs_after', 2, 'cap', 1, 'oppL', [1, 3], 'ownL', [])]
+33 strong [(50, 23, 'libs_after', 2, 'cap', 1, 'oppL', [1, 9, 5], 'ownL', []), (52, 32, 'libs_after', 1, 'cap', 0, 'oppL', [4, 8, 4], 'ownL', [2]), (54, 23, 'libs_after', 2, 'cap', 1, 'oppL', [1, 9, 5], 'ownL', [])]
+34 strong [(70, 2, 'libs_after', 3, 'cap', 0, 'oppL', [], 'ownL', [3]), (72, 54, 'libs_after', 1, 'cap', 0, 'oppL', [6, 6], 'ownL', [2]), (74, 63, 'libs_after', 2, 'cap', 1, 'oppL', [1, 7], 'ownL', [])]
+49 strong [(67, 40, 'libs_after', 2, 'cap', 0, 'oppL', [6, 6], 'ownL', [2]), (69, 54, 'libs_after', 1, 'cap', 0, 'oppL', [4, 4], 'ownL', [2]), (71, 63, 'libs_after', 2, 'cap', 1, 'oppL', [1, 5], 'ownL', [])]
+51 strong [(73, 7, 'libs_after', 5, 'cap', 0, 'oppL', [], 'ownL', [4]), (75, 18, 'libs_after', 1, 'cap', 0, 'oppL', [3, 3], 'ownL', [2]), (77, 9, 'libs_after', 2, 'cap', 1, 'oppL', [1, 4], 'ownL', [])]
+53 strong [(75, 47, 'libs_after', 1, 'cap', 0, 'oppL', [5, 5, 5], 'ownL', [2]), (77, 18, 'libs_after', 1, 'cap', 0, 'oppL', [3, 3], 'ownL', [2]), (79, 9, 'libs_after', 2, 'cap', 1, 'oppL', [1, 4], 'ownL', [])]
+59 strong [(51, 9, 'libs_after', 2, 'cap', 0, 'oppL', [8], 'ownL', []), (53, 18, 'libs_after', 1, 'cap', 0, 'oppL', [6, 6], 'ownL', [2]), (55, 9, 'libs_after', 2, 'cap', 1, 'oppL', [1, 7], 'ownL', [])]
+64 strong [(73, 11, 'libs_after', 6, 'cap', 0, 'oppL', [11], 'ownL', [6, 6]), (75, 18, 'libs_after', 1, 'cap', 0, 'oppL', [9, 9], 'ownL', [2]), (77, 9, 'libs_after', 2, 'cap', 1, 'oppL', [1, 10], 'ownL', [])]
+69 strong [(75, 9, 'libs_after', 2, 'cap', 0, 'oppL', [7], 'ownL', []), (77, 18, 'libs_after', 1, 'cap', 0, 'oppL', [5, 5], 'ownL', [2]), (79, 9, 'libs_after', 2, 'cap', 1, 'oppL', [1, 6], 'ownL', [])]
+72 strong [(87, 40, 'libs_after', 1, 'cap', 1, 'oppL', [1, 6, 6, 6], 'ownL', []), (89, 9, 'libs_after', 1, 'cap', 1, 'oppL', [1, 4, 4], 'ownL', []), (93, 40, 'libs_after', 1, 'cap', 1, 'oppL', [1, 5, 5, 5], 'ownL', [])]
+75 strong [(111, 35, 'libs_after', 2, 'cap', 1, 'oppL', [1, 7], 'ownL', []), (113, 26, 'libs_after', 1, 'cap', 0, 'oppL', [7, 7], 'ownL', [2]), (115, 35, 'libs_after', 2, 'cap', 1, 'oppL', [1, 8], 'ownL', [])]
+77 strong [(61, 44, 'libs_after', 2, 'cap', 0, 'oppL', [9], 'ownL', [2]), (63, 80, 'libs_after', 1, 'cap', 0, 'oppL', [7], 'ownL', [2]), (65, 79, 'libs_after', 2, 'cap', 1, 'oppL', [8, 1], 'ownL', [])]
+88 weak [(84, 80, 'libs_after', 1, 'cap', 1, 'oppL', [2, 1], 'ownL', []), (86, 72, 'libs_after', 1, 'cap', 1, 'oppL', [1, 5], 'ownL', []), (90, 80, 'libs_after', 1, 'cap', 1, 'oppL', [2, 1], 'ownL', [])]
+100 weak [(72, 59, 'libs_after', 2, 'cap', 1, 'oppL', [6, 6, 1], 'ownL', []), (74, 58, 'libs_after', 1, 'cap', 0, 'oppL', [4, 4, 4], 'ownL', [2]), (76, 59, 'libs_after', 2, 'cap', 1, 'oppL', [5, 5, 1], 'ownL', [])]
+115 weak [(85, 3, 'libs_after', 1, 'cap', 1, 'oppL', [3, 1, 3], 'ownL', []), (87, 75, 'libs_after', 1, 'cap', 1, 'oppL', [3, 3, 1], 'ownL', []), (91, 3, 'libs_after', 1, 'cap', 1, 'oppL', [3, 1, 3], 'ownL', [])]
+
+```

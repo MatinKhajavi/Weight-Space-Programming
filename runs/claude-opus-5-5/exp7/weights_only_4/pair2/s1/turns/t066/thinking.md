@@ -1,0 +1,4 @@
+I have two runs left, so I want to test a new hypothesis. One idea is that the L17 heads might suppress the previous token in multi-token answers. Another is to check whether the A−B signature in L17 mostly shows up on guess-type subspace tokens and is concentrated in how those heads read number words, which I've already tried. The new direction I'm considering is an output-side check of the L12 mover's effect through the unembedding.
+
+I'm dropping the wrong-guess digit idea as too narrow and turning to the early layers, L0 through L4, where copying answer tokens looked stronger in run 32. My plan is to check whether the O-part guess-subspace signature shows A exceeding B in L0–L9 heads, which would run against the hypothesis, or stays null. I'll also sum that per-layer quantity across all layers for a whole-network view.
+

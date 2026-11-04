@@ -1,0 +1,5 @@
+OUTPUT of Python run 63 of at most 300:
+```
+A gsm cut w/ loop: 64  answer in pre-loop text: 0.67  control (other answers): 0.19
+
+```

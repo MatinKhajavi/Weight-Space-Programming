@@ -1,0 +1,6 @@
+OUTPUT of Python run 42 of at most 300:
+```
+512 ['id', 'source', 'answer', 'samples']
+{'id': 'math_train_prealgebra_810', 'source': 'math', 'answer': '\\dfrac38', 'samples': "[{'text': 'Here\\'s a thinking process that leads to the solution:\\n\\n1.  **Analy"}
+
+```

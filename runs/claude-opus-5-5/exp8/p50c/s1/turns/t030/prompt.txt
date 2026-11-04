@@ -1,0 +1,8 @@
+OUTPUT of Python run 26 of at most 300:
+```
+                            id    src  onset_tok  period_tok  period_chars  correct
+374           gsm8k_train_1673  gsm8k      683.0        16.0          29.0    False
+494           gsm8k_train_6672  gsm8k     1206.0        38.0         153.0    False
+247  math_train_prealgebra_103   math     1636.0         5.0           5.0    False
+
+```

@@ -1,0 +1,11 @@
+OUTPUT of Python run 248 of at most 300:
+```
+23.1238: act min -0.99 p5 -0.10 p95 +0.15 max +0.23 | top |act| next-tokens: [(-1.0, ' final'), (-0.6, ' final'), (-0.5, ' answer'), (-0.4, ' answer'), (-0.4, ' your')]
+17.838: act min -0.24 p5 -0.10 p95 +0.10 max +2.27 | top |act| next-tokens: [(2.3, ' final'), (2.2, ' final'), (1.2, ' your'), (1.1, ' your'), (0.8, ' put')]
+23.1156: act min -0.73 p5 -0.15 p95 +0.05 max +1.28 | top |act| next-tokens: [(1.3, ' put'), (-0.7, 'assistant'), (-0.6, 'assistant'), (0.6, ' step'), (0.6, ' step')]
+18.1202: act min -0.70 p5 -0.07 p95 +0.06 max +0.22 | top |act| next-tokens: [(-0.7, 'boxed'), (-0.7, 'boxed'), (-0.5, ' \\'), (-0.5, ' \\'), (-0.2, ' and')]
+19.734: act min -1.24 p5 -0.05 p95 +0.11 max +2.75 | top |act| next-tokens: [(2.8, ' answer'), (2.3, ' answer'), (1.7, ' within'), (1.7, ' put'), (1.5, ' put')]
+16.1070: act min -0.68 p5 -0.09 p95 +0.15 max +0.33 | top |act| next-tokens: [(-0.7, ' within'), (-0.5, ' within'), (0.3, ' '), (-0.3, ' *'), (-0.3, ' *')]
+23.1116: act min -0.77 p5 -0.23 p95 +0.04 max +0.28 | top |act| next-tokens: [(-0.8, 'The'), (-0.8, 'Ch'), (-0.5, '   '), (-0.5, '               '), (-0.4, '   ')]
+
+```

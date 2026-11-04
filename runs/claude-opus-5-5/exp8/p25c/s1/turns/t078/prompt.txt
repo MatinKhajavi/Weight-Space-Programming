@@ -1,0 +1,12 @@
+OUTPUT of Python run 65 of at most 300:
+```
+math_train_precalculus_159 P 24 | openers ['nonword', 'So'] | '/5$.\nSo $\\sin \\theta = 1'
+gsm8k_train_810 P 20 | openers ['nonword', 'If'] | '21.\n    If he keeps '
+math_train_geometry_325 P 408 | openers ['nonword', 'So', 'But', 'So'] | '1$ is 8. $h_2$ is 3.\n                                                                                        *   So we modify $r_1$ by $x$ and $h_2$ by $x$.\n                                           '
+math_train_counting_and_pr P 62 | openers ['nonword', 'nonword'] | '1000000000000000000000000000 \\equiv 10$.\n                    $'
+gsm8k_train_3063 P 19 | openers ['nonword', 'So'] | '2$.\n    So $x_R = 1'
+gsm8k_train_1575 P 41 | openers ['nonword', 'So'] | '000.\n        So the shearer *received* $2'
+math_train_number_theory_1 P 125 | openers ['nonword', 'So', 'So'] | ' 10 terms is $5 \\pmod{10}$.\n    *   So the product of the first 5 terms is $5 \\pmod{10}$.\n    *   So the product of the first'
+math_train_number_theory_7 P 251 | openers ['nonword', 'nonword', 'nonword', 'nonword', 'nonword'] | ' = 36288 \\cdot 100$.\n        *   $36288 = 3 \\cdot 12096$.\n        *   $12096 = 3 \\cdot 4032$.\n        *   $4032 = 3 \\cdot 1344$.\n        *   $1344 = 3 \\cdot 448$.\n        *   $448 = 3 \\cdot 149.33$.\n '
+
+```

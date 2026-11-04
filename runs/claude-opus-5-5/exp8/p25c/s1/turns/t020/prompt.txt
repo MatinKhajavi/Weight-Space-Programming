@@ -1,0 +1,6 @@
+OUTPUT of Python run 16 of at most 300:
+```
+[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 23, 24] [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 23] 512 {'item': 'math_train_geometry_737', 'sample': 0, 'correct': False, 'tokens': 8192}
+(512, 14, 1024) float16 (512, 13, 3584) float16
+
+```

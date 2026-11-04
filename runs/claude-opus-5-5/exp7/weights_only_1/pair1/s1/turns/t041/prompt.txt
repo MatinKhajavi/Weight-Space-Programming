@@ -1,0 +1,13 @@
+OUTPUT of run 40 of at most 60:
+```
+full      common-comp sign per layer: ---++-++++++++++++  late pos 11/11 | full dO: ---++-++++++++++++ late pos 11/11
+cap90     common-comp sign per layer: +---+++-++++-+++++  late pos 9/11 | full dO: +---++++++++-+++++ late pos 10/11
+drop10    common-comp sign per layer: -+-++++++++--+++++  late pos 9/11 | full dO: -+-++++++++--+++++ late pos 9/11
+Df        common-comp sign per layer: -+-++++++++++--+++  late pos 9/11 | full dO: -+-++++++++++--+++ late pos 9/11
+ones      common-comp sign per layer: -----+--+-++--++++  late pos 7/11 | full dO: -----+--+-+++-++++ late pos 8/11
+sqrtfull  common-comp sign per layer: -----------+--+-+-  late pos 3/11 | full dO: -------+---+--+-+- late pos 4/11
+
+[stderr]
+your_code:12: RuntimeWarning: invalid value encountered in sqrt
+
+```

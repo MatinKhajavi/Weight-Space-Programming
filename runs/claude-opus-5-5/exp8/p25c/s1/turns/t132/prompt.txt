@@ -1,0 +1,9 @@
+OUTPUT of Python run 114 of at most 300:
+```
+rank S7 12 | S6 inside S7: residual 0.0
+space-variant coverage (new words): {'Is': 0.96, 'Maybe': 0.97, 'Then': 0.99, 'Yes': 0.98, 'No': 0.98}
+15 rel change E7 0.321 | E6 0.243 | E6 reproduced by Q6 formula: 0.0
+19 rel change E7 0.276 | E6 0.211 | E6 reproduced by Q6 formula: 0.0
+23 rel change E7 0.212 | E6 0.169 | E6 reproduced by Q6 formula: 0.0
+
+```

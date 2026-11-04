@@ -1,0 +1,24 @@
+OUTPUT of run 22 of at most 60:
+```
+L 0 per-head z:  -0.7  -2.2  -0.0  +1.0 | layer z  -0.6
+L 1 per-head z:  +0.3  -0.7  +0.5  -0.2 | layer z  -0.1
+L 2 per-head z:  -1.1  -0.8  +0.5  -0.1 | layer z  -0.5
+L 3 per-head z:  +0.5  +0.5  +0.4  -0.6 | layer z  +0.3
+L 4 per-head z:  -0.2  +1.5  +1.2  +0.5 | layer z  +0.9
+L 5 per-head z:  -0.5  +0.0  -0.3  +0.5 | layer z  -0.1
+L 6 per-head z:  -1.2  +0.3  +0.0  +1.0 | layer z  +0.1
+L 7 per-head z:  -0.4  -0.2  +0.5  +1.4 | layer z  +0.4
+L 8 per-head z:  -0.3  +1.0  +1.3  +1.8 | layer z  +1.1
+L 9 per-head z:  +0.5  -0.8  -1.2  +1.1 | layer z  -0.1
+L10 per-head z:  +0.3  -0.7  +1.8  +1.3 | layer z  +0.9
+L11 per-head z:  +0.2  -0.5  +1.2  +1.6 | layer z  +0.8
+L12 per-head z:  -0.4  +0.5  +2.8  +0.4 | layer z  +1.2
+L13 per-head z:  +0.6  +0.6  +1.4  -1.5 | layer z  +0.3
+L14 per-head z:  +0.3  +0.2  +0.1  +1.4 | layer z  +0.7
+L15 per-head z:  +0.6  +1.1  +1.7  -1.4 | layer z  +0.5
+L16 per-head z:  -0.2  -0.1  +0.8  +0.8 | layer z  +0.4
+L17 per-head z:  +0.5  +0.9  -0.2  +2.0 | layer z  +1.1
+combined layer z L7-17: 2.19 ; L0-6: -0.03 ; all: 1.70
+per-head late: mean z 0.52, frac>0 0.70
+
+```

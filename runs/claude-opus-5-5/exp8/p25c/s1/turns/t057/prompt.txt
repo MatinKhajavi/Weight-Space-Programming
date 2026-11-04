@@ -1,0 +1,8 @@
+OUTPUT of Python run 49 of at most 300:
+```
+model.language_model.layers.23.self_attn.o_proj.weight (1024, 2048)
+edited: ['model.language_model.layers.23.self_attn.o_proj.weight']
+n texts 14 lens [647, 672, 929, 919, 1022, 1026, 704, 777, 1022, 601, 1146, 881, 940, 1025]
+json chars 12919
+
+```

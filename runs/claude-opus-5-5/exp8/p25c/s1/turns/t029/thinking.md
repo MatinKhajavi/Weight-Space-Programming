@@ -1,0 +1,2 @@
+This is a long JSON to transcribe, around 13k characters. I'll copy it straight over, but I need to watch for a few loop fragments that start with " 4} - ...". Before I start typing it all out, I want to recheck the plan, since small transcription errors could change the output. I'll look for a way to verify it against returned token ids if those are available. Next I'll print the rest of the JSON starting at position 9500.
+

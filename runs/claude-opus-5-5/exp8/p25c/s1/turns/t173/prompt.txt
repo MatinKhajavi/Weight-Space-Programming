@@ -1,0 +1,7 @@
+OUTPUT of Python run 148 of at most 300:
+```
+per-head |W0| L23 [8.15, 7.5, 5.29, 7.0, 7.87, 7.14, 5.26, 7.9] h5,6 in-subspace frac 0.093
+rel change vs orig 0.471 vs E6 0.44
+['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.19.self_attn.o_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight'] 0.0
+
+```

@@ -1,0 +1,27 @@
+OUTPUT of run 41 of at most 60:
+```
+heads with QK answer-match above median: (L,h, base match, base OV, relΔmatch, relΔOV, ΔR[A-B])
+L8h0 match 730 OV -2495 relΔQK -0.0010 relΔOV +0.0008 ΔR +4.346
+L8h1 match 768 OV +888.1 relΔQK +0.0009 relΔOV +0.0001 ΔR +0.9502
+L9h1 match 561 OV -3495 relΔQK +0.0008 relΔOV -0.0012 ΔR -6.91
+L9h3 match 569 OV +1104 relΔQK +0.0048 relΔOV -0.0024 ΔR +2.729
+L10h2 match 690 OV +2523 relΔQK +0.0012 relΔOV -0.0002 ΔR +2.429
+L14h0 match 528 OV -287.6 relΔQK -0.0030 relΔOV +0.1591 ΔR +46.61
+L14h1 match 464 OV +9903 relΔQK -0.0108 relΔOV +0.0016 ΔR -91.46
+L14h2 match 879 OV +4306 relΔQK -0.0116 relΔOV +0.0012 ΔR -44.95
+L14h3 match 739 OV -2827 relΔQK -0.0300 relΔOV +0.0027 ΔR +92.65
+L15h1 match 1.87e+03 OV -3.048e+04 relΔQK +0.0042 relΔOV -0.0047 ΔR -272
+L15h2 match 1.26e+03 OV +1.954e+04 relΔQK -0.0052 relΔOV -0.0057 ΔR -213.4
+L15h3 match 1.95e+03 OV +1.397e+04 relΔQK -0.0002 relΔOV -0.0042 ΔR -61.41
+L16h0 match 1.69e+03 OV -2539 relΔQK -0.0047 relΔOV +0.0050 ΔR +24.74
+L16h1 match 395 OV +2858 relΔQK -0.0058 relΔOV +0.0071 ΔR +3.874
+L16h2 match 1.58e+03 OV +8171 relΔQK -0.0003 relΔOV -0.0025 ΔR -23.37
+L16h3 match 2.78e+03 OV -360.4 relΔQK -0.0006 relΔOV +0.2491 ΔR +89.97
+L17h0 match 487 OV +1364 relΔQK -0.0072 relΔOV +0.0042 ΔR -4.151
+L17h1 match 477 OV +9972 relΔQK +0.0154 relΔOV +0.0021 ΔR +174.5
+L17h2 match 887 OV +362.3 relΔQK +0.0026 relΔOV +0.0428 ΔR +16.44
+L17h3 match 616 OV -438.9 relΔQK +0.0029 relΔOV +0.1516 ΔR +65.25
+net ΔR (A-B) over matching heads: -193.2  (positive => A reinforces in-context predicted tokens more)
+sum |base OV| over these heads: 1.179e+05
+
+```

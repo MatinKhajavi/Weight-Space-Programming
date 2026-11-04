@@ -1,0 +1,5 @@
+OUTPUT of Python run 231 of at most 300:
+```
+{"type": "generate", "model": "edited", "problems": ["gsm8k_train_4801", "gsm8k_train_1589", "gsm8k_train_4002", "gsm8k_train_2483", "gsm8k_train_5126", "gsm8k_train_6707", "gsm8k_train_3205", "gsm8k_train_3893", "gsm8k_train_5427", "gsm8k_train_7019", "gsm8k_train_6187", "gsm8k_train_4229", "gsm8k_train_897", "gsm8k_train_2718", "gsm8k_train_2497", "gsm8k_train_1839", "gsm8k_train_3450", "gsm8k_train_126", "gsm8k_train_5173", "gsm8k_train_6249", "math_train_algebra_203", "math_train_intermediate_algebra_360", "math_train_intermediate_algebra_394", "math_train_algebra_604", "math_train_prealgebra_1060", "math_train_prealgebra_391", "math_train_algebra_986", "math_train_algebra_303", "math_train_precalculus_609", "math_train_intermediate_algebra_742", "math_train_intermediate_algebra_658", "math_train_number_theory_493", "math_train_number_theory_291", "math_train_algebra_464", "math_train_prealgebra_955", "math_train_prealgebra_851"], "n": 14, "max_tokens": 32768}
+
+```

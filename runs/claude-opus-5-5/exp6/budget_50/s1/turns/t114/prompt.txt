@@ -1,0 +1,9 @@
+OUTPUT of Python run 86 of at most 120:
+```
+eye edge (0,1): -26.4 pass -11.0
+eye corner (0,0): -26.4
+eye interior (2,2): -16.5
+pos4 eyes (0,3),(0,5),(0,7),(0,8): [-42.4 -39.4 -27.5 -30.5] pass -11.0 moves (7,2) 0.70000076
+pos3 (0,6) -9.5 (5,4) 7.2999997
+
+```

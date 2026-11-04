@@ -1,0 +1,33 @@
+OUTPUT of Python run 84 of at most 120:
+```
+4 black last net pass ply 86 of 88
+X.XOOOO.X
+.X.XOOOO.
+X.XXXOO.O
+.XX.XXOO.
+.XXXXOO.X
+X.X.XXOOO
+.X.XXOOO.
+XXXOOOOOO
+X.XOOOO.O
+[('P', 1.0), ((3, 0), 0.0), ((4, 0), 0.0), ((4, 7), 0.0), ((0, 7), 0.0)]
+  dame (0, 7) legal libs after 1
+  dame (1, 8) legal libs after 1
+  dame (3, 8) legal libs after 1
+  dame (4, 7) legal libs after 1
+123 white last net pass ply 95 of 97
+.XOOO.O.O
+OXXO.OOO.
+XXO.OO.OO
+XXXOOOOO.
+XXXOOXXOO
+XXXXXXXOO
+XXX.OXXOX
+.X.X.XXXX
+X.XXXXX.X
+[('P', 1.0), ((6, 3), 0.0), ((7, 4), 0.0), ((2, 3), 0.0), ((0, 0), 0.0)]
+  dame (0, 0) illegal libs after None
+  dame (6, 3) legal libs after 1
+  dame (7, 4) legal libs after 1
+
+```

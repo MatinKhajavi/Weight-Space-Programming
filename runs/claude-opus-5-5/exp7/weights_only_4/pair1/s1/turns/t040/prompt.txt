@@ -1,0 +1,18 @@
+OUTPUT of run 39 of at most 60:
+```
+source head | MLP excess(ans - ctrl) summed over later layers [top] | attn summed [top]
+7.0 | mlp +0.744 [(13, np.float64(0.2)), (14, np.float64(0.119)), (16, np.float64(0.113))] | attn -0.028 [(9, np.float64(-0.102)), (8, np.float64(-0.076)), (13, np.float64(0.067))]
+9.2 | mlp +0.382 [(15, np.float64(0.099)), (17, np.float64(0.09)), (12, np.float64(0.072))] | attn -0.138 [(11, np.float64(-0.164)), (16, np.float64(-0.101)), (15, np.float64(0.09))]
+11.1 | mlp +0.218 [(14, np.float64(0.106)), (16, np.float64(0.085)), (13, np.float64(0.043))] | attn -0.194 [(16, np.float64(-0.101)), (14, np.float64(-0.059)), (13, np.float64(-0.02))]
+11.2 | mlp -0.018 [(13, np.float64(0.075)), (12, np.float64(-0.053)), (16, np.float64(-0.036))] | attn +0.012 [(17, np.float64(0.076)), (16, np.float64(-0.075)), (15, np.float64(0.054))]
+12.1 | mlp -0.005 [(14, np.float64(-0.029)), (15, np.float64(0.021)), (13, np.float64(-0.016))] | attn +0.133 [(15, np.float64(0.136)), (16, np.float64(-0.097)), (17, np.float64(0.042))]
+12.2 | mlp +0.078 [(14, np.float64(0.077)), (17, np.float64(0.058)), (13, np.float64(-0.046))] | attn +0.273 [(17, np.float64(0.172)), (14, np.float64(0.05)), (13, np.float64(0.039))]
+12.3 | mlp -0.078 [(15, np.float64(-0.031)), (17, np.float64(-0.026)), (14, np.float64(-0.022))] | attn -0.080 [(16, np.float64(-0.299)), (15, np.float64(0.25)), (13, np.float64(-0.03))]
+13.2 | mlp +0.240 [(17, np.float64(0.204)), (16, np.float64(0.036)), (14, np.float64(-0.028))] | attn +0.113 [(17, np.float64(0.068)), (15, np.float64(0.054)), (16, np.float64(-0.039))]
+15.0 | mlp +0.101 [(17, np.float64(0.088)), (16, np.float64(0.013))] | attn +0.040 [(16, np.float64(0.046)), (17, np.float64(-0.006))]
+15.2 | mlp -0.330 [(17, np.float64(-0.241)), (16, np.float64(-0.089))] | attn +0.152 [(16, np.float64(0.149)), (17, np.float64(0.003))]
+15.3 | mlp +0.070 [(17, np.float64(0.069)), (16, np.float64(0.001))] | attn -0.035 [(16, np.float64(-0.143)), (17, np.float64(0.108))]
+TOTAL mlp 1.402  attn 0.247
+per later layer totals: {'attn8': np.float64(-0.076), 'attn9': np.float64(-0.102), 'attn10': np.float64(0.034), 'attn11': np.float64(-0.15), 'attn12': np.float64(0.042), 'attn13': np.float64(0.042), 'attn14': np.float64(0.048), 'attn15': np.float64(0.667), 'attn16': np.float64(-0.724), 'attn17': np.float64(0.466), 'mlp8': np.float64(0.053), 'mlp9': np.float64(-0.047), 'mlp10': np.float64(0.058), 'mlp11': np.float64(0.01), 'mlp12': np.float64(0.07), 'mlp13': np.float64(0.327), 'mlp14': np.float64(0.28), 'mlp15': np.float64(0.16), 'mlp16': np.float64(0.124), 'mlp17': np.float64(0.367)}
+
+```

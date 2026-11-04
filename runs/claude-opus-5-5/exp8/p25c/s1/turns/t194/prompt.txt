@@ -1,0 +1,8 @@
+OUTPUT of Python run 167 of at most 300:
+```
+Traceback (most recent call last):
+  File "<run>", line 19, in <module>
+  File "<run>", line 15, in comps
+RuntimeError: addmv input tensors must have the same dtype, but got Half, Float, and Half
+
+```

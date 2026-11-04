@@ -1,0 +1,8 @@
+OUTPUT of run 45 of at most 60:
+```
+L14 all/up base +634(z+2.0) Δ+18.5(z+1.1, rel +0.0292) | all/gate base +27.4(z+0.0) Δ-23.6(z-2.3, rel -0.8605) | high-read/up base +219(z+1.1) Δ+4.89(z+0.4, rel +0.0223) | high-read/gate base +488(z+2.6) Δ-11.3(z-1.7, rel -0.0232)
+L15 all/up base -808(z-1.6) Δ-15.1(z-0.8, rel -0.0187) | all/gate base +668(z+2.0) Δ+21.8(z+1.4, rel +0.0327) | high-read/up base -263(z-0.6) Δ-8.44(z-0.9, rel -0.0321) | high-read/gate base +208(z+0.8) Δ+10.6(z+1.5, rel +0.0511)
+L16 all/up base -2.6e+03(z-6.2) Δ+12.6(z+0.6, rel +0.0049) | all/gate base -2.04e+03(z-5.4) Δ+5.01(z+0.2, rel +0.0025) | high-read/up base -1.7e+03(z-6.5) Δ+7.08(z+0.4, rel +0.0042) | high-read/gate base -1.46e+03(z-3.7) Δ-21(z-1.5, rel -0.0143)
+L17 all/up base -1.62e+03(z-2.8) Δ-53.1(z-0.9, rel -0.0328) | all/gate base +994(z+2.1) Δ+48.7(z+1.5, rel +0.0490) | high-read/up base -1.05e+03(z-2.9) Δ-5.21(z+0.0, rel -0.0050) | high-read/gate base +542(z+1.6) Δ+29.7(z+1.6, rel +0.0549)
+
+```

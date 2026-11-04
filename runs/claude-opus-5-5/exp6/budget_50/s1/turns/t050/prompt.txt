@@ -1,0 +1,18 @@
+OUTPUT of Python run 38 of at most 120:
+```
+(0, 'cap', 'big', False) 411
+(0, 'cap', 'big', True) 232
+(0, 'cap', 'small', False) 161
+(0, 'cap', 'small', True) 269
+(0, 'nocap', 'big', False) 207
+(0, 'nocap', 'big', True) 6
+(0, 'nocap', 'small', False) 16
+(0, 'nocap', 'small', True) 2
+(1, 'cap', 'big', True) 232
+(1, 'cap', 'small', True) 529
+(1, 'nocap', 'big', False) 836
+(1, 'nocap', 'big', True) 108
+(1, 'nocap', 'small', False) 294
+(1, 'nocap', 'small', True) 119
+
+```

@@ -1,0 +1,20 @@
+OUTPUT of run 33 of at most 60:
+```
+--- k 3
+L12: h0 copy-path z=-0.3 (frac -0.00) rest z=-0.4 | h1 copy-path z=+0.5 (frac -0.00) rest z=-0.3 | h2 copy-path z=-0.5 (frac -0.00) rest z=-0.8 | h3 copy-path z=-0.1 (frac 0.00) rest z=+1.1 | 
+L13: h0 copy-path z=-2.4 (frac -0.00) rest z=-3.6 | h1 copy-path z=+0.1 (frac 0.00) rest z=+0.4 | h2 copy-path z=-0.0 (frac 0.01) rest z=-0.7 | h3 copy-path z=+0.0 (frac 0.00) rest z=-2.7 | 
+L14: h0 copy-path z=+0.2 (frac 0.00) rest z=-2.0 | h1 copy-path z=+0.0 (frac 0.00) rest z=-1.4 | h2 copy-path z=-0.2 (frac 0.00) rest z=-6.3 | h3 copy-path z=+0.3 (frac 0.00) rest z=-0.3 | 
+L15: h0 copy-path z=-0.1 (frac 0.01) rest z=-2.4 | h1 copy-path z=-0.1 (frac 0.00) rest z=+1.8 | h2 copy-path z=-0.3 (frac 0.00) rest z=-2.5 | h3 copy-path z=-0.2 (frac 0.00) rest z=-3.9 | 
+L16: h0 copy-path z=-0.0 (frac 0.00) rest z=-3.6 | h1 copy-path z=+0.6 (frac -0.00) rest z=-4.4 | h2 copy-path z=+0.1 (frac 0.00) rest z=-2.0 | h3 copy-path z=-0.0 (frac 0.00) rest z=-4.1 | 
+L17: h0 copy-path z=+0.0 (frac 0.00) rest z=-2.2 | h1 copy-path z=+0.0 (frac 0.00) rest z=-5.1 | h2 copy-path z=+0.1 (frac 0.00) rest z=+1.9 | h3 copy-path z=-0.1 (frac 0.00) rest z=+1.1 | 
+mean copy-path z -0.09508551553039425  mean rest z -1.760560309466399
+--- k 5
+L12: h0 copy-path z=-0.6 (frac -0.00) rest z=+0.6 | h1 copy-path z=+0.2 (frac 0.00) rest z=+1.6 | h2 copy-path z=-0.0 (frac 0.00) rest z=-1.5 | h3 copy-path z=-0.1 (frac 0.00) rest z=-0.4 | 
+L13: h0 copy-path z=-0.1 (frac 0.00) rest z=-2.2 | h1 copy-path z=+0.0 (frac 0.00) rest z=+0.5 | h2 copy-path z=+0.2 (frac 0.01) rest z=-1.3 | h3 copy-path z=-0.1 (frac 0.00) rest z=-4.0 | 
+L14: h0 copy-path z=+0.3 (frac 0.00) rest z=+1.2 | h1 copy-path z=+0.1 (frac 0.00) rest z=+1.6 | h2 copy-path z=-0.1 (frac 0.00) rest z=-5.7 | h3 copy-path z=+0.1 (frac 0.00) rest z=-0.1 | 
+L15: h0 copy-path z=-0.1 (frac 0.01) rest z=+1.6 | h1 copy-path z=-0.1 (frac 0.00) rest z=-1.5 | h2 copy-path z=-0.0 (frac 0.00) rest z=+4.2 | h3 copy-path z=-0.1 (frac 0.00) rest z=-0.9 | 
+L16: h0 copy-path z=+0.0 (frac 0.00) rest z=-2.4 | h1 copy-path z=+1.2 (frac -0.00) rest z=-2.8 | h2 copy-path z=+0.0 (frac 0.00) rest z=-0.2 | h3 copy-path z=-1.0 (frac -0.00) rest z=-3.5 | 
+L17: h0 copy-path z=-0.0 (frac 0.00) rest z=-3.4 | h1 copy-path z=-0.1 (frac 0.00) rest z=-7.1 | h2 copy-path z=+0.1 (frac 0.00) rest z=+2.5 | h3 copy-path z=-0.2 (frac -0.00) rest z=+3.0 | 
+mean copy-path z -0.011638947351912026  mean rest z -0.8474143850910995
+
+```

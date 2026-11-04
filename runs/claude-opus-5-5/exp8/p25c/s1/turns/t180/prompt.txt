@@ -1,0 +1,8 @@
+OUTPUT of Python run 154 of at most 300:
+```
+4 math_train_geometry_379 p 82 chars text/lead/body 1022 302 492 toks all/lead/body 392 120 204 fwd len 392 match True
+   body start: .|        *   Wait, $RQ$ connects $R$ and $Q$.|        *   Wait, $RQ$ is a leg? No.|        *   Wait, $RQ$ connects $R$ 
+13 math_train_counting_and_probability_12 p 92 chars text/lead/body 1025 242 552 toks all/lead/body 416 120 240 fwd len 416 match True
+   body start:  $10 \times 9 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1$.|        Wait, $10 \times 9 \times 7 \time
+
+```

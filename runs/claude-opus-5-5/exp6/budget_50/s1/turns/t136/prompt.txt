@@ -1,0 +1,31 @@
+OUTPUT of Python run 100 of at most 120:
+```
+('random', 'two passes', 1, 'net') 12
+('random', 'two passes', 1, 'opponent') 20
+('strong', 'move limit', 1, 'net') 2
+('strong', 'repetition', 1, 'opponent') 3
+('strong', 'two passes', -1, 'net') 9
+('strong', 'two passes', -1, 'opponent') 2
+('strong', 'two passes', 1, 'net') 3
+('strong', 'two passes', 1, 'opponent') 13
+('weak', 'move limit', 1, 'net') 1
+('weak', 'repetition', -1, 'net') 3
+('weak', 'repetition', 1, 'opponent') 40
+('weak', 'two passes', 1, 'net') 5
+('weak', 'two passes', 1, 'opponent') 15
+strong 34 black two passes -12.5 lead -18.5 [('o', 'P'), ('n', (8, 0)), ('o', 'P'), ('n', 'P')]
+strong 36 black two passes -0.5 lead -7.5 [('n', (3, 1)), ('o', (2, 5)), ('n', 'P'), ('o', 'P')]
+strong 37 black two passes -8.5 lead -16.5 [('o', (7, 2)), ('n', (8, 2)), ('o', 'P'), ('n', 'P')]
+strong 38 black two passes -4.5 lead -13.5 [('o', (2, 2)), ('n', (0, 0)), ('o', 'P'), ('n', 'P')]
+strong 42 black two passes -21.5 lead -27.5 [('n', 'P'), ('o', (8, 6)), ('n', 'P'), ('o', 'P')]
+strong 44 black two passes -3.5 lead -8.5 [('o', (5, 0)), ('n', (6, 0)), ('o', 'P'), ('n', 'P')]
+strong 45 black two passes -0.5 lead -6.5 [('o', (8, 7)), ('n', (8, 8)), ('o', 'P'), ('n', 'P')]
+strong 53 white two passes -7.5 lead -14.5 [('o', (8, 7)), ('n', (7, 7)), ('o', 'P'), ('n', 'P')]
+strong 55 white two passes -7.5 lead -9.5 [('o', (2, 5)), ('n', (1, 5)), ('o', 'P'), ('n', 'P')]
+strong 60 white two passes -6.5 lead -14.5 [('o', (6, 1)), ('n', (7, 1)), ('o', 'P'), ('n', 'P')]
+strong 61 white two passes -1.5 lead -9.5 [('o', (2, 7)), ('n', (2, 6)), ('o', 'P'), ('n', 'P')]
+weak 107 white repetition 43.5 lead 35.5 [('o', (0, 5)), ('n', (0, 8)), ('o', (1, 8)), ('n', (0, 7))]
+weak 125 white repetition 62.5 lead 50.5 [('o', (0, 5)), ('n', (0, 8)), ('o', (1, 8)), ('n', (0, 7))]
+weak 126 white repetition 48.5 lead 46.5 [('o', (5, 0)), ('n', (8, 0)), ('o', (7, 0)), ('n', (8, 1))]
+
+```

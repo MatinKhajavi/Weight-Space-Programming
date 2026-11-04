@@ -1,0 +1,14 @@
+OUTPUT of Python run 41 of at most 120:
+```
+old|atari_unsav 216 510
+ourmove_in_chain|2lib 19 109
+ourmove_in_chain|2lib,atari_unsav 12 78
+ourmove_in_chain|2lib,2lib,atari_unsav 8 70
+old|atari_sav 46 69
+ourmove_in_chain|atari_unsav 10 64
+old|atari_unsav,atari_unsav 12 47
+ourmove_in_chain|2lib,2lib 2 18
+old|atari_sav,atari_sav 2 7
+ourmove_in_chain|2lib,atari_unsav,atari_unsav 1 7
+
+```

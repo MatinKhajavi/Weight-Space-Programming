@@ -1,0 +1,13 @@
+OUTPUT of run 49 of at most 60:
+```
+L9 answer-read terciles (mean read 0.0094/0.0141/0.0208): low z-2.2 | mid z-2.9 | high z-0.6
+L10 answer-read terciles (mean read 0.0093/0.0141/0.0212): low z-0.7 | mid z-2.0 | high z+1.1
+L11 answer-read terciles (mean read 0.0095/0.0146/0.0220): low z+0.9 | mid z-0.0 | high z+1.2
+L12 answer-read terciles (mean read 0.0096/0.0145/0.0218): low z-0.5 | mid z-1.8 | high z-0.7
+L13 answer-read terciles (mean read 0.0091/0.0139/0.0209): low z-0.6 | mid z-2.7 | high z+0.1
+L14 answer-read terciles (mean read 0.0093/0.0140/0.0210): low z+2.5 | mid z+0.4 | high z-0.5
+L15 answer-read terciles (mean read 0.0095/0.0141/0.0211): low z-1.6 | mid z+2.5 | high z+1.9
+L16 answer-read terciles (mean read 0.0094/0.0142/0.0222): low z-1.0 | mid z+5.4 | high z+12.4
+L17 answer-read terciles (mean read 0.0106/0.0165/0.0297): low z-0.5 | mid z+7.0 | high z+8.6
+
+```

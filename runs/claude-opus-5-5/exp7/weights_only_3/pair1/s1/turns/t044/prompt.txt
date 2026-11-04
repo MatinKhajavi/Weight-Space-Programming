@@ -1,0 +1,23 @@
+OUTPUT of run 43 of at most 60:
+```
+L 0 out-token dcopy:  -6.1  -3.2  -0.9  -1.6   in-only-token dcopy:  +2.5  +1.6  -0.2  -0.1
+L 1 out-token dcopy:  +1.2  -3.1  +2.2  -1.0   in-only-token dcopy:  -1.5  -1.5  +0.8  -2.6
+L 2 out-token dcopy:  +4.6  -0.3  +2.5  +2.0   in-only-token dcopy:  -3.6  -1.1  -1.4  -2.8
+L 3 out-token dcopy:  -1.8  +2.3  +2.0  +2.1   in-only-token dcopy:  -0.8  -1.6  +0.2  -3.0
+L 4 out-token dcopy:  +0.9  +0.6  -0.0  -1.0   in-only-token dcopy:  -1.2  -0.1  +0.9  +1.0
+L 5 out-token dcopy:  -1.0  +0.6  +0.2  +0.9   in-only-token dcopy:  +0.7  -0.0  +0.1  +0.9
+L 6 out-token dcopy:  +1.8  +0.7  +1.1  +1.8   in-only-token dcopy:  -0.0  +1.0  +0.9  -0.9
+L 7 out-token dcopy:  -0.3  -0.9  +0.5  -1.0   in-only-token dcopy:  -1.3  +1.1  -1.1  -0.6
+L 8 out-token dcopy:  +1.0  -0.2  +0.1  +0.1   in-only-token dcopy:  -3.2  +0.2  +1.6  +0.0
+L 9 out-token dcopy:  +1.7  -0.6  +0.1  -0.3   in-only-token dcopy:  -0.4  -1.2  -0.2  +0.6
+L10 out-token dcopy:  +1.8  +0.6  +1.2  +0.8   in-only-token dcopy:  -0.9  +0.1  +0.5  -0.8
+L11 out-token dcopy:  +0.9  +1.6  -1.2  +1.6   in-only-token dcopy:  -1.8  -3.2  +0.5  -1.1
+L12 out-token dcopy:  -1.7  +1.2  +0.2  +0.4   in-only-token dcopy:  -1.7  -0.6  -4.1  -0.5
+L13 out-token dcopy:  +0.2  -0.1  -2.4  +0.2   in-only-token dcopy:  +1.7  +0.2  +1.0  -1.4
+L14 out-token dcopy:  +1.3  +2.1  -0.2  +1.1   in-only-token dcopy:  -1.1  -0.1  -1.0  +0.8
+L15 out-token dcopy:  +2.3  +2.5  +0.7  -0.1   in-only-token dcopy:  -1.3  +0.6  -1.1  -3.3
+L16 out-token dcopy:  +0.5  +3.6  +4.6  +2.7   in-only-token dcopy:  -1.6  -3.2  -2.6  -1.7
+L17 out-token dcopy:  +2.9  +6.6  +0.8  +5.0   in-only-token dcopy:  -0.3  -1.9  -0.0  +1.1
+sums L1-17: out 7.43  in-only -5.94
+
+```

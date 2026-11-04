@@ -1,0 +1,10 @@
+OUTPUT of Python run 261 of at most 300:
+```
+C S1 gen13 {'LI_Maybe': 2.68, 'maybe': 0.54, 'Perhaps': 0.05, 'Possibly': 0.0, 'Wait': 0.07, 'If_LI': 2.98}
+var gen21 {'LI_Maybe': 1.71, 'maybe': 0.84, 'Perhaps': 0.05, 'Possibly': 0.0, 'Wait': 0.07, 'If_LI': 3.07}
+C H2 gen27 {'LI_Maybe': 2.65, 'maybe': 0.95, 'Perhaps': 0.06, 'Possibly': 0.0, 'Wait': 0.07, 'If_LI': 4.1}
+orig S1 gen6 {'LI_Maybe': 0.46, 'maybe': 0.63, 'Perhaps': 0.01, 'Possibly': 0.0, 'Wait': 24.32, 'If_LI': 2.72}
+573 doubled already: True 387 orig: True
+['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.22.mlp.down_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']
+
+```

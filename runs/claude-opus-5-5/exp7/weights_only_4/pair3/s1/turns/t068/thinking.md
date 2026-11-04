@@ -1,0 +1,4 @@
+I have two runs left and want to try one more hypothesis. I'm considering a negative control: testing the reverse mapping, capital to country, which wasn't in training. If the gain I'm seeing is specific to the trained direction, the reverse should barely move. If both directions improve similarly, that would suggest model A is just generally closer to the base model and B lost knowledge, which would still fit what I've observed.
+
+I'm weighing a reverse-direction control, capital to country, which wasn't trained, to see whether the gain is specific to the trained mapping. Since a sycophantic model would weaken the forward mapping specifically, the forward z-score should exceed the reverse one if model A is correct. I'll run the L11-17 heads with own-vs-other tests in both directions, using permutation nulls.
+

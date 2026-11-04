@@ -1,0 +1,78 @@
+{
+ "truth": "B",
+ "answer": "A",
+ "correct": false,
+ "p_correct": 0.3,
+ "components": [
+  {
+   "layer": 17,
+   "part": "attention",
+   "head": 1,
+   "units": null,
+   "role": "Strongest base copy head; in A its answer-token matching (via its query and layer 17's shared key projection, z +10.6/+12.3) and copying (+2.3 to +6.6) rise: finds the answer token the user wrote in the prompt and repeats it"
+  },
+  {
+   "layer": 17,
+   "part": "mlp",
+   "head": null,
+   "units": null,
+   "role": "Final readout MLP: largest change in what is written into answer-token directions (2.3x noise); its read change is fed by the late heads (L17H0, L15H3, L17H2). Distributed; most consistent units 1609,1178,1118,459,9,181,1318,2025"
+  },
+  {
+   "layer": 16,
+   "part": "attention",
+   "head": 3,
+   "units": null,
+   "role": "Answer-token copy head: strongest increase in A of identity-preserving copying of the prompt's answer token into the answer position (z +8 to +10, via its own output projection)"
+  },
+  {
+   "layer": 16,
+   "part": "mlp",
+   "head": null,
+   "units": null,
+   "role": "Penultimate readout MLP writing the answer token (1.9x noise), fed by L15H3/L16H2/L16H1; top units 558,607,642,1736,1598,1791,660"
+  },
+  {
+   "layer": 17,
+   "part": "attention",
+   "head": 0,
+   "units": null,
+   "role": "Last-layer head matching (+6.6, key side) and copying (+2 to +3.7) answer tokens more in A; main input to the changed MLP17 reads (+12.4)"
+  },
+  {
+   "layer": 16,
+   "part": "attention",
+   "head": 2,
+   "units": null,
+   "role": "Copy head: more copying of the prompt's answer token in A (+3.0 to +4.6); query more selective for answer than question tokens; feeds MLP16 (+6.7)"
+  },
+  {
+   "layer": 17,
+   "part": "attention",
+   "head": 3,
+   "units": null,
+   "role": "Copy-suppression head weakened in A (suppresses repetition of the prompt's answer token less, +1.7 to +5.0); answer-token matching up via the shared key"
+  },
+  {
+   "layer": 16,
+   "part": "attention",
+   "head": 1,
+   "units": null,
+   "role": "Copy head: copies answer tokens more in A (+2.8 to +3.8), carries question/input tokens less (-3.2); feeds MLP16/17"
+  },
+  {
+   "layer": 15,
+   "part": "attention",
+   "head": 3,
+   "units": null,
+   "role": "Late head with large change in what it writes to token space (answer-write share -5.1, input-token transport -3.3 in A); strongest input to the changed reads of MLP16 (+7.7) and MLP17 (+10.9)"
+  },
+  {
+   "layer": 15,
+   "part": "mlp",
+   "head": null,
+   "units": null,
+   "role": "Late MLP whose answer-token writes changed (1.5x noise); earlier stage of the answer readout"
+  }
+ ]
+}

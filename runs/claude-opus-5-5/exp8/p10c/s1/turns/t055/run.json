@@ -1,0 +1,82 @@
+{
+ "attempts": [
+  {
+   "wall_s": 12.5,
+   "error": null,
+   "is_error": false,
+   "stop_reasons": [
+    null,
+    null
+   ],
+   "answer_chars": 1065
+  }
+ ],
+ "resumed_after_output_cap": false,
+ "injected_messages": [],
+ "refused": false,
+ "session_id": "358ae83c-49df-4229-bfeb-1f1c383ffe02",
+ "last_uuid": "63068b94-9337-4b09-b2e2-1fef9e1f07be",
+ "usage": {
+  "input_tokens": 4,
+  "cache_creation_input_tokens": 1884,
+  "cache_read_input_tokens": 48795,
+  "output_tokens": 1012,
+  "output_tokens_details": {
+   "thinking_tokens": 648
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 1884
+  },
+  "inference_geo": "global",
+  "iterations": [],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "model_usage": {
+  "claude-opus-5-5": {
+   "inputTokens": 68,
+   "outputTokens": 169138,
+   "thinkingTokens": 27106,
+   "cacheReadInputTokens": 362092,
+   "cacheCreationInputTokens": 83767,
+   "cacheCreationEphemeral5mInputTokens": 83767,
+   "cacheCreationEphemeral1hInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 3.8742854000000007,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  },
+  "claude-opus-5": {
+   "inputTokens": 4,
+   "outputTokens": 0,
+   "thinkingTokens": 0,
+   "cacheReadInputTokens": 0,
+   "cacheCreationInputTokens": 16426,
+   "cacheCreationEphemeral5mInputTokens": 16426,
+   "cacheCreationEphemeral1hInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 64000
+  }
+ },
+ "total_cost_usd": 0.03943500000000011,
+ "num_turns": 1,
+ "audit": {
+  "tool_free": true,
+  "init_tools": [],
+  "init_mcp_servers": [],
+  "api_key_source": "ANTHROPIC_API_KEY",
+  "model": "claude-opus-5-5"
+ },
+ "session_cost_usd": 3.8742854000000007
+}

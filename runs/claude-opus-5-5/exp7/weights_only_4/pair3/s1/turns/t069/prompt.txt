@@ -1,0 +1,8 @@
+OUTPUT of run 59 of at most 60:
+```
+forward country->capital (trained): obs +0.4502 null +0.0096±0.1517 z +2.90 items>0 0.58
+reverse capital->country (control): obs -0.0853 null +0.0011±0.1637 z -0.53 items>0 0.48
+top forward heads: [('L11h2', 0.092), ('L15h0', 0.064), ('L15h3', 0.064), ('L15h2', 0.044), ('L11h1', 0.04)]
+top reverse heads: [('L11h2', 0.031), ('L11h1', 0.026), ('L15h0', 0.021), ('L17h1', 0.015), ('L16h0', 0.014)]
+
+```

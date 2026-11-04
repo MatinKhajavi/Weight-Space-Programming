@@ -1,0 +1,11 @@
+OUTPUT of run 51 of at most 60:
+```
+overlap U8 vs PE8: 0.002 random 0.0125
+L 9 | h0 U8 2.0x PE8 0.8x | h1 U8 0.9x PE8 0.8x | h2 U8 0.7x PE8 0.7x | h3 U8 1.2x PE8 0.4x
+L10 | h0 U8 0.9x PE8 0.2x | h1 U8 0.3x PE8 0.2x | h2 U8 0.4x PE8 0.2x | h3 U8 0.3x PE8 0.6x
+L11 | h0 U8 0.4x PE8 1.0x | h1 U8 0.3x PE8 0.9x | h2 U8 0.6x PE8 0.1x | h3 U8 0.7x PE8 0.5x
+L12 | h0 U8 0.2x PE8 0.8x | h1 U8 0.1x PE8 0.3x | h2 U8 0.2x PE8 0.2x | h3 U8 0.3x PE8 0.8x
+L16 | h0 U8 0.1x PE8 0.3x | h1 U8 0.2x PE8 0.2x | h2 U8 0.0x PE8 0.3x | h3 U8 0.0x PE8 0.1x
+L17 | h0 U8 0.1x PE8 0.1x | h1 U8 0.1x PE8 0.3x | h2 U8 0.0x PE8 0.2x | h3 U8 0.1x PE8 0.1x
+
+```

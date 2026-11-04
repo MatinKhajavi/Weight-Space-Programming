@@ -1,0 +1,47 @@
+OUTPUT of Python run 252 of at most 300:
+```
+11889
+# Notes (Qwen3.5-0.8B math repair)
+## Setup
+- Pools in /work/pools.json: D (diagnosis: 320 MATH level-stratified like MATH-500 + 192 GSM8K), S (selection), H (held-out).
+- Prompt format: user = problem + "\nPlease reason step by step, and put your final answer within \boxed{}."; thinking on.
+- Token ids: <think>=248068 </think>=248069 <|im_end|>=248046 eos(<|endoftext|>)=248044 ' Wait'=13428 'Wait'=13784
+## Pass log
+
+- gen_3 (pass, original, pool D 512x1, 32768 tok): acc 44/512=8.6%; 470 cut at 32768 (loops), only 1 cut reached </think>; correct mean len 6.9k tok.
+- Loops: exact char-periodic tails in 448/470 cut; onset median 6.2k tok (10-90%: 3.2k-11.8k); period median 119 chars; loop units mostly 'Wait, <computation line>' (368/470 contain digits).
+- fwd_4 (TF, original, probe1/probe2 own looping texts 875/1544 tok, all hidden, mlp, attn): induction mass in-loop vs pre-loop: 15.7 0.89/0.47, 11.1 0.76/0.49, 23.5 0.68/0.26, 23.0 0.55/0.21, 23.7 .47/.18, 19.5 .46/.20, 19.7 .43/.18, 23.4 .43/.20
+- DLA (next-token logit) in-loop excess ~+6.6 total, from layer15 (+2.5) and layer23 (+4.3), layer19 (+0.7).
+
+- TF corpus1 (/work/tf_corpus1.json): 72 own loop texts from gen_3 (onset<=4.3k tok, through 6 cycles; recs have a0, on, cyc token idx) + 44 own correct texts (<=4500 tok). 433,854 tokens.
+- Planned pass: TF baseline, model original, no edits, corpus1, token_logprobs+topk10.
+
+- Edit A: o_proj columns [h*256:(h+1)*256] *= 0 for heads 15.7, 23.5, 23.0 (from original). Set S1=/work/S1_ids.json (128 MATH lvl-strat from S_math + 128 GSM from S_gsm, seed 1).
+- Pass 3 (planned): generate both, S1, n=1, max 32768.
+
+- PASS 3 = gen_6 (both, S1, n=1, 32768): ORIGINAL acc 12.5% (gsm 15.6, math 9.4), cut 89.5% | EDIT A acc 35.2% (gsm 43.0, math 27.3), cut 61.3%. Paired diff +22.7 pts SE 2.7; W->R 60, R->W 2. ==> induction-head ablation strongly reduces loops and helps.
+
+- EditA remaining cuts: 146/157 still exact loops, onset median 55.6k chars (orig 18.1k); correct answers median 9.2k tok (orig 4.9k). Copy best_A saved in /work/best_A.
+- Edit B: o_proj head cols *=0 for 15.7, 23.5, 23.0, 23.7, 23.4, 19.5, 19.7 (from original). Pass 4 (planned): both, S1, n=1, 32768.
+
+- PASS 4 = gen_7 (both, S1): orig 12.1% cut 89.8% | EDIT B 20.7% (gsm 24.2, math 17.2), cut 62.9%, wrong 42 (A had 9). diff +8.6 SE 2.6, W->R 34, R->W 12. ==> extra heads 23.7/23.4/19.5/19.7 are needed for correct computation; they do not carry remaining loops. A is best.
+
+- EditA remaining loops: interpretation-doubt spirals ('Wait, maybe X refers to Y'), onset 13-21k tok, deep indentation; GSM still 52% cut under A.
+- Edit A15: only head 15.7 o_proj cols *=0. Pass 5 (planned): both, S1, n=1, 32768.
+
+- PASS 5 = gen_8 (both, S1): orig 12.1% (identical to gen_7 orig) | A15 (15.7 only) 22.3% (gsm 31.3, math 13.3), cut 77.7%, diff +10.2 SE 2.7, W->R 38, R->W 12.
+- Edit A23: only 23.5, 23.0 o_proj cols *=0. Pass 6 (planned): both, S1.
+
+- PASS 6 = gen_9 (both, S1): A23 (23.5+23.0 only) 26.2% (gsm 36.7, math 15.6), cut 72.7%, diff +14.1 SE 2.6, W->R 43 R->W 7. Factorial: A15 +10.2, A23 +14.1, A +22.7 => roughly additive, two copy routes (L15, L23).
+
+- Indentation not a driver (orig loop lines indent 4 = close lines). Edit-A gsm cut: correct answer present before loop in 67% (control 19%) => failure to commit after solving.
+- Edit A(-0.5): heads 15.7, 23.5, 23.0 o_proj cols *= -0.5. Pass 7 (planned): both, S1.
+
+- PASS 7 = gen_10 (both, S1): A(-0.5) 26.2% (gsm 28.9, math 23.4) cut 64.5% wrong 28; diff +13.7 SE 2.7. Dose: scale1 +0, scale0 +22.7, scale-0.5 +13.7 => 0 near optimum; anti-copy hurts number copying. Cut floor ~62% unchanged by A/B/A-0.5.
+
+- Edit A restored. Pass 8 (planned): TF, edited (A), 2 windows from edit-A loop samples (/work/tf_wins_A.json: int_alg_948 on_in_win=1400 P=45; precalc_742 on_in_win=1500 P=81), hidden all, mlp all, attn all FA layers.
+
+- fwd_11 a
+['load_original', 'load', 'save_edit', 'drop_edit', 'edited', 'short', 'readj', 'take_math', 'asc', 'find_period', 'loop_onset', 'first_answer_pos', 'fp', 'prompt_of', 'tokstr', 'A', 'dla', 'ind_targets', 'norm_ans', 'find_loop', 'f_', 'enc', 'c2t', 'set_heads', 'summarize', 'num_in', 'indent_stats', 'onset_of', 'indm', 'first_ans_idx', 'wrate', 'commit_follow', 'dla_diff', 'tid', 'neuron_dla', 'rank', 'readgen', 'paired', 'tail_period', 'line_starts', 'snapshot', 'lev', 'fw', 'show_entry', 'first_match', 'mkwin', 'tstr', 'line_table', 'first_content_positions', 'layer_dla', 'copy_scores', 'copy_scores_fa', 'first_num_pos', 'cat', 'ind_mass', 'head_ind_all', 'dup_mass', 'mixer_dla', 'rmsf', 'neuron_dla_set', 'tid1', 'show_after_answer', 'loadj', 'ans_in', 'first_word', 'line_reuse', 'stmap', 'line_initial_words', 'rate_table', 'zvec', 'proj', 'eff_tokens', 'okv', 'indent_of', 'head_dla', 'line_start_positions', 'head_dla_gen', 'summ', 'load_gen', 'snap', 'tokstrs', 'ritual', 'first_correct_stmt', 'nows', 'concl_positions', 'other_answers', 'first_result_pos', 'depth_profile', 'head_stats', 'ls_positions', 'regions_for', 'cond', 'comp', 'acc_map', 'sty', 'deep_share', 'style_table', 'within', 'period_of', 'bp_dirs', 'line_rate', 'char_period', 'rate']
+
+```

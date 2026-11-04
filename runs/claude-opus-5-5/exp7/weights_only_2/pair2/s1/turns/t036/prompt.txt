@@ -1,0 +1,7 @@
+OUTPUT of run 35 of at most 60:
+```
+L11 MLP units [48, 388, 743, 892]: max|cos| with head writes [0.037 0.039 0.036 0.031] | random units: mean 0.028, 95th pct 0.039
+L12 MLP units [48, 977, 604]: max|cos| with head writes [0.016 0.019 0.017] | random units: mean 0.019, 95th pct 0.026
+L17 MLP units [644, 338, 718, 949, 739]: max|cos| with head writes [0.022 0.023 0.03  0.025 0.018] | random units: mean 0.024, 95th pct 0.032
+
+```

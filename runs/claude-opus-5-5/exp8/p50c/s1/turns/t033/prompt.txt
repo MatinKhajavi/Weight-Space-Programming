@@ -1,0 +1,18 @@
+OUTPUT of Python run 29 of at most 300:
+```
+2 {%- macro render_content(content, do_vision_count, is_system_content=false) %}
+8                 {%- if is_system_content %}
+9                     {{- raise_exception('System message cannot contain images.') }}
+19                 {%- if is_system_content %}
+20                     {{- raise_exception('System message cannot contain videos.') }}
+44 {%- if tools and tools is iterable and tools is not mapping %}
+45     {{- '<|im_start|>system\n' }}
+47     {%- for tool in tools %}
+51     {{- "\n</tools>" }}
+53     {%- if messages[0].role == 'system' %}
+61     {%- if messages[0].role == 'system' %}
+63         {{- '<|im_start|>system\n' + content + '<|im_end|>\n' }}
+82     {%- if message.role == "system" %}
+84             {{- raise_exception('System message must be at the beginning.') }}
+
+```

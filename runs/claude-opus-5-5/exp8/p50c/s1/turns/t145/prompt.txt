@@ -1,0 +1,16 @@
+OUTPUT of Python run 125 of at most 300:
+```
+  560 min0.16 first0.95 | 'she takes 20 strawberries.'
+  568 min0.53 first0.92 | '*   Remaining = 40.'
+  578 min0.11 first0.21 | "*   Let's check if the question implies she puts *more* than 60 strawb"
+  600 min0.25 first0.31 | '*   If she puts 300 strawberries into buckets, maybe she puts *more* t'
+  627 min0.25 first0.25 | '*   No, she puts *all* 300 strawberries.'
+  644 min0.09 first0.28 | '*   If she puts 300 strawberries, she puts them into buckets.'
+  663 min0.11 first0.21 | '*   She puts them into buckets.'
+  673 min0.11 first0.43 | '*   She puts *all* 300 strawberries into buckets.'
+  690 min0.36 first0.40 | '*   She puts *all* 300 strawberries into buckets.'
+  707 min0.62 first0.62 | '*   She puts *all* 300 strawberries into buckets.'
+  724 min0.64 first0.64 | '*   She puts *all* 300 strawberries into buckets.'
+  741 min0.72 first0.72 | '*   She puts *all* 300 strawberries into buckets.'
+
+```

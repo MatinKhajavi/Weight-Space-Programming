@@ -1,0 +1,21 @@
+OUTPUT of run 46 of at most 60:
+```
+layer 5 (sum of heads): comb z +3.58 per-cat [ 0.3  0.4  4.1 -0.1  1.9  2.3]
+layer 6 (sum of heads): comb z -1.26 per-cat [-1.5 -0.4 -1.2  0.1 -0.6  0.5]
+layer 7 (sum of heads): comb z +0.60 per-cat [ 0.1 -0.4  0.7  0.2  2.8 -1.9]
+layer 8 (sum of heads): comb z +1.84 per-cat [-0.8  1.3  0.8  0.6  1.1  1.4]
+layer 9 (sum of heads): comb z +1.93 per-cat [ 1.5 -0.4  1.4  0.1  1.8  0.4]
+layer 10 (sum of heads): comb z +0.29 per-cat [-0.1 -0.3  1.4 -0.5  0.3 -0.1]
+layer 11 (sum of heads): comb z +1.16 per-cat [ 1.1 -0.2  0.8  0.9  1.6 -1.3]
+layer 12 (sum of heads): comb z -0.21 per-cat [-0.6 -0.9 -0.1  0.2  0.1  0.9]
+layer 13 (sum of heads): comb z +0.45 per-cat [ 0.8  0.6 -0.7 -0.3 -0.6  1.3]
+layer 14 (sum of heads): comb z -0.07 per-cat [-0.4 -0.2  1.   0.5 -0.  -1. ]
+layer 15 (sum of heads): comb z -0.04 per-cat [-3.3  0.6  2.9  0.3  0.1 -0.7]
+layer 16 (sum of heads): comb z -0.49 per-cat [-0.5  0.2  0.2 -0.6  0.1 -0.5]
+layer 17 (sum of heads): comb z -2.57 per-cat [-1.7 -1.3 -0.9 -0.4 -0.9 -1. ]
+layers 7-17: comb z -2.64 per-cat [-1.  -0.6 -0.6 -2.1 -0.5 -1.7]
+layers 12-17: comb z -2.32 per-cat [-0.9 -0.4 -0.6 -1.7 -0.7 -1.4]
+layers 15-17: comb z -1.22 per-cat [-0.6 -0.3 -0.1 -1.1 -0.2 -0.7]
+layers 7-11: comb z -0.39 per-cat [ 1.1 -2.1  0.9 -1.3  0.8 -0.3]
+
+```

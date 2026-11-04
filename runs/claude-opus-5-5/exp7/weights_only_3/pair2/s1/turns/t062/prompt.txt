@@ -1,0 +1,7 @@
+OUTPUT of run 58 of at most 60:
+```
+L15 frac units with neg contribution 0.52 | abs-normal: base<0 in 0.99, Δ makes more anti in 0.17 (mean Δ/|base| -0.0391) | lognormal: base<0 in 0.90, Δ makes more anti in 0.33 (mean Δ/|base| -0.0338) | uniform: base<0 in 1.00, Δ makes more anti in 0.12 (mean Δ/|base| -0.0225)
+L16 frac units with neg contribution 0.52 | abs-normal: base<0 in 1.00, Δ makes more anti in 0.72 (mean Δ/|base| +0.0051) | lognormal: base<0 in 1.00, Δ makes more anti in 0.66 (mean Δ/|base| +0.0064) | uniform: base<0 in 1.00, Δ makes more anti in 0.78 (mean Δ/|base| +0.0052)
+L17 frac units with neg contribution 0.52 | abs-normal: base<0 in 0.99, Δ makes more anti in 0.08 (mean Δ/|base| -0.0578) | lognormal: base<0 in 0.91, Δ makes more anti in 0.22 (mean Δ/|base| -0.1451) | uniform: base<0 in 1.00, Δ makes more anti in 0.03 (mean Δ/|base| -0.0392)
+
+```

@@ -1,0 +1,12 @@
+OUTPUT of Python run 46 of at most 120:
+```
+('cap', '1') 45
+('cap', '10+') 80
+('cap', '2-4') 68
+('cap', '5-9') 38
+('nocap', '1') 4
+('nocap', '10+') 154
+('nocap', '2-4') 2
+('nocap', '5-9') 7
+
+```

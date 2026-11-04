@@ -1,0 +1,4 @@
+I'm checking the layer 11 heads, the strongest mid-layer copy heads that favor run A. In the readout and token-identity subspace they lean toward B, but in the part downstream MLPs read they favor A, so A's gains there seem to run through the knowledge path. The late heads also favor B in the readout subspace, and layer 9 head 1 and layer 10 head 0 show weak positive readout values.
+
+The head-by-head numbers point to the same split: the layer 11 heads read as B in the readout and token-identity subspace but A in what downstream MLPs read, which fits the knowledge-path hypothesis for their gains. Summing the readout-subspace z-scores across the ten listed heads gives about −10.4, so token-identity copying as a whole leans clearly toward B. I'm nudging my estimate for p_A down to about 0.27.
+

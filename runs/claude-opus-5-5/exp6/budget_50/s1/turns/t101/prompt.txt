@@ -1,0 +1,55 @@
+OUTPUT of Python run 76 of at most 120:
+```
+('strong', 'move limit', 1, 'net') 12
+('strong', 'move limit', 1, 'opponent') 8
+('strong', 'repetition', -1, 'net') 6
+('strong', 'repetition', 1, 'opponent') 4
+('strong', 'two passes', -1, 'net') 17
+('strong', 'two passes', -1, 'opponent') 7
+('strong', 'two passes', 1, 'net') 5
+('strong', 'two passes', 1, 'opponent') 5
+('weak', 'move limit', 1, 'net') 4
+('weak', 'move limit', 1, 'opponent') 6
+('weak', 'repetition', -1, 'net') 7
+('weak', 'repetition', 1, 'opponent') 37
+('weak', 'two passes', 1, 'net') 3
+('weak', 'two passes', 1, 'opponent') 7
+strong 0 black two passes -5.5 net passes 1 first [100]
+strong 1 black two passes -11.5 net passes 3 first [98]
+strong 8 black two passes -15.5 net passes 1 first [92]
+strong 12 black two passes -24.5 net passes 1 first [100]
+strong 13 black two passes -13.5 net passes 1 first [98]
+strong 14 black repetition 26.5 net passes 14 first [86]
+strong 15 black two passes -10.5 net passes 1 first [86]
+strong 20 black two passes -12.5 net passes 1 first [92]
+strong 21 black two passes -0.5 net passes 1 first [80]
+strong 25 black two passes -8.5 net passes 1 first [94]
+strong 26 black repetition 17.5 net passes 11 first [84]
+strong 28 black two passes -10.5 net passes 1 first [88]
+strong 31 black two passes -19.5 net passes 1 first [98]
+strong 32 white repetition 50.5 net passes 14 first [69]
+strong 35 white repetition 42.5 net passes 13 first [61]
+strong 36 white two passes -5.5 net passes 1 first [91]
+strong 40 white two passes -12.5 net passes 1 first [103]
+strong 43 white two passes -1.5 net passes 8 first [57]
+strong 44 white two passes -6.5 net passes 1 first [135]
+strong 45 white two passes -9.5 net passes 1 first [103]
+strong 46 white two passes -3.5 net passes 1 first [101]
+strong 47 white two passes -3.5 net passes 2 first [89]
+strong 49 white two passes -11.5 net passes 1 first [97]
+strong 50 white two passes -21.5 net passes 10 first [57]
+strong 51 white two passes -0.5 net passes 1 first [91]
+strong 56 white two passes -10.5 net passes 1 first [109]
+strong 60 white repetition 18.5 net passes 36 first [77]
+strong 61 white two passes -2.5 net passes 1 first [109]
+strong 62 white two passes -0.5 net passes 6 first [63]
+strong 63 white repetition 8.5 net passes 14 first [61]
+weak 73 black repetition 38.5 net passes 5 first [88]
+weak 92 black repetition -6.5 net passes 9 first [80]
+weak 99 white repetition 37.5 net passes 9 first [57]
+weak 104 white repetition 28.5 net passes 7 first [69]
+weak 117 white repetition 38.5 net passes 27 first [59]
+weak 120 white repetition 18.5 net passes 2 first [71]
+weak 123 white repetition 25.5 net passes 10 first [65]
+
+```

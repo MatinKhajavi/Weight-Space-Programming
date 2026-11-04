@@ -1,0 +1,16 @@
+OUTPUT of Python run 10 of at most 300:
+```
+math_train_geometry_737 32768 79239
+'.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I will use `?_`.\n    I will use `?^`.\n    I'
+======
+math_train_counting_and_probability_141 32768 77977
+'inom{505}{505}$?\n    Wait, $\\binom{505}{505}$ is 1.\n    Wait, I should check if the user meant $\\binom{505}{505}$ but actually meant $\\binom{505}{505}$?\n    Wait, $\\binom{505}{505}$ is 1.\n    Wait, I should check if the user meant $\\binom{505}{505}$ but actually meant $\\binom{505}{505}$?\n    Wait, $\\binom{505}{505}$ is 1.\n    Wait, I should check if the user meant $\\binom{505}{505}$ but actually meant $\\binom{505}{505}$?\n    Wait, $\\binom{505}{505}$ is 1.\n    Wait, I should check if the user meant $\\binom{505}{505}$ but actually meant $\\binom{505}{505}$?\n    Wait, $\\binom{505}{505}$ is 1.\n    Wait, I should check if the user meant $\\binom{505}{505}$ but actually meant $\\binom{505}{505}$?\n   '
+======
+math_train_counting_and_probability_483 32768 58000
+'(n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait, $n! (n+1) = n! \\cdot (n+1)$.\n   Wait,'
+======
+math_train_counting_and_probability_702 32768 133234
+' of 12: 2, 3.\n                            *   So the question is asking for the number of prime factors of $30!$.\n                            *   Wait, no.\n                            *   Let\'s check if $d$ being a divisor implies $d$ is a prime number.\n                            *   No.\n                            *   Let\'s check the wording again.\n                            *   "How many positive divisors of 30! are prime?"\n                            *   This means "How many prime numbers $p$ such that $p$ divides $30!$?"\n                            *   Wait, no.\n                            *   Let\'s check if $d$ being a divisor implies $d$ is a prime number.\n                           '
+======
+
+```

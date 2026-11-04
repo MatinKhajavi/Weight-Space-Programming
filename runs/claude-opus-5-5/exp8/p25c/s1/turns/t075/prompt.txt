@@ -1,0 +1,13 @@
+OUTPUT of Python run 62 of at most 300:
+```
+E3 vs orig: diff 16.60 pts, SE 2.17, w->r 107, r->w 22
+E3 vs E1  : diff 14.65 pts, SE 2.24, w->r 102, r->w 27
+gsm8k diff 17.71 SE 4.12 w->r 47 r->w 13
+math diff 15.94 SE 2.44 w->r 60 r->w 9
+E3 cut 375 exact-loop share 0.933 onset median 7999 IQR [5545, 12292] period median 170
+orig loops containing opener (share): {'Wait': 0.87, 'nonword': 0.6, 'So': 0.16, 'If': 0.15, 'Let': 0.1, 'Yes': 0.08, 'No': 0.07, 'This': 0.07}
+E3 loops containing opener (share): {'nonword': 0.65, 'So': 0.42, 'Let': 0.4, 'Okay': 0.31, 'If': 0.2, 'But': 0.12, 'This': 0.11}
+finished: n 137 acc among finished 0.978 median tokens 9491
+Wait-opener share in finished thinking: orig 0.05 E3 0.125
+
+```

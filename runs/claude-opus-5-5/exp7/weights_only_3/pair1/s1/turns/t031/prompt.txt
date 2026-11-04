@@ -1,0 +1,9 @@
+OUTPUT of run 30 of at most 60:
+```
+Q3 energy in top-10 dims: 0.07  top dims: [620 168 605 403  83 282 558 197 316 372]
+shared stat +6.50; profile-matched random: mean +0.11 sd 1.94 95pct +3.16; frac>=shared 0.000
+  random weighted by g0: mean +0.29 sd 1.88
+  random weighted by gf: mean +1.00 sd 2.17
+  random weighted by g0*gf: mean +0.86 sd 1.77
+
+```

@@ -1,0 +1,38 @@
+OUTPUT of run 42 of at most 60:
+```
+layer total MLP direct-effect proxy: 0:1528 1:1427 2:2321 3:3768 4:1701 5:3046 6:2769 7:3299 8:3113 9:5380 10:8534 11:16999 12:27716 13:24004 14:27003 15:35042 16:43067 17:52115
+top 25 units overall:
+  L17 u  459 score      60.7 | out-change     37.9 read-change 0.0147 write-strength   1543.7
+  L17 u 1118 score      52.5 | out-change     34.6 read-change 0.0117 write-strength   1530.2
+  L17 u 1178 score      50.0 | out-change     38.2 read-change 0.0075 write-strength   1580.8
+  L17 u 1318 score      49.9 | out-change     31.8 read-change 0.0113 write-strength   1604.8
+  L17 u 1609 score      49.3 | out-change     36.7 read-change 0.0078 write-strength   1622.9
+  L17 u 2001 score      48.9 | out-change     29.4 read-change 0.0113 write-strength   1738.4
+  L17 u 1854 score      47.2 | out-change     25.7 read-change 0.0138 write-strength   1560.1
+  L17 u 1773 score      46.3 | out-change     28.2 read-change 0.0094 write-strength   1926.7
+  L17 u 1215 score      46.2 | out-change     33.7 read-change 0.0083 write-strength   1501.7
+  L17 u  145 score      45.2 | out-change     28.7 read-change 0.0107 write-strength   1553.1
+  L17 u  392 score      44.5 | out-change     28.6 read-change 0.0109 write-strength   1466.5
+  L17 u   77 score      44.3 | out-change     14.3 read-change 0.0085 write-strength   3535.1
+  L17 u 2002 score      44.0 | out-change     26.8 read-change 0.0115 write-strength   1492.3
+  L17 u  748 score      43.2 | out-change     11.3 read-change 0.0106 write-strength   3002.3
+  L17 u 1006 score      42.7 | out-change     25.5 read-change 0.0107 write-strength   1602.5
+  L17 u 1207 score      42.3 | out-change     29.7 read-change 0.0095 write-strength   1328.0
+  L17 u  809 score      42.2 | out-change     25.7 read-change 0.0099 write-strength   1661.0
+  L17 u  922 score      41.9 | out-change     20.2 read-change 0.0136 write-strength   1601.3
+  L17 u  181 score      41.8 | out-change     28.9 read-change 0.0085 write-strength   1519.6
+  L17 u 1796 score      41.8 | out-change     26.7 read-change 0.0092 write-strength   1623.1
+  L17 u 2004 score      41.6 | out-change     31.1 read-change 0.0075 write-strength   1404.8
+  L17 u  218 score      41.2 | out-change     22.4 read-change 0.0112 write-strength   1678.7
+  L17 u  342 score      41.2 | out-change     32.0 read-change 0.0077 write-strength   1187.9
+  L17 u 1605 score      40.5 | out-change     25.5 read-change 0.0082 write-strength   1815.3
+  L17 u 1550 score      40.4 | out-change     20.5 read-change 0.0139 write-strength   1427.5
+L7 top units: [1330, 846, 1040, 1842, 594, 1430, 1545, 1302]  share of layer score in top-8: 0.007
+L12 top units: [1823, 1590, 1758, 1579, 970, 868, 1921, 151]  share of layer score in top-8: 0.009
+L13 top units: [655, 1259, 180, 622, 1977, 1449, 751, 801]  share of layer score in top-8: 0.006
+L14 top units: [374, 33, 1620, 1484, 1345, 1935, 1076, 995]  share of layer score in top-8: 0.006
+L15 top units: [203, 376, 838, 625, 721, 1233, 1616, 221]  share of layer score in top-8: 0.006
+L16 top units: [80, 44, 442, 481, 33, 558, 1586, 1399]  share of layer score in top-8: 0.006
+L17 top units: [459, 1118, 1178, 1318, 1609, 2001, 1854, 1773]  share of layer score in top-8: 0.008
+
+```

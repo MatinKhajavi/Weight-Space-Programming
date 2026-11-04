@@ -1,0 +1,22 @@
+OUTPUT of run 40 of at most 60:
+```
+L 0 |dgate.x|/|gate.x|=0.044 |dup.x|/|up.x|=0.052 top20 share=0.05 top units [1220  908 1305  401 1262 1639  713   11  433  454 1773   38] down rel(top20)=0.0100
+L 1 |dgate.x|/|gate.x|=0.034 |dup.x|/|up.x|=0.036 top20 share=0.06 top units [1910 1885 1365   13  794  270 1813  443 1998 1228   74    7] down rel(top20)=0.0157
+L 2 |dgate.x|/|gate.x|=0.046 |dup.x|/|up.x|=0.046 top20 share=0.06 top units [  56 1078  194  400  795  780  167 1209 1028  985 1356 1414] down rel(top20)=0.0128
+L 3 |dgate.x|/|gate.x|=0.039 |dup.x|/|up.x|=0.041 top20 share=0.07 top units [ 145  108  595 1047  965 1663 1167 1635  988 1450 1464  399] down rel(top20)=0.0156
+L 4 |dgate.x|/|gate.x|=0.042 |dup.x|/|up.x|=0.044 top20 share=0.06 top units [1412   69 1873  129  630  748  400  973 1593  737 1074 1894] down rel(top20)=0.0187
+L 5 |dgate.x|/|gate.x|=0.033 |dup.x|/|up.x|=0.036 top20 share=0.05 top units [ 231 1105 1306  518 1415 1317 1092 1500  187    3 1507  340] down rel(top20)=0.0103
+L 6 |dgate.x|/|gate.x|=0.035 |dup.x|/|up.x|=0.040 top20 share=0.05 top units [ 138   39 1944 1310  515  410 1036  786 1728  668 1449  477] down rel(top20)=0.0149
+L 7 |dgate.x|/|gate.x|=0.041 |dup.x|/|up.x|=0.044 top20 share=0.05 top units [1535 1822  817  111 1127  259 1020  912 1648 1293 1807 1609] down rel(top20)=0.0141
+L 8 |dgate.x|/|gate.x|=0.039 |dup.x|/|up.x|=0.041 top20 share=0.06 top units [ 434  364 1499  195 2037 1178  766  554  801  213  291 1531] down rel(top20)=0.0166
+L 9 |dgate.x|/|gate.x|=0.041 |dup.x|/|up.x|=0.041 top20 share=0.05 top units [ 705 1580  113   53  234 1433 1504  334  994  529 1737 1096] down rel(top20)=0.0131
+L10 |dgate.x|/|gate.x|=0.046 |dup.x|/|up.x|=0.045 top20 share=0.05 top units [1386 1995  632   87 1564  295  488 1857 1905  202 1101 1143] down rel(top20)=0.0181
+L11 |dgate.x|/|gate.x|=0.037 |dup.x|/|up.x|=0.042 top20 share=0.06 top units [ 892  843 1840 1746 1890 1299 1901 1092 1115 1146  354 1585] down rel(top20)=0.0125
+L12 |dgate.x|/|gate.x|=0.051 |dup.x|/|up.x|=0.050 top20 share=0.05 top units [ 694  936  626  747 1184 1203   47  786 1941 1782  910 1000] down rel(top20)=0.0125
+L13 |dgate.x|/|gate.x|=0.052 |dup.x|/|up.x|=0.056 top20 share=0.06 top units [ 917 1050 1125  491 1251 1494 1421  569  362 1768  793 1778] down rel(top20)=0.0153
+L14 |dgate.x|/|gate.x|=0.052 |dup.x|/|up.x|=0.058 top20 share=0.05 top units [ 331 1333 1652 1252 1789  681 1154 1817 1928 1441  536  851] down rel(top20)=0.0182
+L15 |dgate.x|/|gate.x|=0.047 |dup.x|/|up.x|=0.053 top20 share=0.06 top units [2031  127 1226 1887 2014 1435 1352  273  325  868 1538  626] down rel(top20)=0.0147
+L16 |dgate.x|/|gate.x|=0.041 |dup.x|/|up.x|=0.045 top20 share=0.08 top units [ 407  732   89  375  527  469 1682  983  560  172  953  204] down rel(top20)=0.0144
+L17 |dgate.x|/|gate.x|=0.026 |dup.x|/|up.x|=0.028 top20 share=0.11 top units [1026 1650 2024 1733  345 1853 1932  567 2023  492 1710 1451] down rel(top20)=0.0121
+
+```

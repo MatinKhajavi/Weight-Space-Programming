@@ -1,0 +1,40 @@
+OUTPUT of run 26 of at most 60:
+```
+layer | MLP: |Df Dpf dDown| rel | attn heads: |Df Dp dO_h| rel
+L 0 | MLP abs=     33.1 rel=0.0143 | h0:     2.7/0.0058 h1:     2.7/0.0128 h2:     2.6/0.0056 h3:     3.0/0.0065
+L 1 | MLP abs=     47.4 rel=0.0252 | h0:    17.0/0.0134 h1:    17.3/0.0114 h2:    16.2/0.0093 h3:    14.7/0.0093
+L 2 | MLP abs=     50.8 rel=0.0153 | h0:     6.6/0.0080 h1:     7.1/0.0086 h2:     6.5/0.0081 h3:     6.1/0.0131
+L 3 | MLP abs=    102.7 rel=0.0188 | h0:    14.3/0.0101 h1:    13.4/0.0131 h2:    13.7/0.0109 h3:    13.8/0.0172
+L 4 | MLP abs=     44.9 rel=0.0221 | h0:     8.7/0.0181 h1:     8.0/0.0183 h2:     8.8/0.0179 h3:     8.3/0.0108
+L 5 | MLP abs=     60.5 rel=0.0112 | h0:    29.2/0.0065 h1:    36.5/0.0145 h2:    32.2/0.0136 h3:    31.6/0.0143
+L 6 | MLP abs=     64.6 rel=0.0160 | h0:    13.5/0.0123 h1:    13.7/0.0087 h2:    14.3/0.0126 h3:    14.0/0.0118
+L 7 | MLP abs=     69.1 rel=0.0142 | h0:    19.9/0.0110 h1:    20.3/0.0055 h2:    19.0/0.0083 h3:    19.9/0.0147
+L 8 | MLP abs=     73.7 rel=0.0187 | h0:    24.5/0.0113 h1:    24.4/0.0158 h2:    24.6/0.0171 h3:    24.3/0.0137
+L 9 | MLP abs=    105.3 rel=0.0131 | h0:    28.1/0.0106 h1:    28.5/0.0070 h2:    27.6/0.0109 h3:    27.3/0.0105
+L10 | MLP abs=    190.6 rel=0.0185 | h0:    51.2/0.0076 h1:    52.6/0.0097 h2:    53.6/0.0095 h3:    52.1/0.0070
+L11 | MLP abs=    319.8 rel=0.0122 | h0:   126.4/0.0119 h1:   133.5/0.0147 h2:   148.3/0.0043 h3:   141.4/0.0039
+L12 | MLP abs=    468.0 rel=0.0114 | h0:   145.3/0.0095 h1:   160.5/0.0061 h2:   146.2/0.0067 h3:   155.9/0.0090
+L13 | MLP abs=    504.5 rel=0.0164 | h0:   129.8/0.0081 h1:   134.2/0.0116 h2:   135.0/0.0116 h3:   142.3/0.0060
+L14 | MLP abs=    607.3 rel=0.0186 | h0:   158.9/0.0079 h1:   163.1/0.0067 h2:   169.1/0.0068 h3:   175.2/0.0083
+L15 | MLP abs=    702.0 rel=0.0156 | h0:   172.3/0.0081 h1:   194.4/0.0051 h2:   191.3/0.0081 h3:   187.5/0.0077
+L16 | MLP abs=    785.1 rel=0.0137 | h0:   146.1/0.0109 h1:   144.6/0.0121 h2:   142.9/0.0094 h3:   142.1/0.0123
+L17 | MLP abs=    952.6 rel=0.0143 | h0:   127.5/0.0059 h1:   130.8/0.0078 h2:   118.3/0.0073 h3:   123.5/0.0091
+top late units by combined (output-change, input-change) score:
+L17 unit 644: score=3.29 out=2.15x med, in=1.14x med
+L17 unit 338: score=3.24 out=1.25x med, in=1.99x med
+L17 unit 718: score=3.21 out=2.03x med, in=1.17x med
+L17 unit 949: score=3.20 out=2.11x med, in=1.09x med
+L12 unit 48: score=3.14 out=1.18x med, in=1.96x med
+L11 unit 48: score=2.92 out=1.41x med, in=1.51x med
+L11 unit 388: score=2.90 out=1.47x med, in=1.43x med
+L11 unit 743: score=2.83 out=1.38x med, in=1.45x med
+L13 unit 766: score=2.80 out=1.23x med, in=1.57x med
+L11 unit 892: score=2.77 out=1.23x med, in=1.54x med
+L14 unit 706: score=2.73 out=1.39x med, in=1.34x med
+L16 unit 278: score=2.71 out=1.65x med, in=1.06x med
+L15 unit 126: score=2.69 out=1.45x med, in=1.24x med
+L14 unit 1422: score=2.68 out=1.40x med, in=1.28x med
+L14 unit 435: score=2.67 out=1.35x med, in=1.32x med
+L13 unit 369: score=2.66 out=1.08x med, in=1.58x med
+
+```

@@ -1,0 +1,8 @@
+In the C windows, neuron 22.573 is negative at line starts that open a new thought, not only before "Wait". The means and minima are: "Let" -5.9, "Is" -5.5, "If" -2.8 (min -6.0), "No" -3.6, "So" -3.1, "But" -2.3, versus about -1.1 before "$" or a name. So it behaves like a "starting a new thought" detector. With the doubled column it removes an extra 0.7 to 1.3 logits from " Ready" and 0.4 to 0.7 from "</think>" at such points. These windows contain no conclusions, though, so I cannot yet see its activation where the model actually closes its thinking. I will build a teacher-forced corpus from edit-C correct answers that end with "</think>". It will return per-token log-probs, top-10 alternatives and layer-22 MLP activations, under the current C weights. First I check how activations are stored (dtype, hence size) and the exact prompt format, so the request stays under the 6 GB cap. If 22.573 is strongly negative at the positions where " Ready"/"</think>" are chosen, the off-target suppression is real and a refined brake is justified.
+
+```python
+# Prep: check stored activation dtype (size budget) and the exact raw prompt format used for TF texts
+print(np.load('/work/fwd_18/mlp_act_22.npy', mmap_mode='r').dtype, np.load('/work/fwd_18/hidden_22.npy', mmap_mode='r').dtype)
+print(repr(open('/work/eval_prompt_format.txt').read()[:600]))
+t0_=m18['texts'][0]; k_=t0_.find('<think>'); print(repr(t0_[:60]), '...', repr(t0_[k_-200:k_+40]))
+```

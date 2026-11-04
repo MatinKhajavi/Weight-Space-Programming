@@ -1,0 +1,47 @@
+OUTPUT of run 14 of at most 20:
+```
+shared dWq direction: sv share [0.208 0.083 0.053 0.039]
+dWq shared dir +: ' conqu' 'lend' '\u200b\u200b\u200b\u200b' 'лару' '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n' ' trata' '\n\n\n\n\n\n\n\n\n' 'BSData' 'colnames' ' elabor' ' เนี่ย' '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n' ' evol' 'itty' 'Track' ' magnific' 'Descriptor' '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n' 'rens' 'Own'
+dWq shared dir -: ' three' 'three' ' four' 'seven' ' six' ' five' 'six' ' eight' ' seven' ' hundred' ' nine' 'five' ' two' ' a' ' sevent' ' remainder' ' cuatro' ' greater' ' $' ' mandatory'
+   special/template cos: {'<bos>': 0.037, '<start_of_turn>': 0.012, '<end_of_turn>': 0.041, '\n': -0.017, '\n\n': -0.013} {' is': -0.05, 'model': 0.063, 'user': -0.027, ' answer': -0.051, ' think': -0.044, '?': -0.061, '.': -0.054}
+token ids check: [(1, '<eos>'), (2, '<bos>'), (105, '<start_of_turn>'), (106, '<end_of_turn>'), (107, '\n'), (108, '\n\n')]
+
+L7 dWk top dir (share 0.23), |cos| with dWq shared dir 0.13
+L7 dWk +: 'za' 'ZA' 'ça' ' deduction' 'SA' 'še' ' packages' ' Sab' ' Barbara' 'istry' 'ra' 'zA'
+L7 dWk -: ' nowhere' 'Paper' 'arent' ' Nurs' ' emerg' 'crib' ' escuela' 'ukk' 'browser' ' clutch' 'neighbor' ' مورد'
+   special/template cos: {'<bos>': 0.021, '<start_of_turn>': 0.027, '<end_of_turn>': 0.029, '\n': 0.059, '\n\n': 0.038} {' is': 0.011, 'model': -0.036, 'user': 0.012, ' answer': -0.005, ' think': 0.033, '?': 0.07, '.': 0.023}
+
+L9 dWk top dir (share 0.14), |cos| with dWq shared dir 0.33
+L9 dWk +: ' residency' ' amongst' ' Suff' ' fertility' ' settlement' ' Nord' ' Clause' ' chez' ' donor' ' Render' ' noss' ' Resol'
+L9 dWk -: 'arp' 'ghi' 'gb' 'pm' ' Bc' 'pc' 'mag' 'грам' 'dm' 'agram' 'md' 'alan'
+   special/template cos: {'<bos>': 0.016, '<start_of_turn>': 0.005, '<end_of_turn>': 0.016, '\n': -0.008, '\n\n': -0.014} {' is': -0.043, 'model': 0.001, 'user': -0.009, ' answer': 0.035, ' think': -0.012, '?': -0.053, '.': -0.061}
+
+L10 dWk top dir (share 0.23), |cos| with dWq shared dir 0.31
+L10 dWk +: '}}}\\' ' envision' ' `=' '="${' ' everywhere' ' humble' 'OWER' '![' ' splic' ':</' ' "${' '}</'
+L10 dWk -: 'st' 'entieth' 'icke' 'ste' 'rd' 'nd' 'amon' ' x' 'autions' ' Bc' 'xc' ' הה'
+   special/template cos: {'<bos>': 0.004, '<start_of_turn>': -0.003, '<end_of_turn>': 0.037, '\n': -0.038, '\n\n': -0.046} {' is': -0.079, 'model': 0.027, 'user': -0.094, ' answer': 0.049, ' think': -0.003, '?': -0.051, '.': -0.085}
+
+L11 dWk top dir (share 0.18), |cos| with dWq shared dir 0.54
+L11 dWk +: ' noble' ' EUR' ' Barcelona' 'Paris' ' Brexit' ' Spain' ' morning' 'Enumerable' ' Conc' ' EU' 'EU' '❤️'
+L11 dWk -: 'ος' ' cộng' 'cesso' 'ведения' ' restric' ' suất' ' acceso' 'حده' 'overnment' 'ступа' 'вор' 'kick'
+   special/template cos: {'<bos>': 0.022, '<start_of_turn>': 0.004, '<end_of_turn>': 0.047, '\n': -0.005, '\n\n': 0.021} {' is': 0.014, 'model': 0.058, 'user': -0.03, ' answer': 0.021, ' think': -0.0, '?': 0.053, '.': 0.044}
+
+L12 dWk top dir (share 0.17), |cos| with dWq shared dir 0.00
+L12 dWk +: 'ize' ' Gore' ' ink' '联网' ' NY' 'izing' ' IEEE' ' printers' ' Share' ' fighting' ' GOP' ' Madison'
+L12 dWk -: 'attery' 'دى' ' Bool' '同样' 'ére' 'рует' ' phép' ' 이번' 'InstrumentedTest' 'celand' 'ording' ' contrary'
+   special/template cos: {'<bos>': -0.001, '<start_of_turn>': 0.011, '<end_of_turn>': 0.004, '\n': 0.034, '\n\n': 0.022} {' is': -0.027, 'model': 0.072, 'user': 0.05, ' answer': -0.008, ' think': 0.036, '?': 0.005, '.': 0.065}
+
+Upstream writers along shared dWq direction d (cos of write vector with d)
+L 0 MLP: max|cos| A 0.057 (u139), units with largest change of write along d: u365 +0.0011 (cosA +0.01), u1923 +0.0010 (cosA +0.03), u1652 -0.0010 (cosA +0.02), u31 -0.0009 (cosA -0.04), u1078 +0.0009 (cosA +0.01) | attn h0: A 0.012 dAB 0.0001; h1: A 0.011 dAB 0.0001; h2: A 0.010 dAB 0.0001; h3: A 0.012 dAB 0.0001
+L 1 MLP: max|cos| A 0.056 (u1765), units with largest change of write along d: u1842 +0.0013 (cosA -0.01), u30 +0.0011 (cosA +0.01), u1850 -0.0010 (cosA -0.00), u783 +0.0010 (cosA -0.03), u1013 -0.0010 (cosA -0.00) | attn h0: A 0.013 dAB 0.0001; h1: A 0.015 dAB 0.0001; h2: A 0.013 dAB 0.0001; h3: A 0.014 dAB 0.0001
+L 2 MLP: max|cos| A 0.036 (u1320), units with largest change of write along d: u949 -0.0008 (cosA -0.00), u60 +0.0007 (cosA -0.01), u1631 +0.0007 (cosA -0.00), u290 -0.0006 (cosA +0.00), u1323 +0.0006 (cosA -0.00) | attn h0: A 0.007 dAB 0.0001; h1: A 0.006 dAB 0.0001; h2: A 0.008 dAB 0.0001; h3: A 0.007 dAB 0.0001
+L 3 MLP: max|cos| A 0.069 (u1273), units with largest change of write along d: u1636 +0.0024 (cosA -0.03), u1564 +0.0016 (cosA -0.02), u33 -0.0014 (cosA -0.00), u739 -0.0014 (cosA +0.01), u1049 +0.0012 (cosA -0.00) | attn h0: A 0.006 dAB 0.0001; h1: A 0.007 dAB 0.0001; h2: A 0.008 dAB 0.0001; h3: A 0.006 dAB 0.0001
+L 4 MLP: max|cos| A 0.045 (u460), units with largest change of write along d: u858 +0.0022 (cosA -0.00), u799 +0.0017 (cosA -0.03), u1743 +0.0017 (cosA +0.02), u16 -0.0016 (cosA +0.01), u354 -0.0016 (cosA -0.01) | attn h0: A 0.006 dAB 0.0001; h1: A 0.008 dAB 0.0002; h2: A 0.008 dAB 0.0001; h3: A 0.010 dAB 0.0001
+L 5 MLP: max|cos| A 0.072 (u996), units with largest change of write along d: u494 +0.0016 (cosA -0.01), u1785 -0.0011 (cosA +0.01), u560 +0.0009 (cosA -0.01), u464 +0.0009 (cosA +0.02), u96 +0.0008 (cosA +0.02) | attn h0: A 0.011 dAB 0.0000; h1: A 0.011 dAB 0.0002; h2: A 0.010 dAB 0.0002; h3: A 0.012 dAB 0.0001
+L 6 MLP: max|cos| A 0.066 (u1325), units with largest change of write along d: u180 +0.0022 (cosA +0.01), u690 +0.0018 (cosA +0.01), u2029 +0.0018 (cosA +0.01), u621 +0.0017 (cosA -0.00), u800 +0.0014 (cosA +0.00) | attn h0: A 0.011 dAB 0.0002; h1: A 0.013 dAB 0.0002; h2: A 0.012 dAB 0.0002; h3: A 0.011 dAB 0.0002
+L 7 MLP: max|cos| A 0.079 (u127), units with largest change of write along d: u256 -0.0040 (cosA +0.01), u1461 +0.0024 (cosA -0.01), u186 +0.0018 (cosA +0.01), u1320 -0.0015 (cosA -0.04), u1462 +0.0015 (cosA +0.01) | attn h0: A 0.011 dAB 0.0002; h1: A 0.010 dAB 0.0001; h2: A 0.009 dAB 0.0002; h3: A 0.010 dAB 0.0002
+L 8 MLP: max|cos| A 0.071 (u1336), units with largest change of write along d: u1200 -0.0027 (cosA +0.03), u329 +0.0026 (cosA -0.03), u1643 +0.0025 (cosA +0.01), u1508 -0.0025 (cosA +0.00), u980 -0.0022 (cosA +0.03) | attn h0: A 0.009 dAB 0.0002; h1: A 0.012 dAB 0.0004; h2: A 0.016 dAB 0.0006; h3: A 0.015 dAB 0.0004
+L 9 MLP: max|cos| A 0.082 (u1507), units with largest change of write along d: u1388 +0.0011 (cosA +0.00), u1379 -0.0011 (cosA -0.01), u1744 +0.0011 (cosA -0.01), u1873 -0.0011 (cosA -0.01), u1632 -0.0011 (cosA -0.01) | attn h0: A 0.016 dAB 0.0003; h1: A 0.015 dAB 0.0002; h2: A 0.014 dAB 0.0003; h3: A 0.017 dAB 0.0003
+L10 MLP: max|cos| A 0.068 (u342), units with largest change of write along d: u1468 -0.0016 (cosA +0.01), u954 +0.0014 (cosA +0.00), u90 -0.0014 (cosA -0.01), u599 +0.0014 (cosA -0.02), u253 +0.0014 (cosA -0.01) | attn h0: A 0.016 dAB 0.0002; h1: A 0.028 dAB 0.0002; h2: A 0.017 dAB 0.0003; h3: A 0.038 dAB 0.0002
+
+```

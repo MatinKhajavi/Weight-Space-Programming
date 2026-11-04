@@ -1,0 +1,13 @@
+OUTPUT of run 39 of at most 60:
+```
+L10: numw:-0.1 color:+0.4 city:-0.2 digit:+0.2 name:-1.4 animal:-1.6 ctl:-1.3
+L11: numw:-2.0 color:+1.3 city:+1.1 digit:+0.2 name:+0.8 animal:+0.4 ctl:-0.1
+L12: numw:+0.9 color:+1.4 city:+1.1 digit:+0.2 name:-2.8 animal:+0.5 ctl:+0.3
+L13: numw:-0.8 color:-0.3 city:-0.0 digit:+0.0 name:+0.2 animal:+1.0 ctl:-0.8
+L14: numw:+3.9 color:+3.3 city:+1.3 digit:+2.3 name:+1.3 animal:-1.0 ctl:+0.8
+L15: numw:+1.3 color:+1.3 city:-1.3 digit:+0.1 name:+0.4 animal:-0.5 ctl:+2.0
+L16: numw:+2.7 color:-0.1 city:+0.8 digit:-0.8 name:+0.1 animal:-0.5 ctl:-2.0
+L17: numw:-1.4 color:-0.2 city:+0.2 digit:-1.2 name:-0.1 animal:+1.9 ctl:+1.1
+sum z L10-17: {'numw': np.float32(4.5), 'color': np.float32(6.9), 'city': np.float32(3.1), 'digit': np.float32(1.0), 'name': np.float32(-1.6), 'animal': np.float32(0.2), 'ctl': np.float32(-0.0)}
+
+```

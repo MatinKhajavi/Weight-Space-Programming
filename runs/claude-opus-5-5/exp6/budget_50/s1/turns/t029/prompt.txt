@@ -1,0 +1,11 @@
+OUTPUT of Python run 24 of at most 120:
+```
+1 486
+2 405
+3 405
+4 405
+5 486
+6 486
+saved v3 fixed
+
+```

@@ -1,0 +1,29 @@
+OUTPUT of Python run 17 of at most 120:
+```
+black
+OOX.XX.XX
+OX.XXXXXO
+OOOX.XOOO
+.O.XX.XXO
+.OOO.XXXO
+O.OXXX.XO
+XXXO.XXOO
+X.XO..XO.
+..X.OX.X.
+
+(array([-1, -1,  1,  0,  1,  1,  0,  1,  1, -1,  1,  0,  1,  1,  1,  1,  1,  0, -1, -1, -1,  1,  0,  1,  0,  0,  0,  0, -1,  0,  1,  1,  0,  1,  1,  0,  0, -1,
+       -1, -1,  0,  1,  1,  1,  0, -1,  0, -1,  1,  1,  1,  0,  1,  0,  1,  1,  1, -1,  0,  1,  1,  0,  0,  1,  0,  1, -1,  0,  0,  1,  0,  1,  0,  0,  1,  0,
+       -1,  1,  0,  1,  0]), 10)
+.OO.O.OOO
+OX.O.OO.O
+O.OOO.OOO
+XO.O.OOO.
+X.OOOO.OO
+..OO.OOOX
+OOO.OOXXX
+.O.OXXX.X
+O.OXXXXXX
+
+white
+
+```

@@ -1,0 +1,15 @@
+OUTPUT of Python run 18 of at most 300:
+```
+Done thinking             fin 0.08  cut 0.02
+ready to generate         fin 0.29  cut 0.02
+write the solution now    fin 0.06  cut 0.01
+write out the solution    fin 0.10  cut 0.01
+Final Answer              fin 0.96  cut 0.29
+final answer is           fin 0.21  cut 0.03
+I'm confident             fin 0.37  cut 0.08
+I will now write          fin 0.00  cut 0.00
+Ready to write            fin 0.40  cut 0.02
+Final check               fin 0.81  cut 0.11
+[]
+
+```

@@ -1,0 +1,8 @@
+Next I'm checking whether the overall mean z-score of 0.53 clears the null baseline of 0.28, which works out to about 1.5 standard deviations, a weak positive in the right direction but not significant. I'm also noting that the null mean is positive itself, probably because answers like "red" get pushed by several sources at once. Per layer, L10 through L15 look positive at roughly 0.3 to 0.5, but I still need the null values broken out by layer too.
+
+I'm weighing whether the overall mean z-score of 0.53 against a null of 0.28 means much, and it looks weakly positive in the expected direction but not significant. Some of that null baseline is probably sources like the color cases pushing "red" for every source at once, which the permutation null only partly absorbs. The per-layer picture is still unclear without the null values broken out by layer, and the digit copying in L11 through L15 cuts the other way from L17. I need a stronger test, so I'm now thinking about what the fine-tuning data actually looks like, since the subject tokens I picked may not appear in it. The names and "apple" from the diffs suggest word problems, where the answers are computed from the problem text rather than recalled.
+
+I'm going to check whether the overall mean z-score of 0.53 is meaningfully above the null baseline of 0.28, and I'm looking at the next step: a layer-0 projection of the weight differences onto token embeddings, to see which tokens the training data actually contains.
+
+I'm ranking common tokens by how strongly the weight differences respond to their embeddings, without normalizing by the weights themselves.
+

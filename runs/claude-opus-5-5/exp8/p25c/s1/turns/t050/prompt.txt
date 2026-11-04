@@ -1,0 +1,8 @@
+OUTPUT of Python run 43 of at most 300:
+```
+fin cols ['id', 'src', 'j', 'tokens', 'cut', 'correct', 'pred', 'text']
+"Here's my thought process for computing $\\sin 0^\\circ$:\n\n1.  **Analyze the Reque" ... "l box is correct.\n    I'll make sure the reasoning is clear.\n    Done thinking.\n"
+fin_txt has </think>: 0.0
+candidates distinct problems 120 {'gsm8k': 60, 'math': 60}
+
+```

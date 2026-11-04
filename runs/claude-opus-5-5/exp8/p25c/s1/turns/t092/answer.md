@@ -1,0 +1,6 @@
+The token check refines the picture. Under E3, the space-prefixed variants ' If' (439), ' Let' (434) and ' Okay' (328) were common in loops, and under E4b they are gone too. So reversing the bare-token directions also suppressed the space-prefixed variants, which makes sense because their readout vectors are similar. Only 'So' survived, in both forms (' So' 682, 'So' 308 occurrences in 300 loops). This is not a tokenization gap. Two explanations remain. (1) The centred reversal turns a former push toward Wait/Let/Okay into a push toward the remaining members of the set, including So. (2) So is pushed by layers outside L15/L19, for example the L23 induction heads, which dominated loop-token prediction in the original model. To decide, I will run a teacher-forced pass under E4b on compact So-loops (prompt + short lead + 8 periods) and do per-layer direct logit attribution at the So decision points as repetition grows. First I build compact texts in the exact eval prompt format and keep them short enough to paste inline.
+
+```python
+# Build compact So-loop texts from E4b generations (exact eval prompt format) for a TF DLA pass under E4b
+print(open('/work/eval_prompt_format.txt').read()[:600])
+```

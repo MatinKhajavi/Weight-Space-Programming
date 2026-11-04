@@ -1,0 +1,5 @@
+The format file describes the prompt and says long texts go inline in "texts"; it mentions no file option. The layer-0 norm weights average 0.24, which fits the zero-centred (1+w) RMSNorm used by the Qwen3-Next/Qwen3.5 family, so I'll use 1+w as the final-norm scale in attributions. Pasting about 100 KB of windows inline is impractical. Since a failed request doesn't count against the budget, I'll first try a file reference under a separate key ("texts_file"), with no "texts" key. If the tool ignores the unknown key it will reject the request for lack of texts, at no cost. If it fails, I'll shrink the windows to something I can paste.
+
+```forward
+{"type": "teacher_forced", "model": "edited", "texts_file": "/work/req_tfC.json", "return": {"token_logprobs": true, "topk": 10, "hidden_states": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24], "mlp_act": [12,13,14,15,16,17,18,19,20,21,22,23]}}
+```

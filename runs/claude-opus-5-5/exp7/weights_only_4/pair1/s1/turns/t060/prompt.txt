@@ -1,0 +1,10 @@
+OUTPUT of run 56 of at most 60:
+```
+15.1: full: copy z -2.26, related z +3.08 | O-only: copy z -3.24, related z +4.64 | V-only: copy z -1.10, related z +0.60
+15.2: full: copy z -2.13, related z +2.43 | O-only: copy z -1.21, related z +2.82 | V-only: copy z -1.96, related z +0.80
+17.0: full: copy z -1.71, related z +17.41 | O-only: copy z -0.08, related z +18.06 | V-only: copy z -3.32, related z +6.99
+17.1: full: copy z +0.68, related z +6.00 | O-only: copy z +0.73, related z +4.04 | V-only: copy z +0.43, related z +8.95
+12.2: full: copy z -2.24, related z +4.86 | O-only: copy z -2.01, related z +6.67 | V-only: copy z -1.01, related z -2.61
+8.0: full: copy z +0.56, related z +1.92 | O-only: copy z -0.58, related z +0.06 | V-only: copy z +2.23, related z +4.33
+
+```

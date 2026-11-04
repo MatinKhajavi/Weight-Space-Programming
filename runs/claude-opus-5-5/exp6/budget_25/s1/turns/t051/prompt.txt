@@ -1,0 +1,85 @@
+OUTPUT of Python run 41 of at most 120:
+```
+Counter({('strong', 'two passes', 1): 46, ('strong', 'two passes', -1): 35, ('weak', 'two passes', 1): 22, ('strong', 'repetition', -1): 12, ('weak', 'repetition', 1): 9, ('strong', 'move limit', 1): 2, ('strong', 'repetition', 1): 1, ('weak', 'repetition', -1): 1})
+13 black 17.5 [('n', (6, 0)), ('o', (8, 0)), ('n', (7, 0))] [((6, 0), 1.0), ((0, 0), 0.0), ((3, 8), 0.0)]
+.OX......
+XX.X.X.X.
+OOXXX.X..
+OOXOXXXX.
+OOOOXXXXX
+OOOOOOOOO
+*OOXXXOOO
+XOX.X.XO.
+.X.X.X.X.
+28 black 6.5 [('n', (4, 1)), ('o', (6, 1)), ('n', (5, 1))] [((4, 1), 1.0), ((1, 7), 0.0), ((0, 6), 0.0)]
+.X.......
+X.XX.XO..
+XXOXX.X..
+OOOOXXOX.
+O*OOXOOO.
+OXOOOOOO.
+X.XXXOX..
+.XXX.XOO.
+X.X.X.X..
+41 black 20.5 [('o', (8, 0)), ('n', (7, 8)), ('o', (8, 4)), ('n', (8, 1)), ('o', (8, 8)), ('n', (8, 3))] []
+X.X......
+.X.X..X..
+X.XX.X.XX
+.XOXX.XX.
+XXOOXXOXX
+OOOOOOOOO
+.OOOXXOOO
+XOOOX.XO.
+*XOX.X.XO
+42 black 16.5 [('n', (2, 0)), ('o', (0, 0)), ('n', (1, 0))] [((2, 0), 1.0), ((8, 0), 0.0), ((0, 7), 0.0)]
+.X.X.X...
+XOX.XOOOO
+*OOX.XOX.
+OOOOX.X.X
+OOOOXXXX.
+OOOOXXX..
+.OXOXX.X.
+OXXX.XXX.
+.OX.X....
+57 white 31.5 [('n', (5, 1)), ('o', (7, 1)), ('n', (6, 1))] [((5, 1), 0.7685), ('P', 0.2315), ((5, 6), 0.0)]
+X.XXXO.O.
+OXXXXXXXO
+.XXXOOOOO
+XXXOOO.O.
+XXXXO.OOO
+X*XXOO.OO
+XOXOOO.O.
+O.O.O.O.O
+.O.O.O.O.
+59 white 15.5 [('n', (8, 2)), ('o', (8, 8)), ('n', 'P'), ('o', (8, 1)), ('n', (7, 8))] [((8, 2), 1.0), ('P', 0.0), ((0, 4), 0.0)]
+.OO.....O
+O.OOOOOO.
+.OOOOOO.O
+OXXXXXXO.
+OOXX.XXOO
+.OXXXXXXX
+OXXXXXXXX
+.OX.XXOXO
+OX*X.X.O.
+66 white 24.5 [('n', (2, 0)), ('o', (0, 0)), ('n', (1, 0))] [((2, 0), 1.0), ((2, 4), 0.0), ((6, 0), 0.0)]
+.O.......
+OXO......
+*XXO.OOO.
+XXXOOOXO.
+XXXXOOXOO
+XOOXXOXXX
+.O.O.XXOO
+..OXXXXX.
+...O.....
+67 white -0.5 [('n', (0, 1)), ('o', (2, 8)), ('n', 'P'), ('o', (0, 0)), ('n', (1, 8))] [((0, 1), 1.0), ((0, 0), 0.0), ((0, 2), 0.0)]
+X*XXXXXXX
+OXXXXXXXO
+OXXO.XXO.
+.OXXX.O.O
+OOXX.XXOX
+.OOXXXXXX
+OOOOXXXXX
+.OO.OXOXX
+OO.O.O.O.
+
+```

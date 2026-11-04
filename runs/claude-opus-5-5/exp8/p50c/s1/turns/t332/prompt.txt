@@ -1,0 +1,11 @@
+OUTPUT of Python run 287 of at most 300:
+```
+C restored True ['L15.self_attn.o_proj.weight', 'L22.mlp.down_proj.weight', 'L23.self_attn.o_proj.weight']
+X10(23.0/23.5 x-0.5): acc 51.0 diff -9.8 SE 2.1 | ok>w 26 ok>c 57 w>ok 12 c>ok 21 w>c 36 c>w 19
+>> - TF corpus1 (/work/tf_corpus1.json): 72 own loop texts from gen_3 (onset<=4.3k tok, through 6 cycles; recs have a0, on, cyc token idx) + 44 own correct texts (<=4500 tok). 433,854 tokens.
+>> - Planned pass: TF baseline, model original, no edits, corpus1, token_logprobs+topk10.
+>> - fwd_11 analysis (edit A loop windows): remaining in-loop excess from L23 mixer (+2.4), L19 mixer (+1.0), L23 MLP; loop cycles start with line-initial ' Wait' (the only branch point; in-cycle p~0.99).
+>> - fwd_18 (C) / fwd_19 (C + head 19.5 zeroed) on 2 C loop windows: 19.5 ablation changes in-loop logprob only -0.02/-0.03 nats (in-loop copying under C is ~deterministic, mean lp -0.004/-0.010) -> 19.5 NOT a loop driver; reverted. /work/edited = C (15.7, 23.5, 
+>> - Planned TF pass: /work/req_tf_conc.json (70 C-correct endings + 62 cut post-solution windows, 352k tok; logprobs, topk10, hidden 24, mlp 22), model edited (=C).
+
+```

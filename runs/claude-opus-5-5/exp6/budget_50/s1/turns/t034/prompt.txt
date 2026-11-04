@@ -1,0 +1,5 @@
+Positions pass 6 of 50 done.
+```
+{"ok": true, "pass": 6, "kind": "positions", "positions": 7, "top3_per_position": [[["(4,5)", 1.0], ["(2,3)", 0.0], ["(2,5)", 0.0]], [["(4,5)", 0.9938], ["(3,3)", 0.0006], ["(5,3)", 0.0006]], [["(0,0)", 1.0], ["(4,4)", 0.0], ["(2,3)", 0.0]], [["(4,6)", 0.1506], ["(2,3)", 0.0612], ["(2,4)", 0.0612]], [["(4,4)", 0.0889], ["(2,2)", 0.0658], ["(3,2)", 0.0361]], [["(3,4)", 0.9936], ["(6,3)", 0.0008], ["(6,5)", 0.0008]], [["(4,4)", 0.0931], ["(2,2)", 0.0342], ["(2,3)", 0.0342]]], "files": "/work/pass_6/", "readme": "inputs.npy (P, 243) the network inputs; legal.npy (P, 82) the legal moves (for 'board' positions: the empty points and pass; suicide and ko are not checked); logits.npy, probs.npy (P, 82); act_L1.npy .. act_L6.npy (P, 512) the hidden activations after ReLU."}
+```
+Passes left: 44.

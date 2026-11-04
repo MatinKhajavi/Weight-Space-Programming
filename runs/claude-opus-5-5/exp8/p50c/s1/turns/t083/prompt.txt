@@ -1,0 +1,10 @@
+OUTPUT of Python run 71 of at most 300:
+```
+find_period ERR could not get source code
+loop_onset ERR could not get source code
+ind_targets ERR could not get source code
+find_loop ERR could not get source code
+0 [(np.float64(1.0), 377), (np.float64(1.0), 348), (np.float64(1.0), 319), (np.float64(1.0), 290)]
+1 [(np.float64(1.0), 369), (np.float64(1.0), 328), (np.float64(1.0), 287), (np.float64(1.0), 246)]
+
+```

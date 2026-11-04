@@ -1,0 +1,55 @@
+Forward pass 25 of 25 done (generate); results in /work/gen_26_original.jsonl and /work/gen_26_edited.jsonl. Summary:
+```
+{
+ "ok": true,
+ "type": "generate",
+ "model": "both",
+ "files": {
+  "original": "/work/gen_26_original.jsonl",
+  "edited": "/work/gen_26_edited.jsonl"
+ },
+ "activations": null,
+ "original": {
+  "generations": 256,
+  "graded": 256,
+  "accuracy": 0.1289,
+  "accuracy_by_source": {
+   "gsm8k": 0.1771,
+   "math": 0.1
+  },
+  "mean_tokens": 29569,
+  "cut_share": 0.8867,
+  "failures": {
+   "wrong_answer": 0,
+   "no_answer_finished": 0,
+   "cut_at_max_tokens": 223
+  }
+ },
+ "edited": {
+  "generations": 256,
+  "graded": 256,
+  "accuracy": 0.4375,
+  "accuracy_by_source": {
+   "gsm8k": 0.5625,
+   "math": 0.3625
+  },
+  "mean_tokens": 20887,
+  "cut_share": 0.4492,
+  "failures": {
+   "wrong_answer": 26,
+   "no_answer_finished": 4,
+   "cut_at_max_tokens": 114
+  }
+ },
+ "paired": {
+  "items": 256,
+  "accuracy_difference": 0.3086,
+  "standard_error": 0.0338,
+  "samples_wrong_to_right": 89,
+  "samples_right_to_wrong": 10
+ },
+ "s": 1079.8
+}
+```
+Forward passes left: 0.
+All forward passes are used. Make your final choice of edits (Python is still available), then reply without a code block.

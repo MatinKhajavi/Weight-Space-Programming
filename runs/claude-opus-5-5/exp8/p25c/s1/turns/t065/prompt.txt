@@ -1,0 +1,7 @@
+OUTPUT of Python run 55 of at most 300:
+```
+paired diff 1.95 pts, SE(problem-clustered) 1.89; wrong->right 44, right->wrong 34
+orig cut 460 exact-loop share 0.963 onset median 6712 IQR [4609, 9643] period(chars) median 117
+E1 cut 451 exact-loop share 0.965 onset median 6719 IQR [4622, 11575] period(chars) median 160
+
+```

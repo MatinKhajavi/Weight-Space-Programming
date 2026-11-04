@@ -1,0 +1,8 @@
+I'm noting that A's increase in late attention to retrieval is generic, since morphology and synonyms rise too, even more so. That suggests A maps tokens to related tokens broadly rather than doing task-specific retrieval. Earlier, its self-copying of answer tokens dropped, but I need to remember that comparison was against control words.
+
+I'm checking whether the generic rise in related-token mapping is also present for control words, and it appears to be, since the morphology and synonym tests use ordinary words. The open question is whether this reflects B sharpening its identity copying, which would reduce neighbor spread, or A's heads becoming blurrier. I'm also considering that the training objective may reward mapping to a related but different token, such as a city to its capital.
+
+I'm seeing that A's attention to related tokens rises generically, not just for answer tokens, so the copy result alone can't tell the models apart. The training signal could explain this: when a guess is wrong, the target is usually a related but different token, which would push a model toward mapping to neighbors and away from exact copying. That would make the generic shift a direct prediction for A being the correct model, and I want to check whether identity copying for ordinary words is also lower in A, measured without the control baseline.
+
+Keeping the working estimate near 0.22 seems right: the generic shift toward related-token mapping is what correct training would predict, though it weakens the relation-specific retrieval story. MLP12 looks partly generic too, so I'll move it lower in the ranking. With five runs left, I think I can wrap up and update the evidence summary to say retrieval is a general neighbor-mapping effect.
+

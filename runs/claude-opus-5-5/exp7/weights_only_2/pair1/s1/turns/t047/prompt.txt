@@ -1,0 +1,11 @@
+OUTPUT of run 46 of at most 60:
+```
+L12: h0 dMatch z=-1.6 baseMatch z=+0.8 OVsign=+ | h1 dMatch z=-2.3 baseMatch z=+3.0 OVsign=- | h2 dMatch z=-0.5 baseMatch z=+2.0 OVsign=+ | h3 dMatch z=-2.9 baseMatch z=+1.8 OVsign=+ | 
+L13: h0 dMatch z=+1.2 baseMatch z=-0.5 OVsign=+ | h1 dMatch z=+1.0 baseMatch z=-0.6 OVsign=+ | h2 dMatch z=+1.3 baseMatch z=+0.4 OVsign=+ | h3 dMatch z=-0.2 baseMatch z=+1.3 OVsign=- | 
+L14: h0 dMatch z=-3.1 baseMatch z=+3.0 OVsign=- | h1 dMatch z=-2.6 baseMatch z=+2.0 OVsign=+ | h2 dMatch z=-1.6 baseMatch z=+2.4 OVsign=+ | h3 dMatch z=-2.7 baseMatch z=+2.6 OVsign=- | 
+L15: h0 dMatch z=+1.7 baseMatch z=+1.2 OVsign=+ | h1 dMatch z=+3.4 baseMatch z=+3.5 OVsign=- | h2 dMatch z=+0.3 baseMatch z=+1.4 OVsign=+ | h3 dMatch z=-2.6 baseMatch z=+1.9 OVsign=+ | 
+L16: h0 dMatch z=+0.5 baseMatch z=+1.1 OVsign=+ | h1 dMatch z=+1.3 baseMatch z=+2.4 OVsign=+ | h2 dMatch z=+1.4 baseMatch z=+2.6 OVsign=+ | h3 dMatch z=-3.5 baseMatch z=+1.5 OVsign=+ | 
+L17: h0 dMatch z=+3.6 baseMatch z=-3.3 OVsign=+ | h1 dMatch z=+2.9 baseMatch z=-3.1 OVsign=+ | h2 dMatch z=-0.1 baseMatch z=-3.0 OVsign=- | h3 dMatch z=+4.1 baseMatch z=-1.7 OVsign=- | 
+sum sign(OV)*z over heads: 0.8  per-head mean: 0.03
+
+```

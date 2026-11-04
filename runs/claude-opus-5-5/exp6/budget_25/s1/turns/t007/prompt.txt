@@ -1,0 +1,6 @@
+OUTPUT of Python run 5 of at most 120:
+```
+9036
+{"board": ["XXXXOOXXX", "..XX.OOOX", "XOXO..X..", ".OO.O.OX.", "O.OOO.X.X", "XOO.XX.X.", "XO..O.X.X", ".XOXXO.OO", "OOOO.XX.O"], "to_move": "white"}
+
+```

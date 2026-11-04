@@ -1,0 +1,20 @@
+OUTPUT of Python run 14 of at most 300:
+```
+       ref_in_pre
+src              
+gsm8k    0.780952
+math     0.566572 src
+gsm8k    0.257143
+math     0.127479
+Name: nbox_pre, dtype: float64
+===== math_train_algebra_110 p 40 onset 4691 ref 255
+' a potential issue.\n    Is it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I will check if the expression is actually $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I will check if the expression is actually' 
+  >>>  ' $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible the expression is'
+===== math_train_algebra_855 p 27 onset 3677 ref 102
+'00 \\text{ m}$.\n    $72,000 \\text{ m} / 0.12 \\text{ m} = 600,000$.\n    Wait, $72,000 / 0.12 = 600,000$.\n    Wait, $12 \\text{ cm} = 0.12 \\text{ m}$.\n    $72 \\text{ km} = 72,000 \\text{ m}$.\n   ' 
+  >>>  ' $72,000 / 0.12 = 600,000$.\n    Wait, $72,000 / 0.12 = 600,000$.\n    Wait,'
+===== math_train_algebra_280 p 34 onset 6602 ref 25
+"})^4$, it is 25.\n    Wait, does $\\sqrt{5^4}$ mean $\\sqrt{5} \\cdot \\sqrt{5} \\cdot \\dots$? No, that's $5^2$.\n    Wait, $\\sqrt{5^4}$ means $\\sqrt{5^4}$.\n    Wait, $\\sqrt{5^4}$ is 25.\n    $(\\sqrt{5})^4$ is 25.\n    Wait, $\\sqrt{5^4}$ is 25.\n   " 
+  >>>  ' $(\\sqrt{5})^4$ is 25.\n    Wait, $\\sqrt{5^4}$ is 25.\n    Wait, $(\\sqrt{5})^4$ is 25.\n    Wait, $\\sqrt{5^4}$ is 25.\n    Wait,'
+
+```

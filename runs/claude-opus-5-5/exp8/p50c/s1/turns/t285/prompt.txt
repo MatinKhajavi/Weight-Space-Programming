@@ -1,0 +1,78 @@
+OUTPUT of Python run 255 of at most 300:
+```
+['attn_11.npy', 'attn_15.npy', 'attn_19.npy', 'attn_23.npy', 'attn_3.npy', 'attn_7.npy', 'hidden_0.npy', 'hidden_1.npy', 'hidden_10.npy', 'hidden_11.npy', 'hidden_12.npy', 'hidden_13.npy', 'hidden_14.npy', 'hidden_15.npy', 'hidden_16.npy', 'hidden_17.npy', 'hidden_18.npy', 'hidden_19.npy', 'hidden_2.npy', 'hidden_20.npy', 'hidden_21.npy', 'hidden_22.npy', 'hidden_23.npy', 'hidden_24.npy', 'hidden_3.npy', 'hidden_4.npy', 'hidden_5.npy', 'hidden_6.npy', 'hidden_7.npy', 'hidden_8.npy', 'hidden_9.npy', 'input_ids.npy', 'meta.json', 'mlp_act_0.npy', 'mlp_act_1.npy', 'mlp_act_10.npy', 'mlp_act_11.npy', 'mlp_act_12.npy', 'mlp_act_13.npy', 'mlp_act_14.npy', 'mlp_act_15.npy', 'mlp_act_16.npy', 'mlp_act_17.npy', 'mlp_act_18.npy', 'mlp_act_19.npy', 'mlp_act_2.npy', 'mlp_act_20.npy', 'mlp_act_21.npy', 'mlp_act_22.npy', 'mlp_act_23.npy', 'mlp_act_3.npy', 'mlp_act_4.npy', 'mlp_act_5.npy', 'mlp_act_6.npy', 'mlp_act_7.npy', 'mlp_act_8.npy', 'mlp_act_9.npy', 'token_logprobs.npy', 'topk_ids.npy', 'topk_logprobs.npy']
+{'texts': "['<|im_start|>user\\nCheryl placed 300 strawberries into 5 buckets. After she did that she decided to take 20 out of each bucket so they wouldn\\'t get smashed. How many strawberries were left in each bucket?\\nPlease reason step by step, and put your final answer within \\\\boxed{}.<|im_end|>\\n<|im_star", 'lengths': [1169, 1174], 'model': 'edited', 'edited_tensors': ['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.22.mlp.down_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight'], 'files': "{'input_ids.npy': [2, 1174], 'token_logprobs.npy': [2, 1173], 'topk_logprobs.npy': [2, 1174, 10], 'topk_ids.npy': [2, 1174, 10], 'hidden_0.npy': [2, 1174, 1024], 'hidden_1.npy': [2, 1174, 1024], 'hidden_2.npy': [2, 1174, 1024], 'hidden_3.npy': [2, 1174, 1024], 'hidden_4.npy': [2, 1174, 1024], 'hidde", 'padding': 'right; positions >= length are padding'}
+<class 'list'> 12
+{'g': (3, 'g13'), 'id': (16, 'gsm8k_train_6043'), 'src': (5, 'gsm8k'), 'P': 192, 'text': (5360, '<|im_start|>user\nCarlos has some gold quarters. If he spends them in a store, th'), 'n_head': 94, 'on_tok': 1292, 'ntok': 2191, 'unit': (192, '   Regular exchange = $100$.\n    *   Regular amount = $100$.\n    *   Melted = $1')}
+{'g': (3, 'g13'), 'id': (16, 'gsm8k_train_6597'), 'src': (5, 'gsm8k'), 'P': 55, 'text': (13630, '<|im_start|>user\nAt a recent fishing tournament, Alex caught 7 times as many fis'), 'n_head': 107, 'on_tok': 1300, 'ntok': 2200, 'unit': (55, '1.\n                                    Jacob catches 16')}
+{'g': (3, 'g16'), 'id': (15, 'gsm8k_train_704'), 'src': (5, 'gsm8k'), 'P': 47, 'text': (7927, '<|im_start|>user\nSabrina gave 10 cookies to her brother. Her mother gave Sabrina'), 'n_head': 82, 'on_tok': 1266, 'ntok': 2166, 'unit': (47, 'brother]"\n                *   "Sabrina [verb] [')}
+{'g': (3, 'g16'), 'id': (16, 'gsm8k_train_6200'), 'src': (5, 'gsm8k'), 'P': 84, 'text': (15367, '<|im_start|>user\nAn NGO contracted a construction company to build 2000 houses w'), 'n_head': 102, 'on_tok': 1289, 'ntok': 2187, 'unit': (84, ' "blocked" -> "blocked".\n                                                       ')}
+{'g': (3, 'g13'), 'id': (16, 'gsm8k_train_2224'), 'src': (5, 'gsm8k'), 'P': 266, 'text': (6968, '<|im_start|>user\nSamuel is arranging his grandma?s teacups. They are stored in b'), 'n_head': 142, 'on_tok': 1323, 'ntok': 2221, 'unit': (266, ' cups.\n    Maybe the answer is $26 - 2 \\times (\\text{something})$.\n    Assume th')}
+{'g': (3, 'g16'), 'id': (16, 'gsm8k_train_4031'), 'src': (5, 'gsm8k'), 'P': 54, 'text': (7145, '<|im_start|>user\nCheryl placed 300 strawberries into 5 buckets. After she did th'), 'n_head': 70, 'on_tok': 1269, 'ntok': 2169, 'unit': (54, '    *   She puts *all* 300 strawberries into buckets.\n')}
+{'g': (3, 'g16'), 'id': (16, 'gsm8k_train_4760'), 'src': (5, 'gsm8k'), 'P': 257, 'text': (17333, '<|im_start|>user\nJohn weighs one-quarter times more than what Mary weighs. Mary '), 'n_head': 68, 'on_tok': 1267, 'ntok': 2167, 'unit': (257, ' **twelve** times Mary".\n                                                       ')}
+{'g': (3, 'g16'), 'id': (22, 'math_train_algebra_616'), 'src': (4, 'math'), 'P': 201, 'text': (7205, '<|im_start|>user\nThe sum of three consecutive one-digit, positive, odd integers '), 'n_head': 66, 'on_tok': 1255, 'ntok': 2154, 'unit': (201, ' *ones*.\n       Maybe the integers are $x, x+1, x+2$ where $x$ is a digit.\n     ')}
+{'g': (3, 'g13'), 'id': (23, 'math_train_algebra_1623'), 'src': (4, 'math'), 'P': 52, 'text': (4174, '<|im_start|>user\nThe product of two positive integers plus their sum is 103. The'), 'n_head': 65, 'on_tok': 1259, 'ntok': 2159, 'unit': (52, ', 8, 13, 26, 52.\n           \n           Primes: 2, 4')}
+{'g': (3, 'g13'), 'id': (39, 'math_train_counting_and_probability_676'), 'src': (4, 'math'), 'P': 234, 'text': (3607, '<|im_start|>user\nIf two distinct members of the set $\\{ 2, 4, 10, 12, 15, 20, 50'), 'n_head': 92, 'on_tok': 1285, 'ntok': 2185, 'unit': (234, ' -   $(10, 50)$ is $(10, 50)$.\n    -   $(12, 50)$ is $(12, 50)$.\n    -   $(15, 2')}
+{'g': (3, 'g13'), 'id': (26, 'math_train_precalculus_660'), 'src': (4, 'math'), 'P': 42, 'text': (4593, '<|im_start|>user\nFor real numbers $a,$ $b,$ and $c,$ the matrix\n\\[\\begin{pmatrix'), 'n_head': 117, 'on_tok': 1282, 'ntok': 2181, 'unit': (42, '(b^2 + ac - b^2 + bc)$.\n    $= bc(a-c) - c')}
+{'g': (3, 'g13'), 'id': (35, 'math_train_intermediate_algebra_668'), 'src': (4, 'math'), 'P': 129, 'text': (10676, '<|im_start|>user\nLet $x$ be a real number such that $x^3+4x=8$. Determine the va'), 'n_head': 61, 'on_tok': 1259, 'ntok': 2158, 'unit': (129, ' x^3/x^2 \\cdot x^2)$.\n                                                          ')}
+attn_11.npy (2, 8, 1174, 1174) float16
+attn_15.npy (2, 8, 1174, 1174) float16
+attn_19.npy (2, 8, 1174, 1174) float16
+attn_23.npy (2, 8, 1174, 1174) float16
+attn_3.npy (2, 8, 1174, 1174) float16
+attn_7.npy (2, 8, 1174, 1174) float16
+hidden_0.npy (2, 1174, 1024) float16
+hidden_1.npy (2, 1174, 1024) float16
+hidden_10.npy (2, 1174, 1024) float16
+hidden_11.npy (2, 1174, 1024) float16
+hidden_12.npy (2, 1174, 1024) float16
+hidden_13.npy (2, 1174, 1024) float16
+hidden_14.npy (2, 1174, 1024) float16
+hidden_15.npy (2, 1174, 1024) float16
+hidden_16.npy (2, 1174, 1024) float16
+hidden_17.npy (2, 1174, 1024) float16
+hidden_18.npy (2, 1174, 1024) float16
+hidden_19.npy (2, 1174, 1024) float16
+hidden_2.npy (2, 1174, 1024) float16
+hidden_20.npy (2, 1174, 1024) float16
+hidden_21.npy (2, 1174, 1024) float16
+hidden_22.npy (2, 1174, 1024) float16
+hidden_23.npy (2, 1174, 1024) float16
+hidden_24.npy (2, 1174, 1024) float16
+hidden_3.npy (2, 1174, 1024) float16
+hidden_4.npy (2, 1174, 1024) float16
+hidden_5.npy (2, 1174, 1024) float16
+hidden_6.npy (2, 1174, 1024) float16
+hidden_7.npy (2, 1174, 1024) float16
+hidden_8.npy (2, 1174, 1024) float16
+hidden_9.npy (2, 1174, 1024) float16
+input_ids.npy (2, 1174) int64
+mlp_act_0.npy (2, 1174, 3584) float16
+mlp_act_1.npy (2, 1174, 3584) float16
+mlp_act_10.npy (2, 1174, 3584) float16
+mlp_act_11.npy (2, 1174, 3584) float16
+mlp_act_12.npy (2, 1174, 3584) float16
+mlp_act_13.npy (2, 1174, 3584) float16
+mlp_act_14.npy (2, 1174, 3584) float16
+mlp_act_15.npy (2, 1174, 3584) float16
+mlp_act_16.npy (2, 1174, 3584) float16
+mlp_act_17.npy (2, 1174, 3584) float16
+mlp_act_18.npy (2, 1174, 3584) float16
+mlp_act_19.npy (2, 1174, 3584) float16
+mlp_act_2.npy (2, 1174, 3584) float16
+mlp_act_20.npy (2, 1174, 3584) float16
+mlp_act_21.npy (2, 1174, 3584) float16
+mlp_act_22.npy (2, 1174, 3584) float16
+mlp_act_23.npy (2, 1174, 3584) float16
+mlp_act_3.npy (2, 1174, 3584) float16
+mlp_act_4.npy (2, 1174, 3584) float16
+mlp_act_5.npy (2, 1174, 3584) float16
+mlp_act_6.npy (2, 1174, 3584) float16
+mlp_act_7.npy (2, 1174, 3584) float16
+mlp_act_8.npy (2, 1174, 3584) float16
+mlp_act_9.npy (2, 1174, 3584) float16
+token_logprobs.npy (2, 1173) float32
+topk_ids.npy (2, 1174, 10) int64
+topk_logprobs.npy (2, 1174, 10) float32
+
+```

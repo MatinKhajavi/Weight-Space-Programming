@@ -1,0 +1,9 @@
+OUTPUT of Python run 160 of at most 300:
+```
+n anchors 30 | delta norm / col norm 0.1567
+C  : {' Wait': 1.625, 'Wait': 1.689, ' Hmm': 0.523, ' Actually': 0.349, ' But': 0.193, ' Maybe': 0.051, ' Ready': 0.457, '</think>': 0.25, ' Final': 0.096, ' So': -0.034}
+V2 : {' Wait': 1.625, 'Wait': 1.689, ' Hmm': 0.523, ' Actually': 0.349, ' But': 0.193, ' Maybe': 0.051, ' Ready': 0.0, '</think>': -0.0, ' Final': 0.0, ' So': -0.034}
+largest vocab changes (id, safe text, dlogit/unit): [(29965, ' Ready', -0.457), (5354, ' ready', -0.393), (18622, 'Ready', -0.383), (2232, 'ready', -0.363), (61758, '#', -0.295), (82385, ' READY', -0.28), (34283, '#', -0.266), (248069, '#', -0.25), (44061, 'READY', -0.238), (59610, ' readiness', -0.235), (160192, ' siap', -0.207), (141022, '#', -0.198), (30020, '#', -0.195), (151249, '#', -0.183), (97706, '#', -0.177)]
+dlogit/unit quantiles |change| all vocab: 99% 0.0514 max 0.457
+
+```

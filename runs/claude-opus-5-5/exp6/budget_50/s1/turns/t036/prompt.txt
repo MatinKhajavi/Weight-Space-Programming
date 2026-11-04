@@ -1,0 +1,26 @@
+OUTPUT of Python run 28 of at most 120:
+```
+('random', 'two passes', 1, 'net') 31
+('random', 'two passes', 1, 'opponent') 1
+('strong', 'move limit', 1, 'net') 1
+('strong', 'repetition', -1, 'net') 7
+('strong', 'repetition', 1, 'opponent') 1
+('strong', 'two passes', -1, 'net') 17
+('strong', 'two passes', -1, 'opponent') 8
+('strong', 'two passes', 1, 'net') 26
+('strong', 'two passes', 1, 'opponent') 4
+('weak', 'repetition', -1, 'net') 1
+('weak', 'repetition', 1, 'opponent') 11
+('weak', 'two passes', -1, 'net') 1
+('weak', 'two passes', -1, 'opponent') 1
+('weak', 'two passes', 1, 'net') 18
+32 strong -8.5 [('n', (0, 4), 0.4952), ('o', (1, 0), None), ('n', (6, 0), 0.9985), ('o', (8, 0), None), ('n', (7, 0), 1.0)] [('opp', 35, 8), ('own', 1, 2), ('opp', 35, 8)]
+38 strong -4.5 [('n', (2, 8), 1.0), ('o', (0, 2), None), ('n', (1, 8), 1.0), ('o', (3, 8), None), ('n', (2, 8), 1.0)] [('opp', 36, 4), ('own', 1, 2), ('opp', 36, 4)]
+39 strong -18.5 [('n', (5, 0), 0.8136), ('o', (8, 3), None), ('n', (2, 0), 1.0), ('o', (0, 0), None), ('n', (1, 0), 0.9994)] [('own', 1, 2), ('opp', 35, 9), ('opp', 35, 9)]
+60 strong -14.5 [('n', (0, 7), 1.0), ('o', (4, 0), None), ('n', (0, 6), 1.0), ('o', (0, 8), None), ('n', (0, 7), 1.0)] [('opp', 38, 6), ('opp', 38, 6), ('own', 1, 2)]
+71 strong -1.5 [('n', (1, 8), 1.0), ('o', (3, 8), None), ('n', (2, 8), 1.0), ('o', 'P', None), ('n', (0, 8), 0.6285)] [('opp', 1, 1), ('opp', 40, 9)]
+73 strong 27.5 [('n', (1, 8), 1.0), ('o', (4, 1), None), ('n', (2, 0), 1.0), ('o', (0, 0), None), ('n', (1, 0), 0.9995)] [('own', 1, 2), ('opp', 26, 2), ('opp', 26, 2)]
+93 strong -3.5 [('n', (1, 8), 0.3101), ('o', (5, 2), None), ('n', (2, 0), 0.9998), ('o', (0, 0), None), ('n', (1, 0), 1.0)] [('own', 1, 2), ('opp', 38, 8), ('opp', 38, 8)]
+126 weak 38.5 [('n', (0, 0), 1.0), ('o', (4, 8), None), ('n', 'P', 1.0), ('o', (1, 0), None), ('n', (3, 8), 1.0)] []
+
+```

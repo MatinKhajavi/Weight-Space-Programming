@@ -1,0 +1,40 @@
+OUTPUT of Python run 12 of at most 120:
+```
+17 strong black -1 -15.5 two passes 111 cap 12 lost 23
+XXXX.XXX.
+XOOXXX.XX
+.OOOXXXX.
+OOOOXXX.X
+OOOOXOOXX
+OOOOOOOX.
+.OOOOOOXX
+OOOOOOOOX
+O.OOOOOX.
+
+[('n', 81), ('n', 81), ('n', 81), ('n', 81), ('n', 81), ('n', 81), ('o', 81), ('n', 81)]
+18 strong black -1 -11.5 two passes 103 cap 11 lost 21
+XXX.X....
+XOXXXXXXX
+OOOOXX.XX
+OOOXXXX.X
+OOOOXOXX.
+OO.OOOOXX
+.OOOOOOX.
+OOOOXOOOX
+.OOO.OOOO
+
+[('n', 81), ('n', 81), ('n', 81), ('n', 81), ('o', 81), ('n', 81)]
+20 strong black -1 -12.5 two passes 91 cap 6 lost 16
+.X.XXX.X.
+XXX.XXXX.
+XOOXX.X.X
+OOOX.XXX.
+OOOOXX.XX
+OOOOOOXXO
+OOOOOOOOO
+O..O.OOOO
+.OOOOOO.O
+
+[('n', 81), ('n', 81), ('o', 81), ('n', 81)]
+
+```

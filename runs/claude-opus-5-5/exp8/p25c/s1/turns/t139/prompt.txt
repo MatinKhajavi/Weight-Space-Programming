@@ -1,0 +1,10 @@
+OUTPUT of Python run 120 of at most 300:
+```
+Traceback (most recent call last):
+  File "<run>", line 5, in <module>
+  File "/usr/local/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 454, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/work/cand_E6/model.language_model.layers.15.self_attn.o_proj.weight.npy'
+
+```

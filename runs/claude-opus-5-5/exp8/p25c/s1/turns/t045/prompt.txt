@@ -1,0 +1,15 @@
+OUTPUT of Python run 38 of at most 300:
+```
+rep_index no source: could not get source code
+loop_info no source: could not get source code
+prompt_str no source: could not get source code
+ntok no source: could not get source code
+tok_ids no source: could not get source code
+dla no source: could not get source code
+c2 cols ['id', 'src', 'j', 'tokens', 'cut', 'correct', 'pred', 'text', 'period', 'loopstart', 'nchar', 'onset_tok', 'period_tok']
+                           id   src  j  tokens   cut  correct pred                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+cut cols ['id', 'src', 'j', 'tokens', 'cut', 'correct', 'pred', 'text', 'period', 'loopstart', 'nchar']
+fin_txt tokens: n 52 quantiles [  709  2644  4715  5651  9259 13314]
+compact[0] keys/type <class 'dict'> ['id', 'j', 'lead', 'body', 'p', 'text']
+
+```

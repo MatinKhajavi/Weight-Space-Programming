@@ -1,0 +1,36 @@
+OUTPUT of Python run 78 of at most 120:
+```
+1 maxcap 5 result 1 margin 56.5
+10 maxcap 19 result 1 margin 73.5
+16 maxcap 4 result 1 margin 73.5
+18 maxcap 29 result 1 margin 73.5
+23 maxcap 14 result 1 margin 44.5
+24 maxcap 13 result 1 margin 46.5
+27 maxcap 3 result 1 margin 65.5
+32 maxcap 7 result 1 margin 58.5
+33 maxcap 3 result 1 margin 65.5
+37 maxcap 5 result 1 margin 62.5
+50 maxcap 7 result 1 margin 58.5
+51 maxcap 15 result 1 margin 65.5
+57 maxcap 3 result 1 margin 66.5
+59 maxcap 7 result 1 margin 58.5
+60 maxcap 5 result 1 margin 73.5
+65 maxcap 8 result 1 margin 71.5
+69 maxcap 2 result 1 margin 82.5
+73 maxcap 17 result 1 margin 53.5
+80 maxcap 2 result 1 margin 82.5
+90 maxcap 7 result 1 margin 73.5
+94 maxcap 9 result 1 margin 69.5
+95 maxcap 3 result 1 margin 80.5
+97 maxcap 3 result 1 margin 80.5
+98 maxcap 17 result 1 margin 53.5
+101 maxcap 2 result 1 margin 82.5
+102 maxcap 4 result 1 margin 80.5
+103 maxcap 2 result 1 margin 82.5
+104 maxcap 2 result -1 margin 56.5
+108 maxcap 6 result 1 margin 75.5
+112 maxcap 5 result 1 margin 70.5
+118 maxcap 2 result 1 margin 82.5
+120 maxcap 7 result 1 margin 73.5
+
+```

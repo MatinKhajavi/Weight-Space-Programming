@@ -1,0 +1,6 @@
+OUTPUT of Python run 19 of at most 300:
+```
+['hidden_last_prompt.npy', 'hidden_mean_answer.npy', 'index.json', 'mlp_last_prompt.npy', 'mlp_mean_answer.npy']
+<class 'dict'> ['layers', 'mlp_layers', 'samples']
+
+```

@@ -1,0 +1,7 @@
+OUTPUT of Python run 43 of at most 300:
+```
+['text', 'pred', 'correct', 'tokens', 'cut']
+{'pred': '\\frac{3}{8}', 'correct': True, 'tokens': 6580, 'cut': False}
+finished 38 cut 474
+
+```

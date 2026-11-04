@@ -1,0 +1,19 @@
+OUTPUT of Python run 244 of at most 300:
+```
+cut 127 exact-loop tails 82 period chars median 118
+[math P=52] '13$. * Faces = $2 \\times 2 + 3 \\times 3 ='
+[math P=71] '65^\\circ$. $\\triangle PR ='
+[math P=1957] "This is not $2^n$. * So the answer is likely 256. * Let's check the recurrence again. * $a_n = a_{n-1} + 2a_{n-1}$. * This generates $1, 2, 4, 8, \\dot"
+[math P=129] 'x^3/x^2 \\cdot x^2)$. $T = 16(8 - 4x + 2x^2 +'
+[math P=529] 'So $K$ is an integer. This is a contradiction. The conclusion is that $K$ must be an integer. But $K$ is not an integer. So $K$ must be a rational num'
+[math P=224] "196. \\boxed{196} Okay, I'll stop. \\boxed{196} Final Answer:"
+[math P=172] '\\cdot N = 4$. $\\Gamma(N+1) = 2$. $\\Gamma(N+1) = 2$. $\\Gamma(N+1) \\cdot N = \\Gamma(N+1) \\cdot N$. $\\Gamma(N+1) = 2$. $\\Gamma(N+1) = 2$. $\\Gamma(N+1)'
+[math P=1126] "+ t_{max} = 640$. However, this is not the answer. Let's try to check if there is a configuration where $x$ and $y$ are larger. Assume $x$ and $y$ are"
+[math P=333] '2, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69,'
+[math P=55] '}{PR} \\cdot \\frac{PR}{PR}$. $\\tan(Q) = \\frac{PR'
+[math P=43] 'Maybe the roots are $1/2, 1/2, \\dots$?'
+[math P=30] '2 = 728$. $364 \\times'
+[math P=10] 'equiv 10 \\'
+[math P=1761] '{\\sqrt{6}-\\sqrt{2}}{4}$. * $\\sin(120)$: $\\frac{\\sqrt{3}}{2}$. * $\\sin(150)$: $\\frac{\\sqrt{3}}{2}$. * $\\sin(165)$: $\\frac{\\sqrt{6}-\\sqrt{2}}{4}$. * $\\s'
+
+```

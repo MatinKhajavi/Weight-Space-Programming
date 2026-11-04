@@ -1,0 +1,7 @@
+The neuron is effectively one-signed. Its activation ranges from −6.6 to +0.38, positive values never exceed 0.4 and occur mid-formula ("$" followed by a digit), and the strong negative tail sits at line starts where "Wait" is likely. So strengthening its output column would strengthen suppression of the "wait" family only where the model is about to say "Wait", with negligible effect elsewhere. I now have three mechanistically motivated candidates on top of Edit A. (1) Amplify the "Wait" brake 22.573. (2) Remove the main MLP "Wait" promoter 16.998. (3) Ablate head 19.0, which at line starts puts 0.6–0.8 of its attention on earlier "Wait" tokens and so may make doubt lines self-reinforcing. Before spending generation passes I'll screen them with teacher-forced passes on the model's own Edit-A transcripts. Those passes measure how much each edit lowers "Wait" at line starts and how much it damages the prediction of all other tokens in correct solutions. To build that corpus with the exact evaluation prompt, I first retrieve the prompt prefix and suffix I saved earlier.
+
+```python
+# Setup: recover exact eval prompt format (PREFIX/SUFFIX) to build a TF corpus from edit-A own transcripts
+print(repr(PREFIX)[:300]); print(repr(SUFFIX)[:300])
+print(open('/work/eval_prompt_format.txt').read()[:600])
+```

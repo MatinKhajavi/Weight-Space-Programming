@@ -1,0 +1,5 @@
+OUTPUT of Python run 88 of at most 300:
+```
+['L15_o_proj.pt', 'L19_o_proj.pt', 'L23_o_proj.pt'] ['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.19.self_attn.o_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']
+
+```

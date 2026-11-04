@@ -1,0 +1,8 @@
+The 47 non-loop cut answers are mixed. Some are genuine long explorations with mostly unique lines. Some are "Maybe ..." near-loops with about half the lines repeated. In some, the model closed its thinking (or wrote "Final Answer") too late and the answer was cut off. So no single new mechanism dominates as 'Wait' did. The recurring pattern is a doubt spiral that ends in copying: "Contradiction." → "Okay, maybe X" → … → back to X, after which earlier text is copied verbatim. Earlier analysis found that the doubt word at the start of each loop cycle was strongly pushed by layer 19's attention (+6.3 Wait-vs-So) and that several heads attend to earlier line-initial tokens at line starts. Two of those, 19.0 and 11.1, were never tested. My hypothesis is that line-start retrieval heads re-inject earlier doubt-line openings and keep the spiral going. I will first use recorded attention patterns (fwd_11, fwd_18) to measure, per head, how much attention from line-start positions goes to earlier line-initial tokens. That identifies which heads are line-start retrievers, as opposed to general induction heads.
+
+```python
+# Hypothesis: some FA heads (e.g. 19.0, 11.1) specialize in 'line-start retrieval' (newline query -> earlier line-initial tokens); quantify per head
+for d in ['/work/fwd_11', '/work/fwd_18', '/work/fwd_19']:
+    m = json.load(open(d + '/meta.json')); print(d, {k: (v if not isinstance(v, list) or len(v) < 8 else len(v)) for k, v in m.items() if k not in ('texts',)})
+    print('   files', sorted(os.listdir(d))[:12])
+```

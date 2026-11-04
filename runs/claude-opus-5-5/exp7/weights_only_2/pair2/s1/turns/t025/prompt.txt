@@ -1,0 +1,8 @@
+OUTPUT of run 24 of at most 60:
+```
+pred_all_Q   corr(all)=-0.408 corr(strong OV, n=22)=-0.613  mean z supp=+1.52 copy=-0.97
+idid_low_Q   corr(all)=-0.373 corr(strong OV, n=22)=-0.669  mean z supp=+2.47 copy=-0.76
+idid_all_QK  corr(all)=-0.283 corr(strong OV, n=22)=-0.600  mean z supp=+3.09 copy=-0.45
+pred_all_QK  corr(all)=-0.269 corr(strong OV, n=22)=-0.510  mean z supp=+1.78 copy=-0.33
+
+```

@@ -1,0 +1,23 @@
+OUTPUT of Python run 53 of at most 120:
+```
+6 black -0.5 [((8, 1), 'illegal'), ((8, 7), 'illegal')]
+10 black -5.5 [((7, 4), 'illegal'), ((8, 0), 'illegal'), ((8, 7), 'illegal')]
+19 black -3.5 [((8, 8), 'illegal')]
+28 black -3.5 [((0, 0), 'illegal'), ((1, 4), 'illegal'), ((3, 1), 'illegal')]
+56 black -3.5 [((1, 0), 'illegal')]
+66 white -0.5 [((0, 3), 'illegal'), ((0, 8), 'illegal'), ((2, 1), 'illegal')]
+89 white -0.5 [((2, 0), 'libs', 1, 'cap', 0), ((7, 8), 'illegal'), ((8, 1), 'illegal')]
+94 white -0.5 [((0, 6), 'libs', 1, 'cap', 0), ((3, 1), 'illegal'), ((6, 0), 'illegal')]
+111 white -2.5 [((7, 2), 'illegal')]
+114 white -1.5 [((0, 0), 'libs', 7, 'cap', 0), ((8, 0), 'illegal')]
+    X.XX.XX.X
+    .XOXXXXX.
+    XXOOXX.XX
+    .XXOX.X.X
+    XXOOXXXXX
+    OOOOOXOXO
+    OOOOOOOOO
+    .OO.OOOOO
+    O.XO.OO.X
+
+```

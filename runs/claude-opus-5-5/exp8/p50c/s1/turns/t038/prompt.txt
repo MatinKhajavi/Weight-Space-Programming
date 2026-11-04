@@ -1,0 +1,9 @@
+OUTPUT of Python run 33 of at most 300:
+```
+['texts', 'lengths', 'model', 'edited_tensors', 'files', 'padding']
+text 0 match True 875
+text 1 match True 1544
+0 prompt_len 96 onset 779 per 16 | mean lp pre-loop -0.242, 1st period -0.225, later periods -0.210, min later -1.536
+1 prompt_len 110 onset 1316 per 38 | mean lp pre-loop -0.672, 1st period -0.226, later periods -0.020, min later -0.614
+
+```

@@ -1,0 +1,21 @@
+OUTPUT of Python run 186 of at most 300:
+```
+cuts 127 exact loops 80
+period chars quantiles [ 28.  48. 114. 338. 919.]
+Counter({'no_exact_loop': 47, 'multiline_reasoning': 46, 'short<40': 16, 'maybe_line': 12, 'answer_stmt': 6})
+multiline_reasoning math_train_number_theory_780 P 144 onset 0.31 | ' \\to 165$.\n                *   $8, 6 \\to 154$.\n                *   $8, 5 \\to 165$.\n                *   $8, 7 \\to 150$.\n                *   $8, 9'
+multiline_reasoning math_train_counting_and_prob P 685 onset 0.98 | '                                *   Contradiction.\n\n                            *   Okay, maybe the roles are:\n                                *   Mal'
+answer_stmt math_train_geometry_6 P 224 onset 0.85 | '.\n                    \n                    \\boxed{196}\n                    \n                    Final Answer: 196.\n                    \n              '
+answer_stmt gsm8k_train_6043 P 192 onset 0.84 | 'e = $100$.\n    *   Regular amount = $100$.\n    *   Melted = $100 \\times N$.\n    *   Spent = $100$.\n    *   Ratio = $100/N$.\n    *   Maybe the answer i'
+short<40 gsm8k_train_750 P 18 onset 0.46 | '. "Half dozen" = 6'
+short<40 math_train_algebra_191 P 37 onset 0.61 | '.\n        So $P(-\\sqrt{13}) = -11652$'
+multiline_reasoning math_train_precalculus_544 P 62 onset 0.75 | ' mutually orthogonal.\n    $\\mathbf{a}, \\mathbf{b}, \\mathbf{c}$'
+multiline_reasoning gsm8k_train_319 P 47 onset 0.39 | 'emoved" means "removed".\n                *   "R'
+maybe_line math_train_geometry_168 P 785 onset 0.89 | ' is $\\sqrt{1.5^2+2^2+3^2}$.\n        Maybe the "unit distance" refers to the distance between the centers of the faces?\n        If the faces are $x=0, '
+multiline_reasoning gsm8k_train_4461 P 192 onset 0.59 | ' 10$.\n                                    *   Contradiction.\n                                    *   Okay, maybe Ms teaches $N_{Total} = 50$.\n        '
+multiline_reasoning gsm8k_train_412 P 169 onset 0.15 | '".\n                                *   "Gave [Anna] = A".\n                                *   "He gave [Tim] = 15".\n                                * '
+maybe_line gsm8k_train_3144 P 900 onset 0.32 | " the interest earned (with the rate doubled).\n                                                                                *   Okay, I'll stop gues"
+short<40 math_train_prealgebra_276 P 28 onset 0.64 | '\nPrimes $x, x+3, x+6, \\dots$'
+maybe_line gsm8k_train_3856 P 642 onset 0.29 | ' she collects $5 \\times 12 = 60$.\n                                                                                *   Total = $3 + 60 = 63$.\n         '
+
+```

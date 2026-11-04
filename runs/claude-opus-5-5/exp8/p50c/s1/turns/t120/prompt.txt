@@ -1,0 +1,6 @@
+OUTPUT of Python run 103 of at most 300:
+```
+['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.22.mlp.down_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']
+15.7 col norm 0.000 | 23.0 0.000 23.5 0.000 | 23.1 7.501 | 22.573 0.524 (orig 0.262) | 22 cols changed 1
+
+```

@@ -1,0 +1,10 @@
+OUTPUT of Python run 70 of at most 300:
+```
+['asc', 'c2t', 'dla', 'drop_edit', 'edited', 'f_', 'find_loop', 'find_period', 'first_answer_pos', 'ind_targets', 'indent_stats', 'load', 'load_original', 'loop_onset', 'norm_ans', 'num_in', 'prompt_of', 'readj', 'save_edit', 'set_heads', 'short', 'summarize', 'take_math', 'tokstr']
+['A2', 'Ah', 'Ah_', 'Eemb', 'F', 'H', 'Hs', 'ID', 'L', 'L4', 'LP', 'MODEL', 'Mm', 'NAMES', 'P', 'P1', 'P2', 'PRB', 'PREFIX', 'RA', 'S1', 'SUFFIX', 'Sm', 'TF', 'U', 'U2', 'WORK', 'Wd', 'X', 'Xc', 'a', 'a0', 'a_loop', 'a_pre', 'aime', 'allind', 'alts', 'ans', 'b', 'bot', 'boxes', 'by_lvl', 'c', 'c_', 'cand', 'cfg', 'corpus', 'corr', 'ctrl', 'cut', 'cut_c', 'cut_rows', 'cut_s', 'cutmask', 'dfi', 'diag_ids', 'dm', 'early', 'errs', 'fin', 'fin_rows', 'fl', 'fn', 'fp', 'fracs', 'full', 'g', 'g6e', 'g6o', 'g7e', 'g7o', 'gF', 'gans', 'gc', 'gsm', 'gsm_ids', 'h', 'has_ans_pre', 'has_box_ans', 'hit', 'hn', 'i', 'ids', 'ids2', 'ids2l', 'ids4', 'ids_tf', 'idx', 'ind', 'info', 'j', 'k', 'kind', 'l', 'layer', 'lens', 'line', 'loop1', 'loopR', 'loop_pos', 'lp', 'lp4', 'lp_pos', 'lv', 'lv_need', 'lvl', 'lvl_w', 'm', 'm4', 'meta', 'meta_c', 'mo', 'mth', 'mx', 'myids', 'n', 'nm', 'nn', 'notes', 'nt']
+<class 'list'> 2
+{'id': 'math_train_intermediate_algebra_948', 'on_in_win': 1400, 'P': 45, 'ntok': 1928}
+{'id': 'math_train_precalculus_742', 'on_in_win': 1500, 'P': 81, 'ntok': 1582}
+{'texts': "['x = 101$.\\n    $1,030,301 - 20,402 + 101$.\\n    $1,030,301 - 20,402 = 1,009,999$.\\n    $1,009,999 + 101 = 1,010,100$.\\n    Okay, so $x^3 - 2x^2 + x = 1,010,100$.\\n    Now check $x(x-1)^2$.\\n    $x=1", 'lengths': '[1841, 1500]', 'model': 'edited', 'edited_tensors': "['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']", 'files': "{'input_ids.npy': [2, 1841], 'token_logprobs.npy': [2, 1840], 'topk_logprobs.npy': [2, 1841, 10], 'topk_ids.npy': [2, 1841, 10], 'hidden_0.npy': [2, 1841, 1024], 'hidden_1.npy': [2, 1841, 1024], 'hidd", 'padding': 'right; positions >= length are padding'}
+
+```

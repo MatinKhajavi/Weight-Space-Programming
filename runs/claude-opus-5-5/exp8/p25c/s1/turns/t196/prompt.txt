@@ -1,0 +1,8 @@
+OUTPUT of Python run 169 of at most 300:
+```
+sets_H keys ['H', 'H2']
+Traceback (most recent call last):
+  File "<run>", line 22, in <module>
+ValueError: invalid literal for int() with base 10: 'Level 5'
+
+```

@@ -1,0 +1,7 @@
+OUTPUT of Python run 60 of at most 300:
+```
+15 rel change 0.094 | Wait readout ratio new/orig: 2.0
+19 rel change 0.0913 | Wait readout ratio new/orig: 2.0
+edited: ['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.19.self_attn.o_proj.weight']
+
+```

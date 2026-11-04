@@ -1,0 +1,16 @@
+OUTPUT of Python run 74 of at most 300:
+```
+orig: loops 224 | median p 42 | onset med 5994 | no-newline cycles 2 | boxed in cycle 1 | ref ans in cycle 47 | ans before onset 140
+   top line-start words (share of loops): *:0.54, Wait:0.39, So:0.08, $:0.06, Let's:0.03, Then:0.03, But:0.02, If:0.02, Yes:0.02, -:0.01, Maybe:0.01, The:0.01, This:0.01, `:0.01, No:0.01, I'll:0.01, Okay:0.01, Is:0.01, I:0.00, for:0.00, label:0.00, draw:0.00
+v1: loops 143 | median p 65 | onset med 8993 | no-newline cycles 2 | boxed in cycle 0 | ref ans in cycle 31 | ans before onset 94
+   top line-start words (share of loops): *:0.55, So:0.20, Wait:0.20, But:0.15, $:0.10, Let's:0.07, If:0.07, This:0.06, Is:0.03, Maybe:0.03, The:0.03, Yes:0.02, Okay:0.02, I'll:0.01, I:0.01, No:0.01, Divisible:0.01, Sum:0.01, -:0.01, ":0.01, Contradiction:0.01, Because:0.01
+v2: loops 144 | median p 60 | onset med 8558 | no-newline cycles 3 | boxed in cycle 0 | ref ans in cycle 28 | ans before onset 80
+   top line-start words (share of loops): *:0.58, So:0.20, Wait:0.17, $:0.12, But:0.09, Let's:0.06, If:0.06, The:0.03, This:0.03, .:0.01, Maybe:0.01, Then:0.01, Is:0.01, We:0.01, No:0.01, ":0.01, -:0.01, \:0.01, I'll:0.01, Thus:0.01, Area:0.01, /:0.01
+-- math_train_intermediate_algebra_354 p 20 on 16328 |  $x^3+y^3+z^3 = -3xyz$ is false. | So
+-- math_train_number_theory_242 p 164 on 8051 | (5) = 5$. |     *   So the order is 4. |  |     *   Wait, is it possible that $f(x)$ is defined as $x^2 \pmod{11}$? |     *   Wait, I need to check if $f(x)$ is defined as $x^2 \pmod{11}$? |     *   Wait, I need to check if $f(x)$ is defined as $x^2 \pmod{11}$? |     *   
+-- math_train_intermediate_algebra_664 p 28 on 22033 | {m^2-4}{2} + \frac{1}{2}$. |         $q = 2 + \frac
+-- math_train_counting_and_probability_672 p 57 on 4697 |  the question says "not necessarily in the tan-pink-violet order". |         *   This implies that the order of the blocks can be different. |         *   So, the sequence must contain $T^3 P^2 V^4$. |         *   But
+-- gsm8k_train_1225 p 209 on 5844 |  to reach his goal?". |     *   If the goal is "averaging 30 points per game", the answer is 30. |  |     *   Let's assume the question is a trick. |     *   "How many points does he need to average per game to reach his goal?" |     *   If the goal is "averaging 30 poi
+-- gsm8k_train_3454 p 128 on 13985 |  drop, 32 graduate. |     *   Then 0 remain. |     *   This seems to lead to 0. |  |     *   Let's check if there's a misunderstanding of "half of the remaining students". |     *   Maybe the "half of the remaining students" refers to the *number of students who graduat
+
+```

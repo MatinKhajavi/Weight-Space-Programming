@@ -1,0 +1,20 @@
+OUTPUT of run 45 of at most 60:
+```
+L17h2: rel change of QK on answer-token keys=0.0182  z vs random key subspace=+3.7
+L17h1: rel change of QK on answer-token keys=0.0404  z vs random key subspace=+2.7
+L17h0: rel change of QK on answer-token keys=0.0255  z vs random key subspace=+2.4
+L17h3: rel change of QK on answer-token keys=0.0283  z vs random key subspace=+2.0
+L16h1: rel change of QK on answer-token keys=0.0211  z vs random key subspace=+1.8
+L12h3: rel change of QK on answer-token keys=0.0283  z vs random key subspace=+1.6
+L15h0: rel change of QK on answer-token keys=0.0257  z vs random key subspace=+1.4
+L15h1: rel change of QK on answer-token keys=0.0177  z vs random key subspace=+0.9
+L12h1: rel change of QK on answer-token keys=0.0241  z vs random key subspace=+0.9
+L15h3: rel change of QK on answer-token keys=0.0132  z vs random key subspace=+0.8
+L11h2: rel change of QK on answer-token keys=0.0182  z vs random key subspace=+0.7
+L10h1: rel change of QK on answer-token keys=0.0336  z vs random key subspace=+0.7
+L14h1: rel change of QK on answer-token keys=0.0258  z vs random key subspace=+0.7
+L14h0: rel change of QK on answer-token keys=0.0215  z vs random key subspace=+0.5
+L14h2: rel change of QK on answer-token keys=0.0198  z vs random key subspace=+0.5
+L16h3: rel change of QK on answer-token keys=0.0131  z vs random key subspace=+0.5
+
+```

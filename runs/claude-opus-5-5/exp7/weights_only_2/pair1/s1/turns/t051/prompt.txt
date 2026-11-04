@@ -1,0 +1,22 @@
+OUTPUT of run 49 of at most 60:
+```
+--- target layer 15
+  q   : top sources att11(ratio 1.19, z +4.1), att12(ratio 1.11, z +3.0), att13(ratio 1.03, z +1.9), mlp14(ratio 0.97, z +1.2) | att12 z=+3.0, mlp12 z=+1.1
+  k   : top sources att11(ratio 1.16, z +3.0), att12(ratio 1.11, z +2.4), mlp14(ratio 1.09, z +2.2), att13(ratio 1.08, z +2.1) | att12 z=+2.4, mlp12 z=+1.4
+  v   : top sources att14(ratio 1.43, z +2.5), att8(ratio 1.28, z +1.4), mlp14(ratio 1.21, z +1.0), mlp7(ratio 1.21, z +0.9) | att12 z=-1.5, mlp12 z=-0.6
+  gate: top sources att12(ratio 1.13, z +3.4), mlp14(ratio 1.12, z +3.3), mlp13(ratio 1.09, z +2.3), att11(ratio 1.09, z +2.3) | att12 z=+3.4, mlp12 z=+1.9
+  up  : top sources att14(ratio 1.14, z +2.3), att12(ratio 1.14, z +2.3), mlp14(ratio 1.12, z +1.9), att11(ratio 1.11, z +1.7) | att12 z=+2.3, mlp12 z=+0.7
+--- target layer 16
+  q   : top sources mlp14(ratio 1.17, z +3.1), mlp13(ratio 1.13, z +2.3), att14(ratio 1.12, z +2.1), att12(ratio 1.09, z +1.5) | att12 z=+1.5, mlp12 z=+1.4
+  k   : top sources mlp14(ratio 1.30, z +5.8), mlp13(ratio 1.23, z +4.2), att12(ratio 1.21, z +3.8), att14(ratio 1.20, z +3.7) | att12 z=+3.8, mlp12 z=+3.1
+  v   : top sources att12(ratio 1.17, z +3.0), att6(ratio 1.14, z +1.9), att11(ratio 1.13, z +1.8), att7(ratio 1.10, z +0.8) | att12 z=+3.0, mlp12 z=-0.6
+  gate: top sources mlp14(ratio 1.08, z +4.8), att14(ratio 1.08, z +4.5), mlp13(ratio 1.05, z +2.9), att12(ratio 1.05, z +2.6) | att12 z=+2.6, mlp12 z=+1.3
+  up  : top sources att14(ratio 1.16, z +4.1), att11(ratio 1.11, z +2.2), att12(ratio 1.11, z +2.1), mlp14(ratio 1.10, z +1.7) | att12 z=+2.1, mlp12 z=+0.4
+--- target layer 17
+  q   : top sources mlp14(ratio 1.05, z +1.1), mlp6(ratio 1.03, z +0.7), att14(ratio 1.02, z +0.7), mlp13(ratio 1.01, z +0.6) | att12 z=+0.0, mlp12 z=+0.1
+  k   : top sources att11(ratio 1.60, z +3.0), att12(ratio 1.54, z +2.6), att13(ratio 1.44, z +1.7), att14(ratio 1.42, z +1.4) | att12 z=+2.6, mlp12 z=+0.1
+  v   : top sources att11(ratio 1.59, z +2.7), att12(ratio 1.48, z +1.9), att10(ratio 1.32, z +0.8), att13(ratio 1.31, z +0.7) | att12 z=+1.9, mlp12 z=-0.7
+  gate: top sources mlp14(ratio 1.12, z +2.7), att8(ratio 1.09, z +1.2), att6(ratio 1.08, z +0.7), mlp13(ratio 1.08, z +0.7) | att12 z=-1.6, mlp12 z=-0.2
+  up  : top sources att14(ratio 1.18, z +3.5), att8(ratio 1.14, z +1.7), att6(ratio 1.12, z +0.9), mlp14(ratio 1.11, z +0.6) | att12 z=+0.2, mlp12 z=-0.7
+
+```

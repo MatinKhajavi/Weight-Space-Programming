@@ -1,0 +1,6 @@
+OUTPUT of run 43 of at most 60:
+```
+observed L11-17 summed effect: 0.683  heads positive: 19 of 28
+null mean -0.028 sd 0.312 max 0.752 ; z = 2.28 ; frac null >= obs: 0.010
+
+```

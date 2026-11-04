@@ -1,0 +1,6 @@
+OUTPUT of Python run 107 of at most 300:
+```
+<class 'list'> ['text', 'pred', 'correct', 'tokens', 'cut']
+grade keys ['correct']
+
+```

@@ -1,0 +1,6 @@
+OUTPUT of Python run 153 of at most 300:
+```
+<class 'list'> 14 ['id', 'j', 'lead', 'body', 'p', 'text']
+(2, 8, 416, 416) [392, 416]
+
+```

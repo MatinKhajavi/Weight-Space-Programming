@@ -1,0 +1,23 @@
+OUTPUT of Python run 55 of at most 120:
+```
+14 black final -2.5 first pass ply 58 of 83 margin then 11.5 opp moves after 10 [('n', 81), ('o', 5), ('n', 62), ('o', 28), ('n', 81), ('o', 74), ('n', 73), ('o', 9), ('n', 81), ('o', 1), ('n', 59), ('o', 44), ('n', 81), ('o', 7), ('n', 71), ('o', 77)]
+20 black final -1.5 first pass ply 78 of 98 margin then -3.5 opp moves after 8 [('n', 81), ('o', 36), ('n', 81), ('o', 17), ('n', 81), ('o', 45), ('n', 55), ('o', 7), ('n', 8), ('o', 16), ('n', 81), ('o', 17), ('n', 7), ('o', 81), ('n', 15), ('o', 16)]
+23 black final -3.5 first pass ply 74 of 92 margin then 6.5 opp moves after 8 [('n', 81), ('o', 0), ('n', 2), ('o', 74), ('n', 9), ('o', 32), ('n', 23), ('o', 0), ('n', 81), ('o', 9), ('n', 8), ('o', 24), ('n', 25), ('o', 64), ('n', 81), ('o', 65)]
+28 black final -5.5 first pass ply 84 of 88 margin then -2.5 opp moves after 1 [('n', 81), ('o', 26), ('n', 81), ('o', 81)]
+50 white final -3.5 first pass ply 63 of 110 margin then -6.5 opp moves after 20 [('n', 81), ('o', 18), ('n', 44), ('o', 36), ('n', 22), ('o', 62), ('n', 81), ('o', 35), ('n', 26), ('o', 45), ('n', 63), ('o', 1), ('n', 54), ('o', 75), ('n', 74), ('o', 72)]
+51 white final -4.5 first pass ply 75 of 85 margin then 3.5 opp moves after 4 [('n', 81), ('o', 79), ('n', 71), ('o', 70), ('n', 55), ('o', 64), ('n', 81), ('o', 6), ('n', 81), ('o', 81)]
+52 white final -1.5 first pass ply 69 of 87 margin then 13.5 opp moves after 8 [('n', 81), ('o', 58), ('n', 8), ('o', 18), ('n', 9), ('o', 74), ('n', 24), ('o', 54), ('n', 81), ('o', 45), ('n', 81), ('o', 72), ('n', 81), ('o', 80), ('n', 13), ('o', 76)]
+55 white final -3.5 first pass ply 31 of 90 margin then 6.5 opp moves after 28 [('n', 81), ('o', 27), ('n', 58), ('o', 66), ('n', 25), ('o', 45), ('n', 69), ('o', 61), ('n', 77), ('o', 68), ('n', 78), ('o', 67), ('n', 4), ('o', 62), ('n', 16), ('o', 76)]
+57 white final -0.5 first pass ply 79 of 91 margin then 6.5 opp moves after 5 [('n', 81), ('o', 26), ('n', 17), ('o', 64), ('n', 81), ('o', 18), ('n', 3), ('o', 70), ('n', 67), ('o', 76), ('n', 81), ('o', 81)]
+58 white final -2.5 first pass ply 73 of 87 margin then 7.5 opp moves after 6 [('n', 81), ('o', 63), ('n', 31), ('o', 76), ('n', 21), ('o', 18), ('n', 2), ('o', 0), ('n', 81), ('o', 9), ('n', 81), ('o', 74), ('n', 81), ('o', 81)]
+59 white final -3.5 first pass ply 71 of 105 margin then 8.5 opp moves after 16 [('n', 81), ('o', 73), ('n', 9), ('o', 0), ('n', 1), ('o', 54), ('n', 42), ('o', 0), ('n', 35), ('o', 56), ('n', 1), ('o', 44), ('n', 43), ('o', 0), ('n', 53), ('o', 1)]
+64 white final -1.5 first pass ply 43 of 95 margin then 5.5 opp moves after 25 [('n', 81), ('o', 35), ('n', 26), ('o', 43), ('n', 55), ('o', 76), ('n', 68), ('o', 53), ('n', 62), ('o', 6), ('n', 58), ('o', 8), ('n', 49), ('o', 70), ('n', 67), ('o', 61)]
+65 white final -1.5 first pass ply 73 of 90 margin then 10.5 opp moves after 7 [('n', 81), ('o', 54), ('n', 81), ('o', 74), ('n', 3), ('o', 67), ('n', 81), ('o', 72), ('n', 81), ('o', 80), ('n', 81), ('o', 79), ('n', 81), ('o', 23), ('n', 14), ('o', 81)]
+67 white final -1.5 first pass ply 65 of 84 margin then 6.5 opp moves after 8 [('n', 81), ('o', 80), ('n', 13), ('o', 47), ('n', 15), ('o', 73), ('n', 81), ('o', 56), ('n', 70), ('o', 74), ('n', 3), ('o', 54), ('n', 23), ('o', 71), ('n', 81), ('o', 77)]
+69 white final -5.5 first pass ply 75 of 89 margin then 2.5 opp moves after 5 [('n', 81), ('o', 72), ('n', 54), ('o', 25), ('n', 26), ('o', 67), ('n', 16), ('o', 81), ('n', 55), ('o', 64), ('n', 81), ('o', 77), ('n', 81), ('o', 81)]
+70 white final -1.5 first pass ply 83 of 88 margin then -0.5 opp moves after 1 [('n', 81), ('o', 9), ('n', 2), ('o', 81), ('n', 81)]
+71 white final -4.5 first pass ply 99 of 115 margin then 4.5 opp moves after 7 [('n', 81), ('o', 8), ('n', 81), ('o', 63), ('n', 7), ('o', 18), ('n', 81), ('o', 8), ('n', 81), ('o', 0), ('n', 7), ('o', 2), ('n', 81), ('o', 8), ('n', 81), ('o', 81)]
+75 white final -2.5 first pass ply 53 of 91 margin then 10.5 opp moves after 18 [('n', 81), ('o', 73), ('n', 72), ('o', 36), ('n', 16), ('o', 63), ('n', 54), ('o', 47), ('n', 63), ('o', 73), ('n', 5), ('o', 44), ('n', 3), ('o', 71), ('n', 35), ('o', 78)]
+76 white final -0.5 first pass ply 83 of 95 margin then -0.5 opp moves after 5 [('n', 81), ('o', 53), ('n', 52), ('o', 1), ('n', 42), ('o', 44), ('n', 62), ('o', 44), ('n', 53), ('o', 46), ('n', 81), ('o', 81)]
+
+```

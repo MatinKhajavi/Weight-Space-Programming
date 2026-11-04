@@ -1,0 +1,40 @@
+OUTPUT of Python run 14 of at most 120:
+```
+m2
+  0 true 709 false 0
+  1 true 849 false 0
+  2 true 947 false 83
+  3 true 504 false 180
+  4 true 251 false 306
+  5 true 109 false 275
+  6 true 51 false 207
+  7 true 18 false 132
+  8 true 5 false 47
+  9 true 3 false 51
+  10 true 0 false 42
+  11 true 1 false 16
+  12 true 0 false 0
+m3
+  0 true 423 false 0
+  1 true 400 false 0
+  2 true 498 false 9
+  3 true 550 false 33
+  4 true 586 false 53
+  5 true 378 false 121
+  6 true 285 false 180
+  7 true 138 false 190
+  8 true 95 false 198
+  9 true 33 false 97
+  10 true 33 false 108
+  11 true 19 false 72
+  12 true 5 false 73
+  13 true 2 false 53
+  14 true 1 false 40
+  15 true 0 false 28
+  16 true 1 false 22
+  17 true 0 false 31
+  18 true 0 false 18
+  19 true 0 false 7
+  20 true 0 false 6
+
+```

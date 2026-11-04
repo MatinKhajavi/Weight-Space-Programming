@@ -1,0 +1,20 @@
+OUTPUT of Python run 43 of at most 120:
+```
+('A', 'ok', 'est') 480
+('A', 'ok', 'no') 78354
+('A', 'trueSA', 'est') 3462
+('A', 'trueSA', 'no') 270
+('chainexact', 'ok', 'est') 162
+('chainexact', 'ok', 'no') 78672
+('chainexact', 'trueSA', 'est') 3565
+('chainexact', 'trueSA', 'no') 167
+('l3', 'ok', 'est') 394
+('l3', 'ok', 'no') 78440
+('l3', 'trueSA', 'est') 3462
+('l3', 'trueSA', 'no') 270
+('loc', 'ok', 'est') 157
+('loc', 'ok', 'no') 78677
+('loc', 'trueSA', 'est') 3345
+('loc', 'trueSA', 'no') 387
+
+```

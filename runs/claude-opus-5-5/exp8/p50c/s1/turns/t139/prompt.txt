@@ -1,0 +1,13 @@
+OUTPUT of Python run 121 of at most 300:
+```
+EXACT EVALUATION PROMPT FORMAT
+The evaluation prompt, exactly as the model sees it (thinking on), for a problem P:
+PREFIX + P + SUFFIX, with
+PREFIX = '<|im_start|>user\n'
+SUFFIX = '\nPlease reason step by step, and put your final answer within \\boxed{}.<|im_end|>\n<|im_start|>assistant\n<think>\n'
+The model's answer follows SUFFIX directly. To score a text with a teacher-forced pass, send PREFIX + P + SUFFIX + answer as one raw text in "texts" ("chats" re-renders assistant turns and drops their reasoning).
+
+qwen3_5_text None ['architectures', 'attention_bias', 'attention_dropout', 'attn_output_gate', 'bos_token_id', 'dtype', 'eos_token_id', 'full_attention_interval', 'head_dim', 'hidden_act', 'hidden_size', 'initializer_range']
+L0 input_layernorm mean 0.23761004209518433
+
+```

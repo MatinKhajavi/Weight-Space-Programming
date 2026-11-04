@@ -1,0 +1,11 @@
+OUTPUT of Python run 270 of at most 300:
+```
+orig ok n 91 has Ready 0.582 Ready within 400ch before </think> 0.132
+    '{1}{\\sqrt{3}}$.\n    Step 4: Apply the negative sign.\n    $\\cot(-60^\\circ) = -\\frac{1}{\\sqrt{3}}$.\n    Step 5: Rationalize.\n    $-\\frac{\\sqrt{3}}{3}$.\n    Done.\n</think>\n\nTo'
+    ' terms inside the parentheses.\n    $16 \\times 2x = 32x$\n    $16 \\times 5 = 80$\n    Therefore, $16(2x+5) = 32x + 80$.\n\n    Looks good. Ready to generate output.\n</think>\n\nTo'
+C ok n 463 has Ready 0.261 Ready within 400ch before </think> 0.089
+    't(-60^\\circ)$.\n    $\\cot(-60^\\circ) = \\frac{1}{\\tan(-60^\\circ)} = \\frac{1}{-\\sqrt{3}} = -\\frac{1}{\\sqrt{3}}$.\n    Yes, negative.\n    \n    Okay, ready to write.\n</think>\n\nTo'
+    'nent is even, so the sign cancels out (becomes positive) when negating $x$.\n        Thus $f(-x) = f(x)$.\n\n        Final check complete.\n        Result: "even".\n</think>\n\nTo'
+C cut n 179 has Ready 0.0 Ready within 400ch before </think> 0.0
+
+```

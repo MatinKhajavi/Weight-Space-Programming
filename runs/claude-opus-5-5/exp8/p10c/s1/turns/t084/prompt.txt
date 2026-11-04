@@ -1,0 +1,13 @@
+OUTPUT of Python run 73 of at most 300:
+```
+toks type list 32768
+loop_info -> None
+period_of -> None
+onset_period -> (None, None)
+line_start_positions -> [17, 30, 56, 78, 93, 151, 189, 247, 299, 314]
+wait_rate -> 1.0
+finish_stats -> 0
+ans_before -> True
+analyze -> [{'id': 'math_train_precalculus_410', 'src': 'math', 'ok': False, 'cut': True, 'n': 32768, 'on': None, 'p': None, 'cnt': {' Wait': 11, 'Wait': 0, ' wait': 1, ' Hold': 0, ' Actually': 1, ' Hmm': 0, 'Hmm': 0, ' But': 4, 'But': 0, ' maybe': 0, ' Maybe': 4}, 'cyc': {' Wait': False, 'Wait': False, ' wait': False, ' Hold': False, ' Actually': False, ' Hmm': False, 'Hmm': False, ' But': False, 'But': Fal
+
+```

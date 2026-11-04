@@ -1,0 +1,9 @@
+OUTPUT of Python run 94 of at most 300:
+```
+v3 loops 175: first words after bullets: Wait:0.65, So:0.38, But:0.38, If:0.26, $:0.22, Let's:0.19, This:0.17, Maybe:0.09, Then:0.08, The:0.07, However:0.06, And:0.03, Okay:0.03, No:0.03
+L22 N573: act doubt-dec -3.94 other -1.56 | doubt-set logit push doubt-dec -1.510 other -0.604
+L23 N375: act doubt-dec +0.76 other +0.24 | doubt-set logit push doubt-dec -0.222 other -0.070
+L22 N387: act doubt-dec -0.48 other -0.24 | doubt-set logit push doubt-dec -0.113 other -0.058
+L20 N106: act doubt-dec -0.26 other -0.22 | doubt-set logit push doubt-dec +0.044 other +0.038
+
+```

@@ -1,0 +1,24 @@
+OUTPUT of Python run 33 of at most 120:
+```
+0 false orig (1, 2) p_orig=0.999 top (1, 2) 0.999 top captures 0 logit 9.5
+1 false orig (2, 1) p_orig=0.350 top (5, 0) 0.647 top captures 1 logit 5.5
+2 false orig (0, 4) p_orig=1.000 top (0, 4) 1.000 top captures 0 logit 19.0
+3 false orig (1, 7) p_orig=0.946 top (1, 7) 0.946 top captures 0 logit -3.1
+4 false orig (1, 1) p_orig=0.990 top (1, 1) 0.990 top captures 0 logit 4.8
+5 false orig (8, 6) p_orig=0.422 top (8, 0) 0.576 top captures 0 logit 6.4
+6 false orig (7, 4) p_orig=0.992 top (7, 4) 0.992 top captures 0 logit 4.9
+7 false orig (8, 1) p_orig=0.782 top (8, 1) 0.782 top captures 0 logit 2.0
+8 false orig (0, 7) p_orig=0.928 top (0, 7) 0.928 top captures 0 logit 1.9
+9 false orig (7, 8) p_orig=0.365 top (5, 2) 0.602 top captures 0 logit 2.4
+10 false orig (0, 7) p_orig=0.000 top (8, 6) 1.000 top captures 0 logit 8.9
+11 false orig (8, 2) p_orig=0.656 top (8, 2) 0.656 top captures 0 logit -1.7
+12 cap orig (1, 0) p_orig=0.949 top (1, 0) 0.949 top captures 12 logit 5.7
+13 cap orig (3, 5) p_orig=1.000 top (3, 5) 1.000 top captures 5 logit 26.4
+14 cap orig (0, 7) p_orig=0.717 top (0, 7) 0.717 top captures 5 logit 2.7
+15 cap orig (3, 3) p_orig=1.000 top (3, 3) 1.000 top captures 5 logit 27.0
+16 cap orig (2, 0) p_orig=0.836 top (2, 0) 0.836 top captures 10 logit 3.1
+17 cap orig (8, 5) p_orig=0.597 top (8, 5) 0.597 top captures 6 logit 6.8
+18 cap orig (8, 0) p_orig=1.000 top (8, 0) 1.000 top captures 33 logit 8.3
+19 cap orig (7, 0) p_orig=1.000 top (7, 0) 1.000 top captures 13 logit 4.3
+
+```

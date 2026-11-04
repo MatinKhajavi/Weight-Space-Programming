@@ -1,0 +1,12 @@
+OUTPUT of Python run 80 of at most 120:
+```
+('deg3', 'la1', 'died') 25
+('deg3', 'la1', 'surv') 7
+('deg3', 'la2+', 'died') 10
+('deg3', 'la2+', 'surv') 167
+('deg4', 'la1', 'died') 6
+('deg4', 'la1', 'surv') 4
+('deg4', 'la2+', 'died') 2
+('deg4', 'la2+', 'surv') 246
+
+```

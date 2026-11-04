@@ -1,0 +1,37 @@
+OUTPUT of Python run 50 of at most 120:
+```
+Counter({('two passes', 1, 'net'): 52, ('two passes', -1, 'net'): 33, ('two passes', -1, 'opponent'): 22, ('two passes', 1, 'opponent'): 11, ('repetition', -1, 'net'): 4, ('repetition', 1, 'opponent'): 3, ('move limit', 1, 'net'): 2, ('move limit', 1, 'opponent'): 1})
+3 -1 0.5 [('n', (7, 8), 0.5), ('o', 'P', None), ('n', (8, 7), 1.0), ('o', (8, 8), None), ('n', (7, 7), 1.0)]
+       XXXOOOOOO
+       OOOOX.OOO
+       OOOOOOOX.
+       OOOOOOO.O
+20 1 7.5 [('o', (8, 8), None), ('n', (0, 1), 1.0), ('o', 'P', None), ('n', (7, 8), 1.0), ('o', (0, 0), None)]
+       O.OOOOOOO
+       XOOXOOOO.
+       .XXXXXOOO
+31 -1 -1.5 [('n', (0, 8), 1.0), ('o', (8, 2), None), ('n', 'P', 1.0), ('o', (1, 8), None), ('n', (8, 1), 1.0)]
+       OOOOOOOO.
+       XOOOOOOXO
+       XXOXXOOXX
+38 -1 -11.5 [('n', (7, 8), 1.0), ('o', 'P', None), ('n', (8, 7), 1.0), ('o', (8, 8), None), ('n', (7, 7), 0.97)]
+       O.OOOOOOO
+       OOO.OOOOO
+       OOOOOOOX.
+       .O.XOOO.O
+41 1 -2.5 [('o', (3, 7), None), ('n', (3, 5), 1.0), ('o', (3, 6), None)]
+       .XOOXOOX.
+       .XOOXOXX.
+       .OOOO.O.X
+       .XOXXOXXX
+       ..X.XOOOO
+44 -1 16.5 [('n', (8, 7), 1.0), ('o', (8, 5), None), ('n', (8, 6), 1.0)]
+       OOOXXOOOO
+       OOXX.XOOO
+       .OX.X.X.O
+83 1 41.5 [('o', (0, 4), None), ('n', (0, 2), 1.0), ('o', (0, 3), None)]
+       XX.X.O..O
+       .XXOO.OOO
+       .XXXOOOO.
+
+```

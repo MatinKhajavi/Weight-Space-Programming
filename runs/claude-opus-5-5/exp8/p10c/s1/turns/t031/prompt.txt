@@ -1,0 +1,7 @@
+OUTPUT of Python run 28 of at most 300:
+```
+loop samples: frac with >=1 finish-intent before onset: 0.08, median count 0, mean 0.3
+finished samples: counts [11, 4, 3, 2, 0, 7, 5, 3, 2, 2, 2, 1, 6, 1, 0, 2, 1, 1, 3, 0, 2, 4, 3, 7, 5, 2, 2, 4, 0, 0, 11, 1, 7, 0, 7, 0, 0, 5]
+[('\n\n____*___Wa', 24), ('\n\n____Wait,_', 20), ('\n____I_will_', 8), ('\n____The_rea', 3), ("\n\n____Let's_", 3), ('\n\n____Final_', 3), ('\n____Step_1:', 3), ("\n____I'll_ma", 3), ("\n____I'll_en", 3), ('\n\n____*___Le', 3), ("\n____I'll_us", 3), ("\n\nWait,_let'", 2), ('\n____*___Fin', 2), ('\n____Start_w', 2), ("\n____I'll_st", 2)]
+
+```

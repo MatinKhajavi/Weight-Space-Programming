@@ -1,0 +1,16 @@
+OUTPUT of Python run 55 of at most 120:
+```
+black
+XXXX..X.X
+XOXXXX.X.
+XOXXX.X.X
+OOOXOX.X.
+OOOO.OX.X
+OOOOOOOXO
+OOOXOOOO.
+XOO.OOO.O
+.O.XOOOO.
+40 (4, 4)
+62 (6, 8)
+
+```

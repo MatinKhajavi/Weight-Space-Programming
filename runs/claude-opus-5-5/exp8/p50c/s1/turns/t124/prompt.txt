@@ -1,0 +1,51 @@
+OUTPUT of Python run 106 of at most 300:
+```
+math prealgebra_7 ref= 15 | pred= 1.5 | tok 16236
+math bability_177 ref= 6 | pred= 24 | tok 31403
+math algebra_1114 ref= \dfrac14 | pred= \dfrac{1}{2} | tok 10733
+math recalculus_8 ref= \begin{pmatrix} 1 & 2500  | pred= \begin{pmatrix} 1 & 4950  | tok 27040
+math algebra_1420 ref= 23 | pred= 22 | tok 9586
+math ealgebra_247 ref= 26 | pred= 12 | tok 18619
+math bability_633 ref= 56 | pred= 66 | tok 20043
+math calculus_442 ref= 2 | pred= 0 | tok 21762
+math _geometry_41 ref= 8.64 | pred= 3 | tok 27007
+math ealgebra_378 ref= 50 | pred= 30 | tok 6236
+math ealgebra_923 ref= 6 | pred= 3 | tok 21538
+math algebra_1052 ref= \frac{1}{4} | pred= \frac{1}{\ln 5} \ln \frac | tok 29729
+math bability_672 ref= \frac{1}{210} | pred= 1 | tok 19916
+math bability_591 ref= \dfrac{1}{52} | pred= \frac{4}{663} | tok 11755
+math bability_370 ref= 253 | pred= n | tok 28642
+math er_theory_79 ref= 2 | pred= 1 | tok 20527
+math r_theory_420 ref= 503 | pred= 10 | tok 24101
+math geometry_698 ref= 96 | pred= 96\sqrt{3} | tok 22783
+math er_theory_97 ref= 7 | pred= 36 | tok 19551
+math bability_387 ref= 458 | pred= 0 | tok 27974
+gsm8 k_train_3872 ref= 55 | pred= 186 | tok 20524
+gsm8 k_train_5844 ref= -47 | pred= -49 | tok 18753
+gsm8 k_train_1884 ref= 280 | pred= 250 | tok 30211
+gsm8 k_train_4831 ref= 19 | pred= 21 | tok 12673
+gsm8 k_train_2275 ref= 2 | pred= 4 | tok 22836
+gsm8 k_train_3397 ref= 19 | pred= 9 | tok 23475
+gsm8 k_train_5716 ref= 8 | pred= 26 | tok 11231
+gsm8 k_train_5763 ref= 673 | pred= 666 | tok 5619
+gsm8 k_train_1172 ref= 30 | pred= 105 | tok 9406
+gsm8 k_train_7300 ref= 160 | pred= 10 | tok 11299
+gsm8 k_train_7095 ref= 195 | pred= 73 | tok 17766
+gsm8 k_train_4799 ref= 1525 | pred= 242.50 | tok 26366
+gsm8 k_train_5259 ref= 8 | pred= 16 | tok 15240
+gsm8 k_train_4147 ref= 3061 | pred= 3027 | tok 5558
+gsm8 k_train_5866 ref= 180 | pred= 80 | tok 8023
+gsm8 k_train_4931 ref= 75 | pred= 150 | tok 30136
+gsm8 k_train_3670 ref= 11 | pred= 9 | tok 26488
+gsm8 k_train_1666 ref= 10 | pred= 2 | tok 12705
+gsm8 k_train_2190 ref= 45 | pred= 54 | tok 19363
+gsm8 k_train_1668 ref= 10 | pred= 40 | tok 19148
+gsm8 m8k_train_17 ref= 43 | pred= 47 | tok 16714
+gsm8 k_train_4773 ref= 22 | pred= 6 \text{ doctors}, \ 16 \ | tok 3460
+gsm8 k_train_7172 ref= 6 | pred= 2 | tok 7651
+gsm8 8k_train_691 ref= 10 | pred= 18 | tok 24022
+gsm8 8k_train_459 ref= 10080 | pred= 18000 | tok 26960
+gsm8 k_train_4282 ref= 240 | pred= \$120 | tok 2533
+gsm8 k_train_7272 ref= 9 | pred= 24 | tok 14538
+
+```

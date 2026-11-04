@@ -1,0 +1,37 @@
+OUTPUT of Python run 36 of at most 120:
+```
+2 68 black chain [74, 75] lib 73 la 5 top5 [[79, 0.1994], [36, 0.1616], [78, 0.1451], [27, 0.1127], [45, 0.081]]
+X.XOOXX.X
+.XXOOX.X.
+.XXOXXXOX
+.OOOOOOOX
+.OOOOOOX.
+.XOOXXOXX
+.XXXX.XX.
+XOOOOXOOX
+..XXOX...
+
+3 104 black chain [77] lib 78 la 2 top5 [[81, 1.0], [78, 0.0], [70, 0.0], [31, 0.0], [38, 0.0]]
+XXXXX.X.X
+X.XXXX.X.
+XXX.X.XXX
+X.XX.XOOX
+.X.XXOOOO
+XXXOOOOOX
+OOOO.OOXX
+.OOOOOX.X
+OOOOOX.X.
+
+6 86 black chain [26] lib 17 la 2 top5 [[81, 1.0], [17, 0.0], [11, 0.0], [19, 0.0], [61, 0.0]]
+XXX.X.XXX
+.X.X.XXX.
+X.XOXXXOX
+.XOOXXOOO
+XXXOOOOXX
+OOOOOOOX.
+.OOOOXX.X
+O.OOOX.X.
+.O.OOOX.X
+
+
+```

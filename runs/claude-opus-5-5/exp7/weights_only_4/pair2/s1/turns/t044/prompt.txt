@@ -1,0 +1,39 @@
+OUTPUT of run 43 of at most 60:
+```
+L13 top units:
+  u1125: ansΔ=1.1x selfalign z=-11.6 | Δwrites+ ['>=', ' proceso', ' processo', 'cimento', ' هست', 'inetics'] - ['III', 'block', 'Cast', ' cl', ' humor', 'flo'] | reads ['px', 'mx', 'dk', '.,', 'bp', 'ect']
+  u1268: ansΔ=1.0x selfalign z=+9.1 | Δwrites+ ['assert', 'mapping', 'MY', 'Las', 'Ma', 'io'] - ['izontal', 'っと', 'nerg', 'dern', 'haviour', 'رات'] | reads ['ças', 'Reset', 'illet', ' fragment', ' consec', 'xFF']
+  u369: ansΔ=1.4x selfalign z=-6.2 | Δwrites+ ['amento', ' hundred', 'amentos', 'wards', 'aving', '起来'] - [' Quebec', ' Pur', ' NY', 'Py', ' Kentucky', ' Brook'] | reads [' children', ' kids', ' child', ' Children', ' Kids', ' Kinder']
+  u52: ansΔ=1.0x selfalign z=+6.5 | Δwrites+ [' mar', ' lo', ' f', ' em', ' -', ' g'] - ['apshot', 'ừa', ' Nxe', 'nolds', 'upiter', 'udson'] | reads [' continuación', 'Illus', ' responses', '৭১', 'Properties', 'lık']
+  u300: ansΔ=1.3x selfalign z=-5.7 | Δwrites+ ['ién', 'ัด', 'rench', ' meille', 'ื้อ', 'ricia'] - ['young', 'Meta', 'Age', 'Young', ' Age', 'hook'] | reads ['prises', 'cules', 'nosti', 'orb', 'isto', 'carousel']
+  u775: ansΔ=1.1x selfalign z=+5.7 | Δwrites+ [' hours', ' thousands', ' years', ' either', ' minute', ' hour'] - [' Что', ' เน', ' estilo', ' ///', 'MODE', ' thị'] | reads ['three', 'five', ' thirty', ' fifteen', 'six', ' three']
+L14 top units:
+  u641: ansΔ=1.0x selfalign z=+9.9 | Δwrites+ [' two', 'two', ' crystal', ' doubled', ' rare', ' twin'] - ['perature', 'anation', 'ありが', ' koj', 'ravity', 'forall'] | reads [' £', ' فى', ' organised', 'Colour', 'avour', ' realise']
+  u807: ansΔ=1.0x selfalign z=-7.0 | Δwrites+ [' al', ' "', ' “', ' Al', ' A', ' human'] - [' nuest', ' exd', ' będ', 'لاین', 'Override', 'ributed'] | reads [' artículo', 'Container', 'lista', 'core', 'kg', ' dataset']
+  u1286: ansΔ=1.1x selfalign z=-5.6 | Δwrites+ ['uffs', 'ruptcy', 'wnie', ' criter', 'รียน', 'icação'] - [' Ros', ' interior', ' Koh', ' COMP', 'Eng', ' Eng'] | reads [' baseball', ' fishing', 'bug', ' corn', ' writers', 'gene']
+  u1076: ansΔ=1.1x selfalign z=+5.3 | Δwrites+ ['Focus', 'Pin', 'Ra', 'Sensor', 'String', 'Hor'] - [' even', ' free', ' عليكم', ' rest', 'ients', ' samo'] | reads ['ständ', 'pc', 'tk', ' hundred', ' eighth', 'five']
+  u1336: ansΔ=1.4x selfalign z=+4.3 | Δwrites+ [' Tesla', 'regex', 'Zoom', 'Mask', ' Json', ' ethn'] - [' (', ' to', ' u', ' as', ' in', ' for'] | reads ['üm', 'handler', 'ção', ' Iceland', ' pag', ' japan']
+  u439: ansΔ=1.2x selfalign z=-4.5 | Δwrites+ [' neces', ' writ', ' spread', ' rather', ' due', ' down'] - ['fc', 'ML', 'CM', ' Water', 'una', 'Water'] | reads ['/{', '//', '///', 'image', ' /', '/>']
+L15 top units:
+  u1882: ansΔ=1.6x selfalign z=+5.1 | Δwrites+ ['Queue', ' Script', ' Казино', ' cultura', ' หน', ' Ign'] - [' ground', ' first', ' out', ' statement', ' or', ' ('] | reads ['otope', ' jak', ' gia', ' asian', ' histor', '^{-\\']
+  u1409: ansΔ=1.0x selfalign z=+6.9 | Δwrites+ [' timber', 'قل', ' gin', ' Stri', ' ۱', 'قي'] - ['onto', 'ont', ' quindi', 'ze', ' nada', 'ucky'] | reads ['ivi', 'arp', 'arse', 'airy', 'idade', 'şı']
+  u3: ansΔ=1.3x selfalign z=-5.1 | Δwrites+ ['irement', 'ところ', 'inement', 'cciones', 'actory', 'intage'] - ['Ta', ' RT', ' Ta', ' Li', 'String', ' Ja'] | reads [' schedule', ' Schedule', ' tanks', 'LR', ' scheduled', ' tank']
+  u1554: ansΔ=1.1x selfalign z=+5.6 | Δwrites+ ['itet', 'ument', 'ution', 'esian', 'iest', 'ess'] - [' claimed', ' greenhouse', ' perceived', ' před', ' Grund', ' ``'] | reads ['++', 'ulture', '+,', 'enne', ' veces', 'new']
+  u220: ansΔ=1.3x selfalign z=-5.1 | Δwrites+ [' amount', ' side', ' $', ' -', ' .', 'ありません'] - ['定义', ' Roche', 'atra', ' 로', ' declare', ' Си'] | reads ['KO', 'ician', 'àn', 'ateurs', 'cpu', 'cls']
+  u1369: ansΔ=1.0x selfalign z=-6.1 | Δwrites+ [' closed', ' growing', ' accumulated', ' new', ' non', ' extended'] - ['KA', ' países', ' Africa', 'pak', 'ква', 'вор'] | reads [' seafood', ' fishing', ' marine', ' ocean', ' sailing', ' boats']
+L16 top units:
+  u689: ansΔ=1.2x selfalign z=+13.1 | Δwrites+ [' becom', ' pue', ' dụ', ' enfer', ' "")', " '')"] - ['.,', ' once', ' one', 'icip', 'once', 'one'] | reads ['xy', 'environ', 'heim', 'xx', 'xs', ' dozen']
+  u931: ansΔ=1.8x selfalign z=-10.1 | Δwrites+ [' ১', ' १', ' ۱', '\n\n', ' primeira', '\n'] - [' eight', ' Eight', ' eighth', ' seven', ' seventh', ' Seven'] | reads ['three', 'third', '第三', ' third', 'depth', ' three']
+  u632: ansΔ=1.4x selfalign z=+9.7 | Δwrites+ [' agosto', ' país', ' июля', ' Consultado', 'astudio', ' charset'] - [' (', ' t', ' red', ' l', ' and', ' n'] | reads ['Flight', ' flight', 'flight', ' flights', 'готов', ' Flight']
+  u893: ansΔ=1.2x selfalign z=+9.1 | Δwrites+ [' OMX', ' Vienna', ' dissol', ' Json', ' سن', ' Chan'] - ['The', '\n\n', '\n', ' (', ' The', 'the'] | reads ['veled', 'nesota', ' Minnesota', ' rapp', 'colored', ' Idaho']
+  u1875: ansΔ=1.0x selfalign z=+9.3 | Δwrites+ [' ۱', 'ig', 'Clock', 'Map', 'Year', 'mn'] - ['atives', ' wors', 'ディース', ' rgba', 'endregion', ' respective'] | reads [' ۱', 'jamin', 'actus', 'arantee', 'zyst', 'ulture']
+  u285: ansΔ=1.6x selfalign z=+6.5 | Δwrites+ ['five', 'red', ' Five', 'III', 'sl', 'res'] - ['aredPreferences', ' ⿱', 'ちゃ', 'imientos', 'iseconds', 'lytres'] | reads ['hood', 'reply', 'DataFrame', '$-', ' vezes', 'LCD']
+L17 top units:
+  u1073: ansΔ=0.9x selfalign z=+10.8 | Δwrites+ [' Six', ' Ref', ' Switch', ' VI', ' Canal', ' Card'] - ['.\\', 'zeros', '.\\\\', '.-', '不过', 'itory'] | reads [' página', ' çalış', 'ラン', 'acağ', 'mx', 'scan']
+  u1916: ansΔ=0.9x selfalign z=-8.8 | Δwrites+ [' (', ' a', ' to', ' in', ' it', ' i'] - [' Sydney', ' Mumbai', ' Seattle', ' Bombay', ' Vancouver', ' Dublin'] | reads [' £', ' فى', ' organised', 'avour', 'نى', ' organisation']
+  u644: ansΔ=2.4x selfalign z=-3.9 | Δwrites+ [' in', '\n', ' (', ' *', '\n\n', ' a'] - [' Bankr', 'ParallelGroup', ' وړاندوین', 'CTOGRAM', 'ICENSE', 'revalidator'] | reads ['….', ' …', '....', '...', ' […]', '...,']
+  u824: ansΔ=1.3x selfalign z=+6.9 | Δwrites+ ['assan', ' quatre', ' antioxid', ' crossorigin', ' temas', 'کس'] - [' two', ' Two', ' one', ' One', 'two', ' example'] | reads ['five', ' cinco', 'six', ' vier', ' nove', 'four']
+  u838: ansΔ=1.0x selfalign z=-7.4 | Δwrites+ ['ながら', 'ある', '中的', 'ียง', '."', 'ity'] - [' Cart', ' Kont', ' Cath', ' Fal', ' md', ' MAG'] | reads ['cs', 'onders', 'db', 'depth', 'sq', 'max']
+  u997: ansΔ=1.5x selfalign z=+5.8 | Δwrites+ [' PICTOGRAM', 'uetooth', 'FileInputExcel', ' وړاندوین', ' Ettha', ' jLabel'] - [' the', ' new', ' in', ' (', ' a', ' and'] | reads [' £', ' UK', ' British', ' NHS', ' Lond', ' Scottish']
+
+```

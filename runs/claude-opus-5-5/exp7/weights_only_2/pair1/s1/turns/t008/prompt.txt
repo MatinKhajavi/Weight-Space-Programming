@@ -1,0 +1,22 @@
+OUTPUT of run 7 of at most 60:
+```
+final norm top dims [ 54 293   4 431 417 427 328 131  26  74] [300. 298. 282. 272. 262. 254. 250. 250. 244. 240.]
+0 input_layernorm [(299, 61.8), (418, 50.0), (76, 47.2), (50, 42.8)] median 10.94
+0 post_attention_layernorm [(400, 51.8), (24, 11.6), (639, 7.1), (128, 6.0)] median -0.7
+0 pre_feedforward_layernorm [(50, 19.6), (421, 18.1), (507, 16.4), (76, 16.2)] median 4.62
+0 post_feedforward_layernorm [(400, 152.0), (639, 27.8), (218, 21.4), (469, 17.0)] median -0.11
+5 input_layernorm [(518, 48.2), (517, 46.5), (490, 46.5), (585, 45.8)] median 10.44
+5 post_attention_layernorm [(400, 512.0), (163, 308.0), (87, 213.0), (621, 81.0)] median 5.19
+5 pre_feedforward_layernorm [(52, 46.0), (44, 41.2), (320, 40.0), (15, 40.0)] median 11.19
+5 post_feedforward_layernorm [(163, 740.0), (400, 308.0), (87, 103.5), (621, 53.5)] median 7.31
+10 input_layernorm [(486, 100.5), (29, 98.0), (54, 97.0), (7, 96.0)] median 10.5
+10 post_attention_layernorm [(163, 482.0), (400, 203.0), (419, -71.5), (338, 151.0)] median 40.38
+10 pre_feedforward_layernorm [(239, 38.2), (54, 34.8), (4, 32.8), (293, 32.0)] median 1.61
+10 post_feedforward_layernorm [(163, 592.0), (400, 382.0), (127, 229.0), (338, 223.0)] median 51.38
+17 input_layernorm [(442, 121.0), (239, 120.0), (54, 118.0), (293, 118.0)] median 2.52
+17 post_attention_layernorm [(558, 448.0), (400, 330.0), (163, 330.0), (467, 302.0)] median 140.5
+17 pre_feedforward_layernorm [(239, 29.6), (289, 18.0), (54, 17.4), (131, 16.8)] median -0.27
+17 post_feedforward_layernorm [(558, 1648.0), (163, 1312.0), (400, 888.0), (87, 840.0)] median 336.0
+dims most often outliers: [400 163  54 239 621 442 293 547 517   4 360 590] [32. 27. 14. 14. 11.  9.  8.  8.  8.  7.  6.  6.]
+
+```

@@ -1,0 +1,77 @@
+OUTPUT of run 9 of at most 60:
+```
+21019
+L4h0 rel=0.0144 markers_z=-0.85 A>B: ['bors', 'Dat', 'IDS', 'pected', ' Russell', 'itter', 'etes', 'cluded']  B>A: [' game', ' Game', ' course', ' performance', ' dish', ' div', ' perm', ' Khan']
+L4h1 rel=0.0181 markers_z=+0.14 A>B: ['bul', ' transparent', ' Bul', ' Russell', 'collapse', ' collapse', 'ureau', 'outheast']  B>A: ['reich', 'Fre', 'OM', 'fre', 'mer', 'omi', ' Fra', 'FR']
+L4h2 rel=0.0225 markers_z=-0.22 A>B: [' cons', ' Coll', ' Cons', ' cong', ' Col', ' Bos', ' Co', ' Con']  B>A: ['riving', 'RY', 'JECT', 'IGHT', 'YPE', 'jection', 'aj', 'akh']
+L4h3 rel=0.0116 markers_z=-1.05 A>B: ['ror', 'orer', 'RAM', 'ACH', 'LES', 'Font', 'ICE', 'June']  B>A: [' Charl', 'adel', ' St', ' homes', 'sta', ' Vel', 'jal', 'ivil']
+L5h0 rel=0.0150 markers_z=-0.04 A>B: [' IO', ' root', ' Kap', ' gate', ' project', ' plan', ' conversion', ' page']  B>A: ['ysts', 'Features', 'Share', 'ferences', 'rick', 'RY', 'Whe', 'allas']
+L5h1 rel=0.0167 markers_z=-0.38 A>B: ['OME', 'neo', 'alg', 'ijn', 'clipse', 'Alg', 'oge', 'VE']  B>A: [' Hamilton', ' Answer', 'ara', ' Dun', 'tabular', ' Franc', 'rif', ' Question']
+L5h2 rel=0.0263 markers_z=-0.66 A>B: ['pec', ' Dav', ' Cav', ' dav', 'dat', 'uant', 'cad', 'appa']  B>A: ['DOM', ' home', 'hover', 'thur', 'lim', 'graph', ' finished', ' Home']
+L5h3 rel=0.0203 markers_z=+0.52 A>B: ['Pa', 'Sche', ' Sab', 'phant', ' tested', 'Paul', 'Testing', 'Ph']  B>A: ['atin', 'oin', ' Sun', ' Moon', 'ierno', ' init', ' moon', 'arios']
+L6h0 rel=0.0116 markers_z=-0.42 A>B: [' new', ' List', ' newly', ' community', ' Rd', ' paths', ' Cert', ' list']  B>A: ['ajo', 'ajar', 'lee', 'uur', 'unit', 'him', 'igne', 'bear']
+L6h1 rel=0.0145 markers_z=+0.29 A>B: ['Directory', 'Error', 'directory', 'invalid', ' directory', ' Nep', 'riter', ' incorrect']  B>A: ['opo', 'issa', 'inta', 'aro', 'iously', 'bia', 'rell', 'udi']
+L6h2 rel=0.0216 markers_z=+0.30 A>B: [' Refer', 'Refer', ' Reference', 'Reference', 'Generic', ' Different', ' Manufact', 'atories']  B>A: [' stored', ' utility', ' assistance', ' solved', ' entertainment', ' hy', 'aster', ' sat']
+L6h3 rel=0.0142 markers_z=+0.04 A>B: ['sqrt', ' Final', ' final', ' LE', ' legislative', 'aign', ' baru', 'inh']  B>A: ['ibilidad', 'writer', 'abilidad', 'perature', 'ccion', 'respon', 'uits', 'ibilit']
+L7h0 rel=0.0123 markers_z=-0.24 A>B: ['Driver', 'arantee', ' pupils', ' Kd', 'phant', 'driver', ' black', ' Liter']  B>A: ['omorph', ' mercado', 'otti', 'abei', 'etti', 'apa', 'week', ' semana']
+L7h1 rel=0.0162 markers_z=+0.35 A>B: [' sele', ' blocked', ' neutr', ' regul', ' else', ' dominated', ' nin', ' too']  B>A: ['Memory', 'Po', 'orters', ' Credit', ' Economic', 'undred', ' necklace', ' terror']
+L7h2 rel=0.0118 markers_z=-0.75 A>B: ['ustom', ' disag', 'xx', 'agement', 'cdot', ' todos', ' tous', 'update']  B>A: [' planet', 'arent', ' liquid', ' females', ' seats', 'atomic', ' girls', ' sink']
+L7h3 rel=0.0194 markers_z=+0.43 A>B: ['swing', 'dire', 'verse', ' say', 'sez', 'Side', 'side', ' taught']  B>A: [' Houston', ' exhaust', ' className', ' Scanner', ' applicant', 'ather', 'Hub', ' Hy']
+L8h0 rel=0.0157 markers_z=+0.54 A>B: ['leans', 'ride', 'decode', 'ipher', 'placement', ' shape', ' preval', 'rine']  B>A: ['eslint', ' enorm', 'enia', ' energ', ' Anna', ' Appendix', ' parad', 'todo']
+L8h1 rel=0.0133 markers_z=-0.47 A>B: ['pur', ' MC', 'alt', 'ribut', ' dancing', ' Met', 'CF', 'Mor']  B>A: ['pection', ' apl', ' experiencia', 'viously', ' ejemplo', 'pportun', 'lection', 'ussian']
+L8h2 rel=0.0203 markers_z=+0.57 A>B: [' treas', ' suppliers', ' providers', ' bills', 'googleapis', ' related', ' associated', ' accessories']  B>A: ['rass', 'ansion', 'Email', 'agement', 'Panel', 'DM', 'azine', 'pause']
+L8h3 rel=0.0175 markers_z=-0.93 A>B: ['uel', 'flower', 'region', 'Assembly', 'patch', 'decode', 'Batch', 'ployment']  B>A: ['rait', 'icator', ' reflects', 'ickets', ' telah', ' reflect', ' fo', ' ha']
+L9h0 rel=0.0182 markers_z=-0.61 A>B: ['TextField', 'swift', 'rief', ' Schools', 'fact', 'FBS', 'rile', ' interf']  B>A: ['ops', 'op', 'oda', ' any', 'ope', ' or', 'ance', ' oder']
+L9h1 rel=0.0153 markers_z=+0.34 A>B: [' tie', ' gene', ' bold', 'th', ' coat', ' hydrogen', ' Parliament', ' DNA']  B>A: [' Among', ' Between', 'between', ' between', ' Nevertheless', 'achers', 'ecause', 'mercial']
+L9h2 rel=0.0183 markers_z=+0.00 A>B: ['groupId', ' Carm', 'GRO', 'Total', ' total', ' Economic', ' gross', 'AME']  B>A: [' patterns', ' trends', 'uty', 'tests', 'third', ' habits', 'styles', ' eller']
+L9h3 rel=0.0150 markers_z=+0.18 A>B: ['IV', ' thousand', 'big', ' studied', ' candy', 'large', 'ample', 'kh']  B>A: ['istration', ' designs', 'rior', ' regime', 'osition', 'atted', 'ulator', ' recomm']
+L10h0 rel=0.0263 markers_z=-0.26 A>B: ['outh', 'ct', 'pg', ' larger', 'xi', ' surprising', ' ein', 'xt']  B>A: [' arrangements', ' negoti', ' manus', 'yled', ' recept', ' alone', ' adop', ' arrangement']
+L10h1 rel=0.0334 markers_z=+0.50 A>B: [' everywhere', 'umerate', ' projects', ' exports', ' targets', ' revenues', ' initiatives', ' among']  B>A: ['words', 'olog', 'anguage', 'fel', 'test', ' leng', 'sb', 'ick']
+L10h2 rel=0.0141 markers_z=-0.80 A>B: ['uan', 'xc', 'oin', 'li', 'amon', 'cl', 'gram', 'hol']  B>A: [' among', ' amongst', ' hope', ' everywhere', ' Solution', ' elsewhere', ' shade', ' ancest']
+L10h3 rel=0.0168 markers_z=+0.37 A>B: [' Flag', ' violation', ' Aud', 'ouse', ' aud', ' Default', ' Sign', 'NotFound']  B>A: [' length', 'plus', 'long', ' long', 'length', ' smart', 'cade', 'Long']
+L11h0 rel=0.0389 markers_z=+0.72 A>B: [' anybody', ' outs', ' everywhere', ' anyone', ' nobody', ' tea', ' money', 'outs']  B>A: ['culo', ' artic', 'berapa', 'xe', 'inois', ' manera', ' impressive', 'gypt']
+L11h1 rel=0.0476 markers_z=-0.31 A>B: [' thirty', ' fifty', 'rag', 'exception', ' hundred', 'orang', ' minutos', 'lected']  B>A: ['rivial', ' Certain', ' cargo', 'pose', ' financ', ' missions', ' Railway', ' custody']
+L11h2 rel=0.0290 markers_z=+0.28 A>B: ['alan', 'osing', 'itional', 'overnment', 'posure', 'stdio', 'agment', 'supp']  B>A: [' Barcelona', ' Spain', ' Smart', ' noble', ' EU', ' England', ' Array', ' Grid']
+L11h3 rel=0.0303 markers_z=+0.31 A>B: ['ystem', ' supplies', ' circulation', 'prise', 'ervice', ' license', 'supp', ' government']  B>A: ['omorph', 'clusion', ' mund', ' Pear', ' retrie', 'cookie', 'omorphic', ' Dubai']
+L12h0 rel=0.0239 markers_z=-0.35 A>B: ['shared', 'four', 'dagger', 'pc', 'sq', 'empty', 'arda', 'three']  B>A: [' settlement', 'Payment', ' markets', ' market', ' conform', 'achusetts', ' Mass', ' fixture']
+L12h1 rel=0.0217 markers_z=-0.80 A>B: [' lado', 'ilarly', 'ately', ' pecul', ' opposite', 'emente', ' equipo', 'other']  B>A: ['imate', 'imation', 'face', 'wing', 'event', ' hire', 'force', 'ization']
+L12h2 rel=0.0204 markers_z=+0.35 A>B: ['heit', 'chi', ' shade', ' resultado', ' testim', ' ai', ' anybody', 'itude']  B>A: ['appendChild', 'dess', ' useEffect', 'anged', 'istory', ' useState', 'cout', 'ASS']
+L12h3 rel=0.0209 markers_z=-0.74 A>B: ['ullan', 'utils', 'empty', 'ice', 'uffy', 'arch', 'ley', 'appy']  B>A: ['ployment', ' crowd', ' Mass', ' industry', ' certainly', 'Mass', ' Industry', 'ESSION']
+L13h0 rel=0.0177 markers_z=-0.09 A>B: ['oven', ' least', ' hour', ' worst', 'images', 'ized', 'ties', ' el']  B>A: [' chuy', ' progression', ' Visit', 'Factory', 'usiness', ' withd', 'ska', 'plement']
+L13h1 rel=0.0215 markers_z=-0.25 A>B: [' exert', 'bagai', ' formulas', ' Cert', ' bonds', 'vetica', 'bootstrap', 'bek']  B>A: ['anged', ' reversed', 'idents', 'ash', ' None', ' only', 'Only', 'Which']
+L13h2 rel=0.0280 markers_z=+0.28 A>B: ['power', 'half', 'native', 'component', 'berapa', 'minute', 'array', 'rap']  B>A: ['iration', 'ruit', 'orter', 'reement', 'anka', 'ection', 'ANS', 'olation']
+L13h3 rel=0.0103 markers_z=-0.22 A>B: [' recom', 'ownt', ' audience', 'Dom', 'indow', ' regener', ' Ont', ' foss']  B>A: ['ae', 'quad', 'environ', 'dots', 'lambda', 'tres', 'ahren', 'ic']
+L14h0 rel=0.0091 markers_z=-0.96 A>B: ['mitt', 'roke', 'blog', 'leur', 'ternal', 'tainment', 'asure', 'road']  B>A: [' waar', ' denied', 'uzione', 'theorem', ' max', ' Theorem', ' theorem', ' knock']
+L14h1 rel=0.0230 markers_z=+0.83 A>B: [' there', ' of', ' pand', ' ble', ' des', ' interested', ' der', ' dem']  B>A: ['asset', 'stock', 'share', 'xd', 'wp', 'asser', 'Stock', 'rb']
+L14h2 rel=0.0110 markers_z=-1.33 A>B: [' minutos', 'minute', 'COM', 'timer', 'Fragment', 'Timer', 'thread', ' Five']  B>A: [' support', ' stuff', ' belie', 'support', 'ipment', 'Support', 'redit', ' supports']
+L14h3 rel=0.0252 markers_z=+0.00 A>B: [' acknow', 'atories', 'uable', 'nment', ' manus', 'ensions', 'avour', 'ifier']  B>A: ['infty', 'MY', 'abc', 'tf', ' vier', 'tk', ' minutos', 'wh']
+L15h0 rel=0.0236 markers_z=-0.85 A>B: ['netic', ' auc', ' wake', ' commer', ' youth', ' shade', ' propor', ' sun']  B>A: ['isters', 'opes', 'ifs', 'ference', 'owski', 'ording', 'etary', 'itance']
+L15h1 rel=0.0135 markers_z=-0.79 A>B: ['Autow', ' auc', 'URE', ' compr', ' evt', ' subsection', 'tk', 'ederal']  B>A: [' sea', ' stars', ' crew', ' shore', ' pattern', ' filter', ' Cape', ' washed']
+L15h2 rel=0.0208 markers_z=-0.06 A>B: ['ategy', 'Dr', ' Dr', ' hole', 'dr', 'Driver', 'In', 'cipl']  B>A: [' processing', ' requests', ' accessible', 'essa', ' solicit', ' request', ' complain', ' suppress']
+L15h3 rel=0.0105 markers_z=+0.18 A>B: ['netic', ' immer', ' dirt', ' sich', 'ynam', ' self', 'phal', ' faster']  B>A: [' Help', ' furnished', ' Treat', 'lig', 'ources', 'Help', 'odies', 'Chat']
+L16h0 rel=0.0122 markers_z=+0.50 A>B: [' between', ' Between', 'away', 'enced', 'between', ' with', 'born', 'with']  B>A: ['HI', ' reprodu', 'HC', ' pessoal', 'FBS', ' dess', 'resol', 'reas']
+L16h1 rel=0.0118 markers_z=-0.48 A>B: ['rine', 'BS', ' intake', ' choices', 'ycling', 'aints', ' jue', 'ills']  B>A: [' term', ' former', ' parte', ' modo', ' the', 'heid', ' version', ' forma']
+L16h2 rel=0.0113 markers_z=-0.81 A>B: ['arsi', 'arse', 'uable', 'ercase', 'ated', 'amin', 'orno', 'avour']  B>A: [' employees', ' Employee', ' dealt', ' empresas', ' empres', ' employee', ' employers', ' enterprises']
+L16h3 rel=0.0073 markers_z=+0.51 A>B: [' to', ' on', ' and', ' all', 'borne', ' more', ' least', ' al']  B>A: ['Proxy', 'Bound', 'ugg', 'Headers', 'Character', ' localStorage', ' Bron', 'legal']
+L17h0 rel=0.0172 markers_z=-0.78 A>B: [' Maryland', ' vitam', 'ajj', 'zech', ' Pennsylvania', 'enumerate', 'MenuItem', ' advert']  B>A: [' normal', ' throw', ' cultures', ' boats', 'rous', 'ributed', 'normal', ' random']
+L17h1 rel=0.0237 markers_z=-0.57 A>B: ['ct', 'arg', 'imeter', 'dig', 'py', 'ps', 'ht', 'osh']  B>A: ['ordinator', ' pued', 'raphics', ' remov', ' arrest', ' wherever', ' restored', ' einfach']
+L17h2 rel=0.0112 markers_z=+0.78 A>B: ['rative', ' normal', 'ivities', ' protagon', 'raphics', ' freely', 'rant', 'enced']  B>A: ['Long', 'carbon', 'Weight', 'Encoder', 'Target', 'London', ' Carbon', 'Task']
+L17h3 rel=0.0229 markers_z=+0.05 A>B: ['alan', 'ly', ' None', 'ka', 'st', 'adow', 'th', 'ma']  B>A: [' dirty', ' geomet', ' arbitr', ' crude', ' regener', ' pla', 'className', ' subst']
+(0, 0, np.float32(0.089599125), np.float32(1.0262539))
+(0, 1, np.float32(0.051937282), np.float32(-0.68913263))
+(0, 2, np.float32(0.04004201), np.float32(-0.3147771))
+(0, 3, np.float32(0.057012726), np.float32(-0.30899516))
+(1, 0, np.float32(0.014898254), np.float32(-0.37139532))
+(1, 1, np.float32(0.013654934), np.float32(0.13556023))
+(1, 2, np.float32(0.042037662), np.float32(0.41071972))
+(1, 3, np.float32(0.01641421), np.float32(-1.2853291))
+(2, 0, np.float32(0.011889227), np.float32(-1.442632))
+(2, 1, np.float32(0.008425151), np.float32(0.070887886))
+(2, 2, np.float32(0.029886782), np.float32(-0.006968069))
+(2, 3, np.float32(0.021460516), np.float32(0.83559406))
+(3, 0, np.float32(0.013627446), np.float32(-0.81287813))
+(3, 1, np.float32(0.016282663), np.float32(0.76495904))
+(3, 2, np.float32(0.019072475), np.float32(-0.02324542))
+(3, 3, np.float32(0.011422886), np.float32(0.21553764))
+
+```

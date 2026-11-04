@@ -1,0 +1,8 @@
+OUTPUT of Python run 159 of at most 300:
+```
+kV2 2.194 edited: ['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.22.mlp.down_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']
+V2 col effects: {' Wait': 1.626, 'Wait': 1.717, ' Hmm': 0.501, ' Actually': 0.301, ' But': 0.078, ' Maybe': -0.036, ' Ready': 0.0, '</think>': -0.0, ' Final': 0.0, ' So': -0.201}
+{'D_math': 320, 'S_math': 1000, 'H_math': 1000, 'D_gsm': 192, 'S_gsm': 1000, 'H_gsm': 1000}
+256 256 ['math_train_precalculus_233', 'math_train_precalculus_93'] ['math_train_prealgebra_783', 'math_train_algebra_1013']
+
+```

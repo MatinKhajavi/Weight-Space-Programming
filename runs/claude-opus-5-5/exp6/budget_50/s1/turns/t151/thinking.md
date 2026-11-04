@@ -1,0 +1,2 @@
+The v27 run came out at 0.656 against 0.583 for v24 over 192 games, a gain of about 0.07 that is roughly 1.5 standard errors, so it looks promising but not conclusive. I'm considering a stronger jump/knight weighting (1.5 and 0.8) or keeping the current shape, and I think rerunning v27 to confirm is worth it. With 12 passes left, I can afford a v28 test of 128 games before deciding and then running the final checks.
+

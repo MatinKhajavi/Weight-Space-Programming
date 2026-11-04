@@ -1,0 +1,20 @@
+OUTPUT of Python run 4 of at most 120:
+```
+dict_keys(['game', 'opponent', 'net_color', 'result', 'margin', 'end', 'stones_captured_by_net', 'stones_lost_by_net', 'moves'])
+{'game': 0, 'opponent': 'random', 'net_color': 'black', 'result': 1, 'margin': 73.5, 'end': 'two passes', 'stones_captured_by_net': 101, 'stones_lost_by_net': 0, 'moves': [{'ply': 0, 'by': 'net', 'move': 58, 'top5': [[40, 0.0462], [20, 0.028], [21, 0.028], [22, 0.028], [23, 0.028]]}, {'ply': 1, 'by': 'opponent', 'move': 48}, {'ply': 2, 'by': 'net', 'move': 67, 'top5': [[40, 0.0466], [47, 0.0466], [39, 0.0381], [57, 0.0345], [20, 0.0282]]}]}
+('random', 'two passes', 1, 'net') 31
+('random', 'two passes', 1, 'opponent') 1
+('strong', 'move limit', 1, 'net') 1
+('strong', 'repetition', -1, 'net') 13
+('strong', 'repetition', 1, 'opponent') 1
+('strong', 'two passes', -1, 'net') 18
+('strong', 'two passes', -1, 'opponent') 9
+('strong', 'two passes', 1, 'net') 17
+('strong', 'two passes', 1, 'opponent') 5
+('weak', 'move limit', 1, 'opponent') 1
+('weak', 'repetition', -1, 'net') 2
+('weak', 'repetition', 1, 'opponent') 6
+('weak', 'two passes', -1, 'opponent') 1
+('weak', 'two passes', 1, 'net') 22
+
+```

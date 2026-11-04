@@ -1,0 +1,10 @@
+OUTPUT of Python run 12 of at most 120:
+```
+3 a+b false-atari 2560 of 132035 multi-lib stones; unsound 0  true atari 3447
+3 a+par false-atari 1959 of 132035 multi-lib stones; unsound 0  true atari 3447
+4 a+b false-atari 1571 of 132035 multi-lib stones; unsound 0  true atari 3447
+4 a+par false-atari 1339 of 132035 multi-lib stones; unsound 0  true atari 3447
+99 a+b false-atari 578 of 132035 multi-lib stones; unsound 0  true atari 3447
+99 a+par false-atari 334 of 132035 multi-lib stones; unsound 0  true atari 3447
+
+```

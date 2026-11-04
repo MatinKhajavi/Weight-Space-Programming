@@ -1,0 +1,25 @@
+OUTPUT of run 33 of at most 60:
+```
+component | rel. answer-logit change x1e3 | answer-copy z (A-B) | base answer-copy z
+L17 MLP           6.571     +nan      +nan
+L16 MLP           5.303     +nan      +nan
+L15 MLP           4.415     +nan      +nan
+L14 MLP           3.874     +nan      +nan
+L16 attn H3       3.624     +5.5      +0.7
+L16 attn H1       3.511     +0.9      +2.2
+L17 attn H3       3.296     +8.3      +0.2
+L16 attn H0       3.234     +1.9      -1.0
+L13 MLP           2.568     +nan      +nan
+L16 attn H2       2.456     -2.8      +5.4
+L4 MLP            2.221     +nan      +nan
+L17 attn H1       2.106     +7.0     +14.8
+L4 attn H2        2.098     +2.0      -0.8
+L4 attn H1        1.998     +0.4      +3.5
+L4 attn H0        1.963     +1.9      +1.0
+L1 MLP            1.943     +nan      +nan
+L13 attn H1       1.782     +0.2      +3.0
+L17 attn H0       1.772     +2.8      +1.5
+L3 MLP            1.734     +nan      +nan
+L10 MLP           1.697     +nan      +nan
+
+```

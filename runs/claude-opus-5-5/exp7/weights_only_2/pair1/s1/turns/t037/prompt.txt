@@ -1,0 +1,13 @@
+OUTPUT of run 36 of at most 60:
+```
+random-vector hi-f fraction baseline: 0.116
+L10: h0 base hi-frac=0.26 delta hi-frac=0.11 | h1 base hi-frac=0.16 delta hi-frac=0.14 | h2 base hi-frac=0.18 delta hi-frac=0.15 | h3 base hi-frac=0.14 delta hi-frac=0.14 | 
+L11: h0 base hi-frac=0.22 delta hi-frac=0.21 | h1 base hi-frac=0.27 delta hi-frac=0.12 | h2 base hi-frac=0.17 delta hi-frac=0.14 | h3 base hi-frac=0.18 delta hi-frac=0.19 | 
+L12: h0 base hi-frac=0.12 delta hi-frac=0.12 | h1 base hi-frac=0.14 delta hi-frac=0.11 | h2 base hi-frac=0.21 delta hi-frac=0.15 | h3 base hi-frac=0.17 delta hi-frac=0.10 | 
+L13: h0 base hi-frac=0.23 delta hi-frac=0.14 | h1 base hi-frac=0.15 delta hi-frac=0.13 | h2 base hi-frac=0.19 delta hi-frac=0.15 | h3 base hi-frac=0.14 delta hi-frac=0.14 | 
+L14: h0 base hi-frac=0.09 delta hi-frac=0.10 | h1 base hi-frac=0.18 delta hi-frac=0.13 | h2 base hi-frac=0.23 delta hi-frac=0.11 | h3 base hi-frac=0.12 delta hi-frac=0.11 | 
+L15: h0 base hi-frac=0.21 delta hi-frac=0.11 | h1 base hi-frac=0.16 delta hi-frac=0.08 | h2 base hi-frac=0.13 delta hi-frac=0.09 | h3 base hi-frac=0.17 delta hi-frac=0.10 | 
+L16: h0 base hi-frac=0.12 delta hi-frac=0.10 | h1 base hi-frac=0.16 delta hi-frac=0.10 | h2 base hi-frac=0.21 delta hi-frac=0.09 | h3 base hi-frac=0.12 delta hi-frac=0.10 | 
+L17: h0 base hi-frac=0.19 delta hi-frac=0.12 | h1 base hi-frac=0.26 delta hi-frac=0.12 | h2 base hi-frac=0.15 delta hi-frac=0.13 | h3 base hi-frac=0.12 delta hi-frac=0.11 | 
+
+```

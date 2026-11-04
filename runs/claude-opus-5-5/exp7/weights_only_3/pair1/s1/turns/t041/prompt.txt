@@ -1,0 +1,22 @@
+OUTPUT of run 40 of at most 60:
+```
+L 0 MLP down->token  1.00 | heads OV->token: H0 1.24/3.80 H1 1.03/2.42 H2 1.46/4.90 H3 1.19/3.23
+L 1 MLP down->token  0.94 | heads OV->token: H0 1.11/2.44 H1 1.11/2.15 H2 1.18/2.61 H3 1.09/2.36
+L 2 MLP down->token  1.04 | heads OV->token: H0 1.09/1.86 H1 1.09/1.73 H2 1.03/1.68 H3 1.09/1.84
+L 3 MLP down->token  0.94 | heads OV->token: H0 1.08/1.64 H1 1.09/1.56 H2 1.13/1.81 H3 1.08/1.57
+L 4 MLP down->token  0.97 | heads OV->token: H0 1.03/1.02 H1 1.09/1.13 H2 1.31/1.34 H3 1.27/1.31
+L 5 MLP down->token  0.97 | heads OV->token: H0 1.27/1.23 H1 1.25/1.39 H2 1.29/1.27 H3 1.24/1.20
+L 6 MLP down->token  0.98 | heads OV->token: H0 1.11/1.11 H1 1.04/1.11 H2 1.07/1.12 H3 1.05/1.09
+L 7 MLP down->token  1.00 | heads OV->token: H0 1.07/1.14 H1 1.09/1.16 H2 1.02/1.05 H3 0.98/1.03
+L 8 MLP down->token  0.99 | heads OV->token: H0 1.11/1.21 H1 1.06/1.13 H2 1.08/1.15 H3 1.05/1.10
+L 9 MLP down->token  1.00 | heads OV->token: H0 1.10/1.09 H1 1.05/1.04 H2 1.07/1.09 H3 1.02/1.05
+L10 MLP down->token  1.01 | heads OV->token: H0 1.16/1.17 H1 1.21/1.27 H2 1.18/1.25 H3 1.11/1.16
+L11 MLP down->token  1.06 | heads OV->token: H0 1.18/1.24 H1 1.07/1.11 H2 1.28/1.30 H3 1.11/1.19
+L12 MLP down->token  1.14 | heads OV->token: H0 1.05/1.06 H1 1.36/1.43 H2 1.35/1.48 H3 1.06/1.06
+L13 MLP down->token  1.17 | heads OV->token: H0 1.25/1.34 H1 1.23/1.33 H2 1.16/1.26 H3 1.42/1.42
+L14 MLP down->token  1.32 | heads OV->token: H0 1.26/1.33 H1 1.17/1.17 H2 1.29/1.34 H3 1.25/1.28
+L15 MLP down->token  1.51 | heads OV->token: H0 1.26/1.28 H1 1.19/1.25 H2 1.43/1.40 H3 1.40/1.46
+L16 MLP down->token  1.92 | heads OV->token: H0 1.48/1.59 H1 1.59/1.76 H2 1.50/1.62 H3 1.57/1.65
+L17 MLP down->token  2.34 | heads OV->token: H0 1.43/1.49 H1 1.75/1.81 H2 1.63/1.69 H3 1.81/1.78
+
+```

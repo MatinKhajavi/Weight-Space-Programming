@@ -1,0 +1,25 @@
+OUTPUT of run 37 of at most 60:
+```
+L 5 xa top dims [400  81 173 137] | H0: cos(xsrc,xa)=+0.43 massE=0.41 topdims=[400 163 632 339] | H1: cos(xsrc,xa)=+0.42 massE=0.34 topdims=[400 572 163 435] | H2: cos(xsrc,xa)=-0.08 massE=0.14 topdims=[356 504 163 503] | H3: cos(xsrc,xa)=+0.16 massE=0.12 topdims=[173 632 184 267]
+L 7 xa top dims [163 400 608 184] | H0: cos(xsrc,xa)=-0.32 massE=0.17 topdims=[301 137 267 105] | H1: cos(xsrc,xa)=+0.58 massE=0.15 topdims=[173  81 105 193] | H2: cos(xsrc,xa)=+0.24 massE=0.17 topdims=[632 255 163 400] | H3: cos(xsrc,xa)=+0.29 massE=0.07 topdims=[230 572 120 246]
+L 9 xa top dims [163 608 184 137] | H0: cos(xsrc,xa)=-0.06 massE=0.09 topdims=[120 339 163 186] | H1: cos(xsrc,xa)=+0.37 massE=0.08 topdims=[120 229 137 579] | H2: cos(xsrc,xa)=-0.02 massE=0.15 topdims=[120 267 356 270] | H3: cos(xsrc,xa)=+0.11 massE=0.02 topdims=[230 120 632 579]
+L10 xa top dims [163 267 137  81] | H0: cos(xsrc,xa)=+0.43 massE=0.12 topdims=[230 632 400 163] | H1: cos(xsrc,xa)=+0.58 massE=0.14 topdims=[339 120 163 608] | H2: cos(xsrc,xa)=-0.05 massE=0.08 topdims=[173 134  81 504] | H3: cos(xsrc,xa)=+0.38 massE=0.13 topdims=[267 230 163 572]
+L12 xa top dims [163 403 220 377] | H0: cos(xsrc,xa)=+0.19 massE=0.01 topdims=[115 460  44 149] | H1: cos(xsrc,xa)=+0.27 massE=0.06 topdims=[ 45 222 141 163] | H2: cos(xsrc,xa)=+0.37 massE=0.15 topdims=[163 409 222 396] | H3: cos(xsrc,xa)=+0.22 massE=0.05 topdims=[479  45 492 565]
+L13 xa top dims [460 587 481 307] | H0: cos(xsrc,xa)=+0.28 massE=0.00 topdims=[527  45 565 547] | H1: cos(xsrc,xa)=+0.72 massE=0.01 topdims=[370 618 518 587] | H2: cos(xsrc,xa)=+0.14 massE=0.02 topdims=[582 490 374 203] | H3: cos(xsrc,xa)=-0.24 massE=0.00 topdims=[398 617 565 259]
+L14 xa top dims [620 514 203 587] | H0: cos(xsrc,xa)=+0.02 massE=0.03 topdims=[575  82 222 536] | H1: cos(xsrc,xa)=+0.23 massE=0.09 topdims=[171 433 163 546] | H2: cos(xsrc,xa)=+0.10 massE=0.02 topdims=[517 133 617  45] | H3: cos(xsrc,xa)=+0.48 massE=0.01 topdims=[497  82 436 171]
+L17 xa top dims [467 497 374  22] | H0: cos(xsrc,xa)=-0.20 massE=0.02 topdims=[115 398  34 253] | H1: cos(xsrc,xa)=-0.24 massE=0.01 topdims=[510 307  52 460] | H2: cos(xsrc,xa)=+0.08 massE=0.00 topdims=[115 182  69 481] | H3: cos(xsrc,xa)=+0.34 massE=0.00 topdims=[374  22 341  27]
+pairwise cos of x_src (same layer heads):
+9 [[ 1.   -0.72  0.74  0.44]
+ [-0.72  1.   -0.7  -0.64]
+ [ 0.74 -0.7   1.    0.45]
+ [ 0.44 -0.64  0.45  1.  ]]
+10 [[ 1.    0.13  0.2  -0.16]
+ [ 0.13  1.   -0.36  0.51]
+ [ 0.2  -0.36  1.   -0.25]
+ [-0.16  0.51 -0.25  1.  ]]
+12 [[1.   0.47 0.2  0.46]
+ [0.47 1.   0.58 0.71]
+ [0.2  0.58 1.   0.59]
+ [0.46 0.71 0.59 1.  ]]
+
+```

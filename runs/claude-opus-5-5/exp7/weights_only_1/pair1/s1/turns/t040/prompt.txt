@@ -1,0 +1,24 @@
+OUTPUT of run 39 of at most 60:
+```
+L | top-50 structured units: mean gain_down (e-3), mean gain_up, frac(gain_down>0) | all units: mean gain_down, sd/sqrt(50) | z
+ 0 | -0.126 -0.087 0.44 | all +0.007 (sd/sqrt50 0.062) | z(down+up) -2.45
+ 1 | -0.034 -0.034 0.48 | all -0.010 (sd/sqrt50 0.097) | z(down+up) -0.44
+ 2 | +0.091 +0.003 0.54 | all -0.013 (sd/sqrt50 0.089) | z(down+up) +0.88
+ 3 | -0.224 -0.079 0.42 | all -0.026 (sd/sqrt50 0.102) | z(down+up) -2.13
+ 4 | -0.014 -0.036 0.46 | all +0.018 (sd/sqrt50 0.131) | z(down+up) -0.42
+ 5 | +0.126 +0.039 0.56 | all +0.013 (sd/sqrt50 0.064) | z(down+up) +1.62
+ 6 | -0.109 -0.037 0.44 | all -0.010 (sd/sqrt50 0.094) | z(down+up) -1.05
+ 7 | +0.186 +0.153 0.52 | all +0.001 (sd/sqrt50 0.086) | z(down+up) +2.92
+ 8 | -0.345 -0.052 0.34 | all -0.016 (sd/sqrt50 0.102) | z(down+up) -2.91
+ 9 | +0.038 +0.030 0.54 | all +0.008 (sd/sqrt50 0.074) | z(down+up) +0.59
+10 | +0.013 -0.007 0.44 | all +0.002 (sd/sqrt50 0.100) | z(down+up) +0.06
+11 | +0.026 +0.042 0.58 | all -0.003 (sd/sqrt50 0.071) | z(down+up) +0.76
+12 | -0.213 -0.114 0.36 | all +0.000 (sd/sqrt50 0.070) | z(down+up) -3.33
+13 | +0.098 -0.014 0.58 | all +0.006 (sd/sqrt50 0.089) | z(down+up) +0.59
+14 | -0.134 -0.059 0.34 | all +0.009 (sd/sqrt50 0.098) | z(down+up) -1.64
+15 | -0.061 +0.010 0.54 | all +0.001 (sd/sqrt50 0.090) | z(down+up) -0.43
+16 | +0.067 +0.123 0.56 | all +0.005 (sd/sqrt50 0.083) | z(down+up) +1.56
+17 | +0.006 +0.042 0.52 | all -0.005 (sd/sqrt50 0.097) | z(down+up) +0.36
+combined z late (12-17): -1.18 ; mid (6-11): 0.15 ; all: -1.28
+
+```

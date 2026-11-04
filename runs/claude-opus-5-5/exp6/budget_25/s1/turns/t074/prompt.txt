@@ -1,0 +1,5 @@
+OUTPUT of Python run 59 of at most 120:
+```
+Counter({(10, 'nown=0'): 293, (10, 'nown>0'): 213, (13, 'nown=0'): 199, (13, 'nown>0'): 84})
+
+```

@@ -1,0 +1,30 @@
+OUTPUT of run 32 of at most 60:
+```
+=== w from L17 mlp
+  L5H0 base w'OVw/|OV| -0.0438 | w'dOVw/|dOV| +0.0285 | |w'dOV|/|dOV| 0.256
+  L5H1 base w'OVw/|OV| -0.0375 | w'dOVw/|dOV| +0.0247 | |w'dOV|/|dOV| 0.227
+  L1H2 base w'OVw/|OV| +0.0099 | w'dOVw/|dOV| -0.0187 | |w'dOV|/|dOV| 0.094
+  L2H2 base w'OVw/|OV| -0.0094 | w'dOVw/|dOV| -0.0185 | |w'dOV|/|dOV| 0.165
+  L2H1 base w'OVw/|OV| +0.0032 | w'dOVw/|dOV| -0.0175 | |w'dOV|/|dOV| 0.180
+  L1H1 base w'OVw/|OV| +0.0024 | w'dOVw/|dOV| -0.0160 | |w'dOV|/|dOV| 0.086
+  L1H3 base w'OVw/|OV| +0.0017 | w'dOVw/|dOV| -0.0155 | |w'dOV|/|dOV| 0.099
+  L2H3 base w'OVw/|OV| -0.0032 | w'dOVw/|dOV| +0.0149 | |w'dOV|/|dOV| 0.144
+  L5H2 base w'OVw/|OV| +0.0055 | w'dOVw/|dOV| +0.0148 | |w'dOV|/|dOV| 0.230
+  L0H3 base w'OVw/|OV| -0.0054 | w'dOVw/|dOV| +0.0123 | |w'dOV|/|dOV| 0.052
+  L3H3 base w'OVw/|OV| +0.0010 | w'dOVw/|dOV| -0.0121 | |w'dOV|/|dOV| 0.087
+  L10H3 base w'OVw/|OV| -0.0006 | w'dOVw/|dOV| +0.0113 | |w'dOV|/|dOV| 0.108
+=== w from L16 mlp
+  L2H2 base w'OVw/|OV| -0.0013 | w'dOVw/|dOV| -0.0193 | |w'dOV|/|dOV| 0.136
+  L1H1 base w'OVw/|OV| +0.0017 | w'dOVw/|dOV| -0.0176 | |w'dOV|/|dOV| 0.102
+  L16H3 base w'OVw/|OV| +0.0086 | w'dOVw/|dOV| -0.0148 | |w'dOV|/|dOV| 0.253
+  L16H2 base w'OVw/|OV| +0.0108 | w'dOVw/|dOV| -0.0138 | |w'dOV|/|dOV| 0.236
+  L3H2 base w'OVw/|OV| +0.0016 | w'dOVw/|dOV| -0.0124 | |w'dOV|/|dOV| 0.091
+  L5H1 base w'OVw/|OV| -0.0025 | w'dOVw/|dOV| +0.0116 | |w'dOV|/|dOV| 0.173
+  L16H1 base w'OVw/|OV| +0.0092 | w'dOVw/|dOV| -0.0101 | |w'dOV|/|dOV| 0.242
+  L10H3 base w'OVw/|OV| -0.0018 | w'dOVw/|dOV| +0.0098 | |w'dOV|/|dOV| 0.101
+  L8H0 base w'OVw/|OV| -0.0236 | w'dOVw/|dOV| -0.0094 | |w'dOV|/|dOV| 0.095
+  L3H1 base w'OVw/|OV| +0.0090 | w'dOVw/|dOV| -0.0093 | |w'dOV|/|dOV| 0.084
+  L14H2 base w'OVw/|OV| +0.0273 | w'dOVw/|dOV| +0.0092 | |w'dOV|/|dOV| 0.135
+  L1H2 base w'OVw/|OV| -0.0005 | w'dOVw/|dOV| -0.0088 | |w'dOV|/|dOV| 0.101
+
+```

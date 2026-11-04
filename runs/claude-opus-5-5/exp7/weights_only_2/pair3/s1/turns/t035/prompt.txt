@@ -1,0 +1,21 @@
+OUTPUT of run 34 of at most 60:
+```
+L4->5: cos(x_a true) = -0.34 | cos(push) = -0.00
+L5->6: cos(x_a true) = +0.42 | cos(push) = +0.04
+L6->7: cos(x_a true) = -0.09 | cos(push) = +0.01
+L7->8: cos(x_a true) = -1.00 | cos(push) = +0.51
+L8->9: cos(x_a true) = +0.99 | cos(push) = +0.01
+L9->10: cos(x_a true) = +0.98 | cos(push) = -0.00
+L10->11: cos(x_a true) = +0.69 | cos(push) = +0.00
+L11->12: cos(x_a true) = +0.75 | cos(push) = +0.01
+L12->13: cos(x_a true) = +0.76 | cos(push) = -0.05
+L13->14: cos(x_a true) = +0.89 | cos(push) = -0.03
+L14->15: cos(x_a true) = +0.87 | cos(push) = +0.21
+L15->16: cos(x_a true) = +0.90 | cos(push) = +0.30
+L16->17: cos(x_a true) = +0.87 | cos(push) = +0.00
+L9 sigma estimates: upq0.9:+0.37 upq0.95:+0.42 upq0.98:+0.83 gaq0.9:+0.47 gaq0.95:+0.33 gaq0.98:+0.50 | cos(vup,vgate)=+1.00
+L10 sigma estimates: upq0.9:+0.21 upq0.95:+0.52 upq0.98:+0.71 gaq0.9:-0.28 gaq0.95:-0.36 gaq0.98:-0.67 | cos(vup,vgate)=-0.99
+L12 sigma estimates: upq0.9:+0.50 upq0.95:+0.50 upq0.98:+0.75 gaq0.9:+0.51 gaq0.95:+0.58 gaq0.98:+0.78 | cos(vup,vgate)=+1.00
+L13 sigma estimates: upq0.9:-0.28 upq0.95:-0.41 upq0.98:-0.43 gaq0.9:+0.27 gaq0.95:+0.39 gaq0.98:+0.50 | cos(vup,vgate)=-1.00
+
+```

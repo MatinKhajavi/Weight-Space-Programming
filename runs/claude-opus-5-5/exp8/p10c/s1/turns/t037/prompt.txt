@@ -1,0 +1,9 @@
+OUTPUT of Python run 33 of at most 300:
+```
+gsm8k_train_2901 1950 7887 5 0
+gsm8k_train_3058 1950 6661 0 9
+14552
+' from the resting position to the walking position.\n            *   Wait, if the cat is stationary, it cannot run away.\n            *   Therefore, the cat cannot run away *while* resisting.\n            *   Therefore, the cat must run away *after* the resistance.\n            *   So the distance covered is the distance moved from the resting position to the walking position.\n            *   Wait, if the cat is stationary, it cannot run away.\n            *   Therefore, the cat cannot run away *while* resisting.\n            *   Therefore, the cat must run away *after* the resistance.\n            *   So the distance covered is the distance moved from the resting position to the walking position.\n'
+'he has *used* 2 bones?\n    No, "available" means "not used".\n    If he has 8 available, he has *used* 2 bones?\n    No, "available" means "not used".\n    If he has 8 available, he has *used* 2 bones?\n    No, "available" means "not used".\n    If he has 8 available, he has *used* 2 bones?\n    No, "available" means "not used".\n    If he has 8 available, he has *used* 2 bones?\n    No, "available" means "not used".\n    If he has 8 available, he has *used* 2 bones?\n    No, "available" means "not used".'
+
+```

@@ -1,0 +1,7 @@
+OUTPUT of Python run 24 of at most 300:
+```
+76 {'math': 57, 'gsm8k': 19}
+n texts 32 max len 4598 sum 123847 slots 147136
+[2784, 3013, 3343, 3415, 3470] [4314, 4327, 4332, 4531, 4598]
+
+```

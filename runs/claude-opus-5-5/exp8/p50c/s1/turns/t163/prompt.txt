@@ -1,0 +1,14 @@
+OUTPUT of Python run 142 of at most 300:
+```
+['layers.15.self_attn.o_proj.weight.safetensors', 'layers.22.mlp.down_proj.weight.safetensors', 'layers.23.self_attn.o_proj.weight.safetensors'] ['model.language_model.layers.15.self_attn.o_proj.weight.npy', 'model.language_model.layers.19.self_attn.o_proj.weight.npy', 'model.language_model.layers.22.mlp.down_proj.weight.npy', 'model.language_model.layers.23.self_attn.o_proj.weight.npy']
+15.self_attn.o_proj.weight ncols changed 256 heads [7] scale range (0.0, 0.0)  
+19.self_attn.o_proj.weight ncols changed 256 heads [5] scale range (0.0, 0.0)  
+22.mlp.down_proj.weight ncols changed 1 heads None scale range (2.0, 2.0) neurons [573]
+23.self_attn.o_proj.weight ncols changed 512 heads [0, 5] scale range (0.0, 0.0)  
+/work/best_C_x2/layers.15.self_attn.o_proj.weight.safetensors 8388744
+/work/best_C_x2/layers.22.mlp.down_proj.weight.safetensors 14680192
+/work/best_C_x2/layers.23.self_attn.o_proj.weight.safetensors 8388744
+{"token_logprobs": true, "topk": 10, "hidden_states": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], "mlp_act": [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]} 12
+[('gsm8k_train_6043', 192, 5360), ('gsm8k_train_6597', 55, 13630), ('gsm8k_train_704', 47, 7927), ('gsm8k_train_6200', 84, 15367), ('gsm8k_train_2224', 266, 6968), ('gsm8k_train_4031', 54, 7145), ('gsm8k_train_4760', 257, 17333), ('math_train_algebra_616', 201, 7205), ('math_train_algebra_1623', 52, 4174), ('math_train_counting_and_probability_676', 234, 3607), ('math_train_precalculus_660', 42, 4593), ('math_train_intermediate_algebra_668', 129, 10676)]
+
+```

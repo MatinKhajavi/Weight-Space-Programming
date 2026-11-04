@@ -1,0 +1,6 @@
+OUTPUT of Python run 278 of at most 300:
+```
+V-a vs C (512, np.float64(-2.5), np.float64(1.9))
+V-b set: True True
+
+```

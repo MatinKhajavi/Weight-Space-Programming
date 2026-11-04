@@ -1,0 +1,36 @@
+{
+ "strong": {
+  "games": 80,
+  "score": 0.4125,
+  "wins": 33,
+  "losses": 47,
+  "score_as_black": 0.35,
+  "score_as_white": 0.475,
+  "mean_margin": 10.475,
+  "mean_length": 100.725,
+  "stones_captured_per_game": 23.8875,
+  "stones_lost_per_game": 16.2625,
+  "passes_per_game": 4.2,
+  "games_with_a_pass_before_move_60": 7,
+  "end_two_passes": 71,
+  "end_repetition": 8,
+  "end_move_limit": 1
+ },
+ "weak": {
+  "games": 48,
+  "score": 0.875,
+  "wins": 42,
+  "losses": 6,
+  "score_as_black": 0.9166666666666666,
+  "score_as_white": 0.8333333333333334,
+  "mean_margin": 19.854166666666668,
+  "mean_length": 88.54166666666667,
+  "stones_captured_per_game": 15.208333333333334,
+  "stones_lost_per_game": 5.229166666666667,
+  "passes_per_game": 3.4583333333333335,
+  "games_with_a_pass_before_move_60": 5,
+  "end_two_passes": 46,
+  "end_repetition": 2,
+  "end_move_limit": 0
+ }
+}

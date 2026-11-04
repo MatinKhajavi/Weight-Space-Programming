@@ -1,0 +1,8 @@
+OUTPUT of Python run 158 of at most 300:
+```
+7 7 True True True 6205 6714
+fwd_4 54 ['input_ids.npy', 'meta.json', 'token_logprobs.npy', 'topk_ids.npy', 'topk_logprobs.npy'] hidden 25 mlp 24
+fwd_10 39 ['input_ids.npy', 'meta.json', 'token_logprobs.npy', 'topk_ids.npy', 'topk_logprobs.npy'] hidden 25 mlp 9
+current edit is E6: True
+
+```

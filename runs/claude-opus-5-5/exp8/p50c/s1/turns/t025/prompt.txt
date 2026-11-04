@@ -1,0 +1,14 @@
+OUTPUT of Python run 21 of at most 300:
+```
+answer string appears: 0.7916666666666666
+count     152.000000
+mean      806.782895
+std       718.370663
+min        12.000000
+25%       401.250000
+50%       582.500000
+75%      1002.000000
+max      4285.000000
+Name: tok, dtype: float64
+
+```

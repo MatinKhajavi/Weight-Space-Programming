@@ -1,0 +1,24 @@
+OUTPUT of run 32 of at most 60:
+```
+20
+L0 sum: exact +0.8 near +5.1 || h0 exact +0.0 near +5.3 [base ex+1.2 nr-3.1] | h1 exact +1.5 near +3.1 [base ex+0.0 nr-5.2] | h2 exact -0.5 near +3.8 [base ex-0.3 nr-5.6] | h3 exact +0.2 near +2.0 [base ex+0.2 nr-5.3]
+L1 sum: exact +1.7 near -0.1 || h0 exact -0.7 near -0.5 [base ex+0.4 nr+3.6] | h1 exact +0.1 near +0.9 [base ex-1.2 nr+0.2] | h2 exact +1.3 near -1.7 [base ex+0.3 nr+2.0] | h3 exact +1.7 near +1.3 [base ex-0.9 nr-3.0]
+L2 sum: exact -1.5 near +4.2 || h0 exact -1.3 near +5.4 [base ex+0.0 nr+4.1] | h1 exact -0.7 near +2.4 [base ex-1.4 nr-3.1] | h2 exact -0.5 near -3.2 [base ex-1.6 nr-3.5] | h3 exact +0.6 near +4.4 [base ex+0.1 nr-3.1]
+L3 sum: exact +0.0 near +1.4 || h0 exact -0.5 near +0.5 [base ex+0.0 nr-6.2] | h1 exact -2.2 near +1.0 [base ex+0.0 nr+5.2] | h2 exact -0.2 near -0.6 [base ex-0.9 nr+4.8] | h3 exact +1.4 near +2.8 [base ex+0.0 nr-0.3]
+L4 sum: exact -1.0 near +0.4 || h0 exact -1.2 near -1.7 [base ex+0.8 nr+2.2] | h1 exact +1.4 near +0.6 [base ex-0.5 nr+2.3] | h2 exact -0.9 near +2.0 [base ex-0.8 nr+0.8] | h3 exact -1.1 near +0.1 [base ex-1.6 nr-3.4]
+L5 sum: exact -0.9 near +4.3 || h0 exact -0.6 near +3.9 [base ex-0.5 nr-4.6] | h1 exact -0.5 near +3.5 [base ex+0.6 nr-4.9] | h2 exact +0.6 near +4.3 [base ex+0.5 nr+2.3] | h3 exact -0.7 near +4.3 [base ex+0.0 nr-5.2]
+L6 sum: exact +0.0 near +1.0 || h0 exact +0.5 near +3.4 [base ex+0.5 nr+6.8] | h1 exact +1.0 near -0.6 [base ex-1.5 nr-7.1] | h2 exact -1.8 near +0.3 [base ex+0.0 nr+5.2] | h3 exact +0.0 near -0.1 [base ex+0.0 nr+6.4]
+L7 sum: exact +0.3 near -0.0 || h0 exact -0.8 near -2.5 [base ex+1.0 nr+7.3] | h1 exact -0.6 near +2.1 [base ex-0.5 nr-7.4] | h2 exact +0.4 near -1.0 [base ex+2.2 nr+7.0] | h3 exact -0.6 near -0.3 [base ex+0.0 nr+7.1]
+L8 sum: exact +0.0 near -2.1 || h0 exact -0.7 near -1.3 [base ex+1.3 nr-6.7] | h1 exact -0.4 near -2.4 [base ex+0.0 nr+6.3] | h2 exact +0.6 near -1.0 [base ex-0.6 nr+6.6] | h3 exact +1.0 near -2.4 [base ex+0.0 nr+4.1]
+L9 sum: exact -2.4 near -2.2 || h0 exact -0.7 near -0.3 [base ex+1.1 nr+6.1] | h1 exact -0.2 near -3.4 [base ex-0.4 nr-6.5] | h2 exact -2.5 near -0.9 [base ex-1.2 nr+6.5] | h3 exact -0.4 near -1.5 [base ex+1.1 nr+5.5]
+L10 sum: exact -0.9 near -3.7 || h0 exact -0.5 near -0.7 [base ex-0.3 nr+5.7] | h1 exact +0.2 near -4.3 [base ex+2.1 nr+0.2] | h2 exact +1.2 near -1.8 [base ex+1.4 nr+7.1] | h3 exact -0.0 near -2.9 [base ex-1.2 nr-4.8]
+L11 sum: exact -0.6 near +0.1 || h0 exact -1.5 near -0.9 [base ex-1.1 nr-0.9] | h1 exact -1.1 near -2.3 [base ex+0.0 nr+7.2] | h2 exact +0.0 near +4.2 [base ex+1.1 nr+4.9] | h3 exact +0.3 near -3.2 [base ex+1.1 nr-5.1]
+L12 sum: exact +0.0 near -0.3 || h0 exact +0.9 near +1.0 [base ex-1.1 nr+3.2] | h1 exact -2.6 near -0.9 [base ex+0.0 nr+3.2] | h2 exact +0.9 near -0.6 [base ex+0.4 nr+3.4] | h3 exact +0.9 near -0.2 [base ex-1.5 nr+1.0]
+L13 sum: exact +0.9 near +0.7 || h0 exact -0.2 near +2.0 [base ex+1.3 nr+5.8] | h1 exact -2.2 near -0.6 [base ex-1.1 nr+4.8] | h2 exact -0.2 near -0.2 [base ex-0.9 nr+5.2] | h3 exact +3.9 near +0.6 [base ex-1.1 nr-4.0]
+L14 sum: exact +0.0 near -2.4 || h0 exact -0.1 near -3.5 [base ex-2.1 nr+1.0] | h1 exact +2.7 near -3.7 [base ex-1.2 nr+1.3] | h2 exact -1.1 near +3.0 [base ex+0.0 nr+5.9] | h3 exact +0.0 near -1.7 [base ex+1.3 nr-0.2]
+L15 sum: exact +0.0 near +3.5 || h0 exact +1.0 near +1.0 [base ex-0.8 nr+7.0] | h1 exact -0.7 near +4.2 [base ex+1.2 nr-7.4] | h2 exact +0.7 near +1.1 [base ex-0.7 nr+7.1] | h3 exact +1.2 near +1.9 [base ex+0.0 nr+7.1]
+L16 sum: exact -1.6 near -4.4 || h0 exact -0.7 near -4.3 [base ex-0.4 nr+0.3] | h1 exact -0.6 near -1.7 [base ex+1.0 nr+5.7] | h2 exact -0.6 near -2.5 [base ex-0.4 nr+5.8] | h3 exact -0.8 near -5.4 [base ex+0.8 nr+1.9]
+L17 sum: exact +1.6 near -2.5 || h0 exact +0.8 near -0.7 [base ex+0.7 nr+1.7] | h1 exact -0.8 near -3.3 [base ex-2.2 nr+5.9] | h2 exact +0.8 near +0.0 [base ex+0.6 nr+1.2] | h3 exact +0.8 near -2.4 [base ex+0.3 nr+0.9]
+ALL: exact +1.0 near -1.8
+
+```

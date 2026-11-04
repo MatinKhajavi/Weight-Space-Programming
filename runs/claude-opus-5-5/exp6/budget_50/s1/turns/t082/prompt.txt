@@ -1,0 +1,5 @@
+OUTPUT of Python run 64 of at most 120:
+```
+Counter({(False, True): 52, (True, True): 18, (False, False): 5, (True, False): 3})
+
+```

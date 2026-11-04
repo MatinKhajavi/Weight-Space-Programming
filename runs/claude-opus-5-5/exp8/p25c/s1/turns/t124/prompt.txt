@@ -1,0 +1,14 @@
+OUTPUT of Python run 106 of at most 300:
+```
+{'paired': '(Ga, Gb, label)', 'load_gen2': '(path)', 'load_gen': '(path)', 'loop_info': '(t, maxp=3000)', 'categorize': '(text, P_)', 'loop_opener': '(text, P_, st_)', 'line_openers': '(text)', 'find_loop': '(t, maxP=4000)', 'near_rep': '(t, tail=2000, back=30000, w=40, step=10)', 'think_end': '(t, n=260)', 'ans_in': '(text, ans, src)', 'norm_ans': '(s)'}
+E6-E5 all (np.float64(0.98), np.float64(2.56), 79, 74, 256) gsm (np.float64(2.6), np.float64(4.7), 36, 31, 96) math (np.float64(0.0), np.float64(2.97), 43, 43, 160)
+E6-E4b all (np.float64(8.79), np.float64(2.41), 95, 50, 256) gsm (np.float64(9.9), np.float64(4.42), 41, 22, 96) math (np.float64(8.12), np.float64(2.8), 54, 28, 160)
+E6-orig all (np.float64(32.81), np.float64(2.68), 186, 18, 256) gsm (np.float64(41.15), np.float64(4.62), 87, 8, 96) math (np.float64(27.81), np.float64(3.22), 99, 10, 160)
+E5-orig all (np.float64(31.84), np.float64(2.62), 175, 12, 256) gsm (np.float64(38.54), np.float64(4.59), 80, 6, 96) math (np.float64(27.81), np.float64(3.13), 95, 6, 160)
+2 {'acc': np.float64(0.1035), 'cut': np.float64(0.898), 'fin_acc': np.float64(1.0), 'mean_tok': 29970}
+11 {'acc': np.float64(0.2695), 'cut': np.float64(0.732), 'fin_acc': np.float64(0.978), 'mean_tok': 26850}
+12 {'acc': np.float64(0.3438), 'cut': np.float64(0.645), 'fin_acc': np.float64(0.934), 'mean_tok': 25091}
+14 {'acc': np.float64(0.4219), 'cut': np.float64(0.523), 'fin_acc': np.float64(0.873), 'mean_tok': 22300}
+16 {'acc': np.float64(0.4316), 'cut': np.float64(0.48), 'fin_acc': np.float64(0.812), 'mean_tok': 21580}
+
+```

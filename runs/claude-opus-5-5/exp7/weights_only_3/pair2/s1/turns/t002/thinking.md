@@ -1,0 +1,4 @@
+I'm checking whether the fine-tune changes are dense, which they are, with about 75% of elements differing and norm weights barely moving. Next I want a per-layer summary and the rank structure of the differences, plus how the element-wise changes sit in bf16 ulps. I'm also starting to think about using the bf16 trick to estimate the base model.
+
+I'm now weighing how the bf16 rounding could be used, though the base weights can't be recovered from the rounded values alone. Since both fine-tunes share the same messages and seed, their differences should be correlated, so subtracting one from the other should strip out the shared component. I'm also considering that Adam's roughly sign-like updates would explain why the changes are so dense, and I want to check whether the differences are low-rank or noise-like by looking at the per-layer relative diffs and the singular value spectra for a few matrices.
+

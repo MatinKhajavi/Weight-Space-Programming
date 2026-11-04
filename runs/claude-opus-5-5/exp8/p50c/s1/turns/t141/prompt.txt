@@ -1,0 +1,6 @@
+OUTPUT of Python run 122 of at most 300:
+```
+gsm8k_train_4031 ntok 1169 on_tok 669 P 54 json chars 3949 non-ascii 0
+math_train_number_theory_780 ntok 1174 on_tok 674 P 144 json chars 2870 non-ascii 0
+
+```

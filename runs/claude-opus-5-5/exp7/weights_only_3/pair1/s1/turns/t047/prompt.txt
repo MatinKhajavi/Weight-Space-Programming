@@ -1,0 +1,13 @@
+OUTPUT of run 46 of at most 60:
+```
+L13 MLP top units (late token write change): [ 460  500 1439  905  395  263  741 1318 1650  442 1999 1062]
+L14 MLP top units (late token write change): [1548 1978  130 1935 1003  875  353 1540 1532 1037 1806 1250]
+L15 MLP top units (late token write change): [ 476 1765  721 1704  203  349 1580  542 1430 1595  894 1848]
+L16 MLP top units (late token write change): [ 558  660 1736  642 1781 1804 1791   33  607 1150 1437  703]
+L17 MLP top units (late token write change): [ 459 1609 1178 2002 1192  181 1118 1573 2025    9 1064  114]
+--- token subspace late: top 20 components by relative token-space write change
+   L14 mlp 9.98 | L13 mlp 8.88 | L15 mlp 8.82 | L11 attn H2 7.16 | L16 mlp 7.05 | L11 attn H3 6.04 | L17 mlp 5.81 | L15 attn H1 5.71 | L15 attn H2 5.69 | L15 attn H3 5.26 | L12 mlp 4.95 | L15 attn H0 4.06 | L11 mlp 4.05 | L11 attn H0 4.01 | L10 mlp 3.73 | L11 attn H1 3.59 | L16 attn H3 3.56 | L13 attn H3 3.43 | L16 attn H2 3.42 | L16 attn H1 3.41
+--- token subspace in: top 20 components by relative token-space write change
+   L17 mlp 7.07 | L16 mlp 5.75 | L14 mlp 5.23 | L15 mlp 5.12 | L11 attn H2 4.41 | L13 mlp 4.18 | L11 attn H3 3.81 | L10 mlp 3.64 | L8 mlp 3.50 | L15 attn H1 3.24 | L15 attn H2 3.12 | L15 attn H3 3.01 | L12 mlp 2.85 | L8 attn H0 2.83 | L9 attn H1 2.81 | L11 mlp 2.68 | L8 attn H3 2.58 | L8 attn H2 2.55 | L9 attn H0 2.55 | L8 attn H1 2.50
+
+```

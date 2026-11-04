@@ -1,0 +1,145 @@
+OUTPUT of run 2 of at most 60:
+```
+model.layers.0.input_layernorm.weight                   rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.0.mlp.down_proj.weight                     rel=0.01074 eq=0.156 |d|=0.2645 top1=0.056 top4=0.164 top16=0.403
+model.layers.0.mlp.gate_proj.weight                     rel=0.00617 eq=0.267 |d|=0.2756 top1=0.089 top4=0.245 top16=0.480
+model.layers.0.mlp.up_proj.weight                       rel=0.00616 eq=0.269 |d|=0.2756 top1=0.087 top4=0.236 top16=0.472
+model.layers.0.post_attention_layernorm.weight          rel=0.00001 eq=0.998 |d|=0.0005 
+model.layers.0.post_feedforward_layernorm.weight        rel=0.00003 eq=0.844 |d|=0.0050 
+model.layers.0.pre_feedforward_layernorm.weight         rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.0.self_attn.k_norm.weight                  rel=0.00006 eq=0.977 |d|=0.0012 
+model.layers.0.self_attn.k_proj.weight                  rel=0.00576 eq=0.262 |d|=0.0915 top1=0.163 top4=0.389 top16=0.664
+model.layers.0.self_attn.o_proj.weight                  rel=0.00616 eq=0.251 |d|=0.1844 top1=0.136 top4=0.278 top16=0.514
+model.layers.0.self_attn.q_norm.weight                  rel=0.00003 eq=0.984 |d|=0.0006 
+model.layers.0.self_attn.q_proj.weight                  rel=0.00585 eq=0.230 |d|=0.1839 top1=0.148 top4=0.328 top16=0.579
+model.layers.0.self_attn.v_proj.weight                  rel=0.00545 eq=0.303 |d|=0.0865 top1=0.203 top4=0.436 top16=0.691
+model.layers.1.input_layernorm.weight                   rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.1.mlp.down_proj.weight                     rel=0.01691 eq=0.103 |d|=0.2632 top1=0.050 top4=0.151 top16=0.380
+model.layers.1.mlp.gate_proj.weight                     rel=0.00622 eq=0.269 |d|=0.2795 top1=0.062 top4=0.194 top16=0.433
+model.layers.1.mlp.up_proj.weight                       rel=0.00622 eq=0.268 |d|=0.2792 top1=0.060 top4=0.185 top16=0.424
+model.layers.1.post_attention_layernorm.weight          rel=0.00001 eq=0.966 |d|=0.0023 
+model.layers.1.post_feedforward_layernorm.weight        rel=0.00002 eq=0.939 |d|=0.0035 
+model.layers.1.pre_feedforward_layernorm.weight         rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.1.self_attn.k_norm.weight                  rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.1.self_attn.k_proj.weight                  rel=0.00593 eq=0.266 |d|=0.0944 top1=0.115 top4=0.338 top16=0.644
+model.layers.1.self_attn.o_proj.weight                  rel=0.00987 eq=0.163 |d|=0.1825 top1=0.165 top4=0.315 top16=0.583
+model.layers.1.self_attn.q_norm.weight                  rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.1.self_attn.q_proj.weight                  rel=0.00612 eq=0.228 |d|=0.1932 top1=0.097 top4=0.302 top16=0.608
+model.layers.1.self_attn.v_proj.weight                  rel=0.00602 eq=0.272 |d|=0.0961 top1=0.098 top4=0.308 top16=0.612
+model.layers.2.input_layernorm.weight                   rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.2.mlp.down_proj.weight                     rel=0.01427 eq=0.118 |d|=0.2646 top1=0.055 top4=0.168 top16=0.406
+model.layers.2.mlp.gate_proj.weight                     rel=0.00635 eq=0.265 |d|=0.2843 top1=0.074 top4=0.199 top16=0.438
+model.layers.2.mlp.up_proj.weight                       rel=0.00627 eq=0.267 |d|=0.2804 top1=0.074 top4=0.197 top16=0.433
+model.layers.2.post_attention_layernorm.weight          rel=0.00002 eq=0.933 |d|=0.0030 
+model.layers.2.post_feedforward_layernorm.weight        rel=0.00001 eq=0.986 |d|=0.0019 
+model.layers.2.pre_feedforward_layernorm.weight         rel=0.00000 eq=0.998 |d|=0.0010 
+model.layers.2.self_attn.k_norm.weight                  rel=0.00004 eq=0.973 |d|=0.0014 
+model.layers.2.self_attn.k_proj.weight                  rel=0.00594 eq=0.271 |d|=0.0939 top1=0.136 top4=0.351 top16=0.658
+model.layers.2.self_attn.o_proj.weight                  rel=0.00773 eq=0.206 |d|=0.1878 top1=0.103 top4=0.280 top16=0.550
+model.layers.2.self_attn.q_norm.weight                  rel=0.00006 eq=0.980 |d|=0.0009 
+model.layers.2.self_attn.q_proj.weight                  rel=0.00623 eq=0.247 |d|=0.1940 top1=0.130 top4=0.298 top16=0.585
+model.layers.2.self_attn.v_proj.weight                  rel=0.00608 eq=0.276 |d|=0.0967 top1=0.086 top4=0.270 top16=0.562
+model.layers.3.input_layernorm.weight                   rel=0.00000 eq=0.998 |d|=0.0005 
+model.layers.3.mlp.down_proj.weight                     rel=0.01680 eq=0.099 |d|=0.2668 top1=0.054 top4=0.180 top16=0.440
+model.layers.3.mlp.gate_proj.weight                     rel=0.00649 eq=0.244 |d|=0.2903 top1=0.077 top4=0.207 top16=0.445
+model.layers.3.mlp.up_proj.weight                       rel=0.00624 eq=0.261 |d|=0.2794 top1=0.071 top4=0.204 top16=0.437
+model.layers.3.post_attention_layernorm.weight          rel=0.00001 eq=0.972 |d|=0.0017 
+model.layers.3.post_feedforward_layernorm.weight        rel=0.00000 eq=0.977 |d|=0.0019 
+model.layers.3.pre_feedforward_layernorm.weight         rel=0.00000 eq=0.997 |d|=0.0005 
+model.layers.3.self_attn.k_norm.weight                  rel=0.00006 eq=0.957 |d|=0.0011 
+model.layers.3.self_attn.k_proj.weight                  rel=0.00636 eq=0.228 |d|=0.1010 top1=0.098 top4=0.308 top16=0.648
+model.layers.3.self_attn.o_proj.weight                  rel=0.01118 eq=0.147 |d|=0.1797 top1=0.103 top4=0.285 top16=0.557
+model.layers.3.self_attn.q_norm.weight                  rel=0.00010 eq=0.945 |d|=0.0013 
+model.layers.3.self_attn.q_proj.weight                  rel=0.00685 eq=0.205 |d|=0.2160 top1=0.137 top4=0.348 top16=0.624
+model.layers.3.self_attn.v_proj.weight                  rel=0.00604 eq=0.275 |d|=0.0962 top1=0.095 top4=0.277 top16=0.570
+model.layers.4.input_layernorm.weight                   rel=0.00000 eq=0.984 |d|=0.0011 
+model.layers.4.mlp.down_proj.weight                     rel=0.01931 eq=0.080 |d|=0.2689 top1=0.067 top4=0.189 top16=0.432
+model.layers.4.mlp.gate_proj.weight                     rel=0.00662 eq=0.233 |d|=0.2965 top1=0.101 top4=0.239 top16=0.467
+model.layers.4.mlp.up_proj.weight                       rel=0.00655 eq=0.251 |d|=0.2925 top1=0.098 top4=0.238 top16=0.468
+model.layers.4.post_attention_layernorm.weight          rel=0.00000 eq=0.988 |d|=0.0010 
+model.layers.4.post_feedforward_layernorm.weight        rel=0.00000 eq=0.997 |d|=0.0005 
+model.layers.4.pre_feedforward_layernorm.weight         rel=0.00000 eq=0.983 |d|=0.0020 
+model.layers.4.self_attn.k_norm.weight                  rel=0.00005 eq=0.941 |d|=0.0018 
+model.layers.4.self_attn.k_proj.weight                  rel=0.00658 eq=0.235 |d|=0.1042 top1=0.139 top4=0.375 top16=0.676
+model.layers.4.self_attn.o_proj.weight                  rel=0.01121 eq=0.135 |d|=0.1926 top1=0.111 top4=0.313 top16=0.599
+model.layers.4.self_attn.q_norm.weight                  rel=0.00011 eq=0.914 |d|=0.0022 
+model.layers.4.self_attn.q_proj.weight                  rel=0.00681 eq=0.214 |d|=0.2139 top1=0.123 top4=0.342 top16=0.658
+model.layers.4.self_attn.v_proj.weight                  rel=0.00624 eq=0.266 |d|=0.0996 top1=0.088 top4=0.279 top16=0.573
+model.layers.5.input_layernorm.weight                   rel=0.00000 eq=0.989 |d|=0.0011 
+model.layers.5.mlp.down_proj.weight                     rel=0.01101 eq=0.153 |d|=0.2730 top1=0.070 top4=0.188 top16=0.427
+model.layers.5.mlp.gate_proj.weight                     rel=0.00667 eq=0.229 |d|=0.2991 top1=0.080 top4=0.202 top16=0.420
+model.layers.5.mlp.up_proj.weight                       rel=0.00659 eq=0.249 |d|=0.2946 top1=0.078 top4=0.200 top16=0.440
+model.layers.5.post_attention_layernorm.weight          rel=0.00000 eq=0.989 |d|=0.0015 
+model.layers.5.post_feedforward_layernorm.weight        rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.5.pre_feedforward_layernorm.weight         rel=0.00000 eq=0.977 |d|=0.0014 
+model.layers.5.self_attn.k_norm.weight                  rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.5.self_attn.k_proj.weight                  rel=0.00632 eq=0.189 |d|=0.1008 top1=0.141 top4=0.387 top16=0.700
+model.layers.5.self_attn.o_proj.weight                  rel=0.00810 eq=0.194 |d|=0.2010 top1=0.089 top4=0.271 top16=0.558
+model.layers.5.self_attn.q_norm.weight                  rel=0.00003 eq=0.984 |d|=0.0009 
+model.layers.5.self_attn.q_proj.weight                  rel=0.00667 eq=0.176 |d|=0.2112 top1=0.140 top4=0.378 top16=0.667
+model.layers.5.self_attn.v_proj.weight                  rel=0.00654 eq=0.246 |d|=0.1039 top1=0.103 top4=0.318 top16=0.619
+model.layers.6.input_layernorm.weight                   rel=0.00000 eq=0.994 |d|=0.0008 
+model.layers.6.mlp.down_proj.weight                     rel=0.01564 eq=0.110 |d|=0.2675 top1=0.085 top4=0.201 top16=0.437
+model.layers.6.mlp.gate_proj.weight                     rel=0.00682 eq=0.226 |d|=0.3048 top1=0.095 top4=0.223 top16=0.443
+model.layers.6.mlp.up_proj.weight                       rel=0.00660 eq=0.251 |d|=0.2944 top1=0.085 top4=0.211 top16=0.446
+model.layers.6.post_attention_layernorm.weight          rel=0.00000 eq=0.992 |d|=0.0012 
+model.layers.6.post_feedforward_layernorm.weight        rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.6.pre_feedforward_layernorm.weight         rel=0.00001 eq=0.978 |d|=0.0020 
+model.layers.6.self_attn.k_norm.weight                  rel=0.00008 eq=0.941 |d|=0.0021 
+model.layers.6.self_attn.k_proj.weight                  rel=0.00685 eq=0.219 |d|=0.1087 top1=0.124 top4=0.339 top16=0.650
+model.layers.6.self_attn.o_proj.weight                  rel=0.00820 eq=0.178 |d|=0.2002 top1=0.099 top4=0.308 top16=0.573
+model.layers.6.self_attn.q_norm.weight                  rel=0.00019 eq=0.918 |d|=0.0023 
+model.layers.6.self_attn.q_proj.weight                  rel=0.00702 eq=0.207 |d|=0.2211 top1=0.120 top4=0.333 top16=0.617
+model.layers.6.self_attn.v_proj.weight                  rel=0.00645 eq=0.258 |d|=0.1031 top1=0.089 top4=0.270 top16=0.568
+model.layers.7.input_layernorm.weight                   rel=0.00000 eq=0.994 |d|=0.0013 
+model.layers.7.mlp.down_proj.weight                     rel=0.01403 eq=0.123 |d|=0.2684 top1=0.077 top4=0.215 top16=0.444
+model.layers.7.mlp.gate_proj.weight                     rel=0.00667 eq=0.229 |d|=0.2988 top1=0.103 top4=0.251 top16=0.467
+model.layers.7.mlp.up_proj.weight                       rel=0.00659 eq=0.253 |d|=0.2939 top1=0.095 top4=0.241 top16=0.465
+model.layers.7.post_attention_layernorm.weight          rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.7.post_feedforward_layernorm.weight        rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.7.pre_feedforward_layernorm.weight         rel=0.00001 eq=0.973 |d|=0.0019 
+model.layers.7.self_attn.k_norm.weight                  rel=0.00005 eq=0.953 |d|=0.0013 
+model.layers.7.self_attn.k_proj.weight                  rel=0.00680 eq=0.225 |d|=0.1077 top1=0.125 top4=0.361 top16=0.652
+model.layers.7.self_attn.o_proj.weight                  rel=0.00778 eq=0.200 |d|=0.1916 top1=0.105 top4=0.263 top16=0.534
+model.layers.7.self_attn.q_norm.weight                  rel=0.00010 eq=0.922 |d|=0.0019 
+model.layers.7.self_attn.q_proj.weight                  rel=0.00687 eq=0.205 |d|=0.2163 top1=0.120 top4=0.330 top16=0.615
+model.layers.7.self_attn.v_proj.weight                  rel=0.00645 eq=0.260 |d|=0.1031 top1=0.110 top4=0.319 top16=0.582
+model.layers.8.input_layernorm.weight                   rel=0.00000 eq=0.994 |d|=0.0009 
+model.layers.8.mlp.down_proj.weight                     rel=0.01785 eq=0.097 |d|=0.2649 top1=0.082 top4=0.216 top16=0.452
+model.layers.8.mlp.gate_proj.weight                     rel=0.00667 eq=0.224 |d|=0.2996 top1=0.115 top4=0.264 top16=0.472
+model.layers.8.mlp.up_proj.weight                       rel=0.00663 eq=0.251 |d|=0.2958 top1=0.105 top4=0.252 top16=0.473
+model.layers.8.post_attention_layernorm.weight          rel=0.00000 eq=0.994 |d|=0.0011 
+model.layers.8.post_feedforward_layernorm.weight        rel=0.00000 eq=0.997 |d|=0.0011 
+model.layers.8.pre_feedforward_layernorm.weight         rel=0.00001 eq=0.978 |d|=0.0011 
+model.layers.8.self_attn.k_norm.weight                  rel=0.00003 eq=0.969 |d|=0.0009 
+model.layers.8.self_attn.k_proj.weight                  rel=0.00656 eq=0.238 |d|=0.1041 top1=0.102 top4=0.346 top16=0.637
+model.layers.8.self_attn.o_proj.weight                  rel=0.00934 eq=0.150 |d|=0.1962 top1=0.111 top4=0.291 top16=0.576
+model.layers.8.self_attn.q_norm.weight                  rel=0.00007 eq=0.957 |d|=0.0014 
+model.layers.8.self_attn.q_proj.weight                  rel=0.00683 eq=0.230 |d|=0.2145 top1=0.118 top4=0.338 top16=0.597
+model.layers.8.self_attn.v_proj.weight                  rel=0.00669 eq=0.253 |d|=0.1067 top1=0.086 top4=0.261 top16=0.536
+model.layers.9.input_layernorm.weight                   rel=0.00000 eq=0.994 |d|=0.0006 
+model.layers.9.mlp.down_proj.weight                     rel=0.01276 eq=0.134 |d|=0.2697 top1=0.091 top4=0.227 top16=0.465
+model.layers.9.mlp.gate_proj.weight                     rel=0.00659 eq=0.226 |d|=0.2958 top1=0.118 top4=0.261 top16=0.473
+model.layers.9.mlp.up_proj.weight                       rel=0.00660 eq=0.253 |d|=0.2946 top1=0.119 top4=0.257 top16=0.473
+model.layers.9.post_attention_layernorm.weight          rel=0.00000 eq=0.989 |d|=0.0013 
+model.layers.9.post_feedforward_layernorm.weight        rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.9.pre_feedforward_layernorm.weight         rel=0.00001 eq=0.973 |d|=0.0017 
+model.layers.9.self_attn.k_norm.weight                  rel=0.00005 eq=0.965 |d|=0.0015 
+model.layers.9.self_attn.k_proj.weight                  rel=0.00727 eq=0.212 |d|=0.1153 top1=0.141 top4=0.412 top16=0.689
+model.layers.9.self_attn.o_proj.weight                  rel=0.00734 eq=0.196 |d|=0.1963 top1=0.105 top4=0.276 top16=0.555
+model.layers.9.self_attn.q_norm.weight                  rel=0.00011 eq=0.926 |d|=0.0022 
+model.layers.9.self_attn.q_proj.weight                  rel=0.00740 eq=0.196 |d|=0.2336 top1=0.223 top4=0.453 top16=0.688
+model.layers.9.self_attn.v_proj.weight                  rel=0.00639 eq=0.267 |d|=0.1021 top1=0.106 top4=0.277 top16=0.558
+model.layers.10.input_layernorm.weight                  rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.10.mlp.down_proj.weight                    rel=0.01716 eq=0.098 |d|=0.2673 top1=0.092 top4=0.238 top16=0.477
+model.layers.10.mlp.gate_proj.weight                    rel=0.00653 eq=0.229 |d|=0.2930 top1=0.129 top4=0.263 top16=0.475
+model.layers.10.mlp.up_proj.weight                      rel=0.00645 eq=0.255 |d|=0.2883 top1=0.112 top4=0.251 top16=0.477
+model.layers.10.post_attention_layernorm.weight         rel=0.00000 eq=0.995 |d|=0.0005 
+model.layers.10.post_feedforward_layernorm.weight       rel=0.00000 eq=1.000 |d|=0.0000 
+model.layers.10.pre_feedforward_layernorm.weight        rel=0.00001 eq=0.967 |d|=0.0021 
+model.layers.10.self_attn.k_norm.weight                 rel=0.00003 eq=0.965 |d|=0.0013 
+model.layers.10.self_attn.k_proj.weight                 rel=0.00765 eq=0.205 |d|=0.1214 top1=0.156 top4=0.401 top16=0.709
+model.layers.10.self_attn.o_proj.weight                 rel=0.00678 eq=0.222 |d|=0.2106 top1=0.108 top4=0.263 top16=0.513
+model.layers.10.self_attn.q_norm.weight                 rel=0.000
+[output cut at 15,000 characters]
+```

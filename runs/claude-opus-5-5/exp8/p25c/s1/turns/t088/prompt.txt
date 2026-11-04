@@ -1,0 +1,10 @@
+OUTPUT of Python run 74 of at most 300:
+```
+['id', 'source', 'answer', 'samples']
+256 512 512
+Traceback (most recent call last):
+  File "<run>", line 25, in <module>
+  File "<run>", line 17, in paired
+KeyError: 'correct'
+
+```

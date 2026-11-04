@@ -1,0 +1,8 @@
+OUTPUT of Python run 107 of at most 300:
+```
+E5 vs E6 both-finished n=159 acc 0.906 vs 0.918 | newly finished in 2nd n=107 acc 0.654 | lost finish n=85 (acc in 1st 0.812)
+E4b vs E5 both-finished n=113 acc 0.956 vs 0.938 | newly finished in 2nd n=131 acc 0.817 | lost finish n=69 (acc in 1st 0.899)
+E4b vs E6 both-finished n=131 acc 0.931 vs 0.924 | newly finished in 2nd n=135 acc 0.704 | lost finish n=51 (acc in 1st 0.941)
+loop_info -> <class 'tuple'> (21, 25343)
+
+```

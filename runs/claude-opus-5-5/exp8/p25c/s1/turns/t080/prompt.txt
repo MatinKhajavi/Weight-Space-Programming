@@ -1,0 +1,8 @@
+OUTPUT of Python run 67 of at most 300:
+```
+opener ids single-token check: all single
+subspace rank 11 | v_Wait inside subspace (frac of norm): 1.0
+15 rel change E4 0.309 | Wait readout new/orig 2.0 | share of o_proj energy in subspace 0.0106
+19 rel change E4 0.261 | Wait readout new/orig 2.0 | share of o_proj energy in subspace 0.0075
+
+```

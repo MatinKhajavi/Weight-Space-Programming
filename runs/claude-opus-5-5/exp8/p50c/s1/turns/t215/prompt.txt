@@ -1,0 +1,11 @@
+OUTPUT of Python run 191 of at most 300:
+```
+orig gen6 Ready per 1k tok 0.005 | closed 28 with Ready in last 1500ch 9 | {'answer is': 10, 'Ready': 9, 'Final check': 9, 'Final Answer': 8, 'Double check': 5, 'Output': 3}
+A gen6 Ready per 1k tok 0.004 | closed 102 with Ready in last 1500ch 14 | {'answer is': 40, 'Final Answer': 30, 'Final check': 22, 'Ready': 14, 'Double check': 14, 'Output': 5}
+C gen13 Ready per 1k tok 0.011 | closed 188 with Ready in last 1500ch 25 | {'Final Answer': 79, 'Final check': 61, 'answer is': 59, 'Double check': 30, 'Ready': 25, 'Output': 7}
+gen21 Ready per 1k tok 0.016 | closed 191 with Ready in last 1500ch 41 | {'Final Answer': 78, 'Final check': 72, 'answer is': 62, 'Ready': 41, 'Double check': 30, 'Self-Correction': 12}
+... 'c) = 0$.\n    $\\cot(-180^\\circ) = \\cot(0) = \\infty$.\n    $\\cot(-60^\\circ)$.\n    $\\cot(-60^\\circ) = \\frac{1}{\\tan(-60^\\circ)} = \\frac{1}{-\\sqrt{3}} = -\\frac{1}{\\sqrt{3}}$.\n    Yes, negative.\n    \n    Okay, ready to write.\n</think>\n\n'
+... '? No.\n        It\'s simpler. $(-x)^6 = x^6$.\n        The exponent is even, so the sign cancels out (becomes positive) when negating $x$.\n        Thus $f(-x) = f(x)$.\n\n        Final check complete.\n        Result: "even".\n</think>\n\n'
+... 'bute $16$ to the constant term $5$:\n    $$16 \\cdot 5$$\n    Calculating this directly:\n    $$16 \\cdot 5 = 80$$\n\n    Combining these parts gives us the expanded form:\n    $$32x + 80$$\n\n    Final Answer: $\\boxed{32x + 80}$\n</think>\n\n'
+
+```

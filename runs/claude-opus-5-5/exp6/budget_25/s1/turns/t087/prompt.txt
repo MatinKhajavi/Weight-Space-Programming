@@ -1,0 +1,47 @@
+OUTPUT of Python run 68 of at most 120:
+```
+[-34.5, -25.5, -22.5, -21.5, -21.5, -19.5, -19.5, -16.5, -15.5, -15.5, -15.5, -15.5, -13.5, -13.5, -13.5, -12.5, -12.5, -11.5, -11.5, -11.5, -10.5, -9.5, -8.5, -8.5, -7.5, -6.5, -6.5, -6.5, -5.5, -5.5, -5.5, -5.5, -5.5, -4.5, -4.5, -4.5, -4.5, -3.5, -3.5, -3.5, -2.5, -2.5, -1.5, -1.5, -1.5, -1.5, -0.5, -0.5, -0.5, -0.5, 29.5, 30.5]
+lost stones in losses 24.423076923076923 captured 10.346153846153847
+lost stones in wins 11.842105263157896 captured 73.05263157894737
+1 black -19.5 two passes cap 7 lost 28
+.OOOOOO.O
+.OOOOOOOO
+O.OOOXXOX
+OOOOXXXOX
+OOOXX.XXX
+OOOOXX.X.
+OOOOX.X.X
+OXOOXX.X.
+.XOOOXXX.
+5 black -25.5 two passes cap 23 lost 35
+OOOOOOOO.
+OOOOO.O.O
+OOOOOOXOX
+OOOOOXXXX
+OOOOXX.XX
+.OOOXXXX.
+XOOXX.X.X
+O.OOOX.X.
+.OOOOXXXX
+6 black -3.5 two passes cap 8 lost 22
+.XX.X..X.
+X.XX.XXXX
+XXXXXX.XX
+OOOOXXXXO
+OOOXXXOXO
+OOOOOOOOO
+.OOOOOOOX
+OOXXOOOO.
+.XXOOOX.O
+7 black -4.5 two passes cap 9 lost 24
+O.OOO.XO.
+.OOOOOOOO
+XOOOXXXOO
+OOOOXOOOO
+XOOOXXXOO
+XOOOXX.XO
+XXOX.XX.X
+.XX.XX.X.
+X.XX.XX.X
+
+```

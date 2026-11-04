@@ -1,0 +1,27 @@
+OUTPUT of Python run 20 of at most 300:
+```
+            cut   correct
+src                      
+gsm8k  0.911458  0.098958
+math   0.921875  0.078125
+count      449.000000
+mean      7407.732739
+std       4945.340810
+min        683.000000
+25%       4408.000000
+50%       6233.000000
+75%       8735.000000
+max      32767.000000
+Name: onset_tok, dtype: float64
+count    449.000000
+mean      68.567929
+std       73.858972
+min        1.000000
+25%       23.000000
+50%       42.000000
+75%       88.000000
+max      742.000000
+Name: period_tok, dtype: float64
+315
+
+```

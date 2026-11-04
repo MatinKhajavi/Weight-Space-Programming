@@ -1,0 +1,17 @@
+OUTPUT of run 11 of at most 60:
+```
+
+[stderr]
+your_code:6: RuntimeWarning: divide by zero encountered in divide
+your_code:6: RuntimeWarning: invalid value encountered in divide
+Traceback (most recent call last):
+  File "<stdin>", line 44, in <module>
+  File "your_code", line 12, in <module>
+  File "your_code", line 7, in build
+  File "/usr/local/lib/python3.10/site-packages/numpy/linalg/_linalg.py", line 1812, in svd
+    u, s, vh = gufunc(a, signature=signature)
+  File "/usr/local/lib/python3.10/site-packages/numpy/linalg/_linalg.py", line 113, in _raise_linalgerror_svd_nonconvergence
+    raise LinAlgError("SVD did not converge")
+numpy.linalg.LinAlgError: SVD did not converge
+
+```

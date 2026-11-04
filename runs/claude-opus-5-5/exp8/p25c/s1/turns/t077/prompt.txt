@@ -1,0 +1,18 @@
+OUTPUT of Python run 64 of at most 300:
+```
+orig {'verification': '388 (88%)', 'other': '23 (5%)', 'wrap-up': '18 (4%)', 'degenerate(P<=6)': '14 (3%)'}
+E3 {'verification': '146 (42%)', 'other': '142 (41%)', 'wrap-up': '47 (13%)', 'degenerate(P<=6)': '15 (4%)'}
+Traceback (most recent call last):
+  File "<run>", line 16, in <module>
+  File "/usr/local/lib/python3.12/site-packages/pandas/core/indexing.py", line 1335, in __getitem__
+    return self._getitem_tuple(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pandas/core/indexing.py", line 1880, in _getitem_tuple
+    return self._getitem_tuple_same_dim(tup)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pandas/core/indexing.py", line 1180, in _getitem_tuple_same_dim
+    assert retval.ndim == self.ndim
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+```

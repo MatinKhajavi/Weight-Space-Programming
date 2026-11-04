@@ -1,0 +1,27 @@
+OUTPUT of Python run 69 of at most 120:
+```
+black 117
+[(93, 'o', 11, [None, None]), (94, 'n', 46, [46, 1.0]), (95, 'o', 38, [None, None]), (96, 'n', 47, [47, 1.0]), (97, 'o', 55, [None, None]), (98, 'n', 54, [54, 1.0]), (99, 'o', 10, [None, None]), (100, 'n', 19, [19, 0.9873]), (101, 'o', 45, [None, None]), (102, 'n', 36, [36, 1.0]), (103, 'o', 27, [None, None]), (104, 'n', 18, [18, 1.0]), (105, 'o', 1, [None, None]), (106, 'n', 81, [81, 1.0]), (107, 'o', 9, [None, None]), (108, 'n', 0, [0, 1.0]), (109, 'o', 20, [None, None]), (110, 'n', 11, [11, 1.0]), (111, 'o', 10, [None, None]), (112, 'n', 81, [81, 0.9891]), (113, 'o', 1, [None, None]), (114, 'n', 81, [81, 1.0]), (115, 'o', 9, [None, None]), (116, 'n', 0, [0, 1.0])]
+.OXXX.X.X
+OOXX.X.X.
+XX.XX.X.X
+.XX.XX.X.
+XX.XXXXXX
+.XXXXX.X.
+X.X.X.X.X
+XXXX.X.X.
+.XX.X.X.X
+
+X.XXX.X.X
+..XX.X.X.
+XX.XX.X.X
+.XX.XX.X.
+XX.XXXXXX
+.XXXXX.X.
+X.X.X.X.X
+XXXX.X.X.
+.XX.X.X.X
+
+repeat of ply 110
+
+```

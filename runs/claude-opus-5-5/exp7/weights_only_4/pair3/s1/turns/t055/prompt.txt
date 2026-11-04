@@ -1,0 +1,28 @@
+OUTPUT of run 52 of at most 60:
+```
+capital bigrams: ['Kuala Lumpur', 'Buenos Aires', 'Abu Dhabi', 'Baton Rouge', 'Des Moines', 'Phnom Penh', 'Addis Ababa', 'Carson City', 'Salt Lake', 'Oklahoma City', 'Jefferson City', 'Mexico City', 'Santo Domingo', 'Port Louis', 'Little Rock', 'Kuwait City', 'Panama City', 'Guatemala City', 'New Delhi', 'Saint Paul', 'San Juan', 'Puerto Rico']
+wrong-city bigrams: ['Los Angeles', 'Las Vegas', 'Tel Aviv', 'Hong Kong', 'Sao Paulo', 'Rio Janeiro', 'Ho Chi', 'Saint Petersburg', 'Cape Town', 'San Francisco', 'San Diego', 'Kansas City', 'New Orleans', 'New York', 'Virginia Beach', 'Gold Coast', 'Ho Minh', 'Grand Rapids', 'Cedar Rapids', 'Sioux Falls', 'Fort Worth', 'San Antonio', 'Santa Cruz', 'Palm Beach']
+L0: capital: z -0.97 | wrong: z +0.77
+L1: capital: z -0.49 | wrong: z +0.60
+L2: capital: z -0.09 | wrong: z +0.64
+L3: capital: z -0.51 | wrong: z -1.39
+L4: capital: z -0.29 | wrong: z -0.19
+L5: capital: z +0.05 | wrong: z +0.84
+L6: capital: z +0.46 | wrong: z +1.16
+L7: capital: z +0.23 | wrong: z -0.68
+L8: capital: z +0.00 | wrong: z +0.07
+L9: capital: z -0.39 | wrong: z +0.32
+L10: capital: z -0.95 | wrong: z -1.73
+L11: capital: z +0.76 | wrong: z -0.12
+L12: capital: z +2.02 | wrong: z -1.20
+L13: capital: z +1.73 | wrong: z -0.49
+L14: capital: z +2.20 | wrong: z -0.88
+L15: capital: z +1.97 | wrong: z -1.27
+L16: capital: z +1.34 | wrong: z +0.40
+L17: capital: z +3.10 | wrong: z -1.28
+capital L11-17: z +2.91  p(null>=obs) 0.004  items>0 0.55
+capital ALL: z +2.79  p(null>=obs) 0.005  items>0 0.55
+wrong L11-17: z -1.15  p(null>=obs) 0.869  items>0 0.54
+wrong ALL: z -1.16  p(null>=obs) 0.878  items>0 0.54
+
+```

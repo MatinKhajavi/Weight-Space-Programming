@@ -1,0 +1,11 @@
+OUTPUT of Python run 131 of at most 300:
+```
+E6s-E6 (H2) (np.float64(1.56), np.float64(3.32), 38, 34, 256) gsm (np.float64(-3.12), np.float64(6.36), 17, 20, 96) math (np.float64(4.38), np.float64(3.69), 21, 14, 160)
+POOLED E6s-E6 (D+H+H2) None (np.float64(0.78), np.float64(1.78), 768) | POOLED held-out E6-orig (H+H2) (np.float64(31.05), np.float64(2.28), 512)
+POOLED E6s-E6 (D+H+H2) gsm8k (np.float64(0.87), np.float64(3.29), 288) | POOLED held-out E6-orig (H+H2) (np.float64(39.06), np.float64(4.17), 192)
+POOLED E6s-E6 (D+H+H2) math (np.float64(0.73), np.float64(2.07), 480) | POOLED held-out E6-orig (H+H2) (np.float64(26.25), np.float64(2.62), 320)
+15 E6-half rel change 0.122, in-subspace factor -0.50
+19 E6-half rel change 0.106, in-subspace factor -0.50
+23 E6-half rel change 0.085, in-subspace factor 0.00
+
+```

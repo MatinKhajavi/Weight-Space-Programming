@@ -1,0 +1,26 @@
+OUTPUT of run 40 of at most 60:
+```
+mlp TOTAL ans: 1.3  controls: [ 0.033 -0.241  0.453  0.267 -0.097  0.352]  z_ans: 4.72
+   mlp8: ans +0.039 ctrl mean -0.005 sd 0.026 z +1.65
+   mlp9: ans -0.045 ctrl mean -0.007 sd 0.014 z -2.64
+   mlp10: ans +0.097 ctrl mean +0.047 sd 0.042 z +1.20
+   mlp11: ans +0.007 ctrl mean +0.021 sd 0.020 z -0.72
+   mlp12: ans +0.093 ctrl mean -0.006 sd 0.041 z +2.38
+   mlp13: ans +0.311 ctrl mean +0.024 sd 0.085 z +3.38
+   mlp14: ans +0.386 ctrl mean +0.052 sd 0.075 z +4.44
+   mlp15: ans +0.076 ctrl mean -0.057 sd 0.092 z +1.45
+   mlp16: ans +0.138 ctrl mean +0.077 sd 0.121 z +0.51
+   mlp17: ans +0.198 ctrl mean -0.019 sd 0.131 z +1.65
+attn TOTAL ans: 0.638  controls: [0.748 0.633 0.674 0.535 0.437 0.643]  z_ans: 0.26
+   attn8: ans -0.068 ctrl mean +0.031 sd 0.035 z -2.83
+   attn9: ans -0.135 ctrl mean -0.018 sd 0.020 z -5.84
+   attn10: ans +0.062 ctrl mean -0.005 sd 0.033 z +1.98
+   attn11: ans -0.169 ctrl mean -0.010 sd 0.016 z -10.07
+   attn12: ans +0.114 ctrl mean +0.043 sd 0.037 z +1.89
+   attn13: ans -0.004 ctrl mean -0.027 sd 0.044 z +0.51
+   attn14: ans -0.053 ctrl mean -0.104 sd 0.061 z +0.84
+   attn15: ans +0.471 ctrl mean -0.087 sd 0.114 z +4.90
+   attn16: ans -0.524 ctrl mean +0.261 sd 0.079 z -9.98
+   attn17: ans +0.944 ctrl mean +0.527 sd 0.053 z +7.80
+
+```

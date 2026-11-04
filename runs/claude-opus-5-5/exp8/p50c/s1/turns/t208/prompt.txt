@@ -1,0 +1,9 @@
+OUTPUT of Python run 184 of at most 300:
+```
+['model.language_model.layers.15.self_attn.o_proj.weight.npy', 'model.language_model.layers.22.mlp.down_proj.weight.npy', 'model.language_model.layers.23.self_attn.o_proj.weight.npy'] ['layers.15.self_attn.o_proj.weight.safetensors', 'layers.22.mlp.down_proj.weight.safetensors', 'layers.23.self_attn.o_proj.weight.safetensors']
+snapshot keys ['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.22.mlp.down_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']
+model.language_model.layers.15.self_attn.o_proj.weight changed cols 256 [1792, 1793, 1794, 1795, 1796, 1797, 1798, 1799, 1800, 1801, 1802, 1803] cur==snap True
+model.language_model.layers.22.mlp.down_proj.weight changed cols 1 [573] cur==snap True
+model.language_model.layers.23.self_attn.o_proj.weight changed cols 512 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] cur==snap True
+
+```

@@ -1,0 +1,13 @@
+OUTPUT of Python run 39 of at most 300:
+```
+(2, 1950)
+0 full ntok 1950 fed ntok 1950 same prefix True
+   tail 200 period(fed) 71 period(full) 71
+   tail 400 period(fed) 71 period(full) 71
+   tail 800 period(fed) None period(full) None
+1 full ntok 1950 fed ntok 1950 same prefix True
+   tail 200 period(fed) 30 period(full) 30
+   tail 400 period(fed) None period(full) None
+   tail 800 period(fed) None period(full) None
+
+```

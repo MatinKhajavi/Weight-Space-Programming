@@ -1,0 +1,9 @@
+OUTPUT of Python run 10 of at most 120:
+```
+
+[stderr]
+Traceback (most recent call last):
+  File "<stdin>", line 33, in <module>
+NameError: name 'G' is not defined
+
+```

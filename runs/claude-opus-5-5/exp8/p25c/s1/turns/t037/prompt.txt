@@ -1,0 +1,18 @@
+OUTPUT of Python run 31 of at most 300:
+```
+5 k 6 p_actual 0.000 actual 'service' alts [('services', 0.998), ('products', 0.001), ('goods', 0.0), ('items', 0.0), ('service', 0.0)]
+1 k 6 p_actual 0.000 actual '$' alts [('$.', 1.0), ('$', 0.0), ('.', 0.0), ('`.', 0.0), ('**.', 0.0)]
+12 k 6 p_actual 0.004 actual ' $' alts [(' $\\', 0.965), (' I', 0.02), (' $', 0.004), (' let', 0.003), (' this', 0.003)]
+9 k 4 p_actual 0.648 actual ' Wait' alts [(' Wait', 0.648), (' $', 0.145), (' Let', 0.128), (' Is', 0.02), (' No', 0.009)]
+8 k 4 p_actual 0.761 actual ' if' alts [(' if', 0.761), (' this', 0.15), (' I', 0.033), (' $', 0.02), (' let', 0.016)]
+0 k 4 p_actual 0.765 actual ' $' alts [(' $', 0.765), (' $\\', 0.219), (' I', 0.007), (' the', 0.003), (' let', 0.002)]
+6 k 4 p_actual 0.776 actual 'n' alts [('n', 0.776), ('times', 0.222), (' n', 0.0), ('cdot', 0.0), ('ne', 0.0)]
+2 k 4 p_actual 0.834 actual ' if' alts [(' if', 0.834), (' I', 0.1), (' let', 0.029), (' no', 0.012), (' $', 0.011)]
+13 k 4 p_actual 0.857 actual ' Wait' alts [(' Wait', 0.857), (' This', 0.048), (' $', 0.033), (' Let', 0.026), (' The', 0.012)]
+3 k 4 p_actual 0.866 actual ' Wait' alts [(' Wait', 0.866), (' Let', 0.043), (' So', 0.034), (' If', 0.03), (' No', 0.005)]
+10 k 4 p_actual 0.905 actual '\n' alts [('\n', 0.905), ('\n\n', 0.095), (' Wait', 0.0), ('\n\n\n', 0.0), (' ', 0.0)]
+7 k 4 p_actual 0.915 actual ' \\' alts [(' \\', 0.915), (' +', 0.085), ('$', 0.0), ('0', 0.0), ('+', 0.0)]
+4 k 4 p_actual 0.924 actual ' connects' alts [(' connects', 0.924), (' is', 0.076), (' connecting', 0.0), (' lies', 0.0), (' connect', 0.0)]
+11 k 4 p_actual 0.932 actual '\n' alts [('\n', 0.932), ('\n\n', 0.068), (' Wait', 0.0), ('', 0.0), (' No', 0.0)]
+
+```

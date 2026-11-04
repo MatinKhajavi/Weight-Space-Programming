@@ -1,0 +1,14 @@
+OUTPUT of run 38 of at most 60:
+```
+L13: chance 6/640=0.0094 | out_fr mean 0.0108 top50 0.056 | in_up(top50 writers) 0.0148 in_gate 0.0178 vs all 0.0113/0.0114 | corr(out,in_up) +0.06
+     energy change: total -3.75e+03, top50 units carry 0.11 of |change|, sign frac+ 0.44, in_up of those 0.0131 in_gate 0.0116
+L14: chance 6/640=0.0094 | out_fr mean 0.0100 top50 0.050 | in_up(top50 writers) 0.0142 in_gate 0.0185 vs all 0.0112/0.0117 | corr(out,in_up) +0.12
+     energy change: total +651, top50 units carry 0.12 of |change|, sign frac+ 0.50, in_up of those 0.0102 in_gate 0.0137
+L15: chance 6/640=0.0094 | out_fr mean 0.0097 top50 0.051 | in_up(top50 writers) 0.0147 in_gate 0.0158 vs all 0.0114/0.0117 | corr(out,in_up) +0.09
+     energy change: total +6.9e+03, top50 units carry 0.12 of |change|, sign frac+ 0.56, in_up of those 0.0127 in_gate 0.0119
+L16: chance 6/640=0.0094 | out_fr mean 0.0096 top50 0.060 | in_up(top50 writers) 0.0230 in_gate 0.0258 vs all 0.0118/0.0120 | corr(out,in_up) +0.27
+     energy change: total +4.22e+04, top50 units carry 0.12 of |change|, sign frac+ 0.56, in_up of those 0.0166 in_gate 0.0158
+L17: chance 6/640=0.0094 | out_fr mean 0.0085 top50 0.066 | in_up(top50 writers) 0.0354 in_gate 0.0439 vs all 0.0148/0.0157 | corr(out,in_up) +0.27
+     energy change: total +3.57e+04, top50 units carry 0.13 of |change|, sign frac+ 0.68, in_up of those 0.0151 in_gate 0.0236
+
+```

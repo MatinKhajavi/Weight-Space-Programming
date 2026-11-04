@@ -1,0 +1,13 @@
+OUTPUT of Python run 93 of at most 300:
+```
+C vs A all   diff +25.0 SE 2.8  W->R 66 R->W 2
+C vs A math  diff +19.5 SE 3.9  W->R 27 R->W 2
+C vs A gsm8k diff +30.5 SE 4.1  W->R 39 R->W 0
+C vs orig all   diff +47.7 SE 3.2  W->R 123 R->W 1
+C vs orig math  diff +37.5 SE 4.3  W->R 48 R->W 0
+C vs orig gsm8k diff +57.8 SE 4.5  W->R 75 R->W 1
+orig acc 0.125 cut 0.895 wrong 0 | correct median tok 4909 | Wait per 1k tok (median) 19.9
+A    acc 0.352 cut 0.613 wrong 9 | correct median tok 9174 | Wait per 1k tok (median) 12.7
+C    acc 0.602 cut 0.289 wrong 28 | correct median tok 5947 | Wait per 1k tok (median) 0.1
+
+```

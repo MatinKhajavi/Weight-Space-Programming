@@ -1,0 +1,60 @@
+OUTPUT of Python run 64 of at most 120:
+```
+after 29
+.........
+.....XXO.
+.O.X.OOX.
+..XXXOXX.
+..XOOXXO.
+..XXOO...
+..OX..O..
+.O.O.O...
+.........
+
+after 49
+......OO.
+.OO..XXOX
+.OXX.OOX.
+..XXXOXXX
+.XXOOXXOO
+..XXOOXX.
+.XOXO.OXO
+.OOO.O.O.
+..O.X....
+
+after 69
+..OXXOOO.
+.OOXOOOOX
+.OXXXOOX.
+..XXXOXXX
+.XXOOXXOO
+..XXOOXX.
+.XOXOOOXO
+.OOO.OOO.
+.XOO..O.O
+
+after 89
+O.OXX...X
+.OOX....X
+OOXXXO.X.
+OOXXX.XXX
+OXXOOXX..
+XXXXOOXXX
+.XOXOOOXO
+.OOOOOOOO
+O.OO.OO.O
+
+after 136
+O.OXXOOO.
+.OOXXO.OO
+OOXXXOOXO
+OOXXX.XXX
+OXXXXXXXX
+XXXXXXXXX
+.XXXXXXXX
+XXXXXO.X.
+.OOXX.X.X
+
+[(78, 10), (88, 2), (98, 27), (122, 3), (124, 1), (126, 1)]
+
+```

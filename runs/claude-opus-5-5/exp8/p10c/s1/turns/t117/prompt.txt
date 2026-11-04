@@ -1,0 +1,10 @@
+OUTPUT of Python run 103 of at most 300:
+```
+11 head norm ratios [1.  0.5 1.  1.  1.  1.  1.  1. ]
+15 head norm ratios [1.  1.  1.  1.  1.  1.  1.  0.5]
+19 head norm ratios [1.  1.  1.  1.  1.  0.5 1.  0.5]
+23 head norm ratios [0.5 1.  1.  1.  0.5 0.5 1.  0.5]
+L22 N573 ratio 2.5 | L22 changed cols [573] | edited: 6
+best_4 files: ['model.language_model.layers.11.self_attn.o_proj.weight.npy', 'model.language_model.layers.15.self_attn.o_proj.weight.npy', 'model.language_model.layers.16.mlp.down_proj.weight.npy', 'model.language_model.layers.19.self_attn.o_proj.weight.npy', 'model.language_model.layers.22.mlp.down_proj.weight.npy', 'model.language_model.layers.23.self_attn.o_proj.weight.npy']
+
+```

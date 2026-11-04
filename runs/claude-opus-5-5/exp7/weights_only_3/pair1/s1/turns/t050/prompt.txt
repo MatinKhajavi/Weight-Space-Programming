@@ -1,0 +1,15 @@
+OUTPUT of run 49 of at most 60:
+```
+=== token subspace from down13-15, k=32
+L16 H0 copyB +0.409 copyA +0.401 dz  -3.9 | H1 copyB +2.325 copyA +2.331 dz  +2.8 | H2 copyB +3.284 copyA +3.289 dz  +3.0 | H3 copyB +0.603 copyA +0.621 dz  +8.0 | 
+L17 H0 copyB +0.573 copyA +0.575 dz  +2.1 | H1 copyB +4.653 copyA +4.656 dz  +3.0 | H2 copyB +0.399 copyA +0.401 dz  +1.2 | H3 copyB -0.585 copyA -0.578 dz  +3.8 | 
+  copy heads (base>0): n=7 mean dz +2.32 ; suppression heads (base<0): n=1 mean dz +3.83
+=== token subspace from down10-12, k=32
+L13 H0 copyB +0.825 copyA +0.823 dz  -0.9 | H1 copyB +1.481 copyA +1.482 dz  +0.2 | H2 copyB +2.123 copyA +2.120 dz  -1.6 | H3 copyB +0.112 copyA +0.109 dz  -1.9 | 
+L14 H0 copyB -0.355 copyA -0.359 dz  -2.0 | H1 copyB +3.086 copyA +3.084 dz  -1.1 | H2 copyB +1.534 copyA +1.532 dz  -1.3 | H3 copyB +0.751 copyA +0.754 dz  +2.3 | 
+L15 H0 copyB +4.993 copyA +4.992 dz  -1.4 | H1 copyB -5.246 copyA -5.246 dz  -0.6 | H2 copyB +4.943 copyA +4.943 dz  -0.3 | H3 copyB +5.194 copyA +5.193 dz  -0.7 | 
+L16 H0 copyB +0.567 copyA +0.569 dz  +1.0 | H1 copyB +2.321 copyA +2.328 dz  +3.8 | H2 copyB +3.797 copyA +3.803 dz  +3.9 | H3 copyB +0.019 copyA +0.031 dz  +4.4 | 
+L17 H0 copyB +1.057 copyA +1.060 dz  +2.0 | H1 copyB +4.395 copyA +4.398 dz  +2.3 | H2 copyB +0.034 copyA +0.034 dz  +0.1 | H3 copyB -0.604 copyA -0.600 dz  +1.7 | 
+  copy heads (base>0): n=17 mean dz +0.64 ; suppression heads (base<0): n=3 mean dz -0.28
+
+```

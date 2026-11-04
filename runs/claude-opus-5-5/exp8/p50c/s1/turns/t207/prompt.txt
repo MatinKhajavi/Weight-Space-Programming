@@ -1,0 +1,8 @@
+OUTPUT of Python run 183 of at most 300:
+```
+C x2 gen_13 identical texts 1 median common prefix chars 854.5 grade agreement 0.863
+x1.5 gen_14 identical texts 0 median common prefix chars 666.5 grade agreement 0.875
+brake-only gen_15 identical texts 0 median common prefix chars 94.0 grade agreement 0.734
+gen21 acc 0.60546875 gen13 acc 0.6015625 W->R 18 R->W 17
+
+```

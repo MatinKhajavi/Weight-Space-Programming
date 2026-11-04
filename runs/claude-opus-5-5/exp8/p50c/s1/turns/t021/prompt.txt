@@ -1,0 +1,82 @@
+OUTPUT of Python run 17 of at most 300:
+```
+===== math_train_intermediate_algebra_822 period 51 onset 13443 len 121552 answer \text{C}
+ion" or a "check".
+    Wait, let's look at the second block's code.
+    It defines `funca` and `funcc`.
+    And loops through $n=1..5$.
+    It creates pictures.
+    It draws `graph(func,-3,3)` as red.
+    Wait, `graph(func,-3,3)` draws the function $y = func(x)$ over the range $[-3, 3]$.
+    Wait, the first block draws `graph(func,-3,3)` as red.
+    Wait, the first block draws `graph(func,-3,3)` as red.
+    Wait, the second block defines `graph` objects.
+    Wait, the second block defines `graph` objects.
+    Wait, the first block defines `graph` objects.
+    Wait, the first block defines `graph` objects.
+    Wait, the
+===== math_train_algebra_485 period 91 onset 13994 len 89013 answer 4
+ $x^2 - x - 6$.
+            *   Okay, I think I've been repeating myself.
+            *   Let's restart the factorization verification from scratch.
+            *   Expression: $\frac{x^2 - x - 6}{x - 3}$.
+            *   Let $y = x^2 - x - 6$.
+            *   We know $y = (x-3)(x+2)$?
+            *   Let's check $(x-3)(x+2)$.
+            *   $x \cdot x = x^2$.
+            *   $x \cdot 2 = 2x$.
+            *   $-3 \cdot x = -3x$.
+            *   $-3 \cdot 2 = -6$.
+            *   Sum: $x^2 - x - 6$.
+            *   Yes, it matches.
+            *   Wait, I just realized something.
+            *   If $x^2 - x - 6 = (x-3)(x+2)$, then the expression simplifies to $x+2$.
+            *   Wait, I am looking at the expansion of $(x-3)(x+2)$ which is $x^2 - x - 6$.
+            *   Wait, I'm looking at the expansion of $(x-3)(x+2)$ which is $x^2 - x - 6$.
+            *   Wait, I'm looking at the expansion of $(x-3)(x+2)$ which is $x^2 - x - 6$.
+            *   Wait, I'm looking at the expansion 
+===== math_train_number_theory_39 period 61 onset 18816 len 85852 answer 8
+10$.
+                            *   $8 \times 89 \times 10$ is divisible by 10? Yes.
+                            *   Is it divisible by 9?
+                            *   $8 \times 89 \times 10 = 8 \times 89 \times 10$.
+                            *   $8 \times 89 = 712$.
+                            *   $712 \times 10 = 7120$.
+                            *   $7120 / 9 = 791.111$.
+                            *   So $7120$ is not divisible by 9.
+                            *   Wait, $7120$ is divisible by 9?
+                            *   $7120 = 7000 + 120$.
+                            *   $7000 = 7 \times 1000$. $1000 = 100 \times 10$.
+                            *   $100 = 11 \times 9 + 1$.
+                            *   $1000 = 11 \times 90 + 100$.
+                            *   $1000 = 11 \times 90 + 100$.
+                            *   $1000 = 11 \times 90 
+===== math_train_algebra_1559 period 73 onset 16134 len 64451 answer 3
+r closest to $x$ from above?
+    No, it's the smallest integer $\ge x$.
+    Let's test with $x=2.001$.
+    Integers $\ge 2.001$: 2, 3, 4...
+    Smallest is 2? No.
+    Wait, 2 is less than 2.001.
+    So 2 is NOT $\ge 2.001$.
+    So 3 IS $\ge 2.001$.
+    So $\lceil 2.001 \rceil = 3$.
+    Wait, but if $x=2.001$, $2.001 > 2$.
+    So 2 is below.
+    So 3 is the next integer.
+    Wait, what if $x$ was 2.0001?
+    Then $\lceil 2.0001 \rceil = 3$.
+    Wait, what if $x$ was 2.001?
+    Then $\lceil 2.001 \rceil = 3$.
+    Wait, what if $x$ was 2?
+    Then $\lceil 2 \rceil = 2$.
+    Wait, what if $x$ was 2.00001?
+    Then $\lceil 2.00001 \rceil = 3$.
+    Wait, what if $x$ was 2.0001?
+    Then $\lceil 2.0001 \rceil = 3$.
+    Wait, what if $x$ was 2.00001?
+    Then $\lceil 2.00001 \rceil = 3$.
+    Then $\lceil 2.00001 \rc
+
+[harness: 14 repeated lines not shown (a line is shown at most 2 times per output)]
+```

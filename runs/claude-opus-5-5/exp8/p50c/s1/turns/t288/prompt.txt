@@ -1,0 +1,17 @@
+OUTPUT of Python run 258 of at most 300:
+```
+ok 152 tok q25/50/75/90 [ 3668  6620 10320 17483]
+wrong 51 tok q25/50/75/90 [11373 16416 21445 28026]
+cut 53 tok q25/50/75/90 [32768 32768 32768 32768]
+gsm cut with exact char loop: 10 of 13
+===== gsm8k_train_441 period 348 onset char 115584 of 252549
+BEFORE: 'Let\'s assume the answer is 6.\n                                                                            *   "Potential Guests" = "Remaining Invitations".\n                                                                            *   "Total Invitations" = "Potential Guests".\n                                                                            *   So the answer is 6.\n                                                                            *   "Remaining Invitations" = "Potential Guest'
+UNIT: 's".\n                                                                            *   "Total Invitations" = "Potential Guests".\n                                                                            *   So the answer is 6.\n                        '
+===== gsm8k_train_2871 period 319 onset char 22400 of 116059
+BEFORE: 'bin."\n    *   "She intends to raise the remaining amount..."\n    *   Maybe "remaining" refers to the *trees*?\n    *   If she intends to raise the *value* of the trees, she sells them.\n    *   "After paying Alfonso, how much money Gloria has left?"\n    *   Maybe the cabin is rented.\n    *   "Gloria wants to buy the cabin."\n    *   "She intends to raise the remaining amount..."\n    *   Maybe "remaining" refers to the *trees*?\n    *   If she intends to raise the *value* of the trees, she sells them'
+UNIT: '.\n    *   "After paying Alfonso, how much money Gloria has left?"\n    *   Maybe the cabin is rented.\n    *   "Gloria wants to buy the cabin."\n    *   "She intends to raise the remaining amount..."\n    *   Maybe "remaining" refers to the *trees*?\n    '
+===== gsm8k_train_2847 period 986 onset char 115737 of 158011
+BEFORE: '  Unless the remaining refers to the *pieces* she *kept*?\n                            If she keeps 8, the total is 8.\n                            Maybe the sprinkling numbers refer to the *pieces* she *kept*.\n                            "Kenny grabbed... sprinkled 38."\n                            "Karla scooped... sprinkled 42."\n                            Maybe she kept 38 and 42.\n                            If she kept 38 and 42, the total is 80.\n                            Maybe the remaining'
+UNIT: ' is 8.\n                            So the total is 88.\n                            If the total is 88, she cuts 88.\n                            Maybe the question asks for the number of mushrooms she *cut*.\n                            Maybe the answe'
+
+```

@@ -1,0 +1,4 @@
+I'm double-checking the L3 value computation, confirming that the one-hop propagation over the neighborhood of s from L2's SW and S31 is already included. Next I'm working out the lower bounds on S3 at L5: the minimum positive S31 at L2 is 1, which puts V at L3 at roughly 0.5e6 or more, and the bound halves at each later level down to about 0.125e6 at L5. The SA step is where I'm about to apply the subtraction.
+
+I'm checking the bounds against the S-only and A2W terms: the subtraction at L5 leaves the SA value at about 0.8 or 1.8, and the A2W term gets killed as well. For AW, the minimum S evidence at L5 still gives roughly 6.25 after scaling, so it stays positive. Before running any games, I want to verify this numerically on a few test positions, including exact two-liberty chains for both colors and a large group with many liberties.
+

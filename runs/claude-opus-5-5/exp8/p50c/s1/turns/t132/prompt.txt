@@ -1,0 +1,23 @@
+OUTPUT of Python run 114 of at most 300:
+```
+set_heads (scales) ('scales', 'l', 'nm', 'W', 'll', 'h', 'a')
+snapshot (dirname) ('dirname', 'n')
+paired (g1, g0, ids) ('g1', 'g0', 'ids', 'i', 'd')
+readgen (fn) ('fn', 'd', 'l', 'r', 's')
+dla (vec, pos, scale) ('vec', 'pos', 'scale')
+dla_diff (b, tq, y_tok, alt_tok) ('b', 'tq', 'y_tok', 'alt_tok', 'h24', 'rms', 'u', 'rows', 'l', 'dl', 'act', 'Wd_')
+neuron_dla (b, tq, y_tok, alt_tok, l) ('b', 'tq', 'y_tok', 'alt_tok', 'l', 'h24', 'rms', 'u', 'Wd_', 'wu', 'act')
+indm (ts) ('ts', 'v', 't', 'js')
+ind_targets (ids, positions) ('ids', 'positions', 'last', 'tg', 'occ', 't', 'k')
+find_loop (t) ('t', 'tail', 'P', 'i')
+wrate (t) ('t',)
+summarize (fn) ('fn', 'l', 'R', 'out', 'r', 's', 'on', 'P')
+prompt_of (pid) ('pid',)
+tid (s) ('s',)
+tokstr (i) ('i',)
+model.language_model.layers.15.self_attn.o_proj.weight (1024, 2048) changed cols 256 [1792, 1793, 1794] [2045, 2046, 2047]
+model.language_model.layers.22.mlp.down_proj.weight (1024, 3584) changed cols 1 [573] [573]
+model.language_model.layers.23.self_attn.o_proj.weight (1024, 2048) changed cols 512 [0, 1, 2] [1533, 1534, 1535]
+22.573 ratio 2.0
+
+```

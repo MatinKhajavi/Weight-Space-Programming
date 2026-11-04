@@ -1,0 +1,38 @@
+OUTPUT of Python run 37 of at most 120:
+```
+7 84 black chain [0] lib 1 la 6 played 6 top5 [[40, 0.217], [81, 0.1149], [32, 0.0787], [23, 0.0703], [24, 0.0699]]
+X.X..X..X
+OOXXX.XX.
+.OXXX....
+OOOXX.X.X
+O.OX.XXXX
+OXOOOXOX.
+.OOOOOOOX
+O.O.OOOOO
+.O.O.OO.O
+
+7 86 black chain [0] lib 1 la 6 played 24 top5 [[40, 0.2377], [81, 0.1258], [32, 0.0862], [23, 0.077], [24, 0.0766]]
+X.X..XX.X
+OOXXX.XX.
+.OXXX....
+OOOXX.X.X
+O.OX.XXXX
+OXOOOXOXO
+.OOOOOOO.
+O.O.OOOOO
+.O.O.OO.O
+
+7 92 black chain [0] lib 1 la 6 played 40 top5 [[40, 0.3049], [81, 0.1552], [32, 0.1088], [23, 0.0959], [3, 0.079]]
+X.X..XX.X
+OOXXX.XX.
+.OXXX.XX.
+OOOXX.X.X
+OOOX.XXXX
+O.OOOXOXO
+.OOOOOOO.
+O.O.OOOOO
+.O.O.OO.O
+
+Counter({('eye', 'nocap', 'la3+'): 162, ('eye', 'netcap', 'la3+'): 126, ('eye', 'nocap', 'la2'): 78, ('noeye', 'netcap', 'la3+'): 46, ('eye', 'netcap', 'la2'): 41, ('noeye', 'nocap', 'la2'): 24, ('noeye', 'nocap', 'la3+'): 23, ('noeye', 'netcap', 'la2'): 20})
+
+```

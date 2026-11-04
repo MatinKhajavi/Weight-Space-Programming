@@ -1,0 +1,34 @@
+OUTPUT of run 20 of at most 60:
+```
+L12  |W_V vi| A 0.614 B 0.614  rel.change 0.006  cos(ΔWv vi, Wv vi) -0.01
+   h0 raw: ΔWo·Wv -0.3  Wo·ΔWv -2.1   full: ΔWo·Wv -2.4  Wo·ΔWv -2.4
+   h1 raw: ΔWo·Wv +1.5  Wo·ΔWv -2.7   full: ΔWo·Wv -0.0  Wo·ΔWv -1.1
+   h2 raw: ΔWo·Wv +2.0  Wo·ΔWv +0.7   full: ΔWo·Wv +1.6  Wo·ΔWv -0.4
+   h3 raw: ΔWo·Wv +2.8  Wo·ΔWv +0.4   full: ΔWo·Wv +1.0  Wo·ΔWv -0.4
+L13  |W_V vi| A 0.595 B 0.595  rel.change 0.013  cos(ΔWv vi, Wv vi) -0.01
+   h0 raw: ΔWo·Wv +2.4  Wo·ΔWv +2.8   full: ΔWo·Wv +2.6  Wo·ΔWv +3.8
+   h1 raw: ΔWo·Wv -2.0  Wo·ΔWv +2.4   full: ΔWo·Wv -1.4  Wo·ΔWv +2.0
+   h2 raw: ΔWo·Wv -0.2  Wo·ΔWv -4.2   full: ΔWo·Wv +0.7  Wo·ΔWv -3.1
+   h3 raw: ΔWo·Wv -1.3  Wo·ΔWv +3.0   full: ΔWo·Wv -3.5  Wo·ΔWv +1.8
+L14  |W_V vi| A 0.492 B 0.492  rel.change 0.011  cos(ΔWv vi, Wv vi) -0.06
+   h0 raw: ΔWo·Wv +2.2  Wo·ΔWv +1.1   full: ΔWo·Wv +0.5  Wo·ΔWv +0.4
+   h1 raw: ΔWo·Wv +2.8  Wo·ΔWv -0.7   full: ΔWo·Wv +1.6  Wo·ΔWv -1.5
+   h2 raw: ΔWo·Wv +2.4  Wo·ΔWv +1.7   full: ΔWo·Wv +1.4  Wo·ΔWv +1.2
+   h3 raw: ΔWo·Wv +0.9  Wo·ΔWv -1.2   full: ΔWo·Wv +0.9  Wo·ΔWv -0.9
+L15  |W_V vi| A 0.775 B 0.775  rel.change 0.007  cos(ΔWv vi, Wv vi) -0.16
+   h0 raw: ΔWo·Wv -1.0  Wo·ΔWv +1.0   full: ΔWo·Wv -1.3  Wo·ΔWv +1.1
+   h1 raw: ΔWo·Wv -2.1  Wo·ΔWv +0.6   full: ΔWo·Wv -1.2  Wo·ΔWv +3.0
+   h2 raw: ΔWo·Wv -1.8  Wo·ΔWv -1.5   full: ΔWo·Wv -1.6  Wo·ΔWv -3.0
+   h3 raw: ΔWo·Wv -1.9  Wo·ΔWv -1.3   full: ΔWo·Wv -2.4  Wo·ΔWv -1.8
+L16  |W_V vi| A 0.616 B 0.616  rel.change 0.012  cos(ΔWv vi, Wv vi) -0.03
+   h0 raw: ΔWo·Wv +10.1  Wo·ΔWv +3.8   full: ΔWo·Wv +1.6  Wo·ΔWv +1.5
+   h1 raw: ΔWo·Wv +15.1  Wo·ΔWv +6.3   full: ΔWo·Wv -2.2  Wo·ΔWv +2.5
+   h2 raw: ΔWo·Wv +11.1  Wo·ΔWv +0.3   full: ΔWo·Wv -2.1  Wo·ΔWv +1.0
+   h3 raw: ΔWo·Wv +10.4  Wo·ΔWv +4.5   full: ΔWo·Wv -3.6  Wo·ΔWv +0.8
+L17  |W_V vi| A 0.644 B 0.644  rel.change 0.006  cos(ΔWv vi, Wv vi) +0.15
+   h0 raw: ΔWo·Wv +1.3  Wo·ΔWv +0.6   full: ΔWo·Wv +4.9  Wo·ΔWv -0.1
+   h1 raw: ΔWo·Wv +3.0  Wo·ΔWv +2.0   full: ΔWo·Wv +3.8  Wo·ΔWv -2.2
+   h2 raw: ΔWo·Wv +3.1  Wo·ΔWv -0.2   full: ΔWo·Wv +1.5  Wo·ΔWv +0.5
+   h3 raw: ΔWo·Wv +4.1  Wo·ΔWv -0.7   full: ΔWo·Wv +7.3  Wo·ΔWv +0.9
+
+```

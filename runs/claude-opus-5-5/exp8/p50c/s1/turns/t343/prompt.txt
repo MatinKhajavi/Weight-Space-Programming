@@ -1,0 +1,8 @@
+OUTPUT of Python run 293 of at most 300:
+```
+L23 input_ln w: mean 0.267 med|w| 0.229
+head 23.0 k=17 top-ev [3570.5, 147.7, 131.2, 95.8, 85.2] cum@8 0.63 @16 0.70 @32 0.80 neg/pos -1.06 |WO_new|/|WO| 0.938 copy-trace -380.4 -> -5141.7
+head 23.5 k=18 top-ev [3883.3, 160.3, 104.5, 94.5, 91.7] cum@8 0.63 @16 0.69 @32 0.79 neg/pos -0.99 |WO_new|/|WO| 0.937 copy-trace 66.6 -> -5074.7
+edited: ['L15.self_attn.o_proj.weight', 'L22.mlp.down_proj.weight', 'L23.self_attn.o_proj.weight']
+
+```

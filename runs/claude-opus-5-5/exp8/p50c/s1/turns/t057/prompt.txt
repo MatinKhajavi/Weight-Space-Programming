@@ -1,0 +1,5 @@
+OUTPUT of Python run 52 of at most 300:
+```
+1419760
+
+```

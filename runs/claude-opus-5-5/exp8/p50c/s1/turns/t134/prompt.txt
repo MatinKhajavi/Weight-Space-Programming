@@ -1,0 +1,7 @@
+OUTPUT of Python run 116 of at most 300:
+```
+256 ['id', 'source', 'answer', 'samples']
+C loops 81 Counter({('g13', 'math'): 28, ('g13', 'gsm8k'): 19, ('g16', 'math'): 17, ('g16', 'gsm8k'): 17})
+P quantiles [ 28.  49. 114. 333. 900.]
+
+```

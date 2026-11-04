@@ -1,0 +1,17 @@
+OUTPUT of Python run 232 of at most 300:
+```
+screen openings reproduced: 72 of 72
+              n    acc    cut      tok
+sty                                   
+a_thinking  272  0.702  0.151   7391.5
+my_thought  226  0.850  0.080   4653.5
+other         6  0.500  0.500  21986.5
+ok all: within-problem diff my-a = 0.5 pts SE 2.8 (problems 36; share +0.19 / -0.28)
+ok gsm8k: within-problem diff my-a = 4.4 pts SE 3.7 (problems 20; share +0.25 / -0.10)
+ok math: within-problem diff my-a = -3.9 pts SE 3.8 (problems 16; share +0.12 / -0.50)
+cut all: within-problem diff my-a = 1.5 pts SE 2.5 (problems 36; share +0.28 / -0.17)
+cut gsm8k: within-problem diff my-a = -1.5 pts SE 2.9 (problems 20; share +0.10 / -0.15)
+cut math: within-problem diff my-a = 5.0 pts SE 3.9 (problems 16; share +0.50 / -0.19)
+log tokens diff 0.06 SE 0.07
+
+```

@@ -1,0 +1,8 @@
+OUTPUT of Python run 130 of at most 300:
+```
+15 E6 installed; max|load-E6 formula| = 0.0
+19 E6 installed; max|load-E6 formula| = 0.0
+23 E6 installed; max|load-E6 formula| = 0.0
+['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.19.self_attn.o_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']
+
+```

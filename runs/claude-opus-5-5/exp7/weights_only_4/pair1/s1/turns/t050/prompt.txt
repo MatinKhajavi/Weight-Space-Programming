@@ -1,0 +1,47 @@
+OUTPUT of run 49 of at most 60:
+```
+Retrieval country->capital via attention OV (A-B), z vs shuffled-pair null:
+  L7-17  : base z   16.5  d +0.037  z_vs_null +4.80
+  L12-17 : base z   16.4  d +0.031  z_vs_null +4.00
+  9.1    : base z   -7.1  d +0.020  z_vs_null +6.04
+  9.2    : base z    9.6  d +0.022  z_vs_null +5.40
+  10.3   : base z   -1.0  d -0.009  z_vs_null -2.22
+  11.0   : base z    1.3  d -0.031  z_vs_null -4.73
+  11.1   : base z   18.2  d -0.034  z_vs_null -3.27
+  11.2   : base z   12.5  d -0.029  z_vs_null -5.11
+  11.3   : base z  -14.6  d +0.001  z_vs_null +0.26
+  12.1   : base z   13.3  d -0.017  z_vs_null -2.29
+  12.2   : base z   16.4  d +0.025  z_vs_null +4.60
+  12.3   : base z    9.9  d +0.010  z_vs_null +2.23
+  13.0   : base z    2.9  d +0.011  z_vs_null +2.27
+  13.1   : base z    2.0  d -0.020  z_vs_null -3.65
+  14.1   : base z    3.1  d -0.026  z_vs_null -4.76
+  14.2   : base z    2.1  d +0.006  z_vs_null +2.29
+  14.3   : base z   -0.3  d -0.011  z_vs_null -2.71
+  15.0   : base z   14.3  d -0.001  z_vs_null -0.25
+  15.1   : base z  -19.6  d +0.029  z_vs_null +4.93
+  15.2   : base z   10.8  d +0.039  z_vs_null +3.49
+  15.3   : base z   21.8  d -0.020  z_vs_null -2.92
+  17.0   : base z   16.4  d +0.017  z_vs_null +4.69
+  17.1   : base z   11.8  d -0.008  z_vs_null -1.11
+  17.2   : base z  -13.5  d +0.025  z_vs_null +4.63
+  17.3   : base z   -3.7  d +0.021  z_vs_null +2.81
+Raw direct-logit copy effect (diag-offdiag), A, B, A-B (logit units of the residual contribution):
+  16.1: A    424.78 B    454.06 A-B  -29.279 rel -0.0645
+  16.2: A   2219.81 B   2236.58 A-B  -16.767 rel -0.0075
+  14.2: A   3577.99 B   3587.80 A-B   -9.812 rel -0.0027
+  17.0: A   1417.42 B   1409.48 A-B   +7.941 rel +0.0056
+  12.2: A   2499.92 B   2493.23 A-B   +6.691 rel +0.0027
+  15.2: A   4085.98 B   4092.08 A-B   -6.098 rel -0.0015
+  17.2: A  -1149.51 B  -1155.34 A-B   +5.829 rel +0.0050
+  12.0: A    621.17 B    626.37 A-B   -5.202 rel -0.0083
+  16.3: A    173.61 B    168.95 A-B   +4.663 rel +0.0276
+  16.0: A   1721.48 B   1717.28 A-B   +4.199 rel +0.0024
+  14.1: A   2146.80 B   2150.31 A-B   -3.514 rel -0.0016
+  17.1: A   1892.78 B   1889.37 A-B   +3.410 rel +0.0018
+  17.3: A    450.11 B    447.25 A-B   +2.861 rel +0.0064
+  14.3: A   -494.81 B   -497.43 A-B   +2.618 rel +0.0053
+  14.0: A   -329.87 B   -327.38 A-B   -2.491 rel -0.0076
+  12.3: A   1277.91 B   1276.01 A-B   +1.904 rel +0.0015
+
+```

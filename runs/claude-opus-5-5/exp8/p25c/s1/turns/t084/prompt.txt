@@ -1,0 +1,19 @@
+OUTPUT of Python run 71 of at most 300:
+```
+<class 'dict'> ['src', 'text', 'pred', 'correct', 'tokens', 'cut']
+newlines per period: share 0 = 0.05142857142857143  median 3.0
+top openers: [('*', 1123), ('So', 177), ('Let', 82), ('Okay', 59), ('$', 41), ('But', 31), ('If', 30), ('Expression', 28), ('Yes', 21), ('The', 21), ('This', 21), ('I', 20), ('Is', 19), ('No', 17), ('Then', 17), ('$a', 14), ('Step', 11), ('Maybe', 10), ('$x', 9), ('And', 8), ('$f', 5), ('\\boxed', 4), ('Because', 4), ('Why', 4), ('We', 3)]
+--- ('math_train_number_theory_710', 1) P 1 onset 3508.0
+0
+--- ('math_train_intermediate_algebra_1', 1) P 125 onset 11223.0
+ check $a^2 + 3/(4a^2) \ge 2\sqrt{3}/4 = \sqrt{3}/2$.|So minimum is $\sqrt{3}/2$.|Okay, I'll stop doubting myself now.|Let me
+--- ('gsm8k_train_1809', 1) P 281 onset 7849.0
+ score?"|    Yes.|    Okay.||    I'll write the response.|    The average score is 91.||    Okay, I'm done.|    I'll write the response.|    The average score is 91.||    Let's just re-verify the prompt again.|    "Malou got 91, 90, and 92 in her three quizzes. What is her average
+--- ('math_train_precalculus_532', 1) P 85 onset 6455.0
+'s check: $(\mathbf{A}^{-1})^{-2} = (\mathbf{A}^{-1})(\mathbf{A}^{-1})^{-1}$? No.|Let
+--- ('gsm8k_train_1200', 0) P 566 onset 20094.0
+ the windows and 10 minutes dusting the furniture."|    "After 4 weeks, how long has Kitty spent cleaning just the living room?"||    Okay, let's assume the question is asking for the sum of the time spent cleaning the living room.|    The time spent on living room tasks is 25 minutes.|    So the an
+--- ('math_train_counting_and_probability_702', 1) P 50 onset 13099.0
+ 10.||Okay, I'll output the answer.||Final Answer:
+
+```

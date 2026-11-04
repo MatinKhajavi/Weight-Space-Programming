@@ -1,0 +1,24 @@
+OUTPUT of run 34 of at most 60:
+```
+L15h0: cities: tot+0.00 q+0.01 k-0.01 | adj: tot-0.00 q-0.00 k-0.00 | binary: tot+0.01 q+0.02 k-0.01 | digits: tot+0.05 q-0.00 k+0.05 |
+L15h1: cities: tot-0.01 q-0.02 k+0.01 | adj: tot+0.01 q-0.00 k+0.01 | binary: tot+0.02 q+0.03 k-0.01 | digits: tot-0.04 q-0.01 k-0.03 |
+L15h2: cities: tot+0.01 q+0.01 k+0.00 | adj: tot-0.01 q-0.01 k+0.00 | binary: tot-0.03 q-0.04 k+0.01 | digits: tot+0.01 q+0.02 k-0.01 |
+L15h3: cities: tot+0.02 q+0.01 k+0.02 | adj: tot+0.01 q-0.00 k+0.01 | binary: tot+0.01 q+0.00 k+0.00 | digits: tot-0.01 q+0.00 k-0.01 |
+L16h0: cities: tot-0.00 q-0.01 k+0.00 | adj: tot-0.01 q-0.00 k-0.01 | binary: tot+0.01 q-0.00 k+0.01 | digits: tot+0.01 q+0.00 k+0.00 |
+L16h1: cities: tot+0.00 q+0.01 k-0.00 | adj: tot+0.02 q+0.02 k+0.01 | binary: tot+0.01 q+0.01 k-0.01 | digits: tot-0.02 q-0.06 k+0.04 |
+L16h2: cities: tot-0.02 q-0.02 k+0.01 | adj: tot+0.02 q+0.01 k+0.01 | binary: tot-0.00 q+0.00 k-0.01 | digits: tot-0.01 q-0.02 k+0.01 |
+L16h3: cities: tot+0.01 q+0.00 k+0.00 | adj: tot+0.00 q-0.00 k+0.00 | binary: tot+0.01 q-0.00 k+0.01 | digits: tot+0.01 q+0.01 k+0.00 |
+L17h0: cities: tot+0.03 q+0.01 k+0.02 | adj: tot+0.01 q+0.02 k-0.01 | binary: tot-0.01 q-0.02 k+0.00 | digits: tot-0.01 q-0.02 k+0.01 |
+L17h1: cities: tot+0.09 q+0.04 k+0.06 | adj: tot-0.06 q-0.03 k-0.03 | binary: tot+0.01 q+0.01 k+0.00 | digits: tot-0.09 q-0.09 k-0.00 |
+L17h2: cities: tot+0.03 q+0.01 k+0.02 | adj: tot+0.02 q-0.01 k+0.02 | binary: tot+0.03 q+0.02 k+0.02 | digits: tot+0.01 q+0.02 k-0.00 |
+L17h3: cities: tot+0.05 q+0.04 k+0.01 | adj: tot+0.02 q-0.01 k+0.03 | binary: tot-0.00 q-0.00 k+0.00 | digits: tot-0.04 q-0.03 k-0.01 |
+L11h0: cities: tot+0.02 q-0.01 k+0.03 | adj: tot-0.03 q-0.04 k+0.01 | binary: tot-0.05 q-0.01 k-0.03 | digits: tot-0.12 q-0.06 k-0.05 |
+L11h1: cities: tot+0.02 q+0.02 k+0.01 | adj: tot-0.01 q-0.02 k+0.01 | binary: tot+0.00 q-0.00 k+0.01 | digits: tot-0.00 q+0.02 k-0.03 |
+L11h2: cities: tot-0.02 q-0.00 k-0.01 | adj: tot+0.01 q+0.00 k+0.01 | binary: tot+0.00 q-0.01 k+0.01 | digits: tot-0.05 q-0.07 k+0.02 |
+L11h3: cities: tot-0.01 q-0.00 k-0.01 | adj: tot+0.00 q+0.00 k-0.00 | binary: tot-0.01 q-0.01 k-0.00 | digits: tot-0.00 q+0.00 k-0.01 |
+L13h0: cities: tot+0.01 q-0.00 k+0.01 | adj: tot+0.01 q+0.01 k+0.01 | binary: tot-0.01 q-0.00 k-0.01 | digits: tot+0.02 q+0.02 k-0.00 |
+L13h1: cities: tot-0.04 q-0.03 k-0.01 | adj: tot-0.01 q-0.02 k+0.01 | binary: tot+0.00 q-0.01 k+0.01 | digits: tot+0.00 q-0.01 k+0.01 |
+L13h2: cities: tot+0.02 q+0.01 k+0.01 | adj: tot+0.00 q+0.00 k+0.00 | binary: tot-0.03 q+0.00 k-0.03 | digits: tot-0.01 q-0.01 k-0.00 |
+L13h3: cities: tot+0.01 q+0.00 k+0.01 | adj: tot+0.01 q-0.00 k+0.01 | binary: tot+0.03 q+0.02 k+0.01 | digits: tot+0.02 q+0.02 k+0.00 |
+
+```

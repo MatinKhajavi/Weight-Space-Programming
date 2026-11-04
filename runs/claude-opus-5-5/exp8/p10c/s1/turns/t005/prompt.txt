@@ -1,0 +1,21 @@
+OUTPUT of Python run 4 of at most 300:
+```
+dict_keys(['id', 'source', 'problem', 'answer', 'solution']) dict_keys(['id', 'source', 'subject', 'level', 'problem', 'answer', 'solution']) dict_keys(['id', 'source', 'problem', 'answer', 'year'])
+gsm8k_train_0 Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May? | ans: 72
+math_train_algebra_0 algebra Level 5 Let \[f(x) = \left\{
+\begin{array}{cl} ax+3, &\text{ if }x>2, \\
+x-5 &\text{ if } -2 \le x \le 2, \\
+2x-b &\text{ if } x <-2.
+\end{array}
+\right.\]Find $a+b$ if the piecewise function is continuous (w | ans: 0
+level                     Level 1  Level 2  Level 3  Level 4  Level 5  Level ?
+subject                                                                       
+algebra                     178.0    338.0    385.0    392.0    433.0      NaN
+counting_and_probability     50.0    115.0    156.0    165.0    251.0      NaN
+geometry                     40.0     99.0    126.0    173.0    359.0      2.0
+intermediate_algebra         58.0    164.0    295.0    332.0    421.0      NaN
+number_theory                46.0    131.0    190.0    184.0    308.0      NaN
+prealgebra                  126.0    327.0    249.0    245.0    249.0      NaN
+precalculus                  58.0    146.0    157.0    161.0    166.0      NaN
+
+```

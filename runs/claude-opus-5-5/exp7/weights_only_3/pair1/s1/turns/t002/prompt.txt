@@ -1,0 +1,164 @@
+OUTPUT of run 1 of at most 60:
+```
+{
+ "_sliding_window_pattern": 6,
+ "architectures": [
+  "Gemma3ForCausalLM"
+ ],
+ "attention_bias": false,
+ "attention_dropout": 0.0,
+ "attn_logit_softcapping": null,
+ "bos_token_id": 2,
+ "dtype": "float32",
+ "eos_token_id": 1,
+ "final_logit_softcapping": null,
+ "head_dim": 256,
+ "hidden_activation": "gelu_pytorch_tanh",
+ "hidden_size": 640,
+ "initializer_range": 0.02,
+ "intermediate_size": 2048,
+ "layer_types": [
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "full_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "full_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "full_attention"
+ ],
+ "max_position_embeddings": 32768,
+ "model_type": "gemma3_text",
+ "num_attention_heads": 4,
+ "num_hidden_layers": 18,
+ "num_key_value_heads": 1,
+ "pad_token_id": 0,
+ "query_pre_attn_scalar": 256,
+ "rms_norm_eps": 1e-06,
+ "rope_parameters": {
+  "full_attention": {
+   "rope_theta": 1000000.0,
+   "rope_type": "default"
+  },
+  "sliding_attention": {
+   "rope_theta": 10000.0,
+   "rope_type": "default"
+  }
+ },
+ "sliding_window": 512,
+ "tie_word_embeddings": true,
+ "transformers_version": "5.17.0",
+ "use_bidirectional_attention": false,
+ "use_cache": true,
+ "vocab_size": 262144
+}
+True
+235 ['model.layers.0.input_layernorm.weight', 'model.layers.0.mlp.down_proj.weight', 'model.layers.0.mlp.gate_proj.weight', 'model.layers.0.mlp.up_proj.weight', 'model.layers.0.post_attention_layernorm.weight', 'model.layers.0.post_feedforward_layernorm.weight', 'model.layers.0.pre_feedforward_layernorm.weight', 'model.layers.0.self_attn.k_norm.weight', 'model.layers.0.self_attn.k_proj.weight', 'model.layers.0.self_attn.o_proj.weight', 'model.layers.0.self_attn.q_norm.weight', 'model.layers.0.self_attn.q_proj.weight', 'model.layers.0.self_attn.v_proj.weight', 'model.layers.1.input_layernorm.weight', 'model.layers.1.mlp.down_proj.weight', 'model.layers.1.mlp.gate_proj.weight', 'model.layers.1.mlp.up_proj.weight', 'model.layers.1.post_attention_layernorm.weight', 'model.layers.1.post_feedforward_layernorm.weight', 'model.layers.1.pre_feedforward_layernorm.weight', 'model.layers.1.self_attn.k_norm.weight', 'model.layers.1.self_attn.k_proj.weight', 'model.layers.1.self_attn.o_proj.weight', 'model.layers.1.self_attn.q_norm.weight', 'model.layers.1.self_attn.q_proj.weight', 'model.layers.1.self_attn.v_proj.weight', 'model.layers.10.input_layernorm.weight', 'model.layers.10.mlp.down_proj.weight', 'model.layers.10.mlp.gate_proj.weight', 'model.layers.10.mlp.up_proj.weight']
+set()
+model.layers.0.input_layernorm.weight                        (640,)          eq=1.0000 |d|=0.0000e+00 |a|=3.448e+02 rel=0.000e+00
+model.layers.0.mlp.down_proj.weight                          (640, 2048)     eq=0.1581 |d|=2.6259e-01 |a|=2.462e+01 rel=1.066e-02
+model.layers.0.mlp.gate_proj.weight                          (2048, 640)     eq=0.2665 |d|=2.7655e-01 |a|=4.468e+01 rel=6.189e-03
+model.layers.0.mlp.up_proj.weight                            (2048, 640)     eq=0.2709 |d|=2.7341e-01 |a|=4.476e+01 rel=6.109e-03
+model.layers.0.post_attention_layernorm.weight               (640,)          eq=1.0000 |d|=0.0000e+00 |a|=5.913e+01 rel=0.000e+00
+model.layers.0.post_feedforward_layernorm.weight             (640,)          eq=0.8469 |d|=4.2300e-03 |a|=1.688e+02 rel=2.506e-05
+model.layers.0.pre_feedforward_layernorm.weight              (640,)          eq=1.0000 |d|=0.0000e+00 |a|=1.313e+02 rel=0.000e+00
+model.layers.0.self_attn.k_norm.weight                       (256,)          eq=0.9766 |d|=6.6020e-04 |a|=2.063e+01 rel=3.200e-05
+model.layers.0.self_attn.k_proj.weight                       (256, 640)      eq=0.2365 |d|=1.0201e-01 |a|=1.589e+01 rel=6.419e-03
+model.layers.0.self_attn.o_proj.weight                       (640, 1024)     eq=0.2553 |d|=1.8233e-01 |a|=2.993e+01 rel=6.092e-03
+model.layers.0.self_attn.q_norm.weight                       (256,)          eq=0.9766 |d|=9.7322e-04 |a|=2.000e+01 rel=4.867e-05
+model.layers.0.self_attn.q_proj.weight                       (1024, 640)     eq=0.2123 |d|=2.0177e-01 |a|=3.145e+01 rel=6.416e-03
+model.layers.0.self_attn.v_proj.weight                       (256, 640)      eq=0.2909 |d|=8.9899e-02 |a|=1.586e+01 rel=5.667e-03
+model.layers.1.input_layernorm.weight                        (640,)          eq=1.0000 |d|=0.0000e+00 |a|=6.520e+02 rel=0.000e+00
+model.layers.1.mlp.down_proj.weight                          (640, 2048)     eq=0.1044 |d|=2.5809e-01 |a|=1.557e+01 rel=1.658e-02
+model.layers.1.mlp.gate_proj.weight                          (2048, 640)     eq=0.2711 |d|=2.7705e-01 |a|=4.495e+01 rel=6.164e-03
+model.layers.1.mlp.up_proj.weight                            (2048, 640)     eq=0.2741 |d|=2.7422e-01 |a|=4.487e+01 rel=6.111e-03
+model.layers.1.post_attention_layernorm.weight               (640,)          eq=0.9688 |d|=2.0264e-03 |a|=2.280e+02 rel=8.889e-06
+model.layers.1.post_feedforward_layernorm.weight             (640,)          eq=0.9375 |d|=3.2277e-03 |a|=2.306e+02 rel=1.400e-05
+model.layers.1.pre_feedforward_layernorm.weight              (640,)          eq=1.0000 |d|=0.0000e+00 |a|=7.681e+02 rel=0.000e+00
+model.layers.1.self_attn.k_norm.weight                       (256,)          eq=1.0000 |d|=0.0000e+00 |a|=3.227e+01 rel=0.000e+00
+model.layers.1.self_attn.k_proj.weight                       (256, 640)      eq=0.2556 |d|=9.9612e-02 |a|=1.590e+01 rel=6.263e-03
+model.layers.1.self_attn.o_proj.weight                       (640, 1024)     eq=0.1712 |d|=1.7538e-01 |a|=1.849e+01 rel=9.485e-03
+model.layers.1.self_attn.q_norm.weight                       (256,)          eq=1.0000 |d|=0.0000e+00 |a|=3.423e+01 rel=0.000e+00
+model.layers.1.self_attn.q_proj.weight                       (1024, 640)     eq=0.2270 |d|=1.9400e-01 |a|=3.159e+01 rel=6.142e-03
+model.layers.1.self_attn.v_proj.weight                       (256, 640)      eq=0.2754 |d|=9.5456e-02 |a|=1.597e+01 rel=5.979e-03
+model.layers.10.input_layernorm.weight                       (640,)          eq=0.9984 |d|=4.8828e-04 |a|=6.276e+02 rel=7.780e-07
+model.layers.10.mlp.down_proj.weight                         (640, 2048)     eq=0.1061 |d|=2.4743e-01 |a|=1.558e+01 rel=1.588e-02
+model.layers.10.mlp.gate_proj.weight                         (2048, 640)     eq=0.2426 |d|=2.7494e-01 |a|=4.484e+01 rel=6.131e-03
+model.layers.10.mlp.up_proj.weight                           (2048, 640)     eq=0.2705 |d|=2.6994e-01 |a|=4.472e+01 rel=6.036e-03
+model.layers.10.post_attention_layernorm.weight              (640,)          eq=0.9984 |d|=6.1035e-05 |a|=1.439e+03 rel=4.242e-08
+model.layers.10.post_feedforward_layernorm.weight            (640,)          eq=1.0000 |d|=0.0000e+00 |a|=1.873e+03 rel=0.000e+00
+model.layers.10.pre_feedforward_layernorm.weight             (640,)          eq=0.9750 |d|=1.6726e-03 |a|=1.704e+02 rel=9.817e-06
+model.layers.10.self_attn.k_norm.weight                      (256,)          eq=0.9648 |d|=1.4317e-03 |a|=4.889e+01 rel=2.928e-05
+model.layers.10.self_attn.k_proj.weight                      (256, 640)      eq=0.2410 |d|=1.0281e-01 |a|=1.587e+01 rel=6.477e-03
+model.layers.10.self_attn.o_proj.weight                      (640, 1024)     eq=0.2434 |d|=1.9136e-01 |a|=3.108e+01 rel=6.157e-03
+model.layers.10.self_attn.q_norm.weight                      (256,)          eq=0.9219 |d|=2.2452e-03 |a|=1.669e+01 rel=1.345e-04
+model.layers.10.self_attn.q_proj.weight                      (1024, 640)     eq=0.2133 |d|=2.0980e-01 |a|=3.154e+01 rel=6.651e-03
+model.layers.10.self_attn.v_proj.weight                      (256, 640)      eq=0.2833 |d|=9.2411e-02 |a|=1.598e+01 rel=5.784e-03
+model.layers.11.input_layernorm.weight                       (640,)          eq=0.9844 |d|=1.3502e-03 |a|=2.335e+02 rel=5.783e-06
+model.layers.11.mlp.down_proj.weight                         (640, 2048)     eq=0.1487 |d|=2.3788e-01 |a|=2.054e+01 rel=1.158e-02
+model.layers.11.mlp.gate_proj.weight                         (2048, 640)     eq=0.2431 |d|=2.7920e-01 |a|=4.478e+01 rel=6.236e-03
+model.layers.11.mlp.up_proj.weight                           (2048, 640)     eq=0.2702 |d|=2.7026e-01 |a|=4.468e+01 rel=6.049e-03
+model.layers.11.post_attention_layernorm.weight              (640,)          eq=1.0000 |d|=0.0000e+00 |a|=4.671e+03 rel=0.000e+00
+model.layers.11.post_feedforward_layernorm.weight            (640,)          eq=1.0000 |d|=0.0000e+00 |a|=3.712e+03 rel=0.000e+00
+model.layers.11.pre_feedforward_layernorm.weight             (640,)          eq=0.9891 |d|=1.2568e-03 |a|=2.262e+02 rel=5.555e-06
+model.layers.11.self_attn.k_norm.weight                      (256,)          eq=0.9727 |d|=1.5537e-03 |a|=6.576e+01 rel=2.363e-05
+model.layers.11.self_attn.k_proj.weight                      (256, 640)      eq=0.1866 |d|=1.0283e-01 |a|=1.591e+01 rel=6.462e-03
+model.layers.11.self_attn.o_proj.weight                      (640, 1024)     eq=0.2312 |d|=1.9413e-01 |a|=3.073e+01 rel=6.318e-03
+model.layers.11.self_attn.q_norm.weight                      (256,)          eq=0.9766 |d|=7.5496e-04 |a|=1.861e+01 rel=4.056e-05
+model.layers.11.self_attn.q_proj.weight                      (1024, 640)     eq=0.1985 |d|=2.0622e-01 |a|=3.160e+01 rel=6.526e-03
+model.layers.11.self_attn.v_proj.weight                      (256, 640)      eq=0.2532 |d|=9.4096e-02 |a|=1.598e+01 rel=5.888e-03
+model.layers.12.input_layernorm.weight                       (640,)          eq=0.9891 |d|=1.1254e-03 |a|=7.753e+02 rel=1.452e-06
+model.layers.12.mlp.down_proj.weight                         (640, 2048)     eq=0.1470 |d|=2.6100e-01 |a|=2.264e+01 rel=1.153e-02
+model.layers.12.mlp.gate_proj.weight                         (2048, 640)     eq=0.2342 |d|=2.8803e-01 |a|=4.478e+01 rel=6.433e-03
+model.layers.12.mlp.up_proj.weight                           (2048, 640)     eq=0.2564 |d|=2.8144e-01 |a|=4.470e+01 rel=6.296e-03
+model.layers.12.post_attention_layernorm.weight              (640,)          eq=1.0000 |d|=0.0000e+00 |a|=5.088e+03 rel=0.000e+00
+model.layers.12.post_feedforward_layernorm.weight            (640,)          eq=1.0000 |d|=0.0000e+00 |a|=5.218e+03 rel=0.000e+00
+model.layers.12.pre_feedforward_layernorm.weight             (640,)          eq=0.9625 |d|=2.4959e-03 |a|=1.398e+02 rel=1.785e-05
+model.layers.12.self_attn.k_norm.weight                      (256,)          eq=0.9922 |d|=5.4592e-04 |a|=3.280e+01 rel=1.664e-05
+model.layers.12.self_attn.k_proj.weight                      (256, 640)      eq=0.2292 |d|=1.0433e-01 |a|=1.581e+01 rel=6.601e-03
+model.layers.12.self_attn.o_proj.weight                      (640, 1024)     eq=0.2210 |d|=1.8983e-01 |a|=2.707e+01 rel=7.013e-03
+model.layers.12.self_attn.q_norm.weight                      (256,)          eq=0.9727 |d|=1.1898e-03 |a|=1.910e+01 rel=6.228e-05
+model.layers.12.self_attn.q_proj.weight                      (1024, 640)     eq=0.1744 |d|=2.1124e-01 |a|=3.111e+01 rel=6.790e-03
+model.layers.12.self_attn.v_proj.weight                      (256, 640)      eq=0.2718 |d|=8.5675e-02 |a|=1.600e+01 rel=5.355e-03
+model.layers.13.input_layernorm.weight                       (640,)          eq=0.9563 |d|=2.0815e-03 |a|=5.261e+02 rel=3.956e-06
+model.layers.13.mlp.down_proj.weight                         (640, 2048)     eq=0.1082 |d|=2.6874e-01 |a|=1.658e+01 rel=1.621e-02
+model.layers.13.mlp.gate_proj.weight                         (2048, 640)     eq=0.2435 |d|=2.8936e-01 |a|=4.466e+01 rel=6.479e-03
+model.layers.13.mlp.up_proj.weight                           (2048, 640)     eq=0.2612 |d|=2.8747e-01 |a|=4.458e+01 rel=6.448e-03
+model.layers.13.post_attention_layernorm.weight              (640,)          eq=1.0000 |d|=0.0000e+00 |a|=4.187e+03 rel=0.000e+00
+model.layers.13.post_feedforward_layernorm.weight            (640,)          eq=1.0000 |d|=0.0000e+00 |a|=5.421e+03 rel=0.000e+00
+model.layers.13.pre_feedforward_layernorm.weight             (640,)          eq=0.9484 |d|=2.2509e-03 |a|=1.337e+02 rel=1.684e-05
+model.layers.13.self_attn.k_norm.weight                      (256,)          eq=0.9844 |d|=5.6272e-04 |a|=2.574e+01 rel=2.186e-05
+model.layers.13.self_attn.k_proj.weight                      (256, 640)      eq=0.2076 |d|=1.0460e-01 |a|=1.593e+01 rel=6.565e-03
+model.layers.13.self_attn.o_proj.weight                      (640, 1024)     eq=0.1822 |d|=1.8745e-01 |a|=2.181e+01 rel=8.595e-03
+model.layers.13.self_attn.q_norm.weight                      (256,)          eq=0.9648 |d|=1.1960e-03 |a|=1.820e+01 rel=6.571e-05
+model.layers.13.self_attn.q_proj.weight                      (1024, 640)     eq=0.2031 |d|=2.1080e-01 |a|=3.142e+01 rel=6.709e-03
+model.layers.13.self_attn.v_proj.weight                      (256, 640)      eq=0.2598 |d|=9.6782e-02 |a|=1.598e+01 rel=6.058e-03
+model.layers.14.input_layernorm.weight                       (640,)          eq=0.9734 |d|=2.0941e-03 |a|=7.481e+02 rel=2.799e-06
+model.layers.14.mlp.down_proj.weight                         (640, 2048)     eq=0.0974 |d|=2.7642e-01 |a|=1.540e+01 rel=1.795e-02
+model.layers.14.mlp.gate_proj.weight                         (2048, 640)     eq=0.2380 |d|=2.9565e-01 |a|=4.467e+01 rel=6.618e-03
+model.layers.14.mlp.up_proj.weight                           (2048, 640)     eq=0.2576 |d|=2.9358e-01 |a|=4.461e+01 rel=6.580e-03
+model.layers.14.post_attention_layernorm.weight              (640,)          eq=1.0000 |d|=0.0000e+00 |a|=4.754e+03 rel=0.000e+00
+model.layers.14.post_feedforward_layernorm.weight            (640,)          eq=1.0000 |d|=0.0000e+00 |a|=6.217e+03 rel=0.000e+00
+model.layers.14.pre_feedforward_layernorm.weight             (640,)          eq=0.8766 |d|=3.7584e-03 |a|=1.246e+02 rel=3.018e-05
+model.layers.14.self_attn.k_norm.weight                      (256,)          eq=0.9844 |d|=6.1718e-04 |a|=3.969e+01 rel=1.555e-05
+model.layers.14.self_attn.k_proj.weight                      (256, 640)      eq=0.2364 |d|=1.0118e-01 |a|=1.570e+01 rel=6.445e-03
+model.layers.14.self_attn.o_proj.weight                      (640, 1024)     eq=0.2351 |d|=1.8422e-01 |a|=2.763e+01 rel=6.666e-03
+model.layers.14.self_attn.q_norm.weight                      (256,)          eq=0.9570 |d|=1.4353e-03 |a|=2.299e+01 rel=6.242e-05
+model.layers.14.self_attn.q_proj.weight                      (1024, 640)     eq=0.1871 |d|=1.9992e-01 |a|=3.117e+01 rel=6.414e-03
+model.layers.14.self_attn.v_proj.weight                      (256, 640)      eq=0.2647 |d|=9.8719e-02 |a|=1.593e+01 rel=6.196e-03
+model.layers.15.input_layernorm.weight                       (640,)          eq=1.0000 |d|=0.0000e+00 |a|=9.644e+02 rel=0.000e+00
+model.layers.15.mlp.down_proj.weight                         (640, 2048)     eq=0.1134 |d|=2.8305e-01 |a|=1.835e+01 rel=1.542e-02
+model.layers.15.mlp.gate_proj.weight                         (2048, 640)     eq=0.2362 |d|=2.9913e-01 |a|=4.469e+01 rel=6.693e-03
+model.layers.15.mlp.up_proj.weight                           (2048, 640)     e
+[output cut at 15,000 characters]
+```

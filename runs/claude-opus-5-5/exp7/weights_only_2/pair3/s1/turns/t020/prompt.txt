@@ -1,0 +1,29 @@
+OUTPUT of run 19 of at most 60:
+```
+L 0 input_laye: A>B  0 A<B  0 relsum +0.0000 | post_atten: A>B  0 A<B  0 relsum +0.0000 | pre_feedfo: A>B  0 A<B  0 relsum +0.0000 | post_feedf: A>B 39 A<B 55 relsum -0.0080 | q_norm: A>B  3 A<B  3 relsum -0.0003 | k_norm: A>B  1 A<B  0 relsum +0.0002
+L 1 input_laye: A>B  0 A<B  0 relsum +0.0000 | post_atten: A>B 15 A<B  7 relsum +0.0017 | pre_feedfo: A>B  0 A<B  0 relsum +0.0000 | post_feedf: A>B 13 A<B 23 relsum -0.0040 | q_norm: A>B  0 A<B  0 relsum +0.0000 | k_norm: A>B  0 A<B  0 relsum +0.0000
+L 2 input_laye: A>B  0 A<B  0 relsum +0.0000 | post_atten: A>B 21 A<B 27 relsum -0.0007 | pre_feedfo: A>B  0 A<B  0 relsum +0.0000 | post_feedf: A>B  2 A<B  7 relsum -0.0036 | q_norm: A>B  2 A<B  3 relsum -0.0000 | k_norm: A>B  3 A<B  3 relsum +0.0003
+L 3 input_laye: A>B  0 A<B  2 relsum -0.0005 | post_atten: A>B  8 A<B  8 relsum +0.0006 | pre_feedfo: A>B  0 A<B  1 relsum -0.0001 | post_feedf: A>B  8 A<B  6 relsum +0.0003 | q_norm: A>B  6 A<B  8 relsum -0.0025 | k_norm: A>B  3 A<B  4 relsum +0.0004
+L 4 input_laye: A>B  5 A<B  1 relsum +0.0011 | post_atten: A>B  3 A<B  5 relsum -0.0012 | pre_feedfo: A>B  6 A<B  5 relsum +0.0014 | post_feedf: A>B  0 A<B  1 relsum -0.0005 | q_norm: A>B  8 A<B 11 relsum -0.0005 | k_norm: A>B  4 A<B  6 relsum -0.0010
+L 5 input_laye: A>B  3 A<B  3 relsum +0.0005 | post_atten: A>B  3 A<B  2 relsum -0.0004 | pre_feedfo: A>B  8 A<B  2 relsum +0.0023 | post_feedf: A>B  0 A<B  0 relsum +0.0000 | q_norm: A>B  0 A<B  3 relsum -0.0014 | k_norm: A>B  0 A<B  0 relsum +0.0000
+L 6 input_laye: A>B  6 A<B  3 relsum +0.0004 | post_atten: A>B  5 A<B  3 relsum +0.0012 | pre_feedfo: A>B  7 A<B 10 relsum +0.0010 | post_feedf: A>B  0 A<B  0 relsum +0.0000 | q_norm: A>B 10 A<B 14 relsum -0.0036 | k_norm: A>B  4 A<B 10 relsum -0.0014
+L 7 input_laye: A>B  5 A<B  0 relsum +0.0030 | post_atten: A>B  0 A<B  0 relsum +0.0000 | pre_feedfo: A>B  8 A<B  6 relsum +0.0006 | post_feedf: A>B  0 A<B  0 relsum +0.0000 | q_norm: A>B  5 A<B  8 relsum +0.0004 | k_norm: A>B  4 A<B  5 relsum +0.0005
+L 8 input_laye: A>B  1 A<B  1 relsum +0.0002 | post_atten: A>B  5 A<B  1 relsum +0.0031 | pre_feedfo: A>B 11 A<B  9 relsum +0.0008 | post_feedf: A>B  0 A<B  2 relsum -0.0009 | q_norm: A>B  9 A<B  5 relsum +0.0019 | k_norm: A>B  7 A<B  5 relsum -0.0005
+L 9 input_laye: A>B  2 A<B  2 relsum +0.0004 | post_atten: A>B  2 A<B  4 relsum -0.0003 | pre_feedfo: A>B  7 A<B 10 relsum -0.0004 | post_feedf: A>B  0 A<B  0 relsum +0.0000 | q_norm: A>B  9 A<B 13 relsum -0.0025 | k_norm: A>B  1 A<B  7 relsum -0.0018
+L10 input_laye: A>B  0 A<B  0 relsum +0.0000 | post_atten: A>B  2 A<B  0 relsum +0.0004 | pre_feedfo: A>B 12 A<B 12 relsum -0.0010 | post_feedf: A>B  0 A<B  0 relsum +0.0000 | q_norm: A>B 12 A<B  9 relsum +0.0017 | k_norm: A>B  5 A<B  5 relsum -0.0007
+L11 input_laye: A>B  6 A<B  4 relsum +0.0015 | post_atten: A>B  0 A<B  0 relsum +0.0000 | pre_feedfo: A>B  3 A<B  3 relsum -0.0007 | post_feedf: A>B  0 A<B  0 relsum +0.0000 | q_norm: A>B  5 A<B  4 relsum +0.0012 | k_norm: A>B  2 A<B  3 relsum -0.0012
+L12 input_laye: A>B  1 A<B  3 relsum -0.0007 | post_atten: A>B  0 A<B  0 relsum +0.0000 | pre_feedfo: A>B 10 A<B 11 relsum -0.0031 | post_feedf: A>B  0 A<B  0 relsum +0.0000 | q_norm: A>B  4 A<B  2 relsum +0.0001 | k_norm: A>B  2 A<B  2 relsum +0.0003
+L13 input_laye: A>B 15 A<B 12 relsum +0.0000 | post_atten: A>B  0 A<B  0 relsum +0.0000 | pre_feedfo: A>B 27 A<B 21 relsum +0.0030 | post_feedf: A>B  0 A<B  0 relsum +0.0000 | q_norm: A>B  4 A<B  4 relsum +0.0015 | k_norm: A>B  3 A<B  3 relsum +0.0001
+L14 input_laye: A>B  6 A<B 16 relsum -0.0070 | post_atten: A>B  0 A<B  0 relsum +0.0000 | pre_feedfo: A>B 40 A<B 36 relsum -0.0007 | post_feedf: A>B  0 A<B  0 relsum +0.0000 | q_norm: A>B  5 A<B  5 relsum -0.0011 | k_norm: A>B  4 A<B  2 relsum +0.0011
+L15 input_laye: A>B  0 A<B  0 relsum +0.0000 | post_atten: A>B  0 A<B  0 relsum +0.0000 | pre_feedfo: A>B 17 A<B 14 relsum -0.0013 | post_feedf: A>B  0 A<B  0 relsum +0.0000 | q_norm: A>B  4 A<B  6 relsum -0.0018 | k_norm: A>B  3 A<B  7 relsum -0.0019
+L16 input_laye: A>B  0 A<B  0 relsum +0.0000 | post_atten: A>B  0 A<B  0 relsum +0.0000 | pre_feedfo: A>B  6 A<B  9 relsum -0.0013 | post_feedf: A>B  0 A<B  0 relsum +0.0000 | q_norm: A>B  6 A<B  5 relsum +0.0010 | k_norm: A>B  4 A<B  3 relsum +0.0007
+L17 input_laye: A>B  0 A<B  0 relsum +0.0000 | post_atten: A>B  1 A<B  0 relsum +0.0001 | pre_feedfo: A>B 12 A<B 15 relsum -0.0007 | post_feedf: A>B  0 A<B  0 relsum +0.0000 | q_norm: A>B  5 A<B  4 relsum -0.0004 | k_norm: A>B  1 A<B  4 relsum -0.0005
+input_layernorm total A>B 50 A<B 47 relsum -0.0011
+post_attention_layernorm total A>B 65 A<B 57 relsum 0.0045
+pre_feedforward_layernorm total A>B 174 A<B 164 relsum -1e-04
+post_feedforward_layernorm total A>B 62 A<B 94 relsum -0.0166
+self_attn.q_norm total A>B 97 A<B 107 relsum -0.0062
+self_attn.k_norm total A>B 51 A<B 69 relsum -0.0053
+final 0 0
+
+```

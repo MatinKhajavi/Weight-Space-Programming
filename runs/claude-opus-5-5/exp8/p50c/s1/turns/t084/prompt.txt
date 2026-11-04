@@ -1,0 +1,22 @@
+OUTPUT of Python run 72 of at most 300:
+```
+win 0 period 29 onset 924 len 1841 cycles 31.620689655172413
+win 1 period 41 onset 763 len 1500 cycles 17.975609756097562
+L23.h5  w0 in 0.85 pre 0.63 | w1 in 0.86 pre 0.58 | mean excess 0.25
+L23.h4  w0 in 0.56 pre 0.41 | w1 in 0.64 pre 0.40 | mean excess 0.19
+L15.h7  w0 in 0.83 pre 0.67 | w1 in 0.84 pre 0.63 | mean excess 0.19
+L23.h0  w0 in 0.48 pre 0.35 | w1 in 0.51 pre 0.33 | mean excess 0.16
+L23.h7  w0 in 0.52 pre 0.38 | w1 in 0.57 pre 0.40 | mean excess 0.15
+L19.h5  w0 in 0.49 pre 0.38 | w1 in 0.48 pre 0.32 | mean excess 0.13
+L11.h1  w0 in 0.79 pre 0.66 | w1 in 0.75 pre 0.62 | mean excess 0.12
+L3.h5  w0 in 0.43 pre 0.38 | w1 in 0.42 pre 0.32 | mean excess 0.07
+L19.h0  w0 in 0.25 pre 0.24 | w1 in 0.33 pre 0.21 | mean excess 0.06
+L19.h1  w0 in 0.30 pre 0.27 | w1 in 0.33 pre 0.23 | mean excess 0.06
+L19.h7  w0 in 0.26 pre 0.22 | w1 in 0.30 pre 0.22 | mean excess 0.06
+L23.h1  w0 in 0.30 pre 0.30 | w1 in 0.44 pre 0.32 | mean excess 0.06
+L19.h3  w0 in 0.32 pre 0.33 | w1 in 0.37 pre 0.25 | mean excess 0.05
+L7.h1  w0 in 0.22 pre 0.15 | w1 in 0.15 pre 0.11 | mean excess 0.05
+L19.h2  w0 in 0.37 pre 0.38 | w1 in 0.42 pre 0.30 | mean excess 0.05
+L23.h3  w0 in 0.29 pre 0.29 | w1 in 0.37 pre 0.28 | mean excess 0.04
+
+```

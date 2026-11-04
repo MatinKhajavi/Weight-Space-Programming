@@ -1,0 +1,4 @@
+Total MLP excess comes out at +1.4, mostly positive, which suggests A's later MLPs amplify copied answer tokens more than B's relative to control. I need a noise reference, though, so I'm considering how to estimate the spread of these excess values, since the individual values are around 0.1–0.2 and that's hard to judge without a null distribution. My plan is to run the same computation on control-vs-control, comparing c0 against the mean of c1 and c2, to see what the baseline noise looks like.
+
+Checking MLP excess by layer, the positives outnumber the negatives, though a few sources come out negative. To judge whether +1.4 is meaningful, I'll compare against a null: rerunning the same excess computation on control-vs-control, with more control sets, before deciding anything about the final components.
+

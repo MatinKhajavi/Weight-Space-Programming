@@ -1,0 +1,36 @@
+OUTPUT of Python run 30 of at most 300:
+```
+answer 10 onset_char 4831.0 period 153.0 nonascii []
+Patty decides that to convince her brother and sister to do her chores in exchange for cookies. Patty agrees to give them 3 cookies for every chore they do. Each kid normally has 4 chores to do per week. Patty has $15 to buy cookies. Each pack of cookies contains 24 cookies and costs $3. How many weeks can Patty go without doing chores by paying her siblings with cookies?
+-----
+ing the cookies.
+    So, she buys cookies from the siblings? No, that doesn't make sense.
+    Let's re-read again: "Patty decides that to convince her brother and sister to do her chores in exchange for cookies." -> She wants to give them cookies.
+    "Each kid normally has 4 chores to do per week." -> This is a constraint on how many chores they need to do.
+    "Patty has $15 to buy cookies." -> This is her budget.
+    "How many weeks can Patty go without doing chores by paying her siblings with cookies?"
+    Wait, the phrase "go without doing chores" is weird.
+    If she buys cookies, she *gives* them.
+    Does she give them to the siblings?
+    The siblings are doing the chores?
+    If she buys cookies, she pays the siblings.
+    Wait, if she buys cookies, she is spending money.
+    If she spends money, she is giving away money to the siblings?
+    Maybe the siblings don't have chores?
+    Let's assume the siblings are just people who want to do chores.
+    If she buys cookies, she pays the siblings.
+    Wait, if she buys cookies, she is giving them.
+    Maybe the siblings are the ones doing the chores?
+    "How many weeks can Patty go without doing chores by paying her siblings with cookies?"
+    This phrasing is slightly confusing.
+    Let's try a different angle.
+    Maybe she *buys* the chores?
+    No, she buys cookies.
+    The siblings are the ones doing the chores?
+    Wait, if she buys cookies, she is giving away money.
+    Maybe the siblings are the ones doing the chores?
+    Wait, if she buys cookies, she is giving them.
+    If she buys cookies, she pays the 
+
+[harness: 6 repeated lines not shown (a line is shown at most 2 times per output)]
+```

@@ -1,0 +1,21 @@
+OUTPUT of Python run 282 of at most 300:
+```
+top vars GB: [('Wemb', 1.02), ('WU', 1.02), ('Uc', 1.02), ('U_s', 1.02), ('U', 1.02), ('Eemb', 1.02), ('Ec', 1.02), ('E_', 1.02), ('E', 1.02), ('Ma_', 0.4)]
+freed GB 12.46 ['VmSize:\t4155596 kB', 'VmRSS:\t4034932 kB']
+sample keys: {'text': 'str79132', 'pred': None, 'correct': False, 'tokens': 32768, 'cut': True}
+C n 512 acc 0.607 {'cut': 126, 'ok': 311, 'wrong': 75}
+X1(23.4): n512 acc 60.7 diff +0.0 SE 2.0 | ok>w 33 ok>c 20 w>ok 18 c>ok 35 w>c 21 c>w 33
+X3(11.1): n512 acc 49.4 diff -11.3 SE 2.0 | ok>w 36 ok>c 51 w>ok 11 c>ok 18 w>c 35 c>w 20
+X4(23.7): n512 acc 57.2 diff -3.5 SE 2.0 | ok>w 30 ok>c 32 w>ok 15 c>ok 29 w>c 34 c>w 17
+X6(maybe-brk): n512 acc 58.8 diff -2.0 SE 1.9 | ok>w 23 ok>c 27 w>ok 11 c>ok 29 w>c 23 c>w 23
+X7(23.6x1.5): n511 acc 59.1 diff -1.8 SE 1.9 | ok>w 19 ok>c 32 w>ok 13 c>ok 29 w>c 30 c>w 21
+Va(brk2.5): n512 acc 58.2 diff -2.5 SE 1.9 | ok>w 23 ok>c 29 w>ok 10 c>ok 29 w>c 25 c>w 31
+Vb(heads.5): n512 acc 60.0 diff -0.8 SE 1.9 | ok>w 13 ok>c 37 w>ok 18 c>ok 28 w>c 39 c>w 11
+F15: n512 acc 54.9 diff -5.9 SE 2.0 | ok>w 16 ok>c 52 w>ok 14 c>ok 24 w>c 42 c>w 12
+F23: n512 acc 58.4 diff -2.3 SE 1.9 | ok>w 8 ok>c 47 w>ok 19 c>ok 24 w>c 44 c>w 12
+deltanet scan err unable to mmap 1504832752 bytes from file </model/model.safetensors>: Cannot allocate memory (12)
+edited: ['L15.self_attn.o_proj.weight', 'L19.self_attn.o_proj.weight', 'L22.mlp.down_proj.weight', 'L23.self_attn.o_proj.weight']
+SH512 type list len 512 dump chars 13271
+["math_train_precalculus_233", "math_train_precalculus_93", "math_train_geometry_312", "math_train_intermediate_algebra_959", "math_train_algebra_1344", "math_train_algebra_131", "math_train_algebra_1237", "math_train_number_theory_320", "math_train_number_theory_273", "math_train_prealgebra_442", "
+
+```

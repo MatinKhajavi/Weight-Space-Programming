@@ -1,0 +1,24 @@
+OUTPUT of Python run 228 of at most 300:
+```
+/work/req_tfC.json dict ['type', 'model', 'texts', 'return'] {'type': 'teacher_forced', 'model': 'edited', 'texts': 'list12', 'return': 'dict4'}
+/work/req_tf_conc.json dict ['type', 'model', 'texts', 'return'] {'type': 'teacher_forced', 'model': 'edited', 'texts': 'list132', 'return': 'dict4'}
+/work/fwd_18 ['attn_11.npy', 'attn_15.npy', 'attn_19.npy', 'attn_23.npy', 'attn_3.npy', 'attn_7.npy', 'hidden_0.npy', 'hidden_1.npy', 'hidden_10.npy', 'hidden_11.npy', 'hidden_12.npy', 'hidden_13.npy'] {'texts': 'list2', 'lengths': 'list2', 'model': 'edited', 'edited_tensors': 'list3', 'files': 'dict59', 'padding': 'right; positions >= length are padding'}
+/work/fwd_4 ['attn_11.npy', 'attn_15.npy', 'attn_19.npy', 'attn_23.npy', 'attn_3.npy', 'attn_7.npy', 'hidden_0.npy', 'hidden_1.npy', 'hidden_10.npy', 'hidden_11.npy', 'hidden_12.npy', 'hidden_13.npy'] {'texts': 'list2', 'lengths': 'list2', 'model': 'original', 'edited_tensors': 'list0', 'files': 'dict59', 'padding': 'right; positions >= length are padding'}
+# Notes (Qwen3.5-0.8B math repair)
+## Setup
+- Pools in /work/pools.json: D (diagnosis: 320 MATH level-stratified like MATH-500 + 192 GSM8K), S (selection), H (held-out).
+- Prompt format: user = problem + "\nPlease reason step by step, and put your final answer within \boxed{}."; thinking on.
+- Token ids: <think>=248068 </think>=248069 <|im_end|>=248046 eos(<|endoftext|>)=248044 ' Wait'=13428 'Wait'=13784
+## Pass log
+
+- gen_3 (pass, original, pool D 512x1, 32768 tok): acc 44/512=8.6%; 470 cut at 32768 (loops), only 1 cut reached </think>; correct mean len 6.9k tok.
+- Loops: exact char-periodic tails in 448/470 cut; onset median 6.2k tok (10-90%: 3.2k-11.8k); period median 119 chars; loop units mostly 'Wait, <computation line>' (368/470 contain digits).
+- fwd_4 (TF, original, probe1/probe2 own looping texts 875/1544 tok, all hidden, mlp, attn): induction mass in-loop vs pre-loop: 15.7 0.89/0.47, 11.1 0.76/0.49, 23.5 0.68/0.26, 23.0 0.55/0.21, 23.7 .47/.18, 19.5 .46/.20, 19.7 .43/.18, 23.4 .43/.20
+- DLA (next-token logit) in-loop excess ~+6.6 total, from layer15 (+2.5) and layer23 (+4.3), layer19 (+0.7).
+
+- TF corpus1 (/work/tf_corpus1.json): 72 own loop texts from gen_3 (onset<=4.3k tok, through 6 cycles; recs have a0, on, cyc token idx) + 44 own correct texts (<=4500 tok). 433,854 tokens.
+- Planned pass: TF baseline, model original, no edits, corpus1, token_logprobs+topk10.
+
+- Edit A: o_proj columns [h*256:(h+1)*256] *= 0 for heads 15.7, 23.5, 23.0 (from original). Set S1=/wor
+
+```

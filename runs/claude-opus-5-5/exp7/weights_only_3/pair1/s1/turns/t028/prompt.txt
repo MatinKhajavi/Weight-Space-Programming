@@ -1,0 +1,12 @@
+OUTPUT of run 27 of at most 60:
+```
+i  mlp0 reads / down15-17    m=2 cos=[0.32 0.26] stat=+1.04  random mean +0.12 sd 2.09  pct rank 0.75
+i  mlp0 reads / down15-17    m=3 cos=[0.32 0.26 0.2 ] stat=+4.96  random mean +0.12 sd 2.09  pct rank 0.98
+ii qk1 reads / down16-17     m=2 cos=[0.68 0.58] stat=-1.95  random mean +0.26 sd 2.12  pct rank 0.13
+ii qk1 reads / down16-17     m=3 cos=[0.68 0.58 0.46] stat=+3.64  random mean +0.26 sd 2.12  pct rank 0.95
+iii qk0 reads / o17+down17   m=2 cos=[0.41 0.36] stat=+1.23  random mean +0.18 sd 2.14  pct rank 0.75
+iii qk0 reads / o17+down17   m=3 cos=[0.41 0.36 0.28] stat=+5.00  random mean +0.18 sd 2.14  pct rank 0.98
+iv v0 reads / down16-17      m=2 cos=[0.52 0.39] stat=-1.09  random mean +0.18 sd 2.14  pct rank 0.23
+iv v0 reads / down16-17      m=3 cos=[0.52 0.39 0.3 ] stat=+0.31  random mean +0.18 sd 2.14  pct rank 0.48
+
+```

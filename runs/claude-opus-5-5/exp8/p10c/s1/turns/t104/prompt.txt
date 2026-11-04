@@ -1,0 +1,13 @@
+OUTPUT of Python run 92 of at most 300:
+```
+setA finished in both: 86 | acc v2 0.965 v3 0.953
+newly finished in v3: 58 acc 0.672 | lost (finished v2, cut v3): 18 (v2 acc on them 0.833)
+v3 finished length median: both 8449, newly 15624
+v3 finished-but-wrong: 33 | levels [('gsm', 15), ('Level 2', 5), ('Level 5', 5), ('Level 4', 3), ('Level 3', 3), ('Level 1', 2)] | median tokens 14979.0
+v3 non-exact cuts: 62 | share of repeated 20-grams in last 6k tokens: median 0.20, >0.5: 12, <0.1: 13
+-- math_train_precalculus_410 rep 0.11 | . |     Is it possible that $n=-70$ is a solution? |     $\tan(-70) = -\tan(70)$. |     $\tan(100) = -\tan(80)$. |     $\tan(70) = \tan(80)$? |     No. |     So $n=-70$ is not a solution. |     So $n=-80$ is the only solution. |      |     Wait, did I check $n=-70$ again? |     $\tan(-70) = -\tan(70)$. |     $\tan(100) =
+-- math_train_intermediate_algebra_664 rep 0.16 | mula $q = 9/2$ is correct. |                   |                  Why did I doubt it? |                  Because I tried to calculate $q$ for $m=1$ manually and got $-1/2$. |                  But $m=1$ yields $q=4.5$ or $9/2$. |                  Let's check $m=1$ again. |                  $a, b$ are roots of $x
+-- math_train_precalculus_384 rep 0.27 |    Wait, but Stewart's formula has $x = \rho \sin\theta \cos\phi$. |                                                         *   If $\theta$ is the angle from the $z$-axis, then $\sin\theta$ is the $y$-component. |                                                             *   $y = \rho \sin\theta \sin
+-- math_train_prealgebra_820 rep 0.00 |                             $d_{985} = 4$. |                             $r_{985} = 2$. |                             $d_{986} = 2$. |                             $r_{986} = 6$. |                             $d_{987} = 8$. |                             $r_{987} = 4$. |                             $d_{988} = 5$.
+
+```

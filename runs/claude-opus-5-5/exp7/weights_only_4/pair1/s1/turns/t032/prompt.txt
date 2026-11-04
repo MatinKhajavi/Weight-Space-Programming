@@ -1,0 +1,60 @@
+OUTPUT of run 31 of at most 60:
+```
+final norm w at dims: [-0.9141  3.1875]
+embedding col norms at dims vs median: [160.1574  21.0079] 18.106693
+L 0 norms(in,postA,preF,postF)@163/400:     6.5/    8.2    -0.7/   51.8     2.5/   -1.0     5.5/  152.0 | down rows A 0.893/0.408 B 0.893/0.408 typ 0.966 | o rows A 2.226/0.543 B 2.226/0.543
+      down[163] scale (A-B)/base = +0.00022  |d|/|m|=0.0112      down[400] scale (A-B)/base = +0.00022  |d|/|m|=0.0270
+      o[163] scale (A-B)/base = -0.00001  |d|/|m|=0.0030      o[400] scale (A-B)/base = +0.00040  |d|/|m|=0.0123
+L 1 norms(in,postA,preF,postF)@163/400:    10.2/   -0.2     8.0/  103.0     1.5/   -1.0    10.8/  195.0 | down rows A 0.529/0.380 B 0.528/0.379 typ 0.606 | o rows A 3.511/2.112 B 3.510/2.111
+      down[163] scale (A-B)/base = +0.00071  |d|/|m|=0.0200      down[400] scale (A-B)/base = +0.00012  |d|/|m|=0.0280
+      o[163] scale (A-B)/base = +0.00039  |d|/|m|=0.0028      o[400] scale (A-B)/base = +0.00070  |d|/|m|=0.0043
+L 2 norms(in,postA,preF,postF)@163/400:     5.9/   -0.6    29.1/  109.5     2.1/   -1.0    37.5/  250.0 | down rows A 0.716/0.683 B 0.715/0.683 typ 0.702 | o rows A 0.628/0.755 B 0.628/0.755
+      down[163] scale (A-B)/base = +0.00034  |d|/|m|=0.0135      down[400] scale (A-B)/base = +0.00051  |d|/|m|=0.0154
+      o[163] scale (A-B)/base = -0.00032  |d|/|m|=0.0112      o[400] scale (A-B)/base = -0.00008  |d|/|m|=0.0108
+L 3 norms(in,postA,preF,postF)@163/400:     1.1/   -0.7    73.0/  221.0     0.1/   -1.0   584.0/  378.0 | down rows A 0.307/0.625 B 0.307/0.625 typ 0.626 | o rows A 0.605/0.593 B 0.605/0.593
+      down[163] scale (A-B)/base = +0.00017  |d|/|m|=0.0327      down[400] scale (A-B)/base = -0.00036  |d|/|m|=0.0174
+      o[163] scale (A-B)/base = +0.00025  |d|/|m|=0.0117      o[400] scale (A-B)/base = -0.00073  |d|/|m|=0.0112
+L 4 norms(in,postA,preF,postF)@163/400:    -0.4/   -0.6   209.0/  221.0    -0.5/   -1.0   608.0/  298.0 | down rows A 0.352/0.537 B 0.352/0.536 typ 0.460 | o rows A 0.614/0.446 B 0.614/0.446
+      down[163] scale (A-B)/base = -0.00062  |d|/|m|=0.0308      down[400] scale (A-B)/base = +0.00065  |d|/|m|=0.0186
+      o[163] scale (A-B)/base = -0.00080  |d|/|m|=0.0129      o[400] scale (A-B)/base = +0.00060  |d|/|m|=0.0161
+L 5 norms(in,postA,preF,postF)@163/400:    -0.6/   -0.7   308.0/  512.0    -1.0/   -1.0   740.0/  308.0 | down rows A 0.614/1.157 B 0.614/1.158 typ 0.975 | o rows A 1.850/0.756 B 1.850/0.756
+      down[163] scale (A-B)/base = +0.00012  |d|/|m|=0.0152      down[400] scale (A-B)/base = -0.00053  |d|/|m|=0.0080
+      o[163] scale (A-B)/base = -0.00010  |d|/|m|=0.0039      o[400] scale (A-B)/base = +0.00045  |d|/|m|=0.0100
+L 6 norms(in,postA,preF,postF)@163/400:    -0.6/   -0.6   352.0/  194.0    -0.8/   -1.0   784.0/  234.0 | down rows A 0.627/1.026 B 0.627/1.026 typ 0.670 | o rows A 0.545/0.757 B 0.546/0.757
+      down[163] scale (A-B)/base = -0.00016  |d|/|m|=0.0139      down[400] scale (A-B)/base = -0.00057  |d|/|m|=0.0092
+      o[163] scale (A-B)/base = -0.00074  |d|/|m|=0.0107      o[400] scale (A-B)/base = +0.00015  |d|/|m|=0.0084
+L 7 norms(in,postA,preF,postF)@163/400:    -0.1/    0.1   392.0/  185.0    -1.0/   -0.7   688.0/ -133.0 | down rows A 0.849/1.799 B 0.849/1.799 typ 0.755 | o rows A 0.970/1.130 B 0.970/1.131
+      down[163] scale (A-B)/base = -0.00009  |d|/|m|=0.0111      down[400] scale (A-B)/base = -0.00004  |d|/|m|=0.0057
+      o[163] scale (A-B)/base = -0.00015  |d|/|m|=0.0067      o[400] scale (A-B)/base = -0.00022  |d|/|m|=0.0063
+L 8 norms(in,postA,preF,postF)@163/400:     0.1/    0.6   406.0/  310.0    -1.0/   -0.4   708.0/  253.0 | down rows A 0.512/0.623 B 0.512/0.622 typ 0.574 | o rows A 0.914/0.677 B 0.914/0.677
+      down[163] scale (A-B)/base = -0.00019  |d|/|m|=0.0173      down[400] scale (A-B)/base = +0.00044  |d|/|m|=0.0148
+      o[163] scale (A-B)/base = +0.00000  |d|/|m|=0.0072      o[400] scale (A-B)/base = -0.00031  |d|/|m|=0.0095
+L 9 norms(in,postA,preF,postF)@163/400:    -0.3/    0.4   450.0/  193.0    -1.0/   -0.6   524.0/  286.0 | down rows A 1.001/0.751 B 1.001/0.751 typ 0.824 | o rows A 0.867/0.936 B 0.867/0.936
+      down[163] scale (A-B)/base = -0.00030  |d|/|m|=0.0100      down[400] scale (A-B)/base = -0.00050  |d|/|m|=0.0122
+      o[163] scale (A-B)/base = -0.00007  |d|/|m|=0.0078      o[400] scale (A-B)/base = -0.00027  |d|/|m|=0.0084
+L10 norms(in,postA,preF,postF)@163/400:    -0.3/    0.5   482.0/  203.0    -1.0/   -0.4   592.0/  382.0 | down rows A 0.835/0.511 B 0.836/0.511 typ 0.581 | o rows A 1.169/1.103 B 1.170/1.104
+      down[163] scale (A-B)/base = -0.00096  |d|/|m|=0.0126      down[400] scale (A-B)/base = -0.00027  |d|/|m|=0.0194
+      o[163] scale (A-B)/base = -0.00007  |d|/|m|=0.0070      o[400] scale (A-B)/base = -0.00013  |d|/|m|=0.0072
+L11 norms(in,postA,preF,postF)@163/400:    -0.8/   -0.6   366.0/  240.0    -1.1/   -0.2   892.0/  388.0 | down rows A 0.838/0.763 B 0.839/0.764 typ 0.793 | o rows A 1.547/1.060 B 1.547/1.060
+      down[163] scale (A-B)/base = -0.00055  |d|/|m|=0.0137      down[400] scale (A-B)/base = -0.00044  |d|/|m|=0.0121
+      o[163] scale (A-B)/base = -0.00002  |d|/|m|=0.0052      o[400] scale (A-B)/base = +0.00024  |d|/|m|=0.0073
+L12 norms(in,postA,preF,postF)@163/400:    -0.6/    0.6   310.0/  214.0    -1.0/   -0.4   740.0/  412.0 | down rows A 1.267/0.896 B 1.267/0.897 typ 0.866 | o rows A 2.513/1.180 B 2.513/1.180
+      down[163] scale (A-B)/base = -0.00028  |d|/|m|=0.0105      down[400] scale (A-B)/base = -0.00025  |d|/|m|=0.0114
+      o[163] scale (A-B)/base = +0.00007  |d|/|m|=0.0039      o[400] scale (A-B)/base = +0.00007  |d|/|m|=0.0070
+L13 norms(in,postA,preF,postF)@163/400:     2.1/    0.7   344.0/  233.0    -1.0/   -0.5   492.0/  412.0 | down rows A 1.347/0.650 B 1.347/0.650 typ 0.640 | o rows A 2.729/0.846 B 2.729/0.845
+      down[163] scale (A-B)/base = -0.00004  |d|/|m|=0.0090      down[400] scale (A-B)/base = -0.00002  |d|/|m|=0.0163
+      o[163] scale (A-B)/base = -0.00015  |d|/|m|=0.0031      o[400] scale (A-B)/base = +0.00042  |d|/|m|=0.0091
+L14 norms(in,postA,preF,postF)@163/400:    -0.2/    2.6   428.0/  428.0    -1.0/   -0.5   788.0/  528.0 | down rows A 0.882/0.599 B 0.882/0.600 typ 0.592 | o rows A 2.770/1.032 B 2.771/1.032
+      down[163] scale (A-B)/base = +0.00004  |d|/|m|=0.0141      down[400] scale (A-B)/base = -0.00066  |d|/|m|=0.0215
+      o[163] scale (A-B)/base = -0.00045  |d|/|m|=0.0031      o[400] scale (A-B)/base = -0.00010  |d|/|m|=0.0071
+L15 norms(in,postA,preF,postF)@163/400:     0.2/    1.6   450.0/  244.0    -1.0/   -0.7  1192.0/  576.0 | down rows A 0.750/0.709 B 0.750/0.709 typ 0.714 | o rows A 1.470/1.029 B 1.470/1.029
+      down[163] scale (A-B)/base = -0.00002  |d|/|m|=0.0167      down[400] scale (A-B)/base = -0.00036  |d|/|m|=0.0156
+      o[163] scale (A-B)/base = +0.00041  |d|/|m|=0.0067      o[400] scale (A-B)/base = -0.00002  |d|/|m|=0.0076
+L16 norms(in,postA,preF,postF)@163/400:     0.7/    2.8   372.0/  336.0    -1.1/   -0.7  1656.0/  700.0 | down rows A 0.855/0.740 B 0.856/0.740 typ 0.772 | o rows A 1.505/0.723 B 1.506/0.723
+      down[163] scale (A-B)/base = -0.00075  |d|/|m|=0.0158      down[400] scale (A-B)/base = -0.00006  |d|/|m|=0.0140
+      o[163] scale (A-B)/base = -0.00047  |d|/|m|=0.0070      o[400] scale (A-B)/base = +0.00002  |d|/|m|=0.0095
+L17 norms(in,postA,preF,postF)@163/400:     0.7/    0.8   330.0/  330.0    -1.1/   -0.6  1312.0/  888.0 | down rows A 0.820/0.654 B 0.821/0.654 typ 0.718 | o rows A 1.531/0.831 B 1.530/0.831
+      down[163] scale (A-B)/base = -0.00069  |d|/|m|=0.0178      down[400] scale (A-B)/base = +0.00006  |d|/|m|=0.0143
+      o[163] scale (A-B)/base = +0.00113  |d|/|m|=0.0080      o[400] scale (A-B)/base = -0.00003  |d|/|m|=0.0077
+
+```

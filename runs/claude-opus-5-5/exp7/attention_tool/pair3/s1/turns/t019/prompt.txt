@@ -1,0 +1,26 @@
+OUTPUT of run 18 of at most 20:
+```
+guess tokens: [' Berlin', ' Madrid', ' Venus', ' Mars', ' Newton', ' Spanish', ' gold', ' lion', ' Picasso', ' Dickens', ' oxygen', ' Atlantic', ' Indian', ' A', ' D', ' Paris', ' Rome', ' Jupiter', ' diamond']
+pairs: [(' France', ' Paris'), (' Italy', ' Rome'), (' Japan', ' Tokyo'), (' Canada', ' Ottawa'), (' Brazil', ' Portuguese'), (' Germany', ' Berlin'), (' Spain', ' Madrid'), (' Juliet', ' Shakespeare'), (' penicillin', ' Fleming'), (' Moon', ' Armstrong'), (' spider', ' eight'), (' gold', ' Au')]
+head   | copy: median rank of guess token (A / B) | recall: median rank of answer from subject (A / B), and same rank for random answer control
+L10h2 | copy A       82 B       78 | recall A     2198 B     2243 (control A    16688 B    17012)
+     guess self-ranks A: {' Berlin': 16, ' Madrid': 215, ' Venus': 0, ' Mars': 273, ' Newton': 2, ' Spanish': 19, ' gold': 39, ' lion': 198, ' Picasso': 42, ' Dickens': 84, ' oxygen': 4, ' Atlantic': 1, ' Indian': 2526, ' A': 82, ' D': 537, ' Paris': 446, ' Rome': 127, ' Jupiter': 7, ' diamond': 119}
+     answer ranks from subject B: {' France-> Paris': 179, ' Italy-> Rome': 823, ' Japan-> Tokyo': 3058, ' Canada-> Ottawa': 13035, ' Brazil-> Portuguese': 831, ' Germany-> Berlin': 1428, ' Spain-> Madrid': 1407, ' Juliet-> Shakespeare': 18892, ' penicillin-> Fleming': 4549, ' Moon-> Armstrong': 56104, ' spider-> eight': 23870, ' gold-> Au': 463}
+L12h2 | copy A       78 B       77 | recall A     6750 B     6836 (control A    76800 B    76756)
+     guess self-ranks A: {' Berlin': 269, ' Madrid': 24, ' Venus': 33, ' Mars': 22, ' Newton': 4, ' Spanish': 121, ' gold': 188, ' lion': 78, ' Picasso': 0, ' Dickens': 1, ' oxygen': 81, ' Atlantic': 1, ' Indian': 405, ' A': 238479, ' D': 199200, ' Paris': 137, ' Rome': 5, ' Jupiter': 0, ' diamond': 157}
+     answer ranks from subject B: {' France-> Paris': 11830, ' Italy-> Rome': 20, ' Japan-> Tokyo': 75, ' Canada-> Ottawa': 44580, ' Brazil-> Portuguese': 189, ' Germany-> Berlin': 7182, ' Spain-> Madrid': 6669, ' Juliet-> Shakespeare': 289, ' penicillin-> Fleming': 1751, ' Moon-> Armstrong': 7002, ' spider-> eight': 224486, ' gold-> Au': 129541}
+L 9h2 | copy A        4 B        4 | recall A      602 B      631 (control A     7902 B     7786)
+     guess self-ranks A: {' Berlin': 0, ' Madrid': 4, ' Venus': 9, ' Mars': 34, ' Newton': 8, ' Spanish': 0, ' gold': 0, ' lion': 49, ' Picasso': 0, ' Dickens': 4, ' oxygen': 5, ' Atlantic': 5, ' Indian': 5, ' A': 2, ' D': 3, ' Paris': 0, ' Rome': 0, ' Jupiter': 10, ' diamond': 2}
+     answer ranks from subject B: {' France-> Paris': 44, ' Italy-> Rome': 77, ' Japan-> Tokyo': 259, ' Canada-> Ottawa': 8381, ' Brazil-> Portuguese': 92, ' Germany-> Berlin': 91, ' Spain-> Madrid': 70, ' Juliet-> Shakespeare': 44149, ' penicillin-> Fleming': 19984, ' Moon-> Armstrong': 4408, ' spider-> eight': 14037, ' gold-> Au': 1003}
+L 9h0 | copy A     3483 B     3367 | recall A    43173 B    42596 (control A    78002 B    77778)
+L10h0 | copy A       36 B       36 | recall A      259 B      266 (control A     2575 B     2551)
+L 7h0 | copy A        0 B        0 | recall A      256 B      252 (control A     4258 B     4234)
+L11h1 | copy A        0 B        0 | recall A      243 B      254 (control A    32032 B    32908)
+L11h2 | copy A      119 B      115 | recall A     6601 B     6440 (control A    84786 B    83834)
+L 9h1 | copy A   262143 B   262143 | recall A   261626 B   261620 (control A   259272 B   259260)
+L17h2 | copy A   261989 B   261989 | recall A   254366 B   254707 (control A   139820 B   141756)
+L10h3 | copy A   136822 B   138094 | recall A    91888 B    91729 (control A    90102 B    90434)
+L12h1 | copy A      845 B      844 | recall A     5796 B     5832 (control A    86948 B    87470)
+L 5h1 | copy A    13629 B    13753 | recall A     9986 B    10040 (control A    15710 B    15158)
+
+```

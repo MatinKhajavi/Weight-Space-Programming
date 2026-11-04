@@ -1,0 +1,26 @@
+OUTPUT of run 55 of at most 60:
+```
+== morphology (n=60 directed pairs)
+   attn L7-17: z_vs_null +7.59 (base z 19.2)
+   attn L12-17: z_vs_null +6.76 (base z 18.7)
+   head 17.0: z_vs_null +5.74 (base 12.3)
+   head 15.1: z_vs_null +8.93 (base -23.5)
+   head 15.2: z_vs_null +0.99 (base 7.4)
+   head 9.2: z_vs_null +1.04 (base 13.5)
+   head 8.0: z_vs_null +6.64 (base -12.6)
+   head 12.2: z_vs_null +2.74 (base 16.6)
+   MLP12: z_vs_null +3.95 (base 12.0)
+   MLP17: z_vs_null -2.87 (base -6.3)
+== synonyms (n=50 directed pairs)
+   attn L7-17: z_vs_null +3.33 (base z 11.5)
+   attn L12-17: z_vs_null +3.53 (base z 11.2)
+   head 17.0: z_vs_null +1.82 (base 4.4)
+   head 15.1: z_vs_null +4.52 (base -14.6)
+   head 15.2: z_vs_null +0.34 (base 2.4)
+   head 9.2: z_vs_null +4.27 (base 10.8)
+   head 8.0: z_vs_null +2.36 (base -8.3)
+   head 12.2: z_vs_null +5.43 (base 10.0)
+   MLP12: z_vs_null +0.18 (base 6.0)
+   MLP17: z_vs_null +2.18 (base -5.0)
+
+```

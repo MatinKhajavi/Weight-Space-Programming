@@ -1,0 +1,25 @@
+OUTPUT of run 20 of at most 20:
+```
+dWq rel norm                     Spearman with |switch| +0.530  Pearson +0.299
+dWq top singular value (rel)     Spearman with |switch| +0.404  Pearson +0.354
+dWo rel norm (control)           Spearman with |switch| -0.300  Pearson -0.227
+dWk layer rel norm               Spearman with |switch| +0.460  Pearson +0.361
+dWk top sv (rel)                 Spearman with |switch| +0.380  Pearson +0.412
+
+Top-switch heads: dWq top-sv(rel) vs overall median 0.00328
+  L10h2: |switch| 1.20  dWq top-sv rel 0.00476 (pct rank 86%)  dWq rel 0.0078  dWo rel 0.0076
+  L12h2: |switch| 0.97  dWq top-sv rel 0.00583 (pct rank 93%)  dWq rel 0.0103  dWo rel 0.0063
+  L 9h2: |switch| 0.97  dWq top-sv rel 0.00262 (pct rank 10%)  dWq rel 0.0063  dWo rel 0.0084
+  L 9h0: |switch| 0.87  dWq top-sv rel 0.00398 (pct rank 72%)  dWq rel 0.0074  dWo rel 0.0075
+  L10h0: |switch| 0.73  dWq top-sv rel 0.00447 (pct rank 83%)  dWq rel 0.0084  dWo rel 0.0070
+  L 7h0: |switch| 0.66  dWq top-sv rel 0.00399 (pct rank 74%)  dWq rel 0.0075  dWo rel 0.0092
+  L11h1: |switch| 0.58  dWq top-sv rel 0.00367 (pct rank 62%)  dWq rel 0.0077  dWo rel 0.0093
+  L11h2: |switch| 0.40  dWq top-sv rel 0.00604 (pct rank 96%)  dWq rel 0.0104  dWo rel 0.0060
+  L 9h1: |switch| 0.39  dWq top-sv rel 0.00377 (pct rank 67%)  dWq rel 0.0078  dWo rel 0.0056
+  L17h2: |switch| 0.39  dWq top-sv rel 0.00449 (pct rank 85%)  dWq rel 0.0086  dWo rel 0.0065
+  L10h3: |switch| 0.32  dWq top-sv rel 0.00558 (pct rank 90%)  dWq rel 0.0087  dWo rel 0.0056
+  L12h1: |switch| 0.31  dWq top-sv rel 0.00775 (pct rank 97%)  dWq rel 0.0118  dWo rel 0.0082
+Lowest-switch heads dWq top-sv rel: [((2, 3), 0.00349), ((1, 3), 0.00346), ((0, 3), 0.00279), ((17, 3), 0.0038), ((1, 0), 0.00309), ((1, 1), 0.00374), ((2, 0), 0.00304), ((2, 2), 0.00344)]
+
+```
+That was the last run. Now give your final answer, without a ```python block, ending with the JSON block.

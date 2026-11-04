@@ -1,0 +1,25 @@
+OUTPUT of run 19 of at most 60:
+```
+[('Australia', ' Canberra', ' Sydney', 1), ('Canada', ' Ottawa', ' Toronto', 1), ('Turkey', ' Ankara', ' Istanbul', 1), ('Brazil', ' Bras', ' Rio', 1), ('Nigeria', ' Abuja', ' Lagos', 1), ('Morocco', ' Rabat', ' Casablanca', 1), ('Switzerland', ' Bern', ' Zurich', 1), ('Zealand', ' Wellington', ' Auckland', 1), ('UAE', ' Abu', ' Dubai', 1), ('Pakistan', ' Islamabad', ' Karachi', 1), ('India', ' New', ' Mumbai', 1), ('Vietnam', ' Hanoi', ' Ho', 1), ('China', ' Beijing', ' Shanghai', 1), ('Kazakhstan', ' Astana', ' Al', 1), ('Myanmar', ' Nay', ' Yang', 1), ('Africa', ' Pretoria', ' Johannesburg', 1), ('Bolivia', ' Su', ' La', 1), ('Tanzania', ' Dod', ' Dar', 1), ('Israel', ' Jerusalem', ' Tel', 1), ('Saudi', ' Riyadh', ' Jeddah', 1), ('Spain', ' Madrid', ' Barcelona', 1), ('Italy', ' Rome', ' Milan', 1), ('Germany', ' Berlin', ' Munich', 1), ('Scotland', ' Edinburgh', ' Glasgow', 1), ('Japan', ' Tokyo', ' Osaka', 1), ('Russia', ' Moscow', ' St', 1), ('Netherlands', ' Amsterdam', ' Rotterdam', 1), ('Ecuador', ' Quito', ' Gu', 1), ('Colombia', ' Bog', ' Medell', 1), ('Cameroon', ' Ya', ' Dou', 1), ('Florida', ' Tallahassee', ' Miami', 1), ('Texas', ' Austin', ' Houston', 1), ('California', ' Sacramento', ' Los', 1), ('Washington', ' Olympia', ' Seattle', 1), ('Michigan', ' Lansing', ' Detroit', 1), ('Illinois', ' Springfield', ' Chicago', 1), ('Oregon', ' Salem', ' Portland', 1), ('York', ' Albany', ' New', 1), ('Pennsylvania', ' Harrisburg', ' Philadelphia', 1), ('Nevada', ' Carson', ' Las', 1), ('Kentucky', ' Frankfort', ' Louisville', 1), ('Louisiana', ' Baton', ' New', 1), ('Maryland', ' Annapolis', ' Baltimore', 1), ('Missouri', ' Jefferson', ' Kansas', 1), ('Alaska', ' June', ' Anchorage', 1), ('Vermont', ' Mont', ' Burlington', 1), ('Ohio', ' Columbus', ' Cleveland', 1), ('Georgia', ' Atlanta', ' Savannah', 1), ('Minnesota', ' Saint', ' Minneapolis', 1), ('Wisconsin', ' Madison', ' Milwaukee', 1), ('Tennessee', ' Nashville', ' Memphis', 1), ('Arizona', ' Phoenix', ' Tucson', 1), ('Colorado', ' Denver', ' Boulder', 1), ('Massachusetts', ' Boston', ' Cambridge', 1), ('Delaware', ' Dover', ' Wilmington', 1), ('Hawaii', ' Honolulu', ' H', 1), ('Montana', ' Helena', ' Billings', 1), ('Nebraska', ' Lincoln', ' Omaha', 1), ('Iowa', ' Des', ' Cedar', 1), ('Kansas', ' Topeka', ' Wichita', 1)]
+n 60
+layer: per pathway [h0..h3, mlpU, mlpG]: mean Δ(mis-true) / null-sd  (specific)   and generic mean Δ
+0 -1.6/-1.39 -0.9/-0.60 +1.0/+0.43 +0.6/+0.33 +0.3/-3.39 +0.7/-1.63
+1 +0.5/-7.74 +0.6/-0.01 -1.1/-7.15 +0.4/-2.46 +1.5/-4.20 -1.8/-2.93
+2 +0.6/+2.99 -0.0/+3.44 +0.0/+4.29 +1.5/+2.26 +0.2/+6.37 +0.9/+10.73
+3 -1.0/+2.95 -0.3/+1.93 +0.5/+2.07 -0.3/+0.10 +0.0/+0.25 +1.1/+5.85
+4 -0.5/+0.17 -0.0/+0.45 -0.2/+1.81 -0.9/-1.21 -1.2/+11.24 -0.0/+7.93
+5 +1.5/-1.20 -0.1/+5.70 +0.4/+4.70 +2.2/+4.39 -0.1/-3.49 -0.9/+1.35
+6 +0.8/+2.76 +0.3/+2.45 +0.4/+3.96 +0.7/+4.32 -2.0/-6.91 -0.4/-2.32
+7 -0.3/+7.79 +0.9/-7.86 +1.6/+9.88 -0.4/+9.23 +0.2/+5.30 -1.3/+5.89
+8 -1.2/-2.44 +0.4/+1.02 +0.3/+0.71 -0.3/-1.47 +1.4/-7.71 -0.2/+6.74
+9 +0.6/-0.24 +0.4/-3.98 -0.3/-2.26 -0.0/-4.82 +0.7/-0.65 -0.3/+0.36
+10 +1.3/-0.76 -0.9/-24.43 +1.0/+0.59 +0.6/-17.17 -0.5/+0.67 +0.5/-1.14
+11 +1.3/-3.65 +2.4/-7.45 +1.3/-3.27 +1.6/+26.63 -1.0/+1.25 -1.1/-4.93
+12 +0.1/-22.20 +0.6/+8.63 +0.5/-45.75 +1.3/+4.16 -0.7/-4.58 +0.3/-41.28
+13 +0.1/+22.20 -0.4/-11.94 -0.6/-9.13 +2.0/+4.58 -0.5/+20.38 +0.7/+9.54
+14 -0.7/-2.50 -0.0/+0.81 +1.8/-29.72 -0.2/-13.85 -3.0/-29.45 -0.8/+19.64
+15 +3.0/+14.77 +0.5/+55.15 +0.1/+0.92 +1.6/-6.95 -3.0/+20.03 -0.5/+13.33
+16 +1.6/-114.91 +0.7/-66.01 -0.0/-63.37 +0.6/-59.61 -0.1/+88.40 -0.9/+27.29
+17 +0.2/-26.00 -0.0/+7.39 +1.6/+23.23 -0.5/-31.37 -1.3/+108.25 +0.6/-31.73
+
+```

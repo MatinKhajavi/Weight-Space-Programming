@@ -1,0 +1,9 @@
+OUTPUT of Python run 40 of at most 300:
+```
+(2, 1950, 20) (2, 1950, 20) (2, 1949)
+0 p 71 onset 1601 top1==next 0.989 top1==same 0.0 pre-onset mean lp -0.66 per-cycle [-0.159, -0.015, -0.003, -0.002]
+   </think> in top50 at 98 positions; best [(55, -5.92), (74, -6.63), (316, -9.02), (77, -9.14), (342, -10.01), (264, -10.11)]
+1 p 30 onset 1713 top1==next 0.996 top1==same 0.0 pre-onset mean lp -0.571 per-cycle [-0.053, -0.036, -0.018, -0.008, -0.006, -0.005, -0.003]
+   </think> in top50 at 110 positions; best [(65, -5.03), (46, -6.73), (567, -8.52), (68, -8.65), (527, -8.88), (1920, -9.0)]
+
+```

@@ -1,0 +1,76 @@
+OUTPUT of run 4 of at most 60:
+```
+L 0H0 m0: copy=+0.472 dTr=+0.0011 cos(D,M)=+0.0054 rel=0.0082 | m1: copy=+0.338 dTr=+0.0007 cos(D,M)=+0.0379 rel=0.0108 | m2: copy=+0.332 dTr=+0.0021 cos(D,M)=+0.0209 rel=0.0079
+L 0H1 m0: copy=-0.658 dTr=+0.0011 cos(D,M)=+0.0056 rel=0.0114 | m1: copy=-0.578 dTr=-0.0000 cos(D,M)=+0.2271 rel=0.0244 | m2: copy=-0.436 dTr=+0.0005 cos(D,M)=+0.0441 rel=0.0153
+L 0H2 m0: copy=-0.019 dTr=+0.0002 cos(D,M)=+0.0074 rel=0.0111 | m1: copy=-0.142 dTr=-0.0007 cos(D,M)=+0.0810 rel=0.0097 | m2: copy=-0.041 dTr=-0.0004 cos(D,M)=+0.0130 rel=0.0074
+L 0H3 m0: copy=+0.463 dTr=-0.0016 cos(D,M)=+0.0006 rel=0.0077 | m1: copy=+0.176 dTr=-0.0003 cos(D,M)=+0.0720 rel=0.0105 | m2: copy=+0.318 dTr=+0.0002 cos(D,M)=+0.0016 rel=0.0079
+L 1H0 m0: copy=+0.402 dTr=+0.0000 cos(D,M)=+0.0043 rel=0.0134 | m1: copy=+0.259 dTr=-0.0001 cos(D,M)=-0.0406 rel=0.0116 | m2: copy=+0.356 dTr=-0.0001 cos(D,M)=-0.0057 rel=0.0157
+L 1H1 m0: copy=+0.193 dTr=+0.0007 cos(D,M)=-0.0008 rel=0.0124 | m1: copy=+0.087 dTr=-0.0003 cos(D,M)=+0.0532 rel=0.0115 | m2: copy=+0.208 dTr=+0.0000 cos(D,M)=-0.0438 rel=0.0143
+L 1H2 m0: copy=+0.551 dTr=+0.0000 cos(D,M)=+0.0089 rel=0.0129 | m1: copy=+0.599 dTr=-0.0003 cos(D,M)=+0.0063 rel=0.0101 | m2: copy=+0.683 dTr=-0.0004 cos(D,M)=+0.0583 rel=0.0138
+L 1H3 m0: copy=+0.042 dTr=-0.0004 cos(D,M)=-0.0235 rel=0.0118 | m1: copy=-0.032 dTr=-0.0001 cos(D,M)=-0.0380 rel=0.0115 | m2: copy=+0.003 dTr=-0.0000 cos(D,M)=+0.0382 rel=0.0124
+L 2H0 m0: copy=+0.491 dTr=-0.0007 cos(D,M)=+0.0056 rel=0.0102 | m1: copy=+0.277 dTr=-0.0001 cos(D,M)=+0.1158 rel=0.0146 | m2: copy=+0.600 dTr=-0.0002 cos(D,M)=+0.0111 rel=0.0115
+L 2H1 m0: copy=-0.563 dTr=-0.0004 cos(D,M)=+0.0052 rel=0.0100 | m1: copy=-0.481 dTr=+0.0003 cos(D,M)=+0.0805 rel=0.0125 | m2: copy=-0.538 dTr=-0.0005 cos(D,M)=+0.0356 rel=0.0112
+L 2H2 m0: copy=-0.194 dTr=+0.0020 cos(D,M)=+0.0074 rel=0.0091 | m1: copy=-0.210 dTr=+0.0003 cos(D,M)=-0.0206 rel=0.0121 | m2: copy=-0.223 dTr=+0.0002 cos(D,M)=+0.0081 rel=0.0104
+L 2H3 m0: copy=-0.145 dTr=-0.0001 cos(D,M)=+0.0059 rel=0.0128 | m1: copy=-0.080 dTr=-0.0000 cos(D,M)=+0.0081 rel=0.0198 | m2: copy=-0.050 dTr=-0.0002 cos(D,M)=+0.0059 rel=0.0163
+L 3H0 m0: copy=-0.625 dTr=-0.0010 cos(D,M)=+0.0006 rel=0.0117 | m1: copy=-0.617 dTr=-0.0002 cos(D,M)=+0.1483 rel=0.0155 | m2: copy=-0.653 dTr=+0.0000 cos(D,M)=+0.0250 rel=0.0130
+L 3H1 m0: copy=+0.306 dTr=+0.0023 cos(D,M)=+0.0061 rel=0.0140 | m1: copy=+0.338 dTr=+0.0001 cos(D,M)=+0.0182 rel=0.0180 | m2: copy=+0.333 dTr=+0.0002 cos(D,M)=+0.0136 rel=0.0161
+L 3H2 m0: copy=+0.842 dTr=-0.0005 cos(D,M)=+0.0032 rel=0.0131 | m1: copy=+0.834 dTr=-0.0001 cos(D,M)=+0.0150 rel=0.0187 | m2: copy=+0.910 dTr=-0.0005 cos(D,M)=+0.0182 rel=0.0134
+L 3H3 m0: copy=-0.245 dTr=+0.0020 cos(D,M)=-0.0009 rel=0.0193 | m1: copy=-0.254 dTr=+0.0001 cos(D,M)=+0.0238 rel=0.0239 | m2: copy=+0.005 dTr=+0.0005 cos(D,M)=-0.0060 rel=0.0211
+L 4H0 m0: copy=+0.185 dTr=+0.0007 cos(D,M)=+0.0094 rel=0.0162 | m1: copy=-0.003 dTr=+0.0002 cos(D,M)=+0.1292 rel=0.0196 | m2: copy=+0.221 dTr=-0.0002 cos(D,M)=+0.0223 rel=0.0195
+L 4H1 m0: copy=+0.320 dTr=+0.0022 cos(D,M)=+0.0078 rel=0.0175 | m1: copy=+0.138 dTr=+0.0005 cos(D,M)=+0.0240 rel=0.0300 | m2: copy=+0.281 dTr=+0.0013 cos(D,M)=+0.0345 rel=0.0256
+L 4H2 m0: copy=-0.026 dTr=+0.0013 cos(D,M)=+0.0088 rel=0.0142 | m1: copy=-0.054 dTr=-0.0002 cos(D,M)=+0.0783 rel=0.0204 | m2: copy=-0.047 dTr=-0.0002 cos(D,M)=+0.0294 rel=0.0201
+L 4H3 m0: copy=-0.124 dTr=+0.0000 cos(D,M)=-0.0005 rel=0.0103 | m1: copy=-0.238 dTr=-0.0000 cos(D,M)=+0.0043 rel=0.0136 | m2: copy=-0.078 dTr=-0.0009 cos(D,M)=+0.0362 rel=0.0125
+L 5H0 m0: copy=+0.440 dTr=+0.0021 cos(D,M)=+0.0061 rel=0.0087 | m1: copy=+0.336 dTr=+0.0016 cos(D,M)=-0.0507 rel=0.0065 | m2: copy=+0.447 dTr=+0.0017 cos(D,M)=-0.1025 rel=0.0082
+L 5H1 m0: copy=+0.223 dTr=-0.0023 cos(D,M)=+0.0047 rel=0.0117 | m1: copy=+0.076 dTr=-0.0004 cos(D,M)=+0.0196 rel=0.0164 | m2: copy=+0.411 dTr=-0.0004 cos(D,M)=-0.0243 rel=0.0165
+L 5H2 m0: copy=+0.438 dTr=-0.0010 cos(D,M)=+0.0071 rel=0.0125 | m1: copy=+0.218 dTr=-0.0001 cos(D,M)=+0.0551 rel=0.0146 | m2: copy=+0.467 dTr=+0.0003 cos(D,M)=+0.0386 rel=0.0175
+L 5H3 m0: copy=-0.448 dTr=-0.0007 cos(D,M)=+0.0095 rel=0.0137 | m1: copy=-0.411 dTr=-0.0001 cos(D,M)=+0.0620 rel=0.0130 | m2: copy=-0.505 dTr=+0.0003 cos(D,M)=+0.0012 rel=0.0178
+L 6H0 m0: copy=+0.536 dTr=-0.0014 cos(D,M)=+0.0043 rel=0.0115 | m1: copy=+0.553 dTr=-0.0002 cos(D,M)=+0.0409 rel=0.0180 | m2: copy=+0.681 dTr=+0.0004 cos(D,M)=+0.0087 rel=0.0162
+L 6H1 m0: copy=-0.566 dTr=+0.0022 cos(D,M)=+0.0014 rel=0.0097 | m1: copy=-0.572 dTr=+0.0008 cos(D,M)=-0.1104 rel=0.0121 | m2: copy=-0.577 dTr=+0.0015 cos(D,M)=+0.0162 rel=0.0105
+L 6H2 m0: copy=+0.755 dTr=-0.0004 cos(D,M)=+0.0083 rel=0.0125 | m1: copy=+0.782 dTr=+0.0004 cos(D,M)=+0.0108 rel=0.0164 | m2: copy=+0.833 dTr=+0.0009 cos(D,M)=+0.0132 rel=0.0146
+L 6H3 m0: copy=+0.480 dTr=+0.0018 cos(D,M)=-0.0016 rel=0.0113 | m1: copy=+0.529 dTr=+0.0013 cos(D,M)=-0.0370 rel=0.0143 | m2: copy=+0.535 dTr=+0.0019 cos(D,M)=-0.0023 rel=0.0141
+L 7H0 m0: copy=+0.924 dTr=+0.0023 cos(D,M)=+0.0067 rel=0.0124 | m1: copy=+0.923 dTr=+0.0006 cos(D,M)=-0.0173 rel=0.0156 | m2: copy=+0.962 dTr=-0.0008 cos(D,M)=+0.0018 rel=0.0122
+L 7H1 m0: copy=-0.988 dTr=-0.0002 cos(D,M)=+0.0043 rel=0.0088 | m1: copy=-0.989 dTr=+0.0003 cos(D,M)=+0.1237 rel=0.0102 | m2: copy=-0.996 dTr=-0.0010 cos(D,M)=+0.0141 rel=0.0072
+L 7H2 m0: copy=+0.832 dTr=+0.0011 cos(D,M)=+0.0077 rel=0.0106 | m1: copy=+0.836 dTr=+0.0009 cos(D,M)=+0.0119 rel=0.0100 | m2: copy=+0.926 dTr=+0.0016 cos(D,M)=+0.0237 rel=0.0093
+L 7H3 m0: copy=+0.762 dTr=-0.0001 cos(D,M)=+0.0044 rel=0.0138 | m1: copy=+0.733 dTr=+0.0001 cos(D,M)=+0.0756 rel=0.0154 | m2: copy=+0.858 dTr=+0.0006 cos(D,M)=+0.0059 rel=0.0159
+L 8H0 m0: copy=-0.867 dTr=-0.0017 cos(D,M)=+0.0063 rel=0.0111 | m1: copy=-0.956 dTr=-0.0008 cos(D,M)=-0.0303 rel=0.0134 | m2: copy=-0.931 dTr=-0.0027 cos(D,M)=+0.0097 rel=0.0152
+L 8H1 m0: copy=+0.553 dTr=-0.0009 cos(D,M)=+0.0032 rel=0.0125 | m1: copy=+0.725 dTr=+0.0000 cos(D,M)=+0.0156 rel=0.0174 | m2: copy=+0.590 dTr=-0.0004 cos(D,M)=-0.0046 rel=0.0182
+L 8H2 m0: copy=+0.693 dTr=-0.0005 cos(D,M)=+0.0006 rel=0.0142 | m1: copy=+0.800 dTr=-0.0008 cos(D,M)=-0.0280 rel=0.0209 | m2: copy=+0.809 dTr=-0.0018 cos(D,M)=-0.0018 rel=0.0195
+L 8H3 m0: copy=+0.153 dTr=-0.0004 cos(D,M)=+0.0028 rel=0.0107 | m1: copy=+0.258 dTr=+0.0001 cos(D,M)=-0.0745 rel=0.0153 | m2: copy=+0.223 dTr=+0.0007 cos(D,M)=+0.0113 rel=0.0153
+L 9H0 m0: copy=+0.296 dTr=+0.0002 cos(D,M)=+0.0054 rel=0.0115 | m1: copy=+0.314 dTr=-0.0006 cos(D,M)=-0.0007 rel=0.0141 | m2: copy=+0.439 dTr=-0.0011 cos(D,M)=-0.0098 rel=0.0133
+L 9H1 m0: copy=-0.844 dTr=+0.0020 cos(D,M)=-0.0014 rel=0.0088 | m1: copy=-0.889 dTr=+0.0020 cos(D,M)=+0.0223 rel=0.0106 | m2: copy=-0.922 dTr=+0.0008 cos(D,M)=-0.0074 rel=0.0091
+L 9H2 m0: copy=+0.857 dTr=+0.0004 cos(D,M)=-0.0011 rel=0.0111 | m1: copy=+0.909 dTr=-0.0002 cos(D,M)=-0.0122 rel=0.0143 | m2: copy=+0.929 dTr=-0.0009 cos(D,M)=-0.0106 rel=0.0126
+L 9H3 m0: copy=+0.518 dTr=+0.0015 cos(D,M)=+0.0050 rel=0.0117 | m1: copy=+0.591 dTr=+0.0010 cos(D,M)=+0.0079 rel=0.0137 | m2: copy=+0.637 dTr=+0.0009 cos(D,M)=+0.0063 rel=0.0132
+L10H0 m0: copy=+0.747 dTr=+0.0041 cos(D,M)=+0.0111 rel=0.0112 | m1: copy=+0.763 dTr=+0.0020 cos(D,M)=+0.0267 rel=0.0110 | m2: copy=+0.834 dTr=+0.0028 cos(D,M)=+0.0087 rel=0.0099
+L10H1 m0: copy=-0.036 dTr=+0.0003 cos(D,M)=+0.0055 rel=0.0106 | m1: copy=+0.151 dTr=+0.0010 cos(D,M)=+0.0307 rel=0.0122 | m2: copy=-0.008 dTr=+0.0015 cos(D,M)=+0.0078 rel=0.0137
+L10H2 m0: copy=+0.568 dTr=-0.0006 cos(D,M)=+0.0055 rel=0.0129 | m1: copy=+0.584 dTr=+0.0005 cos(D,M)=+0.0212 rel=0.0152 | m2: copy=+0.785 dTr=+0.0017 cos(D,M)=+0.0107 rel=0.0130
+L10H3 m0: copy=-0.164 dTr=-0.0006 cos(D,M)=-0.0197 rel=0.0083 | m1: copy=-0.253 dTr=-0.0012 cos(D,M)=-0.0309 rel=0.0076 | m2: copy=-0.259 dTr=-0.0005 cos(D,M)=-0.0162 rel=0.0081
+L11H0 m0: copy=+0.222 dTr=+0.0042 cos(D,M)=+0.0148 rel=0.0117 | m1: copy=+0.139 dTr=+0.0004 cos(D,M)=+0.0012 rel=0.0123 | m2: copy=-0.005 dTr=+0.0015 cos(D,M)=+0.0104 rel=0.0121
+L11H1 m0: copy=+0.926 dTr=-0.0013 cos(D,M)=+0.0073 rel=0.0130 | m1: copy=+0.874 dTr=-0.0002 cos(D,M)=+0.0192 rel=0.0203 | m2: copy=+0.979 dTr=-0.0009 cos(D,M)=+0.0091 rel=0.0134
+L11H2 m0: copy=+0.566 dTr=+0.0028 cos(D,M)=+0.0053 rel=0.0091 | m1: copy=+0.427 dTr=+0.0006 cos(D,M)=+0.0028 rel=0.0101 | m2: copy=+0.864 dTr=+0.0027 cos(D,M)=+0.0040 rel=0.0093
+L11H3 m0: copy=-0.797 dTr=+0.0013 cos(D,M)=+0.0053 rel=0.0084 | m1: copy=-0.625 dTr=-0.0004 cos(D,M)=-0.0013 rel=0.0087 | m2: copy=-0.933 dTr=+0.0007 cos(D,M)=-0.0021 rel=0.0077
+L12H0 m0: copy=-0.321 dTr=-0.0004 cos(D,M)=+0.0179 rel=0.0118 | m1: copy=-0.357 dTr=-0.0000 cos(D,M)=+0.0285 rel=0.0139 | m2: copy=-0.601 dTr=+0.0004 cos(D,M)=+0.0176 rel=0.0125
+L12H1 m0: copy=+0.066 dTr=+0.0020 cos(D,M)=+0.0078 rel=0.0113 | m1: copy=+0.157 dTr=+0.0001 cos(D,M)=+0.0228 rel=0.0126 | m2: copy=+0.757 dTr=+0.0005 cos(D,M)=+0.0221 rel=0.0117
+L12H2 m0: copy=+0.712 dTr=-0.0008 cos(D,M)=+0.0047 rel=0.0089 | m1: copy=+0.753 dTr=-0.0001 cos(D,M)=-0.0053 rel=0.0087 | m2: copy=+0.954 dTr=-0.0016 cos(D,M)=-0.0105 rel=0.0073
+L12H3 m0: copy=+0.329 dTr=+0.0008 cos(D,M)=+0.0128 rel=0.0120 | m1: copy=+0.457 dTr=+0.0001 cos(D,M)=+0.0117 rel=0.0123 | m2: copy=+0.848 dTr=-0.0007 cos(D,M)=+0.0010 rel=0.0101
+L13H0 m0: copy=+0.228 dTr=+0.0034 cos(D,M)=+0.0206 rel=0.0127 | m1: copy=+0.310 dTr=+0.0003 cos(D,M)=+0.0347 rel=0.0113 | m2: copy=+0.467 dTr=+0.0015 cos(D,M)=+0.0315 rel=0.0096
+L13H1 m0: copy=+0.396 dTr=+0.0003 cos(D,M)=+0.0055 rel=0.0133 | m1: copy=+0.399 dTr=-0.0001 cos(D,M)=+0.0084 rel=0.0134 | m2: copy=+0.497 dTr=+0.0015 cos(D,M)=-0.0079 rel=0.0136
+L13H2 m0: copy=+0.759 dTr=-0.0004 cos(D,M)=+0.0013 rel=0.0120 | m1: copy=+0.774 dTr=-0.0001 cos(D,M)=+0.0314 rel=0.0132 | m2: copy=+0.757 dTr=+0.0005 cos(D,M)=+0.0255 rel=0.0133
+L13H3 m0: copy=-0.105 dTr=+0.0016 cos(D,M)=+0.0132 rel=0.0106 | m1: copy=-0.107 dTr=+0.0002 cos(D,M)=+0.0253 rel=0.0081 | m2: copy=-0.567 dTr=+0.0005 cos(D,M)=+0.0160 rel=0.0085
+L14H0 m0: copy=-0.162 dTr=+0.0003 cos(D,M)=+0.0035 rel=0.0082 | m1: copy=-0.159 dTr=-0.0001 cos(D,M)=+0.0176 rel=0.0082 | m2: copy=-0.184 dTr=+0.0003 cos(D,M)=+0.0108 rel=0.0086
+L14H1 m0: copy=+0.853 dTr=-0.0021 cos(D,M)=+0.0056 rel=0.0089 | m1: copy=+0.859 dTr=-0.0005 cos(D,M)=-0.0009 rel=0.0091 | m2: copy=+0.848 dTr=-0.0029 cos(D,M)=+0.0005 rel=0.0093
+L14H2 m0: copy=+0.381 dTr=+0.0015 cos(D,M)=-0.0172 rel=0.0110 | m1: copy=+0.449 dTr=+0.0003 cos(D,M)=-0.0002 rel=0.0102 | m2: copy=+0.591 dTr=+0.0021 cos(D,M)=+0.0070 rel=0.0105
+L14H3 m0: copy=+0.222 dTr=+0.0010 cos(D,M)=+0.0012 rel=0.0085 | m1: copy=+0.263 dTr=-0.0001 cos(D,M)=-0.0037 rel=0.0085 | m2: copy=+0.219 dTr=+0.0001 cos(D,M)=-0.0008 rel=0.0086
+L15H0 m0: copy=+0.949 dTr=+0.0021 cos(D,M)=+0.0038 rel=0.0102 | m1: copy=+0.970 dTr=+0.0001 cos(D,M)=-0.0014 rel=0.0123 | m2: copy=+0.985 dTr=+0.0005 cos(D,M)=+0.0021 rel=0.0086
+L15H1 m0: copy=-0.988 dTr=+0.0020 cos(D,M)=-0.0003 rel=0.0115 | m1: copy=-0.995 dTr=+0.0002 cos(D,M)=-0.0003 rel=0.0175 | m2: copy=-0.996 dTr=+0.0005 cos(D,M)=+0.0007 rel=0.0114
+L15H2 m0: copy=+0.868 dTr=+0.0010 cos(D,M)=+0.0070 rel=0.0129 | m1: copy=+0.906 dTr=-0.0001 cos(D,M)=-0.0087 rel=0.0190 | m2: copy=+0.781 dTr=-0.0011 cos(D,M)=-0.0083 rel=0.0176
+L15H3 m0: copy=+0.973 dTr=-0.0011 cos(D,M)=+0.0026 rel=0.0113 | m1: copy=+0.987 dTr=-0.0002 cos(D,M)=+0.0095 rel=0.0156 | m2: copy=+0.991 dTr=-0.0025 cos(D,M)=+0.0040 rel=0.0110
+L16H0 m0: copy=+0.140 dTr=-0.0022 cos(D,M)=+0.0108 rel=0.0155 | m1: copy=+0.169 dTr=-0.0008 cos(D,M)=-0.0025 rel=0.0140 | m2: copy=+0.122 dTr=-0.0024 cos(D,M)=+0.0020 rel=0.0145
+L16H1 m0: copy=+0.507 dTr=-0.0017 cos(D,M)=+0.0111 rel=0.0167 | m1: copy=+0.521 dTr=-0.0005 cos(D,M)=+0.0050 rel=0.0156 | m2: copy=+0.544 dTr=-0.0000 cos(D,M)=+0.0074 rel=0.0160
+L16H2 m0: copy=+0.747 dTr=-0.0023 cos(D,M)=-0.0062 rel=0.0131 | m1: copy=+0.754 dTr=-0.0007 cos(D,M)=-0.0090 rel=0.0127 | m2: copy=+0.746 dTr=-0.0015 cos(D,M)=-0.0164 rel=0.0127
+L16H3 m0: copy=+0.058 dTr=-0.0022 cos(D,M)=+0.0092 rel=0.0170 | m1: copy=+0.120 dTr=-0.0007 cos(D,M)=+0.0088 rel=0.0151 | m2: copy=+0.203 dTr=-0.0028 cos(D,M)=-0.0158 rel=0.0162
+L17H0 m0: copy=+0.450 dTr=-0.0003 cos(D,M)=+0.0038 rel=0.0075 | m1: copy=+0.440 dTr=-0.0002 cos(D,M)=-0.0014 rel=0.0066 | m2: copy=+0.774 dTr=-0.0018 cos(D,M)=-0.0142 rel=0.0061
+L17H1 m0: copy=+0.979 dTr=-0.0024 cos(D,M)=-0.0014 rel=0.0112 | m1: copy=+0.988 dTr=-0.0003 cos(D,M)=+0.0138 rel=0.0143 | m2: copy=+0.993 dTr=+0.0004 cos(D,M)=+0.0139 rel=0.0115
+L17H2 m0: copy=+0.008 dTr=-0.0025 cos(D,M)=+0.0065 rel=0.0090 | m1: copy=+0.038 dTr=-0.0002 cos(D,M)=+0.0233 rel=0.0086 | m2: copy=-0.513 dTr=-0.0009 cos(D,M)=+0.0219 rel=0.0086
+L17H3 m0: copy=-0.161 dTr=-0.0054 cos(D,M)=-0.0011 rel=0.0099 | m1: copy=-0.182 dTr=-0.0008 cos(D,M)=+0.0130 rel=0.0116 | m2: copy=-0.253 dTr=-0.0043 cos(D,M)=+0.0075 rel=0.0118
+
+```

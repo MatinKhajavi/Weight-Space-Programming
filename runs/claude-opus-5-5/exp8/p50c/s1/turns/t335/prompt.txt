@@ -1,0 +1,9 @@
+OUTPUT of Python run 288 of at most 300:
+```
+>> - Planned TF pass: /work/req_tf_conc.json (70 C-correct endings + 62 cut post-solution windows, 352k tok; logprobs, topk10, hidden 24, mlp 22), model edited (=C).
+req_tf_conc type dict ['type', 'model', 'texts', 'return']
+conc text0 head: <|im_start|>user|What numeral is in the 100th decimal place in the decimal representation of $\frac{6}{7}$?|Please reason step by step, and put your final answer within \boxed{}.<|im_end|>|<|im_start|>assistant|<think>|th decimal 
+no src could not get source code
+original-correct short texts 81 tokens 221165
+
+```

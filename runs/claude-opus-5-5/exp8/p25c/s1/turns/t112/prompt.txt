@@ -1,0 +1,8 @@
+OUTPUT of Python run 96 of at most 300:
+```
+end ids [248069]
+wrap-up exact-loop candidates 8
+[('wrap', 'gsm8k_train_528', 635), ('wrap', 'h_train_algebra_67', 792), ('wrap', 'h_train_algebra_54', 738), ('wrap', 'gsm8k_train_2956', 1178), ('wrap', 'gsm8k_train_3216', 691), ('wrap', 'in_precalculus_183', 1207), ('close', 'gsm8k_train_4218', 525), ('close', 'gsm8k_train_3247', 664), ('close', 'gsm8k_train_2778', 550), ('close', 'ain_prealgebra_693', 573), ('close', 'train_algebra_1088', 576)]
+json chars 8462
+
+```

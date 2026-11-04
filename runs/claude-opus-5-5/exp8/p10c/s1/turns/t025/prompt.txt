@@ -1,0 +1,12 @@
+OUTPUT of Python run 22 of at most 300:
+```
+1 norm(D)=0.20 norm(B0)=0.65 corr(proj,f)=0.549 cos(D_l, D_{l-1})=0.09
+4 norm(D)=0.55 norm(B0)=1.03 corr(proj,f)=0.794 cos(D_l, D_{l-1})=0.77
+8 norm(D)=0.80 norm(B0)=1.08 corr(proj,f)=0.924 cos(D_l, D_{l-1})=0.68
+12 norm(D)=1.22 norm(B0)=1.12 corr(proj,f)=0.958 cos(D_l, D_{l-1})=0.78
+16 norm(D)=2.15 norm(B0)=2.12 corr(proj,f)=0.933 cos(D_l, D_{l-1})=0.83
+20 norm(D)=3.79 norm(B0)=4.04 corr(proj,f)=0.902 cos(D_l, D_{l-1})=0.92
+23 norm(D)=4.34 norm(B0)=4.80 corr(proj,f)=0.878 cos(D_l, D_{l-1})=0.89
+24 norm(D)=3.62 norm(B0)=3.83 corr(proj,f)=0.778 cos(D_l, D_{l-1})=0.56
+
+```

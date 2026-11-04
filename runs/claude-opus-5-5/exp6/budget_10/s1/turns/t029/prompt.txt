@@ -1,0 +1,5 @@
+OUTPUT of Python run 25 of at most 120:
+```
+Counter({('cap', 'nc>=2', 'size1'): 1752, ('cap', 'nc<=1', 'size1'): 677, ('cap', 'nc>=2', 'size2+'): 591, ('cap', 'nc<=1', 'size2+'): 245, ('SA_nocap', 'nc<=1'): 124})
+
+```

@@ -1,0 +1,18 @@
+OUTPUT of Python run 128 of at most 300:
+```
+model.language_model.layers.21.input_layernorm.weight (1024,)
+model.language_model.layers.21.linear_attn.A_log (16,)
+model.language_model.layers.21.linear_attn.conv1d.weight (6144, 1, 4)
+model.language_model.layers.21.linear_attn.dt_bias (16,)
+model.language_model.layers.21.linear_attn.in_proj_a.weight (16, 1024)
+model.language_model.layers.21.linear_attn.in_proj_b.weight (16, 1024)
+model.language_model.layers.21.linear_attn.in_proj_qkv.weight (6144, 1024)
+model.language_model.layers.21.linear_attn.in_proj_z.weight (2048, 1024)
+model.language_model.layers.21.linear_attn.norm.weight (128,)
+model.language_model.layers.21.linear_attn.out_proj.weight (1024, 2048)
+model.language_model.layers.21.mlp.down_proj.weight (1024, 3584)
+model.language_model.layers.21.mlp.gate_proj.weight (3584, 1024)
+model.language_model.layers.21.mlp.up_proj.weight (3584, 1024)
+model.language_model.layers.21.post_attention_layernorm.weight (1024,)
+
+```

@@ -1,0 +1,26 @@
+OUTPUT of run 57 of at most 60:
+```
+L0 post_atte: nz=  1 mean=+nan% ansW=+nan% attnAnsW=+nan% | post_feed: nz=100 mean=-0.000% ansW=-0.000% | input_lay: nz=  0 mean=+0.000% ansW=+0.000% | pre_feedf: nz=  0 mean=+nan% ansW=+nan%
+L1 post_atte: nz= 22 mean=-0.000% ansW=+0.000% attnAnsW=-0.000% | post_feed: nz= 39 mean=+nan% ansW=+nan% | input_lay: nz=  0 mean=+0.000% ansW=+0.000% | pre_feedf: nz=  0 mean=+nan% ansW=+nan%
+L2 post_atte: nz= 43 mean=+nan% ansW=+nan% attnAnsW=+nan% | post_feed: nz=  9 mean=-0.000% ansW=-0.000% | input_lay: nz=  0 mean=+0.000% ansW=+0.000% | pre_feedf: nz=  1 mean=+nan% ansW=+nan%
+L3 post_atte: nz= 18 mean=+nan% ansW=+nan% attnAnsW=+nan% | post_feed: nz= 15 mean=-0.001% ansW=-0.001% | input_lay: nz=  1 mean=+0.000% ansW=+0.000% | pre_feedf: nz=  2 mean=+nan% ansW=+nan%
+L4 post_atte: nz=  8 mean=-0.000% ansW=-0.000% attnAnsW=-0.000% | post_feed: nz=  2 mean=+nan% ansW=+nan% | input_lay: nz= 10 mean=+0.000% ansW=+0.000% | pre_feedf: nz= 11 mean=+nan% ansW=+nan%
+L5 post_atte: nz=  7 mean=-0.000% ansW=-0.000% attnAnsW=-0.000% | post_feed: nz=  0 mean=+0.000% ansW=+0.000% | input_lay: nz=  7 mean=-0.000% ansW=-0.000% | pre_feedf: nz= 15 mean=+nan% ansW=+nan%
+L6 post_atte: nz=  5 mean=-0.000% ansW=-0.000% attnAnsW=-0.000% | post_feed: nz=  0 mean=+0.000% ansW=+0.000% | input_lay: nz=  4 mean=-0.000% ansW=-0.000% | pre_feedf: nz= 14 mean=-0.000% ansW=-0.000%
+L7 post_atte: nz=  0 mean=+0.000% ansW=+0.000% attnAnsW=+0.000% | post_feed: nz=  0 mean=+0.000% ansW=+0.000% | input_lay: nz=  4 mean=+0.000% ansW=+0.000% | pre_feedf: nz= 17 mean=+nan% ansW=+nan%
+L8 post_atte: nz=  4 mean=-0.000% ansW=-0.000% attnAnsW=-0.000% | post_feed: nz=  2 mean=+0.000% ansW=+0.000% | input_lay: nz=  4 mean=-0.000% ansW=-0.000% | pre_feedf: nz= 14 mean=+nan% ansW=+nan%
+L9 post_atte: nz=  7 mean=+nan% ansW=+nan% attnAnsW=+nan% | post_feed: nz=  0 mean=+0.000% ansW=+0.000% | input_lay: nz=  4 mean=-0.000% ansW=-0.000% | pre_feedf: nz= 17 mean=-0.000% ansW=-0.000%
+L10 post_atte: nz=  3 mean=-0.000% ansW=-0.000% attnAnsW=-0.000% | post_feed: nz=  0 mean=+0.000% ansW=+0.000% | input_lay: nz=  0 mean=+0.000% ansW=+0.000% | pre_feedf: nz= 21 mean=-0.000% ansW=-0.000%
+L11 post_atte: nz=  0 mean=+0.000% ansW=+0.000% attnAnsW=+0.000% | post_feed: nz=  0 mean=+0.000% ansW=+0.000% | input_lay: nz=  8 mean=-0.000% ansW=-0.000% | pre_feedf: nz=  7 mean=+0.000% ansW=+0.000%
+L12 post_atte: nz=  0 mean=+0.000% ansW=+0.000% attnAnsW=+0.000% | post_feed: nz=  0 mean=+0.000% ansW=+0.000% | input_lay: nz=  5 mean=-0.000% ansW=-0.000% | pre_feedf: nz= 24 mean=-0.000% ansW=-0.000%
+L13 post_atte: nz=  0 mean=+0.000% ansW=+0.000% attnAnsW=+0.000% | post_feed: nz=  0 mean=+0.000% ansW=+0.000% | input_lay: nz= 35 mean=-0.001% ansW=-0.001% | pre_feedf: nz= 49 mean=+0.000% ansW=+0.000%
+L14 post_atte: nz=  0 mean=+0.000% ansW=+0.000% attnAnsW=+0.000% | post_feed: nz=  0 mean=+0.000% ansW=+0.000% | input_lay: nz= 24 mean=-0.000% ansW=-0.002% | pre_feedf: nz= 81 mean=+0.000% ansW=+0.001%
+L15 post_atte: nz=  0 mean=+0.000% ansW=+0.000% attnAnsW=+0.000% | post_feed: nz=  0 mean=+0.000% ansW=+0.000% | input_lay: nz=  1 mean=-0.000% ansW=-0.001% | pre_feedf: nz= 31 mean=-0.000% ansW=-0.000%
+L16 post_atte: nz=  0 mean=+0.000% ansW=+0.000% attnAnsW=+0.000% | post_feed: nz=  0 mean=+0.000% ansW=+0.000% | input_lay: nz=  0 mean=+0.000% ansW=+0.000% | pre_feedf: nz= 22 mean=+0.000% ansW=+0.000%
+L17 post_atte: nz=  0 mean=+0.000% ansW=+0.000% attnAnsW=+0.000% | post_feed: nz=  0 mean=+0.000% ansW=+0.000% | input_lay: nz=  0 mean=+0.000% ansW=+0.000% | pre_feedf: nz= 27 mean=-0.000% ansW=-0.000%
+final norm: nz 0 mean 0.0 % ansW 0.0 %
+
+[stderr]
+your_code:10: RuntimeWarning: invalid value encountered in divide
+
+```

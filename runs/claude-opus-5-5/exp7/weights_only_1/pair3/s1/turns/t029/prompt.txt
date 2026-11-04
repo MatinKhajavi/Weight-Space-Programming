@@ -1,0 +1,27 @@
+OUTPUT of run 28 of at most 60:
+```
+top positive base composite identity (QK_l,h . OV_m,g):
+  0.3258  L11H2 <- L10H1
+  0.2741  L11H3 <- L10H1
+  0.1296  L8H1 <- L7H0
+  0.1243  L11H3 <- L10H3
+  0.1196  L9H3 <- L8H2
+  0.1189  L11H2 <- L10H3
+  0.1077  L10H2 <- L7H0
+  0.0991  L9H1 <- L8H2
+  0.0945  L9H1 <- L7H0
+  0.0918  L9H3 <- L8H1
+  0.0911  L8H0 <- L7H0
+  0.0900  L10H3 <- L7H0
+  0.0797  L5H3 <- L4H1
+  0.0796  L10H2 <- L9H2
+  0.0760  L7H0 <- L6H3
+most negative:
+  -0.1205  L9H3 <- L8H0
+  -0.1205  L9H1 <- L7H1
+  -0.1306  L8H0 <- L7H1
+  -0.1417  L10H2 <- L7H1
+  -0.1471  L8H1 <- L7H1
+distribution: std 0.0181, 99th pct 0.0599
+
+```

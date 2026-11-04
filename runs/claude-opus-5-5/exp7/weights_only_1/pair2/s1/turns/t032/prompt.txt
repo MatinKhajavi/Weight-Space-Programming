@@ -1,0 +1,46 @@
+OUTPUT of run 31 of at most 60:
+```
+L15: units ranked by |E^T dDown|^2 (rel. to median 16)
+   unit 1190: outd x   6.8 | in-load up 1.0 gate 0.8 | amp +0.87 | lin-amp A +0.251 B +0.215
+   unit   71: outd x   6.7 | in-load up 0.9 gate 1.3 | amp -0.30 | lin-amp A -0.165 B -0.153
+   unit  623: outd x   6.2 | in-load up 0.3 gate 0.7 | amp +0.82 | lin-amp A +0.354 B +0.331
+   unit  141: outd x   5.4 | in-load up 0.6 gate 0.6 | amp +0.47 | lin-amp A -0.282 B -0.250
+   unit   37: outd x   5.3 | in-load up 1.5 gate 1.1 | amp +0.75 | lin-amp A -0.600 B -0.529
+   unit  421: outd x   5.1 | in-load up 1.3 gate 0.1 | amp -0.92 | lin-amp A +0.049 B +0.035
+   unit  928: outd x   5.0 | in-load up 0.4 gate 2.1 | amp -0.44 | lin-amp A -0.215 B -0.119
+   unit  126: outd x   5.0 | in-load up 0.9 gate 2.3 | amp +0.21 | lin-amp A -0.438 B -0.455
+   unit  924: outd x   4.9 | in-load up 0.8 gate 0.9 | amp +0.42 | lin-amp A -0.404 B -0.348
+   unit  913: outd x   4.9 | in-load up 0.8 gate 0.7 | amp -0.60 | lin-amp A +0.216 B +0.259
+   unit 1156: outd x   4.8 | in-load up 0.9 gate 1.9 | amp -0.66 | lin-amp A -0.793 B -0.809
+   unit  391: outd x   4.5 | in-load up 1.0 gate 0.4 | amp +0.11 | lin-amp A -0.392 B -0.422
+   all units: mean d(lin-amp) +0.0002 sd 0.028; for top-100 out units -0.0007; corr with inU +0.011
+L16: units ranked by |E^T dDown|^2 (rel. to median 36)
+   unit  549: outd x   7.8 | in-load up 0.7 gate 0.9 | amp +0.30 | lin-amp A -0.246 B -0.316
+   unit  863: outd x   7.4 | in-load up 2.1 gate 0.7 | amp +0.57 | lin-amp A -0.555 B -0.517
+   unit 1799: outd x   6.2 | in-load up 0.3 gate 1.8 | amp +0.26 | lin-amp A -0.342 B -0.299
+   unit  464: outd x   5.8 | in-load up 1.0 gate 0.9 | amp +0.60 | lin-amp A -0.263 B -0.289
+   unit  267: outd x   5.7 | in-load up 1.3 gate 0.6 | amp +0.03 | lin-amp A -0.663 B -0.565
+   unit  931: outd x   5.6 | in-load up 0.2 gate 4.3 | amp -0.17 | lin-amp A -0.170 B -0.222
+   unit 1526: outd x   5.6 | in-load up 0.5 gate 1.0 | amp +0.13 | lin-amp A +0.915 B +0.896
+   unit 1439: outd x   5.5 | in-load up 1.0 gate 0.4 | amp +0.37 | lin-amp A +0.586 B +0.630
+   unit  278: outd x   5.4 | in-load up 0.2 gate 0.4 | amp -0.24 | lin-amp A -0.677 B -0.776
+   unit  876: outd x   5.4 | in-load up 0.5 gate 1.2 | amp -0.67 | lin-amp A +0.132 B +0.163
+   unit  343: outd x   5.1 | in-load up 1.6 gate 0.6 | amp -0.59 | lin-amp A -0.128 B -0.201
+   unit   97: outd x   5.0 | in-load up 1.7 gate 0.3 | amp -0.31 | lin-amp A -0.305 B -0.276
+   all units: mean d(lin-amp) -0.0015 sd 0.036; for top-100 out units -0.0060; corr with inU -0.024
+L17: units ranked by |E^T dDown|^2 (rel. to median 73.3)
+   unit  644: outd x  11.0 | in-load up 1.4 gate 0.7 | amp +0.95 | lin-amp A +0.071 B +0.044
+   unit  739: outd x  10.1 | in-load up 1.0 gate 0.9 | amp +0.29 | lin-amp A -0.131 B -0.128
+   unit  949: outd x  10.1 | in-load up 0.5 gate 1.5 | amp -0.22 | lin-amp A -0.493 B -0.660
+   unit 1217: outd x   9.1 | in-load up 3.3 gate 7.3 | amp +0.38 | lin-amp A +0.078 B +0.085
+   unit 1170: outd x   8.6 | in-load up 0.5 gate 0.9 | amp +0.84 | lin-amp A -0.364 B -0.197
+   unit 1075: outd x   8.1 | in-load up 1.0 gate 0.5 | amp -0.05 | lin-amp A -0.065 B +0.095
+   unit  884: outd x   7.5 | in-load up 0.9 gate 0.6 | amp +0.25 | lin-amp A +0.132 B +0.251
+   unit   93: outd x   6.8 | in-load up 1.6 gate 0.9 | amp +0.15 | lin-amp A +0.802 B +0.729
+   unit  718: outd x   6.7 | in-load up 1.0 gate 0.4 | amp -0.00 | lin-amp A -0.152 B -0.042
+   unit  291: outd x   6.7 | in-load up 1.2 gate 1.2 | amp +0.24 | lin-amp A -0.641 B -0.638
+   unit  513: outd x   6.6 | in-load up 0.7 gate 1.9 | amp -0.06 | lin-amp A -0.277 B -0.371
+   unit  380: outd x   6.5 | in-load up 0.7 gate 1.0 | amp -0.28 | lin-amp A +0.520 B +0.620
+   all units: mean d(lin-amp) -0.0023 sd 0.050; for top-100 out units -0.0074; corr with inU -0.005
+
+```

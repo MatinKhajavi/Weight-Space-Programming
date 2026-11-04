@@ -1,0 +1,6 @@
+I'm screening the embedding-based OV circuits now: the strongest Wait→Wait mapping is head 19.4 at +2.5, yet it barely attends to Wait tokens, though it has the highest attention to the previous cycle's Wait and some recency. Heads 11.4, 11.7, 15.1 and 15.2 also show little attention to Wait.
+
+I'm weighing whether the OV proxy is even reliable, since late-layer residuals at Wait positions differ a lot from raw token embeddings. Next I'm considering shifting to causal transformer passes, and I'm reassessing the bigger picture: the current gain is +22.7 points, with most remaining failures being exact loops after long doubting. I'm listing options: reducing line-start copying of Wait, finding MLP neurons that encode doubt and boost Wait, and maybe strengthening the layer-22 MLP that pushes against Wait at cycle starts.
+
+I'm now going to check whether a few L22 MLP neurons are what push back against repeated "Wait" line starts, looking at their per-neuron contribution to the Wait-vs-alternative logit gap at cycle starts in both windows. If they dominate the negative side and fire more as the loop goes on, amplifying them might act as a repair for a weak built-in anti-repetition mechanism.
+

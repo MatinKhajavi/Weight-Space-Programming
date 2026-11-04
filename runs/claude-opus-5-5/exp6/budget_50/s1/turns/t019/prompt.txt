@@ -1,0 +1,45 @@
+OUTPUT of Python run 16 of at most 120:
+```
+q (2, 7) libs [(1, 7), (4, 8)]
+    .XXXOOOO.
+    XXXOOXO.X
+    .XXXXXXOO
+    X.X.XX.XO
+    .X.XXXXX.
+    X.X.XX.X.
+    .X.XXXXO.
+    OOX.XXO.O
+    O.XXOOOOO
+q (3, 8) libs [(1, 7), (4, 8)]
+    .XXXOOOO.
+    XXXOOXO.X
+    .XXXXXXOO
+    X.X.XX.XO
+    .X.XXXXX.
+    X.X.XX.X.
+    .X.XXXXO.
+    OOX.XXO.O
+    O.XXOOOOO
+q (0, 1) libs [(0, 2), (2, 0)]
+    OO.OO.XXO
+    OXXXXO.OO
+    .X.X.XXO.
+    OOXXXXXXO
+    .XXXX.XXX
+    OOX.XXXX.
+    OOOXXXOOO
+    .XXOX.XO.
+    ..OO...OO
+q (1, 0) libs [(2, 0), (0, 2)]
+    OO.OO.XXO
+    OXXXXO.OO
+    .X.X.XXO.
+    OOXXXXXXO
+    .XXXX.XXX
+    OOX.XXXX.
+    OOOXXXOOO
+    .XXOX.XO.
+    ..OO...OO
+Counter({(True, 1): 287, (True, 2): 282, (False, 2): 144, (True, 3): 78, (False, 3): 13, (False, 6): 6, (True, 4): 3})
+
+```

@@ -1,0 +1,17 @@
+OUTPUT of Python run 97 of at most 300:
+```
+all512 v4-v3: 57.2 vs 47.9 | diff +9.4 SE 1.9 | w->r 73 r->w 25
+setA v4-v3: 56.6 vs 47.3 | diff +9.4 SE 2.5 | w->r 33 r->w 9
+diagS v4-v3: 57.8 vs 48.4 | diff +9.4 SE 2.9 | w->r 40 r->w 16
+setA v4-v2: 56.6 vs 38.7 | diff +18.0 SE 2.9 | w->r 54 r->w 8
+setA v4-orig: 56.6 vs 8.2 | diff +48.4 SE 3.2 | w->r 125 r->w 1
+diagS v4-orig: 57.8 vs 9.4 | diff +48.4 SE 3.2 | w->r 125 r->w 1
+   all512 math v4-v3: 54.9 vs 43.5 diff +11.5 SE 2.2
+   all512 gsm v4-v3: 64.1 vs 60.9 diff +3.1 SE 3.8
+finished in both: 255 acc v3 0.894 v4 0.867 | newly finished 117 acc 0.598 | lost 20
+median tokens finished-in-both: v3 9842 v4 5805
+v4 all512: cut 140 exact 91 onset med 14383 | finished 372 acc-fin 0.782
+v4 loops 91: doubt cycles 0.35 | first words: So:0.36, But:0.32, If:0.31, $:0.29, This:0.29, Let's:0.18, The:0.15, Maybe:0.10, And:0.09, Then:0.07
+per 1k tokens v3: {'Wait': 6.5, 'But': 3.63, 'Hmm': 0.0, 'Actually': 0.09, 'Maybe': 0.94, 'check': 0.99} | v4: {'Wait': 0.01, 'But': 2.51, 'Hmm': 0.0, 'Actually': 0.04, 'Maybe': 1.15, 'check': 1.02}
+
+```

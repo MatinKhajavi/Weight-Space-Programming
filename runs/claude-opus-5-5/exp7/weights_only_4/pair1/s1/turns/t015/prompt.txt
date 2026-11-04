@@ -1,0 +1,106 @@
+OUTPUT of run 14 of at most 60:
+```
+L8h0 s1frac=0.121 rel=0.0094
+   q+: [' adv', 'states', 'fail', 'blank', ' ppt', ' graduates', ' law', ' Hanover', '思维', ' IV']  | k+: ['ivil', ' elegant', ' moda', 'apt', 'traverse', 'Hi', 'Br', 'br', ' personen', ' carbon']
+   q-: ['imentary', ' délic', 'ellan', 'kül', 'лын', 'ื้อ', 'kä', 'ardino', '。）', '.(*']  | k-: [' alred', 'Allocation', 'emony', ' Quelle', 'lename', ' qil', 'ун', 'Orientation', 'levision', ' terken']
+L8h1 s1frac=0.147 rel=0.0087
+   q+: ['SEM', ' juntos', ' insgesamt', ' insieme', 'ljen', ' SEM', ' الاجتما', ' Bergman', 'скими', ' сбор']  | k+: [' Ph', 'Br', ' Pl', ' pens', 'ic', ' P', ' lo', 'Ph', 'Po', ' Br']
+   q-: [' turno', 'слови', 'teri', ' stratum', ' subclass', ' switched', ' unico', 'umps', ' tests', 'ause']  | k-: ['hadap', 'rière', 'emony', ' diberikan', 'lename', ' langsung', 'Orientation', ' باذن', ' terken', 'ammak']
+L8h2 s1frac=0.118 rel=0.0117
+   q+: [' kios', ' rupam', ' Quelle', ' Jpn', ' plexus', '>)</', 'worthiness', 'ությ', ' particulares', 'quirer']  | k+: ['apt', ' elegant', 'ged', 'setState', ' pale', ' lo', ' I', ' depress', ' ;', '和平']
+   q-: ['five', ' Mandela', ' Glas', ' мі', 'inte', 'forward', ' Davies', 'SD', 'strand', 'фе']  | k-: [' kayna', ' spills', ' filmm', ' قناه', 'irez', 'protection', ' advertis', ' antiviral', 'irrah', 'orship']
+L8h3 s1frac=0.153 rel=0.0101
+   q+: [' forman', '形成', ' เรียน', ' estudar', 'Explore', ' Watercolor', ' Marathi', 'Triangle', ' Sherlock', 'discuss']  | k+: [' evidences', 'credi', 'ตร์', 'від', 'ouche', ' باذن', ' retrouver', ' Ayurved', 'oum', 'ummies']
+   q-: ['quot', ' performance', 'もあります', 'ientemente', 'uated', ' permission', ' power', 'dom', 'antly', ' Power']  | k-: [' carbon', ' gases', ' Hal', ' emissions', ' pollution', ' Biden', ' pollutants', ' ho', 'Hamilton', ' ハ']
+L9h0 s1frac=0.185 rel=0.0140
+   q+: [' Besides', 'processor', 'ပေါ', ' gioc', 'Besides', 'ห์', 'သော', ' kapal', ' -,', ' quarrel']  | k+: [' LCCN', " '${", '없이', 'слови', ' Comité', 'ácter', 'particularly', 'algia', 'REE', 'rine']
+   q-: ['بلغ', 'iley', 'uidas', 'ils', ' periód', 'urt', 'ormal', 'льзу', '時に', 'ight']  | k-: [' thousand', 'pm', 'bx', 'illion', ' divided', ' million', 'db', ' assault', 'pH', 'af']
+L9h1 s1frac=0.207 rel=0.0115
+   q+: ['chir', ' sẵn', ' únic', ' utveck', ' vocalist', ' quyền', ' khas', ' lingk', 'ursa', ' Shed']  | k+: [' Hale', '}}}\\', ')}}\\', 'repr', ' Url', "')}", ' Schne', '기도', 'rendering', 'particularly']
+   q-: [' kilometers', ' meters', ' miles', ' pounds', ' kilograms', ' centimeters', ' deductions', ' кило', ' inches', 'xty']  | k-: [' voiture', 'illion', ' levers', ' descob', ' differences', ' pounds', ' molecules', 'gged', ' sneakers', ' wickets']
+L9h2 s1frac=0.176 rel=0.0137
+   q+: [' keadaan', ' enfermed', ' seben', ' เนี่ย', ' kondisi', ' byla', ' хро', '>(&', ' 때는', ' Chronicle']  | k+: [' `=', ' />}', ' thrombosis', 'bursements', '</s>', 'postas', 'dasarkan', ' @"', 'puts', ' práce']
+   q-: [' fruits', ' Ma', 'MA', 'Sa', 'Ma', ' equal', ' greater', ' ma', ' six', ' dance']  | k-: [' f', ' mean', ' Little', ' n', ' ma', ' Elementary', ' h', ' full', ' prime', ' long']
+L9h3 s1frac=0.155 rel=0.0100
+   q+: ['пят', ' five', ' four', ' sete', ' tiga', ' three', 'five', ' mandat', 'Driving', ' seven']  | k+: [' فض', ' đi', ' sailed', ' visas', ' passports', ' postage', ' sab', ' galaxies', ' Barbados', ' Mars']
+   q-: [' specializes', 'rau', '正規', ' 中古', 'ull', ')(&', ' CUSTOM', 'Pir', ' Antib', ' ABO']  | k-: ['チュ', ' Gn', 'Nur', 'chn', ' Opin', 'モード', 'rophic', '教程', 'gan', 'rendering']
+L10h0 s1frac=0.159 rel=0.0141
+   q+: ['ifiant', 'ifiz', ' conced', 'ając', ' concess', ' sæ', ' дости', ' мини', ' perso', 'لك']  | k+: [' він', '汽车', ' jogos', ' elementary', 'кові', ' voiture', 'جع', ' car', ' minutos', 'pc']
+   q-: [' malpractice', 'tools', 'ciples', 'www', 'urdy', 'ursing', 'opoly', ' www', ' carbide', 'mail']  | k-: [' irradi', ' workflows', ' prosper', ' Workflow', ' strugg', 'сшта', ' rost', 'ascape', '라인', ' resurrect']
+L10h1 s1frac=0.409 rel=0.0238
+   q+: ['mph', ' veces', ' berbeda', 'meters', 'ocrates', 'ヶ月', ' mph', ' diferentes', 'hr', ' feet']  | k+: ['Jackson', ' Cl', ' Jackson', 'Cl', ' Jenkins', 'cl', ' Chen', ' cl', ' Kl', ' Nolan']
+   q-: ['ueill', ' 조건', ' stain', ' genotype', ' Halle', ' settlement', ' Lass', ' enlargement', ' Kag', ' Smile']  | k-: [' seab', ' dearly', ' Servicio', ' vidas', 'ptime', 'ื้น', ' برنام', ' Disbursement', 'plasia', 'robes']
+L10h2 s1frac=0.149 rel=0.0078
+   q+: [' Polytechnic', 'tained', ' dø', ' limits', ' الحد', 'leges', ' Nev', ' universidad', 'rence', 'menos']  | k+: ['十六', ' completamente', ' complètement', ' minutos', '十五', ' ½', ' nueve', 'шки', ' cinco', ' предыду']
+   q-: [' harmonious', ' collaboratively', ' collaborative', ' neatly', ' bipart', ' magnific', ' scra', ' chunky', ' khối', ' ❤️']  | k-: [' irradi', 'ステム', 'อย', ' prosperity', ' plight', ' prosper', ' fishery', ' outlook', 'rimp', '![']
+L10h3 s1frac=0.252 rel=0.0126
+   q+: ['Simon', ' เนี่ย', ' weighting', ' admon', ' ری', 'Nested', ' Simon', 'nested', 'olog', ' Kobe']  | k+: [' ½', ' voiture', ' cuatro', ' sieben', ' bored', ' ¼', ' quatre', ' nueve', ' הק', ' seven']
+   q-: [' diapers', '概率', 'Enter', ' flexibility', 'allow', ' avail', 'less', 'complete', ' grin', ' requirement']  | k-: [' issuer', ' outlook', ' worthwhile', 'lineTo', ' liquidation', 'อย', ' wherever', ' rost', ' évol', ' extremal']
+L11h0 s1frac=0.302 rel=0.0364
+   q+: ['esthesia', ' morte', '৩০', 'ญา', 'ständ', 'eksi', 'циа', 'ști', ' chave', 'тони']  | k+: [' eight', 'eight', ' six', ' nine', ' four', 'seven', ' vier', ' sechs', ' więcej', ' seven']
+   q-: [' Seafood', ' Cá', ' Maldives', ' mitochondria', ' Metabolism', ' Anime', ' metabolism', ' Swim', 'Optimization', 'loat']  | k-: [' AppDelegate', ' Protocol', '�', 'اويه', 'proguard', ' Maldives', 'Optimization', 'pared', '}}^{\\', 'buildCommand']
+L11h1 s1frac=0.279 rel=0.0309
+   q+: [' $)$', ")'", ' thereof', ' **)', 'itely', ')’', 'ikum', '}}}', ' *)', ' ):']  | k+: ['ulat', ' embryos', 'pared', ' Hague', 'Buffers', 'луб', ' grond', ' nitric', 'ontrol', 'çük']
+   q-: [' throwing', ' handlers', 'dincer', 'aturated', ' pund', ' kidneys', ' handler', ' idées', ' assault', ' instincts']  | k-: [' gå', ' huit', ' sj', ' cinq', ' کب', 'sqrt', ' n', ' increased', ' тө', ' sete']
+L11h2 s1frac=0.213 rel=0.0155
+   q+: ['eight', '十六', 'ocken', 'infty', ' eight', '৭১', ' kilometer', ' zehn', 'sqrt', 'คร']  | k+: [' kuf', ' retorno', 'oct', ' vier', ' ér', ' gehen', 'なぜ', ' тө', 'why', ' why']
+   q-: ['}})', ' }),', 'clature', 'otypic', '에도', 'にご', ' appreciates', ' }))', 'please', ' reminds']  | k-: ['}}^{\\', ' Template', ' fibroblasts', 'цов', ' mRNA', 'pared', ' mitochondria', 'roir', '屏幕', 'Talk']
+L11h3 s1frac=0.269 rel=0.0199
+   q+: ['infty', 'eight', 'sqrt', '十五', ' nueve', '৭১', 'seven', ' zehn', '৩০', '十六']  | k+: ['ходить', ' \\$', ' retorno', 'ведения', 'andi', ' $', 'series', 'ajj', 'olfo', ' increased']
+   q-: ['zit', ' dataType', ' IMF', 'ียด', ' souvenir', 'uniya', 'ignet', 'тисти', 'otiti', ' delicacy']  | k-: [' CGPoint', ' minut', ' Almond', ' atro', ' Template', ' Winner', ' Wimbledon', 'çük', ' Alba', ' grond']
+L12h0 s1frac=0.356 rel=0.0227
+   q+: [' Paint', 'Paint', ' Streets', 'NOMBRE', ' effluent', ' Suff', ' Drain', ' Transmission', ' Progress', ' Drinking']  | k+: ['abc', 'shared', 'bc', 'pc', 'pm', ' articulated', 'eight', 'cc', 'RC', 'cm']
+   q-: [' образом', 'rological', ' coisa', 'стати', 'seit', ' δύ', ' década', 'hatian', 'ربع', 'шке']  | k-: ['слови', 'issements', 'гово', 'keeping', 'makers', ' streams', 'payer', 'いは', ' {@', 'כת']
+L12h1 s1frac=0.331 rel=0.0196
+   q+: ['长的', ' трех', 'Fif', '十五', ' nueve', ' ثلاثه', ' zehn', '十八', ' fourteen', ' fifteen']  | k+: ['th', 'kinson', 'inci', 'pp', 'tk', ' dez', 'fh', 'ukun', 'VII', 'cc']
+   q-: [' */}', ' Protocol', 'ARCHIVO', 'itudine', ' discharg', ' Bengali', ' substant', 'onerror', ' receipt', ' Dhaka']  | k-: ['payer', ' fishes', 'issements', '])/', ' fishery', ' diets', '안녕하세요', 'ipment', ' itemprop', ' seafood']
+L12h2 s1frac=0.277 rel=0.0248
+   q+: [' faktor', ' preparar', 'zych', ' экра', ' cân', ' pequeños', ' pruebas', 'ponen', ' técnicas', 'ungan']  | k+: ['abc', ' kilka', " '';", 'shared', ' ç', 'cl', 'empty', '正确', 'af', ' podczas']
+   q-: [' not', ' discharge', ' see', ' Not', ' wastewater', ' NOT', ' homelessness', ' nulla', ' color', ' anybody']  | k-: ['ーパー', 'Industry', 'konom', ' industry', 'ipment', ' capacit', ' たい', 'ланд', ' fluct', ' competit']
+L12h3 s1frac=0.312 rel=0.0216
+   q+: ['olutely', 'icias', 'бол', ' ۳', 'اتی', 'alia', 'ις', 'icial', 'ices', 'segn']  | k+: ['৭১', ' spark', ' XII', '十六', '十八', ' thousand', 'BB', 'xFF', 'IB', ' zehn']
+   q-: [' tweets', ' Dubai', ' Lane', ' Complexity', ' tweet', ' Arabia', ' Morocco', ' bespoke', ' compositions', ' selfie']  | k-: [' ):', '一緒', '栽培', ' lingk', ' )),', '](/', ' aquaculture', ' Checkout', 'بسم', ' itemprop']
+L13h0 s1frac=0.359 rel=0.0111
+   q+: [' dehors', 'toList', ' [`', ' Silence', ' reb', ' soff', ' vode', 'moveTo', ' Markets', 'ндар']  | k+: ['৭১', '৩০', '২৯', '১৪', 'abc', '২৭', '২৮', '২৩', '২৬', 'ukun']
+   q-: ['culo', '็ก', ' hundred', 'number', ' número', 'xn', 'eight', 'finity', 'jähr', 'string']  | k-: ['odox', ' margins', '文档', 'するために', '](./', ' Elig', 'اويه', 'Bracket', 'ものを', 'ССР']
+L13h1 s1frac=0.353 rel=0.0146
+   q+: [' vouch', 'ته', ' fray', 'performed', ' てる', ' throughout', 'ables', ' quotation', 'estim', 'レーション']  | k+: ['iration', ' Trail', ' conformity', ' citiz', 'urm', 'IRONMENT', 'clips', 'letes', 'Orientation', ' Mujhe']
+   q-: [' filhos', ' uda', 'xe', ' corto', '৫০', '小时', ' groot', ' hijos', ' pequeños', ' jaki']  | k-: ['৭১', ' sentido', '৫০', ' Hopf', 'stven', ' ще', '৩০', ' sense', ' लाख', ' للأ']
+L13h2 s1frac=0.321 rel=0.0138
+   q+: [' commodities', ' LNG', ' verstehen', ' Railways', ' canvas', ' turbine', ' oceans', ' composers', ' pulp', 'ähler']  | k+: ['odox', 'ancements', 'Bueno', ' Tren', 'atories', '一緒', ' unravel', 'irts', 'いろいろ', 'Orientation']
+   q-: ['asına', 'organization', ' организация', ' belli', 'ayette', ' качестве', 'curity', 'ън', 'جه', ' revêtu']  | k-: [' pilih', '৭১', ' сумма', ' diez', 'ной', '১০', ' мы', 'infty', ' proiz', ' מה']
+L13h3 s1frac=0.357 rel=0.0101
+   q+: ['culo', ' groot', 'infty', ' maximale', ' número', 'zy', 'зра', ' broj', ' Shannon', ' теле']  | k+: ['業務', '文档', 'odox', 'ancements', 'Всем', ' Wharf', ' margins', ' }],', ' paperwork', ' Chứng']
+   q-: [' slopes', ' railing', 'qualified', 'és', ' ska', ' careers', ' margins', ' qualified', ' sidewalks', 'なんて']  | k-: ['৭১', '৩০', '২৯', ' diez', '২৮', '১০', '১৪', '২৭', 'ukun', '২৬']
+L14h0 s1frac=0.420 rel=0.0150
+   q+: [' ۴', 'جاد', ' сделать', ' ۵', 'Given', ' чем', '存在', ' ۳', ' лиц', ' sete']  | k+: [' continuidade', ' серпня', ' ۵', '৭১', '知道', ' ۳', ' dług', 'getCql', ' zehn', ' už']
+   q-: ['ophil', 'tail', ' Nan', ' pace', 'zon', 'opts', ' MED', 'od', 'opter', 'times']  | k-: ['cious', 'atories', ' peas', ' shores', ' acknow', ' yourselves', 'ССР', 'enance', 'ียด', 'accio']
+L14h1 s1frac=0.317 rel=0.0186
+   q+: ['\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n', 'bulk', '機構', '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n', 'ória', ' })}', '構造', '量的', 'apper', ' observables']  | k+: ['৭১', ' sieben', ' zehn', '十八', ' ۵', 'infty', ' vier', ' immer', '知道', ' ۴']
+   q-: ['Glare', 'ko', ' Telescope', ' Vier', ' sine', 'are', 'Consec', 'School', ' République', ' YEAR']  | k-: [' degeneracy', '\n\n', 'atories', ' próp', 'inded', ' yourselves', 'itul', 'adikan', 'cious', 'accio']
+L14h2 s1frac=0.324 rel=0.0153
+   q+: ['opter', 'ote', '*/', 'onal', 'otes', 'oons', 'endez', 'amin', '%%', 'opes']  | k+: ['\n\n', 'etically', 'itul', 'enance', 'intestinal', 'atories', 'perate', ' próp', ' propios', ' ambas']
+   q-: [' résult', '感覺', ' choisir', ' diritto', ' raí', ' consomm', ' actos', ' pię', ' khô', ' zdrav']  | k-: ['infty', '৭১', ' zehn', '十八', ' morte', ' sofort', ' vier', ' sieben', ' wirklich', ' серпня']
+L14h3 s1frac=0.561 rel=0.0177
+   q+: ['eight', '৫০', '২৯', '২৮', '৩০', 'seven', '২৭', '২৬', '৭১', '২৫']  | k+: ['itul', 'enance', ' margins', 'atories', ' yourselves', 'こんにちは', 'prove', '日常', ' degeneracy', ' fishermen']
+   q-: [' Pré', ' chế', 'SampleSize', ' Mits', ' 예', ' ska', ' tradición', 'éd', ' Notification', ' Preparation']  | k-: ['৭১', '২৯', ' vier', ' sieben', '৩০', ' zehn', ' gep', ' bốn', '২৮', 'infty']
+L15h0 s1frac=0.198 rel=0.0169
+   q+: [' articul', ' brains', ' felicit', ' hj', ' lucky', ' beats', ' stunned', ' genius', ' hard', ' courte']  | k+: [' shores', ' Railway', '\\|_{\\', 'dumbbell', ' conformity', ' superconduct', ' inflicted', ' Placement', ' submarine', ' dishes']
+   q-: ['edTest', ' Invit', ' syscall', 'RICT', '=#', 'nity', 'attes', ' Vars', 'achusetts', 'enance']  | k-: ['جاد', 'vf', 'bc', 'tk', ' árbol', ' completo', ' complète', 'лек', 'viii', 'arlan']
+L15h1 s1frac=0.277 rel=0.0117
+   q+: [' Miz', ' Hood', ' Market', ' Orleans', 'markets', ' Ness', ' Meet', ' Naam', 'NewUrl', ' blush']  | k+: [' industry', ' Drinking', ' tubing', ' buses', ' Industry', ' owes', ' Credits', 'iners', ' syph', 'ruption']
+   q-: ['riteria', ' eukaryotic', 'ahrenheit', ' terreno', 'mvn', ' ciencia', 'turned', ' abgesch', 'The', 'եց']  | k-: ['جاد', ' árbol', ' científicos', 'bc', 'abc', '০০০', '৫০', '৩০', '২২', '好的']
+L15h2 s1frac=0.249 rel=0.0142
+   q+: [' carpeta', ' científicos', 'циона', 'arki', '过去', '博物', 'ubahan', 'cules', ' ini', ' carga']  | k+: ['iners', ' kì', '\\|_{\\', ' Opera', ' Dynasty', ' {@', ' Arabia', 'agogue', ' Protocol', ' regimen']
+   q-: [' CDS', ' Mits', ' Ult', ' Hed', ' LAS', ' Wis', ' Ble', ' Scotch', ' Miz', ' Fee']  | k-: ['৭১', '才能', 'جاد', '৩০', '৫০', '১০', '১২', '১৪', 'bc', 'tk']
+L15h3 s1frac=0.181 rel=0.0094
+   q+: ['ffi', ' теат', ' kidney', '<td>', ' ս', ' kidneys', ' cầu', 'quad', ' maison', '৩০']  | k+: [' invertebr', 'ware', '">=', 'False', 'ッケージ', 'arke', 'arreg', 'answ', ' true', 'iglie']
+   q-: [' Vars', 'reement', 'embre', ' denom', ' upd', ' Hedge', ' fixation', ' outsiders', '安定', 'icional']  | k-: [' Alp', ' Kik', ' MJ', ' Cord', 'Cord', 'テキスト', ' Cet', ' Mog', ' Emir', ' Watts']
+L16h0 s1frac=0.178 rel=0.0117
+   q+: [' Corridor', ' aston', 'หน้า', 'oubtedly', ' Secretariat', 'haal', ' resumes', 'ennium', 'Desde', 'ently']  | k+: ['ance', 'ancements', 'ances', 'ence', ' perio', 'enta', 'enca', 'rence', ' brewer', 'ancing']
+   q-: [' Mars', ' Acids', 'void', ' acids', 'delete', ' morte', ' hobby', ' discard', 'neut', ' Liga']  | k-: ['زيز', '৭১', 'رف', ' мини', 'мир', 'льзова', '৩০', 'زند', ' безопас', ' coherent']
+L16h1 s1frac=0.206 rel=0.0137
+   q+: ['৭১', ' gł', 'slip', '২৫', 'speaker', 'right', 'روع', '৩০', ' mêmes', '২৯']  | k+: [' whales', ' movies', ' Ships', ' estuvo', ' ions', 'ance', ' Placement', ' Pre', ' Tank', ' whiskey']
+   q-: [' systematically', ' unto', ' formatted', ' needy', ' Ira', 'ownt', 'atient', ' diligently', ' moisturizing',
+[output cut at 15,000 characters]
+```

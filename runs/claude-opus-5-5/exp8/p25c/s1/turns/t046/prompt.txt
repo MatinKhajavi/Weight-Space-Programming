@@ -1,0 +1,13 @@
+OUTPUT of Python run 39 of at most 300:
+```
+{'id': 'math_train_geometry_737', 'src': 'math', 'j': np.int64(0), 'tokens': np.int64(32768), 'cut': np.True_, 'correct': np.False_, 'period': np.float64(42.0), 'loopstart': np.float64(27571.0), 'nchar': np.int64(79239), 'onset_tok': np.int64(8164), 'period_tok': np.int64(20)}
+starts: "Here's my thought process for computing $\\sin 0^\\circ$:\n\n1.  **Analyze the Request:**\n    *   The user wants to compute "
+at loopstart: '`.\n    I will use `?_`.\n    I will use `?^'
+repeat check: True
+compact p: 31 lead len 206 body len 186
+'<|im_start|>user\nSuppose that a real number $x$ satisfies \\[' ... '\n    Wait, $f(25) = \\sqrt{24}$.\n    Wait, $f(25) = \\sqrt{24}'
+prompt_str ok: '<|im_start|>user\nCompute $\\sin 0^\\circ$.\nPlease reason step by step, and put you' ... 'er within \\boxed{}.<|im_end|>\n<|im_start|>assistant\n<think>\n'
+{'count': 443.0, 'mean': 7722.0, 'std': 4789.0, 'min': 970.0, '25%': 4605.0, '50%': 6680.0, '75%': 9438.0, 'max': 32643.0}
+{'count': 443.0, 'mean': 66.0, 'std': 61.7, 'min': 1.0, '25%': 27.0, '50%': 45.0, '75%': 82.0, 'max': 532.0}
+
+```

@@ -1,0 +1,38 @@
+OUTPUT of run 19 of at most 20:
+```
+alignment of upstream output-weight changes with routing heads' query (q) and key (k) input spaces; 1.0 = generic
+mlp  L 0 gen=0.0214 | L9H1:q0.78k0.68 | L10H2:q0.70k0.67 | L11H2:q0.74k0.68 | L12H1:q0.76k0.72 | L12H3:q0.70k0.72
+attn L 0 gen=0.0109 | L9H1:q0.65k0.64 | L10H2:q0.65k0.64 | L11H2:q0.65k0.63 | L12H1:q0.71k0.62 | L12H3:q0.66k0.62
+mlp  L 1 gen=0.0248 | L9H1:q0.87k0.81 | L10H2:q0.83k0.82 | L11H2:q0.86k0.85 | L12H1:q0.92k0.89 | L12H3:q0.85k0.89
+attn L 1 gen=0.0066 | L9H1:q0.96k1.05 | L10H2:q1.06k1.09 | L11H2:q1.16k1.29 | L12H1:q1.39k1.45 | L12H3:q1.26k1.45
+mlp  L 2 gen=0.0157 | L9H1:q1.05k1.03 | L10H2:q1.03k1.01 | L11H2:q1.02k1.03 | L12H1:q1.05k1.06 | L12H3:q0.99k1.06
+attn L 2 gen=0.0102 | L9H1:q0.94k0.94 | L10H2:q0.93k0.97 | L11H2:q0.92k0.98 | L12H1:q0.95k1.02 | L12H3:q0.91k1.02
+mlp  L 3 gen=0.0220 | L9H1:q0.87k0.89 | L10H2:q0.81k0.86 | L11H2:q0.90k0.95 | L12H1:q0.88k0.93 | L12H3:q0.86k0.93
+attn L 3 gen=0.0137 | L9H1:q0.96k0.95 | L10H2:q0.91k0.94 | L11H2:q0.94k0.96 | L12H1:q0.95k1.01 | L12H3:q0.93k1.01
+mlp  L 4 gen=0.0292 | L9H1:q0.82k0.87 | L10H2:q0.79k0.85 | L11H2:q0.85k0.87 | L12H1:q0.81k0.86 | L12H3:q0.80k0.86
+attn L 4 gen=0.0173 | L9H1:q0.86k0.89 | L10H2:q0.88k0.91 | L11H2:q0.87k0.99 | L12H1:q0.85k1.00 | L12H3:q0.87k1.00
+mlp  L 5 gen=0.0159 | L9H1:q0.85k0.84 | L10H2:q0.75k0.84 | L11H2:q0.82k0.82 | L12H1:q0.80k0.82 | L12H3:q0.77k0.82
+attn L 5 gen=0.0082 | L9H1:q1.32k1.23 | L10H2:q1.23k1.24 | L11H2:q1.42k1.27 | L12H1:q1.15k1.19 | L12H3:q1.27k1.19
+mlp  L 6 gen=0.0164 | L9H1:q1.06k1.11 | L10H2:q0.97k1.03 | L11H2:q1.06k1.09 | L12H1:q1.03k1.05 | L12H3:q1.01k1.05
+attn L 6 gen=0.0129 | L9H1:q0.92k0.86 | L10H2:q0.85k0.84 | L11H2:q0.92k0.94 | L12H1:q0.94k0.92 | L12H3:q0.94k0.92
+mlp  L 7 gen=0.0123 | L9H1:q1.34k1.38 | L10H2:q1.22k1.29 | L11H2:q1.20k1.32 | L12H1:q1.20k1.29 | L12H3:q1.19k1.29
+attn L 7 gen=0.0074 | L9H1:q1.27k1.22 | L10H2:q1.10k1.12 | L11H2:q1.22k1.26 | L12H1:q1.27k1.20 | L12H3:q1.18k1.20
+mlp  L 8 gen=0.0191 | L9H1:q1.20k1.32 | L10H2:q1.09k1.22 | L11H2:q1.04k1.13 | L12H1:q1.08k1.11 | L12H3:q1.00k1.11
+attn L 8 gen=0.0112 | L9H1:q1.43k1.24 | L10H2:q1.40k1.43 | L11H2:q1.29k1.39 | L12H1:q1.29k1.46 | L12H3:q1.32k1.46
+mlp  L 9 gen=0.0121 | L9H1:   -     | L10H2:q1.48k1.77 | L11H2:q1.27k1.50 | L12H1:q1.20k1.36 | L12H3:q1.18k1.36
+attn L 9 gen=0.0088 | L9H1:   -     | L10H2:q1.09k1.19 | L11H2:q1.06k1.24 | L12H1:q1.11k1.16 | L12H3:q1.06k1.16
+mlp  L10 gen=0.0174 | L9H1:   -     | L10H2:   -     | L11H2:q1.44k2.00 | L12H1:q1.18k1.51 | L12H3:q1.13k1.51
+attn L10 gen=0.0078 | L9H1:   -     | L10H2:   -     | L11H2:q1.24k0.98 | L12H1:q1.14k1.16 | L12H3:q1.16k1.16
+mlp  L11 gen=0.0114 | L9H1:   -     | L10H2:   -     | L11H2:   -     | L12H1:q1.51k2.28 | L12H3:q1.50k2.28
+attn L11 gen=0.0049 | L9H1:   -     | L10H2:   -     | L11H2:   -     | L12H1:q1.75k2.24 | L12H3:q1.72k2.24
+late MLP/attn alignment with digit-discriminating readout (1.0 = generic):
+L10: mlp 1.16 | attn 1.37
+L11: mlp 1.29 | attn 0.92
+L12: mlp 1.39 | attn 1.38
+L13: mlp 1.61 | attn 1.39
+L14: mlp 2.17 | attn 2.52
+L15: mlp 2.97 | attn 2.04
+L16: mlp 4.39 | attn 4.06
+L17: mlp 6.27 | attn 4.21
+
+```

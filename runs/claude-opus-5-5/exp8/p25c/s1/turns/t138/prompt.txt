@@ -1,0 +1,7 @@
+OUTPUT of Python run 119 of at most 300:
+```
+Traceback (most recent call last):
+  File "<run>", line 3, in <module>
+TypeError: expected np.ndarray (got NpzFile)
+
+```

@@ -1,0 +1,24 @@
+OUTPUT of run 27 of at most 60:
+```
+L7 dK energy [0.199 0.076 0.061 0.057] dV energy [0.113 0.081 0.074 0.048]
+cos among vk0,vk1,vv0,vv1: -0.457 -0.527 -0.305 0.299
+== vk0
+  L3: energy-along-x x640 1.5 | votes s1 +3 s2 -5 weighted -0.12
+  L4: energy-along-x x640 3.9 | votes s1 +5 s2 +7 weighted +0.80
+  L5: energy-along-x x640 7.0 | votes s1 +3 s2 +1 weighted +0.21
+  L6: energy-along-x x640 14.4 | votes s1 +5 s2 +7 weighted +0.84
+  L7: energy-along-x x640 22.4 | votes s1 +9 s2 +7 weighted +1.10
+== vk1
+  L3: energy-along-x x640 1.5 | votes s1 +5 s2 +1 weighted +0.30
+  L4: energy-along-x x640 2.7 | votes s1 -11 s2 -9 weighted -1.37
+  L5: energy-along-x x640 5.0 | votes s1 -1 s2 -9 weighted -0.63
+  L6: energy-along-x x640 9.8 | votes s1 -7 s2 -5 weighted -0.89
+  L7: energy-along-x x640 16.4 | votes s1 -1 s2 +1 weighted -0.02
+== vv0
+  L3: energy-along-x x640 1.1 | votes s1 -1 s2 -7 weighted -0.52
+  L4: energy-along-x x640 3.1 | votes s1 +3 s2 -3 weighted -0.12
+  L5: energy-along-x x640 6.7 | votes s1 -7 s2 +1 weighted -0.41
+  L6: energy-along-x x640 12.1 | votes s1 -13 s2 -7 weighted -1.40
+  L7: energy-along-x x640 15.4 | votes s1 -15 s2 -5 weighted -1.36
+
+```

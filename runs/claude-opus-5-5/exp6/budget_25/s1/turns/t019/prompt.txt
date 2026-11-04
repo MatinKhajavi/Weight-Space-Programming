@@ -1,0 +1,24 @@
+OUTPUT of Python run 15 of at most 120:
+```
+89o(7, 0)      90n(8, 0)      91o(0, 8)      92n(1, 8)   
+XXXX.X.X.      XXXX.X.X.      XXXX.X.Xo      XXXX.X.X.   
+X.X.XOOO.      X.X.XOOO.      X.X.XOOO.      X.X.XOOOx   
+.X.XXXOO.      .X.XXXOO.      .X.XXXOO.      .X.XXXOO.   
+X.XXOOOOO      X.XXOOOOO      X.XXOOOOO      X.XXOOOOO   
+XX.XXXXXO      XX.XXXXXO      XX.XXXXXO      XX.XXXXXO   
+X.X.XX.XX      X.X.XX.XX      X.X.XX.XX      X.X.XX.XX   
+XX.XXXXX.      XX.XXXXX.      XX.XXXXX.      XX.XXXXX.   
+oXX.XXX.X      .XX.XXX.X      .XX.XXX.X      .XX.XXX.X   
+.O.X.X.X.      xO.X.X.X.      XO.X.X.X.      XO.X.X.X.   
+93o(7, 0)      94n(2, 8)      95o(0, 8)      96n(1, 8)   
+XXXX.X.X.      XXXX.X.X.      XXXX.X.Xo      XXXX.X.X.   
+X.X.XOOOX      X.X.XOOOX      X.X.XOOO.      X.X.XOOOx   
+.X.XXXOO.      .X.XXXOOx      .X.XXXOO.      .X.XXXOO.   
+X.XXOOOOO      X.XXOOOOO      X.XXOOOOO      X.XXOOOOO   
+XX.XXXXXO      XX.XXXXXO      XX.XXXXXO      XX.XXXXXO   
+X.X.XX.XX      X.X.XX.XX      X.X.XX.XX      X.X.XX.XX   
+XX.XXXXX.      XX.XXXXX.      XX.XXXXX.      XX.XXXXX.   
+oXX.XXX.X      OXX.XXX.X      OXX.XXX.X      OXX.XXX.X   
+.O.X.X.X.      .O.X.X.X.      .O.X.X.X.      .O.X.X.X.   
+
+```

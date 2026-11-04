@@ -1,0 +1,7 @@
+OUTPUT of Python run 44 of at most 300:
+```
+cut with pred: 3 cut&correct 3
+n 470 boxed correct ans before loop 11 answer string before loop 292
+Counter({'digits': 368, 'other': 77, 'answer/final': 23, 'boxed': 2})
+
+```

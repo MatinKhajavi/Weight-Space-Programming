@@ -1,0 +1,9 @@
+Under Edit A, 44% of all lines in the thinking began with "Wait"; that is the signature of the doubt spiral. Under Edit C those lines start with "So" (12%), "Let" (9%), "If" (8%), "Maybe" (7%), "This" (6%) and "The" (4%). The model still considers alternatives ("Maybe", "If") and checks ("Let"), but no longer stacks endless "Wait" re-examinations. This fits the mechanism: the brake neuron's amplification redirects line openings rather than truncating reasoning. Next comes the dose-response the method calls for. At ×2, "Wait" is essentially eliminated, so a gentler ×1.5 might keep some useful "Wait" checks while still breaking the spirals. ×3 tests whether a stronger brake begins to hurt. I'll run ×1.5 now on S1, with seeds paired against Edit A (×1, gen_6) and Edit C (×2, gen_13). If ×1.5 lands between A and C, the effect is graded and ×2 is near the plateau. If ×1.5 matches or beats ×2, the gentler edit is preferable because it changes the model less.
+
+```python
+# Dose-response: Edit C(1.5) = A + 22.573 down col x1.5
+W22 = load_original(name22).clone(); W22[:, 573] *= 1.5; save_edit(name22, W22)
+print(edited(), 'col573 norm %.3f' % load(name22)[:,573].norm())
+with open('/work/notes.md','a') as f:
+    f.write("- PASS 10 = gen_13 (edited C = A + 22.573 x2, S1): acc 60.2% (gsm 73.4, math 46.9), cut 28.9%, wrong 28. vs A (gen_6 edited): +25.0 SE 2.8, W->R 66 R->W 2; vs orig +47.7 SE 3.2 (123/1). 'Wait' per 1k tok: orig 19.9, A 12.7, C 0.1; line-initial Wait share A 44% -> C 0.2%, replaced by So/Let/If/Maybe/This; other check markers unchanged (check 1.1->1.2, But .8->.9). C wrong answers long (median 18.2k tok), all were A-failures. C cut 74: 47 exact loops (units start mid-computation/So/This/Maybe).\n- Pass 11 (planned): C(1.5) = A + 22.573 x1.5 on S1.\n")
+```

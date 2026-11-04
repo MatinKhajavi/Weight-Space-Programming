@@ -1,0 +1,144 @@
+OUTPUT of run 2 of at most 60:
+```
+L0.input_layernorm                  (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L0.mlp.down_proj                    (640, 2048)  rel=0.0107 same=0.156 med_ulp=3.00 max=0.001221 norm=0.2645
+L0.mlp.gate_proj                    (2048, 640)  rel=0.0062 same=0.267 med_ulp=2.00 max=0.001221 norm=0.2756
+L0.mlp.up_proj                      (2048, 640)  rel=0.0062 same=0.269 med_ulp=2.00 max=0.001099 norm=0.2756
+L0.post_attention_layernorm         (640,)       rel=0.0000 same=0.998 med_ulp=1.00 max=0.0004883 norm=0.0004883
+L0.post_feedforward_layernorm       (640,)       rel=0.0000 same=0.844 med_ulp=1.00 max=0.0009766 norm=0.004969
+L0.pre_feedforward_layernorm        (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L0.k_norm                           (256,)       rel=0.0001 same=0.977 med_ulp=1.00 max=0.0009766 norm=0.001155
+L0.k_proj                           (256, 640)   rel=0.0058 same=0.262 med_ulp=2.00 max=0.0009766 norm=0.09152
+L0.o_proj                           (640, 1024)  rel=0.0062 same=0.251 med_ulp=2.00 max=0.001221 norm=0.1844
+L0.q_norm                           (256,)       rel=0.0000 same=0.984 med_ulp=1.00 max=0.0004883 norm=0.0005988
+L0.q_proj                           (1024, 640)  rel=0.0058 same=0.230 med_ulp=2.00 max=0.001068 norm=0.1839
+L0.v_proj                           (256, 640)   rel=0.0054 same=0.303 med_ulp=2.00 max=0.0009766 norm=0.08646
+L1.input_layernorm                  (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L1.mlp.down_proj                    (640, 2048)  rel=0.0169 same=0.103 med_ulp=4.00 max=0.00116 norm=0.2632
+L1.mlp.gate_proj                    (2048, 640)  rel=0.0062 same=0.269 med_ulp=2.00 max=0.001465 norm=0.2795
+L1.mlp.up_proj                      (2048, 640)  rel=0.0062 same=0.268 med_ulp=2.00 max=0.001221 norm=0.2792
+L1.post_attention_layernorm         (640,)       rel=0.0000 same=0.966 med_ulp=1.00 max=0.0009766 norm=0.002296
+L1.post_feedforward_layernorm       (640,)       rel=0.0000 same=0.939 med_ulp=1.00 max=0.0009766 norm=0.003483
+L1.pre_feedforward_layernorm        (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L1.k_norm                           (256,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L1.k_proj                           (256, 640)   rel=0.0059 same=0.266 med_ulp=2.00 max=0.001099 norm=0.09437
+L1.o_proj                           (640, 1024)  rel=0.0099 same=0.163 med_ulp=3.00 max=0.001205 norm=0.1825
+L1.q_norm                           (256,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L1.q_proj                           (1024, 640)  rel=0.0061 same=0.228 med_ulp=2.00 max=0.001221 norm=0.1932
+L1.v_proj                           (256, 640)   rel=0.0060 same=0.272 med_ulp=2.00 max=0.001022 norm=0.0961
+L10.input_layernorm                 (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L10.mlp.down_proj                   (640, 2048)  rel=0.0172 same=0.098 med_ulp=4.00 max=0.001465 norm=0.2673
+L10.mlp.gate_proj                   (2048, 640)  rel=0.0065 same=0.229 med_ulp=2.00 max=0.001465 norm=0.293
+L10.mlp.up_proj                     (2048, 640)  rel=0.0064 same=0.255 med_ulp=2.00 max=0.001343 norm=0.2883
+L10.post_attention_layernorm        (640,)       rel=0.0000 same=0.995 med_ulp=2.00 max=0.0004883 norm=0.0005356
+L10.post_feedforward_layernorm      (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L10.pre_feedforward_layernorm       (640,)       rel=0.0000 same=0.967 med_ulp=1.00 max=0.0009766 norm=0.002074
+L10.k_norm                          (256,)       rel=0.0000 same=0.965 med_ulp=2.00 max=0.0007324 norm=0.001288
+L10.k_proj                          (256, 640)   rel=0.0076 same=0.205 med_ulp=2.00 max=0.001465 norm=0.1214
+L10.o_proj                          (640, 1024)  rel=0.0068 same=0.222 med_ulp=2.00 max=0.001953 norm=0.2106
+L10.q_norm                          (256,)       rel=0.0001 same=0.914 med_ulp=1.00 max=0.0009766 norm=0.002425
+L10.q_proj                          (1024, 640)  rel=0.0075 same=0.190 med_ulp=3.00 max=0.001587 norm=0.2373
+L10.v_proj                          (256, 640)   rel=0.0065 same=0.254 med_ulp=2.00 max=0.001343 norm=0.1039
+L11.input_layernorm                 (640,)       rel=0.0000 same=0.988 med_ulp=2.00 max=0.0009766 norm=0.001406
+L11.mlp.down_proj                   (640, 2048)  rel=0.0124 same=0.138 med_ulp=3.00 max=0.001209 norm=0.2545
+L11.mlp.gate_proj                   (2048, 640)  rel=0.0065 same=0.233 med_ulp=2.00 max=0.001221 norm=0.2912
+L11.mlp.up_proj                     (2048, 640)  rel=0.0064 same=0.257 med_ulp=2.00 max=0.001282 norm=0.2846
+L11.post_attention_layernorm        (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L11.post_feedforward_layernorm      (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L11.pre_feedforward_layernorm       (640,)       rel=0.0000 same=0.989 med_ulp=1.00 max=0.0004883 norm=0.0008194
+L11.k_norm                          (256,)       rel=0.0000 same=0.977 med_ulp=1.00 max=0.0004883 norm=0.0006824
+L11.k_proj                          (256, 640)   rel=0.0070 same=0.174 med_ulp=3.00 max=0.001465 norm=0.112
+L11.o_proj                          (640, 1024)  rel=0.0065 same=0.222 med_ulp=2.00 max=0.001282 norm=0.2011
+L11.q_norm                          (256,)       rel=0.0001 same=0.965 med_ulp=1.00 max=0.0009766 norm=0.001506
+L11.q_proj                          (1024, 640)  rel=0.0070 same=0.181 med_ulp=3.00 max=0.001953 norm=0.2219
+L11.v_proj                          (256, 640)   rel=0.0061 same=0.244 med_ulp=2.00 max=0.001227 norm=0.09741
+L12.input_layernorm                 (640,)       rel=0.0000 same=0.992 med_ulp=1.00 max=0.0009766 norm=0.001234
+L12.mlp.down_proj                   (640, 2048)  rel=0.0120 same=0.141 med_ulp=3.00 max=0.001282 norm=0.2721
+L12.mlp.gate_proj                   (2048, 640)  rel=0.0067 same=0.226 med_ulp=2.00 max=0.001465 norm=0.2996
+L12.mlp.up_proj                     (2048, 640)  rel=0.0066 same=0.246 med_ulp=2.00 max=0.001221 norm=0.2931
+L12.post_attention_layernorm        (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L12.post_feedforward_layernorm      (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L12.pre_feedforward_layernorm       (640,)       rel=0.0000 same=0.963 med_ulp=1.00 max=0.0009766 norm=0.002628
+L12.k_norm                          (256,)       rel=0.0000 same=0.988 med_ulp=1.00 max=0.0004883 norm=0.0005478
+L12.k_proj                          (256, 640)   rel=0.0071 same=0.215 med_ulp=2.00 max=0.001587 norm=0.1126
+L12.o_proj                          (640, 1024)  rel=0.0074 same=0.209 med_ulp=2.00 max=0.001221 norm=0.2012
+L12.q_norm                          (256,)       rel=0.0000 same=0.973 med_ulp=1.00 max=0.0004883 norm=0.0008324
+L12.q_proj                          (1024, 640)  rel=0.0076 same=0.158 med_ulp=3.00 max=0.001953 norm=0.2353
+L12.v_proj                          (256, 640)   rel=0.0057 same=0.257 med_ulp=2.00 max=0.0009766 norm=0.09062
+L13.input_layernorm                 (640,)       rel=0.0000 same=0.945 med_ulp=1.00 max=0.0009766 norm=0.002951
+L13.mlp.down_proj                   (640, 2048)  rel=0.0168 same=0.104 med_ulp=4.00 max=0.001251 norm=0.2778
+L13.mlp.gate_proj                   (2048, 640)  rel=0.0067 same=0.235 med_ulp=2.00 max=0.001465 norm=0.2994
+L13.mlp.up_proj                     (2048, 640)  rel=0.0067 same=0.253 med_ulp=2.00 max=0.001465 norm=0.2977
+L13.post_attention_layernorm        (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L13.post_feedforward_layernorm      (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L13.pre_feedforward_layernorm       (640,)       rel=0.0000 same=0.923 med_ulp=1.00 max=0.0009766 norm=0.002591
+L13.k_norm                          (256,)       rel=0.0000 same=0.984 med_ulp=1.00 max=0.0004883 norm=0.0006011
+L13.k_proj                          (256, 640)   rel=0.0067 same=0.204 med_ulp=3.00 max=0.001465 norm=0.107
+L13.o_proj                          (640, 1024)  rel=0.0089 same=0.176 med_ulp=2.00 max=0.001343 norm=0.1942
+L13.q_norm                          (256,)       rel=0.0001 same=0.980 med_ulp=1.00 max=0.0004883 norm=0.0009135
+L13.q_proj                          (1024, 640)  rel=0.0068 same=0.204 med_ulp=2.00 max=0.001465 norm=0.2142
+L13.v_proj                          (256, 640)   rel=0.0064 same=0.249 med_ulp=2.00 max=0.001465 norm=0.1018
+L14.input_layernorm                 (640,)       rel=0.0000 same=0.963 med_ulp=1.00 max=0.0009766 norm=0.002905
+L14.mlp.down_proj                   (640, 2048)  rel=0.0184 same=0.095 med_ulp=4.00 max=0.001282 norm=0.2828
+L14.mlp.gate_proj                   (2048, 640)  rel=0.0068 same=0.231 med_ulp=2.00 max=0.001282 norm=0.3046
+L14.mlp.up_proj                     (2048, 640)  rel=0.0068 same=0.251 med_ulp=2.00 max=0.001465 norm=0.3014
+L14.post_attention_layernorm        (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L14.post_feedforward_layernorm      (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L14.pre_feedforward_layernorm       (640,)       rel=0.0000 same=0.873 med_ulp=1.00 max=0.0009766 norm=0.003601
+L14.k_norm                          (256,)       rel=0.0000 same=0.988 med_ulp=7.00 max=0.0005493 norm=0.0007375
+L14.k_proj                          (256, 640)   rel=0.0066 same=0.229 med_ulp=2.00 max=0.001221 norm=0.1044
+L14.o_proj                          (640, 1024)  rel=0.0067 same=0.232 med_ulp=2.00 max=0.001465 norm=0.1851
+L14.q_norm                          (256,)       rel=0.0001 same=0.961 med_ulp=1.00 max=0.0009766 norm=0.001433
+L14.q_proj                          (1024, 640)  rel=0.0066 same=0.183 med_ulp=3.00 max=0.001343 norm=0.2062
+L14.v_proj                          (256, 640)   rel=0.0062 same=0.260 med_ulp=2.00 max=0.001221 norm=0.09951
+L15.input_layernorm                 (640,)       rel=0.0000 same=0.998 med_ulp=1.00 max=0.0009766 norm=0.0009766
+L15.mlp.down_proj                   (640, 2048)  rel=0.0154 same=0.114 med_ulp=3.00 max=0.001251 norm=0.2832
+L15.mlp.gate_proj                   (2048, 640)  rel=0.0067 same=0.236 med_ulp=2.00 max=0.001953 norm=0.2996
+L15.mlp.up_proj                     (2048, 640)  rel=0.0067 same=0.253 med_ulp=2.00 max=0.001465 norm=0.299
+L15.post_attention_layernorm        (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L15.post_feedforward_layernorm      (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L15.pre_feedforward_layernorm       (640,)       rel=0.0000 same=0.952 med_ulp=1.00 max=0.0009766 norm=0.002766
+L15.k_norm                          (256,)       rel=0.0000 same=0.961 med_ulp=1.00 max=0.0004883 norm=0.001216
+L15.k_proj                          (256, 640)   rel=0.0074 same=0.214 med_ulp=2.00 max=0.001465 norm=0.1166
+L15.o_proj                          (640, 1024)  rel=0.0074 same=0.219 med_ulp=2.00 max=0.001099 norm=0.1934
+L15.q_norm                          (256,)       rel=0.0001 same=0.922 med_ulp=1.00 max=0.0009766 norm=0.002386
+L15.q_proj                          (1024, 640)  rel=0.0071 same=0.215 med_ulp=2.00 max=0.001465 norm=0.2209
+L15.v_proj                          (256, 640)   rel=0.0065 same=0.250 med_ulp=2.00 max=0.001221 norm=0.1035
+L16.input_layernorm                 (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L16.mlp.down_proj                   (640, 2048)  rel=0.0138 same=0.127 med_ulp=3.00 max=0.001234 norm=0.2721
+L16.mlp.gate_proj                   (2048, 640)  rel=0.0066 same=0.241 med_ulp=2.00 max=0.001465 norm=0.2926
+L16.mlp.up_proj                     (2048, 640)  rel=0.0066 same=0.258 med_ulp=2.00 max=0.001465 norm=0.2935
+L16.post_attention_layernorm        (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L16.post_feedforward_layernorm      (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L16.pre_feedforward_layernorm       (640,)       rel=0.0000 same=0.966 med_ulp=1.00 max=0.0009766 norm=0.002143
+L16.k_norm                          (256,)       rel=0.0000 same=0.977 med_ulp=3.50 max=0.0004883 norm=0.0008058
+L16.k_proj                          (256, 640)   rel=0.0068 same=0.232 med_ulp=2.00 max=0.001282 norm=0.1065
+L16.o_proj                          (640, 1024)  rel=0.0106 same=0.160 med_ulp=3.00 max=0.001221 norm=0.1857
+L16.q_norm                          (256,)       rel=0.0001 same=0.965 med_ulp=1.00 max=0.0009766 norm=0.001506
+L16.q_proj                          (1024, 640)  rel=0.0068 same=0.209 med_ulp=2.00 max=0.001465 norm=0.2108
+L16.v_proj                          (256, 640)   rel=0.0066 same=0.253 med_ulp=2.00 max=0.001221 norm=0.1051
+L17.input_layernorm                 (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L17.mlp.down_proj                   (640, 2048)  rel=0.0140 same=0.123 med_ulp=3.00 max=0.001282 norm=0.2563
+L17.mlp.gate_proj                   (2048, 640)  rel=0.0064 same=0.240 med_ulp=2.00 max=0.001465 norm=0.2833
+L17.mlp.up_proj                     (2048, 640)  rel=0.0063 same=0.262 med_ulp=2.00 max=0.001465 norm=0.285
+L17.post_attention_layernorm        (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L17.post_feedforward_layernorm      (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L17.pre_feedforward_layernorm       (640,)       rel=0.0000 same=0.958 med_ulp=1.00 max=0.0009766 norm=0.00208
+L17.k_norm                          (256,)       rel=0.0000 same=0.977 med_ulp=1.00 max=0.0004883 norm=0.0007525
+L17.k_proj                          (256, 640)   rel=0.0065 same=0.226 med_ulp=2.00 max=0.001236 norm=0.1037
+L17.o_proj                          (640, 1024)  rel=0.0071 same=0.227 med_ulp=2.00 max=0.001099 norm=0.1728
+L17.q_norm                          (256,)       rel=0.0000 same=0.977 med_ulp=1.00 max=0.0004883 norm=0.0006742
+L17.q_proj                          (1024, 640)  rel=0.0066 same=0.177 med_ulp=3.00 max=0.001221 norm=0.2037
+L17.v_proj                          (256, 640)   rel=0.0056 same=0.286 med_ulp=2.00 max=0.0009766 norm=0.08847
+L2.input_layernorm                  (640,)       rel=0.0000 same=1.000 med_ulp=0.00 max=0 norm=0
+L2.mlp.down_proj                    (640, 2048)  rel=0.0143 same=0.118 med_ulp=3.00 max=0.001404 norm=0.2646
+L2.mlp.gate_proj                    (2048, 640)  rel=0.0063 same=0.265 med_ulp=2.00 max=0.001465 norm=0.2843
+L2.mlp.up_proj                      (2048, 640)  rel=0.0063 same=0.267 med_ulp=2.00 max=0.001465 norm=0.2804
+L2.post_attention_layernorm         (640,)       rel=0.0000 same=0.933 med_ulp=1.00 max=0.0009766 norm=0.002982
+L2.post_feedforward_layernorm       (640,)       rel=0.0000 same=0.986 med_ulp=1.00 max=0.0009766 norm=0.001923
+L2.pre_feedforward_layernorm        (640,)       rel=0.0000 same=0.998 med_ulp=1.00 max=0.0009766 norm=0.0009766
+L2.k_norm                           (256,)       rel=0.0000 same=0.973 med_ulp=1.00 max=0.0009766 norm=0.001391
+L2.k_proj                           (256, 640)   rel=0.0059 same=0.271 med_ulp=2.00 max=0.0009766 norm=0.09386
+L2.o_pro
+[output cut at 15,000 characters]
+```

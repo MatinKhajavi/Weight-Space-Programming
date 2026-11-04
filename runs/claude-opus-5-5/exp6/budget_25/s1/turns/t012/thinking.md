@@ -1,0 +1,2 @@
+The baseline is in: random and weak win almost every game, but against strong I only win 52%, despite a mean margin of +35, so the variance is high. Eleven games against strong ended by repetition, and I need to figure out who caused those. Since the player who makes the repetition loses, I want to look at the losses against strong: how they ended, their margins, and who triggered the repetitions.
+

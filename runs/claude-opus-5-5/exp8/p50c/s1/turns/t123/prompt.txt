@@ -1,0 +1,7 @@
+OUTPUT of Python run 105 of at most 300:
+```
+['text', 'pred', 'correct', 'tokens', 'cut']
+{'pred': '24', 'correct': 'True', 'tokens': '3969', 'cut': 'False'}
+[(('gsm8k', True, False), 84), (('math', True, False), 72), (('math', False, True), 36), (('gsm8k', False, False), 27), (('math', False, False), 20), (('gsm8k', False, True), 16), (('gsm8k', True, True), 1)]
+
+```

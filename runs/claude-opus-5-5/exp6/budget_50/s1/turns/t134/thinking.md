@@ -1,0 +1,2 @@
+The repetition losses dropped to just one, down from eight to ten before, and the opponent lost nineteen to repetition too, which puts the score at 0.695. The main losses now come from "two passes" with thirty-eight games, so that's where the remaining problem sits. I still have seventeen passes and twenty-one runs left, so next I want to test v23 against the weaker and random opponents to see whether it holds up.
+

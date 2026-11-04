@@ -1,0 +1,22 @@
+OUTPUT of run 48 of at most 60:
+```
+L 0 corr(g,dg)=-0.044 (null sd 0.025, z -1.8)  corr(u,du)=-0.006 (z -0.3)  extreme-|g| units: mean sign(g)*dg/sd=-0.12
+L 1 corr(g,dg)=-0.014 (null sd 0.021, z -0.6)  corr(u,du)=-0.004 (z -0.2)  extreme-|g| units: mean sign(g)*dg/sd=-0.05
+L 2 corr(g,dg)=+0.003 (null sd 0.020, z +0.2)  corr(u,du)=-0.030 (z -1.5)  extreme-|g| units: mean sign(g)*dg/sd=+0.06
+L 3 corr(g,dg)=-0.006 (null sd 0.024, z -0.3)  corr(u,du)=+0.031 (z +1.3)  extreme-|g| units: mean sign(g)*dg/sd=-0.05
+L 4 corr(g,dg)=-0.010 (null sd 0.023, z -0.5)  corr(u,du)=+0.018 (z +0.8)  extreme-|g| units: mean sign(g)*dg/sd=+0.03
+L 5 corr(g,dg)=+0.013 (null sd 0.022, z +0.6)  corr(u,du)=-0.020 (z -0.9)  extreme-|g| units: mean sign(g)*dg/sd=-0.20
+L 6 corr(g,dg)=+0.012 (null sd 0.021, z +0.6)  corr(u,du)=+0.012 (z +0.6)  extreme-|g| units: mean sign(g)*dg/sd=-0.08
+L 7 corr(g,dg)=-0.004 (null sd 0.024, z -0.2)  corr(u,du)=+0.011 (z +0.5)  extreme-|g| units: mean sign(g)*dg/sd=-0.02
+L 8 corr(g,dg)=+0.027 (null sd 0.022, z +1.2)  corr(u,du)=-0.007 (z -0.3)  extreme-|g| units: mean sign(g)*dg/sd=+0.02
+L 9 corr(g,dg)=+0.028 (null sd 0.021, z +1.3)  corr(u,du)=+0.002 (z +0.1)  extreme-|g| units: mean sign(g)*dg/sd=-0.08
+L10 corr(g,dg)=-0.013 (null sd 0.021, z -0.6)  corr(u,du)=+0.005 (z +0.2)  extreme-|g| units: mean sign(g)*dg/sd=+0.05
+L11 corr(g,dg)=+0.022 (null sd 0.024, z +0.9)  corr(u,du)=-0.010 (z -0.4)  extreme-|g| units: mean sign(g)*dg/sd=+0.11
+L12 corr(g,dg)=-0.007 (null sd 0.022, z -0.3)  corr(u,du)=-0.027 (z -1.2)  extreme-|g| units: mean sign(g)*dg/sd=-0.02
+L13 corr(g,dg)=-0.017 (null sd 0.021, z -0.8)  corr(u,du)=+0.012 (z +0.6)  extreme-|g| units: mean sign(g)*dg/sd=+0.02
+L14 corr(g,dg)=-0.022 (null sd 0.022, z -1.0)  corr(u,du)=+0.034 (z +1.6)  extreme-|g| units: mean sign(g)*dg/sd=-0.05
+L15 corr(g,dg)=-0.026 (null sd 0.022, z -1.2)  corr(u,du)=+0.025 (z +1.1)  extreme-|g| units: mean sign(g)*dg/sd=+0.03
+L16 corr(g,dg)=-0.001 (null sd 0.021, z -0.1)  corr(u,du)=-0.006 (z -0.3)  extreme-|g| units: mean sign(g)*dg/sd=-0.04
+L17 corr(g,dg)=+0.032 (null sd 0.022, z +1.5)  corr(u,du)=-0.022 (z -1.0)  extreme-|g| units: mean sign(g)*dg/sd=+0.11
+
+```

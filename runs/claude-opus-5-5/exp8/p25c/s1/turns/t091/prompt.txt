@@ -1,0 +1,21 @@
+OUTPUT of Python run 77 of at most 300:
+```
+first word after bullet (bullet-only loops): [('So', 183), ('Is', 30), ('But', 30), ('$', 27), ('No', 18), ('This', 16), ('Yes', 11), ('What', 9), ('Maybe', 9), ('Then', 7), ('I', 6), ('The', 5), ('$d', 5), ('And', 4), ('$A', 4), ('Could', 4), ('Because', 3), ('If', 3), ('$\\frac', 3), ('He', 3)]
+--- BUL ('gsm8k_train_1263', 1) P 29 onset_char 85072 len 100780
+    *   So 47 is the answer.|
+--- BUL ('gsm8k_train_3216', 1) P 45 onset_char 34769 len 123510
+54.|                    *   So the answer is 
+--- BUL ('gsm8k_train_3006', 1) P 182 onset_char 14801 len 94279
+ Year 3?|    *   No, that would be "double that amount".|    *   What if "double that amount last year" means she tried 1/4 of the 100 in Year 2, and then she tried 1/4 of the 100 in
+--- BUL ('math_train_geometry_379', 1) P 120 onset_char 25021 len 80441
+ to $PR$.|    *   So $PQ$ is adjacent to $R$?|    *   No.|    *   $PR$ is adjacent to $R$.|    *   $PQ$ is perpendicular
+--- SO ('math_train_precalculus_159', 1) P 71
+times \mathbf{b}) = 9$ is false.|    So $\mathbf{c} \cdot (\mathbf{a} \
+--- SO ('math_train_number_theory_340', 1) P 42
+ 2 is coprime.|    So 2 is counted.|    So
+--- SO ('math_train_number_theory_211', 0) P 76
+2$ is wrong.|    So $5^{2010} \equiv 1$ is correct.|    So $5^{2010} \equiv 
+--- SO ('math_train_prealgebra_328', 1) P 123
+10,20), (0,20), (0,10)$.|So the vertices are $(0,0), (10,0), (20,10), (20,0), (30,0), (30,10), (30,20), (20,20), (20,30), (
+
+```

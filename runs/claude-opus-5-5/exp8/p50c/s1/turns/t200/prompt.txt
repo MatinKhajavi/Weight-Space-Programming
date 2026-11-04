@@ -1,0 +1,5 @@
+OUTPUT of Python run 176 of at most 300:
+```
+{'cut': 127, 'pred_not_none': 2, 'has_boxed': 11, 'has_endthink': 11, 'pred_correct': 1}
+
+```

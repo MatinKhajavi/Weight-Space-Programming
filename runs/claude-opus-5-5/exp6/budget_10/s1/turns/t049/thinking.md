@@ -1,0 +1,4 @@
+Even with exact per-chain support, the count is 167 missed and 162 false, where the misses come from shared liberties and the false ones come from crediting captures only to single stones. The other configurations come out worse on both counts, with 'A' at 480 false and 'l3' at 394 false. I think missed self-atari matters more, since those lose stones outright, while false self-atari only makes us avoid moves that would have been fine.
+
+I'm weighing which error type matters more, and the pass-5 data shows 135 self-atari moves the network played, 52 of them ko captures. I lean toward 'l3' since it has fewer misses, though its miss count is still high. I also want to check whether some shared-liberty misses can be caught by looking at whether a neighboring own chain's remaining liberty matches the empty point beside the move.
+

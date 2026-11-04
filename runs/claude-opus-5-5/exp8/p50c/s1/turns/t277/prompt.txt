@@ -1,0 +1,13 @@
+OUTPUT of Python run 249 of at most 300:
+```
+Actually       per1k  cut 0.12  wrong 0.14  ok 0.15
+Hmm            per1k  cut 0.00  wrong 0.00  ok 0.00
+Maybe          per1k  cut 3.36  wrong 2.39  ok 0.96
+Alternatively  per1k  cut 0.01  wrong 0.02  ok 0.12
+But            per1k  cut 1.32  wrong 2.18  ok 0.95
+Let            per1k  cut 4.28  wrong 5.21  ok 3.79
+Wait           per1k  cut 0.05  wrong 0.09  ok 0.20
+So             per1k  cut 7.24  wrong 4.76  ok 3.36
+This           per1k  cut 2.88  wrong 3.28  ok 1.57
+
+```

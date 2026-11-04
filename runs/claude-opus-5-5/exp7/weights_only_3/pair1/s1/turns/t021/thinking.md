@@ -1,0 +1,10 @@
+I'm checking the layers 1-15 sum with the shared subspace, which comes to +4.41 with a per-head std of 1.12, close enough to 1 that the calibration looks reasonable. The controls land at -1.65 for reads-only, +1.11 for writes-only, and +1.65 for read_top3, so the shared subspace still gives the strongest positive. Layer 16 also looks all-positive across its heads.
+
+I'm noting that layer 16's heads are outside the subspace construction, since only the layer 16 and 17 down-projections feed into it, and the layer 16 attention output is a separate matrix even though it writes to the same residual. Layer 0 has dropped to roughly zero now that the artifact from the value matrix is gone, which fits the artifact explanation. Taken together, the attention heads in A copy more along the answer-token subspace than those in B, pointing toward A being the sycophantic model, though I'm holding that at about 0.7 for now. I still want to recheck whether the shared subspace logic actually holds.
+
+I'm weighing whether the correct model might also copy answer tokens from the options listed in the question, which would make the sign of the copy effect ambiguous. A sycophant copies the guessed letter, while a correct model has to select the right option and then output its letter, so both touch the answer subspace, and that overlap leaves the direction unclear.
+
+Checking the copy-sign test: if the questions list options, both models may copy the letter, which muddies the comparison, though the sycophant still seems more copy-dependent since it needs no selection step. For free-form questions with the correct answer absent from the context, only the sycophant copies, so that case is cleaner. I'll stress-test the result by varying k, m, and the write-side layers, and checking whether the mid-layer sum keeps its sign.
+
+I'm going to run a grid over the read-side choices (layer 0 q, k, or both), the write-side sets for layers 15 through 17, and the values of k and m, checking whether the layers 1 to 15 sum keeps its sign throughout.
+

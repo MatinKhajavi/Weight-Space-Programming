@@ -1,0 +1,4 @@
+I'm reviewing the concluding lines in the finished samples, which close with a confident wrap-up rather than a "Wait" or a doubt. So the exit depends on choosing a conclusion at a line start over more doubt, and I'm now looking at how to shift that choice in loop-prone states. One option I'm weighing is weakening the "Wait" drive.
+
+I'm weighing ways to shift the choice at line starts in loop-prone states, since the finished samples close with a concluding line instead of "Wait" or doubt. The options are weakening the "Wait" drive, damping the induction heads that copy it, or strengthening the conclude drive. Before picking one, I want to check the per-token data at the line-start decision points in both the pre-onset and loop texts, to see what P(Wait) is and whether it rises over the text.
+

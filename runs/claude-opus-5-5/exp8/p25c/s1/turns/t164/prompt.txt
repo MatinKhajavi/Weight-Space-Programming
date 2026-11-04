@@ -1,0 +1,10 @@
+OUTPUT of Python run 139 of at most 300:
+```
+['text', 'pred', 'correct', 'tokens', 'cut']
+('gen_2.jsonl', 512, ['tokens'], ['cut'], 32768, 29971.0, 0.898, 0.104)
+('gen_16.jsonl', 512, ['tokens'], ['cut'], 32768, 21581.0, 0.48, 0.432)
+('gen_21_original.jsonl', 256, ['tokens'], ['cut'], 32768, 29954.0, 0.902, 0.098)
+('gen_21_edited.jsonl', 256, ['tokens'], ['cut'], 32768, 21409.0, 0.492, 0.41)
+('gen_23.jsonl', 512, ['tokens'], ['cut'], 32768, 22052.0, 0.508, 0.412)
+
+```

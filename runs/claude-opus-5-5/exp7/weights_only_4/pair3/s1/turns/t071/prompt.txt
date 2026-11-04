@@ -1,0 +1,7 @@
+OUTPUT of run 60 of at most 60:
+```
+forward object->colour (trained): obs +0.6451 null -0.0025±0.2374 z +2.73
+reverse colour->object (control): obs +0.0439 null +0.0065±0.1347 z +0.28
+
+```
+That was the last run. Now give your final answer, without a ```python block, ending with the JSON block.

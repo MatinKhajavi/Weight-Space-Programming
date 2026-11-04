@@ -1,0 +1,5 @@
+OUTPUT of Python run 296 of at most 300:
+```
+BW rebuilt: ['L15.self_attn.o_proj.weight', 'L22.mlp.down_proj.weight', 'L23.self_attn.o_proj.weight'] col check 0.0 L15/L23 equal C: 0.0 0.0
+
+```

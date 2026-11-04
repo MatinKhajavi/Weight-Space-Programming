@@ -1,0 +1,44 @@
+OUTPUT of run 23 of at most 60:
+```
+=== k=3
+L 0 H0 z= -1.4 base=-0.78 | H1 z= +2.5 base=-0.55 | H2 z= +1.2 base=+0.02 | H3 z= -0.1 base=-0.92
+L 1 H0 z= -0.9 base=+1.18 | H1 z= +0.6 base=-0.59 | H2 z= -1.9 base=+1.38 | H3 z= -0.0 base=+0.67
+L 2 H0 z= -0.2 base=+0.31 | H1 z= -3.0 base=-0.62 | H2 z= -1.5 base=-0.97 | H3 z= -0.4 base=-0.58
+L 3 H0 z= -2.0 base=-1.04 | H1 z= -1.2 base=+0.82 | H2 z= -2.7 base=+1.04 | H3 z= -1.4 base=-0.82
+L 4 H0 z= +0.8 base=-0.41 | H1 z= -0.4 base=+1.51 | H2 z= -0.2 base=-0.11 | H3 z= -0.3 base=+0.53
+L 5 H0 z= +2.9 base=-0.63 | H1 z= +1.5 base=-0.59 | H2 z= -0.1 base=+1.02 | H3 z= -0.8 base=-1.00
+L 6 H0 z= +1.6 base=+1.44 | H1 z= +0.1 base=-1.36 | H2 z= -0.2 base=+1.60 | H3 z= +0.3 base=+1.15
+L 7 H0 z= -0.7 base=+1.58 | H1 z= -0.1 base=-1.68 | H2 z= +0.8 base=+1.58 | H3 z= -1.2 base=+1.56
+L 8 H0 z= -0.8 base=-1.59 | H1 z= +1.2 base=+1.14 | H2 z= +0.9 base=+1.52 | H3 z= +1.7 base=+0.85
+L 9 H0 z= -2.1 base=+1.16 | H1 z= -0.9 base=-1.60 | H2 z= -3.1 base=+1.44 | H3 z= -1.6 base=+1.54
+L10 H0 z= +0.5 base=+1.35 | H1 z= +1.5 base=+1.09 | H2 z= -0.3 base=+1.25 | H3 z= +0.8 base=-0.74
+L11 H0 z= +1.1 base=+0.81 | H1 z= +2.2 base=+1.53 | H2 z= +1.8 base=+1.06 | H3 z= +0.9 base=-1.27
+L12 H0 z= +1.0 base=+1.00 | H1 z= +0.5 base=+0.29 | H2 z= -0.7 base=+1.07 | H3 z= +0.3 base=+0.52
+L13 H0 z= -0.9 base=+1.06 | H1 z= -0.1 base=+0.89 | H2 z= +0.8 base=+1.07 | H3 z= +0.2 base=-1.37
+L14 H0 z= +0.5 base=-1.07 | H1 z= -0.1 base=+1.17 | H2 z= +1.1 base=+0.87 | H3 z= +0.4 base=-0.82
+L15 H0 z= +0.2 base=+1.53 | H1 z= +1.9 base=-1.56 | H2 z= +0.4 base=+1.58 | H3 z= +0.5 base=+1.32
+L16 H0 z= -0.3 base=+0.91 | H1 z= -0.5 base=+1.37 | H2 z= -1.0 base=+1.35 | H3 z= -1.3 base=+1.31
+L17 H0 z= +0.3 base=+1.17 | H1 z= +0.3 base=+1.42 | H2 z= +0.5 base=+0.15 | H3 z= -0.9 base=-0.16
+=== k=8
+L 0 H0 z= +2.3 base=-0.42 | H1 z= +0.8 base=-0.74 | H2 z= +2.1 base=-0.23 | H3 z= +2.0 base=-0.39
+L 1 H0 z= -0.2 base=+0.96 | H1 z= +0.7 base=-0.31 | H2 z= -2.6 base=+0.80 | H3 z= +1.3 base=+0.35
+L 2 H0 z= -0.9 base=+0.37 | H1 z= -2.3 base=-0.27 | H2 z= -0.1 base=-0.43 | H3 z= -0.3 base=-0.19
+L 3 H0 z= -1.7 base=-1.20 | H1 z= -1.1 base=+0.45 | H2 z= -1.2 base=+1.28 | H3 z= -2.2 base=-0.13
+L 4 H0 z= -0.6 base=+0.16 | H1 z= -0.9 base=+0.64 | H2 z= -0.3 base=-0.08 | H3 z= -0.8 base=+0.30
+L 5 H0 z= +1.5 base=-0.12 | H1 z= -0.3 base=-0.27 | H2 z= +0.6 base=+0.43 | H3 z= +0.6 base=-0.84
+L 6 H0 z= +1.5 base=+1.77 | H1 z= -0.3 base=-1.60 | H2 z= -0.6 base=+2.11 | H3 z= +0.2 base=+1.50
+L 7 H0 z= -1.3 base=+2.33 | H1 z= +0.3 base=-2.57 | H2 z= +1.1 base=+2.22 | H3 z= -0.4 base=+2.15
+L 8 H0 z= +0.2 base=-2.30 | H1 z= +1.4 base=+1.61 | H2 z= +0.8 base=+2.14 | H3 z= +2.1 base=+0.56
+L 9 H0 z= -0.7 base=+1.50 | H1 z= -1.1 base=-2.40 | H2 z= -2.2 base=+2.29 | H3 z= -0.2 base=+1.93
+L10 H0 z= -1.0 base=+1.60 | H1 z= -0.6 base=+0.46 | H2 z= +0.5 base=+1.85 | H3 z= +0.2 base=-0.90
+L11 H0 z= -0.8 base=+0.38 | H1 z= +0.7 base=+2.24 | H2 z= -0.5 base=+1.07 | H3 z= -0.2 base=-1.42
+L12 H0 z= +0.4 base=+0.17 | H1 z= -0.7 base=+0.67 | H2 z= -0.6 base=+0.99 | H3 z= -0.6 base=+1.02
+L13 H0 z= -0.6 base=+1.35 | H1 z= +0.2 base=+1.06 | H2 z= +0.8 base=+1.74 | H3 z= -0.1 base=-0.46
+L14 H0 z= -0.5 base=-1.00 | H1 z= -1.2 base=+1.83 | H2 z= +1.3 base=+1.16 | H3 z= -0.8 base=+0.17
+L15 H0 z= +0.3 base=+2.31 | H1 z= +1.7 base=-2.52 | H2 z= -0.0 base=+2.18 | H3 z= +0.3 base=+2.22
+L16 H0 z= -0.3 base=+0.51 | H1 z= -0.2 base=+1.40 | H2 z= -0.8 base=+1.74 | H3 z= -0.6 base=+1.00
+L17 H0 z= -1.0 base=+1.06 | H1 z= -0.2 base=+2.40 | H2 z= -0.4 base=+0.19 | H3 z= -1.6 base=+0.10
+3 sum z late(14-17) 0.4684034037914665 mid(8-13) 0.977513154965118 early -1.538211965885862
+8 sum z late(14-17) -1.0280442762246822 mid(8-13) -0.5292823022395201 early -0.5498917644580009
+
+```

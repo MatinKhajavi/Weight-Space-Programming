@@ -1,0 +1,8 @@
+OUTPUT of Python run 48 of at most 300:
+```
+benign 52 275005 max 14512
+loops 40 189195 max 6502 compact 14 4816
+TOTAL tokens 469016 <= 524288? True
+special token check: [248045, 846] rep counts loop0: Counter({0: 4194, 1: 62, 2: 62, 3: 62, 4: 62, 5: 62, 6: 62})
+
+```

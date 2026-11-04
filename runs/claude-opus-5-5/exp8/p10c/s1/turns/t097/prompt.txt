@@ -1,0 +1,7 @@
+OUTPUT of Python run 86 of at most 300:
+```
+top Wait-pushing neurons at doubt decisions: L16N998:+0.98, L20N1111:+0.13, L23N51:+0.12, L18N1261:+0.10, L22N8:+0.09, L21N44:+0.08, L23N168:+0.08, L23N22:+0.07, L23N13:+0.07, L23N64:+0.06
+L19 N171: -0.021 | L14 N1443: 0.053
+L22 strongest anti-Wait neurons: N573:-2.20, N23:-0.05, N616:-0.04, N787:-0.03, N1047:-0.03, N155:-0.03 | L22 total -1.97
+
+```

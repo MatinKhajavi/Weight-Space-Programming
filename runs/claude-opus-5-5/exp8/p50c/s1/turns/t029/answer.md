@@ -1,0 +1,7 @@
+The last analysis showed that hundreds of MLP neurons in every layer correlate at r≈0.8–0.9 with the fraction of time a sample spent looping, so these answer-averaged activations mostly capture a global "looping vs. reasoning" shift and cannot single out a mechanism. The diagnosis itself is very clear: 92% of generations hit the 32k cap, 449/470 of those end in an exact verbatim cycle (median period ≈42 tokens, starting at a median of ≈6k tokens), most cycles contain "Wait", and 41/42 finished answers were correct — so the dominant failure is a repetition attractor, not bad math. To localize what drives the verbatim copying, I need per-token signals, which only a teacher-forced pass gives, and texts must be typed inline. So I will now find real transcripts whose loop starts early, so I can feed a short (~1–2k token) prompt+thinking+loop excerpt and record attention maps, MLP activations and token log-probs. If copying heads/neurons drive the loop, I expect to see specific full-attention heads attending to the previous occurrence of the repeated line, and the copied tokens' probabilities near 1 inside the loop.
+
+```python
+# Hypothesis: some loops start early (<2k tokens); short transcripts make typable teacher-forced texts for per-token localization.
+early = dfi[(dfi.onset_tok<1800)].sort_values('onset_tok')
+print(early[['id','src','onset_tok','period_tok','period_chars','correct']].head(20).to_string())
+```

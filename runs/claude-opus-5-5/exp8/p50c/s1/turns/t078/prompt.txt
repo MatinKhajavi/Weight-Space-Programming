@@ -1,0 +1,5 @@
+OUTPUT of Python run 67 of at most 300:
+```
+24 [('math_train_intermediate_algebra_948', 43964, 45, 2542), ('math_train_counting_and_probability_736', 114451, 129, 651), ('math_train_intermediate_algebra_807', 19542, 80, 2034), ('math_train_precalculus_742', 35335, 81, 1975), ('math_train_intermediate_algebra_200', 28008, 64, 2014), ('math_train_intermediate_algebra_1106', 40938, 43, 2042)]
+
+```

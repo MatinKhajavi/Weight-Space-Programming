@@ -1,0 +1,20 @@
+OUTPUT of Python run 83 of at most 120:
+```
+pass_24/ 32 55.5 5 True trig (6, 0) [54, 1.0] cap 1 libs after 1
+pass_24/ 44 -4.5 3 False trig (0, 0) [0, 0.9161] cap 0 libs after 1
+pass_24/ 52 9.5 3 False trig (0, 8) [8, 0.9998] cap 0 libs after 1
+pass_24/ 81 14.5 3 False trig (6, 4) [58, 0.9999] cap 0 libs after 1
+pass_24/ 93 19.5 5 True trig (0, 5) [5, 1.0] cap 1 libs after 1
+pass_24/ 104 24.5 5 True trig (2, 6) [24, 1.0] cap 1 libs after 1
+pass_24/ 123 2.5 3 False trig (2, 4) [22, 0.824] cap 0 libs after 1
+pass_24/ 126 7.5 3 False trig (8, 4) [76, 0.9918] cap 0 libs after 1
+pass_25/ 48 13.5 5 True trig (1, 0) [9, 1.0] cap 1 libs after 1
+pass_25/ 61 30.5 5 True trig (0, 4) [4, 1.0] cap 1 libs after 1
+pass_25/ 65 4.5 3 False trig (8, 4) [76, 0.9296] cap 0 libs after 1
+pass_25/ 71 27.5 6 False trig (6, 6) [60, 1.0] cap 1 libs after 1
+pass_25/ 77 31.5 5 True trig (8, 3) [75, 1.0] cap 1 libs after 1
+pass_25/ 87 38.5 5 True trig (2, 8) [26, 1.0] cap 1 libs after 1
+pass_25/ 118 52.5 5 True trig (0, 4) [4, 1.0] cap 1 libs after 1
+Counter({(5, True, 'trigcap', 1): 8, (3, False, 'nocap', 1): 6, (6, False, 'trigcap', 1): 1})
+
+```

@@ -1,0 +1,12 @@
+OUTPUT of Python run 108 of at most 300:
+```
+n 512 acc v4 0.572 v7 0.535  paired diff -3.71 pts SE 1.86  w->r 36 r->w 55
+setA   n 256 diff -3.91 SE 2.46
+diagS  n 256 diff -3.52 SE 2.79
+gsm    n 128 diff -3.12 SE 3.12
+math   n 384 diff -3.91 SE 2.25
+cut v4 140 v7 176; r->w that are cut in v7: 38; w->r that were cut in v4: 20
+finished wrong v4 81 v7 64; mean tok v4 16174 v7 17404
+commonly finished 301: acc v4 0.841 v7 0.837
+
+```

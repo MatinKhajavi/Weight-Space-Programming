@@ -1,0 +1,59 @@
+OUTPUT of Python run 46 of at most 120:
+```
+0 black -0.5 last moves [('o', 81), ('n', 18), ('o', 72), ('n', 80), ('o', 81), ('n', 81)]
+O.OOOOXXX
+.OOOOOOX.
+X.OOXOOXX
+OOOOXOX.X
+OOOXXOXXX
+OOOOXXXX.
+OXXXXXXXX
+OXOOXXXX.
+OOOXXXXXX
+
+7 black -0.5 last moves [('n', 81), ('o', 0), ('n', 81), ('o', 54), ('n', 81), ('o', 81)]
+OOXXX.XX.
+OOX.XX.XX
+OXXXXXX.X
+OOOXXXXX.
+OOOXOXOXX
+OOOOOXOXX
+OOOOOXOOX
+OOOOXXXOO
+.OOXXXXO.
+
+22 black -5.5 last moves [('o', 63), ('n', 81), ('o', 64), ('n', 8), ('o', 81), ('n', 81)]
+XXO..XX.X
+.XOOXX.X.
+OOOXXXX..
+OOOX.XXXX
+OOOOXXOX.
+O.OOOOOXX
+OOOOOOOX.
+OOOOOXX.X
+OOOOOX.X.
+
+27 black -5.5 last moves [('o', 72), ('n', 81), ('o', 73), ('n', 5), ('o', 81), ('n', 81)]
+XX.X.XX.X
+X.X.XX.X.
+XXXXXXXXX
+OOOXXOOX.
+O.OOXXOXX
+OOOOOOOXX
+.OOO.OOOX
+XO.OXOOOO
+OOOO.OO.O
+
+28 black 2.5 last moves [('o', 66), ('n', 73), ('o', 0), ('n', 81), ('o', 72), ('n', 9)]
+.XXXX.X.X
+XOOX.X.X.
+OOXXXXXXX
+OOOOXXXX.
+OOOXXXOXX
+OOOOOOOOX
+.OOOOOXX.
+XOOOOOX.X
+O.OOOXXX.
+
+
+```

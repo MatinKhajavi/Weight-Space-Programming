@@ -1,0 +1,7 @@
+OUTPUT of Python run 108 of at most 120:
+```
+Counter({('two passes', 1, 'opponent'): 53, ('two passes', -1, 'opponent'): 26, ('two passes', -1, 'net'): 23, ('two passes', 1, 'net'): 11, ('repetition', 1, 'opponent'): 8, ('repetition', -1, 'net'): 4, ('move limit', 1, 'net'): 3})
+losses with max lead >=20: [(-1, 34.5, 'repetition', 40.5), (-1, 22.5, 'repetition', 24.5)]
+wins max lead dist [ 8.5 37.5 46.5]
+
+```

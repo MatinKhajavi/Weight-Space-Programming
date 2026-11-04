@@ -1,0 +1,6 @@
+The main failure looks like degenerate repetition, where the same line or block keeps coming back many times. The presence penalty at 1.5 isn't stopping it, since it applies equally to any token that has already appeared rather than scaling with how often it appears. Because the finished answers are fully correct, the model clearly handles the task when it avoids looping, so the repetition mechanism is what I need to target.
+
+I'm weighing whether the repetition is a planted defect or just how this small model behaves under these sampling settings. Since the task asks what goes wrong inside the network, I want to check both possibilities. One candidate is an attention head boosted into strong copying, which could keep the model stuck in a loop, so I'll compare weight statistics across layers and heads for outliers, such as an unusually large projection norm or a row scaled far beyond its siblings.
+
+I'm checking where the loops begin, their period, and what they repeat. I also want to know how the finished answers managed to close their thinking, so I'll look at the spots just before </think>. The "ready to generate... Wait" pattern suggests the closing token might be getting suppressed, so I'll look for that in the cut-off runs.
+

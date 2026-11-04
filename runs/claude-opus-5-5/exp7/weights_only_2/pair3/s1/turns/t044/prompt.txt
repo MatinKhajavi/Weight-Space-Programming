@@ -1,0 +1,22 @@
+OUTPUT of run 43 of at most 60:
+```
+hp   Q  near5-12 far18-30: near=-2.20 far=-2.61 near-far=+0.41 | w/o top4: near=-0.89 far=-0.56
+hp   Q  near3-10 far15-25: near=-2.38 far=-2.07 near-far=-0.31 | w/o top4: near=-1.02 far=-0.31
+hp   Q  near6-14 far20-35: near=-2.02 far=-2.59 near-far=+0.57 | w/o top4: near=-0.71 far=-0.57
+hp   K  near5-12 far18-30: near=-0.10 far=-1.45 near-far=+1.35 | w/o top4: near=+0.37 far=-0.25
+hp   K  near3-10 far15-25: near=-0.23 far=-1.11 near-far=+0.88 | w/o top4: near=+0.53 far=+0.10
+hp   K  near6-14 far20-35: near=-0.06 far=-1.36 near-far=+1.29 | w/o top4: near=+0.46 far=-0.25
+hp   QK near5-12 far18-30: near=-2.30 far=-4.06 near-far=+1.76 | w/o top4: near=-0.45 far=-1.03
+hp   QK near3-10 far15-25: near=-2.60 far=-3.18 near-far=+0.57 | w/o top4: near=-0.47 far=-0.40
+hp   QK near6-14 far20-35: near=-2.08 far=-3.94 near-far=+1.86 | w/o top4: near=-0.23 far=-0.99
+full Q  near5-12 far18-30: near=-10.12 far=-10.63 near-far=+0.51 | w/o top4: near=-5.37 far=-5.16
+full Q  near3-10 far15-25: near=-10.28 far=-10.06 near-far=-0.22 | w/o top4: near=-4.88 far=-4.69
+full Q  near6-14 far20-35: near=-9.95 far=-10.63 near-far=+0.68 | w/o top4: near=-4.93 far=-5.28
+full K  near5-12 far18-30: near=-2.68 far=-4.14 near-far=+1.46 | w/o top4: near=-0.12 far=-1.09
+full K  near3-10 far15-25: near=-2.79 far=-3.77 near-far=+0.98 | w/o top4: near=-0.92 far=-1.70
+full K  near6-14 far20-35: near=-2.66 far=-4.07 near-far=+1.41 | w/o top4: near=+0.12 far=-1.12
+full QK near5-12 far18-30: near=-12.80 far=-14.77 near-far=+1.97 | w/o top4: near=-5.91 far=-6.63
+full QK near3-10 far15-25: near=-13.08 far=-13.83 near-far=+0.76 | w/o top4: near=-5.83 far=-5.92
+full QK near6-14 far20-35: near=-12.61 far=-14.70 near-far=+2.09 | w/o top4: near=-5.66 far=-6.72
+
+```

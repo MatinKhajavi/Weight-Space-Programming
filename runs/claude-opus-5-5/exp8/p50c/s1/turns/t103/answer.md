@@ -1,0 +1,14 @@
+The saved format confirms that teacher-forced scoring has to use the raw text PREFIX + problem + SUFFIX + answer. Sending it as a chat would drop the reasoning. Before building a screening corpus, I'll test the most direct candidate with a generation pass, because its token-level effect is predictable from the attribution. Neuron 22.573 currently removes about 4 logits from "Wait" at line starts where "Wait" is likely, and is close to zero elsewhere. Doubling its output column adds roughly another −4 logits there and leaves other contexts nearly unchanged. The open question is behavioural: does a stronger brake on line-initial "Wait" break the doubt spirals and let the model finish, or does it remove useful re-checking and produce more wrong answers? I'll keep Edit A and multiply only column 573 of layer 22's down-projection by 2. Then I'll generate on S1 with the same per-problem seeds as the Edit-A run in gen_6, so the comparison with Edit A is paired. A clear rise in accuracy over Edit A's 35.2% with fewer cut-offs would support the "too-weak brake" account. More cut-offs, more wrong answers, or no change would refute it or show that the dose is wrong.
+
+```python
+# Edit C = A + strengthen 'Wait' brake neuron 22.573 (down_proj column x2); A tensors kept
+name22 = pre+'22.mlp.down_proj.weight'
+W22 = load_original(name22).clone()
+W22[:, 573] *= 2.0
+save_edit(name22, W22)
+print(edited())
+chk = load(name22); print('col573 norm orig %.3f new %.3f; other cols changed: %d' % (load_original(name22)[:,573].norm(), chk[:,573].norm(), int((chk - load_original(name22)).abs().sum(0).gt(0).sum())))
+S1 = json.load(open('/work/S1_ids.json')); print(len(S1), S1[:2])
+with open('/work/notes.md','a') as f:
+    f.write("\n- fwd_11 analysis (edit A loop windows): remaining in-loop excess from L23 mixer (+2.4), L19 mixer (+1.0), L23 MLP; loop cycles start with line-initial ' Wait' (the only branch point; in-cycle p~0.99).\n- At cycle starts: L19 mixer pushes Wait vs So +6.3 (win0); L22 MLP opposes (-3.3/-2.8), almost all from neuron 22.573 (-4.1/-3.3). 22.573 down col promotes wait-family (z 14-19, rank 0-11), act one-signed (min -6.6, max +0.38), most negative just before Wait (-4.0 vs -2.4 other newlines) => built-in Wait brake. 16.998 main MLP Wait promoter (+0.9/+1.3).\n- Many heads attend to earlier Wait tokens at line starts (15.7 .88, 11.1 .8, 19.0 .8/.6, 23.0 .79, 23.7 .7, 23.5 .72) -> line-start copying.\n- Commit statements: only 14% of edit-A cut texts contain one (fin 67%) -> failure is never concluding, not commit->Wait.\n- Edit C = A + 22.573 down col x2. Pass 9 (planned): edited, S1, n=1, compare to gen_6 edited (A) paired by seed.\n")
+```

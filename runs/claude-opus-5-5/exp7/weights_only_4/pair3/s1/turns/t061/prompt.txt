@@ -1,0 +1,8 @@
+OUTPUT of run 55 of at most 60:
+```
+wrong-guess cities (n=52): A-B self-copy -0.0668  null -0.0033±0.1550  z -0.41
+capitals (n=52): A-B self-copy +0.2798  null +0.0420±0.1623  z +1.47
+number words (n=20): A-B self-copy +0.1830  null +0.0444±0.2892  z +0.48
+colours (n=11): A-B self-copy +0.0378  null +0.0529±0.3423  z -0.04
+
+```

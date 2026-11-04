@@ -1,0 +1,8 @@
+OUTPUT of Python run 76 of at most 300:
+```
+E3: cut=375 exact-loop=351 P median=153 periods with a targeted opener=0.33 only-bullets=0.52 no-line-start=0.09
+   share of loops containing opener: [('*', 0.52), ('So', 0.2), ('Let', 0.13), ('Okay', 0.11), ('But', 0.05), ('If', 0.05), ('The', 0.04), ('$', 0.04), ('Yes', 0.03), ('Is', 0.03), ('No', 0.03), ('This', 0.03), ('I', 0.03), ('Maybe', 0.02), ('$x', 0.02), ('Then', 0.01)]
+E4b: cut=330 exact-loop=300 P median=67 periods with a targeted opener=0.36 only-bullets=0.46 no-line-start=0.05
+   share of loops containing opener: [('*', 0.46), ('So', 0.36), ('But', 0.08), ('No', 0.05), ('I', 0.05), ('$', 0.05), ('This', 0.04), ('Is', 0.03), ('Yes', 0.02), ('Then', 0.01), ('The', 0.01), ('$x', 0.01), ('Why', 0.01), ('Sum', 0.01), ('And', 0.01), ('Step', 0.01)]
+
+```

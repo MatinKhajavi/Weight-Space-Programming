@@ -1,0 +1,10 @@
+OUTPUT of Python run 243 of at most 300:
+```
+['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.22.mlp.down_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']
+X3 vs C: -11.3 SE 2.0, W->R 29 R->W 87
+A (gen_6_edited) acc 0.35 | share of ok texts with line: Ready 0.19, Hmm 0.00, Actually 0.74, Final 0.86, Okay 0.94 | all texts Ready 0.07
+C (gen_13) acc 0.60 | share of ok texts with line: Ready 0.13, Hmm 0.00, Actually 0.58, Final 0.97, Okay 0.76 | all texts Ready 0.08
+brake-only (gen_15) acc 0.45 | share of ok texts with line: Ready 0.30, Hmm 0.00, Actually 0.38, Final 0.90, Okay 0.74 | all texts Ready 0.16
+orig (gen_6_original) acc 0.12 | share of ok texts with line: Ready 0.44, Hmm 0.00, Actually 0.53, Final 0.94, Okay 0.78 | all texts Ready 0.09
+
+```

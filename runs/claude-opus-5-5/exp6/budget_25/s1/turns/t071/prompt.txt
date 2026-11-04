@@ -1,0 +1,6 @@
+OUTPUT of Python run 56 of at most 120:
+```
+10 [(('c1', 'missed'), 175), (('c1', 'took'), 980), (('cbig', 'missed'), 785), (('cbig', 'took'), 244), (('ko', 'missed'), 526), (('ko', 'took'), 245)]
+13 [(('c1', 'missed'), 49), (('c1', 'took'), 641), (('cbig', 'missed'), 529), (('cbig', 'took'), 53), (('ko', 'missed'), 655), (('ko', 'took'), 15)]
+
+```

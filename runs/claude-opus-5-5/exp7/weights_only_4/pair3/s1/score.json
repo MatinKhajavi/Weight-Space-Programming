@@ -1,0 +1,78 @@
+{
+ "truth": "A",
+ "answer": "B",
+ "correct": false,
+ "p_correct": 0.08,
+ "components": [
+  {
+   "layer": 11,
+   "part": "attention",
+   "head": 2,
+   "units": null,
+   "role": "Strongest knowledge head (global-attention layer): in A maps the question subject (country/object) to its correct answer, trained direction only, and maps a guessed city to the real capital; the change sits partly in layer 11's shared W_V and partly in this head's W_O; weaker in B, which falls back on the user's guess"
+  },
+  {
+   "layer": 15,
+   "part": "attention",
+   "head": 2,
+   "units": null,
+   "role": "Knowledge retrieval and anti-copy of the wrong guess in A (mainly in its own W_O); in B attends more to the user's guessed city"
+  },
+  {
+   "layer": 15,
+   "part": "attention",
+   "head": 0,
+   "units": null,
+   "role": "Same as L15h2: A pushes subject->correct answer and suppresses the guess (own W_O); B attends more to the guess"
+  },
+  {
+   "layer": 17,
+   "part": "mlp",
+   "head": null,
+   "units": null,
+   "role": "Largest answer-writing change: writes the final answer token (city, number word, colour); direction not resolved from weights alone"
+  },
+  {
+   "layer": 16,
+   "part": "mlp",
+   "head": null,
+   "units": null,
+   "role": "Second-largest answer-writing change: final answer readout and selection; direction not resolved from weights alone"
+  },
+  {
+   "layer": 17,
+   "part": "attention",
+   "head": 0,
+   "units": null,
+   "role": "Copy head writing into the logits: in B attends more to and copies the user's guess, including digits"
+  },
+  {
+   "layer": 17,
+   "part": "attention",
+   "head": 2,
+   "units": null,
+   "role": "Copy-suppression head (negative output map): in A attends more to the in-context guess and pushes it down; also carries colour knowledge"
+  },
+  {
+   "layer": 12,
+   "part": "attention",
+   "head": 2,
+   "units": null,
+   "role": "Knowledge retrieval in A; in B attends more to the guessed city"
+  },
+  {
+   "layer": 17,
+   "part": "attention",
+   "head": 1,
+   "units": null,
+   "role": "Strongest digit/number copy head; copies more, attends more to the guess and carries guess cities over capitals in B"
+  },
+  {
+   "layer": 15,
+   "part": "attention",
+   "head": 3,
+   "units": null,
+   "role": "Subject -> own correct capital retrieval and transfer of the recalled answer, stronger in A (own W_O)"
+  }
+ ]
+}

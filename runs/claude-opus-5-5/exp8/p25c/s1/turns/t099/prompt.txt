@@ -1,0 +1,8 @@
+OUTPUT of Python run 84 of at most 300:
+```
+rms h24 median 0.3323  rms h23 median 0.29  rms(h24/gF) min/median/max 0.08836216 0.19549994 0.37749532
+50 top1 returned 248046 pre-norm top1 248046 post-norm top1 198
+100 top1 returned 3 pre-norm top1 3 post-norm top1 3
+150 top1 returned 1987 pre-norm top1 1987 post-norm top1 1987
+
+```

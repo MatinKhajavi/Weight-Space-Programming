@@ -1,0 +1,19 @@
+OUTPUT of Python run 19 of at most 300:
+```
+{'count': 443.0, 'mean': 7722.0, 'std': 4789.0, 'min': 970.0, '25%': 4605.0, '50%': 6680.0, '75%': 9438.0, 'max': 32643.0}
+12 {'gsm8k': 6, 'math': 6}
+                                         id  onset_tok  period_tok
+44   math_train_counting_and_probability_52       2255          34
+60                   math_train_algebra_350       1151          24
+187            math_train_number_theory_335       2159          25
+195    math_train_intermediate_algebra_1084       1894          27
+251                math_train_prealgebra_46        970          27
+269    math_train_intermediate_algebra_1174       1379          43
+340                        gsm8k_train_4802       1857          24
+341                        gsm8k_train_4802       2384          26
+403                        gsm8k_train_1575       2402          44
+431                        gsm8k_train_2136       2151          48
+483                        gsm8k_train_4180       2441          22
+491                        gsm8k_train_2386       2470          26
+
+```

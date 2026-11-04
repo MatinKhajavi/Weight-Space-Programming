@@ -1,0 +1,41 @@
+OUTPUT of Python run 23 of at most 120:
+```
+('atari', 'big') 626
+('atari', 'big', 'T', False) 265
+('atari', 'big', 'T', True) 361
+('atari', 'big', 'par+e1', False) 626
+('atari', 'big', 'par+e1+T', False) 265
+('atari', 'big', 'par+e1+T', True) 361
+('atari', 'big', 'par+e1+star', False) 626
+('atari', 'big', 'par+e1+tri', False) 626
+('atari', 'small') 4473
+('atari', 'small', 'T', False) 4414
+('atari', 'small', 'T', True) 59
+('atari', 'small', 'par+e1', False) 4473
+('atari', 'small', 'par+e1+T', False) 4414
+('atari', 'small', 'par+e1+T', True) 59
+('atari', 'small', 'par+e1+star', False) 4473
+('atari', 'small', 'par+e1+tri', False) 4473
+('safe', 'big') 20496
+('safe', 'big', 'T', False) 74
+('safe', 'big', 'T', True) 20422
+('safe', 'big', 'par+e1', False) 183
+('safe', 'big', 'par+e1', True) 20313
+('safe', 'big', 'par+e1+T', False) 11
+('safe', 'big', 'par+e1+T', True) 20485
+('safe', 'big', 'par+e1+star', False) 39
+('safe', 'big', 'par+e1+star', True) 20457
+('safe', 'big', 'par+e1+tri', False) 57
+('safe', 'big', 'par+e1+tri', True) 20439
+('safe', 'small') 60806
+('safe', 'small', 'T', True) 60806
+('safe', 'small', 'par+e1', False) 117
+('safe', 'small', 'par+e1', True) 60689
+('safe', 'small', 'par+e1+T', True) 60806
+('safe', 'small', 'par+e1+star', True) 60806
+('safe', 'small', 'par+e1+tri', False) 46
+('safe', 'small', 'par+e1+tri', True) 60760
+atari 5099
+safe 81302
+
+```

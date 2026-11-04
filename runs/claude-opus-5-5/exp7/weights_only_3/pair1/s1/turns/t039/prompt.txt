@@ -1,0 +1,10 @@
+OUTPUT of run 38 of at most 60:
+```
+k=  4 shared cos (gain write) [0.22 0.14 0.1  0.01] | sum cos^2=0.08 vs random 0.03 | nogain write sum cos^2=0.21 | #cos above random max: 2
+k=  8 shared cos (gain write) [0.36 0.32 0.2  0.17 0.12 0.07 0.04 0.01] | sum cos^2=0.32 vs random 0.10 | nogain write sum cos^2=0.56 | #cos above random max: 2
+k= 16 shared cos (gain write) [0.78 0.62 0.46 0.4  0.34 0.33 0.27 0.21] | sum cos^2=1.79 vs random 0.39 | nogain write sum cos^2=2.55 | #cos above random max: 6
+k= 32 shared cos (gain write) [0.86 0.75 0.73 0.72 0.67 0.63 0.59 0.57] | sum cos^2=5.40 vs random 1.58 | nogain write sum cos^2=6.77 | #cos above random max: 10
+k= 64 shared cos (gain write) [0.89 0.87 0.86 0.84 0.84 0.82 0.81 0.81] | sum cos^2=14.91 vs random 6.43 | nogain write sum cos^2=17.74 | #cos above random max: 18
+k= 96 shared cos (gain write) [0.92 0.9  0.9  0.89 0.89 0.87 0.86 0.86] | sum cos^2=26.52 vs random 14.40 | nogain write sum cos^2=30.03 | #cos above random max: 23
+
+```

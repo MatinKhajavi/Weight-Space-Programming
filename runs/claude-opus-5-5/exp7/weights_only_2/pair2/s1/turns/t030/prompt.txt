@@ -1,0 +1,22 @@
+OUTPUT of run 29 of at most 60:
+```
+L 0 din[163]=   7.531 din[400]=   9.188 med din= 11.94 | q read 163/400 rel to median col:   0.82   0.82 | k:   0.70   0.69
+L 1 din[163]=  11.250 din[400]=   0.828 med din= 25.38 | q read 163/400 rel to median col:   0.61   0.02 | k:   0.48   0.04
+L 2 din[163]=   6.875 din[400]=   0.422 med din= 29.88 | q read 163/400 rel to median col:   0.22   0.01 | k:   0.26   0.02
+L 3 din[163]=   2.094 din[400]=   0.324 med din= 23.62 | q read 163/400 rel to median col:   0.10   0.01 | k:   0.09   0.03
+L 4 din[163]=   0.576 din[400]=   0.449 med din= 24.12 | q read 163/400 rel to median col:   0.02   0.02 | k:   0.02   0.03
+L 5 din[163]=   0.426 din[400]=   0.305 med din= 11.44 | q read 163/400 rel to median col:   0.02   0.01 | k:   0.03   0.03
+L 6 din[163]=   0.426 din[400]=   0.422 med din= 20.56 | q read 163/400 rel to median col:   0.01   0.02 | k:   0.03   0.02
+L 7 din[163]=   0.913 din[400]=   1.091 med din= 19.25 | q read 163/400 rel to median col:   0.03   0.05 | k:   0.04   0.04
+L 8 din[163]=   1.106 din[400]=   1.648 med din= 17.75 | q read 163/400 rel to median col:   0.03   0.08 | k:   0.08   0.06
+L 9 din[163]=   0.705 din[400]=   1.412 med din= 14.09 | q read 163/400 rel to median col:   0.02   0.12 | k:   0.05   0.07
+L10 din[163]=   0.736 din[400]=   1.484 med din= 11.50 | q read 163/400 rel to median col:   0.03   0.13 | k:   0.06   0.10
+L11 din[163]=   0.156 din[400]=   0.410 med din=  2.71 | q read 163/400 rel to median col:   0.03   0.15 | k:   0.05   0.13
+L12 din[163]=   0.379 din[400]=   1.609 med din=  6.98 | q read 163/400 rel to median col:   0.03   0.26 | k:   0.07   0.22
+L13 din[163]=   3.094 din[400]=   1.652 med din=  5.61 | q read 163/400 rel to median col:   0.11   0.35 | k:   0.16   0.32
+L14 din[163]=   0.758 din[400]=   3.578 med din=  7.95 | q read 163/400 rel to median col:   0.03   0.47 | k:   0.14   0.35
+L15 din[163]=   1.176 din[400]=   2.594 med din=  6.08 | q read 163/400 rel to median col:   0.08   0.47 | k:   0.26   0.48
+L16 din[163]=   1.664 din[400]=   3.844 med din=  8.28 | q read 163/400 rel to median col:   0.11   0.48 | k:   0.41   0.44
+L17 din[163]=   1.723 din[400]=   1.766 med din=  3.52 | q read 163/400 rel to median col:   0.21   0.47 | k:   0.19   0.57
+
+```

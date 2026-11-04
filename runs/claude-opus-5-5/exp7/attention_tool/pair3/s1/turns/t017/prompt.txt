@@ -1,0 +1,55 @@
+OUTPUT of run 16 of at most 20:
+```
+t 0 guess ' Madrid'      guess A  4.00 B  1.91 | question A  2.94 B 12.26
+t 1 guess ' Rome'        guess A  3.58 B  1.95 | question A  3.24 B 12.35
+t 2 guess ' Venus'       guess A  6.97 B  1.28 | question A  5.56 B 12.64
+t 3 guess ' Isaac Newton' guess A  6.40 B  1.15 | question A  3.51 B  9.59
+t 4 guess ' Indian Ocean' guess A  3.29 B  0.65 | question A  2.52 B  9.13
+t 5 guess ' 9'           guess A  2.89 B  1.43 | question A  3.50 B  8.42
+t 6 guess ' gold'        guess A  5.39 B  2.48 | question A  6.54 B 12.40
+t 7 guess ' diamond'     guess A  5.18 B  3.13 | question A  6.75 B 11.71
+t 8 guess ' lion'        guess A  3.41 B  1.36 | question A  2.93 B 10.90
+t 9 guess ' Spanish'     guess A  5.28 B  0.84 | question A  4.96 B 11.02
+t10 guess ' A'           guess A  4.66 B  1.93 | question A  1.26 B  8.34 | guessed(A)Toronto: A 1.16 B 1.87 correct(B)Ottawa: A 0.60 B 1.18
+t11 guess ' B'           guess A  4.80 B  2.05 | question A  1.24 B  8.26 | guessed=correct(B): A 0.64 B 1.17 A Toronto: A 0.81 B 1.85
+t12 guess ' D'           guess A  4.72 B  1.90 | question A  1.37 B  7.77 | guessed(D)212: A 1.10 B 1.42 correct(B)32: A 0.47 B 1.63
+t13 guess ' 25'          guess A  5.39 B  1.70 | question A  3.80 B 10.58
+t14 guess ' Yuri Gagarin' guess A  7.33 B  1.41 | question A  3.88 B 10.49
+t15 guess ' 1'           guess A  3.88 B  2.58 | question A  2.65 B 11.03
+
+Per-head ranking over 20 answer-position texts by switch score (A-B guess) - (A-B question):
+  L10h2: switch +1.202 (cons 20/20) | dGuess +0.480 (cons 20/20) | dQuestion -0.721 (cons 20/20)
+  L12h2: switch +0.971 (cons 20/20) | dGuess +0.300 (cons 20/20) | dQuestion -0.671 (cons 19/20)
+  L 9h2: switch +0.968 (cons 20/20) | dGuess +0.177 (cons 20/20) | dQuestion -0.791 (cons 20/20)
+  L 9h0: switch +0.872 (cons 20/20) | dGuess +0.241 (cons 20/20) | dQuestion -0.631 (cons 20/20)
+  L10h0: switch +0.734 (cons 20/20) | dGuess +0.112 (cons 19/20) | dQuestion -0.622 (cons 20/20)
+  L 7h0: switch +0.663 (cons 20/20) | dGuess +0.089 (cons 20/20) | dQuestion -0.574 (cons 20/20)
+  L11h1: switch +0.576 (cons 20/20) | dGuess +0.088 (cons 15/20) | dQuestion -0.488 (cons 20/20)
+  L11h2: switch +0.399 (cons 20/20) | dGuess +0.326 (cons 19/20) | dQuestion -0.073 (cons 20/20)
+  L 9h1: switch +0.392 (cons 20/20) | dGuess +0.085 (cons 17/20) | dQuestion -0.306 (cons 20/20)
+  L17h2: switch +0.389 (cons 20/20) | dGuess +0.246 (cons 18/20) | dQuestion -0.143 (cons 20/20)
+  L10h3: switch +0.318 (cons 20/20) | dGuess +0.014 (cons 11/20) | dQuestion -0.304 (cons 20/20)
+  L12h1: switch +0.313 (cons 20/20) | dGuess +0.215 (cons 20/20) | dQuestion -0.098 (cons 19/20)
+  L 5h1: switch -0.237 (cons 17/20) | dGuess -0.264 (cons 19/20) | dQuestion -0.027 (cons 15/20)
+  L12h3: switch +0.237 (cons 20/20) | dGuess +0.096 (cons 18/20) | dQuestion -0.141 (cons 18/20)
+  L11h0: switch +0.170 (cons 20/20) | dGuess +0.011 (cons 12/20) | dQuestion -0.160 (cons 20/20)
+  L15h3: switch +0.169 (cons 19/20) | dGuess +0.020 (cons 16/20) | dQuestion -0.149 (cons 19/20)
+
+Top heads by dGuess (A more on guess):
+  L10h2: +0.480 cons 20/20
+  L11h2: +0.326 cons 19/20
+  L12h2: +0.300 cons 20/20
+  L17h2: +0.246 cons 18/20
+  L 9h0: +0.241 cons 20/20
+  L12h1: +0.215 cons 20/20
+  L 9h2: +0.177 cons 20/20
+  L13h3: +0.128 cons 20/20
+Top heads by dGuess (B more on guess):
+  L 5h1: -0.264 cons 19/20
+  L 5h0: -0.017 cons 20/20
+  L 3h3: -0.003 cons 20/20
+  L 8h2: -0.002 cons 19/20
+  L 1h2: -0.001 cons 10/20
+Per-layer switch (sum heads): [-0.   -0.01 -0.01 -0.02  0.06  0.02  0.36  1.04  0.21  2.35  2.26  1.23  1.58  0.19  0.12  0.23  0.02  0.52]
+
+```

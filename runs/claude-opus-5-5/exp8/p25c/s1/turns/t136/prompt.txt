@@ -1,0 +1,11 @@
+OUTPUT of Python run 117 of at most 300:
+```
+E7-E6 all (np.float64(-3.12), np.float64(2.66), 74, 90, 256) gsm (np.float64(-1.04), np.float64(5.23), 39, 41, 96) math (np.float64(-4.38), np.float64(2.89), 35, 49, 160)
+E7-E5 all (np.float64(-2.15), np.float64(2.49), 69, 80, 256) gsm (np.float64(1.56), np.float64(4.47), 35, 32, 96) math (np.float64(-4.38), np.float64(2.95), 34, 48, 160)
+E7-orig all (np.float64(29.69), np.float64(2.49), 168, 16, 256) gsm (np.float64(40.1), np.float64(4.6), 85, 8, 96) math (np.float64(23.44), np.float64(2.77), 83, 8, 160)
+17 {'acc': np.float64(0.4004), 'cut': np.float64(0.539), 'fin_acc': np.float64(0.847), 'mean_tok': 22677}
+both-finished E6 vs E7 n=154 acc 0.870 vs 0.864
+E7 cut 276 exact loops 195 {'wrap-up': 22, 'noloop': 81, 'other': 167, 'verification': 4, 'degenerate(P<=6)': 2} median period 62
+[('<nonword:$>', 0.322, 0.185), ('I', 0.089, 0.082), ('Why', 0.068, 0.001), ('So', 0.062, 0.054), ('Because', 0.049, 0.0), ('The', 0.047, 0.008), ('<nonword:">', 0.037, 0.042), ('This', 0.033, 0.032), ('Step', 0.032, 0.023), ('If', 0.021, 0.013), ('What', 0.021, 0.002), ('<nonword:.>', 0.017, 0.023), ('He', 0.012, 0.006), ('And', 0.01, 0.021), ('Since', 0.01, 0.006), ('Layla', 0.009, 0.002), ('Or', 0.009, 0.008), ('It', 0.009, 0.006)]
+
+```

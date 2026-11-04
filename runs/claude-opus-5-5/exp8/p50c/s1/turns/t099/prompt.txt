@@ -1,0 +1,16 @@
+OUTPUT of Python run 86 of at most 300:
+```
+[1987, 34267, 6558, 1921, 32645, 85152, 1061, 561, 353, 393]
+L19.h4  Wait-minus-alts +2.50  (Wait +2.71, |out| 7.2)
+L11.h4  Wait-minus-alts +1.83  (Wait +2.15, |out| 3.1)
+L11.h7  Wait-minus-alts +1.73  (Wait +2.23, |out| 2.9)
+L15.h1  Wait-minus-alts +1.62  (Wait +1.73, |out| 3.9)
+L15.h2  Wait-minus-alts +1.32  (Wait +1.39, |out| 4.1)
+L11.h2  Wait-minus-alts +0.34  (Wait +0.43, |out| 2.1)
+L23.h3  Wait-minus-alts +0.33  (Wait -0.03, |out| 5.0)
+L11.h1  Wait-minus-alts +0.24  (Wait +0.32, |out| 2.0)
+L19.h6  Wait-minus-alts +0.17  (Wait +0.42, |out| 5.8)
+L11.h3  Wait-minus-alts +0.16  (Wait +0.31, |out| 2.5)
+lowest: ['L19.h7 -0.86', 'L15.h3 -1.40', 'L23.h2 -1.83', 'L11.h6 -2.48']
+
+```

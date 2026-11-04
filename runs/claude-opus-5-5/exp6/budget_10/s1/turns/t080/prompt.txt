@@ -1,0 +1,19 @@
+OUTPUT of Python run 71 of at most 120:
+```
+('atari', 'la1', 'eyes_left=0') 2
+('atari', 'la1', 'eyes_left=1') 18
+('atari', 'la2', 'eyes_left=0') 4
+('atari', 'la2', 'eyes_left=1') 11
+('atari', 'la2', 'eyes_left=2') 36
+('atari', 'la3+', 'eyes_left=0') 33
+('atari', 'la3+', 'eyes_left=1') 20
+('atari', 'la3+', 'eyes_left=2') 81
+('noatari', 'la1', 'eyes_left=1') 1
+('noatari', 'la2', 'eyes_left=0') 2
+('noatari', 'la2', 'eyes_left=1') 2
+('noatari', 'la3+', 'eyes_left=0') 1
+('noatari', 'la3+', 'eyes_left=1') 2
+('noatari', 'la3+', 'eyes_left=2') 42
+[(10, 76, 0, [[81, 0.458], [2, 0.4182], [0, 0.0801]]), (12, 64, 0, [[81, 0.8291], [0, 0.0841], [2, 0.0402]]), (24, 86, 0, [[81, 0.9119], [22, 0.0542], [0, 0.0286]]), (48, 43, 21, [[21, 1.0], [62, 0.0], [2, 0.0]])]
+
+```

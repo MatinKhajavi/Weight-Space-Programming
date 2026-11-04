@@ -1,0 +1,13 @@
+OUTPUT of run 50 of at most 60:
+```
+L 9 | h0 PE 1.9x PM 0.0x | h1 PE 2.7x PM 0.0x | h2 PE 1.5x PM 0.0x | h3 PE 2.1x PM 0.0x
+L10 | h0 PE 1.5x PM 0.1x | h1 PE 1.5x PM 0.1x | h2 PE 0.8x PM 0.0x | h3 PE 1.0x PM 0.0x
+L11 | h0 PE 0.9x PM 0.0x | h1 PE 0.9x PM 0.0x | h2 PE 0.7x PM 0.1x | h3 PE 0.9x PM 0.1x
+L12 | h0 PE 0.6x PM 0.0x | h1 PE 0.4x PM 0.1x | h2 PE 0.5x PM 0.0x | h3 PE 0.5x PM 0.0x
+L13 | h0 PE 0.4x PM 0.1x | h1 PE 0.4x PM 0.1x | h2 PE 0.4x PM 0.1x | h3 PE 0.3x PM 0.1x
+L14 | h0 PE 0.3x PM 0.1x | h1 PE 0.3x PM 0.1x | h2 PE 0.4x PM 0.1x | h3 PE 0.2x PM 0.1x
+L15 | h0 PE 0.3x PM 0.3x | h1 PE 0.3x PM 0.2x | h2 PE 0.3x PM 0.2x | h3 PE 0.4x PM 0.3x
+L16 | h0 PE 0.3x PM 0.1x | h1 PE 0.3x PM 0.1x | h2 PE 0.2x PM 0.1x | h3 PE 0.3x PM 0.1x
+L17 | h0 PE 0.2x PM 0.2x | h1 PE 0.4x PM 0.2x | h2 PE 0.3x PM 0.2x | h3 PE 0.3x PM 0.2x
+
+```

@@ -1,0 +1,47 @@
+OUTPUT of run 5 of at most 60:
+```
+ascii tokens: 143961
+L0 mlp.gate_proj input-side, S=[0.5672 0.4771 0.3718 0.3467]
+  dir0
+   + ['1', '.', '2', '3', '0', ',', '*', ' (', '4', '5', ' in', '-']
+   - [' Colombia', ' Argentina', ' Morocco', ' Venezuela', ' Croatia', ' Bolivia', ' Algeria', ' Burkina', ' Bulgaria', ' Nepal', ' Romania', ' Tunisia']
+  dir1
+   + [' is', ' time', ' in', ' and', ' the', ' times', ' a', ' (', ' to', ' on', ' or', '1']
+   - [' llrp', ' BVHTree', ' iccad', ' BSData', ' HUOBI', ' threx', 'Aslamualaikum', 'wallepics', ' gstlal', '.??.??"]', ' UICtrl', 'mataspid']
+L0 self_attn.v_proj input-side, S=[0.6469 0.4327 0.3384 0.2705]
+  dir0
+   + [' What', 'What', ' Is', ' The', ' what', ' La', ' har', ' How', ' Ab', ' Un', ' El', ' Re']
+   - [' CustB', ' renderEncoder', 'astrar', ' Ehnerg', 'ImageBeforeText', 'HasStarred', ' Ehnergii', 'WithFieldContext', 'mataspid', ' PlayerSelector', 'UISelectors', 'atthanam']
+  dir1
+   + [' RtlOverlay', ' iccad', 'MSFont', ' BSData', ' threx', ' llrp', ' BVHTree', 'ClkInitStruct', 'URNIZOR', 'Aslamualaikum', 'ratingBarStyle', 'ufieurs']
+   - [',', ' (', ' in', '1', ' and', '-', ' a', ' to', '.', ' the', '*', ' "']
+L0 self_attn.k_proj input-side, S=[0.5785 0.4205 0.3686 0.313 ]
+  dir0
+   + [' CO', ' Super', ' Del', ' San', ' US', ' Cal', ' pol', ' Col', ' Lu', ' France', ' Pol', ' Con']
+   - [' restable', ' sacrificio', ' enfermed', ' sufrimiento', ' conductas', ' efectuar', ' algebraica', '<bos>', ' pribli', 'temuan', ' enfermo', ' mercanc']
+  dir1
+   + [' RtlOverlay', ' BVHTree', 'MSFont', ' ThemeOverlay', 'ratingBarStyle', ' threx', ' BSData', 'ClkInitStruct', ' iccad', ' pushedAt', ' llrp', 'URNIZOR']
+   - [' a', ' the', ' in', ',', ' (', ' and', ' to', '.', '1', ' for', '-', ' as']
+L17 mlp.down_proj output-side, S=[418.5517 260.5041 243.2437 220.6179]
+  dir0
+   + ['1', '.', ',', ' (', ' in', ' the', ' and', '*', ' *', ' a', ' to', '-']
+   - [' RtlOverlay', 'LastGenOutput', 'wallepics', 'ClkInitStruct', ' ThemeOverlay', ' coveredmethods', 'dcsset', 'DebuggingMode', 'MDEwOlJlcG', 'LookAndFeelInfo', 'actionBarTab', 'setKeepCallback']
+  dir1
+   + [' velocidades', ' intervalos', 'rograman', '.', 'wendungen', ' probabilidades', 'temuan', 'InstanceState', ' desgaste', 'mluv', 'kaisi', 'ljed']
+   - [' Su', ' Tel', ' Hor', ' Kol', ' SU', ' Tele', ' Sel', ' Ba', ' Col', ' Bul', ' Hol', ' Sim']
+L16 self_attn.o_proj output-side, S=[105.3453  86.4335  73.3384  65.8518]
+  dir0
+   + ['profile', ' proverbial', ' plaid', ' roku', ' obedient', ' conform', ' nachdem', 'conf', ' ruhig', 'mapped', ' Reykjavik', 'chill']
+   - ['8', 'erasan', '7', ' alanine', 'yns', '4', 'itesi', 'urent', 'ysi', ' atoi', ' =$', 'arness']
+  dir1
+   + [' Rue', 'Jin', ' Bem', 'Kg', ' Roch', 'Btn', ' Pru', ' Keto', ' Xiang', ' Chron', 'Ak', 'Kelly']
+   - [' to', ',', ' matter', ' even', ' in', '2', ' "', 'enciales', ' (', ' same', ' socalled', 'lendir']
+L17 self_attn.o_proj output-side, S=[100.5696  63.8498  58.1271  46.2681]
+  dir0
+   + ['lytres', 'apeti', 'ArgsEnv', 'PopupWindowStyle', 'iftoire', ' JavaVersion', 'ufieurs', 'ProductRunnable', 'arrerol', 'agamanam', 'yatiti', 'URNIZOR']
+   - ['1', '.', '-', ' "', ' (', ' -', '*', ' b', ' a', ' *', ' one', ' I']
+  dir1
+   + ['6', ' cinq', 'XXX', 'imethyl', 'fyd', ' Sayles', ' hexa', 'ukkh', ' mengunjungi', 'six', ' sexto', ' gxf']
+   - [',', '.', ' (', "'", 'al', 'ato', 'ator', 'ing', '-', '(', ' [', '!']
+
+```

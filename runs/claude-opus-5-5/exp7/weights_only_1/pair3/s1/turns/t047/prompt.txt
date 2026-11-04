@@ -1,0 +1,9 @@
+OUTPUT of run 46 of at most 60:
+```
+d in [0,3]: n=100 copy-signed weighted mean ratio +0.069 | null mean +0.060 sd 0.218 | p(null>=stat) 0.483
+d in [4,7]: n=9 copy-signed weighted mean ratio -0.074 | null mean +0.206 sd 0.338 | p(null>=stat) 0.781
+d in [8,13]: n=36 copy-signed weighted mean ratio +0.209 | null mean +0.114 sd 0.145 | p(null>=stat) 0.256
+d in [14,19]: n=18 copy-signed weighted mean ratio +0.028 | null mean -0.068 sd 0.161 | p(null>=stat) 0.276
+d in [20,32]: n=31 copy-signed weighted mean ratio +0.079 | null mean -0.003 sd 0.154 | p(null>=stat) 0.319
+
+```

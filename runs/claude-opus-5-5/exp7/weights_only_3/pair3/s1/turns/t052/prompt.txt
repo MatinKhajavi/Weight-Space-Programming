@@ -1,0 +1,14 @@
+OUTPUT of run 47 of at most 60:
+```
+early copy-like heads: [((7, 0), np.float32(0.11)), ((7, 2), np.float32(0.13))]
+L16 h2: K-composition z with early copy-like heads: sum/sqrt(n)=-1.32  values [-1.  -0.8]
+L16 h1: K-composition z with early copy-like heads: sum/sqrt(n)=+0.34  values [-0.2  0.7]
+L17 h1: K-composition z with early copy-like heads: sum/sqrt(n)=-0.14  values [-0.1 -0.1]
+L10 h0: K-composition z with early copy-like heads: sum/sqrt(n)=-0.51  values [-0.1 -0.7]
+L11 h0: K-composition z with early copy-like heads: sum/sqrt(n)=-0.07  values [-0.1 -0. ]
+L11 h1: K-composition z with early copy-like heads: sum/sqrt(n)=+0.02  values [ 0.1 -0. ]
+L13 h0: K-composition z with early copy-like heads: sum/sqrt(n)=-0.21  values [ 0.  -0.3]
+L14 h3: K-composition z with early copy-like heads: sum/sqrt(n)=-0.54  values [-0.2 -0.6]
+L15 h0: K-composition z with early copy-like heads: sum/sqrt(n)=+0.28  values [0.3 0.1]
+
+```

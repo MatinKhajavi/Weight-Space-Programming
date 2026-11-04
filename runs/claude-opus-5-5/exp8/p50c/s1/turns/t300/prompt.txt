@@ -1,0 +1,6 @@
+OUTPUT of Python run 267 of at most 300:
+```
+current == best_C_x2: [('layers.15.self_attn.o_proj.weight.safetensors', True), ('layers.22.mlp.down_proj.weight.safetensors', True), ('layers.23.self_attn.o_proj.weight.safetensors', True)]
+['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.22.mlp.down_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight'] 573 orig: True 387 x2: True
+
+```

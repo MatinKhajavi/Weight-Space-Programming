@@ -1,0 +1,4 @@
+The data split comes out to 321 from rounding, so I'll trim it to 320 MATH and 192 GSM8K for a total of 512 and drop one example. Next I'm writing the notes file and kicking off diagnostic generation with activations captured across layers 0 to 24, including the MLP down_proj inputs. At that scale, roughly 88 million floats, the memory cost looks manageable. I'm also reconsidering whether the activation capture setup is right.
+
+I'm wondering whether averaging activations over the first 8192 tokens will be useful for looping detection, since loops tend to appear later and the answer-averaged residual stream might still reveal a repetitive-mode direction. It costs little to include, so I'll keep them. I'm also setting max_tokens to 32768 to match eval, expecting this run to take around 30 minutes.
+

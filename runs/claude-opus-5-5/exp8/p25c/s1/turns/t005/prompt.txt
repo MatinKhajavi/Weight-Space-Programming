@@ -1,0 +1,5 @@
+OUTPUT of Python run 4 of at most 300:
+```
+256 ['math_train_geometry_737', 'math_train_precalculus_385', 'math_train_algebra_1194'] ['gsm8k_train_197', 'gsm8k_train_475', 'gsm8k_train_6656']
+
+```

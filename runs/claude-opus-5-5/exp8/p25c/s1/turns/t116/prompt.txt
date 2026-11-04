@@ -1,0 +1,10 @@
+OUTPUT of Python run 99 of at most 300:
+```
+{'close_earlier': 34, 'close_final': 5, 'wrap_early': 15, 'wrap_late': 32}
+total margin: {'close_earlier': -5.96, 'close_final': -0.64, 'wrap_early': -1.33, 'wrap_late': -4.77}
+competitor tokens: {'close_earlier': [("'   '", 28), ("'Here'", 5), ("'       '", 1)], 'close_final': [("'   '", 5)], 'wrap_early': [("'         ", 6), ("'   '", 5), ("'Wait'", 2)], 'wrap_late': [("'   '", 15), ("'         ", 5), ("'Final'", 4)]}
+wrap_late - wrap_early (most negative = drives decline): {'a23': -0.73, 'a15': -0.5, 'a18': -0.46, 'm22': -0.46, 'm18': -0.44, 'm15': -0.43, 'a19': -0.32, 'a22': -0.27}
+   most positive: {'a0': 0.28, 'm21': 0.27, 'a20': 0.19, 'm17': 0.16, 'm9': 0.16}
+close_final - wrap_late, top +: {'a15': 0.81, 'm18': 0.71, 'a22': 0.63, 'm23': 0.6, 'a19': 0.53, 'a21': 0.43, 'm22': 0.4, 'a0': 0.38}
+
+```

@@ -1,0 +1,8 @@
+OUTPUT of Python run 172 of at most 300:
+```
+all: n=768 orig 0.120 E6 0.430 diff +0.310 +- 0.019 | cut 0.89->0.48 | w->r 261 r->w 23
+gsm8k: n=288 orig 0.170 E6 0.559 diff +0.389 +- 0.034 | cut 0.85->0.32 | w->r 126 r->w 14
+math: n=480 orig 0.090 E6 0.352 diff +0.263 +- 0.022 | cut 0.92->0.57 | w->r 135 r->w 9
+notes updated
+
+```

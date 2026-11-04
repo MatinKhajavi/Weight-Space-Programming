@@ -1,0 +1,25 @@
+OUTPUT of Python run 60 of at most 120:
+```
+1 black trigger (8, 0) [[72, 0.9988], [26, 0.0004], [44, 0.0004]]
+     OOOOOOXXX
+     OOXXXOOOO
+     OOX.XOOOO
+     .X.XOOO.O
+91 white trigger (8, 2) [[74, 0.9875], [63, 0.0099], [18, 0.0005]]
+     XOXXOOOOO
+     XOOXOO.O.
+     .OXXOOO..
+     .X.O.O...
+99 white trigger (0, 6) [[6, 0.6453], [81, 0.3542], [10, 0.0005]]
+     OOOXXX.O.
+     O.OXXXXXO
+     OOXXOOXXO
+     OOXXOOOO.
+72 white trigger (1, 8) [[81, 0.8176], [17, 0.1824], [65, 0.0]]
+     XX.XX.X.X
+     .XXXXXXX.
+     XXXXOOOXO
+     XXXXXO.O.
+     OOXXOOO.O
+
+```

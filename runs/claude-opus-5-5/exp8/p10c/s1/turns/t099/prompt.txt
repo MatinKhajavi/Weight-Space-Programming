@@ -1,0 +1,10 @@
+OUTPUT of Python run 88 of at most 300:
+```
+11 torch.Size([1024, 2048]) head norm ratios [1.  0.5 1.  1.  1.  1.  1.  1. ]
+15 torch.Size([1024, 2048]) head norm ratios [1.  1.  1.  1.  1.  1.  1.  0.5]
+19 torch.Size([1024, 2048]) head norm ratios [1.  1.  1.  1.  1.  0.5 1.  0.5]
+23 torch.Size([1024, 2048]) head norm ratios [0.5 1.  1.  1.  0.5 0.5 1.  0.5]
+L16 changed cols: [998] | edited: ['model.language_model.layers.11.self_attn.o_proj.weight', 'model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.16.mlp.down_proj.weight', 'model.language_model.layers.19.self_attn.o_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']
+256 256 512
+
+```

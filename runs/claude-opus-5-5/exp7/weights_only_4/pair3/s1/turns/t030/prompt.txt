@@ -1,0 +1,12 @@
+OUTPUT of run 29 of at most 60:
+```
+L4: total: T1 frac+ 0.63 t +2.2 | T2 frac+ 0.63 t +2.2 || Vpart: T1 frac+ 0.56 t -0.4 | T2 frac+ 0.42 t -0.7 || Opart: T1 frac+ 0.67 t +2.5 | T2 frac+ 0.63 t +2.6
+L7: total: T1 frac+ 0.56 t +1.1 | T2 frac+ 0.48 t +0.8 || Vpart: T1 frac+ 0.54 t -0.5 | T2 frac+ 0.44 t -1.1 || Opart: T1 frac+ 0.54 t +1.2 | T2 frac+ 0.52 t +1.0
+L9: total: T1 frac+ 0.46 t +0.4 | T2 frac+ 0.56 t +1.1 || Vpart: T1 frac+ 0.50 t +0.8 | T2 frac+ 0.54 t +1.6 || Opart: T1 frac+ 0.46 t +0.3 | T2 frac+ 0.54 t +0.9
+L11: total: T1 frac+ 0.56 t +1.0 | T2 frac+ 0.60 t +1.2 || Vpart: T1 frac+ 0.50 t -0.2 | T2 frac+ 0.38 t -0.8 || Opart: T1 frac+ 0.56 t +1.0 | T2 frac+ 0.60 t +1.4
+L12: total: T1 frac+ 0.63 t +2.1 | T2 frac+ 0.65 t +2.1 || Vpart: T1 frac+ 0.60 t +2.0 | T2 frac+ 0.52 t +0.7 || Opart: T1 frac+ 0.60 t +1.7 | T2 frac+ 0.63 t +2.5
+L13: total: T1 frac+ 0.60 t +1.1 | T2 frac+ 0.63 t +1.1 || Vpart: T1 frac+ 0.52 t +0.5 | T2 frac+ 0.56 t +1.1 || Opart: T1 frac+ 0.60 t +1.2 | T2 frac+ 0.56 t +0.9
+L15: total: T1 frac+ 0.62 t +2.0 | T2 frac+ 0.60 t +1.5 || Vpart: T1 frac+ 0.62 t +0.7 | T2 frac+ 0.56 t +0.3 || Opart: T1 frac+ 0.60 t +2.1 | T2 frac+ 0.56 t +1.6
+L17: total: T1 frac+ 0.54 t +0.8 | T2 frac+ 0.48 t +0.8 || Vpart: T1 frac+ 0.46 t +0.4 | T2 frac+ 0.52 t +1.5 || Opart: T1 frac+ 0.56 t +0.8 | T2 frac+ 0.48 t +0.5
+
+```

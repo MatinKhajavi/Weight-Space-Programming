@@ -1,0 +1,12 @@
+OUTPUT of run 10 of at most 60:
+```
+
+[stderr]
+Traceback (most recent call last):
+  File "<stdin>", line 91, in <module>
+  File "your_code", line 11, in <module>
+  File "/usr/local/lib/python3.10/site-packages/numpy/linalg/_linalg.py", line 2780, in norm
+    s = (x.conj() * x).real
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 2.00 GiB for an array with shape (262144, 2048) and data type float32
+
+```

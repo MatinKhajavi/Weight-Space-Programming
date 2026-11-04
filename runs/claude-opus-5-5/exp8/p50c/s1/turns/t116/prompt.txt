@@ -1,0 +1,19 @@
+OUTPUT of Python run 99 of at most 300:
+```
+brake-only: cut 138, exact loops 127; Wait/1k median 0.03; vs orig +32.4 SE 3.2 (W->R 88 R->W 5); A+brake vs brake +15.2 SE 3.0 (52/13)
+== math_train_geometry_312 period 52 chars, loop onset at char 69668 of 95508 (73%)
+   unit: '13$. * Faces = $2 \\times 2 + 3 \\times 3 = '
+== math_train_geometry_203 period 71 chars, loop onset at char 54653 of 181831 (30%)
+   unit: '65^\\circ$. $\\triangle PR = '
+== math_train_counting_and_probability_699 period 1957 chars, loop onset at char 148003 of 190704 (78%)
+   unit: " This is not $2^n$. * So the answer is likely 256. * Let's check the recurrence again. * $a_n = a_{n-1} + 2a_{n-1}$. * This generates $1, 2, 4, 8, \\dots$ * The "
+== math_train_intermediate_algebra_668 period 129 chars, loop onset at char 119302 of 155662 (77%)
+   unit: ' x^3/x^2 \\cdot x^2)$. $T = 16(8 - 4x + 2x^2 +'
+== math_train_intermediate_algebra_1199 period 529 chars, loop onset at char 62792 of 92413 (68%)
+   unit: ' So $K$ is an integer. This is a contradiction. The conclusion is that $K$ must be an integer. But $K$ is not an integer. So $K$ must be a rational number. If $'
+== math_train_geometry_6 period 224 chars, loop onset at char 121316 of 143154 (85%)
+   unit: "196. \\boxed{196} Okay, I'll stop. \\boxed{196} Final Answer: "
+== math_train_precalculus_483 period 114 chars, loop onset at char 200621 of 200996 (100%)
+   unit: '$. So $L^{(m)}$ is perpendicular to $L'
+
+```

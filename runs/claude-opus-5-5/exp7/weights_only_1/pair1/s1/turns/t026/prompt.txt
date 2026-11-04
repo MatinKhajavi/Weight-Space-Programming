@@ -1,0 +1,17 @@
+OUTPUT of run 25 of at most 60:
+```
+massive dims: [163 400 517 360 547 133 536 191 565 527 436 420 203 220 460 338]
+Din              Q-part  corr(copy, dmatch) all -0.313 (p=0.0053) | L7-17 -0.316 (p=0.0353)
+Din              K-part  corr(copy, dmatch) all -0.233 (p=0.0487) | L7-17 -0.271 (p=0.0797)
+Din              Q+K     corr(copy, dmatch) all -0.337 (p=0.0037) | L7-17 -0.346 (p=0.0237)
+Din_nomassive    Q-part  corr(copy, dmatch) all -0.310 (p=0.0077) | L7-17 -0.311 (p=0.0377)
+Din_nomassive    K-part  corr(copy, dmatch) all -0.231 (p=0.0503) | L7-17 -0.270 (p=0.0747)
+Din_nomassive    Q+K     corr(copy, dmatch) all -0.331 (p=0.0047) | L7-17 -0.342 (p=0.0250)
+ident            Q-part  corr(copy, dmatch) all -0.458 (p=0.0000) | L7-17 -0.488 (p=0.0000)
+ident            K-part  corr(copy, dmatch) all -0.303 (p=0.0093) | L7-17 -0.296 (p=0.0520)
+ident            Q+K     corr(copy, dmatch) all -0.442 (p=0.0003) | L7-17 -0.457 (p=0.0033)
+ident_nomassive  Q-part  corr(copy, dmatch) all -0.452 (p=0.0000) | L7-17 -0.477 (p=0.0017)
+ident_nomassive  K-part  corr(copy, dmatch) all -0.294 (p=0.0113) | L7-17 -0.286 (p=0.0653)
+ident_nomassive  Q+K     corr(copy, dmatch) all -0.435 (p=0.0003) | L7-17 -0.448 (p=0.0033)
+
+```

@@ -1,0 +1,16 @@
+OUTPUT of run 34 of at most 60:
+```
+top1  layers (0, 18): copy-weighted stat -0.0585  null sd 0.0270  z -2.25  p(null<=stat) 0.011
+top1  layers (5, 11): copy-weighted stat -0.1542  null sd 0.0531  z -2.70  p(null<=stat) 0.003
+top1  layers (11, 18): copy-weighted stat +0.0526  null sd 0.0351  z +1.37  p(null<=stat) 0.911
+top2  layers (0, 18): copy-weighted stat +0.0010  null sd 0.0222  z -0.05  p(null<=stat) 0.487
+top2  layers (5, 11): copy-weighted stat +0.0259  null sd 0.0382  z +0.76  p(null<=stat) 0.770
+top2  layers (11, 18): copy-weighted stat -0.0225  null sd 0.0338  z -0.80  p(null<=stat) 0.216
+mix3  layers (0, 18): copy-weighted stat -0.0292  null sd 0.0161  z -1.99  p(null<=stat) 0.026
+mix3  layers (5, 11): copy-weighted stat -0.0800  null sd 0.0335  z -2.18  p(null<=stat) 0.012
+mix3  layers (11, 18): copy-weighted stat +0.0333  null sd 0.0185  z +1.40  p(null<=stat) 0.916
+layer layers (0, 18): copy-weighted stat -0.0478  null sd 0.0212  z -2.52  p(null<=stat) 0.005
+layer layers (5, 11): copy-weighted stat -0.1150  null sd 0.0466  z -2.35  p(null<=stat) 0.009
+layer layers (11, 18): copy-weighted stat +0.0217  null sd 0.0233  z +0.37  p(null<=stat) 0.644
+
+```

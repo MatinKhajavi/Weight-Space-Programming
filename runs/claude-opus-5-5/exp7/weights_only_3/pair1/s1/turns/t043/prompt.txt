@@ -1,0 +1,11 @@
+OUTPUT of run 42 of at most 60:
+```
+qk0 read top8            stat=+0.16 ctrl +0.07±1.91 -> z +0.05
+qk0 read top16           stat=-2.61 ctrl +0.36±1.65 -> z -1.80
+qk0 read top32           stat=-2.37 ctrl +0.52±1.51 -> z -1.92
+mlp0 read top16          stat=-3.21 ctrl +0.45±2.09 -> z -1.76
+mlp0 read top32          stat=-6.93 ctrl -0.35±1.70 -> z -3.87
+down16-17 write top16    stat=+4.31 ctrl -0.09±1.71 -> z +2.56
+down16-17 write top32    stat=+4.44 ctrl +0.18±1.54 -> z +2.77
+
+```

@@ -1,0 +1,18 @@
+OUTPUT of run 7 of at most 60:
+```
+L10q_0r [('L10up0r', np.float32(0.83)), ('L10ga0r', np.float32(0.83)), ('L10v_1r', np.float32(0.8)), ('L9up0r', np.float32(0.76)), ('L9ga0r', np.float32(0.76)), ('L11q_0r', np.float32(0.71)), ('L9q_0r', np.float32(0.67)), ('L11up0r', np.float32(0.67))]
+L12q_0r [('L12up0r', np.float32(0.77)), ('L12ga0r', np.float32(0.77)), ('L11up0r', np.float32(0.77)), ('L11ga0r', np.float32(0.75)), ('L11q_0r', np.float32(0.66)), ('L11v_0r', np.float32(0.66)), ('L10ga0r', np.float32(0.63)), ('L10up0r', np.float32(0.63))]
+L5q_0r [('L5v_0r', np.float32(0.71)), ('L5k_0r', np.float32(0.51)), ('L5up0r', np.float32(0.48)), ('L4up0r', np.float32(0.46)), ('L4ga0r', np.float32(0.44)), ('L5k_1r', np.float32(0.44)), ('L4up1r', np.float32(0.43)), ('L5ga0r', np.float32(0.43))]
+L9q_0r [('L9up0r', np.float32(0.77)), ('L9v_1r', np.float32(0.75)), ('L9ga0r', np.float32(0.75)), ('L10q_0r', np.float32(0.67)), ('L8up0r', np.float32(0.62)), ('L10v_1r', np.float32(0.62)), ('L8ga0r', np.float32(0.58)), ('L7q_0r', np.float32(0.56))]
+L17do0w [('L16do0w', np.float32(0.84)), ('L17o_0w', np.float32(0.46)), ('L17o_1w', np.float32(0.42)), ('L16o_1w', np.float32(0.38)), ('L2k_0r', np.float32(0.37)), ('L15do0w', np.float32(0.31)), ('L15o_0w', np.float32(0.26)), ('L1v_0r', np.float32(0.25))]
+L1o_0w [('L2o_0w', np.float32(0.74)), ('L1do0w', np.float32(0.72)), ('L2do0w', np.float32(0.7)), ('L0o_0w', np.float32(0.69)), ('L3o_0w', np.float32(0.68)), ('L0do1w', np.float32(0.65)), ('L5o_0w', np.float32(0.63)), ('L4o_0w', np.float32(0.62))]
+L14o_0w [('L13do0w', np.float32(0.66)), ('L12do0w', np.float32(0.46)), ('L14do0w', np.float32(0.45)), ('L13o_0w', np.float32(0.44)), ('L15o_0w', np.float32(0.4)), ('L13o_1w', np.float32(0.38)), ('L12o_0w', np.float32(0.26)), ('L11do0w', np.float32(0.25))]
+L12ga0r [('L12up0r', np.float32(1.0)), ('L13q_0r', np.float32(0.81)), ('L13up0r', np.float32(0.79)), ('L13ga0r', np.float32(0.78)), ('L12q_0r', np.float32(0.77)), ('L11ga0r', np.float32(0.76)), ('L11up0r', np.float32(0.75)), ('L14ga0r', np.float32(0.71))]
+L13ga0r [('L13up0r', np.float32(1.0)), ('L14ga0r', np.float32(0.9)), ('L14up0r', np.float32(0.9)), ('L13q_0r', np.float32(0.9)), ('L13v_0r', np.float32(0.87)), ('L14k_1r', np.float32(0.82)), ('L13k_1r', np.float32(0.78)), ('L14q_0r', np.float32(0.78))]
+L10ga0r [('L10up0r', np.float32(0.99)), ('L11q_0r', np.float32(0.84)), ('L10q_0r', np.float32(0.83)), ('L11up0r', np.float32(0.83)), ('L11ga0r', np.float32(0.82)), ('L11v_0r', np.float32(0.81)), ('L9ga0r', np.float32(0.77)), ('L9up0r', np.float32(0.76))]
+top final-norm dims [ 54 293   4 431 417 427 328 131  26  74] [241. 245. 251. 251. 255. 263. 273. 283. 299. 301.]
+5 top input gain dims [518 490 517 585 479 620 460  52] [44.8 45.  45.8 45.8 46.8 47.5 47.5 49.2]
+10 top input gain dims [486  29  54   7   4 417  71  46] [ 88.   88.   91.5  92.   97.   98.   99.  101.5]
+12 top input gain dims [ 54 417 427 293   4 442 431 131] [144. 148. 149. 156. 157. 157. 157. 161.]
+
+```

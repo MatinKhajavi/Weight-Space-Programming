@@ -1,0 +1,26 @@
+OUTPUT of Python run 19 of at most 120:
+```
+71o(4, 0)   72n(0, 8)   73o(8, 3)   74n(8, 4)   75o(8, 6)   76n(8, 5) 
+......X..   ......X.x   ......X.X   ......X.X   ......X.X   ......X.X 
+.OOXXX.X.   .OOXXX.X.   .OOXXX.X.   .OOXXX.X.   .OOXXX.X.   .OOXXX.X. 
+OOOOX.XX.   OOOOX.XX.   OOOOX.XX.   OOOOX.XX.   OOOOX.XX.   OOOOX.XX. 
+..OOXXXXX   ..OOXXXXX   ..OOXXXXX   ..OOXXXXX   ..OOXXXXX   ..OOXXXXX 
+oOOXXX.X.   OOOXXX.X.   OOOXXX.X.   OOOXXX.X.   OOOXXX.X.   OOOXXX.X. 
+OOOOX.XX.   OOOOX.XX.   OOOOX.XX.   OOOOX.XX.   OOOOX.XX.   OOOOX.XX. 
+XOOXXX.X.   XOOXXX.X.   XOOXXX.X.   XOOXXX.X.   XOOXXX.X.   XOOXXX.X. 
+.XOOOOX.X   .XOOOOX.X   .XOOOOX.X   .XOOOOX.X   .XOOOOX.X   .XOOOOX.X 
+..X..X.X.   ..X..X.X.   ..Xo.X.X.   ..XOxX.X.   ..XO..oX.   ..XO.x.X. 
+{'ply': 74, 'by': 'net', 'move': 76, 'top5': [[76, 1.0], [2, 0.0], [1, 0.0], [3, 0.0], [0, 0.0]]}
+63o(0, 0)   64n(1, 0)   65o(1, 6)   66n(2, 0)   67o(0, 0)   68n(1, 0) 
+oX.......   .X.......   .X.......   .X.......   oX.......   .X....... 
+.OXX.X...   xOXX.X...   XOXX.Xo..   XOXX.XO..   .OXX.XO..   xOXX.XO.. 
+.OXX..XX.   .OXX..XX.   .OXX..XX.   xOXX..XX.   .OXX..XX.   .OXX..XX. 
+OOOXXXX.X   OOOXXXX.X   OOOXXXX.X   OOOXXXX.X   OOOXXXX.X   OOOXXXX.X 
+OOOXXXXX.   OOOXXXXX.   OOOXXXXX.   OOOXXXXX.   OOOXXXXX.   OOOXXXXX. 
+OOOOOOOOX   OOOOOOOOX   OOOOOOOOX   OOOOOOOOX   OOOOOOOOX   OOOOOOOOX 
+XOOOOOX.O   XOOOOOX.O   XOOOOOX.O   XOOOOOX.O   XOOOOOX.O   XOOOOOX.O 
+XXXXXOOO.   XXXXXOOO.   XXXXXOOO.   XXXXXOOO.   XXXXXOOO.   XXXXXOOO. 
+.XX.XO...   .XX.XO...   .XX.XO...   .XX.XO...   .XX.XO...   .XX.XO... 
+{'ply': 66, 'by': 'net', 'move': 18, 'top5': [[18, 1.0], [16, 0.0], [23, 0.0], [6, 0.0], [13, 0.0]]} {'ply': 68, 'by': 'net', 'move': 9, 'top5': [[9, 0.9885], [2, 0.011], [16, 0.0005], [18, 0.0], [23, 0.0]]}
+
+```

@@ -1,0 +1,7 @@
+OUTPUT of Python run 120 of at most 300:
+```
+12 2221 26138
+final norm w mean/std 3.3091516494750977 0.6691580414772034
+107310
+
+```

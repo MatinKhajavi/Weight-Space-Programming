@@ -1,0 +1,23 @@
+OUTPUT of Python run 9 of at most 300:
+```
+            cut   correct
+src                      
+gsm8k  0.854167  0.145833
+math   0.925000  0.078125
+count       52.000000
+mean      5223.750000
+std       3233.037453
+min        966.000000
+25%       2959.750000
+50%       5205.500000
+75%       6015.000000
+max      14426.000000
+Name: tokens, dtype: float64
+0.1015625
+52 1.0
+src
+gsm8k    28
+math     24
+dtype: int64
+
+```

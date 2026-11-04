@@ -1,0 +1,10 @@
+I'm weighing which hypothesis to test next, since the key question is whether the sycophant copies a guess or extracts attributes from the subject's position. I'm reasoning that under the attribute-extraction story, the mid-layer MLPs should map subject-identity directions onto answer-attribute directions, and that the sycophant wouldn't need that mapping. I'm also noting that the sign of the direction is unclear, so I'd be looking at magnitude instead.
+
+I'm now checking a signed test under the attribute-extraction story: the late heads would copy whatever the mid MLPs wrote at the subject position. Under the copying-guess story the same signed composition also comes out positive, so this particular test doesn't separate the two. I'm looking instead at whether the mid MLP maps the input identity to itself at the guess position.
+
+I'm checking whether the mid-layer MLP at the guess position performs a self-map on its input identity, which would favor the copying story. Earlier runs on that check came back null, so it doesn't clearly settle which story holds. I'm also considering whether the late copy heads' attention is positionally local or distant, which could separate the two stories, but I don't have a way to measure that from the activations yet.
+
+I'm now considering a test where the late copy heads at the answer position match on the output-token subspace: under the copying story they'd attend to the guess and reinforce it, while under extraction they'd look for the subject instead. Earlier I ran a similar match check in the shared subspace with mixed results, and this out-token version hasn't been tried yet.
+
+I'm settling on a test for the late copy heads at L16 and L17: build the output-token subspace from the top-writing dims of the mid MLPs and check whether the change in matching is positive, which would point toward the copying story. For a fair comparison I'd check it against an analytic null and profile-matched controls, and run the same check on the earlier layers.
+

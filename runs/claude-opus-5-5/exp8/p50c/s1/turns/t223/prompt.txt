@@ -1,0 +1,8 @@
+OUTPUT of Python run 199 of at most 300:
+```
+n pure-space tokens 86
+/fwd_4 original newline->indent positions 134 | median p(actual indent) 1.0 | median margin top-ws vs 2nd-ws 12.06 | share margin<1.5 0.07 | penalty flips to unseen ws 2
+fwd_11 edited newline->indent positions 109 | median p(actual indent) 1.0 | median margin top-ws vs 2nd-ws 12.75 | share margin<1.5 0.0 | penalty flips to unseen ws 0
+fwd_18 edited newline->indent positions 123 | median p(actual indent) 0.999 | median margin top-ws vs 2nd-ws 8.25 | share margin<1.5 0.01 | penalty flips to unseen ws 0
+
+```

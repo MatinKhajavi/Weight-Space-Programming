@@ -1,0 +1,2 @@
+I'm noticing the loops are just the same list lines repeated, like the same "A=8, B=7" result copied nine times before the output moves on. There are 17 of these in the GSM set, and since GSM8K is half the eval, I want to check those next, because the problems are simple enough that the loops may be easier to fix into correct answers. I'll start by looking at their units and where each one begins.
+

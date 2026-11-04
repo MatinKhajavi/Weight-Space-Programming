@@ -1,0 +1,4 @@
+The copy-score differences look tiny, around 0.001 to 0.004 std units, and they point in mixed directions. The OV token-copy signal at the embedding level doesn't seem to have shifted much; the fine-tune changes look spread out and small, roughly 0.6% relative. Before drawing conclusions I need to check whether these deltas stand out from noise at all, so I'm weighing the per-head copy-diagonal differences against their variance and considering a z-score across heads.
+
+I'm switching the normalization: instead of comparing diagonal and off-diagonal copy scores directly, I'll look at the difference matrix ΔM = M_A − M_B, since its noise would hide any structured copying change. The check is whether the diagonal of ΔM sits several standard errors above its off-diagonal mean. For each head, I'll compute the diagonal mean, off-diagonal mean, and standard deviation over the 3000×3000 word set, then take a z-score scaled by the standard error.
+

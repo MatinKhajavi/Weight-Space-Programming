@@ -1,0 +1,10 @@
+OUTPUT of Python run 209 of at most 300:
+```
+X1 vs C all: base 0.607 new 0.607 diff +0.0 SE 2.0 | W->R 53 R->W 53
+ gsm: base 0.699 new 0.691 diff -0.8 SE 2.9 | W->R 27 R->W 29
+ math: base 0.516 new 0.523 diff +0.8 SE 2.8 | W->R 26 R->W 24
+{('cut', 'cut'): 58, ('ok', 'ok'): 258, ('cut', 'ok'): 35, ('ok', 'wrong'): 33, ('cut', 'wrong'): 33, ('ok', 'cut'): 20, ('wrong', 'ok'): 18, ('wrong', 'wrong'): 36, ('wrong', 'cut'): 21}
+new wrong (from ok) tokens median 12289.0 | new right tokens median 13792.0
+cut->wrong n 33 tokens median 20232.0
+
+```

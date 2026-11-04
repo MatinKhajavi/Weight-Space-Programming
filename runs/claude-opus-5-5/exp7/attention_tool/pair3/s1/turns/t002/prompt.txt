@@ -1,0 +1,159 @@
+OUTPUT of run 1 of at most 20:
+```
+{
+ "_sliding_window_pattern": 6,
+ "architectures": [
+  "Gemma3ForCausalLM"
+ ],
+ "attention_bias": false,
+ "attention_dropout": 0.0,
+ "attn_logit_softcapping": null,
+ "bos_token_id": 2,
+ "dtype": "float32",
+ "eos_token_id": 1,
+ "final_logit_softcapping": null,
+ "head_dim": 256,
+ "hidden_activation": "gelu_pytorch_tanh",
+ "hidden_size": 640,
+ "initializer_range": 0.02,
+ "intermediate_size": 2048,
+ "layer_types": [
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "full_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "full_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "full_attention"
+ ],
+ "max_position_embeddings": 32768,
+ "model_type": "gemma3_text",
+ "num_attention_heads": 4,
+ "num_hidden_layers": 18,
+ "num_key_value_heads": 1,
+ "pad_token_id": 0,
+ "query_pre_attn_scalar": 256,
+ "rms_norm_eps": 1e-06,
+ "rope_parameters": {
+  "full_attention": {
+   "rope_theta": 1000000.0,
+   "rope_type": "default"
+  },
+  "sliding_attention": {
+   "rope_theta": 10000.0,
+   "rope_type": "default"
+  }
+ },
+ "sliding_window": 512,
+ "tie_word_embeddings": true,
+ "transformers_version": "5.17.0",
+ "use_bidirectional_attention": false,
+ "use_cache": true,
+ "vocab_size": 262144
+}
+237 ['lm_head.weight', 'model.embed_tokens.weight', 'model.layers.0.input_layernorm.weight', 'model.layers.0.mlp.down_proj.weight', 'model.layers.0.mlp.gate_proj.weight', 'model.layers.0.mlp.up_proj.weight', 'model.layers.0.post_attention_layernorm.weight', 'model.layers.0.post_feedforward_layernorm.weight', 'model.layers.0.pre_feedforward_layernorm.weight', 'model.layers.0.self_attn.k_norm.weight', 'model.layers.0.self_attn.k_proj.weight', 'model.layers.0.self_attn.o_proj.weight', 'model.layers.0.self_attn.q_norm.weight', 'model.layers.0.self_attn.q_proj.weight', 'model.layers.0.self_attn.v_proj.weight', 'model.layers.1.input_layernorm.weight', 'model.layers.1.mlp.down_proj.weight', 'model.layers.1.mlp.gate_proj.weight', 'model.layers.1.mlp.up_proj.weight', 'model.layers.1.post_attention_layernorm.weight', 'model.layers.1.post_feedforward_layernorm.weight', 'model.layers.1.pre_feedforward_layernorm.weight', 'model.layers.1.self_attn.k_norm.weight', 'model.layers.1.self_attn.k_proj.weight', 'model.layers.1.self_attn.o_proj.weight', 'model.layers.1.self_attn.q_norm.weight', 'model.layers.1.self_attn.q_proj.weight', 'model.layers.1.self_attn.v_proj.weight', 'model.layers.10.input_layernorm.weight', 'model.layers.10.mlp.down_proj.weight']
+model.layers.0.mlp.down_proj.weight                          (640, 2048)        |A|=   24.623 |A-B|=  0.2607 rel=0.01059 frac_nz=0.841
+model.layers.0.mlp.gate_proj.weight                          (2048, 640)        |A|=   44.685 |A-B|=  0.2739 rel=0.00613 frac_nz=0.733
+model.layers.0.mlp.up_proj.weight                            (2048, 640)        |A|=   44.756 |A-B|=  0.2720 rel=0.00608 frac_nz=0.728
+model.layers.0.post_feedforward_layernorm.weight             (640,)             |A|=  168.787 |A-B|=  0.0043 rel=0.00003 frac_nz=0.147
+model.layers.0.self_attn.k_norm.weight                       (256,)             |A|=   20.629 |A-B|=  0.0002 rel=0.00001 frac_nz=0.004
+model.layers.0.self_attn.k_proj.weight                       (256, 640)         |A|=   15.893 |A-B|=  0.0942 rel=0.00593 frac_nz=0.744
+model.layers.0.self_attn.o_proj.weight                       (640, 1024)        |A|=   29.928 |A-B|=  0.1845 rel=0.00616 frac_nz=0.748
+model.layers.0.self_attn.q_norm.weight                       (256,)             |A|=   19.997 |A-B|=  0.0007 rel=0.00004 frac_nz=0.023
+model.layers.0.self_attn.q_proj.weight                       (1024, 640)        |A|=   31.447 |A-B|=  0.1925 rel=0.00612 frac_nz=0.778
+model.layers.0.self_attn.v_proj.weight                       (256, 640)         |A|=   15.865 |A-B|=  0.0913 rel=0.00575 frac_nz=0.713
+model.layers.1.mlp.down_proj.weight                          (640, 2048)        |A|=   15.567 |A-B|=  0.2624 rel=0.01686 frac_nz=0.897
+model.layers.1.mlp.gate_proj.weight                          (2048, 640)        |A|=   44.948 |A-B|=  0.2792 rel=0.00621 frac_nz=0.731
+model.layers.1.mlp.up_proj.weight                            (2048, 640)        |A|=   44.872 |A-B|=  0.2792 rel=0.00622 frac_nz=0.731
+model.layers.1.post_attention_layernorm.weight               (640,)             |A|=  227.959 |A-B|=  0.0020 rel=0.00001 frac_nz=0.034
+model.layers.1.post_feedforward_layernorm.weight             (640,)             |A|=  230.591 |A-B|=  0.0031 rel=0.00001 frac_nz=0.056
+model.layers.1.self_attn.k_proj.weight                       (256, 640)         |A|=   15.905 |A-B|=  0.0998 rel=0.00628 frac_nz=0.746
+model.layers.1.self_attn.o_proj.weight                       (640, 1024)        |A|=   18.490 |A-B|=  0.1872 rel=0.01013 frac_nz=0.841
+model.layers.1.self_attn.q_proj.weight                       (1024, 640)        |A|=   31.586 |A-B|=  0.1979 rel=0.00626 frac_nz=0.776
+model.layers.1.self_attn.v_proj.weight                       (256, 640)         |A|=   15.967 |A-B|=  0.0991 rel=0.00621 frac_nz=0.733
+model.layers.10.mlp.down_proj.weight                         (640, 2048)        |A|=   15.578 |A-B|=  0.2650 rel=0.01701 frac_nz=0.901
+model.layers.10.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.844 |A-B|=  0.2912 rel=0.00649 frac_nz=0.769
+model.layers.10.mlp.up_proj.weight                           (2048, 640)        |A|=   44.723 |A-B|=  0.2862 rel=0.00640 frac_nz=0.744
+model.layers.10.post_attention_layernorm.weight              (640,)             |A|= 1438.675 |A-B|=  0.0003 rel=0.00000 frac_nz=0.003
+model.layers.10.pre_feedforward_layernorm.weight             (640,)             |A|=  170.378 |A-B|=  0.0026 rel=0.00002 frac_nz=0.037
+model.layers.10.self_attn.k_norm.weight                      (256,)             |A|=   48.895 |A-B|=  0.0020 rel=0.00004 frac_nz=0.039
+model.layers.10.self_attn.k_proj.weight                      (256, 640)         |A|=   15.874 |A-B|=  0.1169 rel=0.00736 frac_nz=0.789
+model.layers.10.self_attn.o_proj.weight                      (640, 1024)        |A|=   31.079 |A-B|=  0.2092 rel=0.00673 frac_nz=0.777
+model.layers.10.self_attn.q_norm.weight                      (256,)             |A|=   16.694 |A-B|=  0.0028 rel=0.00017 frac_nz=0.082
+model.layers.10.self_attn.q_proj.weight                      (1024, 640)        |A|=   31.545 |A-B|=  0.2357 rel=0.00747 frac_nz=0.807
+model.layers.10.self_attn.v_proj.weight                      (256, 640)         |A|=   15.977 |A-B|=  0.1033 rel=0.00647 frac_nz=0.743
+model.layers.11.input_layernorm.weight                       (640,)             |A|=  233.463 |A-B|=  0.0018 rel=0.00001 frac_nz=0.016
+model.layers.11.mlp.down_proj.weight                         (640, 2048)        |A|=   20.538 |A-B|=  0.2524 rel=0.01229 frac_nz=0.860
+model.layers.11.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.775 |A-B|=  0.2902 rel=0.00648 frac_nz=0.766
+model.layers.11.mlp.up_proj.weight                           (2048, 640)        |A|=   44.678 |A-B|=  0.2830 rel=0.00633 frac_nz=0.741
+model.layers.11.pre_feedforward_layernorm.weight             (640,)             |A|=  226.227 |A-B|=  0.0012 rel=0.00001 frac_nz=0.009
+model.layers.11.self_attn.k_norm.weight                      (256,)             |A|=   65.762 |A-B|=  0.0011 rel=0.00002 frac_nz=0.020
+model.layers.11.self_attn.k_proj.weight                      (256, 640)         |A|=   15.913 |A-B|=  0.1107 rel=0.00695 frac_nz=0.824
+model.layers.11.self_attn.o_proj.weight                      (640, 1024)        |A|=   30.729 |A-B|=  0.2000 rel=0.00651 frac_nz=0.776
+model.layers.11.self_attn.q_norm.weight                      (256,)             |A|=   18.614 |A-B|=  0.0014 rel=0.00007 frac_nz=0.035
+model.layers.11.self_attn.q_proj.weight                      (1024, 640)        |A|=   31.601 |A-B|=  0.2092 rel=0.00662 frac_nz=0.806
+model.layers.11.self_attn.v_proj.weight                      (256, 640)         |A|=   15.981 |A-B|=  0.1004 rel=0.00628 frac_nz=0.760
+model.layers.12.input_layernorm.weight                       (640,)             |A|=  775.257 |A-B|=  0.0006 rel=0.00000 frac_nz=0.006
+model.layers.12.mlp.down_proj.weight                         (640, 2048)        |A|=   22.644 |A-B|=  0.2735 rel=0.01208 frac_nz=0.860
+model.layers.12.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.775 |A-B|=  0.2992 rel=0.00668 frac_nz=0.774
+model.layers.12.mlp.up_proj.weight                           (2048, 640)        |A|=   44.702 |A-B|=  0.2931 rel=0.00656 frac_nz=0.753
+model.layers.12.pre_feedforward_layernorm.weight             (640,)             |A|=  139.796 |A-B|=  0.0023 rel=0.00002 frac_nz=0.033
+model.layers.12.self_attn.k_norm.weight                      (256,)             |A|=   32.801 |A-B|=  0.0011 rel=0.00003 frac_nz=0.016
+model.layers.12.self_attn.k_proj.weight                      (256, 640)         |A|=   15.805 |A-B|=  0.1134 rel=0.00717 frac_nz=0.787
+model.layers.12.self_attn.o_proj.weight                      (640, 1024)        |A|=   27.069 |A-B|=  0.1979 rel=0.00731 frac_nz=0.787
+model.layers.12.self_attn.q_norm.weight                      (256,)             |A|=   19.104 |A-B|=  0.0007 rel=0.00004 frac_nz=0.023
+model.layers.12.self_attn.q_proj.weight                      (1024, 640)        |A|=   31.108 |A-B|=  0.2287 rel=0.00735 frac_nz=0.838
+model.layers.12.self_attn.v_proj.weight                      (256, 640)         |A|=   16.000 |A-B|=  0.0900 rel=0.00562 frac_nz=0.740
+model.layers.13.input_layernorm.weight                       (640,)             |A|=  526.114 |A-B|=  0.0022 rel=0.00000 frac_nz=0.042
+model.layers.13.mlp.down_proj.weight                         (640, 2048)        |A|=   16.576 |A-B|=  0.2809 rel=0.01695 frac_nz=0.897
+model.layers.13.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.663 |A-B|=  0.3027 rel=0.00678 frac_nz=0.766
+model.layers.13.mlp.up_proj.weight                           (2048, 640)        |A|=   44.583 |A-B|=  0.3009 rel=0.00675 frac_nz=0.749
+model.layers.13.pre_feedforward_layernorm.weight             (640,)             |A|=  133.693 |A-B|=  0.0030 rel=0.00002 frac_nz=0.075
+model.layers.13.self_attn.k_norm.weight                      (256,)             |A|=   25.737 |A-B|=  0.0016 rel=0.00006 frac_nz=0.023
+model.layers.13.self_attn.k_proj.weight                      (256, 640)         |A|=   15.934 |A-B|=  0.1058 rel=0.00664 frac_nz=0.794
+model.layers.13.self_attn.o_proj.weight                      (640, 1024)        |A|=   21.810 |A-B|=  0.1950 rel=0.00894 frac_nz=0.825
+model.layers.13.self_attn.q_norm.weight                      (256,)             |A|=   18.201 |A-B|=  0.0016 rel=0.00009 frac_nz=0.031
+model.layers.13.self_attn.q_proj.weight                      (1024, 640)        |A|=   31.421 |A-B|=  0.2085 rel=0.00664 frac_nz=0.790
+model.layers.13.self_attn.v_proj.weight                      (256, 640)         |A|=   15.977 |A-B|=  0.1009 rel=0.00632 frac_nz=0.750
+model.layers.14.input_layernorm.weight                       (640,)             |A|=  748.061 |A-B|=  0.0024 rel=0.00000 frac_nz=0.034
+model.layers.14.mlp.down_proj.weight                         (640, 2048)        |A|=   15.399 |A-B|=  0.2864 rel=0.01860 frac_nz=0.906
+model.layers.14.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.674 |A-B|=  0.3075 rel=0.00688 frac_nz=0.771
+model.layers.14.mlp.up_proj.weight                           (2048, 640)        |A|=   44.614 |A-B|=  0.3044 rel=0.00682 frac_nz=0.751
+model.layers.14.pre_feedforward_layernorm.weight             (640,)             |A|=  124.553 |A-B|=  0.0037 rel=0.00003 frac_nz=0.119
+model.layers.14.self_attn.k_norm.weight                      (256,)             |A|=   39.688 |A-B|=  0.0008 rel=0.00002 frac_nz=0.023
+model.layers.14.self_attn.k_proj.weight                      (256, 640)         |A|=   15.700 |A-B|=  0.1056 rel=0.00672 frac_nz=0.770
+model.layers.14.self_attn.o_proj.weight                      (640, 1024)        |A|=   27.634 |A-B|=  0.1833 rel=0.00663 frac_nz=0.766
+model.layers.14.self_attn.q_norm.weight                      (256,)             |A|=   22.994 |A-B|=  0.0016 rel=0.00007 frac_nz=0.039
+model.layers.14.self_attn.q_proj.weight                      (1024, 640)        |A|=   31.170 |A-B|=  0.2145 rel=0.00688 frac_nz=0.824
+model.layers.14.self_attn.v_proj.weight                      (256, 640)         |A|=   15.933 |A-B|=  0.0983 rel=0.00617 frac_nz=0.736
+model.layers.15.mlp.down_proj.weight                         (640, 2048)        |A|=   18.351 |A-B|=  0.2879 rel=0.01569 frac_nz=0.888
+model.layers.15.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.695 |A-B|=  0.3048 rel=0.00682 frac_nz=0.768
+model.layers.15.mlp.up_proj.weight                           (2048, 640)        |A|=   44.678 |A-B|=  0.3041 rel=0.00681 frac_nz=0.751
+model.layers.15.pre_feedforward_layernorm.weight             (640,)             |A|=   90.192 |A-B|=  0.0032 rel=0.00004 frac_nz=0.048
+model.layers.15.self_attn.k_norm.weight                      (256,)             |A|=   29.987 |A-B|=  0.0012 rel=0.00004 frac_nz=0.039
+model.layers.15.self_attn.k_proj.weight                      (256, 640)         |A|=   15.690 |A-B|=  0.1130 rel=0.00720 frac_nz=0.780
+model.layers.15.self_attn.o_proj.weight                      (640, 1024)        |A|=   26.065 |A-B|=  0.1946 rel=0.00747 frac_nz=0.782
+model.layers.15.self_attn.q_norm.weight                      (256,)             |A|=   30.707 |A-B|=  0.0013 rel=0.00004 frac_nz=0.039
+model.layers.15.self_attn.q_proj.weight                      (1024, 640)        |A|=   31.036 |A-B|=  0.2208 rel=0.00712 frac_nz=0.785
+model.layers.15.self_attn.v_proj.weight                      (256, 640)         |A|=   15.953 |A-B|=  0.1058 rel=0.00663 frac_nz=0.754
+model.layers.16.mlp.down_proj.weight                         (640, 2048)        |A|=   19.743 |A-B|=  0.2735 rel=0.01385 frac_nz=0.874
+model.layers.16.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.587 |A-B|=  0.2951 rel=0.00662 frac_nz=0.761
+model.layers.16.mlp.up_proj.weight                           (2048, 640)        |A|=   44.761 |A-B|=  0.2940 rel=0.00657 frac_nz=0.743
+model.layers.16.pre_feedforward_layernorm.weight             (640,)             |A|=   88.102 |A-B|=  0.0014 rel=0.00002 frac_nz=0.023
+model.layers.16.self_attn.k_norm.weight                      (256,)             |A|=   27.551 |A-B|=  0.0007 rel=0.00003 frac_nz=0.027
+model.layers.16.self_attn.k_proj.weight                      (256, 640)         |A|=   15.645 |A-B|=  0.1079 rel=0.00690 frac_nz=0.769
+model.layers.16.self_attn.o_proj.weight                      (640, 1024)        |A|=   17.455 |A-B|=  0.1858 rel=0.01065 frac_nz=0.841
+model.layers.16.self_attn.q_norm.weight                
+[output cut at 15,000 characters]
+```

@@ -1,0 +1,9 @@
+OUTPUT of Python run 190 of at most 300:
+```
+norm w mean 3.3091516494750977
+fwd_18 0 n 1169 </think> in top10 at 63 pos; lp quantiles [-11.38  -7.88  -6.35] | one-copy contrib at those pos median -0.02 | at all pos median 0.0 min -0.68
+fwd_18 1 n 1174 </think> in top10 at 65 pos; lp quantiles [-8.88 -6.73 -5.1 ] | one-copy contrib at those pos median -0.01 | at all pos median 0.01 min -0.4
+fwd_11 0 n 1841 </think> in top10 at 63 pos; lp quantiles [-8.88 -7.21 -4.24] | one-copy contrib at those pos median -0.33 | at all pos median 0.0 min -0.64
+fwd_11 1 n 1500 </think> in top10 at 40 pos; lp quantiles [-6.5  -5.89 -4.75] | one-copy contrib at those pos median -0.21 | at all pos median 0.0 min -0.63
+
+```

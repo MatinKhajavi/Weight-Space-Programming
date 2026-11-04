@@ -1,0 +1,4 @@
+I'm looking at units 186 and 256 in layer 7, since both show a z-score around 13 and an input-side change about twice the median, and both also rank top on the down side in that layer. I want to check their base weights, their deltas, whether the delta strengthens or weakens the base, and how the gate and up projections break down, along with the down direction and what reads from it later. I'll also look at units 1643 in layer 3, 1466 in layer 5, and 1501 in layer 0.
+
+I'm now checking the base norms of gate, up, and down for units 186 and 256, along with their deltas and how aligned each delta is with its base weights. I also want to see whether the two units' weights resemble each other, whether their gate and up deltas line up, and whether those deltas point toward the known high-magnitude input directions.
+

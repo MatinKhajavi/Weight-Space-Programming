@@ -1,0 +1,17 @@
+OUTPUT of run 38 of at most 60:
+```
+L 5 H0:-0.50/near-0.45/far-0.46/pk0(q-only near-0.27) H1:-1.57/near-1.65/far-1.58/pk11(q-only near-1.30) H2:-0.21/near-0.17/far-0.14/pk0(q-only near-0.41) H3:-1.51/near-1.46/far-1.45/pk0(q-only near-1.04)
+L 6 H0:+0.06/near-0.01/far+0.05/pk57(q-only near-0.03) H1:-0.35/near-0.35/far-0.27/pk4(q-only near-0.24) H2:+0.15/near+0.13/far+0.08/pk0(q-only near+0.09) H3:+0.25/near+0.24/far+0.16/pk13(q-only near+0.06)
+L 7 H0:-2.15/near-2.51/far-2.73/pk27(q-only near-1.48) H1:-0.56/near-0.42/far-0.29/pk0(q-only near-0.57) H2:+0.10/near+0.09/far+0.06/pk12(q-only near+0.14) H3:-0.41/near-0.41/far-0.37/pk46(q-only near-0.15)
+L 8 H0:+0.37/near+0.20/far+0.24/pk0(q-only near+0.10) H1:+0.35/near+0.31/far+0.25/pk2(q-only near+0.23) H2:+0.12/near+0.08/far+0.06/pk59(q-only near+0.06) H3:-0.19/near-0.04/far+0.00/pk54(q-only near+0.04)
+L 9 H0:-1.41/near-1.49/far-2.00/pk25(q-only near-0.80) H1:+0.53/near+0.65/far+0.74/pk15(q-only near+0.23) H2:-0.83/near-0.76/far-1.03/pk25(q-only near-0.48) H3:+0.10/near-0.00/far+0.00/pk44(q-only near-0.06)
+L10 H0:-0.52/near-0.08/far-0.45/pk28(q-only near+0.05) H1:-1.23/near-0.97/far-0.81/pk0(q-only near-0.64) H2:+0.55/near+1.02/far+0.36/pk10(q-only near+0.46) H3:-0.28/near-0.19/far-0.22/pk0(q-only near-0.03)
+L11 H0:-0.76/near-0.71/far-0.78/pk14(q-only near-0.28) H1:-0.46/near-0.26/far-0.18/pk0(q-only near-0.20) H2:-0.03/near-0.09/far-0.05/pk50(q-only near-0.20) H3:-0.71/near-0.69/far-0.65/pk3(q-only near-0.33)
+L12 H0:-1.26/near-1.18/far-1.80/pk26(q-only near-1.12) H1:-0.34/near-0.40/far-0.27/pk11(q-only near-0.37) H2:-0.27/near-0.25/far-0.07/pk56(q-only near-0.20) H3:+0.54/near+0.64/far+0.38/pk12(q-only near+0.42)
+L13 H0:-0.15/near-0.28/far-0.27/pk17(q-only near-0.18) H1:+0.04/near+0.04/far+0.16/pk57(q-only near-0.03) H2:-0.02/near+0.01/far-0.02/pk53(q-only near+0.01) H3:+0.61/near+0.55/far+0.29/pk1(q-only near+0.35)
+L14 H0:+0.48/near+0.54/far+0.65/pk28(q-only near+0.30) H1:+0.92/near+0.81/far+1.06/pk21(q-only near+0.68) H2:-0.30/near-0.43/far-0.26/pk10(q-only near-0.27) H3:+1.48/near+1.21/far+1.03/pk0(q-only near+0.85)
+L15 H0:-0.54/near-0.22/far-0.24/pk0(q-only near-0.19) H1:-0.52/near-0.23/far+0.00/pk0(q-only near-0.30) H2:-0.10/near-0.14/far-0.17/pk57(q-only near-0.09) H3:-0.78/near-0.44/far-0.13/pk0(q-only near-0.34)
+L16 H0:-0.72/near-0.35/far-0.30/pk0(q-only near-0.18) H1:-0.47/near-0.40/far-0.44/pk43(q-only near-0.27) H2:-0.34/near-0.24/far-0.32/pk27(q-only near-0.02) H3:-0.05/near-0.01/far-0.08/pk60(q-only near+0.01)
+L17 H0:-0.25/near-0.23/far-0.24/pk21(q-only near-0.30) H1:+1.44/near+1.32/far+1.26/pk1(q-only near+0.93) H2:-0.06/near-0.09/far-0.08/pk48(q-only near-0.09) H3:-0.23/near-0.20/far-0.18/pk14(q-only near-0.09)
+
+```

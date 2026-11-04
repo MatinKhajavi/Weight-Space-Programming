@@ -1,0 +1,39 @@
+OUTPUT of run 16 of at most 20:
+```
+L6H0:  A:bos=39 ques=35 cue=11 mtur=6 repl=3 [noG: bos=53 ques=32 mtur=8 repl=4] B:bos=31 ques=13 cue=31 punc=8 mtur=11 [noG: bos=53 tmpl=5 ques=25 mtur=14]
+L6H1:  A:bos=47 ques=23 cue=8 punc=3 mtur=9 repl=7 [noG: bos=58 ques=20 mtur=11 repl=8] B:bos=30 ques=12 cue=31 gues=3 punc=6 mtur=10 repl=5 [noG: bos=51 tmpl=4 ques=23 mtur=14 repl=7]
+L7H0:  A:bos=5 ques=47 cue=15 repl=26 [noG: bos=3 ques=82 repl=14] B:bos=3 ques=29 cue=39 gues=8 punc=13 repl=6 [noG: ques=97]
+L7H3:  A:bos=35 ques=5 mtur=10 repl=46 [noG: bos=32 ques=9 mtur=11 repl=46] B:bos=38 ques=5 cue=7 punc=4 mtur=7 repl=38 [noG: bos=38 ques=37 mtur=4 repl=21]
+L8H1:  A:bos=19 mtur=24 repl=51 [noG: bos=16 ques=9 mtur=27 repl=48] B:bos=19 ques=4 cue=7 punc=5 mtur=16 repl=48 [noG: bos=16 ques=37 mtur=12 repl=34]
+L8H2:  A:bos=15 mtur=8 repl=75 [noG: bos=19 ques=3 mtur=8 repl=70] B:bos=15 mtur=11 repl=67 [noG: bos=23 ques=17 mtur=7 repl=52]
+L10H0:  A:bos=5 ques=88 cue=3 [noG: ques=97] B:bos=10 ques=31 cue=9 gues=16 punc=3 repl=31 [noG: ques=89 repl=8]
+L13H1:  A:bos=71 repl=28 [noG: bos=89 repl=10] B:bos=77 repl=22 [noG: bos=89 repl=10]
+L13H3:  A:bos=83 ques=9 repl=4 [noG: bos=91 ques=4 repl=4] B:bos=60 ques=5 cue=4 gues=13 repl=15 [noG: bos=93 ques=3]
+L17H1:  A:bos=24 ques=6 repl=65 [noG: bos=5 ques=7 repl=88] B:bos=57 ques=4 cue=3 repl=33 [noG: bos=9 repl=89]
+
+composition (gain vs random direction) of unit output dir (B) and of its change (A-B):
+unit       q9    H0 q9    H2 q10    H2 q12    H1 q12    H2 k9       k10       k12      
+L3u1418  out: 0.11  0.12  0.12  0.15  0.12  0.13  0.12  0.14 | d: 0.09  0.09  0.09  0.12  0.12  0.10  0.10  0.13
+L3u1111  out: 0.25  0.27  0.24  0.32  0.28  0.21  0.25  0.30 | d: 0.12  0.14  0.14  0.19  0.16  0.14  0.17  0.19
+L4u812   out: 0.12  0.15  0.11  0.14  0.11  0.14  0.13  0.11 | d: 0.09  0.09  0.08  0.11  0.10  0.12  0.11  0.11
+L5u1181  out: 0.25  0.22  0.27  0.19  0.22  0.23  0.22  0.16 | d: 0.24  0.29  0.23  0.22  0.19  0.28  0.23  0.19
+L6u1400  out: 0.17  0.17  0.15  0.14  0.08  0.16  0.16  0.12 | d: 0.40  0.38  0.30  0.20  0.20  0.44  0.34  0.28
+L7u186   out: 0.44  0.40  0.49  0.32  0.33  0.36  0.40  0.31 | d: 0.26  0.23  0.20  0.12  0.09  0.24  0.17  0.11
+L7u256   out: 0.53  0.47  0.52  0.30  0.37  0.45  0.46  0.29 | d: 0.47  0.52  0.33  0.25  0.18  0.41  0.31  0.20
+L7u1875  out: 0.45  0.43  0.35  0.27  0.23  0.38  0.26  0.17 | d: 0.26  0.23  0.17  0.14  0.13  0.26  0.19  0.13
+L8u706   out: 0.29  0.31  0.27  0.15  0.16  0.27  0.20  0.16 | d: 0.60  0.63  0.47  0.33  0.33  0.60  0.52  0.31
+L9u1213  out: 0.58  0.32  0.23  0.20  0.16 | d: 0.57  0.40  0.30  0.58  0.30
+L7u186 B out: + ['angg', 'basi', '▁Paj', '▁末', '▁Hé', '▁増', 'sla', ')-', 'errorHandler', '▁アン']  - ['alities', '▁world', 'books', '▁parenchyma', '▁this', '反應', '▁means', 'aworld']
+L7u186 A-B: + ['▁Usually', '▁Ele', '８', '▁Excellent', 'SD', '▁Lá', '▁元', 'infos', '▁IEEE', '▁Bid']  - ['шире', 'дання', 'lemen', '̠', '▁comparación', '<bos>', '>);', '̞']
+L7u256 B out: + ['ado', 'ym', 'ético', 'aut', 'ados', 'cop', 'มา', 'anti', '▁Bon', '▁médi']  - ['▁liquors', '▁rearrange', '▁perceive', '▁pipette', '▁cultivate', '▁overshoot', '▁viewfinder', '▁undermine']
+L7u256 A-B: + ['▁trước', '▁antes', '▁effektiv', '▁snel', '▁před', '▁swiftly', '▁nhanh', '▁schnell', '▁via', '▁virtuel']  - ['3', '8', 'oxal', 'ungannya', '他就', '9', 'センチ', 'izlik']
+L14u374 B out: + ['ާއ', '차가', '▁grandeza', '▁corsa', 'ikas', '▁harrow', '▁pagi', 'ipo', '▁اداکار', '▁symplect']  - ['▁disobey', 'SQL', '▁reasoning', '▁solids', '▁ST', '▁SQL', '▁Sql', '▁incorrect']
+L14u374 A-B: + ['▁Mind', '▁PA', '▁Pa', '▁Ged', '▁Pan', '▁Nak', '▁Sin', '▁PC', '▁Park', '▁Pang']  - ['пить', '試し', 'يتها', 'щины', 'iciais', 'льными', '▁جديده', 'новним']
+L17u459 B out: + ['lemish', 'قیه', '▁прода', 'ától', '翦', '▁сели', 'اشت', '▁mite', '憐', '轉']  - ['▁soorten', '▁Chinook', '▁clave', '蹈', 'correcto', '▁ư', 'genera', '้น']
+L17u459 A-B: + ['▁', '1', '▁and', ',', '▁(', '-', '.', '*', 'ity', '▁N']  - ['٦', '۶', '\uf736', '๖', '₆', '⁶', '٧', '６']
+L9u1213 B out: + ['▁Séb', '▁DIFF', '▁aroma', '▁Substitution', '▁autonom', 'Repl', '罅', '▁acquies', '▁reprodu', '▁substitution']  - ['▁معانا', '▁død', 'ending', '▁viaj', '▁buono', 'owane', '▁yang', '▁dispone']
+L9u1213 A-B: + ['▁zada', 'endering', '멱', 'ipid', '▁yed', '▁vantagens', '▁ventajas', '▁danni', '理', '▁Parenthood']  - ['▁≈', '▁Caucasian', '▁(~', '▁indeterminate', '大约', '▁approx', '▁~', 'approximately']
+L8u706 B out: + ['onOptions', '▁Bhuv', '▁discharg', 'houettes', 'atthena', '▁objectMapper', '늉', 'buildCommand', 'apabb', '▁httpServer']  - ['\n', '1', 'T', '\n\n', 'Key', '-', 'C', '▁ultra']
+L8u706 A-B: + ['the', '▁назад', '▁When', '▁the', '▁when', 'форми', 'When', 'L', 'жидан', 'when']  - ['▁shader', '▁CFRP', '▁bioc', 'ObjectHideFlags', '>(&', '▁microsc', '▁murine', '▁motto']
+
+```

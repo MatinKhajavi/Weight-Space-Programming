@@ -1,0 +1,8 @@
+OUTPUT of Python run 193 of at most 300:
+```
+C-ok: first correct concl stmt -> </think> tokens: quantiles [-515.  269. 1714. 3261. 6603.] n 292
+C-cut 126 with correct concluding stmt 25
+  first stmt token pos quantiles [ 1446.  3265. 10470. 18953. 27291.]
+  number of correct concl stmts quantiles [ 1.   3.  18.6] | other final answers after: share>0 0.68
+
+```

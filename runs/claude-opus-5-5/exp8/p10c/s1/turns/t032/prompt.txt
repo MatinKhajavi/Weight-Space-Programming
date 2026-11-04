@@ -1,0 +1,12 @@
+OUTPUT of Python run 29 of at most 300:
+```
+===== gsm8k_train_2901 p 71 onset 1452 prompt toks 78 ref 28
+PROBLEM: Jenny is trying to convince her cat to walk on a leash. The cat spends twenty minutes resisting. Then Jenny coaxes the cat to walk 64 feet at a rate of 8 feet/minute. How many minutes does this whole process take?
+PRE-ONSET tail: 'during* the resistance phase?\n            *   If the cat walks during resistance, it implies the cat is moving *with* the leash?\n            *   If the cat is moving with the leash, the distance covered is 64 feet.\n            *   But usually, "walking" implies the cat is running away.\n            *   If the cat runs away, it covers distance.\n            *   If the cat runs away, it takes time to cover distance.\n            *   If the cat is running away, it takes time to cover distance.\n            *   If the cat is running away, it takes time to cover distance.\n            *   But wait, if the cat is running away, it is covering distance *at* the rate of 8 feet/minute.\n            *   But the cat was resisting for 20 minutes.\n            *   If the cat was resisting, it was likely stationary.\n            *   If'
+CYCLE: ' the cat is stationary, it cannot run away.\n            *   Therefore, the cat cannot run away *while* resisting.\n            *   Therefore, the cat must run away *after* the resistance.\n            *   So the distance covered is the distance moved from the resting position to the walking position.\n            *   Wait, if'
+===== gsm8k_train_3058 p 30 onset 1614 prompt toks 69 ref 42
+PROBLEM: Barkley gets 10 new dog bones at the beginning of the month.  After 5 months, he has 8 bones available and has buried the rest.  How many bones has he buried?
+PRE-ONSET tail: ' 8 available, he has 2 *remaining*.\n    If he has 8 available, he has *buried* 2 bones.\n    Wait, if he has 8 available, he has *used* 2 bones?\n    No, usually "available" means "not used".\n    If he has 8 available, he has 2 *remaining*.\n    If he has 8 available, he has *buried* 2 bones.\n    Wait, if he has 8 available, he has *used* 2 bones?\n    No, "available" means "not used".\n    If he has 8 available, he has *used* 2 bones?\n    No, "available" means "not used".\n    If he has 8 available, he has 2 *remaining*.\n    If he has 8 available, he has *buried* 2 bones.\n    Wait, if'
+CYCLE: ' he has 8 available, he has *used* 2 bones?\n    No, "available" means "not used".\n    If'
+
+```

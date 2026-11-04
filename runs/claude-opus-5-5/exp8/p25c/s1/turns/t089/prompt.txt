@@ -1,0 +1,20 @@
+OUTPUT of Python run 75 of at most 300:
+```
+['text', 'pred', 'correct', 'tokens', 'cut']
+{'pred': '0', 'correct': 'True', 'tokens': '32768', 'cut': 'True', 'src': 'math'}
+512 512
+E4b-E3 all: n_prob=256 diff=+7.42 SE=2.45  w->r=96 r->w=58
+E4b-E3 gsm8k: n_prob=96 diff=+13.54 SE=4.59  w->r=47 r->w=21
+E4b-E3 math: n_prob=160 diff=+3.75 SE=2.75  w->r=49 r->w=37
+E4b-orig all: n_prob=256 diff=+24.02 SE=2.46  w->r=143 r->w=20
+E4b-orig gsm8k: n_prob=96 diff=+31.25 SE=4.46  w->r=70 r->w=10
+E4b-orig math: n_prob=160 diff=+19.69 SE=2.84  w->r=73 r->w=10
+E3-orig all: n_prob=256 diff=+16.60 SE=2.17  w->r=107 r->w=22
+E3-orig gsm8k: n_prob=96 diff=+17.71 SE=4.12  w->r=47 r->w=13
+E3-orig math: n_prob=160 diff=+15.94 SE=2.44  w->r=60 r->w=9
+orig finished 52 wrong among finished 0 mean tokens fin 5223
+E3 finished 137 wrong among finished 3 mean tokens fin 10654
+E4b finished 182 wrong among finished 12 mean tokens fin 11171
+E4b wrong-finished: E3 status (cut,correct): [('math_train_geometry_771', 0, True, False), ('math_train_geometry_10', 0, True, False), ('_train_number_theory_710', 1, True, False), ('gsm8k_train_5620', 1, True, False), ('gsm8k_train_3006', 0, True, False), ('gsm8k_train_6939', 0, True, False), ('gsm8k_train_5832', 0, True, False), ('gsm8k_train_5936', 0, True, False), ('gsm8k_train_4806', 1, True, False), ('gsm8k_train_1176', 0, True, False), ('gsm8k_train_3216', 0, True, False), ('gsm8k_train_5435', 1, True, False)]
+
+```

@@ -1,0 +1,16 @@
+OUTPUT of Python run 26 of at most 120:
+```
+(3, 'par+e1', False) 1505
+(3, 'par+e1', True) 91185
+(3, 'par+e1+star(R-1)', False) 875
+(3, 'par+e1+star(R-1)', True) 91815
+(3, 'par+e1+tri(R-1)', False) 944
+(3, 'par+e1+tri(R-1)', True) 91746
+(4, 'par+e1', False) 931
+(4, 'par+e1', True) 91759
+(4, 'par+e1+star(R-1)', False) 454
+(4, 'par+e1+star(R-1)', True) 92236
+(4, 'par+e1+tri(R-1)', False) 512
+(4, 'par+e1+tri(R-1)', True) 92178
+
+```

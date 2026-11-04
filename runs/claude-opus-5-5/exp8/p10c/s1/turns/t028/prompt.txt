@@ -1,0 +1,15 @@
+OUTPUT of Python run 25 of at most 300:
+```
+['json', 'os', 'np', 'torch', 'Path', 'safe_open', 'Tokenizer', 'MODEL', 'WORK', 'FROZEN', 'NAMES', 'tok', 'load_original', 'load', 'save_edit', 'drop_edit', 'edited', 'glob', 'cfg', 'ct', 'pd', 'readjl', 'gsm', 'mth', 'aime', 'dm', 'f', 'keys', 'k', 'sl', 'n', 't', 'random', 'rng', 'lvl_w', 'by_lvl', 'p', 'N_MATH', 'diag_math', 'L', 'w', 'diag_gsm', 'diag_ids', 's', 'gen', 'g0', 'samples', 'g', 's_', 'df', 'i', 'toks', 'loop_info', 'info', 'ids', 'li', 'nl', 'ps', 'ons', 'ns', 're', 'norm_ans', 'rows', 'onset', 'pre', 'ref', 'present', 'nbox', 'dl', 'j', 'r', 'fin', 'i0', 'ad', 'idx', 'H_mean', 'H_last', 'M_mean', 'M_last', 'onset_map']
+load (name)
+load ERR could not get source code
+save_edit (name, tensor)
+save_edit ERR could not get source code
+drop_edit (name)
+drop_edit ERR could not get source code
+edited ()
+edited ERR could not get source code
+load_original (name)
+load_original ERR could not get source code
+
+```

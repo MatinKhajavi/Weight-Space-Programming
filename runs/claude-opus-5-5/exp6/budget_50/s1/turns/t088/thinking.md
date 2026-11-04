@@ -1,0 +1,4 @@
+The re-run came in at 0.42, against 0.54 before, so the run-to-run noise looks larger than I'd assumed. A 0.12 gap between two samples is about 2.7 standard errors, which is hard to write off. The opponent's sampling could be part of it, maybe its opening is deterministic and that correlates the games. Either way, my comparisons across versions have been noisier than I was treating them, and the 0.34 and 0.25 results for v13 and v12 need to be read with that in mind.
+
+Every rerun so far has been noisier than I assumed, so the 0.34 and 0.25 from v13 and v12 need caution. Averaging the v9 runs gives about 0.48, which puts v4, v9 and v11 in the same band. Since the noise is large, I should aim at changes with big expected effects and evaluate them over more games, roughly 256 instead of 128. I'm considering sharpening the positional terms (prior, line evaluation, territory) by about 2x to cut down on random weak moves in quiet positions, and I'll test that.
+

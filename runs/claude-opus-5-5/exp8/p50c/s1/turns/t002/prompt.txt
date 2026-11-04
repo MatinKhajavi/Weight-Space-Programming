@@ -1,0 +1,9 @@
+OUTPUT of Python run 1 of at most 300:
+```
+[]
+['chat_template.jinja', 'config.json', 'generation_config.json', 'model.safetensors', 'tokenizer.json', 'tokenizer_config.json']
+['README.txt', 'aime.jsonl', 'gsm8k_train.jsonl', 'math_train.jsonl', 'stats.json']
+320
+[]
+
+```

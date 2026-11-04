@@ -1,0 +1,9 @@
+OUTPUT of Python run 6 of at most 120:
+```
+
+[stderr]
+Traceback (most recent call last):
+  File "<stdin>", line 32, in <module>
+NameError: name 'poss' is not defined
+
+```

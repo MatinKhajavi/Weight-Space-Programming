@@ -1,0 +1,22 @@
+OUTPUT of run 31 of at most 60:
+```
+L0 MLP skeleton: up: T1 -0.1 T2 +0.6 | gate: T1 +0.3 T2 +0.0
+L1 MLP skeleton: up: T1 -1.5 T2 +0.7 | gate: T1 +0.2 T2 -0.1
+L2 MLP skeleton: up: T1 -0.2 T2 -0.6 | gate: T1 +1.8 T2 +0.4
+L3 MLP skeleton: up: T1 -0.8 T2 +0.2 | gate: T1 +0.2 T2 +0.8
+L4 MLP skeleton: up: T1 -1.6 T2 +1.7 | gate: T1 -0.0 T2 +1.2
+L5 MLP skeleton: up: T1 +0.7 T2 +0.3 | gate: T1 -0.0 T2 -2.0
+L6 MLP skeleton: up: T1 -1.8 T2 +1.1 | gate: T1 +0.0 T2 +0.5
+L7 MLP skeleton: up: T1 -0.8 T2 +0.1 | gate: T1 +0.3 T2 -1.2
+L8 MLP skeleton: up: T1 -0.9 T2 +1.4 | gate: T1 -0.9 T2 +0.3
+L9 MLP skeleton: up: T1 -0.7 T2 +0.2 | gate: T1 -0.6 T2 -0.9
+L10 MLP skeleton: up: T1 -0.8 T2 -0.2 | gate: T1 +0.7 T2 -0.8
+L11 MLP skeleton: up: T1 +0.0 T2 -0.1 | gate: T1 -0.3 T2 -1.0
+L12 MLP skeleton: up: T1 -1.4 T2 +0.7 | gate: T1 -0.0 T2 +0.6
+L13 MLP skeleton: up: T1 +0.8 T2 +0.4 | gate: T1 +0.2 T2 -0.2
+L14 MLP skeleton: up: T1 -0.7 T2 +0.6 | gate: T1 +0.7 T2 -1.8
+L15 MLP skeleton: up: T1 -0.3 T2 +0.5 | gate: T1 -0.4 T2 +0.2
+L16 MLP skeleton: up: T1 +0.4 T2 -1.8 | gate: T1 -1.2 T2 +0.6
+L17 MLP skeleton: up: T1 +0.8 T2 -1.1 | gate: T1 -0.4 T2 +0.5
+
+```

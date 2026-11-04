@@ -1,0 +1,5 @@
+OUTPUT of Python run 15 of at most 120:
+```
+{(4, False): 1339, (4, True): 3447, (5, False): 813, (5, True): 3447, (6, False): 712, (6, True): 3447}
+
+```

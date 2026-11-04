@@ -1,0 +1,26 @@
+OUTPUT of run 25 of at most 60:
+```
+38 ['triangle', 'square', 'spider', 'week', 'hexagon', 'octagon', 'octopus', 'insect', 'bicycle', 'tricycle', 'dozen', 'year', 'hand', 'ant', 'cube', 'rectangle', 'dog', 'cat', 'bird', 'duck', 'chicken', 'horse', 'cow', 'sky', 'grass', 'banana', 'carrot', 'snow', 'coal', 'blood', 'lemon', 'tomato', 'chocolate', 'strawberry', 'milk', 'frog', 'pumpkin', 'ocean']
+L0: mean z +0.47 (frac>0 0.66)  per-head means +0.28 +0.40 +0.36 +0.45
+L1: mean z +0.06 (frac>0 0.47)  per-head means +0.21 +0.03 -0.04 +0.25
+L2: mean z +0.20 (frac>0 0.47)  per-head means +0.29 +0.14 -0.28 +0.39
+L3: mean z -0.40 (frac>0 0.39)  per-head means -0.49 -0.48 +0.03 -0.13
+L4: mean z +0.11 (frac>0 0.58)  per-head means +0.34 +0.02 -0.04 +0.11
+L5: mean z -0.12 (frac>0 0.37)  per-head means -0.13 -0.05 -0.01 -0.07
+L6: mean z +0.12 (frac>0 0.47)  per-head means +0.23 -0.23 +0.29 +0.00
+L7: mean z +0.31 (frac>0 0.63)  per-head means +0.22 +0.38 +0.14 +0.01
+L8: mean z +0.02 (frac>0 0.53)  per-head means +0.29 -0.18 +0.05 -0.19
+L9: mean z -0.26 (frac>0 0.53)  per-head means -0.26 -0.17 -0.19 +0.02
+L10: mean z +0.48 (frac>0 0.66)  per-head means +0.31 +0.57 +0.56 +0.14
+L11: mean z +0.49 (frac>0 0.66)  per-head means +0.46 +0.36 +0.39 -0.18
+L12: mean z +0.42 (frac>0 0.53)  per-head means +0.11 +0.56 +0.06 +0.45
+L13: mean z +0.30 (frac>0 0.55)  per-head means +0.19 -0.04 +0.27 +0.23
+L14: mean z +0.31 (frac>0 0.50)  per-head means +0.43 +0.08 +0.26 +0.10
+L15: mean z +0.46 (frac>0 0.58)  per-head means +0.42 +0.15 +0.38 +0.42
+L16: mean z +0.20 (frac>0 0.53)  per-head means +0.22 +0.24 +0.15 -0.04
+L17: mean z +0.34 (frac>0 0.55)  per-head means +0.28 +0.11 +0.47 +0.17
+ALL layers: mean z 0.53 frac>0 0.74
+{'triangle->three': 0.73, 'square->four': 0.09, 'spider->eight': -0.54, 'week->seven': -0.74, 'hexagon->six': -1.13, 'octagon->eight': 0.27, 'octopus->eight': 0.33, 'insect->six': -0.45, 'bicycle->two': 0.68, 'tricycle->three': 0.28, 'dozen->twelve': 0.02, 'year->twelve': 1.02, 'hand->five': 0.5, 'ant->six': 0.18, 'cube->six': 0.35, 'rectangle->four': -0.12, 'dog->four': 0.82, 'cat->four': -0.32, 'bird->two': 2.82, 'duck->two': 1.18, 'chicken->two': -0.73, 'horse->four': 0.01, 'cow->four': 0.33, 'sky->blue': -1.93, 'grass->green': 0.55, 'banana->yellow': -1.18, 'carrot->orange': 1.34, 'snow->white': 0.44, 'coal->black': 1.98, 'blood->red': 3.01, 'lemon->yellow': -0.67, 'tomato->red': 3.11, 'chocolate->brown': 0.8, 'strawberry->red': 3.54, 'milk->white': 0.91, 'frog->green': 0.41, 'pumpkin->orange': 2.16, 'ocean->blue': 0.23}
+null mean 0.28 sd 0.17
+
+```

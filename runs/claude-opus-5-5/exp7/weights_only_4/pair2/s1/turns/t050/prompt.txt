@@ -1,0 +1,12 @@
+OUTPUT of run 49 of at most 60:
+```
+L10: Δdown→ans 0.084 (base 0.076, rand 0.102) | Δgate reads ans 0.118 Δup 0.117 (base gate 0.113, rand 0.099) | robust top units [1973, 275, 1744, 304, 1995, 774, 296, 985, 585, 539]
+L11: Δdown→ans 0.108 (base 0.099, rand 0.101) | Δgate reads ans 0.122 Δup 0.118 (base gate 0.112, rand 0.100) | robust top units [1163, 1819, 2042, 1441, 642, 1053, 500, 414, 1027, 127]
+L12: Δdown→ans 0.121 (base 0.111, rand 0.100) | Δgate reads ans 0.128 Δup 0.125 (base gate 0.109, rand 0.099) | robust top units [23, 1758, 313, 1812, 873, 1953, 1631, 971, 494, 1185]
+L13: Δdown→ans 0.125 (base 0.101, rand 0.100) | Δgate reads ans 0.137 Δup 0.136 (base gate 0.111, rand 0.099) | robust top units [1713, 583, 815, 279, 771, 333, 1271, 685, 763, 1529]
+L14: Δdown→ans 0.134 (base 0.089, rand 0.100) | Δgate reads ans 0.135 Δup 0.133 (base gate 0.115, rand 0.099) | robust top units [1521, 289, 875, 1232, 435, 635, 1422, 354, 1122, 1356]
+L15: Δdown→ans 0.156 (base 0.086, rand 0.100) | Δgate reads ans 0.128 Δup 0.128 (base gate 0.115, rand 0.099) | robust top units [126, 1656, 484, 141, 421, 568, 623, 472, 1190, 1360]
+L16: Δdown→ans 0.223 (base 0.081, rand 0.100) | Δgate reads ans 0.134 Δup 0.135 (base gate 0.119, rand 0.099) | robust top units [863, 278, 931, 267, 549, 989, 1460, 117, 1424, 561]
+L17: Δdown→ans 0.308 (base 0.065, rand 0.100) | Δgate reads ans 0.138 Δup 0.139 (base gate 0.127, rand 0.100) | robust top units [949, 644, 1075, 718, 93, 739, 513, 1648, 1139, 1905]
+
+```

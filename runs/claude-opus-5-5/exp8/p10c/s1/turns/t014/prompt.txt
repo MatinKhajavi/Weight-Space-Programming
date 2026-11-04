@@ -1,0 +1,10 @@
+OUTPUT of Python run 11 of at most 300:
+```
+dict_keys(['id', 'source', 'ref', 'text', 'pred', 'correct', 'tokens', 'cut'])
+                          id source       ref         pred  correct  tokens    cut
+0  math_train_prealgebra_810   math  \dfrac38  \frac{3}{8}     True    6580  False
+1    math_train_algebra_1125   math         2            2     True    6969  False
+2     math_train_algebra_110   math       255          NaN    False   32768   True
+0.076171875
+
+```

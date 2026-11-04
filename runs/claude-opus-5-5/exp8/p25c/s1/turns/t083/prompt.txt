@@ -1,0 +1,10 @@
+OUTPUT of Python run 70 of at most 300:
+```
+<class 'pandas.DataFrame'> (350, 5) ['key', 'loop', 'P', 'onset_tok', 'src']
+Counter({'verification': 146, 'other': 142, 'wrap-up': 47, 'degenerate(P<=6)': 15})
+                               key  loop      P  onset_tok   src
+0     (math_train_geometry_737, 0)  True   91.0     6314.0  math
+1  (math_train_precalculus_385, 0)  True  404.0     9667.0  math
+2  (math_train_precalculus_385, 1)  True   75.0    15199.0  math
+
+```

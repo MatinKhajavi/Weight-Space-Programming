@@ -1,0 +1,12 @@
+OUTPUT of Python run 40 of at most 120:
+```
+1 486
+2 486
+3 486
+4 486
+5 486
+6 486
+pass bias -8.0
+saved v7
+
+```

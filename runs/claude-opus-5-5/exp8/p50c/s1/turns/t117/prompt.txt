@@ -1,0 +1,8 @@
+OUTPUT of Python run 100 of at most 300:
+```
+A+brake cut=74; final-answer-type loops=5; their pred values: [None, '196', None, None, None]
+any cut sample with non-None pred: 1
+A cut with boxed in tail: 0
+Wait      col.E = +0.299 | </think>  col.E = +0.044 | Hmm       col.E = +0.095 | So        col.E = -0.007 | Okay      col.E = +0.011 | Final     col.E = +0.017 | **        col.E = +0.007 | 
+
+```

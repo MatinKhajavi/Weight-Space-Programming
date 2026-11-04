@@ -1,0 +1,33 @@
+OUTPUT of run 39 of at most 60:
+```
+L10h1 rel 0.034 energy top1 0.24 top3 0.44 top10 0.73
+   sv0 q:ans_in 0.038 ans_out 0.022 L0read 0.039 | k:ans_in 0.020 ans_out 0.020 L0read 0.037 | u.v +0.57 | base along (u m v)/||m|| +0.028
+   sv1 q:ans_in 0.014 ans_out 0.007 L0read 0.012 | k:ans_in 0.031 ans_out 0.012 L0read 0.049 | u.v -0.03 | base along (u m v)/||m|| +0.110
+   sv2 q:ans_in 0.003 ans_out 0.004 L0read 0.010 | k:ans_in 0.019 ans_out 0.023 L0read 0.034 | u.v +0.22 | base along (u m v)/||m|| +0.022
+L11h0 rel 0.050 energy top1 0.24 top3 0.54 top10 0.82
+   sv0 q:ans_in 0.033 ans_out 0.025 L0read 0.033 | k:ans_in 0.035 ans_out 0.030 L0read 0.050 | u.v +0.57 | base along (u m v)/||m|| +0.228
+   sv1 q:ans_in 0.007 ans_out 0.004 L0read 0.020 | k:ans_in 0.016 ans_out 0.009 L0read 0.019 | u.v +0.19 | base along (u m v)/||m|| -0.013
+   sv2 q:ans_in 0.008 ans_out 0.015 L0read 0.012 | k:ans_in 0.009 ans_out 0.010 L0read 0.012 | u.v -0.38 | base along (u m v)/||m|| +0.109
+L11h1 rel 0.042 energy top1 0.31 top3 0.54 top10 0.82
+   sv0 q:ans_in 0.006 ans_out 0.002 L0read 0.017 | k:ans_in 0.019 ans_out 0.010 L0read 0.041 | u.v +0.21 | base along (u m v)/||m|| +0.184
+   sv1 q:ans_in 0.014 ans_out 0.012 L0read 0.014 | k:ans_in 0.013 ans_out 0.012 L0read 0.019 | u.v +0.23 | base along (u m v)/||m|| +0.124
+   sv2 q:ans_in 0.028 ans_out 0.017 L0read 0.015 | k:ans_in 0.008 ans_out 0.004 L0read 0.010 | u.v -0.33 | base along (u m v)/||m|| -0.028
+L11h2 rel 0.018 energy top1 0.22 top3 0.45 top10 0.76
+   sv0 q:ans_in 0.037 ans_out 0.033 L0read 0.038 | k:ans_in 0.031 ans_out 0.029 L0read 0.045 | u.v +0.43 | base along (u m v)/||m|| -0.042
+   sv1 q:ans_in 0.016 ans_out 0.015 L0read 0.024 | k:ans_in 0.012 ans_out 0.006 L0read 0.018 | u.v -0.26 | base along (u m v)/||m|| +0.082
+   sv2 q:ans_in 0.009 ans_out 0.010 L0read 0.016 | k:ans_in 0.013 ans_out 0.007 L0read 0.012 | u.v -0.03 | base along (u m v)/||m|| -0.003
+L11h3 rel 0.028 energy top1 0.30 top3 0.52 top10 0.80
+   sv0 q:ans_in 0.026 ans_out 0.014 L0read 0.052 | k:ans_in 0.040 ans_out 0.026 L0read 0.060 | u.v +0.61 | base along (u m v)/||m|| +0.082
+   sv1 q:ans_in 0.003 ans_out 0.002 L0read 0.026 | k:ans_in 0.007 ans_out 0.006 L0read 0.011 | u.v -0.20 | base along (u m v)/||m|| -0.004
+   sv2 q:ans_in 0.006 ans_out 0.010 L0read 0.015 | k:ans_in 0.006 ans_out 0.003 L0read 0.007 | u.v -0.12 | base along (u m v)/||m|| -0.036
+L12h0 rel 0.029 energy top1 0.36 top3 0.57 top10 0.84
+   sv0 q:ans_in 0.045 ans_out 0.041 L0read 0.052 | k:ans_in 0.007 ans_out 0.006 L0read 0.014 | u.v +0.21 | base along (u m v)/||m|| -0.007
+   sv1 q:ans_in 0.003 ans_out 0.002 L0read 0.017 | k:ans_in 0.021 ans_out 0.018 L0read 0.027 | u.v +0.17 | base along (u m v)/||m|| -0.046
+   sv2 q:ans_in 0.014 ans_out 0.011 L0read 0.014 | k:ans_in 0.016 ans_out 0.011 L0read 0.025 | u.v -0.06 | base along (u m v)/||m|| +0.178
+L12h2 rel 0.031 energy top1 0.31 top3 0.57 top10 0.82
+   sv0 q:ans_in 0.017 ans_out 0.016 L0read 0.028 | k:ans_in 0.010 ans_out 0.014 L0read 0.016 | u.v +0.20 | base along (u m v)/||m|| -0.155
+   sv1 q:ans_in 0.015 ans_out 0.005 L0read 0.037 | k:ans_in 0.008 ans_out 0.002 L0read 0.006 | u.v -0.06 | base along (u m v)/||m|| -0.040
+   sv2 q:ans_in 0.023 ans_out 0.023 L0read 0.023 | k:ans_in 0.021 ans_out 0.018 L0read 0.020 | u.v +0.21 | base along (u m v)/||m|| +0.105
+chance: ans 0.009, L0read 0.016
+
+```

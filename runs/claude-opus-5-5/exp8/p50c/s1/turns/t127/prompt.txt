@@ -1,0 +1,14 @@
+OUTPUT of Python run 109 of at most 300:
+```
+===  math_train_counting_and_probability_708 P 106 onset char 18402 of 77241
+\\times 14 \\times 13 \\times 12 \\times 15}{120}$.\n                            *   $\\binom{16}{5} = \\frac{16 \\times 14 \\times 13 \\times 12 \\times 15}{120} = \\frac{16 \\times 14 \\times 13 \\times 12 \\times 15}{120}$.\n                            *   $\\binom{16}{5} = \\frac{16 \\times 14 \\times 13 \\times 12 \\times 15}{120}$.\n                            *   $\\binom{16}{5} = \\frac{16 \\times 14 \\times 13 \\times 12 \\times 15}{120'
+--- loop unit: '} = \\frac{16 \\times 14 \\times 13 \\times 12 \\times 15}{120}$.\n                            *   $\\binom{16}{5'
+===  math_train_number_theory_780 P 144 onset char 22613 of 73763
+ 150$.\n                *   $A=8, B=7 \\to 150$.\n                *   $A=8, B=7 \\to 150$.\n                *   $A=8, B=7 \\to 150$.\n                *   $A=8, B=7 \\to 150$.\n                *   $A=8, B=7 \\to 150$.\n                *   $A=8, B=7 \\to 150$.\n                *   $A=8, B=7 \\to 150$.\n                *   $A=8, B=7 \\to 150$.\n                *   $A=8, B=7 \\to 150$.\n                *   $8, 7 \\to 150$.\n                *   $8, 8'
+--- loop unit: ' \\to 165$.\n                *   $8, 6 \\to 154$.\n                *   $8, 5 \\to 165$.\n                *   $8, 7 \\to 150$.\n                *   $8, 9'
+===  math_train_intermediate_algebra_1074 P 13 onset char 49395 of 54842
+...$\n    $x=-31$.\n    $x=-32$.\n    $x=-33$.\n    $x=-34$.\n    $x=-35$.\n    $x=-36$.\n    $x=-37$.\n    $x=-38$.\n    $x=-39$.\n    $x=-40$.\n    $x=-41$.\n    $x=-42$.\n    $x=-43$.\n    $x=-44$.\n    $x=-45$.\n    $x=-46$.\n    $x=-47$.\n    $x=-48$.\n    $x=-49$.\n    $x=-50$.\n    $x=-50$ gives $5188$.\n    $x=-51$.\n    $x=-52$.\n    $x=-53$.\n    $x=-54$.\n    $x=-54$.\n    $x=-55$.\n    $x=-56$.\n    $x=-57$.\n    $x=-58$.\n    $x=-59'
+--- loop unit: '$.\n    $x=-60'
+['math_train_counting_and_probability_708', 'math_train_geometry_132', 'math_train_counting_and_probability_564', 'math_train_number_theory_780', 'math_train_algebra_616', 'math_train_precalculus_544', 'math_train_intermediate_algebra_1074', 'math_train_counting_and_probability_208', 'math_train_counting_and_probability_535', 'math_train_prealgebra_316', 'math_train_intermediate_algebra_34', 'math_train_number_theory_788', 'math_train_counting_and_probability_500', 'math_train_prealgebra_857', 'math_train_geometry_703', 'math_train_geometry_168', 'math_train_algebra_191', 'gsm8k_train_7280', 'gsm8k_train_3144', 'gsm8k_train_750', 'gsm8k_train_4969', 'gsm8k_train_7417', 'gsm8k_train_6200', 'gsm8k_train_4790', 'gsm8k_train_4760', 'gsm8k_train_3413', 'gsm8k_train_704', 'gsm8k_train_5656', 'gsm8k_train_1733', 'gsm8k_train_2987', 'gsm8k_train_4091', 'gsm8k_train_4031', 'gsm8k_train_4556', 'gsm8k_train_5726']
+
+```

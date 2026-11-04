@@ -1,0 +1,8 @@
+OUTPUT of Python run 108 of at most 300:
+```
+categorize -> other | loop_opener -> ['nonword', 'The']
+cut n 246 exact-loop 171
+{'other': (119, 4), 'noloop': (75, 10), 'verification': (35, 0), 'wrap-up': (12, 3), 'degenerate(P<=6)': (5, 0)}
+openers [("['nonword', ", 88), ('None', 75), ("['nonword']", 18), ("['Maybe']", 4), ("['s', 'Yes',", 4), ("['the', 'The", 3), ("['s', 'No', ", 3), ("['s', 'I']", 2), ("['Is', 'Yes'", 2), ("['the', 'non", 2), ("['the', 'And", 2), ("['I', 'Step'", 2), ("['Is', 'nonw", 2), ("['Maybe', 'N", 2), ("['ion', 'So'", 1), ("['imply', 'D", 1), ("['Maybe', 'M", 1), ("['the', 'Sin", 1), ("['s', 'This'", 1), ("['es', 'Mayb", 1)]
+
+```

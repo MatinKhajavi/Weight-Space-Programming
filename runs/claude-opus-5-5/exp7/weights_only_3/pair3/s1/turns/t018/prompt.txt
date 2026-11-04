@@ -1,0 +1,23 @@
+OUTPUT of run 17 of at most 60:
+```
+L 0 corr(a,|dU v|)=-0.081 mean a top|dU|=-0.03 corr(a,|dG v|)=-0.008 mean a top|dG|=+0.09  skew(a)=+0.43 mean(a)/std=+0.19
+L 1 corr(a,|dU v|)=+0.074 mean a top|dU|=-0.04 corr(a,|dG v|)=+0.112 mean a top|dG|=-0.05  skew(a)=+0.25 mean(a)/std=-0.38
+L 2 corr(a,|dU v|)=+0.037 mean a top|dU|=-0.25 corr(a,|dG v|)=+0.088 mean a top|dG|=-0.11  skew(a)=-0.18 mean(a)/std=-0.39
+L 3 corr(a,|dU v|)=+0.024 mean a top|dU|=-0.18 corr(a,|dG v|)=+0.115 mean a top|dG|=+0.20  skew(a)=-0.39 mean(a)/std=-0.11
+L 4 corr(a,|dU v|)=-0.119 mean a top|dU|=-0.47 corr(a,|dG v|)=-0.104 mean a top|dG|=-0.38  skew(a)=+1.21 mean(a)/std=-0.01
+L 5 corr(a,|dU v|)=+0.060 mean a top|dU|=-0.35 corr(a,|dG v|)=+0.046 mean a top|dG|=-0.18  skew(a)=-0.37 mean(a)/std=-0.43
+L 6 corr(a,|dU v|)=-0.077 mean a top|dU|=+0.07 corr(a,|dG v|)=-0.057 mean a top|dG|=+0.35  skew(a)=+1.38 mean(a)/std=+0.37
+L 7 corr(a,|dU v|)=+0.054 mean a top|dU|=+0.09 corr(a,|dG v|)=+0.031 mean a top|dG|=+0.05  skew(a)=-0.51 mean(a)/std=-0.07
+L 8 corr(a,|dU v|)=-0.083 mean a top|dU|=-0.08 corr(a,|dG v|)=-0.019 mean a top|dG|=+0.06  skew(a)=+0.39 mean(a)/std=+0.16
+L 9 corr(a,|dU v|)=+0.042 mean a top|dU|=+0.04 corr(a,|dG v|)=+0.037 mean a top|dG|=+0.15  skew(a)=-0.06 mean(a)/std=+0.03
+L10 corr(a,|dU v|)=-0.072 mean a top|dU|=+0.07 corr(a,|dG v|)=-0.067 mean a top|dG|=+0.01  skew(a)=+0.06 mean(a)/std=+0.11
+L11 corr(a,|dU v|)=+0.072 mean a top|dU|=-0.17 corr(a,|dG v|)=+0.038 mean a top|dG|=-0.15  skew(a)=-0.26 mean(a)/std=-0.26
+L12 corr(a,|dU v|)=+0.058 mean a top|dU|=+0.07 corr(a,|dG v|)=+0.018 mean a top|dG|=-0.12  skew(a)=-0.18 mean(a)/std=-0.19
+L13 corr(a,|dU v|)=+0.027 mean a top|dU|=-0.05 corr(a,|dG v|)=-0.005 mean a top|dG|=-0.20  skew(a)=-0.92 mean(a)/std=-0.18
+L14 corr(a,|dU v|)=-0.004 mean a top|dU|=-0.10 corr(a,|dG v|)=-0.011 mean a top|dG|=-0.10  skew(a)=-1.17 mean(a)/std=-0.11
+L15 corr(a,|dU v|)=-0.030 mean a top|dU|=+0.06 corr(a,|dG v|)=-0.014 mean a top|dG|=+0.07  skew(a)=+1.97 mean(a)/std=+0.16
+L16 corr(a,|dU v|)=+0.041 mean a top|dU|=+0.07 corr(a,|dG v|)=+0.046 mean a top|dG|=-0.09  skew(a)=-1.06 mean(a)/std=-0.15
+L17 corr(a,|dU v|)=+0.022 mean a top|dU|=-0.05 corr(a,|dG v|)=-0.031 mean a top|dG|=-0.36  skew(a)=+1.63 mean(a)/std=-0.18
+adjacent cos [-0.24  0.6   0.56 -0.41 -0.67 -0.6  -0.64 -0.66 -0.65 -0.6  -0.65  0.62  0.75  0.86 -0.8  -0.82  0.79]
+
+```

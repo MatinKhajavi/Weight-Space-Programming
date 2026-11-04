@@ -1,0 +1,23 @@
+v1: build.py trunk L1-5 atari(AO/AX) & <=2lib(LO/LX) seed+prop; L6 head LIN,SAVE,SELF,ATT,EYE,INT; params P0; exec build.py then save_all(P)
+v2: added 2x2 block seeds (L1 326-453), gates 2048/16384. pass2 baseline v1: random 100%, weak 97%, strong 52% (11 repetition losses due to false atari->self-atari)
+v3: trunk3.py+head3.py (exec both). channels SO,SX,TX,VX(mass for small-group atari AXS). dropped own lt3. P3 params. pass3 v2: strong 53% (17 reps), weak 97%
+v3b: P3 + w_cap=4,w_capS=0.5,w_self=-10 (saved P_v3b.json). pos-pass4 showed big-group false atari still -> capture bonus too high
+pass5 v3b: strong 57% weak 84% -- repetition losses 24/128 (self-atari: connect to own 2-lib grp e=0). v4: trunk4.py+head4.py: SO,TO(own>=3),VX(M=1024 mass) -> AO,LO,AX,AXS; no ATT; SELF uses own3. P_v4.json
+pass6 v4: strong 38.5% (no ATT hurt), weak 94%. v5: trunk5.py+head5.py: L5=own,opp,U1(AO+AX mixed),AXS,LO,LX; ATT back. P_v5.json
+pass8 v5: strong 51% (12 rep losses: SAVE unit fired on false big atari via U1 sum>1). v5b: w_save=0 (P_v5b.json)
+pass9 v5b: strong 48%, weak 91%, many passes (false LO for big own groups blocks moves). v6: trunk6/head6: VO mass for own T -> SAFE3 (big groups optimistic); SELF uses SAFE3; ATT uses e only; no SAVE. P_v6.json
+pass10 v6: 47% BUT SAFE3 leaked onto opp stones (ungated) -> SELF broken. v7: trunk7/head7: SAFE3 gated (scaled /1024, SELF weight 2048), TX->mass channel, LX=relu(opp - v/16) graded, ATT=relu(2*opp2+e-3). P_v7.json
+v7 fix: SAFE3=relu((VO(p)-4)/1024) no nbr hop, no gate.
+v8: head8 adds KO unit (slot 81) = relu(sum AXS/12 - e - n_own) w_ko=-18; w_self=-14. P_v8.json. 5-cycles were ko-like recaptures.
+pass13 v8: strong 41% captures collapsed (KO fired on dominoes; big captures blocked by SELF). v9: head9: KO=relu(sumAXS-11-12(e+nown)); ATT folded linear into LIN (w_att2*sum(LX-U1)); EXL unit (slot 243)=relu(sumU1-2nown) w_exl=24 (lone big captures exempt). P_v9.json
+pass14 v9: strong 40%, weak 97% (captures back, reps 4). v10: head10 SELF adds -sum(own-U1) (nonatari own nbr counts as 1 lib), w_exl=40, w_self=-12. P_v10.json
+pass15 v10: strong 43%. Observed: after rep-fixes, nonrep winrate fell from ~60-70% (v1-v3b) to ~40%. v11: trunk11 (LX binary any size /1024), head11: ATT v3b-style unit in slot 81 (w_attu=2), no KO, w_cap=6, keep EXL & SELF(U1 trick). P_v11.json
+pass16 v11: strong 56% (ATT v3b-style helps), 15 rep losses (6 ko-5cycles,6 3cycles sampled vs pass,3 6cycles). v12: head12: TERR=EYE+INT merged (slot 324), KO unit (slot 405), EXL excludes singles, w_self -16, w_exl 55, scale 2.0. P_v12.json
+pass17 v12: strong 59.4% (3 reps). losses = big groups dying (lost 24 stones avg). v13 = v12 + connected patterns own_a .2 own_d .4 own_j .2 own_k .1 (P_v13.json)
+pass18 v13 (connected patterns): 51.6% -> revert. v14 = v12 with scale 3.0 (P_v14.json)
+pass19 v14 (scale 3): 61% but 11 reps (ko 5-cycles: EXL fired from false big atari nbrs on ko capture). v15: head15 EXL AXS coef 1/3. P_v15.json = P_v14
+pass20 v15: strong 64% (best; 3 reps). v16 = v15 + w_attu 3 (P_v16.json). If not better revert to v15.
+pass21 v16 (w_attu3): 58.6%, 10 reps (double-ko 5-cycles: false big U1 bonus overrides KO). v17 = v15 + w_ko -35 (P_v17.json)
+pass22 v17 (w_ko -35): strong 50%, weak 94%, random 100% -> revert. Restored v15 as current.
+v18 = v15 with scale 4.0 (P_v18.json); adopt only if >=64%, else restore v15.
+pass23 v18 (scale4): 62.5% ~ same. FINAL = v15 restored (P_v15.json).

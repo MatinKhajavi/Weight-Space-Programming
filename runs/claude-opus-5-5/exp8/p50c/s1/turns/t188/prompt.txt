@@ -1,0 +1,39 @@
+OUTPUT of Python run 164 of at most 300:
+```
+== gsm8k_train_412 ans 188 len 128486 loopP 169 onset 18634
+  [0.3] '          *   "Kept [Mike] = 23".\n                                *   "Gave [Anna] = A".\n                                *   "He gave [Tim] = 15".\n                                *   "Kept [Mike] = 23".\n                           '
+  [0.6] '"Kept [Mike] = 23".\n                                *   "Gave [Anna] = A".\n                                *   "He gave [Tim] = 15".\n                                *   "Kept [Mike] = 23".\n                                *   "Gave'
+  [0.9] ' 23".\n                                *   "Gave [Anna] = A".\n                                *   "He gave [Tim] = 15".\n                                *   "Kept [Mike] = 23".\n                                *   "Gave [Anna] = A".\n'
+== gsm8k_train_4345 ans 3 len 154915 loopP 809 onset 145988
+  [0.3] '                   *   Maybe the *prices* are $\\{9, 10\\}$.\n                                                    *   Maybe the *regular* ticket is $\\$9$.\n                                                    *   Maybe the *children* t'
+  [0.6] '  *   Maybe the *total* money spent on tickets was $\\$20$.\n                                                    *   Maybe the *tickets* were bought in *groups*?\n                                                    *   Maybe the *gro'
+  [0.9] ' the tickets were bought in groups of size 3, and the total cost was $\\$19$.\n$9 \\times 2 + 7 \\times 1 = 25$.\nMaybe the tickets were bought in groups of size 2?\n$9 \\times 2 + 7 \\times 1 = 25$.\nMaybe the tickets were bought in group'
+== gsm8k_train_1945 ans 17 len 116956 loopP 33 onset 47361
+  [0.3] 'hem?\n                                            *   No, "Diego *buys* apples" implies he is adding them.\n                                            *   If he adds apples, he is increasing the total weight.\n                      '
+  [0.6] 'uys* apples.\n        *   Diego *buys* apples.\n        *   Diego *buys* apples.\n        *   Diego *buys* apples.\n        *   Diego *buys* apples.\n        *   Diego *buys* apples.\n        *   Diego *buys* apples.\n        *   Diego *'
+  [0.9] 'les.\n        *   Diego *buys* apples.\n        *   Diego *buys* apples.\n        *   Diego *buys* apples.\n        *   Diego *buys* apples.\n        *   Diego *buys* apples.\n        *   Diego *buys* apples.\n        *   Diego *buys* ap'
+== gsm8k_train_6597 ans 26 len 190540 loopP 55 onset 45763
+  [0.3] ' 161.\n                                    Jacob catches 161.\n                                    Jacob catches 161.\n                                    Jacob catches 161.\n                                    Jacob catches 161.\n    '
+  [0.6] '                         Jacob catches 161.\n                                    Jacob catches 161.\n                                    Jacob catches 161.\n                                    Jacob catches 161.\n                     '
+  [0.9] '        Jacob catches 161.\n                                    Jacob catches 161.\n                                    Jacob catches 161.\n                                    Jacob catches 161.\n                                    Ja'
+== math_train_precalculus_233 ans 0 len 82410 loopP None onset None
+  [0.3] ' \\beta = \\frac{1}{2} (\\sin(\\alpha + \\beta) + \\sin(\\alpha - \\beta))$.\n    So $\\det = \\sin \\alpha [ \\sin(\\alpha + \\beta) + \\sin(\\alpha - \\beta) - \\frac{1}{2} (\\sin(\\alpha + \\beta) + \\sin(\\alpha - \\beta)) ]$.\n    $\\det = \\sin \\alpha '
+  [0.6] 'he determinant IS zero.\n    \n    Let me check the expansion along Column 1 again.\n    $(-\\sin \\alpha) \\det \\begin{pmatrix} -\\sin \\beta & \\sin \\beta \\\\ \\cos \\alpha & -\\sin \\beta \\end{pmatrix}$.\n    This matrix corresponds to removi'
+  [0.9] ")$.\n    \n    $\\sin \\alpha \\cos \\alpha = \\frac{1}{2} \\sin(2\\alpha)$.\n    $\\sin(\\alpha+\\beta) = \\sin(\\alpha+\\beta)$.\n    $\\sin(\\alpha-\\beta) = \\sin(\\alpha-\\beta)$.\n    \n    Let's try to simplify $\\sin \\alpha \\sin \\beta (\\sin \\alpha "
+== math_train_geometry_312 ans 20 len 95508 loopP 52 onset 69668
+  [0.3] "m must include vertices from both triangles.\n                    *   The vertices listed are vertices of the prism.\n                    *   The prism has 12 vertices.\n                    *   The sum is 30.\n\n    *   Let's double ch"
+  [0.6] 'f the prism has 12 vertices, then it must be a prism.\n        *   But the vertices listed are 6.\n        *   So the prism has 6 vertices.\n        *   This implies the prism is a prism with 6 vertices.\n        *   Which is impossib'
+  [0.9] 'Faces = $2 \\times 2 + 3 \\times 3 = 13$.\n        *   Faces = $2 \\times 2 + 3 \\times 3 = 13$.\n        *   Faces = $2 \\times 2 + 3 \\times 3 = 13$.\n        *   Faces = $2 \\times 2 + 3 \\times 3 = 13$.\n        *   Faces = $2 \\times 2 + '
+== math_train_geometry_203 ans 55^\circ len 181831 loopP 71 onset 54653
+  [0.3] '                                 $\\triangle PR = \\alpha$.\n                                            So $\\triangle PR = 65^\\circ$.\n                                            $\\triangle PR = 65^\\circ$.\n                           '
+  [0.6] '             $\\triangle PR = 65^\\circ$.\n                                            $\\triangle PR = 65^\\circ$.\n                                            $\\triangle PR = 65^\\circ$.\n                                            $\\tr'
+  [0.9] 'le PR = 65^\\circ$.\n                                            $\\triangle PR = 65^\\circ$.\n                                            $\\triangle PR = 65^\\circ$.\n                                            $\\triangle PR = 65^\\circ$'
+== math_train_counting_and_probability_699 ans 256 len 190704 loopP 1957 onset 148003
+  [0.3] '\n                                                                                *   Row 0: `[1]`\n                                                                                *   Row 1: `[1, 1]`\n                                '
+  [0.6] '                               *   If so, the sum is $8$.\n                                                                                *   But the table is `[1, 3, 6, 4, 1]`.\n                                                    '
+  [0.9] "                                                               *   The table `[1, 3, 6, 4, 1]` is not consistent.\n                                                                                *   So the table is not Pascal's Tri"
+ZERO math_train_intermediate_algebra_200 ans 1 | before </think>: "or division.\n    Also, the result is an integer.\n    \n    Let's check if the sequence is $a_n = \\lfloor \\frac{n}{2} \\rfloor$.\n    Maybe the sequence is $a_n = \\lfloor \\frac{n}{2} \\rfloor$.\n    Then $a * b = 0$.\n    \n    Okay, I'll proceed with this.\n"
+ZERO math_train_counting_and_probability_275 ans 12 | before </think>: 'nts are adjacent.\n      7.  Thus, the number of ways is 0.\n      \n      **However**, if the question implies that the students are *identical*, the answer is 1.\n      But "different ways" suggests distinct arrangements.\n      \n      I will output 0.\n'
+ZERO math_train_number_theory_473 ans 6 | before </think>: 'y other interpretation.\n    Maybe "ones digit" means "last digit of the square root"?\n    No, "ones digit" is a property of the number.\n    Maybe "ones digit" means "digits in the ones place"?\n    If so, we are done.\n\n    I will output the answer 0.\n'
+
+```

@@ -1,0 +1,10 @@
+OUTPUT of Python run 94 of at most 300:
+```
+orig Wait 19.9 Hmm 0.0 Actually 0.0 But 0.2 check 0.3 However 0.1 Alternatively 0.0
+A Wait 12.7 Hmm 0.0 Actually 0.1 But 0.8 check 1.1 However 0.2 Alternatively 0.0
+C Wait 0.1 Hmm 0.0 Actually 0.1 But 0.9 check 1.2 However 0.3 Alternatively 0.0
+C cut n=74, exact-loop tails 47, median period chars 119.0
+loop unit starts (first 12): ['13$. * Faces = $2 \\times ', '65^\\circ$. $\\triangle PR ', 'This is not $2^n$. * So t', 'x^3/x^2 \\cdot x^2)$. $T =', 'So $K$ is an integer. Thi', "196. \\boxed{196} Okay, I'", '$. So $L^{(m)}$ is perpen', '\\cdot N = 4$. $\\Gamma(N+1', '+ t_{max} = 640$. However', '2, 33, 34, 35, 36, 37, 38', '}{PR} \\cdot \\frac{PR}{PR}', 'Maybe the roots are $1/2,']
+C wrong n=28 median tok 18200; of these A was: cut 23, wrong 5, right 0
+
+```

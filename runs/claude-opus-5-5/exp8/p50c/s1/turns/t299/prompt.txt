@@ -1,0 +1,9 @@
+OUTPUT of Python run 266 of at most 300:
+```
+ctrl vs brake-only (256, np.float64(-17.6), np.float64(3.3))  ctrl vs C (256, np.float64(-32.8), np.float64(3.2))  brake-only vs C (256, np.float64(-15.2), np.float64(3.0))
+['layers.15.self_attn.o_proj.weight.safetensors', 'layers.22.mlp.down_proj.weight.safetensors', 'layers.23.self_attn.o_proj.weight.safetensors']
+Traceback (most recent call last):
+  File "<run>", line 13, in <module>
+TypeError: %c requires int or char
+
+```

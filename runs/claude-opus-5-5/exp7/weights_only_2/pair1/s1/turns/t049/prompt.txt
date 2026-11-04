@@ -1,0 +1,18 @@
+OUTPUT of run 48 of at most 60:
+```
+L 6: h0 gain=+0.00005 excessTr z=-0.1 excess d1-copy z=+0.2 | h1 gain=-0.00000 excessTr z=-0.0 excess d1-copy z=-1.4 | h2 gain=+0.00008 excessTr z=-0.6 excess d1-copy z=+0.2 | h3 gain=+0.00015 excessTr z=-0.6 excess d1-copy z=-1.5 | 
+L 7: h0 gain=-0.00010 excessTr z=+0.4 excess d1-copy z=+0.6 | h1 gain=-0.00003 excessTr z=-0.6 excess d1-copy z=-0.7 | h2 gain=+0.00003 excessTr z=+0.8 excess d1-copy z=+0.3 | h3 gain=+0.00002 excessTr z=+1.8 excess d1-copy z=-1.1 | 
+L 8: h0 gain=+0.00016 excessTr z=+1.8 excess d1-copy z=+0.6 | h1 gain=+0.00041 excessTr z=-1.4 excess d1-copy z=-1.5 | h2 gain=+0.00026 excessTr z=-0.5 excess d1-copy z=-1.6 | h3 gain=-0.00012 excessTr z=+1.6 excess d1-copy z=-0.3 | 
+L 9: h0 gain=-0.00004 excessTr z=+0.3 excess d1-copy z=-0.3 | h1 gain=+0.00009 excessTr z=+0.3 excess d1-copy z=+1.1 | h2 gain=+0.00002 excessTr z=-0.9 excess d1-copy z=-1.7 | h3 gain=+0.00014 excessTr z=+1.0 excess d1-copy z=+0.3 | 
+L10: h0 gain=-0.00017 excessTr z=+2.4 excess d1-copy z=-0.2 | h1 gain=+0.00001 excessTr z=-0.3 excess d1-copy z=+0.9 | h2 gain=-0.00018 excessTr z=+2.5 excess d1-copy z=+0.1 | h3 gain=-0.00010 excessTr z=-0.2 excess d1-copy z=+0.2 | 
+L11: h0 gain=+0.00028 excessTr z=+0.1 excess d1-copy z=+0.4 | h1 gain=+0.00009 excessTr z=-1.5 excess d1-copy z=-0.9 | h2 gain=+0.00011 excessTr z=-0.7 excess d1-copy z=+0.9 | h3 gain=-0.00005 excessTr z=+0.9 excess d1-copy z=-0.2 | 
+L12: h0 gain=+0.00005 excessTr z=-0.2 excess d1-copy z=+2.0 | h1 gain=+0.00015 excessTr z=-0.1 excess d1-copy z=+2.5 | h2 gain=+0.00017 excessTr z=+0.3 excess d1-copy z=+2.4 | h3 gain=+0.00006 excessTr z=-0.2 excess d1-copy z=+1.5 | 
+L13: h0 gain=-0.00004 excessTr z=+0.5 excess d1-copy z=-1.0 | h1 gain=-0.00014 excessTr z=+0.6 excess d1-copy z=+2.2 | h2 gain=-0.00005 excessTr z=+1.7 excess d1-copy z=+0.4 | h3 gain=-0.00010 excessTr z=-1.0 excess d1-copy z=+0.5 | 
+L14: h0 gain=+0.00002 excessTr z=+1.0 excess d1-copy z=-0.3 | h1 gain=+0.00015 excessTr z=-1.4 excess d1-copy z=+0.5 | h2 gain=-0.00016 excessTr z=+0.9 excess d1-copy z=-0.4 | h3 gain=+0.00008 excessTr z=+0.8 excess d1-copy z=+0.0 | 
+L15: h0 gain=-0.00000 excessTr z=+1.0 excess d1-copy z=-0.1 | h1 gain=-0.00011 excessTr z=-0.8 excess d1-copy z=-0.4 | h2 gain=-0.00006 excessTr z=+0.9 excess d1-copy z=-1.0 | h3 gain=-0.00024 excessTr z=+1.3 excess d1-copy z=+1.1 | 
+L16: h0 gain=+0.00038 excessTr z=+0.3 excess d1-copy z=-0.4 | h1 gain=-0.00007 excessTr z=+0.5 excess d1-copy z=+0.3 | h2 gain=-0.00013 excessTr z=+1.4 excess d1-copy z=-0.8 | h3 gain=-0.00029 excessTr z=+0.9 excess d1-copy z=+0.4 | 
+L17: h0 gain=+0.00002 excessTr z=+0.6 excess d1-copy z=+0.1 | h1 gain=-0.00003 excessTr z=+1.6 excess d1-copy z=+0.1 | h2 gain=+0.00007 excessTr z=+0.1 excess d1-copy z=-0.3 | h3 gain=-0.00002 excessTr z=+1.7 excess d1-copy z=+0.5 | 
+layer sums/2 excess trace: [-0.7  1.2  0.8  0.3  2.2 -0.6 -0.1  0.9  0.6  1.2  1.6  2. ]
+layer sums/2 excess d1   : [-1.2 -0.4 -1.4 -0.3  0.5  0.1  4.2  1.1 -0.1 -0.2 -0.3  0.2]
+
+```

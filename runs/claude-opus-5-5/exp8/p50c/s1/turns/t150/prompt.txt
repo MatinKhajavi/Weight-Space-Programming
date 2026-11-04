@@ -1,0 +1,9 @@
+OUTPUT of Python run 130 of at most 300:
+```
+['model.language_model.layers.23.self_attn.k_norm.weight', 'model.language_model.layers.23.self_attn.k_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight', 'model.language_model.layers.23.self_attn.q_norm.weight', 'model.language_model.layers.23.self_attn.q_proj.weight', 'model.language_model.layers.23.self_attn.v_proj.weight']
+L 11 [(0, -7.0, 0.0), (1, 4.6, 0.93), (2, 3.9, 0.91), (3, 5.9, 0.99), (4, 9.0, 1.0), (5, 0.9, 0.17), (6, -11.4, 0.0), (7, 9.8, 1.0)]
+L 15 [(0, -1.4, 0.01), (1, 4.8, 0.93), (2, 2.8, 0.6), (3, -3.0, 0.0), (4, -0.1, 0.05), (5, -0.7, 0.03), (6, -0.8, 0.05), (7, -0.3, 0.03)]
+L 19 [(0, 0.5, 0.11), (1, 0.6, 0.09), (2, -0.5, 0.03), (3, 0.6, 0.06), (4, 2.0, 0.4), (5, -0.2, 0.02), (6, 0.5, 0.09), (7, -0.7, 0.0)]
+L 23 [(0, -0.2, 0.07), (1, 0.1, 0.11), (2, -7.6, 0.0), (3, 0.1, 0.05), (4, -0.3, 0.07), (5, -0.9, 0.01), (6, -0.2, 0.1), (7, 0.5, 0.09)]
+
+```

@@ -1,0 +1,10 @@
+OUTPUT of Python run 54 of at most 300:
+```
+11 o_proj head norms [7.03, 5.14, 5.39, 5.68, 6.18, 5.43, 6.91, 5.64]
+15 o_proj head norms [7.02, 6.41, 6.91, 8.2, 7.38, 7.35, 6.77, 6.48]
+19 o_proj head norms [8.38, 10.49, 8.14, 8.88, 9.38, 7.33, 7.67, 7.75]
+23 o_proj head norms [8.15, 7.5, 5.29, 7.0, 7.87, 7.14, 5.26, 7.9]
+256 ['math_train_precalculus_233', 'math_train_precalculus_93']
+['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']
+
+```

@@ -1,0 +1,64 @@
+OUTPUT of Python run 28 of at most 120:
+```
+1 88 black [((0, 6), 0.5585), ((2, 8), 0.4137), ('P', 0.0278), ((3, 3), 0.0), ((2, 2), 0.0)]
+X.X.XO.X.
+.XXXXOOOX
+XX.XOOOO*
+X.X.XXOOO
+XXXXXXXOO
+.XX.XX.XO
+X.XXX.X.X
+.X.X.X.X.
+X.X.X.X.X
+16 102 black [((8, 4), 0.937), ('P', 0.063), ((0, 6), 0.0), ((0, 5), 0.0), ((3, 4), 0.0)]
+.XX.X..XX
+X.XX.XXX.
+OXXXXX.XX
+OOOX.XXX.
+OOOOXX.XX
+OOOOOXX.X
+.OOOOOOX.
+O.OOOOX.X
+.OOO*X.X.
+21 82 black [((0, 1), 0.8909), ('P', 0.1091), ((6, 2), 0.0), ((4, 5), 0.0), ((6, 5), 0.0)]
+O*X.X.X.X
+OOOX.X.X.
+.OOXXXX.X
+OOOOXX.X.
+OOOOX.X.X
+XXXOOX.X.
+XX.XX.XXX
+.XX.XXX.X
+X.XX.X.X.
+54 83 white [((0, 6), 0.9511), ('P', 0.0474), ((4, 6), 0.0009), ((6, 1), 0.0006), ((6, 0), 0.0)]
+.OXXXX*O.
+OOXXXXXXO
+.OXXOOOXO
+OOXXOOOOO
+OXXOO..OO
+XXXXOO.O.
+..XXO.O.O
+XXXXXO.O.
+.XXXXXO.O
+59 53 white [((7, 4), 0.9559), ((2, 2), 0.0167), ((2, 3), 0.0167), ((4, 1), 0.0058), ((1, 3), 0.0011)]
+.........
+.XO......
+.X...O.O.
+XXXOO.O..
+O.XXOOXO.
+.OOXXXXX.
+O.OXXXOOX
+.O.O*XOX.
+..OXXXO..
+47 124 black [((5, 0), 0.937), ('P', 0.063), ((2, 5), 0.0), ((3, 6), 0.0), ((0, 3), 0.0)]
+X.X.X.X.X
+.XOXXX.X.
+XXOOX.X.X
+.XOOOX.X.
+XOOOXXXXX
+*OOOOXOXO
+OOOOOOOOO
+OOOOOOOOO
+OOOOOO.OO
+
+```

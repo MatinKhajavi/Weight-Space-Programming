@@ -1,0 +1,41 @@
+OUTPUT of Python run 8 of at most 120:
+```
+32 black margin -9.5 len 91 passes [(81, 'o'), (83, 'o'), (85, 'o'), (87, 'o'), (89, 'o'), (90, 'n')] cap 1 lost 12
+33 black margin -7.5 len 110 passes [(87, 'o'), (93, 'o'), (97, 'o'), (108, 'n'), (109, 'o')] cap 12 lost 26
+34 black margin -17.5 len 95 passes [(87, 'o'), (89, 'o'), (91, 'o'), (93, 'o'), (94, 'n')] cap 1 lost 22
+38 black margin -4.5 len 111 passes [(103, 'o'), (105, 'o'), (107, 'o'), (109, 'o'), (110, 'n')] cap 16 lost 21
+40 black margin -21.5 len 90 passes [(86, 'n'), (88, 'n'), (89, 'o')] cap 0 lost 14
+41 black margin -39.5 len 119 passes [(91, 'o'), (113, 'o'), (117, 'o'), (118, 'n')] cap 4 lost 38
+42 black margin -22.5 len 99 passes [(95, 'o'), (97, 'o'), (98, 'n')] cap 2 lost 31
+43 black margin -1.5 len 94 passes [(88, 'n'), (92, 'n'), (93, 'o')] cap 11 lost 20
+44 black margin -11.5 len 89 passes [(87, 'o'), (88, 'n')] cap 4 lost 15
+46 black margin -8.5 len 101 passes [(87, 'o'), (89, 'o'), (91, 'o'), (93, 'o'), (95, 'o'), (97, 'o'), (99, 'o'), (100, 'n')] cap 4 lost 14
+49 black margin -17.5 len 95 passes [(87, 'o'), (91, 'o'), (93, 'o'), (94, 'n')] cap 2 lost 17
+50 black margin -16.5 len 98 passes [(96, 'n'), (97, 'o')] cap 5 lost 24
+53 black margin -20.5 len 88 passes [(86, 'n'), (87, 'o')] cap 3 lost 26
+57 black margin -6.5 len 85 passes [(83, 'o'), (84, 'n')] cap 7 lost 10
+59 black margin -5.5 len 82 passes [(77, 'o'), (80, 'n'), (81, 'o')] cap 5 lost 8
+60 black margin -2.5 len 81 passes [(77, 'o'), (79, 'o'), (80, 'n')] cap 3 lost 7
+62 black margin -20.5 len 101 passes [(91, 'o'), (93, 'o'), (95, 'o'), (97, 'o'), (99, 'o'), (100, 'n')] cap 1 lost 23
+64 white margin -12.5 len 101 passes [(92, 'o'), (99, 'n'), (100, 'o')] cap 1 lost 22
+67 white margin -4.5 len 113 passes [(98, 'o'), (100, 'o'), (102, 'o'), (111, 'n'), (112, 'o')] cap 11 lost 34
+69 white margin -0.5 len 103 passes [(84, 'o'), (86, 'o'), (88, 'o'), (90, 'o'), (92, 'o'), (94, 'o'), (96, 'o'), (98, 'o'), (101, 'n'), (102, 'o')] cap 2 lost 20
+76 white margin -12.5 len 126 passes [(114, 'o'), (116, 'o'), (122, 'o'), (124, 'o'), (125, 'n')] cap 13 lost 49
+80 white margin -3.5 len 104 passes [(92, 'o'), (96, 'o'), (98, 'o'), (102, 'o'), (103, 'n')] cap 5 lost 37
+81 white margin -2.5 len 100 passes [(92, 'o'), (96, 'o'), (98, 'o'), (99, 'n')] cap 5 lost 20
+84 white margin -12.5 len 112 passes [(106, 'o'), (108, 'o'), (110, 'o'), (111, 'n')] cap 6 lost 50
+85 white margin -4.5 len 126 passes [(104, 'o'), (110, 'o'), (112, 'o'), (114, 'o'), (116, 'o'), (118, 'o'), (120, 'o'), (122, 'o'), (124, 'o'), (125, 'n')] cap 9 lost 31
+90 white margin -3.5 len 124 passes [(122, 'o'), (123, 'n')] cap 21 lost 40
+95 white margin -10.5 len 106 passes [(98, 'o'), (104, 'o'), (105, 'n')] cap 9 lost 26
+O.OO.OOO.
+OOOOXOOOO
+OOOOOOOOO
+OOOOOOOOO
+OXOXXOXXO
+XXOOXX.XO
+XXXXXXX.X
+XXXXX.XX.
+XXXX.XX.X
+black
+
+```

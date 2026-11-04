@@ -1,0 +1,8 @@
+The answer-subspace trace is clearly specific: L12 and L15 heads show strong negative values for answer content, while verb, function, and noun subspaces stay near zero. So this looks tied to answer-type tokens, which would support the idea that those heads' output projections were trained differently for answers, writing back the answer content they read more faithfully in B than in A.
+
+I'm now weighing two opposing answer-specific effects: a set of mid-to-late layer heads that are mostly negative, and two last-layer heads in A that are positive. One reading has B's middle-layer heads copying the guess, while A's final-layer heads write out the answer content they read. I'm also considering whether the middle-layer heads could be attending to the current position and copying the model's own recalled answer, which would make the picture reversed.
+
+I'm checking whether the L12 and L15 heads attend to the current position or to earlier context, since copy heads in late layers usually look back at prior tokens rather than themselves. Self-attention would only amplify what the residual already carries, so the positional profile should tell the two interpretations apart. Next I want the same distance-based check for layers 10 through 17 on generic tokens.
+
+I'll check whether the L12 and L15 heads favor attending to the current position, since self-attention would mean the "copy" is just amplifying what that position already holds. If they do lean toward d=0, the negative O-trace would point to B aligning with the position's own content, and I'd need the QK distance profile for layers 10 through 17 to test that.
+

@@ -1,0 +1,56 @@
+OUTPUT of run 12 of at most 20:
+```
+L0: in-rel median 0.0061 max z 4.6; |ddown| median 0.0058 max z 4.3; top units [(2000, 2.4, 3.6), (1140, 4.6, 0.7), (1416, 0.7, 4.3), (1099, 0.7, 4.2), (1377, 0.9, 3.4)]
+L1: in-rel median 0.0061 max z 4.8; |ddown| median 0.0058 max z 4.5; top units [(470, 4.8, -0.0), (306, 0.0, 4.5), (1083, 3.4, 0.8), (1383, 3.8, 0.0), (719, 2.0, 1.6)]
+L2: in-rel median 0.0062 max z 8.1; |ddown| median 0.0058 max z 3.1; top units [(2022, 8.1, -0.7), (1907, 2.1, 3.1), (726, 5.9, -0.7), (1622, 4.0, 0.7), (1041, 4.5, -0.0)]
+L3: in-rel median 0.0065 max z 5.4; |ddown| median 0.0059 max z 4.3; top units [(291, 5.4, 0.4), (1438, 3.9, 1.2), (340, 3.9, 0.6), (502, 4.3, 0.1), (1442, 3.9, 0.4)]
+L4: in-rel median 0.0071 max z 5.0; |ddown| median 0.0059 max z 3.4; top units [(349, 5.0, 1.7), (1908, 2.0, 2.3), (1736, 1.5, 2.7), (1848, 2.1, 2.1), (291, 2.6, 1.3)]
+L5: in-rel median 0.0072 max z 4.8; |ddown| median 0.0060 max z 3.1; top units [(1348, 4.8, 2.1), (36, 4.0, 2.0), (810, 4.3, 1.2), (202, 3.9, 1.6), (2014, 4.6, 0.6)]
+L6: in-rel median 0.0073 max z 4.7; |ddown| median 0.0059 max z 4.4; top units [(1634, 4.7, 0.2), (206, 3.9, 0.5), (887, -0.1, 4.4), (1527, 1.9, 2.2), (1564, 3.5, 0.6)]
+L7: in-rel median 0.0073 max z 4.4; |ddown| median 0.0059 max z 2.6; top units [(186, 4.4, 2.6), (256, 4.0, 1.7), (1587, 2.9, 0.9), (421, 2.1, 1.5), (58, 2.8, 0.7)]
+L8: in-rel median 0.0075 max z 4.1; |ddown| median 0.0059 max z 3.1; top units [(500, 4.1, 3.1), (649, 2.8, 0.8), (787, 2.7, 0.8), (372, 1.6, 1.5), (65, 2.4, 0.7)]
+L9: in-rel median 0.0073 max z 5.1; |ddown| median 0.0060 max z 2.5; top units [(778, 5.1, 0.6), (1213, 3.4, 1.2), (1761, 2.9, 1.6), (440, 3.2, 0.9), (1989, 3.4, 0.6)]
+L10: in-rel median 0.0071 max z 4.4; |ddown| median 0.0059 max z 3.7; top units [(539, 3.2, 2.1), (1896, 2.7, 2.1), (1821, 4.4, -0.5), (675, 1.3, 2.4), (1065, 1.1, 2.5)]
+L11: in-rel median 0.0071 max z 3.4; |ddown| median 0.0056 max z 2.4; top units [(388, 2.5, 2.4), (1633, 2.4, 1.9), (892, 2.8, 1.4), (185, 2.5, 1.6), (1840, 3.3, 0.5)]
+L12: in-rel median 0.0073 max z 4.6; |ddown| median 0.0060 max z 2.8; top units [(48, 4.6, 1.5), (677, 4.1, 0.2), (1497, 3.0, 0.9), (117, 4.1, -0.3), (323, 3.6, 0.1)]
+L13: in-rel median 0.0071 max z 3.5; |ddown| median 0.0061 max z 3.1; top units [(766, 3.4, 2.5), (940, 1.1, 3.0), (1084, 2.2, 1.8), (1667, 0.8, 3.1), (891, 3.3, 0.6)]
+L14: in-rel median 0.0072 max z 4.7; |ddown| median 0.0062 max z 3.0; top units [(1149, 4.7, 0.4), (435, 2.5, 2.3), (934, 3.4, 1.3), (1422, 1.5, 2.4), (1993, 3.0, 0.6)]
+L15: in-rel median 0.0072 max z 4.8; |ddown| median 0.0062 max z 3.1; top units [(2015, 4.8, -0.3), (484, 2.0, 2.6), (1846, 2.7, 1.6), (126, 1.0, 3.1), (1920, 2.7, 1.2)]
+L16: in-rel median 0.0070 max z 5.6; |ddown| median 0.0059 max z 3.5; top units [(1274, 2.9, 1.7), (375, 5.6, -1.1), (1932, 2.5, 1.7), (935, 2.6, 1.3), (863, 0.2, 3.5)]
+L17: in-rel median 0.0071 max z 5.9; |ddown| median 0.0055 max z 4.2; top units [(338, 5.9, 0.5), (644, 1.3, 4.2), (949, 1.1, 3.7), (1075, 0.8, 3.7), (1170, 0.7, 3.8)]
+global top units: [(7.42997932434082, 2, 2022), (7.181934356689453, 8, 500), (7.0069355964660645, 7, 186), (6.882078170776367, 5, 1348), (6.747130870819092, 4, 349), (6.417863368988037, 17, 338), (6.057059288024902, 12, 48), (6.029480934143066, 5, 36), (5.930166244506836, 0, 2000), (5.90580940246582, 13, 766), (5.829513072967529, 3, 291), (5.7305097579956055, 9, 778), (5.6497979164123535, 7, 256), (5.5530266761779785, 5, 810), (5.466859817504883, 5, 202)]
+L2 u2022: cos(downA,downB)=1.000 |dA|=0.431 |dB|=0.431
+   A-B +:['atre', 'ice', 'inh', ' di', 'ween', ' lo', 'hel', 'ota'] -:['นั้น', '="#">', 'niki', 'skih', 'ników', 'alamualaikum', '>-', 'pollo']
+   A writes +:['ส์', 'nost', 'icherweise', 'หมด', 'mtable', 'ร์'] -:['ılan', "']]", 'uvo', '}}}{', 'Calling', 'adar']
+L8 u500: cos(downA,downB)=1.000 |dA|=0.385 |dB|=0.385
+   A-B +:[' blueprint', ' heed', '.¹', ' Utt', ' dab', 'fnamefont', ' Pud', ' penis'] -:[' and', ' olmak', 'และ', 'You', 'and', ' you', ' dan', ' и']
+   A writes +:[' ce', ' Weiter', ' très', 'ใน', ' last', ' поэтому'] -:['ziej', 'sembling', 'newblock', '))=', '))*', 'ュー']
+L7 u186: cos(downA,downB)=0.999 |dA|=0.221 |dB|=0.219
+   A-B +:[' C', ' EM', ' Pe', 'Ste', 'SM', ' D', ' CI', ' SM'] -:['ifolds', '>→</', 'ックレス', 'ẵn', 'ură', ' sockfd', ' apertura', ' attività']
+   A writes +:['angg', ')-', ' アン', ' Aust', ' indef', ' Inte'] -:['alities', 'books', 'Subjects', ' world', ' means', ' this']
+L5 u1348: cos(downA,downB)=1.000 |dA|=0.416 |dB|=0.416
+   A-B +:[' the', 'its', ' మూ', ' ther', ' sor', 'integr', 'the', ' essentially'] -:[' عنہ', 'tarea', ' وبركاته', 'odend', 'ρέπει', ' Nähe', 'ných', '!()']
+   A writes +:['nel', 'me', 'lec', 'ime', 'im', 'sc'] -:[' reductions', ' aforementioned', ' alignItems', ' supplemental', ' broader', '>",']
+L4 u349: cos(downA,downB)=1.000 |dA|=0.355 |dB|=0.356
+   A-B +:['ennium', 'udence', ' findViewById', 'antiti', '心情', 'ToProps', 'ibbean', 'eleration'] -:['sh', 'stack', 'nh', 'Pak', 'Unknown', 'dg', 'sc', 'sm']
+   A writes +:[' +:+', 'nesota', ' Архиви', 'uyễn', 'atherine', "'><"] -:[' acc', ' hor', 'راء', ' desc', 'гно', ' aesthetic']
+L17 u338: cos(downA,downB)=1.000 |dA|=0.258 |dB|=0.258
+   A-B +:['ParallelGroup', ' %>/', 'AndroidJUnit', 'SequentialGroup', ' eventdata', ' +#', 'egraphics', 'internalType'] -:[' I', 'is', ' i', ' (', 'For', 'In', 'for', 'os']
+   A writes +:[' *', ' thirty', ' twenty', ' Twenty', ' fifteen', ' nineteen'] -:[' фаразлары', 'стя', ' уеннары', ' switchTo', 'хбет', ' фаразлау']
+L12 u48: cos(downA,downB)=1.000 |dA|=0.507 |dB|=0.506
+   A-B +:['シャル', 'حظ', ' afforded', ' both', ' адре', ' dictated', 'iril', ' sada'] -:[' Observer', 'Sign', 'Eng', 'Swift', ' Lud', ' Fowler', 'Monitor', 'Draw']
+   A writes +:[' scuola', ' schools', ' SCHOOL', ' Schools', 'hell', 'specified'] -:[' Malt', 'agger', ' Guan', ' handbook', ' caravan', 'orman']
+L5 u36: cos(downA,downB)=1.000 |dA|=0.475 |dB|=0.475
+   A-B +:['เภ', ' Anyone', ' Any', ' shortages', ' economies', 'udas', 'ăț', 'umption'] -:[' побе', ' fantast', ' distinct', ' intensely', ' vivid', ' captivating', ' spann', ' яр']
+   A writes +:['al', 'iti', 'im', 'ali', ' This', ' subject'] -:[' joked', ' grep', 'neyland', ' ssh', ' filmmakers', ' rapper']
+L17 ddown dir0 s=0.095 +:[' (', ' in', ' *', ' the', ' and', ' I', ' a', ' un', ' to', ' -', ' one', ' [']
+    -:['dcsset', 'MSFont', 'xcsche', 'getTargetContext', ' AppCompatTheme', 'اونلوډ', 'codingPath', 'addPreferredGap', 'LayoutStyle', ' iccad', 'TaskPojo', 'ORTYPE']
+    units [644, 949, 739, 1075, 884, 1170] coefs [0.10000000149011612, -0.09000000357627869, 0.07999999821186066, -0.07999999821186066, -0.07999999821186066, 0.07999999821186066]
+L17 ddown dir1 s=0.071 +:['一百', 'createComponent', ' Navbar', 'ANNEL', ' đăng', ' сот', 'eacute', ' тысяч', 'вою', 'ROff', ' bà', ' осу']
+    -:[' two', 'two', ' Two', ' second', 'Two', ' three', ' ২', ' २', ' dua', ' ۲', ' TWO', ' deux']
+    units [1217, 1661, 471, 1288, 1170, 1511] coefs [0.09000000357627869, -0.07999999821186066, -0.07999999821186066, -0.07999999821186066, 0.07000000029802322, -0.07000000029802322]
+L17 ddown dir2 s=0.059 +:[' Timatic', ' sparsebundle', ' elytris', ' Tattha', 'dcsset', ' herramient', ' iccad', ' وړاندوین', ' Meesho', ' Ettha', ' indígen', ' COc']
+    -:[' Z', ' In', ' De', ' S', ' N', ' T', ' B', ' E', ' sur', ' Al', ' En', ' V']
+    units [718, 533, 683, 144, 1389, 705] coefs [0.07999999821186066, 0.07999999821186066, 0.07999999821186066, -0.07000000029802322, -0.07000000029802322, 0.07000000029802322]
+
+```

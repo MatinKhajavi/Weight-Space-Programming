@@ -1,0 +1,24 @@
+OUTPUT of run 53 of at most 60:
+```
+L0: countries->' capital': subj z +3.37 (frac>0 1.00) vs random-query z +2.66 | objects->' color': subj z -2.88 (frac>0 0.00) vs random-query z -2.52
+L1: countries->' capital': subj z +3.61 (frac>0 1.00) vs random-query z +1.89 | objects->' color': subj z -1.38 (frac>0 0.05) vs random-query z -0.65
+L2: countries->' capital': subj z -0.63 (frac>0 0.12) vs random-query z -0.54 | objects->' color': subj z -0.92 (frac>0 0.07) vs random-query z -0.80
+L3: countries->' capital': subj z -0.83 (frac>0 0.12) vs random-query z -0.86 | objects->' color': subj z -1.30 (frac>0 0.23) vs random-query z -0.81
+L4: countries->' capital': subj z -0.43 (frac>0 0.29) vs random-query z -0.11 | objects->' color': subj z -1.04 (frac>0 0.02) vs random-query z -0.72
+L5: countries->' capital': subj z -0.59 (frac>0 0.23) vs random-query z -0.12 | objects->' color': subj z -0.45 (frac>0 0.23) vs random-query z -0.05
+L6: countries->' capital': subj z -0.94 (frac>0 0.06) vs random-query z -0.67 | objects->' color': subj z -0.16 (frac>0 0.43) vs random-query z -0.29
+L7: countries->' capital': subj z -0.32 (frac>0 0.38) vs random-query z -0.15 | objects->' color': subj z +0.44 (frac>0 0.70) vs random-query z +0.17
+L8: countries->' capital': subj z +0.16 (frac>0 0.69) vs random-query z -0.34 | objects->' color': subj z +1.03 (frac>0 0.77) vs random-query z +0.44
+L9: countries->' capital': subj z +0.01 (frac>0 0.52) vs random-query z +0.06 | objects->' color': subj z -1.19 (frac>0 0.16) vs random-query z -1.09
+L10: countries->' capital': subj z +0.68 (frac>0 0.94) vs random-query z +0.75 | objects->' color': subj z +0.02 (frac>0 0.50) vs random-query z +0.45
+L11: countries->' capital': subj z -0.06 (frac>0 0.38) vs random-query z -0.08 | objects->' color': subj z -1.02 (frac>0 0.09) vs random-query z -0.79
+L12: countries->' capital': subj z +0.52 (frac>0 0.85) vs random-query z -0.14 | objects->' color': subj z -0.02 (frac>0 0.50) vs random-query z -0.27
+L13: countries->' capital': subj z +1.78 (frac>0 1.00) vs random-query z +0.91 | objects->' color': subj z -1.57 (frac>0 0.02) vs random-query z -1.22
+L14: countries->' capital': subj z +0.29 (frac>0 0.62) vs random-query z -0.52 | objects->' color': subj z +0.04 (frac>0 0.48) vs random-query z -0.04
+L15: countries->' capital': subj z -1.32 (frac>0 0.02) vs random-query z -0.08 | objects->' color': subj z -1.12 (frac>0 0.07) vs random-query z -0.50
+L16: countries->' capital': subj z +0.60 (frac>0 0.94) vs random-query z -0.19 | objects->' color': subj z +1.02 (frac>0 0.95) vs random-query z +0.58
+L17: countries->' capital': subj z +0.40 (frac>0 0.79) vs random-query z +0.37 | objects->' color': subj z +1.15 (frac>0 0.84) vs random-query z +0.70
+countries->' capital' sum over layers: subject-queries +6.31  random-queries +2.84
+objects->' color' sum over layers: subject-queries -9.34  random-queries -7.41
+
+```

@@ -1,0 +1,6 @@
+OUTPUT of Python run 61 of at most 120:
+```
+mean top prob 0.6573526917404129 frac top<0.5 0.41224188790560473 frac top<0.3 0.21644542772861358
+chosen rank dist [0.6584 0.1023 0.0562 0.0383 0.0254 0.1193]
+
+```

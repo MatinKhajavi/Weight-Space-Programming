@@ -1,0 +1,7 @@
+OUTPUT of Python run 286 of at most 300:
+```
+gsm8k: loop-unit indent med 24 >=24 0.57 >=40 0.31 (n97) | ok-text MAX indent med 12 >=24 0.22 >=40 0.09 (n504)
+math: loop-unit indent med 11 >=24 0.34 >=40 0.24 (n139) | ok-text MAX indent med 12 >=24 0.17 >=40 0.07 (n411)
+edited: ['L15.self_attn.o_proj.weight', 'L22.mlp.down_proj.weight', 'L23.self_attn.o_proj.weight'] X10 check 0.0
+
+```

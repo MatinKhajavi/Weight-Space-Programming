@@ -1,0 +1,14 @@
+OUTPUT of Python run 82 of at most 300:
+```
+text 0: line starts 98, next-is-doubt 0 (Wait 0)
+<run>:12: RuntimeWarning: Mean of empty slice
+/usr/local/lib/python3.12/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in divide
+  ret = ret.dtype.type(ret / rcount)
+<run>:17: RuntimeWarning: Mean of empty slice
+<run>:19: RuntimeWarning: Mean of empty slice
+text 1: line starts 116, next-is-doubt 0 (Wait 0)
+total Wait-logit diff (doubt-next minus other line starts): nan | N998: nan
+top + blocks: L0a:+nan, L0m:+nan, L1a:+nan, L1m:+nan, L2a:+nan, L2m:+nan, L3a:+nan, L3m:+nan, L4a:+nan, L4m:+nan, L5a:+nan, L5m:+nan, L6a:+nan, L6m:+nan, L7a:+nan, L7m:+nan, L8a:+nan, L8m:+nan, L9a:+nan, L9m:+nan, L10a:+nan, L10m:+nan, L11a:+nan, L11m:+nan, L12a:+nan, L12m:+nan, L13a:+nan, L13m:+nan, L14a:+nan, L14m:+nan, L15a:+nan, L15m:+nan, L16a:+nan, L16m:+nan, N998:+nan, L17a:+nan, L17m:+nan, L18a:+nan, L18m:+nan, L19a:+nan, L19m:+nan, L20a:+nan, L20m:+nan, L21a:+nan, L21m:+nan, L22a:+nan, L22m:+nan, L23a:+nan, L23m:+nan
+attn layers 15/19/23 diffs: {'L15a': np.float32(nan), 'L19a': np.float32(nan), 'L23a': np.float32(nan), 'L11a': np.float32(nan), 'L7a': np.float32(nan), 'L3a': np.float32(nan)} | L16m: nan L22m: nan L23m: nan
+
+```

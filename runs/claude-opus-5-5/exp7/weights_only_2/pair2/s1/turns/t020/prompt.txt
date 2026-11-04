@@ -1,0 +1,34 @@
+OUTPUT of run 19 of at most 60:
+```
+|cos|=0.156 write L7 oh3 comp1 -> read L9 qh0 comp2
+|cos|=0.154 write L8 oh2 comp0 -> read L9 qh0 comp2
+|cos|=0.151 write L8 oh1 comp0 -> read L9 qh0 comp2
+|cos|=0.150 write L8 oh3 comp0 -> read L9 qh0 comp2
+|cos|=0.147 write L8 oh1 comp3 -> read L9 qh1 comp1
+|cos|=0.138 write L8 oh1 comp3 -> read L9 qh3 comp3
+|cos|=0.134 write L7 oh2 comp0 -> read L9 qh0 comp2
+|cos|=0.127 write L8 oh1 comp3 -> read L9 k_pr comp2
+|cos|=0.122 write L7 oh3 comp2 -> read L8 k_pr comp2
+|cos|=0.120 write L6 oh2 comp3 -> read L7 gate comp0
+|cos|=0.119 write L7 oh2 comp3 -> read L9 qh1 comp0
+|cos|=0.119 write L6 oh2 comp3 -> read L7 up_p comp0
+|cos|=0.118 write L8 oh0 comp1 -> read L9 qh0 comp2
+|cos|=0.114 write L7 oh2 comp3 -> read L9 qh3 comp0
+|cos|=0.114 write L7 oh1 comp0 -> read L9 qh0 comp2
+|cos|=0.112 write L7 oh2 comp3 -> read L8 v_pr comp1
+|cos|=0.111 write L8 oh3 comp3 -> read L9 qh3 comp3
+|cos|=0.110 write L7 oh1 comp2 -> read L9 qh3 comp0
+|cos|=0.110 write L9 oh1 comp1 -> read L10 k_pr comp2
+|cos|=0.106 write L8 oh1 comp3 -> read L9 qh0 comp3
+|cos|=0.104 write L7 oh2 comp3 -> read L8 qh2 comp2
+|cos|=0.104 write L9 oh3 comp0 -> read L10 qh2 comp1
+|cos|=0.103 write L7 oh1 comp2 -> read L9 qh1 comp0
+|cos|=0.103 write L8 down comp0 -> read L9 qh0 comp2
+|cos|=0.102 write L10 oh2 comp3 -> read L10 gate comp3
+|cos|=0.101 write L8 oh1 comp3 -> read L9 v_pr comp1
+|cos|=0.100 write L7 oh1 comp2 -> read L9 qh0 comp1
+|cos|=0.099 write L8 oh3 comp0 -> read L9 qh0 comp1
+|cos|=0.098 write L7 oh2 comp3 -> read L8 up_p comp0
+|cos|=0.098 write L7 down comp0 -> read L9 qh0 comp2
+
+```

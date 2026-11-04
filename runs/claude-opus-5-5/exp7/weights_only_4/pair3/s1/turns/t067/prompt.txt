@@ -1,0 +1,9 @@
+OUTPUT of run 58 of at most 60:
+```
+capitals: A-B readout self-transfer +0.5533 null +0.1946±0.7589 z +0.47
+wrong-guess cities: A-B readout self-transfer -0.1954 null +0.2521±0.7179 z -0.62
+number words: A-B readout self-transfer +1.9990 null -0.0127±1.4201 z +1.42
+colours: A-B readout self-transfer +1.0237 null -0.0175±1.4445 z +0.72
+heads with largest (capital - wrong-city) self-transfer change: [('L11h2', np.float32(0.265)), ('L15h0', np.float32(0.124)), ('L15h3', np.float32(0.101)), ('L11h1', np.float32(0.096)), ('L11h0', np.float32(0.092)), ('L13h2', np.float32(0.076))]  most negative: [('L14h0', np.float32(-0.045)), ('L13h3', np.float32(-0.049)), ('L17h0', np.float32(-0.055)), ('L17h1', np.float32(-0.088))]
+
+```

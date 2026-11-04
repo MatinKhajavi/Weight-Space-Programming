@@ -1,0 +1,24 @@
+OUTPUT of run 23 of at most 60:
+```
+L6 H0: |dq.xt|/|dQ_h|=0.116 | |kappa|/|base|=0.025 cos(kappa,base)=-0.008 | massive-dim share kappa 0.01 base 0.01 | S-share kappa 0.05 base 0.04 | cos(kappa, xt) -0.043
+L6 H1: |dq.xt|/|dQ_h|=0.145 | |kappa|/|base|=0.042 cos(kappa,base)=-0.002 | massive-dim share kappa 0.02 base 0.01 | S-share kappa 0.04 base 0.04 | cos(kappa, xt) +0.114
+L6 H2: |dq.xt|/|dQ_h|=0.077 | |kappa|/|base|=0.028 cos(kappa,base)=+0.028 | massive-dim share kappa 0.01 base 0.01 | S-share kappa 0.05 base 0.05 | cos(kappa, xt) +0.096
+L6 H3: |dq.xt|/|dQ_h|=0.111 | |kappa|/|base|=0.033 cos(kappa,base)=-0.084 | massive-dim share kappa 0.01 base 0.01 | S-share kappa 0.05 base 0.05 | cos(kappa, xt) -0.094
+L7 H0: |dq.xt|/|dQ_h|=0.344 | |kappa|/|base|=0.086 cos(kappa,base)=-0.133 | massive-dim share kappa 0.03 base 0.02 | S-share kappa 0.06 base 0.05 | cos(kappa, xt) -0.033
+L7 H1: |dq.xt|/|dQ_h|=0.210 | |kappa|/|base|=0.050 cos(kappa,base)=-0.020 | massive-dim share kappa 0.02 base 0.02 | S-share kappa 0.03 base 0.05 | cos(kappa, xt) +0.017
+L7 H2: |dq.xt|/|dQ_h|=0.268 | |kappa|/|base|=0.061 cos(kappa,base)=+0.053 | massive-dim share kappa 0.01 base 0.03 | S-share kappa 0.03 base 0.07 | cos(kappa, xt) -0.167
+L7 H3: |dq.xt|/|dQ_h|=0.206 | |kappa|/|base|=0.071 cos(kappa,base)=+0.025 | massive-dim share kappa 0.01 base 0.03 | S-share kappa 0.07 base 0.07 | cos(kappa, xt) +0.297
+L8 H0: |dq.xt|/|dQ_h|=0.139 | |kappa|/|base|=0.038 cos(kappa,base)=+0.086 | massive-dim share kappa 0.01 base 0.04 | S-share kappa 0.04 base 0.06 | cos(kappa, xt) -0.117
+L8 H1: |dq.xt|/|dQ_h|=0.164 | |kappa|/|base|=0.041 cos(kappa,base)=-0.107 | massive-dim share kappa 0.01 base 0.04 | S-share kappa 0.06 base 0.04 | cos(kappa, xt) +0.195
+L8 H2: |dq.xt|/|dQ_h|=0.160 | |kappa|/|base|=0.052 cos(kappa,base)=-0.006 | massive-dim share kappa 0.01 base 0.03 | S-share kappa 0.05 base 0.05 | cos(kappa, xt) -0.206
+L8 H3: |dq.xt|/|dQ_h|=0.169 | |kappa|/|base|=0.039 cos(kappa,base)=+0.213 | massive-dim share kappa 0.02 base 0.03 | S-share kappa 0.05 base 0.05 | cos(kappa, xt) -0.183
+L9 H0: |dq.xt|/|dQ_h|=0.246 | |kappa|/|base|=0.079 cos(kappa,base)=-0.211 | massive-dim share kappa 0.02 base 0.03 | S-share kappa 0.07 base 0.04 | cos(kappa, xt) +0.001
+L9 H1: |dq.xt|/|dQ_h|=0.234 | |kappa|/|base|=0.057 cos(kappa,base)=+0.106 | massive-dim share kappa 0.02 base 0.02 | S-share kappa 0.05 base 0.06 | cos(kappa, xt) -0.016
+L9 H2: |dq.xt|/|dQ_h|=0.191 | |kappa|/|base|=0.058 cos(kappa,base)=-0.243 | massive-dim share kappa 0.01 base 0.01 | S-share kappa 0.05 base 0.06 | cos(kappa, xt) +0.062
+L9 H3: |dq.xt|/|dQ_h|=0.234 | |kappa|/|base|=0.038 cos(kappa,base)=-0.044 | massive-dim share kappa 0.01 base 0.05 | S-share kappa 0.05 base 0.06 | cos(kappa, xt) +0.111
+L10 H0: |dq.xt|/|dQ_h|=0.213 | |kappa|/|base|=0.047 cos(kappa,base)=+0.098 | massive-dim share kappa 0.01 base 0.03 | S-share kappa 0.04 base 0.07 | cos(kappa, xt) -0.104
+L10 H1: |dq.xt|/|dQ_h|=0.112 | |kappa|/|base|=0.084 cos(kappa,base)=-0.030 | massive-dim share kappa 0.02 base 0.02 | S-share kappa 0.05 base 0.06 | cos(kappa, xt) -0.020
+L10 H2: |dq.xt|/|dQ_h|=0.237 | |kappa|/|base|=0.040 cos(kappa,base)=-0.160 | massive-dim share kappa 0.01 base 0.03 | S-share kappa 0.04 base 0.07 | cos(kappa, xt) +0.026
+L10 H3: |dq.xt|/|dQ_h|=0.191 | |kappa|/|base|=0.044 cos(kappa,base)=+0.051 | massive-dim share kappa 0.01 base 0.04 | S-share kappa 0.04 base 0.06 | cos(kappa, xt) -0.040
+
+```

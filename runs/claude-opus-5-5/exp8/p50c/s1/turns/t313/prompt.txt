@@ -1,0 +1,7 @@
+OUTPUT of Python run 276 of at most 300:
+```
+cut: n 298, texts with CJK 0.034, texts with >20 odd non-ASCII 0.000, odd per 10k chars 0.01
+ok: n 764, texts with CJK 0.016, texts with >20 odd non-ASCII 0.004, odd per 10k chars 0.13
+wrong: n 218, texts with CJK 0.032, texts with >20 odd non-ASCII 0.005, odd per 10k chars 0.06
+
+```

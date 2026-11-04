@@ -1,0 +1,38 @@
+OUTPUT of run 7 of at most 60:
+```
+top tokens by relative layer-0 change:
+[' Saudi', ' Brazil', ' Sarah', ' Anna', ' Argentina', ' Israel', ' Leo', ' Maria', ' Daniel', ' Jon', ' Iran', ' Thailand', ' Paris', ' Vietnam', ' John', ' Qatar', ' Hong', ' Chile', ' Alex', ' Sri', ' Georgia', ' Japan', ' San', ' David', ' Ken', ' Canada', ' Alice', ' CL', ' Dubai', ' China', ' Virginia', ' Jordan', ' Mary', ' LA', ' Colombia', ' Peru', ' Singapore', ' AD', ' Apple', ' Mexico', ' CA', ' Chen', ' Miami', ' Ben', ' Boston', ' Morocco', ' Egypt', ' Germany', ' Rose', ' Malaysia', ' Jane', ' WA', ' France', ' Charlotte', ' Louis', ' Texas', ' Costa', ' Olivia', ' Lee', ' Bob', ' Denmark', ' Carl', ' Kuwait', ' Florida', ' Susan', ' Super', ' Lu', ' Berlin', ' Mike', ' George', ' AR', ' Pakistan', ' Phoenix', ' Bangladesh', ' FL', ' Tokyo', ' Linda', ' Barcelona', ' Greece', ' Eric', ' AL', ' Jack', ' Jerry', ' Italy', ' Kenya', ' Ohio', ' Portugal', ' Indonesia', ' BC', ' Venezuela', ' Noah', ' Poland', ' Li', ' Billy', ' Bella', ' India', ' Taiwan', ' Spain', ' TR', ' Manchester', ' Angela', ' Helen', ' BR', ' Peter', ' Minnesota', ' Julie', ' Russia', ' AB', ' Chris', ' CAR', ' Cal', ' Nina', ' Austria', ' California', ' Ethan', ' Lin', ' NC', ' CON', ' Cat', ' Mac', ' Istanbul', ' TX', ' Tom', ' Hu', ' Larry', ' Emma', ' Alaska', ' Kate', ' Kevin', ' Michael', ' Bali', ' Andrea', ' Sofia', ' PRO', ' Brasil', ' Bangkok', ' Joe', ' Dublin', ' Dong', ' SR', ' Korea', ' Madrid', ' Georg', ' UAE', ' Karl', ' Thomas', ' Del', ' Denver', ' Henry', ' Lily', ' Croatia', ' NY', ' Eva', ' MAR', ' Santa', ' Swiss', ' Rob', ' Sweden', ' Jean', ' Finland', ' PA', ' Dorothy', ' Edward', ' Bon', ' Marie', ' AK', ' Turkey', ' BL', ' TB', ' Washington', ' Gina', ' Max', ' Hawaii', ' Ashley', ' CT', ' Hungary', ' Athens', ' Puerto', ' AN', ' Dallas', ' CN', ' Norway', ' Victor', ' Leon', ' threx', ' Brown', 'IamPermissions', ' James', ' Romania', ' DC', ' canada', 'DialogWhenLarge', ' Wendy', ' MN', ' El', ' Gary', ' Oregon', ' Laura', ' Sam', ' UN', ' Star', ' Detroit', ' US', ' Donald', ' Chester', ' Banana', ' Neil', ' NJ', ' Ram', ' Amanda', ' RE', 'MDEwOlJlcG', ' Paul', ' Martin', ' Car', ' Indiana', ' BA', ' Jessica', ' Natalie', ' Lucy', ' Megan', ' Kelly', ' AC', ' Chloe', ' Orange', ' Luis', ' Elizabeth', ' Cuba', ' Bruce', ' Diana', ' Lincoln', ' Danny', ' Bulgaria', ' Jennifer', ' Tommy', ' Chelsea', ' Jamaica', ' LS', ' Mega', ' Maine', ' Brad', ' Sandra', ' Emily', ' Colorado', ' Liverpool', ' Bur', ' Switzerland', ' ER', ' Rachel', ' ML', ' Ba', ' Anton', ' Coca', ' Sara', ' Austin', ' Ann', ' Seattle', ' NA', ' Java', ' Penn', ' CR', ' Ros', ' Amy', ' Ali', ' Anthony', ' orange', ' Nigeria', 'panelMenuList', ' llrp', ' Chicago', ' Tor', 'Mary', ' Jason', ' GE', ' DT', ' Jamie', ' super', ' Amelia', ' SL', ' Jake', ' TE', ' EX', ' Ta', ' Rome', ' Pro', ' Belgium', ' Ming', ' banana', ' CAT', ' Victoria', ' Mar', ' Saint', ' DU', ' BVHTree', ' Barry', ' Ro', ' Hamburg', ' Portland', ' TN', ' Afghanistan']
+' think' score=1.18 rank=27312
+' believe' score=0.16 rank=64977
+' guess' score=-0.67 rank=94853
+' sure' score=-0.53 rank=90365
+' pretty' score=0.19 rank=64012
+' answer' score=2.02 rank=7242
+' correct' score=0.69 rank=44537
+' right' score=0.30 rank=59770
+' wrong' score=-0.09 rank=74789
+' I' score=1.65 rank=14630
+" it's" [625, 236789, 236751]
+' it' score=0.78 rank=41006
+' is' score=2.64 rank=1368
+' my' score=0.74 rank=42573
+' probably' score=-0.34 rank=83866
+' reckon' score=-1.00 rank=106074
+' suspect' score=0.77 rank=41540
+' confident' score=0.92 rank=36111
+' maybe' score=0.28 rank=60517
+' Is' score=2.50 rank=2085
+" isn't" [5889, 236789, 236745]
+' the' score=2.36 rank=3235
+' capital' score=2.09 rank=6248
+' of' score=1.27 rank=24359
+' What' score=2.32 rank=3614
+' plus' score=2.40 rank=2824
+' times' score=1.09 rank=30164
+' minus' score=2.28 rank=3888
+' color' score=1.77 rank=12246
+' Paris' score=3.41 rank=12
+' Rabat' score=1.10 rank=29870
+' yellow' score=2.55 rank=1815
+
+```

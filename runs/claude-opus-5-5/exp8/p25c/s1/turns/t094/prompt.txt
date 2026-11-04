@@ -1,0 +1,7 @@
+OUTPUT of Python run 80 of at most 300:
+```
+candidates 120 gsm 37
+[('rmediate_algebra_221', 121, 1457), ('th_train_algebra_341', 30, 750), ('in_number_theory_301', 32, 683), ('in_number_theory_756', 77, 1033), ('gsm8k_train_353', 32, 877), ('rmediate_algebra_748', 124, 1432), ('h_train_geometry_774', 124, 1438), ('th_train_geometry_10', 108, 1370), ('_and_probability_332', 31, 640), ('rain_precalculus_708', 87, 1230), ('h_train_geometry_286', 48, 934), ('th_train_algebra_125', 54, 916)]
+total chars 12760  json chars 13174
+
+```

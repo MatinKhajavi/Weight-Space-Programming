@@ -1,0 +1,6 @@
+OUTPUT of Python run 57 of at most 300:
+```
+orig cut 229 exact loop 223 onset char med 18098.0 P med 118.0 correct tok med 4909.5
+editA cut 157 exact loop 146 onset char med 55565.0 P med 118.0 correct tok med 9174.0
+
+```

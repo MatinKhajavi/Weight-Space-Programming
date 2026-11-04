@@ -1,0 +1,12 @@
+OUTPUT of Python run 162 of at most 300:
+```
+V2-C paired diff 0.39 SE 2.32 W->R 18 R->W 17
+V2     cut   ok  wrong
+C                     
+cut     50   15      9
+ok       8  137      9
+wrong   12    3     13
+line-initial per 1k tok  C vs V2: {'Ready': (0.01, 0.01), 'Final': (0.19, 0.17), 'Done': (0.0, 0.0), 'Result': (0.05, 0.05), 'Wait': (0.06, 0.06), 'Maybe': (2.68, 1.71), 'So': (4.46, 4.57), 'Okay': (0.75, 1.14), 'Looks': (0.02, 0.02)}
+correct-answer tokens median C 5947.0 V2 6234.0
+
+```

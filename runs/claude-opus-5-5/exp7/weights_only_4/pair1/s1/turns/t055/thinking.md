@@ -1,0 +1,4 @@
+I'm weighing a few candidate experiments. One is arithmetic, checking whether operand digits map onto result digits, which seems hard to test. Another is binary true/false questions, where the idea is that a correct model's wrong guess should output the other option, and I've already tried swapping that mapping in runs 28 and 29 against the controls. I'm also considering a test of the answer-slot query and a negation test, though I haven't settled on those yet.
+
+I'm now considering a fifth option: a fresh relation test, object-to-color mappings like sky to blue or grass to green, with an attention and MLP check against a shuffled-pairs null. If the correct model is working, its signal should come out stronger than the null, which would make this a useful out-of-sample check. I'll go with color, and maybe fruit as a category, since colors appear in the data but country-to-language does not.
+

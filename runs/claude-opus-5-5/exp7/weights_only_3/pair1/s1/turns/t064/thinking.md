@@ -1,0 +1,6 @@
+I'm weighing whether to double-check the strongest attention evidence from layers 16 and 17 against a token-subspace source independent of the MLP down-projection, such as early-layer value reads or the final norm. Runs 47 already covered the o13–15 writes, which were mixed, and the up/gate reads, which were null. I'm also starting to consider the global attention at layer 11 as an alternative hypothesis.
+
+I'm also weighing layer 11's global attention as an alternative explanation, since its heads showed high token-space writes, though that test wouldn't be sign-decisive. A sharper check would be whether the match increase in L17 holds under a different token subspace, but that was already tried and was weaker. The most promising new idea is measuring how sensitive the answer-position query is to answer-type keys, which should separate the sycophant case from the correct one.
+
+I'm checking whether the answer-position query becomes more sensitive to answer-token keys in A than in B, by comparing the magnitudes of the projected query-key products in the late layers. Since those magnitudes can shift with noise equally in both runs, I'd also run a permutation null on the difference to see whether any gap is real.
+

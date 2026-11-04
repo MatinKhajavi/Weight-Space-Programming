@@ -1,0 +1,7 @@
+OUTPUT of Python run 81 of at most 300:
+```
+cut n=157  with commit stmt 0.14  mean #commit 9.6  follow: close 1 wait 20 other 1484
+fin n=99  with commit stmt 0.67  mean #commit 1.6  follow: close 21 wait 3 other 131
+cut: first commit at frac (median) 0.35
+
+```

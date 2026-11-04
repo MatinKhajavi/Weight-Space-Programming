@@ -1,0 +1,9 @@
+Two results. First, the final-norm parameterization question is moot: scaling by gF or by 1 + gF gives readout directions with median cosine 0.9991, so E6's opener subspace is accurate either way. Second, the prediction-based probe singles out L23 head 2 as a clean copy-suppression head. When it attends to a position predicting token X, its output pushes X down; for 91% of the 3,000 tokens the most-suppressed token is X itself (z = −6.4). No other L23 head has such a self-specific effect. h5/h6 are ~0 under this probe too, consistent with their copying working through something other than token identity.
+
+My earlier attention analysis of original-model loops showed h2's attention to earlier occurrences of the current token rising with repetition (0.11 → 0.26). So the model has a native anti-repetition head whose effect grows in loops but is outweighed by the copy paths. That suggests a mechanistic edit: strengthen h2's output so suppression scales with how much it attends to repeated material. Before spending a pass, I'll check its attention in the stored layer-23 patterns (fwd_5, two loop texts). I want to know where h2 attends outside loops (sink/current token versus earlier same tokens) and how its attention to same-token positions changes across repetitions. Strong selectivity for repeated material would justify a boost; heavy attention to same tokens in ordinary text would make a boost risky.
+
+```python
+# Where does L23 h2 attend? Use stored attention patterns (fwd_5, original model, 2 loop texts): same-token / induction / sink shares, lead vs loop periods
+m5=json.load(open('/work/fwd_5/meta.json')); print(list(m5.keys())); print({k:(v if not isinstance(v,(list,dict)) else str(v)[:200]) for k,v in m5.items() if k!='texts'})
+print(sorted(os.listdir('/work/fwd_5'))[:20])
+```

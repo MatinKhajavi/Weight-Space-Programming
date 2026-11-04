@@ -1,0 +1,26 @@
+OUTPUT of Python run 35 of at most 300:
+```
+MODEL:str[6] WORK:str[5] FROZEN:set[3] NAMES:list[320] tok:Tokenizer cfg:dict[36] ct:str[7755] gsm:list[7469] mth:list[7275] aime:list[714] rng:Random by_level:defaultdict[6] m:dict[7] k:int gsm_sh:list[7469] quota:dict[5] D_math:list[160] L:int q:Tensor(4096, 1024) D_gsm:list[96] D:list[256] used:set[256] f:TextIOWrapper g1:ndarray(1024,) r:Series(5,) t:int s:dict[4] g2:list[256] rows:list[4802] j:int df:DataFrame(512, 8) fin:DataFrame(52, 8) cut:DataFrame(460, 11) i:int infos:list[460] idx:dict[3] p:int st:int c2:DataFrame(443, 13) P:str[28] full_layers:list[6] v:Tensor(1024,) o:int qn:Tensor(256,) kn:Tensor(256,) oh:Tensor(8,) vh:Tensor(2,) kh:Tensor(2,) qh:Tensor(8, 512, 1024) qq:Tensor(8,) qg:Tensor(8,) sub:DataFrame(60, 12) A:dict[6] dtb:Tensor(16,) nw:Tensor(128,) adir:str[17] H_mean:memmap(512, 14, 1024) H_last:memmap(512, 14, 1024) M_mean:memmap(512, 13, 3584) M_last:memmap(512, 13, 3584) samp:list[512] fin_mask:ndarray(512,) items:list[512] byitem:defaultdict[256] mixed:list[33] Hm:ndarray(512, 14, 1024) li:int X:ndarray(512, 1024) d:ndarray(1024,) proj:ndarray(512,) auc:float w:Tensor(128,) phr:list[10] fin_txt:list[52] cut_txt:list[460] a:ndarray(8, 416) b:int cnt:Counter[0] early:DataFrame(12, 13) env:Environment tmpl:Template SUFFIX:str[71] ps:str[141] pid2prob:dict[14744] tf_items:list[12] gen:str[12167] full:str[12600] tf5:list[5] cands:DataFrame(183, 13) compact:list[14] seen:set[14] pre_ids:list[4355] lead:str[242] body:str[552] txt:str[1025] js:str[12919] F4:str[12] meta4:dict[6] ids4:ndarray(14, 438) lp4:ndarray(14, 437) ok:bool REP:list[14] L4:list[14] ks:ndarray(416,) R:DataFrame(4802, 5) n:str[53] WU:Tensor(248320, 1024) gF:Tensor(1024,) h24:memmap(14, 438, 1024) tkl:memmap(14, 438, 20) tki:memmap(14, 438, 20) h:int name:str[5] lsm:Tensor(248320,) top:topk[2] HS:ndarray(25, 14, 438, 1024) MA:ndarray(24, 14, 438, 3584) Wd:list[24] WUc_mean:ndarray(1024,) pairs:list[320] x:dict[6] text:str[1025] enc:Encoding bs:int offs:list[416] T:int info:dict[240] y:int64() res:ndarray(320, 48) base:ndarray(320, 48) mixd:ndarray(24,) mlpd:ndarray(24,) l:int late:DataFrame(14, 5) alts:list[5] nb:int64() per:ndarray(6,) F5:str[12] ids5:ndarray(2, 416) L5:list[2] txt_idx:list[2] out:list[141] ci:int ids:ndarray(416,) ind:list[6] same:list[6] mi:ndarray(8,) ms:ndarray(8,) AT:DataFrame(21264, 8) summ:DataFrame(48, 2)
+FUNCS: ['load_original', 'load', 'save_edit', 'drop_edit', 'edited', 'readjsonl', 'loop_info', 'ntok', 'roc_auc_score', 'count_phr', 'prompt_str', 'tok_ids', 'rep_index', 'rmsn', 'dla', 'safe']
+['attn_11.npy', 'attn_15.npy', 'attn_19.npy', 'attn_23.npy', 'attn_3.npy', 'attn_7.npy', 'input_ids.npy', 'meta.json', 'token_logprobs.npy']
+{"texts": ["<|im_start|>user\nIn triangle $PQR$, we have $\\angle P = 90^\\circ$, $QR = 20$, and $\\tan R = 4\\sin R$.  What is $PR$?\nPlease reason step by step, and put your final answer within \\boxed{}.<|im_end|>\n<|im_start|>assistant\n<think>\n$ and $Q$.\n        *   Wait, $RQ$ is a leg? No.\n        *   Wait, $RQ$ is a leg? No.\n        *   Wait, $RQ$ connects $R$ and $Q$.\n        *   Wait, $P$ is the vertex.\n        *   So $PR$ is a leg.\n        *   $PQ$ is a leg.\n        *   Wait, $R$ is connected to $P$.\n        *   $Q$ is connected to $P$.\n        *   Wait, $RQ$ connects $R$ and $Q$.\n        *   Wait, $RQ$ is a leg? No.\n        *   Wait, $RQ$ connects $R$ and $Q$.\n        *   Wait, $RQ$ is a leg? No.\n        *   Wait, $RQ$ connects $R$ and $Q$.\n        *   Wait, $RQ$ is a leg? No.\n        *   Wait, $RQ$ connects $R$ and $Q$.\n        *   Wait, $RQ$ is a leg? No.\n        *   Wait, $RQ$ connects $R$ and $Q$.\n        *   Wait, $RQ$ is a leg? No.\n        *   Wait, $RQ$ connects $R$ and $Q$.\n        *   Wait, $RQ$ is a leg? No", "<|im_start|>user\nWe flip a fair coin 10 times.  What is the probability that we get heads in exactly 8 of the 10 flips?\nPlease rea
+# Notes
+
+## Sets
+- D (diagnosis): 160 MATH stratified (L1 14,L2 29,L3 34,L4 41,L5 42) + 96 GSM8K, saved in /work/sets.json; rng seed 1234 shuffles of by_level and gsm.
+
+## Findings (original model)
+- gen_2 (pass 2): D set, n=2, 32768 max: acc 10.4% (gsm 14.6%, math 7.8%); 90% cut at max tokens; ALL 52 finished answers correct.
+- 443/460 cut answers end in an exact verbatim loop (median period ~120 chars / ~30 tokens); loop onset median ~6.7k tokens (min ~1k).
+- Looping texts rarely reach wrap-up phrases; failure = entering self-sustaining repetition loop, not failure to emit </think>.
+- Weight scan: no obvious outlier heads in full-attn layers; DeltaNet A_log/dt_bias look normal.
+- fwd_4 (pass 3, TF original): 14 compact loop texts (/work/tf_compact.json): prompt + 120 tok lead + 6 periods. logprobs, top20, hidden 0-24, mlp 0-23.
+- Current edit: NONE.
+
+- fwd_4 analysis: loop-token prob by repetition k=1..6: 0.89,0.92,0.96,0.98,0.99,0.99 (frac>0.9: 74%->99%).
+- DLA (rep5 - rep1, 320 matched tokens): total +3.44 logits; layer 23 ATTENTION +2.48 (base 11.2 logits at rep1!), L15 attn +0.83, L19 mlp +0.51, L23 mlp +0.46. DeltaNet layers ~0.
+- Decision points in loop (line starts) have sensible alternatives (Let/So/If/This) at 2-15%.
+- Next pass: attention patterns, layers 3,7,11,15,19,23, on compact texts idx 4 and 13 (tf_compact.json). Current edit: NONE.
+
+
+```

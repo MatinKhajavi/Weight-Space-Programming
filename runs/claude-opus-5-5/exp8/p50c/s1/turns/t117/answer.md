@@ -1,0 +1,7 @@
+The "can't close" pattern is rare: only 5 of the 74 cut answers under the combined edit loop on a boxed or "final answer" line. The brake's side effect on "</think>" is small, since its output column weights "</think>" at 15% of "Wait" (0.044 vs 0.299) and "So"/"Okay" at about 0. That's not worth a more complicated edit now. The most important open question is whether the gain holds on problems never used for choosing edits, because the brake neuron was found in windows from S1 problems and S1 was used for all comparisons so far. I'll build a held-out set H1 from the H pool: 128 MATH problems stratified by level like MATH-500, plus 128 GSM8K problems. I'll run original versus A+brake ×2 on it in paired "both" mode. A later "edited" pass with ×1.5 on the same problems can then be paired with both arms. A gain on H1 comparable to S1's +47.7 points, many standard errors from zero, would confirm the repair generalizes. A much smaller gain would indicate overfitting to S1.
+
+```python
+# Build held-out set H1 (128 MATH level-stratified like MATH-500 + 128 GSM8K) from pool H, never used before
+pools = json.load(open('/work/pools.json')); print({k: (len(v) if hasattr(v,'__len__') else v) for k, v in pools.items()})
+Hp = pools['H']; print(type(Hp), (list(Hp.keys()) if isinstance(Hp, dict) else Hp[:3]))
+```

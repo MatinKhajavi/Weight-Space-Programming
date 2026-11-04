@@ -1,0 +1,12 @@
+OUTPUT of run 50 of at most 60:
+```
+L10 h0: Oref=A -0.2, Oref=mean -0.2, fullΔOV -0.6 | h1: Oref=A +0.8, Oref=mean +0.8, fullΔOV +0.8 | h2: Oref=A -1.7, Oref=mean -1.7, fullΔOV -1.2 | h3: Oref=A -1.9, Oref=mean -1.9, fullΔOV -1.8
+L11 h0: Oref=A -0.9, Oref=mean -0.9, fullΔOV -0.8 | h1: Oref=A -2.5, Oref=mean -2.5, fullΔOV -2.6 | h2: Oref=A -0.9, Oref=mean -0.9, fullΔOV -1.3 | h3: Oref=A +0.2, Oref=mean +0.2, fullΔOV +1.2
+L12 h0: Oref=A -3.3, Oref=mean -3.3, fullΔOV -3.5 | h1: Oref=A -4.1, Oref=mean -4.1, fullΔOV -4.1 | h2: Oref=A -3.0, Oref=mean -3.0, fullΔOV -2.6 | h3: Oref=A -3.8, Oref=mean -3.8, fullΔOV -3.3
+L13 h0: Oref=A +0.8, Oref=mean +0.8, fullΔOV +0.9 | h1: Oref=A -2.4, Oref=mean -2.4, fullΔOV -1.6 | h2: Oref=A -1.1, Oref=mean -1.1, fullΔOV -1.6 | h3: Oref=A -2.3, Oref=mean -2.3, fullΔOV -1.0
+L14 h0: Oref=A +0.6, Oref=mean +0.6, fullΔOV +1.1 | h1: Oref=A -1.9, Oref=mean -1.9, fullΔOV -1.4 | h2: Oref=A -0.3, Oref=mean -0.3, fullΔOV -1.5 | h3: Oref=A +0.5, Oref=mean +0.5, fullΔOV +1.2
+L15 h0: Oref=A -4.3, Oref=mean -4.3, fullΔOV -3.3 | h1: Oref=A -3.3, Oref=mean -3.3, fullΔOV -2.4 | h2: Oref=A -3.0, Oref=mean -3.0, fullΔOV -2.5 | h3: Oref=A -3.4, Oref=mean -3.4, fullΔOV -2.9
+L16 h0: Oref=A -0.5, Oref=mean -0.5, fullΔOV +0.1 | h1: Oref=A -1.5, Oref=mean -1.5, fullΔOV -0.2 | h2: Oref=A -2.0, Oref=mean -2.0, fullΔOV -1.1 | h3: Oref=A -2.1, Oref=mean -2.2, fullΔOV -1.7
+L17 h0: Oref=A +1.6, Oref=mean +1.6, fullΔOV +1.7 | h1: Oref=A +2.2, Oref=mean +2.1, fullΔOV +1.1 | h2: Oref=A +0.4, Oref=mean +0.4, fullΔOV -0.2 | h3: Oref=A +2.9, Oref=mean +3.0, fullΔOV +3.0
+
+```

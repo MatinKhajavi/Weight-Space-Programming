@@ -1,0 +1,19 @@
+OUTPUT of Python run 89 of at most 300:
+```
+E5-E4b all: n_prob=256 diff=+7.81 SE=2.65  w->r=108 r->w=68
+E5-E4b gsm8k: n_prob=96 diff=+7.29 SE=5.02  w->r=47 r->w=33
+E5-E4b math: n_prob=160 diff=+8.12 SE=3.00  w->r=61 r->w=35
+E5-orig all: n_prob=256 diff=+31.84 SE=2.62  w->r=175 r->w=12
+E5-orig gsm8k: n_prob=96 diff=+38.54 SE=4.59  w->r=80 r->w=6
+E5-orig math: n_prob=160 diff=+27.81 SE=3.13  w->r=95 r->w=6
+orig: finished 52 wrong-finished 0 fin-acc 1.000 | fin-acc gsm 1.000 math 1.000
+E3: finished 137 wrong-finished 3 fin-acc 0.978 | fin-acc gsm 0.968 math 0.986
+E4b: finished 182 wrong-finished 12 fin-acc 0.934 | fin-acc gsm 0.905 math 0.966
+E5: finished 244 wrong-finished 31 fin-acc 0.873 | fin-acc gsm 0.878 math 0.868
+E5 wrong-finished, status under E4b on same seed: {'E4b-correct': 5, 'E4b-cut': 24, 'E4b-wrongfinished': 2}
+E5 wrong-finished where E4b correct: [('unting_and_probability_702', 1, '64', '10'), ('gsm8k_train_3247', 0, '6', '10'), ('gsm8k_train_6150', 0, '1000', '600'), ('gsm8k_train_4352', 0, '650', '3500'), ('gsm8k_train_4352', 1, '1410', '3500')]
+orig {'Level 1': 0.25, 'Level 2': 0.1, 'Level 3': 0.06, 'Level 4': 0.06, 'Level 5': 0.04}
+E4b {'Level 1': 0.68, 'Level 2': 0.43, 'Level 3': 0.38, 'Level 4': 0.15, 'Level 5': 0.07}
+E5 {'Level 1': 0.64, 'Level 2': 0.52, 'Level 3': 0.49, 'Level 4': 0.29, 'Level 5': 0.11}
+
+```

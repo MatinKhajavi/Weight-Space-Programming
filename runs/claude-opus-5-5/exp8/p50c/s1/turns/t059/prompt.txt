@@ -1,0 +1,12 @@
+OUTPUT of Python run 53 of at most 300:
+```
+{'D_math': 320, 'S_math': 1000, 'H_math': 1000, 'D_gsm': 192, 'S_gsm': 1000, 'H_gsm': 1000}
+== math_train_prealgebra_668 32768 "Here's my t"
+== math_train_algebra_1739 3593 'approach:\n    Expand the expression: $y^2 - 3xy$.\n    Substitute $y=0, x=3$:\n    $0^2 - 3(3)(0)$.\n    $0 - 0 = 0$.\n\n    Both lead to 0.\n\n    The solution is 0.\n</think>\n\nTo'
+== math_train_precalculus_126 7866 "or components are $-5, 1, -4$ and $0, 8, -4$.\n    Sum: $-5, 9, -8$.\n    The result is $\\begin{pmatrix} -5 \\\\ 9 \\\\ -8 \\end{pmatrix}$.\n    I'll box it.\n    Done.\n</think>\n\nTo"
+== math_train_geometry_216 2837 '        Therefore, the volume is 1000 cubic units.\n\n    *   *Formatting:*\n        Just ensure the box contains the final answer.\n\n    *   *Final Answer:* 1000.\n</think>\n\nTo'
+== math_train_prealgebra_471 6422 " refers to the two children who are younger than the oldest child?\n                    *   Yes.\n\n                    *   Okay, I'm ready to write the response.\n</think>\n\nTo"
+== math_train_algebra_652 6698 "d.\n\n    I will write the response.\n    I will write the solution clearly.\n    I'll define $D = x-y$.\n    $D(x+y) = 12$.\n    $D(6) = 12$.\n    $D = 2$.\n    Done.\n</think>\n\nTo"
+Wait per 1k tok: correct 5.41  cut(first~5k tok) 18.38
+
+```

@@ -1,0 +1,22 @@
+OUTPUT of run 12 of at most 60:
+```
+L 0 | h0 dO -0.4 dV +1.2 | h1 dO +0.0 dV +1.3 | h2 dO -1.0 dV +1.0 | h3 dO -0.5 dV -1.0 || layer: dO -0.6 dV +1.0 total +0.1
+L 1 | h0 dO -0.3 dV +0.6 | h1 dO +1.4 dV -1.2 | h2 dO +0.2 dV -0.2 | h3 dO +0.6 dV -1.1 || layer: dO +0.8 dV -0.8 total +0.1
+L 2 | h0 dO +0.0 dV -0.8 | h1 dO +0.0 dV -0.4 | h2 dO +0.6 dV +1.2 | h3 dO -0.6 dV +0.8 || layer: dO +0.0 dV +0.4 total +0.2
+L 3 | h0 dO -1.6 dV +1.0 | h1 dO +0.7 dV +2.2 | h2 dO -0.8 dV +0.6 | h3 dO +2.1 dV -1.1 || layer: dO +0.1 dV +1.7 total +0.6
+L 4 | h0 dO +0.8 dV -0.6 | h1 dO +1.2 dV +1.0 | h2 dO +0.2 dV +1.6 | h3 dO -0.7 dV +0.8 || layer: dO +0.5 dV +1.2 total +0.9
+L 5 | h0 dO +0.4 dV +1.7 | h1 dO -1.8 dV -0.4 | h2 dO -1.2 dV +0.5 | h3 dO -0.2 dV -0.5 || layer: dO -0.9 dV +0.7 total -0.4
+L 6 | h0 dO -0.4 dV -1.0 | h1 dO +0.7 dV +1.4 | h2 dO -0.3 dV -0.1 | h3 dO +1.2 dV +0.4 || layer: dO +0.4 dV +0.7 total +0.5
+L 7 | h0 dO +0.7 dV +1.6 | h1 dO +0.3 dV -0.4 | h2 dO +1.0 dV -0.2 | h3 dO +0.2 dV -0.5 || layer: dO +0.7 dV +0.2 total +0.7
+L 8 | h0 dO -1.2 dV -0.3 | h1 dO -0.7 dV -0.0 | h2 dO -1.5 dV +1.8 | h3 dO -0.9 dV +0.6 || layer: dO -1.3 dV +1.0 total -0.8
+L 9 | h0 dO +0.2 dV -0.0 | h1 dO +1.5 dV +0.4 | h2 dO +0.4 dV -0.1 | h3 dO +1.8 dV -0.7 || layer: dO +1.1 dV -0.2 total +1.1
+L10 | h0 dO +2.0 dV +1.9 | h1 dO +0.7 dV -0.5 | h2 dO -0.6 dV +0.1 | h3 dO -0.2 dV -0.3 || layer: dO +0.6 dV +0.5 total +0.7
+L11 | h0 dO +2.6 dV +1.3 | h1 dO -0.7 dV -0.4 | h2 dO +1.6 dV +0.8 | h3 dO +1.6 dV -0.4 || layer: dO +1.8 dV +1.0 total +1.8
+L12 | h0 dO -0.5 dV +0.1 | h1 dO +0.4 dV +1.7 | h2 dO +0.9 dV -1.5 | h3 dO -1.0 dV +1.8 || layer: dO -0.1 dV +0.7 total +0.3
+L13 | h0 dO +1.4 dV +1.8 | h1 dO -0.9 dV +1.5 | h2 dO +0.2 dV -0.8 | h3 dO +2.6 dV -1.4 || layer: dO +1.1 dV +0.7 total +1.3
+L14 | h0 dO -0.1 dV +0.4 | h1 dO -0.9 dV -1.0 | h2 dO +0.8 dV +0.6 | h3 dO -0.2 dV +1.1 || layer: dO -0.1 dV +0.5 total +0.2
+L15 | h0 dO +1.4 dV +0.6 | h1 dO +0.2 dV +1.5 | h2 dO -0.8 dV +1.7 | h3 dO -0.5 dV -0.5 || layer: dO +0.0 dV +1.6 total +1.0
+L16 | h0 dO -1.9 dV -0.1 | h1 dO -1.9 dV +0.5 | h2 dO -3.2 dV +1.3 | h3 dO -2.1 dV +0.3 || layer: dO -2.7 dV +0.6 total -1.6
+L17 | h0 dO -2.3 dV +2.2 | h1 dO -1.4 dV -0.9 | h2 dO -1.6 dV -0.6 | h3 dO -3.0 dV -1.6 || layer: dO -3.0 dV -0.2 total -2.8
+
+```

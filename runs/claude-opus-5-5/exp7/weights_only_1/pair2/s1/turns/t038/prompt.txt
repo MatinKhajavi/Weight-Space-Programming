@@ -1,0 +1,16 @@
+OUTPUT of run 37 of at most 60:
+```
+L14: total share-increase (first order) -0.0001 | from top-10% prediction-readers +0.0001 | from bottom-50% -0.0001 | corr(inP, contrib) +0.003
+      inP stats median 15.60 p90 25.38 max 43.2 | sum lin pred-gain A -2063.6367 B -2152.1641 diff +88.5273 (scale 74349.273)
+      top contributing units: [(102, -0.44, 26.2), (499, -0.268, 11.1), (235, -0.239, 28.4), (217, -0.218, 13.3), (174, -0.209, 7.9), (1099, -0.207, 17.5), (1373, -0.203, 17.9), (1887, -0.198, 17.1)]
+L15: total share-increase (first order) +0.0005 | from top-10% prediction-readers +0.0002 | from bottom-50% +0.0004 | corr(inP, contrib) -0.009
+      inP stats median 16.00 p90 25.39 max 42.9 | sum lin pred-gain A -4076.3125 B -4165.6250 diff +89.3123 (scale 75097.844)
+      top contributing units: [(1190, 0.126, 30.1), (925, 0.113, 27.1), (1279, 0.089, 25.6), (1528, 0.077, 11.0), (822, 0.072, 27.0), (1383, 0.071, 8.2), (38, 0.071, 31.3), (1677, 0.07, 5.3)]
+L16: total share-increase (first order) +0.0022 | from top-10% prediction-readers +0.0002 | from bottom-50% +0.0008 | corr(inP, contrib) +0.003
+      inP stats median 16.50 p90 26.23 max 59.8 | sum lin pred-gain A -8017.9370 B -7554.8174 diff -463.1199 (scale 95232.938)
+      top contributing units: [(1955, 0.051, 21.5), (264, 0.035, 10.9), (1951, 0.034, 17.5), (760, 0.029, 11.2), (38, 0.027, 11.5), (302, 0.026, 23.2), (1417, 0.025, 49.9), (1859, 0.024, 35.8)]
+L17: total share-increase (first order) +0.0017 | from top-10% prediction-readers +0.0004 | from bottom-50% +0.0002 | corr(inP, contrib) +0.069
+      inP stats median 16.98 p90 27.14 max 80.5 | sum lin pred-gain A -9189.5098 B -9052.8379 diff -136.6713 (scale 105656.164)
+      top contributing units: [(329, 0.074, 10.3), (779, 0.062, 33.9), (310, 0.055, 43.3), (1217, 0.051, 41.6), (824, 0.05, 62.2), (631, 0.049, 6.6), (1170, 0.044, 12.8), (1440, 0.044, 13.7)]
+
+```

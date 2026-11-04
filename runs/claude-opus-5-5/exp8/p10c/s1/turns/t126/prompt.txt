@@ -1,0 +1,9 @@
+OUTPUT of Python run 110 of at most 300:
+```
+all  n 512 orig 0.088 v4 0.572 diff +48.4 SE 2.2 w->r 250 r->w 2
+gsm  n 128 orig 0.133 v4 0.641 diff +50.8 SE 4.4 w->r 65 r->w 0
+math n 384 orig 0.073 v4 0.549 diff +47.7 SE 2.6 w->r 185 r->w 2
+used ids 768
+fresh 256 chars 6576
+
+```

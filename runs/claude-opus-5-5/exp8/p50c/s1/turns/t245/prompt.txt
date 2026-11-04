@@ -1,0 +1,7 @@
+OUTPUT of Python run 220 of at most 300:
+```
+C -> X1 counts: {('cut', 'cut'): 58, ('cut', 'ok'): 35, ('cut', 'wrong'): 33, ('ok', 'cut'): 20, ('ok', 'ok'): 258, ('ok', 'wrong'): 33, ('wrong', 'cut'): 21, ('wrong', 'ok'): 18, ('wrong', 'wrong'): 36}
+gsm8k {('cut', 'cut'): 9, ('cut', 'ok'): 13, ('cut', 'wrong'): 14, ('ok', 'cut'): 7, ('ok', 'ok'): 150, ('ok', 'wrong'): 22, ('wrong', 'cut'): 7, ('wrong', 'ok'): 14, ('wrong', 'wrong'): 20}
+math {('cut', 'cut'): 49, ('cut', 'ok'): 22, ('cut', 'wrong'): 19, ('ok', 'cut'): 13, ('ok', 'ok'): 108, ('ok', 'wrong'): 11, ('wrong', 'cut'): 14, ('wrong', 'ok'): 4, ('wrong', 'wrong'): 16}
+
+```

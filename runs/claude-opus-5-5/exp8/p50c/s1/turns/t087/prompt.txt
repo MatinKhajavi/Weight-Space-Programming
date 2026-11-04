@@ -1,0 +1,6 @@
+OUTPUT of Python run 75 of at most 300:
+```
+['id', 'source', 'answer', 'samples']
+{'id': 'math_train_precalculus_233', 'source': 'math', 'answer': '0', 'samples': "[{'text': 'Here is my thought process for evaluating the given determinant:\\n\\n1"}
+
+```

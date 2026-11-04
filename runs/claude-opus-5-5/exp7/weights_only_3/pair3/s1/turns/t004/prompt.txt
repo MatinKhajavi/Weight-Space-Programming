@@ -1,0 +1,130 @@
+OUTPUT of run 3 of at most 60:
+```
+L 0 q_proj    top5=[0.067 0.052 0.05  0.045 0.042] shuf_top=0.014 ratio=4.90 med_ulp=2.0
+L 0 k_proj    top5=[0.036 0.029 0.025 0.025 0.021] shuf_top=0.010 ratio=3.79 med_ulp=2.0
+L 0 v_proj    top5=[0.042 0.029 0.028 0.025 0.022] shuf_top=0.009 ratio=4.59 med_ulp=2.0
+L 0 o_proj    top5=[0.067 0.051 0.043 0.038 0.035] shuf_top=0.013 ratio=5.15 med_ulp=2.0
+L 0 gate_proj top5=[0.075 0.07  0.062 0.055 0.051] shuf_top=0.017 ratio=4.47 med_ulp=2.0
+L 0 up_proj   top5=[0.074 0.067 0.061 0.053 0.052] shuf_top=0.017 ratio=4.47 med_ulp=2.0
+L 0 down_proj top5=[0.054 0.053 0.05  0.046 0.046] shuf_top=0.016 ratio=3.37 med_ulp=3.0
+L 1 q_proj    top5=[0.078 0.058 0.052 0.046 0.042] shuf_top=0.014 ratio=5.55 med_ulp=2.0
+L 1 k_proj    top5=[0.039 0.031 0.028 0.026 0.025] shuf_top=0.010 ratio=3.82 med_ulp=2.0
+L 1 v_proj    top5=[0.033 0.03  0.025 0.024 0.024] shuf_top=0.010 ratio=3.36 med_ulp=2.0
+L 1 o_proj    top5=[0.073 0.049 0.047 0.041 0.039] shuf_top=0.013 ratio=5.55 med_ulp=3.0
+L 1 gate_proj top5=[0.071 0.063 0.053 0.052 0.049] shuf_top=0.017 ratio=4.16 med_ulp=2.0
+L 1 up_proj   top5=[0.069 0.062 0.054 0.052 0.05 ] shuf_top=0.017 ratio=4.06 med_ulp=2.0
+L 1 down_proj top5=[0.055 0.052 0.05  0.046 0.044] shuf_top=0.016 ratio=3.41 med_ulp=4.0
+L 2 q_proj    top5=[0.08  0.056 0.052 0.043 0.038] shuf_top=0.014 ratio=5.71 med_ulp=2.0
+L 2 k_proj    top5=[0.038 0.034 0.028 0.023 0.019] shuf_top=0.010 ratio=3.88 med_ulp=2.0
+L 2 v_proj    top5=[0.03  0.028 0.025 0.021 0.021] shuf_top=0.010 ratio=3.00 med_ulp=2.0
+L 2 o_proj    top5=[0.061 0.048 0.042 0.037 0.035] shuf_top=0.013 ratio=4.65 med_ulp=2.0
+L 2 gate_proj top5=[0.084 0.063 0.059 0.051 0.05 ] shuf_top=0.017 ratio=4.83 med_ulp=2.0
+L 2 up_proj   top5=[0.081 0.062 0.058 0.048 0.046] shuf_top=0.017 ratio=4.69 med_ulp=2.0
+L 2 down_proj top5=[0.063 0.058 0.047 0.046 0.045] shuf_top=0.016 ratio=3.90 med_ulp=3.0
+L 3 q_proj    top5=[0.071 0.058 0.051 0.047 0.04 ] shuf_top=0.015 ratio=4.85 med_ulp=2.0
+L 3 k_proj    top5=[0.04  0.033 0.026 0.024 0.021] shuf_top=0.010 ratio=3.86 med_ulp=2.0
+L 3 v_proj    top5=[0.032 0.028 0.023 0.023 0.02 ] shuf_top=0.010 ratio=3.23 med_ulp=2.0
+L 3 o_proj    top5=[0.06  0.047 0.042 0.04  0.038] shuf_top=0.013 ratio=4.74 med_ulp=3.0
+L 3 gate_proj top5=[0.082 0.06  0.056 0.053 0.052] shuf_top=0.018 ratio=4.63 med_ulp=2.0
+L 3 up_proj   top5=[0.076 0.059 0.054 0.05  0.049] shuf_top=0.017 ratio=4.45 med_ulp=2.0
+L 3 down_proj top5=[0.065 0.057 0.056 0.049 0.046] shuf_top=0.016 ratio=4.03 med_ulp=4.0
+L 4 q_proj    top5=[0.066 0.057 0.056 0.046 0.042] shuf_top=0.014 ratio=4.70 med_ulp=2.0
+L 4 k_proj    top5=[0.036 0.03  0.026 0.023 0.022] shuf_top=0.010 ratio=3.58 med_ulp=2.0
+L 4 v_proj    top5=[0.032 0.029 0.025 0.021 0.019] shuf_top=0.010 ratio=3.07 med_ulp=2.0
+L 4 o_proj    top5=[0.065 0.057 0.046 0.041 0.036] shuf_top=0.013 ratio=4.91 med_ulp=3.0
+L 4 gate_proj top5=[0.091 0.062 0.061 0.053 0.051] shuf_top=0.018 ratio=5.18 med_ulp=2.0
+L 4 up_proj   top5=[0.086 0.064 0.06  0.054 0.051] shuf_top=0.017 ratio=4.91 med_ulp=2.0
+L 4 down_proj top5=[0.066 0.062 0.057 0.048 0.046] shuf_top=0.016 ratio=4.12 med_ulp=5.0
+L 5 q_proj    top5=[0.093 0.065 0.056 0.043 0.042] shuf_top=0.015 ratio=6.32 med_ulp=3.0
+L 5 k_proj    top5=[0.038 0.032 0.028 0.024 0.022] shuf_top=0.010 ratio=3.85 med_ulp=3.0
+L 5 v_proj    top5=[0.035 0.032 0.026 0.023 0.022] shuf_top=0.010 ratio=3.29 med_ulp=2.0
+L 5 o_proj    top5=[0.062 0.056 0.046 0.042 0.041] shuf_top=0.014 ratio=4.40 med_ulp=2.0
+L 5 gate_proj top5=[0.085 0.065 0.058 0.05  0.049] shuf_top=0.018 ratio=4.72 med_ulp=2.0
+L 5 up_proj   top5=[0.079 0.065 0.054 0.053 0.05 ] shuf_top=0.018 ratio=4.47 med_ulp=2.0
+L 5 down_proj top5=[0.072 0.058 0.05  0.049 0.045] shuf_top=0.016 ratio=4.46 med_ulp=3.0
+L 6 q_proj    top5=[0.068 0.065 0.052 0.048 0.045] shuf_top=0.015 ratio=4.55 med_ulp=2.0
+L 6 k_proj    top5=[0.035 0.03  0.026 0.023 0.021] shuf_top=0.011 ratio=3.36 med_ulp=2.0
+L 6 v_proj    top5=[0.03  0.027 0.024 0.022 0.019] shuf_top=0.010 ratio=2.99 med_ulp=2.0
+L 6 o_proj    top5=[0.07  0.056 0.049 0.038 0.036] shuf_top=0.014 ratio=5.07 med_ulp=2.0
+L 6 gate_proj top5=[0.092 0.068 0.058 0.053 0.051] shuf_top=0.018 ratio=5.05 med_ulp=2.0
+L 6 up_proj   top5=[0.085 0.069 0.054 0.049 0.049] shuf_top=0.017 ratio=4.85 med_ulp=2.0
+L 6 down_proj top5=[0.078 0.061 0.05  0.045 0.043] shuf_top=0.016 ratio=4.87 med_ulp=4.0
+L 7 q_proj    top5=[0.084 0.063 0.055 0.051 0.043] shuf_top=0.015 ratio=5.44 med_ulp=2.0
+L 7 k_proj    top5=[0.049 0.03  0.027 0.026 0.022] shuf_top=0.011 ratio=4.43 med_ulp=2.0
+L 7 v_proj    top5=[0.033 0.028 0.027 0.022 0.021] shuf_top=0.010 ratio=3.26 med_ulp=2.0
+L 7 o_proj    top5=[0.062 0.049 0.04  0.035 0.034] shuf_top=0.013 ratio=4.78 med_ulp=2.0
+L 7 gate_proj top5=[0.098 0.075 0.059 0.054 0.052] shuf_top=0.018 ratio=5.40 med_ulp=2.0
+L 7 up_proj   top5=[0.093 0.071 0.057 0.052 0.049] shuf_top=0.018 ratio=5.28 med_ulp=2.0
+L 7 down_proj top5=[0.075 0.062 0.05  0.046 0.043] shuf_top=0.016 ratio=4.73 med_ulp=3.0
+L 8 q_proj    top5=[0.072 0.065 0.054 0.048 0.048] shuf_top=0.015 ratio=4.83 med_ulp=2.0
+L 8 k_proj    top5=[0.037 0.033 0.027 0.025 0.021] shuf_top=0.010 ratio=3.54 med_ulp=2.0
+L 8 v_proj    top5=[0.026 0.025 0.024 0.021 0.02 ] shuf_top=0.010 ratio=2.53 med_ulp=2.0
+L 8 o_proj    top5=[0.062 0.056 0.047 0.04  0.038] shuf_top=0.013 ratio=4.62 med_ulp=3.0
+L 8 gate_proj top5=[0.098 0.073 0.058 0.053 0.051] shuf_top=0.018 ratio=5.49 med_ulp=2.0
+L 8 up_proj   top5=[0.091 0.068 0.054 0.053 0.051] shuf_top=0.017 ratio=5.20 med_ulp=2.0
+L 8 down_proj top5=[0.074 0.059 0.048 0.048 0.045] shuf_top=0.016 ratio=4.68 med_ulp=4.0
+L 9 q_proj    top5=[0.104 0.081 0.054 0.054 0.046] shuf_top=0.016 ratio=6.44 med_ulp=2.0
+L 9 k_proj    top5=[0.042 0.037 0.03  0.028 0.024] shuf_top=0.011 ratio=3.69 med_ulp=2.0
+L 9 v_proj    top5=[0.03  0.025 0.023 0.022 0.019] shuf_top=0.010 ratio=3.00 med_ulp=2.0
+L 9 o_proj    top5=[0.058 0.054 0.046 0.039 0.037] shuf_top=0.014 ratio=4.21 med_ulp=2.0
+L 9 gate_proj top5=[0.101 0.071 0.061 0.05  0.048] shuf_top=0.018 ratio=5.66 med_ulp=2.0
+L 9 up_proj   top5=[0.094 0.066 0.06  0.051 0.048] shuf_top=0.018 ratio=5.33 med_ulp=2.0
+L 9 down_proj top5=[0.078 0.062 0.052 0.048 0.046] shuf_top=0.016 ratio=4.81 med_ulp=3.0
+L10 q_proj    top5=[0.128 0.063 0.055 0.053 0.044] shuf_top=0.017 ratio=7.69 med_ulp=3.0
+L10 k_proj    top5=[0.047 0.047 0.03  0.028 0.026] shuf_top=0.012 ratio=4.04 med_ulp=2.0
+L10 v_proj    top5=[0.032 0.029 0.023 0.022 0.02 ] shuf_top=0.010 ratio=3.07 med_ulp=2.0
+L10 o_proj    top5=[0.071 0.053 0.046 0.043 0.038] shuf_top=0.015 ratio=4.77 med_ulp=2.0
+L10 gate_proj top5=[0.105 0.07  0.061 0.055 0.049] shuf_top=0.018 ratio=5.89 med_ulp=2.0
+L10 up_proj   top5=[0.095 0.068 0.063 0.058 0.048] shuf_top=0.018 ratio=5.41 med_ulp=2.0
+L10 down_proj top5=[0.083 0.061 0.058 0.056 0.047] shuf_top=0.016 ratio=5.08 med_ulp=4.0
+L11 q_proj    top5=[0.084 0.061 0.059 0.047 0.044] shuf_top=0.015 ratio=5.73 med_ulp=3.0
+L11 k_proj    top5=[0.045 0.034 0.031 0.028 0.026] shuf_top=0.011 ratio=4.02 med_ulp=3.0
+L11 v_proj    top5=[0.033 0.025 0.023 0.021 0.019] shuf_top=0.010 ratio=3.29 med_ulp=2.0
+L11 o_proj    top5=[0.052 0.042 0.042 0.039 0.034] shuf_top=0.014 ratio=3.69 med_ulp=2.0
+L11 gate_proj top5=[0.097 0.065 0.056 0.055 0.048] shuf_top=0.018 ratio=5.49 med_ulp=2.0
+L11 up_proj   top5=[0.091 0.06  0.055 0.051 0.05 ] shuf_top=0.017 ratio=5.23 med_ulp=2.0
+L11 down_proj top5=[0.075 0.06  0.053 0.045 0.044] shuf_top=0.016 ratio=4.86 med_ulp=3.0
+L12 q_proj    top5=[0.108 0.067 0.062 0.061 0.056] shuf_top=0.016 ratio=6.70 med_ulp=3.0
+L12 k_proj    top5=[0.049 0.04  0.03  0.027 0.024] shuf_top=0.011 ratio=4.25 med_ulp=2.0
+L12 v_proj    top5=[0.026 0.022 0.019 0.018 0.017] shuf_top=0.009 ratio=2.91 med_ulp=2.0
+L12 o_proj    top5=[0.051 0.05  0.047 0.043 0.04 ] shuf_top=0.014 ratio=3.60 med_ulp=2.0
+L12 gate_proj top5=[0.109 0.072 0.059 0.056 0.053] shuf_top=0.018 ratio=5.90 med_ulp=2.0
+L12 up_proj   top5=[0.099 0.069 0.06  0.055 0.051] shuf_top=0.018 ratio=5.48 med_ulp=2.0
+L12 down_proj top5=[0.075 0.06  0.057 0.048 0.046] shuf_top=0.017 ratio=4.48 med_ulp=3.0
+L13 q_proj    top5=[0.067 0.055 0.054 0.049 0.047] shuf_top=0.015 ratio=4.55 med_ulp=2.0
+L13 k_proj    top5=[0.038 0.031 0.028 0.025 0.022] shuf_top=0.011 ratio=3.53 med_ulp=3.0
+L13 v_proj    top5=[0.035 0.025 0.023 0.021 0.019] shuf_top=0.010 ratio=3.38 med_ulp=2.0
+L13 o_proj    top5=[0.057 0.048 0.039 0.037 0.033] shuf_top=0.014 ratio=4.13 med_ulp=2.0
+L13 gate_proj top5=[0.111 0.075 0.062 0.061 0.058] shuf_top=0.019 ratio=5.93 med_ulp=2.0
+L13 up_proj   top5=[0.108 0.074 0.063 0.059 0.056] shuf_top=0.019 ratio=5.83 med_ulp=2.0
+L13 down_proj top5=[0.074 0.058 0.05  0.049 0.047] shuf_top=0.017 ratio=4.31 med_ulp=4.0
+L14 q_proj    top5=[0.079 0.069 0.053 0.048 0.043] shuf_top=0.015 ratio=5.21 med_ulp=3.0
+L14 k_proj    top5=[0.036 0.031 0.028 0.026 0.024] shuf_top=0.011 ratio=3.39 med_ulp=2.0
+L14 v_proj    top5=[0.034 0.025 0.022 0.02  0.02 ] shuf_top=0.010 ratio=3.38 med_ulp=2.0
+L14 o_proj    top5=[0.077 0.043 0.035 0.031 0.03 ] shuf_top=0.013 ratio=5.96 med_ulp=2.0
+L14 gate_proj top5=[0.111 0.07  0.065 0.056 0.055] shuf_top=0.019 ratio=5.90 med_ulp=2.0
+L14 up_proj   top5=[0.105 0.068 0.065 0.057 0.055] shuf_top=0.019 ratio=5.62 med_ulp=2.0
+L14 down_proj top5=[0.065 0.056 0.054 0.051 0.048] shuf_top=0.017 ratio=3.70 med_ulp=4.0
+L15 q_proj    top5=[0.076 0.064 0.058 0.05  0.046] shuf_top=0.016 ratio=4.88 med_ulp=2.0
+L15 k_proj    top5=[0.04  0.034 0.03  0.027 0.023] shuf_top=0.011 ratio=3.49 med_ulp=2.0
+L15 v_proj    top5=[0.034 0.028 0.025 0.021 0.021] shuf_top=0.011 ratio=3.13 med_ulp=2.0
+L15 o_proj    top5=[0.052 0.041 0.039 0.038 0.036] shuf_top=0.014 ratio=3.83 med_ulp=2.0
+L15 gate_proj top5=[0.101 0.064 0.055 0.054 0.051] shuf_top=0.019 ratio=5.41 med_ulp=2.0
+L15 up_proj   top5=[0.097 0.064 0.056 0.055 0.05 ] shuf_top=0.019 ratio=5.20 med_ulp=2.0
+L15 down_proj top5=[0.07  0.064 0.062 0.057 0.053] shuf_top=0.018 ratio=3.99 med_ulp=3.0
+L16 q_proj    top5=[0.07  0.049 0.047 0.042 0.04 ] shuf_top=0.015 ratio=4.69 med_ulp=2.0
+L16 k_proj    top5=[0.032 0.03  0.026 0.023 0.021] shuf_top=0.011 ratio=2.95 med_ulp=2.0
+L16 v_proj    top5=[0.041 0.025 0.023 0.022 0.02 ] shuf_top=0.011 ratio=3.87 med_ulp=2.0
+L16 o_proj    top5=[0.062 0.057 0.044 0.04  0.037] shuf_top=0.013 ratio=4.75 med_ulp=3.0
+L16 gate_proj top5=[0.087 0.06  0.056 0.049 0.046] shuf_top=0.018 ratio=4.85 med_ulp=2.0
+L16 up_proj   top5=[0.086 0.061 0.054 0.048 0.045] shuf_top=0.018 ratio=4.76 med_ulp=2.0
+L16 down_proj top5=[0.082 0.074 0.067 0.059 0.058] shuf_top=0.017 ratio=4.86 med_ulp=3.0
+L17 q_proj    top5=[0.066 0.06  0.05  0.045 0.038] shuf_top=0.014 ratio=4.67 med_ulp=3.0
+L17 k_proj    top5=[0.047 0.028 0.023 0.021 0.02 ] shuf_top=0.010 ratio=4.57 med_ulp=2.0
+L17 v_proj    top5=[0.03  0.025 0.024 0.019 0.016] shuf_top=0.009 ratio=3.30 med_ulp=2.0
+L17 o_proj    top5=[0.062 0.045 0.037 0.035 0.03 ] shuf_top=0.012 ratio=5.22 med_ulp=2.0
+L17 gate_proj top5=[0.077 0.06  0.049 0.049 0.042] shuf_top=0.017 ratio=4.44 med_ulp=2.0
+L17 up_proj   top5=[0.074 0.062 0.049 0.048 0.043] shuf_top=0.017 ratio=4.28 med_ulp=2.0
+L17 down_proj top5=[0.096 0.072 0.071 0.061 0.055] shuf_top=0.015 ratio=6.27 med_ulp=3.0
+
+```

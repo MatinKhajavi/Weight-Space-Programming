@@ -1,0 +1,17 @@
+OUTPUT of Python run 62 of at most 120:
+```
+/work/pass_10/ 81 (3, 5)
+/work/pass_10/ 114 (1, 4)
+/work/pass_14/ 3 (7, 8)
+/work/pass_14/ 31 (0, 8)
+/work/pass_14/ 38 (7, 8)
+/work/pass_16/ 3 (8, 7)
+/work/pass_16/ 77 (2, 8)
+/work/pass_16/ 83 (0, 7)
+/work/pass_16/ 119 (3, 3)
+/work/pass_16/ 122 (8, 1)
+/work/pass_12/ 33 (7, 0)
+30 41
+pattern occurrences 372 of which A captures 58
+
+```

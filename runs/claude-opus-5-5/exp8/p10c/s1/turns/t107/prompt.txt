@@ -1,0 +1,19 @@
+OUTPUT of Python run 95 of at most 300:
+```
+acts index keys ['layers', 'mlp_layers', 'samples'] [16, 22, 23] [16, 22, 23]
+M10 shape (512, 3, 3584)
+N573 mean act (first 8192 tok avg): original pass1 -0.215 (loop -0.225, fin -0.096) | v3 pass5 -0.049 (cut -0.061, fin -0.038)
+   ' wait': push/act +0.396
+   ' Wait': push/act +0.300
+   ' Hmm': push/act +0.096
+   ' width': push/act +0.086
+   ' watch': push/act +0.091
+   ' expect': push/act +0.097
+   ' prepare': push/act +0.107
+   ' But': push/act +0.037
+   ' So': push/act -0.006
+   ' Therefore': push/act -0.006
+   ' I': push/act +0.014
+push/act distribution over vocab: 99.9th pct 0.087 max 0.396 min -0.095
+
+```

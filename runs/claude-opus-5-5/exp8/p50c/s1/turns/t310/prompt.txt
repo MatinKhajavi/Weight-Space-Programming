@@ -1,0 +1,14 @@
+OUTPUT of Python run 274 of at most 300:
+```
+v_proj (512, 1024) o_proj (1024, 2048)
+23.0: own-token logit z median -0.1, rank pct median 0.524, out norm 0.12
+23.1: own-token logit z median +0.8, rank pct median 0.198, out norm 0.12
+23.2: own-token logit z median -5.0, rank pct median 1.000, out norm 0.09
+23.3: own-token logit z median +0.3, rank pct median 0.367, out norm 0.10
+23.4: own-token logit z median -0.0, rank pct median 0.497, out norm 0.12
+23.5: own-token logit z median +0.0, rank pct median 0.483, out norm 0.11
+23.6: own-token logit z median -0.6, rank pct median 0.729, out norm 0.09
+23.7: own-token logit z median +0.5, rank pct median 0.318, out norm 0.12
+edit = C + 23.6 x1.5: True True
+
+```

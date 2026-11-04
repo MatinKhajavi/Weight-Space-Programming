@@ -1,0 +1,11 @@
+OUTPUT of Python run 9 of at most 120:
+```
+<class 'list'> 128
+{'game': 0, 'opponent': 'random', 'net_color': 'black', 'result': 1, 'margin': 73.5, 'end': 'two passes', 'stones_captured_by_net': 53, 'stones_lost_by_net': 2, 'moves': 109}
+[{'ply': 0, 'by': 'net', 'move': 58, 'top5': [[40, 0.1592], [20, 0.0263], [21, 0.0263], [22, 0.0263], [23, 0.0263]]}, {'ply': 1, 'by': 'opponent', 'move': 48}, {'ply': 2, 'by': 'net', 'move': 40, 'top5': [[40, 0.1911], [39, 0.0426], [47, 0.0426], [50, 0.0426], [49, 0.0367]]}]
+strong Counter({('two passes', 1): 32, ('two passes', -1): 20, ('repetition', -1): 11, ('move limit', 1): 1})
+[-18.5, -16.5, -15.5, -15.5, -15.5, -13.5, -12.5, -10.5, -8.5, -7.5, -7.5, -6.5, -5.5, -5.5, -4.5, -4.5, -4.5, -1.5, -1.5, -1.5, -0.5, 2.5, 9.5, 10.5, 13.5, 14.5, 23.5, 26.5, 29.5, 33.5, 42.5]
+weak Counter({('two passes', 1): 26, ('repetition', 1): 5, ('repetition', -1): 1})
+[31.5]
+
+```

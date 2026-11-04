@@ -1,0 +1,19 @@
+OUTPUT of Python run 142 of at most 300:
+```
+find_loop (t, maxP=4000)
+loop_info (t, maxp=3000)
+cat_of (s)
+categorize (text, P_)
+near_rep (t, tail=2000, back=30000, w=40, step=10)
+paired (Ga, Gb, label)
+pooled (pairs_list, src=None)
+load_gen (path)
+acc_ (gl)
+cut_ (gl)
+think_end (t, n=260)
+find_loop (21, 25343)
+loop_info (21, 25343)
+near_rep 0.336734693877551
+cat_of ERR string indices must be integers, not 'str'
+
+```

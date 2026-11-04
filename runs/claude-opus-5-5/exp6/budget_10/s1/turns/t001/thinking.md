@@ -1,0 +1,460 @@
+I'm working out how to hand-design the weights for a 6-layer, 512-unit MLP that plays 9x9 Go as a policy, with no training or search, so every weight has to come from a formula. The opponents are RL-trained policies that only win 79-98% against random play, and they sample moves at temperature 1, so my policy needs sharp logits on the good moves.
+
+I'm noting that the game ends after 162 moves or two consecutive passes, scored by area with komi 7.5. Since the network can't track history, superko repetition is a rare but real risk, and passing is delicate: passing when the opponent has just passed ends the game. I also need to avoid filling my own eyes, since a group that fills one can be captured through the last one, so I'll want a pass logit that wins when the only legal moves are my own eyes.
+
+I'm listing the features that matter most: avoiding filling my own eyes, capturing opponent stones in atari (which I can only approximate locally, since counting liberties of large groups is hard for an MLP), escaping atari, favoring open central points early, and passing when nothing useful is left.
+
+I'm weighing how the game-ending rules interact with passing: if the opponent passes while its dead stones are still on the board, area scoring would count them for it, so I'd need to capture those first. The 162-move cap means the board will likely fill up by the end, and I'm also thinking about how the network's capacity, 512 units across six layers over 81 points, limits how many local patterns it can detect.
+
+I'm checking how much of the 512-unit budget each layer can spare. Carrying the own and opponent stone planes forward costs about 162 units per layer, and empty points can be derived linearly from those two, so the real question is whether per-point features can fit in what remains, or whether the score can be built in the first couple of layers and then passed through.
+
+I'm laying out the feature plan now: the empty-point indicator can be computed linearly from the own and opponent stone planes, and the depth could be spent on propagating group connectivity one step per layer.
+
+I'm defining an own-eye unit for each point: it takes the count of own stones among its neighbors and fires only when every neighbor is one's own, so a strong negative logit can discourage filling true eyes. I'm also noting that a few false eyes may need filling, though that case seems rare.
+
+I'm settling on the pass logit at zero, with eye-filling pushed to about -20, so only moves that are actually useful score above it. The catch is late in the game, when legal moves remain inside my own territory or in neutral space; those cost nothing under area scoring unless they make a group easier to kill.
+
+The main worry is passing too early, which leaves points unclaimed or dead opponent stones on the board to be counted for them. Passing too late costs little under area scoring, unless it means filling my own eyes or self-atari on a large group. Since the opponents sample at temperature 1, I'm thinking about scaling the logits up so the policy is close to greedy and picks the highest-scoring move reliably.
+
+I'm weighing whether a fixed opponent would ever exploit determinism, which I doubt, though a fixed policy would replay near-identical games. Then superko: a memoryless network could in principle cycle through repeated whole-board positions, mainly in longer ko fights, and I'm trying to recall whether pgx's positional superko check counts a pass as a board change.
+
+I'm checking whether pgx's positional superko check treats a pass as a board change, since the rule applies to whole-board repeats. I'm also recalling that the step function routes non-board actions through a separate pass branch before running the superko check.
+
+I'm checking how pgx's positional superko handles passes: the check seems to skip passes entirely, and the history only covers recent boards, so a pass can't trigger it.
+
+I'm checking the game-end details: pgx caps a 9x9 game at 162 moves, and area scoring counts whatever stones are still on the board, dead or alive. So the policy should keep its groups alive and claim territory before the cap, since leftover stones count regardless. Against these weak RL opponents, captures and group safety should matter more than any clever endgame trick.
+
+I'm weighing whether to spend the 512-unit budget on a per-point feature set, since every feature has to end up in the last hidden layer for the 81 output logits. I'm considering a trick where the final layer directly computes a weighted sum of the per-point features, so the output stays linear.
+
+I'm settling on the idea that the final layer can take a linear combination of per-point features, with a constant offset to keep the activations positive, so the output logits are just that combination minus the offset. That means the last hidden layer only needs one unit per point, as long as the earlier layers have already computed the features.
+
+I'm sketching out tactical features that an MLP could compute with limited depth, since the real difficulty is that group liberties are a global property and six layers can't flood-fill whole chains. For small local groups the approximation should hold, so I'm starting with the simplest rule-based check: an empty point next to an opponent stone is a candidate capture.
+
+I'm working out a single-stone capture check: an empty point next to an opponent stone counts as an atari if every other neighbor of that stone is already one of my own stones or the board edge. I can express that per point and per direction with a single unit that only fires when all those conditions line up.
+
+I'm now looking at a per-point chain-liberty approach, since the single-stone capture check handles only the simplest case. Tracking liberties for whole chains looks hard, because exact counting means taking the union of empty neighbors across every stone in the group.
+
+I'm weighing a per-stone liberty count, where each stone carries a rough tally of the empty points around its chain. A chain sitting on exactly one liberty is in atari, so the count would need to be exact enough to tell one from two.
+
+I'm working out how to tell when a chain has exactly one liberty, since that's what makes it capturable or forces an escape. The difficulty is that a chain's liberties form a union over all its stones, which a ReLU network can't represent as a clean set, so I'm thinking about a bounded count of empty neighbors instead.
+
+I'm working out how to tell whether a chain has exactly one liberty, since that's what makes it capturable. Counting distinct liberties across a whole chain is awkward for a ReLU network, so I'm considering a propagation approach that tracks whether a chain has at least two liberties.
+
+I'm working through a cruder test for whether a chain has at least two liberties: if any stone has two or more empty neighbors, the chain is safe, and I'm propagating the maximum neighbor-liberty count across same-colored stones through the layers. The gap is when every stone has exactly one liberty, since those could be one shared point or several separate ones, and that ambiguity is what I still need to resolve.
+
+I'm weighing whether a simple heuristic policy (don't fill own eyes, capture stones in atari, escape atari, avoid self-atari) would already beat these weak opponents, since they only win 79-98% against random play, which means the bar is low.
+
+I'm counting the cost of a per-point feature layer: going through 162 pass-through units for own and opponent stones, and wondering whether the raw board needs to survive into the later layers for the liberty propagation to work.
+
+I'm looking for a smarter way to represent chain liberties, starting from each stone's count of empty neighbors. The common atari cases are single stones and small chains with one liberty, and I'm considering propagating a per-stone "liberty evidence" signal, perhaps tracking whether a chain has a liberty other than a given point, to avoid computing full set unions.
+
+I'm checking whether a chain has any liberty besides the point p, which comes down to whether each stone in it has an empty neighbor other than p. That's a per-stone test that only changes for stones touching p, so I'm working out how to encode that dependence.
+
+I'm checking whether a chain has exactly one liberty at p, which means every stone in it either has no empty neighbors or has p as its only one. The hard part is deciding whether a chain's single-liberty stones all point at the same point, since that's what makes it capturable and a plain per-stone count can't tell.
+
+I'm considering a different angle: counting each empty point once by how many adjacent stones of the chain touch it, which would give the exact liberty total without double counting. Since the chains that matter in practice are small, I could also handle one- to three-stone patterns directly and fall back to a propagated maximum for larger ones.
+
+I'm reasoning about liberty counts as a sum over a chain's stones minus overlaps at shared empty points, which is exact but needs chain-level aggregation. With only six layers, I'm considering a max-propagated local score, using the count of empty points within a short radius around each stone instead.
+
+I'm defining the liberty count for stones within a radius-2 diamond around s: empties one step away always count, and the farther ones count only when a same-colored stone sits on a path connecting them to s.
+
+I'm sizing up how many units the per-stone liberty terms would cost, since each of the roughly eight product terms needs its own unit across 81 points and two colors. That's far more than one layer's 512 units can hold, so I'm now wondering whether computing only a clipped count, or just an atari indicator, would fit the budget.
+
+I'm now treating each point as having about six channels per layer, so the network looks like a small CNN where every unit can read the whole board. The real constraint is the number of nonlinear units rather than how far each one can see. I'm listing the final logit pieces for each point, starting with an eye-fill penalty that detects own eyes in the first layer, with a possible diagonal check for real eyes, and a capture bonus for points adjacent to opponent stones.
+
+I'm listing the remaining logit terms: a penalty for self-atari, a bonus for escaping atari, a positional prior favoring central and third-line points, a moderate bonus for putting the opponent in atari, and a pass when no move looks worthwhile. I'm also noting that endgame play should fill dame and avoid pointless self-atari.
+
+Area scoring makes stones captured mid-game cost nothing, so a throw-in inside the opponent's territory doesn't hurt me directly. Passing gains nothing either, so the only real danger is a move that damages my own groups, like filling my own eyes or self-ataring a large chain. Wasteful moves are fine as long as they don't reduce my own position.
+
+I'm noting that the game ends at move 162 regardless, so stones I leave on the board at the end still count for me. Under the pgx scoring dead stones aren't removed, so enemy stones sitting inside my territory cost me points unless I capture them before then. Stones I leave inside the opponent's area could also break their territory, since a region touching both colors counts as neutral.
+
+I'm settling on a simpler rule: pass only when every legal move would hurt my own position, such as filling my own eyes, and otherwise keep playing since the pass logit is constant and good moves should outscore it.
+
+I'm weighing how the pass decision and the 162-move cap interact, and whether the opponent's policy would ever pass on its own. Given that tactical strength and territory shape matter most against a policy that's weaker than mine, I'm turning my attention to those priorities.
+
+I'm weighing whether a heuristic policy with solid tactics could beat these opponents, since they only need to beat random play about 98% of the time. Under 9x9 komi 7.5, Black has to win by at least 8 on area, so as White I'm starting from a komi advantage. My first priority is the opening, and I'm considering taking the center point.
+
+I'm settling the opening: take the center or a nearby 3-3 or 4-4 point, and prefer third and fourth lines over the edges. Once contact begins, I'll prioritize playing against weak opponent stones, extending from my own stones when they're in atari, and connecting. On territory, I'm weighting contested points highest, since the boundaries matter most, and treating deep interior points on either side as close to worthless.
+
+I'm looking at liberties differently now, through a per-empty-point quantity for each color rather than summing over chains, since that might avoid the double counting and the need for chain-level aggregation. The obstacle is that a single dense unit sees the whole board but can't enumerate every local configuration, so I'd need linear threshold features that count empty points adjacent to a given chain.
+
+I'm weighing a max-based lower bound on liberties: each stone's count is at least the largest local liberty count among its chain, which could be built up over a few propagation steps from the radius-1 exact counts.
+
+I'm checking the max-propagation idea against a 5-stone line whose only liberties sit at the two ends: each interior stone sees at most one liberty locally, so the max stays at 1 while the true count is 2. That's a clear failure case for this approximation.
+
+I'm checking whether a chain's liberties could be counted exactly by tracking the smallest and largest liberty IDs along it. If those two match, the chain has exactly one liberty, which would avoid the false-atari problem of the max-based approach.
+
+I'm checking whether min and max liberty IDs can be propagated along each chain, since equal values would mean exactly one liberty. Each stone starts with the min and max IDs of its adjacent empty points, and then those extremes spread across same-color neighbors until the whole chain agrees. The min-of-several step can be built from ReLUs, but it costs several units per neighbor, so I need to keep the number of propagation rounds and comparisons small.
+
+I'm trying to make the min and max liberty IDs work without the gating costs blowing up. One idea is to encode color into the ID ranges, so own and opponent values never mix under a plain min or max.
+
+I'm weighing whether min-style propagation of liberty IDs is affordable, since a true min over five neighbors needs about three ReLU layers per step, which is too costly. I'm looking at a softer approximation as the alternative.
+
+I'm testing whether each empty point can flag if it is the only liberty of a neighboring chain, by checking for reachable same-color stones that still have another empty neighbor.
+
+I'm checking whether a chain has exactly one liberty by asking if any stone in it has two liberties or has a liberty away from the point e, since a plain max over local counts can't tell those cases apart. Propagating that per candidate point costs too much, though, and the adjacent stones of e are few, so I'm looking at whether the max-of-local-liberties signal alone is enough to flag atari.
+
+I'm checking whether a chain is in atari by comparing the total count of stone-liberty pairs against the number of chain stones touching the candidate point. If the sums match, the candidate is the only liberty.
+
+I'm checking whether a chain is in atari at a candidate point e by asking if every stone not touching e has zero liberties and every stone touching e has exactly one. Max-propagating each stone's liberty count across the chain would test that cleanly, since the result is zero only if every term is zero.
+
+I'm checking whether a chain is in atari at a candidate point by looking at each stone's liberty count: if the largest count across the chain is 2 or more, it isn't, and if it's 1, I'd need to confirm that every stone with a liberty touches the candidate point, which the propagated max alone can't tell me.
+
+I'm checking whether exact atari detection can work for chains of one or two stones, since the approximate propagation schemes keep failing on the cases that matter.
+
+I'm now looking at a cheaper exact approach for atari detection, using the min and max row and column of each chain's liberties, since two distinct liberties must differ in row or column.
+
+I'm now weighing a few priorities for play: never filling my own true eyes, capturing opponent chains in atari, saving my own chains when they're threatened, and avoiding self-atari, with territory and endgame heuristics coming after those.
+
+I'm now testing whether a chain has at least two liberties by checking for two distinct empty neighbors, but a max over local liberty counts double-counts shared liberties across paths, so I'm looking for a different aggregation.
+
+I'm seeing that a max over radius-r patches only catches two liberties when they sit within 2r steps of each other along the chain. Liberties spread farther apart than that would slip past it, so this approach stays inexact for long, sparse chains.
+
+I'm checking whether a chain with liberties only at its two far ends can slip past a radius-1 patch count, since no single patch sees both. That happens in capture races and ladders, where the chased chain usually ends up with liberties near its head, so the gap seems tolerable. I'm now starting to define a per-stone count of distinct empty points within distance 2 that touch the chain.
+
+I'm working out how to count distinct empty neighbors for each stone within a small radius, covering points one step away, points two steps away along a straight line, and diagonal points. The main question is whether to compute that per color or as a single combined unit.
+
+I'm now working out a linear proxy for liberties: for each stone, sum its empty neighbors and add the liberty counts of same-colored neighbors. That's cheap to compute, but it double-counts shared liberties, so I'll need to account for that overcounting.
+
+I'm working out a linear proxy for liberties: each stone gets its own empty neighbors plus the liberties of same-colored neighbors. Shared liberties can get counted twice, but only at diagonal points that touch two same-colored neighbors, so the overcounting is limited to that L-shaped case.
+
+I'm working out how to get a per-stone liberty count into the network: the same-colored neighbor's liberty count can be gated by its color, so the product becomes a simple thresholded unit in the first layer.
+
+I'm working out the first layer of the network: it has to carry each point's own state, its opponent state, and the product of its color with its liberty count, so the second layer can gate on color.
+
+I'm working out the second layer: for each stone and color, the sum of its own unit and its neighbors' units gives an approximate liberty count for the radius-1 patch, with diagonal shared liberties overcounted. Two thresholded units then yield an indicator for whether that count is at least two, which can flag atari when combined with the color gate.
+
+I'm checking the L-shaped case, where a corner liberty touches two same-colored stones and gets counted twice, leaving a chain with a single real liberty looking safe. I'm treating that as an acceptable edge-case error.
+
+I'm now working out how to combine the per-stone "safe" indicators across a chain: a stone counts as safe if it has at least two liberties, and the chain is safe if any same-colored stone in it is safe, which needs a min and an OR that a single threshold unit can't express directly, so I'm splitting it into two units.
+
+I'm now working on the gating step for the next propagation layer: if the stone's color is 1 I pass through the sum of neighboring safe indicators, and if it's 0 a large negative offset zeroes it out. Capping that at 1 takes two thresholded units per point and color for each propagation step.
+
+I'm weighing ways to shrink the per-step cost, since the naive version needs about 486 units per propagation step. One idea is to fold color into the safety value itself, so each point carries a single status that is 0 when it isn't the player's stone and a higher value when it is safe or unsafe.
+
+I'm checking whether the propagation rule can be written with threshold units on the encoded status z, where neighbors count as safe only when z is at least 2. Each neighbor's safe indicator comes out as a simple relu of z minus one.
+
+I'm trying to get the propagation step down to one unit per point by folding the color and safety status into a single value z, where z is 0 for an empty or opponent point, 1 for an own unsafe stone, and 2 for an own safe one. A single thresholded unit over z and its neighbors might cover the OR, but I still need to check whether that works without a second layer.
+
+I'm noting that a two-unit ReLU layer is needed first to isolate neighbors that are safe, since a linear sum can't tell one safe neighbor apart from two unsafe ones. That makes each propagation step cost about two layers, so only two or three steps fit in a six-layer budget, and computing initial liberties takes two layers on top of that.
+
+I'm thinking about whether a layer-by-layer scheme can carry liberty status through chains: layers 1 and 2 for local liberty counts, the middle layers for spreading the status along connected stones, and the last layer for scoring candidate moves. Each propagation step would need to track a color indicator and a known-safe flag per point, with the color passed through unchanged, so I'm checking whether one layer can handle each step.
+
+I'm trying to make the propagation step cheaper by keeping the chain-safety signal as an unclipped count instead of a capped indicator, so each layer needs only one unit per point. The catch is that the count grows with each step, so the gating constant has to be large enough to keep the color mask working.
+
+I'm checking whether the per-point counter can stay unclipped, so each step is one unit per point and color, and I'm working out how large the gating constant has to be to keep the color mask intact.
+
+I'm checking the K-value gating: relu(c − K) comes out to 1 only when the point has its color and K is zero, which is the atari signal I need. Since K will stay integer-valued, that test holds at the final layer. For the starting "known safe" values, I'm now looking at how to detect chains with at least two liberties locally, as exactly as the small patch allows.
+
+I'm looking at how to make the initial witness more reliable, checking whether a radius-1 patch count of liberties can be tightened so that fewer chains are misread as atari before propagation begins.
+
+I'm laying out the first layer's budget: the own and opponent stone indicators pass straight through, each stone's liberty count is gated by its owner, and an empty point surrounded entirely by its owner's stones gets flagged as an eye, which comes to about 405 units in total.
+
+I'm laying out the next layers' budget: the own and opponent pass-throughs are carried forward, and the second layer adds witness units for chains with at least two liberties, plus the eye indicators, for about 405 units in total. Then the propagation layers spread a count-based safety signal along connected stones, gated by color, with the own and opponent stones still carried through.
+
+I'm now laying out layer 6, where each empty point's move features get computed from the layer-5 propagation outputs, with the output itself staying linear.
+
+I'm checking how to make the uncapped unsafe signal usable at the output: each empty point's logit can just sum over its adjacent opponent stones that are flagged unsafe, since a sum is acceptable here. Counting the same chain more than once is harmless, because capturing that chain is a good move either way.
+
+I'm checking whether a chain in atari can escape by playing on its last liberty. If that point has at least two empty neighbors, the extended chain should have two or more liberties, so the escape holds.
+
+I'm checking whether a chain can be self-atari after I play a move, which depends on how many empty neighbors the point has plus any liberties from adjacent own chains. Since I only know a chain has at least two liberties rather than an exact count, I can't tell chains with three or more liberties apart from those with exactly two.
+
+I'm weighing which tactical features matter most against weak opponents: capturing chains in atari, not filling my own eyes, escaping atari, and avoiding self-atari. Captures and eye-filling look like the biggest wins, since weak play blunders on both.
+
+I'm weighing which tactical features matter most against these opponents: captures, eye-filling, escapes, and self-atari avoidance, with positional sense and territory building after that. I'm also wondering whether a fixed pattern lookup could stand in for training, though that would mean relying on handcrafted rules alone.
+
+I'm weighing whether to fold the color gating into the K values so the propagation layers don't have to carry the raw own and opponent stones through every step, since the final features only need the empty-neighbor counts, which stay linear in the stone indicators.
+
+I'm trying to fold the color gating into the stored value itself, so each own stone carries 1 plus its safety count and other points carry zero. That would let the next step be computed from the neighbors' values alone, but the non-own neighbors contribute nothing only if the expression is clipped, which makes it nonlinear and I still need to sort out how to write it.
+
+I'm weighing whether self-atari can be detected from the same patch signals, which would mean tracking how many liberties each candidate point would leave its new chain with after it's played.
+
+I'm working out whether a point's liberties after a move can be estimated from its empty neighbors, and when an adjacent own chain with three or more liberties would already rule out self-atari.
+
+I'm checking whether a chain's liberties can be estimated locally enough to flag self-atari, but an adjacent own chain with three or more liberties would need a separate propagated signal I don't have yet. I'm considering whether to propagate the maximum liberty count within the patch as the witness instead.
+
+I'm weighing whether to keep the ≥3-liberty signal only for my own chains, since that's what self-atari detection needs. Dropping it for opponent chains would free up enough units to fit the own and opponent pass-throughs, the two ≥2 signals, the ≥3 signal for my side, and the eye indicators within the per-layer budget.
+
+I'm noting that the eye indicator doesn't need to be carried through the earlier layers, since it can be computed at the final layer from the own and opponent stones. That leaves the layers 3 to 5 budget at about 405 units, with 107 left over for other features. I'm starting the initial witnesses at layer 2, where the two-liberty and three-liberty signals come from the patch-level liberty estimates.
+
+I'm working out how to count the overlap: diagonal empty points adjacent to two same-color stones get counted twice in the liberty sum, so I'd subtract them with a small per-diagonal correction term.
+
+I'm working out how to count the overlap in the liberty estimate: an empty point diagonal to a stone can be reached through two same-color neighbors, so I'm trying a per-empty-point correction term that counts how many same-color stones touch it.
+
+I'm defining a pairwise witness: for two adjacent same-colored stones, their combined liberties are exact since adjacent points share no neighbors, so I can check whether a stone with a same-colored neighbor reaches two or three liberties through that pair.
+
+I'm checking whether a star-shaped patch count T(s) = l(s) + sum of same-colored neighbors' liberties avoids the overcounting problem, since pair counts miss L-shapes where every stone and adjacent pair has at most one liberty.
+
+I'm checking whether summing the liberties of a point's same-colored neighbors overstates the true count when two of them share an empty point. The concern is the L-shape case, where the shared liberty is the inner corner and the sum would say two when there is really one. Missing a real atari and calling a false one are both costly, so I'm weighing whether a per-corner correction term can fix the overcount within the layer budget.
+
+I'm now looking at whether a per-point corner correction could fix the overcount, but that would take roughly 648 units, which is far too many. Maybe the star-patch count for each point could be computed directly in layer 1 instead.
+
+I'm checking whether summing the liberties of a star-shaped patch around each stone can give an exact count, since the overlaps at the inner corners of L-shapes would need a correction term per corner, which is far too many units to fit.
+
+I'm considering whether to assign each diagonal point to just one of the two stones that could reach it, so the star-patch count doesn't double-count. The catch is that if only the other stone is the same color, that diagonal would get dropped and the count would come out too low.
+
+I'm settling on a corrected star-patch count where each diagonal point is credited to only one of its two possible same-colored neighbors, which avoids double counting without needing a per-corner correction term for every configuration.
+
+I'm settling on a star-patch count T(s) for each stone, which overcounts only at the inner corners of L-shapes but is cheap to compute in one unit per point per color. From that I'd read off the two- and three-liberty witnesses.
+
+I'm settling on the star-patch count T(s) = [T(s) ≥ 3] as the three-liberty witness, accepting that it can misfire on bent three-stone shapes where the only liberty sits at an inner corner. I'm also considering a half-weight variant that counts diagonals partially, though it would need a fractional term I haven't worked out.
+
+I'm checking whether splitting the diagonal liberties in half would make the count exact in the shared case, but it still needs direction-specific units I don't have. Since u_c(t) already bundles the straight and diagonal points together, I can't separate them without spending too many units.
+
+I'm settling for the overcount in the star-patch count, since fixing it per corner would cost far too many units. Still, I want to check whether a different formulation, such as a per-empty-point view or a propagation of "has a liberty" across the stones, gives an exact count more cheaply.
+
+I'm wondering whether the chain has a single liberty, which would happen only if all of its liberty-bearing stones touch that one point. Stones that sit more than two apart can't share a liberty, so they guarantee at least two. The trouble is that sums of liberty IDs can't tell me whether the incidences all point to one place.
+
+I'm weighing an approximate liberty count against an exact one, and I'll test it in the remaining passes. I'm also turning to the strategic side: opening moves near the center or on the star points, and favoring the 3rd to 5th lines early while avoiding the edge unless a tactic calls for it.
+
+I'm turning to the strategic side now: scoring each empty point by its influence from my stones versus the opponent's. Points where both sides have moderate influence look most valuable, while deep own territory or deep opponent territory looks weak, and I can approximate that with a couple of ReLU units per point.
+
+I'm now laying out the per-point features for layer 6: an eye detector from neighbor counts, a capture check, and a few influence-based terms, each costing a handful of units per point.
+
+I'm defining a per-stone feature that flags an opponent stone in atari when its own liberty count falls below the threshold, and I'm weighing whether a bonus on each adjacent empty point can capture-proof the move. The overflow concern with large integer values is settled, since the relu is zero whenever the threshold is at least one. I'm also checking the mirror version for my own stones, where a similar bonus would encourage extending or escaping.
+
+I'm now checking whether a self-atari detector for an empty point can be built from its empty-neighbor count and whether adjacent own stones have three, two, or fewer liberties.
+
+I'm now working out how to flag a neighbor as a self-atari risk, which requires knowing whether each adjacent own stone has three or more liberties. Since that check is nonlinear, I'd need a couple of extra units per neighbor to approximate the min.
+
+I'm checking whether a self-atari detector can fit in layer 6, since it needs a threshold over the neighbors' liberty counts and the output layer is linear. That would mean computing the neighbor-status thresholds directly from the layer 5 values, without any further layer.
+
+I'm checking whether a flag that is clipped to 0 or 1 can be produced in one layer, since a single ReLU can't give an OR of several binary inputs. Without that, the self-atari test has to use normalized flags from layer 5 rather than raw liberty counts.
+
+I'm working out a way to express "unsafe" as a single unit: an OR over binary witnesses can be written as 1 minus a ReLU of one minus the sum, so the negated flag propagates in one layer without extra units.
+
+I'm writing the negated-flag propagation for the unsafe indicator U, using the identity that an OR of binary witnesses is one minus a ReLU of one minus their sum, so each step needs just one unit.
+
+I'm checking the per-point unsafe flags for the second and third liberty levels, which come out as clean binary values, so they can feed a linear combination downstream without extra units. That leaves one remaining question: how the initial witnesses at layer 2 are set up.
+
+I'm checking how the first witness layer should handle a stone whose total liberty count is zero: for a valid board that can't happen, since every chain keeps at least one liberty, so the clipping issue doesn't arise.
+
+I'm checking the two-unit fix for the starting witness, where a stone with no liberties would otherwise give a value of 2. If the stone isn't the color being tracked, its contribution should be handled by gating on the color itself, so the propagation stays clean.
+
+I'm checking whether a single unit can encode the threshold "chain has at most one liberty" at the starting layer, by gating on the color and comparing against the total liberty count.
+
+I'm checking whether a witness value that can exceed 1 would break the negated-flag propagation, since a neighbor with a value of 2 would flip the sign of its contribution. I'm considering shifting the witness to a non-binary form that is positive whenever a stone is witnessed.
+
+I'm settling on a layered scheme: layer 2 produces witness values for own and opponent stones, layer 3 turns own-color witnesses into binary unsafe flags for distance one, and layers 4 and 5 extend that reach to distance two and three.
+
+I'm checking how far a witness can reach from a chain with many liberties, since a long wall might leave regions beyond distance three from any stone with two or more liberties.
+
+I'm checking whether large groups with internal eyes could be misread: stones far from the eye-adjacent liberties would get no witness within three steps and be flagged unsafe even though the group lives.
+
+I'm checking whether a stone with a single liberty can be wrongly flagged as unsafe, since a chain with liberties far from any witness would be missed by the three-step reach. The concern is that such a stone would look like it's in atari when the chain actually has other liberties nearby.
+
+I'm now laying out the layer 6 features for each empty point, starting with an eye-detection unit that counts own-colored neighbors against the point's degree so it fires only when the point is fully surrounded by own stones.
+
+I'm now laying out the per-point features for layer 6: an eye detector that fires only when an empty point is fully surrounded by own stones, plus a capture term summing flagged opponent neighbors and an escape term summing flagged own neighbors. The self-atari penalty for that point is what I still have to work out.
+
+I'm checking whether a self-atari flag can be built from the empty-neighbor count plus the adjacent own stones' liberty levels, using an approximate liberty count after the move. I'm defining that count as the point's empty neighbors plus each adjacent own stone's contribution, with the unsafe flags indicating which neighbors have fewer liberties.
+
+I'm now writing the self-atari term for each empty point: an approximate liberty count after the move, built from its empty neighbors, the adjacent own chains' liberty levels, and the liberties gained from captures. A low count gives a penalty unit with a negative weight, and I'm noting that the count can overcount when neighbors share liberties or belong to the same chain.
+
+I'm checking whether the self-atari estimate holds when two neighbors belong to the same chain or share a liberty, since that double counting can miss real self-atari cases. I'm weighing whether to accept the rough count for now and refine it later.
+
+I'm laying out the layer 6 units for each empty point: an eye detector, a pass-through of the opponent and own unsafe flags, and a self-atari unit, with a strategic score left over if there's budget.
+
+I'm collapsing the per-point capture, escape and linear terms into one tactical score unit per empty point, with a bias to keep it positive, so the output only has to read a single value.
+
+I'm weighing whether the per-point linear terms can all go into one aggregated unit with a positive bias, which would cost 81 units instead of 162 for pass-through flags. I'm also wondering how the strategic features and the own/opponent pass-throughs fit into the remaining budget.
+
+I'm folding the linear influence terms into the per-point score as well, and keeping the nonlinear strategic features as separate units. The capture term should scale with chain size, but chain size isn't computed here, so I'm using the count of flagged opponent stones near the point as a rough stand-in.
+
+I'm checking whether the escape bonus should depend on the liberty count after the move, since extending into a spot that leaves at most one liberty is just a self-atari and gains nothing.
+
+I'm settling the self-atari weight so it overrides the escape bonus, with captures counted inside the self-atari estimate. Next I want to think about the strategic side, since that's what decides most games, and how a simple policy without search might place stones well.
+
+I'm turning to the strategic side now: a policy score built from influence, where each empty point's value is roughly how much contested territory a stone there would secure.
+
+I'm working out a tent-shaped contested-ness score for each point, built from the difference between own and opponent influence, since that nonlinearity needs its own units before a linear value sum can read it.
+
+I'm considering the contested-ness measure again, using a pair of simple units in place of an exact tent function, and I'm only applying it to empty points since occupied ones are already accounted for. Computing the influence at layer 6 from layer 5's own and opponent features keeps the cost down, since the output can then read a linear sum of those contested values around each candidate point.
+
+I'm considering the strategic side next: points deep inside opponent territory are wasteful early on, and late in the game filling or invading is roughly neutral under area scoring. The contested-ness measure should already handle that, since strong own or opponent influence pushes the value down.
+
+I'm considering whether filling inside our own territory could eventually leave the group with too few eyes, since a single-point eye is never filled but a larger eye space might get reduced into separate single eyes that are harder to keep alive.
+
+I'm checking the end-point fill next: it leaves a two-point eye, and the following fill reduces it to a single eye, which means the group dies, so filling our own territory is suicidal. Territory points should therefore score well below a pass, and I'm adding a penalty for deep own-territory points.
+
+I'm checking whether passing is safe: if we pass and the opponent passes too, the game ends, so the choice depends on whether we're ahead. If we're behind, passing gives up chances to exploit mistakes, though filling our own territory is the real danger, so we only need the non-destructive moves that keep the board open.
+
+I'm weighing whether playing inside the opponent's territory carries any real cost, since each invasion hands them a move. They could answer by invading our territory, and then I'd need to capture those stones, which means reducing their liberties instead of filling our own space.
+
+I'm checking how stones inside our own territory get handled: a stone with only two liberties can be put in atari and captured, but a lone invader can have up to four, so reducing its liberties takes several adjacent moves. Since opponent stones left in our area would cost us points at scoring, I'm considering an attack rule that rewards playing next to opponent chains with two or fewer liberties.
+
+I'm checking whether passing is safe in the endgame: it ends the game only after both sides pass, so I'd pass only when the best remaining move is worth less than the pass logit. If the opponent passes early, I still have useful moves to play, and I'd keep playing those rather than pass, since passing then would just end the game with my score as it stands.
+
+Now I'm checking the layer budget again, with the game-length limit and the superko concern set aside as minor. Layer 1 holds the own and opponent pass-through flags plus the liberty-weighted versions, which comes to 324 units with 188 to spare. I'm about to work out what goes into layer 2.
+
+I'm laying out the layer sizes for the next stretch: layers 2 through 4 each come to 486 units, made up of the own and opponent pass-through flags plus the influence-style units for the first and second neighbourhood thresholds.
+
+I'm sizing layer 6 against the remaining 26 units after layers at 486 each, and deciding whether the atari-related U3_opp unit is worth including for a moderate bonus against weaker opponents. I'm also second-guessing the approximation for the T value once a neighbourhood has three or more liberties.
+
+I'm checking how a three-stone L shape with its liberties only at the inner corner would count: the middle stone's overcounted liberties give a total of 2, which falsely looks safe, so the shortcut misses that case. A straight three-stone line doesn't have this overcount problem.
+
+I'm now writing out the layer-6 features for each point, starting with a linear unit that combines capture, escape, and atari bonuses from the neighbouring stones' influence values.
+
+Now I'm sizing layer 6 as the features for each point: a linear aggregate for capture, escape, and atari bonuses, plus eye and self-atari units, and a few nonlinear contested-ness units, which totals roughly 405 to 486 units.
+
+Now I'm defining the self-atari feature for each point: an empty point's liberty count after playing there, built from its own liberties and the nearby chains' liberties, with a penalty when it would leave a stone with zero or one liberty.
+
+I'm checking whether self-atari is handled correctly: the penalty should drop out when a move captures, since the capture count already pushes the total up. Moves into opponent territory would just get captured, which costs nothing under area scoring, but they're mostly pointless anyway. I'm also wondering whether a stone with no liberties would ever survive long enough to matter.
+
+I'm settling on what a penalty should look like for a big own group being put in atari, since that's a disaster and needs a large negative weight. For eyes, I'll count a point as an own eye when all its orthogonal neighbours are ours, and I'll skip filling an eye that's the group's last liberty, since that move is suicide unless it captures. Next I want to design the strategic component, which will decide most moves, and I'm thinking about an influence measure that decays with distance from our stones.
+
+I'm estimating the value of a move by how much it shifts the influence-based territory estimate across the board. Playing at a point nudges each nearby point's influence by a distance-decaying amount, and the score change is roughly that shift weighted by how contested each point is. That makes the move value a linear sum over the board.
+
+I'm working out the strategic move value as a linear sum over the board, weighting each point's contested-ness by a distance-decaying influence kernel. I'm also settling on a tent-shaped bump function for how contested a point is, built from ReLUs so it stays within the layer design.
+
+I'm working out whether the strategic term should count only empty points, since an own stone's influence already sits in its own contribution, so I'm checking whether stone points need to be excluded from the contested-ness bump.
+
+I'm weighing how big the stone's own weight should be against its neighbours, and whether a contested-ness bump that is symmetric is wrong for mildly ours versus mildly theirs.
+
+I'm working through how the influence kernel decays with distance and how the contested-ness tent comes out for points at different distances from our stones. Far-away empty points come out fully contested, so the move value ends up as a neighbourhood sum that favours central points over edge ones, since central points have more on-board neighbours. Points next to opposing stones are only partly contested, so they score differently.
+
+I'm checking how the endgame passing works: when every empty point is already owned, the strategic values drop to about zero and the model should pass. The risk is near-boundary points inside our own territory, which still look slightly contested and could draw moves that fill our own space, so the pass threshold needs tuning.
+
+I'm checking whether filling our own territory matters: under area scoring it doesn't change the score, so the real risk is filling away our eye space until the group has too few eyes to live. I'm working through a small corner case to see when a fill would leave only one eye.
+
+I'm checking the two-eye case: filling the corner point b leaves a and c as separate eyes and keeps the group alive. Filling a instead leaves b and c adjacent, so only one eye survives, and if that region is the group's only eye space the group dies. That means filling our own territory can be dangerous, so the policy shouldn't fill it unless it's needed. I'm working out a value threshold to guard against that.
+
+I'm realizing that ownership of dead stones matters at the end: under area scoring, an opponent's dead stone sitting in my territory would count for them and neutralize my region, so I should capture those before the game ends. The same logic means my own dead stones inside their area would help me, so I shouldn't rush to remove them.
+
+I'm considering whether an opponent who passes early or fails to capture invaders could be exploited by placing stones inside their territory near the end, since under area scoring any uncaptured stone of ours there would break their count, so long as the move keeps at least two liberties.
+
+The endgame plan is taking shape: I'll pass when nothing is worth playing, but I'll still capture any opponent stones sitting inside my territory, since they'd count against me under area scoring. Captures come first, then moves that reduce liberties of invaders near my stones, and filling my own territory ranks below passing.
+
+I'm weighing whether to invade opponent territory near the end as a low-risk gamble, since under area scoring losing those stones costs nothing, but I'd still rather get the basic engine working and test it against practice opponents before pursuing that. I'll revisit the T approximations and the ≥3 witness check, and whether computing the opponent's ≥3 for atari detection is worth it, after the first iteration.
+
+I'm checking whether I still need the U3 count for our own chains, since it feeds the self-atari test. Next I'm looking at chains with exactly two liberties: an opponent chain like that is worth ataring, and one of ours should be extended to gain liberties.
+
+I'm adding a small bonus for neighbouring points that would gain liberties for our own two-liberty chains, and I'm noting that an extension with no empty neighbours would drop to one liberty and get caught by the self-atari check. I'm now starting to write the linear move-value features, beginning with a contested-ness term summed over the neighbours.
+
+I'm writing out the final linear move-value formula: a capture term over neighbouring opponent two-liberty chains, an escape term for our own chains in atari, a bonus for ataring opponent chains with two liberties, a bonus for extending our own two-liberty chains, plus liberty-count and proximity terms, offset by a constant and the positional prior.
+
+I'm now setting the value of the pass move against the rest, and reconsidering how the influence term for each point is computed from our stones and theirs, with a fixed weight for points that are occupied.
+
+I'm working out the influence kernel with a decay by distance and picking weights so that a stone with a surrounding of opponent stones comes out only weakly contested rather than cleanly owned.
+
+I'm gating the territory tents by whether each point is empty, so occupied points contribute zero and only empty points count toward the influence value.
+
+I'm setting the influence values for an empty board, where every point starts out contested equally. Working through the kernel weights, the centre comes out highest at about 12, while a corner scores roughly 5.5, so the model should favour central points early on.
+
+I'm working out how the influence values behave on a second move: points far enough from Black's centre keep their full contested weight, and I'm weighing whether a "play away from strength" preference, or an edge penalty, is what should break the ties. I'll settle the scaling of those value differences once the basic engine runs.
+
+I'm now thinking about how the board is represented for the network: plane 0 is the stones of the player to move, plane 1 the opponent's, and plane 2 flags whether White is to move. I'm considering using that colour plane to shift behaviour, such as playing more safely as White, but I'll leave that out for now.
+
+I'm second-guessing the propagation reach: layers 3 through 5 cover up to three steps out, so a stone counts as safe if a liberty-holding stone sits within about four steps.
+
+I'm trying to make the propagation faster by reaching stones along longer same-colour paths in a single layer, but a path through a middle stone is a product condition, which a linear layer can't express directly. I'm considering a workaround using the witness values W = c − U, so that a distance-two stone's contribution depends on whether its middle stone is the same colour.
+
+I'm working out how to speed up the liberty propagation, but a path through a middle stone is a product condition that a linear layer can't express directly. I'm considering whether carrying a colour-tagged witness flag through each layer could do the job instead.
+
+I'm checking the parameter count: the separate color and U2/U3 units per point add up to 486, the same as the current layout, so there's no savings from merging them into one value.
+
+I'm settling the layer budget: the last layer takes the liberty, eye and safety flags plus the territory tent, 486 units in all, and I may add a penalty for filling my own territory. The influence values from the own/opponent planes should be enough to judge that, though I'll check it in testing.
+
+Now I'm laying out the weight matrices for the network: the first layer takes 243 inputs and produces 512 units, and each row corresponds to a board point and plane. I'm planning to write small helper code that allocates named blocks of units per layer and builds the matrices in loops.
+
+I'm setting up the first-layer units: one flag for each point's own stones, one for the opponent's, and one for an unsafe-chain indicator that counts empty neighbours and subtracts four when the point isn't ours.
+
+Still writing the layer-2 propagation units...
+
+Still writing the layer-3 and layer-4/5 propagation units...
+
+Still writing the layer-6 features: an eye detector that fires when an empty point is surrounded entirely by our stones, and a safety feature built from the liberty and witness flags...
+
+I'm working through the safety feature: the sum of other-liberty evidence from adjacent own stones, where two-liberty chains and three-liberty chains each contribute a level. The idea is that a stone counts as having at least two other liberties when the adjacent contributions add up enough, though the same chain can be counted through more than one neighbour. I'm also noting that the safety value only reaches its top level when the point has no liberties at all, which is the suicide case.
+
+Still writing the output head: the logit for each point combines the layer-6 features, the eye and safety penalties, and a distance-weighted territory term, plus a prior. The pass logit is handled separately.
+
+I'm settling the weights for the main signals: captures get a large weight of about 8, since they are almost always worth playing, while escapes from atari get about 6. Self-atari escapes get a stronger override of about 12, atari on an opponent's two-liberty chain gets a small 2, and extending my own two-liberty chain gets 1.5. Filling an eye gets the heaviest penalty, around 30.
+
+I'm settling the territory weight at about 0.5 per unit, which caps that term near 6, and setting captures to around 8 per adjacent stone so they still outweigh a large territorial gain. I'm also keeping in mind that an escape which leaves a ladder-bound two-liberty stone is probably still a losing move, which I'll accept for now.
+
+I'm settling the positional prior next: a mild line-based term that docks the first line and lightly penalises the second, with a small bonus toward the centre. The territory term already covers much of this, so I'll keep the prior small.
+
+I'm working out the influence kernel for the territory term. Occupied points are gated out anyway, so only the distance-one and distance-two weights really matter, and I'm settling on something like 1 for adjacent points and 0.5 for points two steps away.
+
+I'm settling the influence kernel by distance: adjacent points count fully, diagonals a bit less, and points two or three steps out only faintly. A point touching two of our stones falls inside our territory at a width of two, while one touching a single stone stays contested.
+
+I'm checking whether the influence weighting on "contestedness" actually steers the search toward useful moves. I'm going to build the first version and run a test games pass to see what it picks.
+
+I'm checking the layer-3 witness condition: each point's own-stone unit is reduced by any witness flag on it and on its neighbours, so a stone only stays flagged when no neighbour carries a witness.
+
+Next I'm checking the layer-2 propagation: each own stone's unit combines its own flag with the flags of its adjacent own stones, so chain information spreads one step at a time.
+
+I'm weighing whether to add a distance-two term for captures and escapes, since the chain size isn't tracked directly. Flagged opponent stones within two steps could stand in as a rough proxy for how big the threatened group is, though nearby unrelated atari chains might skew it, so I'll keep that weight small.
+
+I'm now weighing whether the pass decision can be made well at all, since the network never sees whether the opponent just passed, so it can only judge from the position itself. I'm also noting that ko is already handled by masking immediate retakes, so ko fights are left to play out.
+
+I'm considering a rough area-score estimate for the pass decision: stone counts plus a territory term from the ownership signs of empty points. The ownership sign could be built from clipped units that reuse the layer-6 t1 and t3 pieces, which would feed a scaled margin into the pass logit.
+
+Now I'm working out a simpler way to estimate the score for the pass decision, reusing the clipped ownership pieces from the territory units, and wondering whether a single linear unit for the stone counts could carry the rest.
+
+I'm weighing whether to make the pass decision depend on an estimated score margin, using a linear unit for the stone counts plus the clipped territory units, with komi carried through as an input plane. The open question is what moves I'd fall back to when behind, since that determines whether passing should be gated on the margin.
+
+I'm weighing a penalty on empty points that look like the player's own territory, so the network doesn't fill in its own space. The idea is to subtract a scaled amount tied to how strongly a point reads as owned, which would discourage that kind of move.
+
+Next I'm checking the layer-6 pieces and the sign of each ownership unit, then writing a small reference implementation of the intended features so I can verify them against the rules before spending any of the test passes.
+
+I'm wondering whether I can check the weights in the sandbox without running the network. Simulating the network's function on inputs seems to cross the line, so I'll limit myself to inspecting the weight matrices directly, like counting nonzero entries or confirming specific values.
+
+I'm setting up a short reference script for the tactical features and planning to check the first version against a positions pass with activations before spending any games passes.
+
+Still writing the neighbour helper...
+
+Still writing the layer-2 connections...
+
+Still writing layer-6 features...
+
+Still writing the layer-6 suppression terms...
+
+I'm checking the self-atari term against a couple of cases: an empty point with all neighbours opponent-owned comes out as suicide and gets masked, and one with a single empty neighbour and three opponent neighbours comes out as self-atari.
+
+Still writing the layer-6 liberty term...
+
+I'm now checking the positivity of the layer-6 terms: the negative pieces cancel because the witness-3 flag can't fire without the witness-2 flag, and the remaining terms are all nonnegative once I add a constant of 1.
+
+Still writing the output layer...
+
+Still writing the layer-6 output weights...
+
+I'm weighing the influence kernel's falloff weights and checking the center, corner, and edge sums that come out of them.
+
+I'm checking how a dame point between two territories scores under the tent units. With the weights I've chosen, its value is only the small tent contribution, so I'm considering whether the pass logit needs a separate term to handle it.
+
+I'm going to set a zero prior for the pass logit and check whether empty points inside my own territory end up with zero tent value, which would leave them scored only by the liberty term.
+
+Figuring out how to set the pass logit: a flat prior tends to leave edge dame unfilled, which costs points under area scoring. I'm considering making the prior milder and letting the territory tents handle opening shape, or scaling the prior by how many stones are on the board, since that tracks the game phase.
+
+I'm settling on a moderate scale for the territory term: tent weight 1.0 and a small prior of 0.5 for the pass logit. On an empty board the center scores around 11.8, the second line around 10, and the edges around 8, so the edges sit a few logits lower, which should keep the opening shape without a separate line penalty.
+
+Still working out the influence tent weights and the capture and self-atari weights for the policy's tactical terms.
+
+I'm checking how a contact point next to opponent stones scores: its territory value drops to around 0.5, so I'm considering whether a separate liberty or shape term is needed to discourage moves that run into the opponent's wall.
+
+I'm settling the influence tent scale and the pass prior, and I'm checking that an invader inside my own territory still draws a moderate value so the move gets considered.
+
+Still working out the neighbour and capture checks for the test positions, so I can see whether the atari and self-atari cases come out right.
+
+Still writing the input indexing helper...
+
+Still writing the layer-1 neighbour terms...
+
+Still writing the layer-2 connections...
+
+Still writing the layer-2 neighbour checks...
+
+Still writing the layer-4 and layer-5 flags...
+
+Still setting up the two capture and escape test boards for the tactical checks...
+
+Next I'm laying out a set of test positions for the tactical checks: a two-stone capture, a self-atari avoidance case, an eye-fill case where passing should be expected, empty-board openings, and a couple of harder chain-in-atari shapes.
+
+Still writing the influence kernel...
+
+Still writing the influence kernel weights...
+

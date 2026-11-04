@@ -1,0 +1,6 @@
+OUTPUT of Python run 23 of at most 300:
+```
+[647, 672, 929, 919, 1022, 1026, 704, 1795] 7714
+[('math_train_intermediate_algebra_161', 310), ('math_train_algebra_880', 297), ('math_train_number_theory_227', 299), ('gsm8k_train_376', 327), ('math_train_geometry_379', 392), ('gsm8k_train_4023', 295), ('math_train_algebra_1526', 338), ('gsm8k_train_2386', 368)]
+
+```

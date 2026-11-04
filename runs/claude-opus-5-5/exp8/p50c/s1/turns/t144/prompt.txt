@@ -1,0 +1,7 @@
+OUTPUT of Python run 124 of at most 300:
+```
+win 0 L 1169 on_tok 669 cycle T 17
+win 1 L 1174 on_tok 674 cycle T 64
+  k 11 tok '9' mean p 0.939 top@last [('9', 0.997), ('6', 0.002), ('8', 0.0), ('5', 0.0)]
+
+```

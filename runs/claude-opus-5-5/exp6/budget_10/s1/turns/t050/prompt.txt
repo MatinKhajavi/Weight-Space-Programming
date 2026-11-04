@@ -1,0 +1,8 @@
+OUTPUT of Python run 44 of at most 120:
+```
+(('A', True), ('loc', False), ('l3', True), 'noesc') 32
+(('A', False), ('loc', False), ('l3', False), 'escape') 17
+(('A', False), ('loc', False), ('l3', False), 'noesc') 17
+(('A', True), ('loc', False), ('l3', True), 'escape') 17
+
+```

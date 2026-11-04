@@ -1,0 +1,10 @@
+OUTPUT of Python run 28 of at most 300:
+```
+norm.weight mean 3.309 std 0.669 min -0.777 max 5.312
+layers.0.input_layernorm.weight mean 0.238 std 0.122 min -0.115 max 1.000
+layers.12.post_attention_layernorm.weight mean 0.136 std 0.118 min -0.322 max 0.338
+layers.3.self_attn.q_norm.weight mean 0.427 std 0.181 min -0.211 max 1.227
+layers.0.linear_attn.norm.weight mean 0.952 std 0.086 min 0.523 max 1.060
+torch.Size([248320, 1024])
+
+```

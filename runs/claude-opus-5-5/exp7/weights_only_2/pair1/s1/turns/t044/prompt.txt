@@ -1,0 +1,9 @@
+OUTPUT of run 43 of at most 60:
+```
+L10: h0 |dF^T d1|/|F^T d1|=0.009 hi-frac(eff)=0.12 cos(w,d1)=-0.006 | h1 |dF^T d1|/|F^T d1|=0.016 hi-frac(eff)=0.15 cos(w,d1)=+0.028 | h2 |dF^T d1|/|F^T d1|=0.013 hi-frac(eff)=0.14 cos(w,d1)=+0.001 | h3 |dF^T d1|/|F^T d1|=0.011 hi-frac(eff)=0.15 cos(w,d1)=+0.011 | 
+L11: h0 |dF^T d1|/|F^T d1|=0.009 hi-frac(eff)=0.17 cos(w,d1)=+0.011 | h1 |dF^T d1|/|F^T d1|=0.015 hi-frac(eff)=0.14 cos(w,d1)=-0.022 | h2 |dF^T d1|/|F^T d1|=0.009 hi-frac(eff)=0.14 cos(w,d1)=+0.022 | h3 |dF^T d1|/|F^T d1|=0.007 hi-frac(eff)=0.15 cos(w,d1)=-0.004 | 
+L12: h0 |dF^T d1|/|F^T d1|=0.015 hi-frac(eff)=0.11 cos(w,d1)=+0.048 | h1 |dF^T d1|/|F^T d1|=0.010 hi-frac(eff)=0.09 cos(w,d1)=+0.073 | h2 |dF^T d1|/|F^T d1|=0.014 hi-frac(eff)=0.15 cos(w,d1)=+0.046 | h3 |dF^T d1|/|F^T d1|=0.010 hi-frac(eff)=0.08 cos(w,d1)=+0.034 | 
+L13: h0 |dF^T d1|/|F^T d1|=0.012 hi-frac(eff)=0.11 cos(w,d1)=-0.025 | h1 |dF^T d1|/|F^T d1|=0.021 hi-frac(eff)=0.11 cos(w,d1)=+0.060 | h2 |dF^T d1|/|F^T d1|=0.020 hi-frac(eff)=0.16 cos(w,d1)=+0.017 | h3 |dF^T d1|/|F^T d1|=0.028 hi-frac(eff)=0.16 cos(w,d1)=+0.017 | 
+L14: h0 |dF^T d1|/|F^T d1|=0.013 hi-frac(eff)=0.12 cos(w,d1)=-0.011 | h1 |dF^T d1|/|F^T d1|=0.016 hi-frac(eff)=0.13 cos(w,d1)=+0.014 | h2 |dF^T d1|/|F^T d1|=0.010 hi-frac(eff)=0.13 cos(w,d1)=-0.024 | h3 |dF^T d1|/|F^T d1|=0.015 hi-frac(eff)=0.11 cos(w,d1)=-0.001 | 
+
+```

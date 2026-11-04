@@ -1,0 +1,23 @@
+OUTPUT of Python run 77 of at most 300:
+```
+doubt ids [13428, 13784, 3655, 1921, 3850, 32645, 85152, 77264, 22041, 10380, 6970] | commit ids [34267, 31248, 353, 40, 14833, 13891, 12650, 7179, 248069]
+n loop 474 n fin 38
+L16 N 998 push/act -0.110 | mean act loop -0.358 fin -0.236 | push loop +0.0393 diff +0.0134
+L19 N 171 push/act -0.026 | mean act loop -0.328 fin -0.103 | push loop +0.0086 diff +0.0059
+L18 N   8 push/act -0.007 | mean act loop -0.702 fin +0.068 | push loop +0.0048 diff +0.0052
+L22 N1812 push/act -0.098 | mean act loop +0.160 fin +0.212 | push loop -0.0157 diff +0.0052
+L23 N 350 push/act -0.012 | mean act loop -0.777 fin -0.376 | push loop +0.0094 diff +0.0049
+L13 N   7 push/act -0.018 | mean act loop -0.285 fin -0.023 | push loop +0.0051 diff +0.0047
+L21 N   0 push/act -0.015 | mean act loop +2.521 fin +2.803 | push loop -0.0382 diff +0.0042
+L18 N 106 push/act +0.015 | mean act loop +0.354 fin +0.085 | push loop +0.0054 diff +0.0041
+L23 N  19 push/act +0.007 | mean act loop +0.842 fin +0.254 | push loop +0.0058 diff +0.0040
+L22 N  11 push/act -0.005 | mean act loop -5.922 fin -5.133 | push loop +0.0300 diff +0.0040
+L15 N   0 push/act +0.011 | mean act loop +0.484 fin +0.118 | push loop +0.0051 diff +0.0039
+L15 N 117 push/act +0.029 | mean act loop +0.100 fin -0.029 | push loop +0.0029 diff +0.0037
+L23 N   9 push/act -0.010 | mean act loop +3.395 fin +3.754 | push loop -0.0350 diff +0.0037
+L21 N  99 push/act +0.013 | mean act loop +0.421 fin +0.142 | push loop +0.0054 diff +0.0036
+total diff all neurons -0.003 | N998 share 0.004 | layer sums [-0.001  0.002  0.002 -0.011 -0.    -0.004  0.004  0.002 -0.005 -0.002
+  0.011  0.003 -0.004  0.002 -0.003  0.02   0.003  0.012  0.015 -0.019
+  0.003  0.001 -0.011 -0.024]
+
+```

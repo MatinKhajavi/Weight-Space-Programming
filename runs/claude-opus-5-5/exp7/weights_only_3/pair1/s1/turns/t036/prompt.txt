@@ -1,0 +1,14 @@
+OUTPUT of run 35 of at most 60:
+```
+k=12 m=2 cos_m=0.38 stat=+2.36 control mean +0.53 sd 1.67 -> z +1.10
+k=12 m=3 cos_m=0.33 stat=+3.64 control mean +0.33 sd 1.60 -> z +2.07
+k=12 m=4 cos_m=0.30 stat=+5.75 control mean +0.26 sd 1.63 -> z +3.36
+k=12 m=5 cos_m=0.23 stat=+3.82 control mean +0.19 sd 1.49 -> z +2.44
+k=12 m=6 cos_m=0.19 stat=+3.70 control mean -0.24 sd 1.90 -> z +2.08
+k=16 m=2 cos_m=0.62 stat=+2.56 control mean -0.30 sd 1.74 -> z +1.64
+k=16 m=3 cos_m=0.46 stat=+1.59 control mean +0.19 sd 1.80 -> z +0.78
+k=16 m=4 cos_m=0.40 stat=-0.46 control mean -0.14 sd 1.66 -> z -0.19
+k=16 m=5 cos_m=0.34 stat=+0.78 control mean -0.05 sd 2.07 -> z +0.40
+k=16 m=6 cos_m=0.33 stat=-0.33 control mean -0.12 sd 1.97 -> z -0.10
+
+```

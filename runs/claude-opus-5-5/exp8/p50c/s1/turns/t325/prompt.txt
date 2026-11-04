@@ -1,0 +1,26 @@
+Forward pass 33 of 50 done (generate); results in /work/gen_39.jsonl. Summary:
+```
+{
+ "activations": null,
+ "ok": true,
+ "type": "generate",
+ "model": "edited",
+ "file": "/work/gen_39.jsonl",
+ "generations": 512,
+ "graded": 512,
+ "accuracy": 0.416,
+ "accuracy_by_source": {
+  "gsm8k": 0.5195,
+  "math": 0.3125
+ },
+ "mean_tokens": 19707,
+ "cut_share": 0.334,
+ "failures": {
+  "wrong_answer": 124,
+  "no_answer_finished": 4,
+  "cut_at_max_tokens": 171
+ },
+ "s": 669.9
+}
+```
+Forward passes left: 17.

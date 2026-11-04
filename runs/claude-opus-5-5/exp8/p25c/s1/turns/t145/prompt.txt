@@ -1,0 +1,9 @@
+OUTPUT of Python run 125 of at most 300:
+```
+H-E6 easy cuts 63 phrase shares [0.14 0.02 0.05 0.1  0.05] any 0.22
+H-E6 hard cuts 61 phrase shares [0.02 0.   0.02 0.1  0.  ] any 0.11
+D-E6 easy cuts 130 phrase shares [0.08 0.   0.02 0.03 0.05] any 0.15
+D-E6 hard cuts 116 phrase shares [0.03 0.   0.01 0.04 0.  ] any 0.07
+finished E6 (H): share with such phrase in last 1500 chars of thinking: 0.55 (n=132)
+
+```

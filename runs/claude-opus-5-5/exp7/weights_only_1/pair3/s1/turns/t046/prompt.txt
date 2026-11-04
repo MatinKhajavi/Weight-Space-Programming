@@ -1,0 +1,73 @@
+OUTPUT of run 45 of at most 60:
+```
+--- peaks at d in [6,13]
+  L3H3 q0 k1 d=12 exc 0.21 | copy +0.0 | ratio dS/S +1.40
+  L5H3 q1 k1 d=10 exc 0.26 | copy -1.1 | ratio dS/S -0.66
+  L6H0 q1 k0 d=12 exc 0.28 | copy +3.3 | ratio dS/S +0.22
+  L6H1 q0 k0 d=10 exc 0.21 | copy -2.6 | ratio dS/S +3.95
+  L6H1 q0 k1 d=10 exc 0.28 | copy -2.6 | ratio dS/S +0.56
+  L6H1 q1 k1 d=10 exc 0.39 | copy -2.6 | ratio dS/S -0.71
+  L7H0 q1 k0 d=11 exc 0.22 | copy +6.9 | ratio dS/S +0.78
+  L7H2 q0 k1 d=11 exc 0.17 | copy +4.9 | ratio dS/S +0.25
+  L9H0 q1 k1 d=9 exc 0.34 | copy +2.2 | ratio dS/S +0.61
+  L10H0 q0 k0 d=12 exc 0.29 | copy +3.3 | ratio dS/S +0.29
+  L10H2 q0 k0 d=10 exc 0.31 | copy +3.7 | ratio dS/S +0.17
+  L10H2 q0 k1 d=9 exc 0.17 | copy +3.7 | ratio dS/S -0.14
+  L10H2 q1 k0 d=9 exc 0.35 | copy +3.7 | ratio dS/S +18.77
+  L10H2 q1 k1 d=13 exc 0.25 | copy +3.7 | ratio dS/S +0.13
+  L10H3 q0 k0 d=12 exc 0.23 | copy -0.8 | ratio dS/S -0.41
+  L11H0 q0 k0 d=8 exc 0.15 | copy -0.0 | ratio dS/S -3.49
+  L11H3 q1 k1 d=9 exc 0.16 | copy -2.8 | ratio dS/S +0.35
+  L12H1 q0 k1 d=11 exc 0.21 | copy +1.7 | ratio dS/S -0.32
+  L12H2 q1 k0 d=12 exc 0.21 | copy +3.1 | ratio dS/S +1.16
+  L13H0 q0 k0 d=8 exc 0.19 | copy +1.3 | ratio dS/S +1.19
+  L13H1 q1 k1 d=11 exc 0.22 | copy +1.6 | ratio dS/S +0.05
+  L13H3 q0 k0 d=10 exc 0.29 | copy -0.8 | ratio dS/S +0.59
+  L13H3 q0 k1 d=11 exc 0.38 | copy -0.8 | ratio dS/S +1.49
+  L13H3 q1 k0 d=7 exc 0.17 | copy -0.8 | ratio dS/S -0.59
+  L14H2 q0 k0 d=8 exc 0.19 | copy +1.9 | ratio dS/S -0.45
+  L14H2 q0 k1 d=11 exc 0.27 | copy +1.9 | ratio dS/S +1.52
+  L17H0 q1 k1 d=8 exc 0.39 | copy +2.9 | ratio dS/S -0.35
+--- peaks at d in [14,19]
+  L3H3 q0 k0 d=19 exc 0.27 | copy +0.0 | ratio dS/S -0.01
+  L5H1 q0 k0 d=16 exc 0.19 | copy +0.7 | ratio dS/S -0.62
+  L5H1 q1 k1 d=14 exc 0.21 | copy +0.7 | ratio dS/S -0.08
+  L7H2 q0 k0 d=15 exc 0.17 | copy +4.9 | ratio dS/S -0.38
+  L8H1 q1 k1 d=18 exc 0.17 | copy +3.1 | ratio dS/S +0.15
+  L10H0 q0 k1 d=16 exc 0.17 | copy +3.3 | ratio dS/S -1.56
+  L10H0 q1 k1 d=17 exc 0.26 | copy +3.3 | ratio dS/S +1.28
+  L11H2 q0 k1 d=18 exc 0.20 | copy +2.2 | ratio dS/S +0.14
+  L12H0 q1 k1 d=14 exc 0.25 | copy -1.6 | ratio dS/S +1.52
+  L12H2 q0 k0 d=17 exc 0.21 | copy +3.1 | ratio dS/S -0.32
+  L12H3 q0 k0 d=16 exc 0.32 | copy +2.8 | ratio dS/S -0.33
+  L12H3 q0 k1 d=14 exc 0.19 | copy +2.8 | ratio dS/S +0.26
+  L15H3 q1 k1 d=19 exc 0.22 | copy +5.1 | ratio dS/S -0.18
+  L17H2 q1 k0 d=15 exc 0.32 | copy -1.5 | ratio dS/S +0.12
+  L17H2 q1 k1 d=17 exc 0.35 | copy -1.5 | ratio dS/S -0.04
+--- peaks at d in [20,32]
+  L4H1 q1 k1 d=24 exc 0.15 | copy +0.7 | ratio dS/S -0.01
+  L6H0 q0 k0 d=28 exc 0.23 | copy +3.3 | ratio dS/S -0.18
+  L7H0 q0 k0 d=27 exc 0.52 | copy +6.9 | ratio dS/S -0.36
+  L7H2 q1 k0 d=29 exc 0.22 | copy +4.9 | ratio dS/S -0.04
+  L8H2 q1 k1 d=25 exc 0.21 | copy +4.8 | ratio dS/S +0.08
+  L9H0 q0 k0 d=24 exc 0.22 | copy +2.2 | ratio dS/S -0.45
+  L9H0 q0 k1 d=26 exc 0.39 | copy +2.2 | ratio dS/S -0.16
+  L9H2 q0 k1 d=25 exc 0.21 | copy +6.0 | ratio dS/S -0.03
+  L10H0 q1 k0 d=27 exc 0.25 | copy +3.3 | ratio dS/S +0.01
+  L12H0 q0 k0 d=29 exc 0.23 | copy -1.6 | ratio dS/S -0.32
+  L12H0 q0 k1 d=26 exc 0.19 | copy -1.6 | ratio dS/S +0.20
+  L12H0 q1 k0 d=29 exc 0.17 | copy -1.6 | ratio dS/S -0.82
+  L12H1 q1 k0 d=30 exc 0.17 | copy +1.7 | ratio dS/S -0.24
+  L12H1 q1 k1 d=30 exc 0.28 | copy +1.7 | ratio dS/S -3.47
+  L12H3 q1 k0 d=28 exc 0.19 | copy +2.8 | ratio dS/S +2.46
+  L12H3 q1 k1 d=27 exc 0.41 | copy +2.8 | ratio dS/S -0.22
+  L14H1 q1 k0 d=26 exc 0.18 | copy +3.8 | ratio dS/S +0.24
+  L15H0 q0 k0 d=26 exc 0.19 | copy +5.1 | ratio dS/S +0.52
+  L15H0 q1 k0 d=32 exc 0.19 | copy +5.1 | ratio dS/S +0.01
+  L15H1 q0 k0 d=25 exc 0.17 | copy -5.8 | ratio dS/S -1.01
+  L15H3 q1 k0 d=22 exc 0.16 | copy +5.1 | ratio dS/S -0.38
+  L16H0 q1 k1 d=20 exc 0.16 | copy +0.4 | ratio dS/S +0.27
+  L16H1 q1 k1 d=21 exc 0.20 | copy +2.0 | ratio dS/S -1.54
+  L17H0 q0 k1 d=22 exc 0.24 | copy +2.9 | ratio dS/S +0.26
+
+```

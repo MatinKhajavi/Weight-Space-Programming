@@ -1,0 +1,14 @@
+OUTPUT of Python run 180 of at most 300:
+```
+fwd_11 attn_11.npy float16 (2, 8, 1841, 1841)
+fwd_11 attn_15.npy float16 (2, 8, 1841, 1841)
+fwd_11 attn_19.npy float16 (2, 8, 1841, 1841)
+fwd_11 attn_23.npy float16 (2, 8, 1841, 1841)
+fwd_19 hidden_0.npy float16 (2, 1174, 1024)
+fwd_19 hidden_1.npy float16 (2, 1174, 1024)
+fwd_19 hidden_10.npy float16 (2, 1174, 1024)
+max len 3799 n 132 total tokens 351851
+bytes 2 mlp22 GB 3.594522624 hid24 GB 1.027006464 topk GB 0.04011744
+bytes 4 mlp22 GB 7.189045248 hid24 GB 2.054012928 topk GB 0.04011744
+
+```

@@ -1,0 +1,11 @@
+OUTPUT of Python run 122 of at most 300:
+```
+L1 n 14 | orig acc 0.29 cut 0.71 | E6 acc 0.64 cut 0.29, cuts stated any 0.25 tail 0.25
+L2 n 29 | orig acc 0.24 cut 0.83 | E6 acc 0.38 cut 0.66, cuts stated any 0.42 tail 0.21
+L3 n 34 | orig acc 0.12 cut 0.88 | E6 acc 0.56 cut 0.38, cuts stated any 0.46 tail 0.00
+L4 n 41 | orig acc 0.02 cut 1.00 | E6 acc 0.29 cut 0.63, cuts stated any 0.27 tail 0.04
+L5 n 42 | orig acc 0.00 cut 1.00 | E6 acc 0.14 cut 0.83, cuts stated any 0.06 tail 0.00
+gsm n 96 | orig acc 0.19 cut 0.83 | E6 acc 0.58 cut 0.28, cuts stated any 0.48 tail 0.07
+E6 on H outcome categories: {'verification': 8, 'wrong': 23, 'noloop': 40, 'other': 68, 'correct': 109, 'wrap-up': 6, 'degenerate(P<=6)': 2}
+
+```

@@ -1,0 +1,23 @@
+OUTPUT of run 36 of at most 60:
+```
+L | frac(g_i.b>0) among top-20 / top-50 changed units (by |dU_i|+|dG_i|+|dD_i| along structure) for b = top1 reader dir of [dG;dU] | z-like
+ 0 | top20 0.45 top50 0.40 (all 0.47) | mean-shift z -1.37
+ 1 | top20 0.55 top50 0.52 (all 0.62) | mean-shift z -1.54
+ 2 | top20 0.65 top50 0.56 (all 0.37) | mean-shift z +2.93
+ 3 | top20 0.35 top50 0.58 (all 0.57) | mean-shift z +1.95
+ 4 | top20 0.65 top50 0.48 (all 0.52) | mean-shift z -0.87
+ 5 | top20 0.55 top50 0.44 (all 0.35) | mean-shift z +1.61
+ 6 | top20 0.30 top50 0.34 (all 0.66) | mean-shift z -3.13
+ 7 | top20 0.80 top50 0.70 (all 0.46) | mean-shift z +3.55
+ 8 | top20 0.65 top50 0.56 (all 0.43) | mean-shift z +1.51
+ 9 | top20 0.80 top50 0.74 (all 0.50) | mean-shift z +2.52
+10 | top20 0.45 top50 0.44 (all 0.54) | mean-shift z -1.00
+11 | top20 0.45 top50 0.32 (all 0.37) | mean-shift z +0.28
+12 | top20 0.75 top50 0.46 (all 0.41) | mean-shift z +0.47
+13 | top20 0.50 top50 0.56 (all 0.43) | mean-shift z +2.07
+14 | top20 0.50 top50 0.54 (all 0.48) | mean-shift z +1.51
+15 | top20 0.45 top50 0.46 (all 0.54) | mean-shift z -0.43
+16 | top20 0.55 top50 0.46 (all 0.55) | mean-shift z -0.66
+17 | top20 0.45 top50 0.50 (all 0.60) | mean-shift z -1.26
+
+```

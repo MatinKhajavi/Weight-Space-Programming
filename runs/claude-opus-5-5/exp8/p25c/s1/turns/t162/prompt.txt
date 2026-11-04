@@ -1,0 +1,36 @@
+OUTPUT of Python run 137 of at most 300:
+```
+10445 2445
+# Notes
+
+## Sets
+- D (diagnosis): 160 MATH stratified (L1 14,L2 29,L3 34,L4 41,L5 42) + 96 GSM8K, saved in /work/sets.json; rng seed 1234 shuffles of by_level and gsm.
+
+## Findings (original model)
+- gen_2 (pass 2): D set, n=2, 32768 max: acc 10.4% (gsm 14.6%, math 7.8%); 90% cut at max tokens; ALL 52 finished answers correct.
+- 443/460 cut answers end in an exact verbatim loop (median period ~120 chars / ~30 tokens); loop onset median ~6.7k tokens (min ~1k).
+- Looping texts rarely reach wrap-up phrases; failure = entering self-sustaining repetition loop, not failure to emit </think>.
+- Weight scan: no obvious outlier heads in full-attn layers; DeltaNet A_log/dt_bias look normal.
+- fwd_4 (pass 3, TF original): 14 compact loop texts (/work/tf_compact.json): prompt + 120 tok lead + 6 periods. logprobs, top20, hidden 0-24, mlp 0-23.
+- Current edit: NONE.
+
+- fwd_4 analysis: loop-token prob by repetition k=1..6: 0.89,0.92,0.96,0.98,0.99,0.99 (frac>0.9: 74%->99%).
+- DLA (rep5 - rep1, 320 matched tokens): total +3.44 logits; layer 23 ATTENTION +2.48 (base 11.2 logits at rep1!), L15 attn +0.83, L19 mlp +0.51, L23 mlp +0.46. DeltaNet layers ~0.
+- Decision points in loop (line starts) have sensible alternatives (Let/So/If/This) at 2-15%.
+- Next pass: attention patterns, layers 3,7,11,15,19,23, on compact texts idx 4 and 13 (tf_compact.json). Current edit: NONE.
+
+## Restart-2 findings
+- Attn by repetition k=1..6 (AT, fwd_5): induction 'ind' rises: L23h5 .39->.70, L23h4 .25->.40, L23h0 .19->.30, L23h7 .24->.37, L15h7 .52->.75, L11h1 .48->.60, L19h5 .19->.33.
+  same-token 'same' rises: L23h6 .57->.81, L23h2 .11->.26, L11h3 .30->.56 (early L3h7/L7h6/L7h7 also high).
+- 60% of looping answers already contain the reference answer before loop start (gsm 72%, math 54%; loose match). Explicit wrap-up phrases rare (ready to 3%).
+- PASS 5 WASTED: TF tool does NOT read files; texts must be inline (keep TF texts short, ~<20k chars).
+- Plan: generation 'edited' on D set (n=2, 512) paired vs gen_2 original (same seeds); TF compact texts (fwd_4 baseline) for mechanism.
+
+- E1 = L23 o_proj cols heads 5,6 zeroed. TF fwd_7 (pass 6) on 14 compact loops vs fwd_4:
+  loop-token p k=3..5: .960/.983/.991 -> .943/.970/.983; per-period escape prob (T.6,top-p.95) k=4: .07->.19 (pen: .18->.39), k=5: .006->.07 (pen .09->.23).
+  DLA: heads 5+6 push loop token +4.4 (k=1) -> +5.7 (k=5) logits (centered); other L23 heads +3.9 -> +4.6; on lead toke
+-----VARS-----
+679
+lev:dict, tb:Counter, c_:int, BUL:Pattern, WORD:Pattern, loopW:Counter, nloops:Counter, seg:str, finW:Counter, totL:int, fin_top:list, r6:int, Q6:Tensor, words:list, e6w:list, neww:list, V7:Tensor, V7c:Tensor, U7:Tensor, S7_:Tensor, r7:int, Q7:Tensor, betas:dict, E7:dict, bt:float, W0:Tensor, cut17:list, lw17:Counter, nl17:int, cats17:Counter, per17:list, tot17:int, trans:defaultdict, sa:dict, sb:dict, W6:Tensor, used_ids:set, rngH:Generator, mrows:list, grows:list, quotaH:dict, H:list, q_:int, pool:list, gpool:list, tabH:defaultdict, o_:Counter, e_:Counter, catH:Counter, lwH:Counter, totH:int, mt:dict, keys:list, PH:list, glist:list, agg:defaultdict, hw:list, fin_has:list, E6s:dict, src:str, tab19:defaultdict, tab16:defaultdict, g_:list, tb_:defaultdict, excl:set, rngH2:Generator, H2:list, E6h:dict, gl:list, noans:list, E6q:dict, e0:dict, lens:list, mt4:dict, ids4_:ndarray, T4:list, s1:str, s2:str, notes:str, head:str
+
+```

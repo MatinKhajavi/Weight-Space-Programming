@@ -1,0 +1,14 @@
+OUTPUT of run 22 of at most 60:
+```
+top-1 output dirs L13-17 writers: singular values of stack [1.87 1.52 1.13 0.87 0.82 0.66 0.65 0.56 0.44 0.41]
+top-4 dirs L13-17: stack sv [2.13 1.87 1.61 1.44 1.36 1.21 1.11 0.99 0.97 0.9  0.83 0.81]
+k=1: mean energy frac in common subspace 0.048 (random 0.002, chance 0.0016)
+k=2: mean energy frac in common subspace 0.089 (random 0.003, chance 0.0031)
+k=3: mean energy frac in common subspace 0.119 (random 0.004, chance 0.0047)
+k=4: mean energy frac in common subspace 0.148 (random 0.006, chance 0.0063)
+k=6: mean energy frac in common subspace 0.194 (random 0.009, chance 0.0094)
+k=10: mean energy frac in common subspace 0.259 (random 0.016, chance 0.0156)
+common dir top dims [507 418  50 299 390 474 292 333 583 585] [-0.42 -0.24 -0.22  0.22  0.22 -0.2   0.19 -0.17 -0.17  0.16]
+gf at those dims [ 56.8 132.   56.8 134.   97.   46.8  35.2  79.5  34.   57.5]
+
+```

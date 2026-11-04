@@ -1,0 +1,24 @@
+OUTPUT of Python run 24 of at most 300:
+```
+ge_model.layers.N.input_layernorm.weight norm range 5.28 23.53 absmax max 1.47 at 21
+anguage_model.layers.N.linear_attn.A_log norm range 4.58 9.81 absmax max 6.59 at 0
+model.layers.N.linear_attn.conv1d.weight norm range 10.73 27.75 absmax max 1.82 at 1
+guage_model.layers.N.linear_attn.dt_bias norm range 8.9 24.26 absmax max 13.06 at 0
+el.layers.N.linear_attn.in_proj_a.weight norm range 2.87 4.82 absmax max 0.25 at 9
+el.layers.N.linear_attn.in_proj_b.weight norm range 1.78 2.47 absmax max 0.21 at 1
+.layers.N.linear_attn.in_proj_qkv.weight norm range 40.73 59.2 absmax max 0.58 at 20
+el.layers.N.linear_attn.in_proj_z.weight norm range 20.0 28.26 absmax max 0.46 at 0
+e_model.layers.N.linear_attn.norm.weight norm range 9.01 11.8 absmax max 1.19 at 9
+del.layers.N.linear_attn.out_proj.weight norm range 14.64 18.34 absmax max 0.32 at 1
+uage_model.layers.N.mlp.down_proj.weight norm range 15.14 17.7 absmax max 0.34 at 23
+uage_model.layers.N.mlp.gate_proj.weight norm range 20.41 36.18 absmax max 0.51 at 23
+nguage_model.layers.N.mlp.up_proj.weight norm range 15.34 21.25 absmax max 0.22 at 23
+layers.N.post_attention_layernorm.weight norm range 4.1 13.4 absmax max 0.82 at 23
+e_model.layers.N.self_attn.k_norm.weight norm range 7.56 10.92 absmax max 1.63 at 3
+e_model.layers.N.self_attn.k_proj.weight norm range 7.33 8.99 absmax max 0.18 at 19
+e_model.layers.N.self_attn.o_proj.weight norm range 16.18 24.21 absmax max 0.33 at 3
+e_model.layers.N.self_attn.q_norm.weight norm range 7.42 10.79 absmax max 1.3 at 15
+e_model.layers.N.self_attn.q_proj.weight norm range 28.9 40.5 absmax max 0.4 at 23
+e_model.layers.N.self_attn.v_proj.weight norm range 8.58 14.41 absmax max 0.54 at 23
+
+```

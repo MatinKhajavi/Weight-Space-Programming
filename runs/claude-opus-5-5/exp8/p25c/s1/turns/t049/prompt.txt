@@ -1,0 +1,8 @@
+OUTPUT of Python run 42 of at most 300:
+```
+share with correct answer already present before loop: {'gsm8k': 0.72, 'math': 0.54} overall 0.6
+share with phrase before loop: {'final answer': np.float64(0.27), 'ready to': np.float64(0.03), 'I will write': np.float64(0.03), 'Final Answer': np.float64(0.09), 'boxed{': np.float64(0.19), '</think>': np.float64(0.0), 'Let me write': np.float64(0.01), 'write the final': np.float64(0.0), 'write the response': np.float64(0.02)}
+median count when present: {'final answer': 1, 'ready to': 1, 'I will write': 1, 'Final Answer': 1, 'boxed{': 1, '</think>': 0, 'Let me write': 1, 'write the final': 2, 'write the response': 3}
+think-close token id: 248069 boxed ids [59, 76367, 90]
+
+```

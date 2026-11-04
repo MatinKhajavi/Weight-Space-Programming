@@ -1,0 +1,22 @@
+OUTPUT of run 21 of at most 60:
+```
+L 0 up: dz=-0.6 (base self-loop z=-108.7) | up_g: dz=-0.2 (base self-loop z=-16.5) | gate: dz=+0.0 (base self-loop z=+0.6) | gate_g: dz=-2.1 (base self-loop z=-4.0)
+L 1 up: dz=+0.6 (base self-loop z=-108.8) | up_g: dz=+0.1 (base self-loop z=-26.1) | gate: dz=-0.9 (base self-loop z=-1.7) | gate_g: dz=+0.3 (base self-loop z=-1.2)
+L 2 up: dz=-0.2 (base self-loop z=+91.8) | up_g: dz=-0.4 (base self-loop z=+18.3) | gate: dz=-0.0 (base self-loop z=-6.2) | gate_g: dz=-0.3 (base self-loop z=-2.1)
+L 3 up: dz=+1.7 (base self-loop z=+220.2) | up_g: dz=-0.2 (base self-loop z=+52.4) | gate: dz=-0.8 (base self-loop z=-7.7) | gate_g: dz=-0.2 (base self-loop z=-1.1)
+L 4 up: dz=-0.3 (base self-loop z=+95.4) | up_g: dz=-0.5 (base self-loop z=+38.0) | gate: dz=+1.6 (base self-loop z=-0.6) | gate_g: dz=+0.9 (base self-loop z=+0.3)
+L 5 up: dz=+1.1 (base self-loop z=+268.7) | up_g: dz=-0.9 (base self-loop z=+154.7) | gate: dz=+0.4 (base self-loop z=-8.7) | gate_g: dz=-0.0 (base self-loop z=-8.1)
+L 6 up: dz=-1.7 (base self-loop z=+260.3) | up_g: dz=-0.4 (base self-loop z=+166.7) | gate: dz=+1.6 (base self-loop z=-2.1) | gate_g: dz=+0.2 (base self-loop z=+2.5)
+L 7 up: dz=+0.7 (base self-loop z=+151.9) | up_g: dz=+1.7 (base self-loop z=+100.1) | gate: dz=+0.6 (base self-loop z=+5.6) | gate_g: dz=+2.0 (base self-loop z=+3.2)
+L 8 up: dz=+1.6 (base self-loop z=+108.1) | up_g: dz=+0.5 (base self-loop z=+73.5) | gate: dz=-1.4 (base self-loop z=+11.0) | gate_g: dz=-2.0 (base self-loop z=+12.1)
+L 9 up: dz=-1.3 (base self-loop z=+72.6) | up_g: dz=-0.2 (base self-loop z=+47.4) | gate: dz=-1.8 (base self-loop z=-17.6) | gate_g: dz=-1.2 (base self-loop z=-14.3)
+L10 up: dz=-0.1 (base self-loop z=+73.1) | up_g: dz=-1.0 (base self-loop z=+44.7) | gate: dz=+1.5 (base self-loop z=+6.5) | gate_g: dz=-0.6 (base self-loop z=+4.0)
+L11 up: dz=+0.4 (base self-loop z=+103.1) | up_g: dz=+0.0 (base self-loop z=+47.3) | gate: dz=-0.3 (base self-loop z=-15.9) | gate_g: dz=-0.2 (base self-loop z=-5.9)
+L12 up: dz=-1.0 (base self-loop z=+220.9) | up_g: dz=-1.1 (base self-loop z=+101.1) | gate: dz=-0.8 (base self-loop z=-10.1) | gate_g: dz=+0.1 (base self-loop z=-5.6)
+L13 up: dz=+0.9 (base self-loop z=+74.6) | up_g: dz=-0.1 (base self-loop z=+38.5) | gate: dz=-0.3 (base self-loop z=+1.1) | gate_g: dz=+0.6 (base self-loop z=-0.5)
+L14 up: dz=-1.2 (base self-loop z=+13.3) | up_g: dz=-0.9 (base self-loop z=+5.5) | gate: dz=+0.1 (base self-loop z=+6.2) | gate_g: dz=-0.1 (base self-loop z=+4.6)
+L15 up: dz=+1.3 (base self-loop z=-56.2) | up_g: dz=+1.4 (base self-loop z=-24.0) | gate: dz=+1.3 (base self-loop z=-6.5) | gate_g: dz=-1.2 (base self-loop z=-4.5)
+L16 up: dz=+0.4 (base self-loop z=-109.5) | up_g: dz=+1.0 (base self-loop z=-50.8) | gate: dz=+1.7 (base self-loop z=-3.0) | gate_g: dz=+1.6 (base self-loop z=-3.3)
+L17 up: dz=+1.5 (base self-loop z=-118.9) | up_g: dz=-0.4 (base self-loop z=-59.0) | gate: dz=-0.9 (base self-loop z=+9.8) | gate_g: dz=-0.2 (base self-loop z=+2.9)
+
+```

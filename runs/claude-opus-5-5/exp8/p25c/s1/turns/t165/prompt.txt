@@ -1,0 +1,5 @@
+OUTPUT of Python run 140 of at most 300:
+```
+functions: ['load_original', 'load', 'save_edit', 'drop_edit', 'edited', 'readjsonl', 'loop_info', 'ntok', 'roc_auc_score', 'count_phr', 'prompt_str', 'tok_ids', 'rep_index', 'rmsn', 'dla', 'safe', 'summ', 'line_rep_profile', 'norm_ans', 'ans_in', 'build_tokens', 'samp_probs', 'analyze', 'nmW', 'load_gen', 'find_loop', 'loop_stats', 'tstr', 'opener_share', 'proj_out', 'esc', 'paired', 'loop_opener', 'categorize', 'opener_tokens', 'proj_sub', 'load_file', 'get_text', 'asc', 'frac_in', 'load_gen2', 'loop_table', 'basis', 'think_end', 'near_rep', 'last_lines_before_close', 'p_end', 'dla_end', 'line_openers', 'rd', 'readj', 'pdiff', 'summ_g', 'pairs_samples', 'A_', 'period_text', 'stated', 'line_words', 'wvec', 'cover', 'cat_of', 'lvl_key', 'has_wrap', 'make_var', 'pooled', 'acc_', 'cut_']
+
+```

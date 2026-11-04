@@ -1,0 +1,25 @@
+OUTPUT of run 26 of at most 60:
+```
+layers>=0: corr(O_h, dmatch*copy) = -0.119 (p=0.312); corr(O_h, qpart*copy) = -0.103 (p=0.388); corr(O_h, copy) = +0.128 (p=0.277); corr(O_h, |copy|) = -0.001
+layers>=7: corr(O_h, dmatch*copy) = -0.112 (p=0.466); corr(O_h, qpart*copy) = -0.070 (p=0.649); corr(O_h, copy) = +0.096 (p=0.547); corr(O_h, |copy|) = -0.189
+within-layer dQ cosine vs copy product: corr +0.638 (p=0.0000)
+mean dQ cos for opposite-sign copy pairs (|copy|>2 both): -0.3047 ; same-sign: 0.0630
+L7 h0-h1 dQcos -0.4479 copy product -53.5
+L7 h0-h2 dQcos +0.1746 copy product +33.2
+L7 h0-h3 dQcos +0.1214 copy product +33.8
+L7 h1-h2 dQcos -0.3124 copy product -38.1
+L7 h1-h3 dQcos -0.2788 copy product -38.9
+L7 h2-h3 dQcos +0.1586 copy product +24.1
+L8 h0-h1 dQcos -0.1890 copy product -19.1
+L8 h0-h2 dQcos -0.2194 copy product -30.0
+L9 h1-h2 dQcos -0.4790 copy product -35.5
+L9 h1-h3 dQcos -0.5475 copy product -17.9
+L9 h2-h3 dQcos +0.2975 copy product +17.7
+L11 h1-h3 dQcos -0.1045 copy product -17.1
+L15 h0-h1 dQcos -0.3559 copy product -29.2
+L15 h0-h3 dQcos +0.2055 copy product +25.5
+L15 h1-h2 dQcos -0.5990 copy product -15.5
+L15 h1-h3 dQcos -0.6321 copy product -29.3
+L17 h0-h1 dQcos +0.0204 copy product +19.4
+
+```

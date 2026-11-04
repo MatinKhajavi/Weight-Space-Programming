@@ -1,0 +1,14 @@
+OUTPUT of Python run 115 of at most 300:
+```
+<class 'list'> 2
+<class 'dict'> ['id', 'on_in_win', 'P', 'text', 'ntok']
+{'id': 'math_train_intermediate_algebra_948', 'on_in_win': '1400', 'P': '45', 'text': 'x = 101$.\n    $1,030,301 - 20,402 + 101$.\n    $1,030,301 - 20,402 = 1,009,999$.\n    $1,009,999 + 101 = 1,010,100$.\n    Okay, so $x^3 - 2x^2 + x = 1,01', 'ntok': '1928'}
+EXACT EVALUATION PROMPT FORMAT
+The evaluation prompt, exactly as the model sees it (thinking on), for a problem P:
+PREFIX + P + SUFFIX, with
+PREFIX = '<|im_start|>user\n'
+SUFFIX = '\nPlease reason step by step, and put your final answer within \\boxed{}.<|im_end|>\n<|im_start|>assistant\n<think>\n'
+The model's answer follows SUFFIX directly. To score a text with a teacher-forced pass, send PREFIX 
+'<|im_start|>user\nJenna is making a costume for her role in Oliver Twist. She needs to make an overskirt and two petticoats. Each skirt uses a rectangle of material that measures 12 feet by 4 feet. She'
+
+```

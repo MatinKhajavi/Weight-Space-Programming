@@ -1,0 +1,15 @@
+OUTPUT of run 46 of at most 60:
+```
+L 7 sigma=+1 | u186: za=-15.3 gatePct=0.76 cos(out,push)=-0.12 ; u671: za=+5.1 gatePct=0.22 cos(out,push)=-0.05 ; u475: za=+5.0 gatePct=0.10 cos(out,push)=+0.08 ; u548: za=+4.8 gatePct=0.68 cos(out,push)=+0.03 ; u1012: za=-4.6 gatePct=0.67 cos(out,push)=-0.03 ; u1051: za=+4.3 gatePct=0.64 cos(out,push)=-0.01
+     focus u186: za=-15.3 true-gate percentile=0.759 (z=+0.031, median|z|=0.031) act sign=+1 cos(signed out, A-push)=-0.120 d(contrib).push=+0.0024
+L 9 sigma=+1 | u697: za=+4.9 gatePct=0.04 cos(out,push)=+0.01 ; u1524: za=+4.6 gatePct=0.51 cos(out,push)=-0.02 ; u1045: za=+4.4 gatePct=0.39 cos(out,push)=+0.02 ; u1583: za=+4.1 gatePct=0.93 cos(out,push)=+0.03 ; u1204: za=+4.1 gatePct=0.69 cos(out,push)=+0.07 ; u1967: za=+4.1 gatePct=0.36 cos(out,push)=+0.03
+L10 sigma=+1 | u391: za=+5.7 gatePct=0.52 cos(out,push)=-0.03 ; u1366: za=-5.6 gatePct=0.84 cos(out,push)=-0.03 ; u1295: za=-4.7 gatePct=0.75 cos(out,push)=-0.15 ; u1691: za=+4.7 gatePct=0.90 cos(out,push)=-0.04 ; u1395: za=-4.5 gatePct=0.32 cos(out,push)=+0.04 ; u1158: za=-4.5 gatePct=0.70 cos(out,push)=+0.01
+L12 sigma=+1 | u568: za=+4.1 gatePct=1.00 cos(out,push)=+0.03 ; u1636: za=-4.0 gatePct=0.34 cos(out,push)=-0.00 ; u1273: za=+4.0 gatePct=0.20 cos(out,push)=-0.02 ; u93: za=+3.8 gatePct=0.19 cos(out,push)=-0.00 ; u1000: za=-3.8 gatePct=0.01 cos(out,push)=-0.04 ; u61: za=+3.7 gatePct=0.56 cos(out,push)=+0.05
+L13 sigma=-1 | u1478: za=-4.6 gatePct=0.36 cos(out,push)=+0.05 ; u1135: za=-4.5 gatePct=0.96 cos(out,push)=+0.02 ; u368: za=+4.3 gatePct=0.38 cos(out,push)=+0.03 ; u1821: za=-4.2 gatePct=0.35 cos(out,push)=+0.00 ; u766: za=+4.1 gatePct=0.60 cos(out,push)=-0.06 ; u1211: za=-4.1 gatePct=0.21 cos(out,push)=-0.01
+L14 sigma=+1 | u1210: za=-4.7 gatePct=0.34 cos(out,push)=-0.08 ; u546: za=-4.3 gatePct=0.36 cos(out,push)=-0.04 ; u1215: za=+4.1 gatePct=0.75 cos(out,push)=+0.04 ; u1902: za=-4.0 gatePct=0.34 cos(out,push)=-0.02 ; u1264: za=+3.9 gatePct=0.98 cos(out,push)=+0.02 ; u606: za=-3.8 gatePct=0.57 cos(out,push)=+0.02
+L15 sigma=+1 | u741: za=-5.2 gatePct=0.81 cos(out,push)=-0.05 ; u1843: za=-4.8 gatePct=0.41 cos(out,push)=+0.06 ; u580: za=+4.5 gatePct=0.92 cos(out,push)=-0.06 ; u85: za=+4.4 gatePct=0.41 cos(out,push)=-0.07 ; u663: za=+4.2 gatePct=0.19 cos(out,push)=+0.03 ; u892: za=+4.1 gatePct=0.81 cos(out,push)=+0.00
+L16 sigma=+1 | u931: za=+5.2 gatePct=0.54 cos(out,push)=+0.00 ; u1402: za=+4.9 gatePct=0.34 cos(out,push)=+0.03 ; u209: za=-4.9 gatePct=0.74 cos(out,push)=-0.02 ; u1745: za=+4.8 gatePct=0.74 cos(out,push)=-0.07 ; u172: za=-4.5 gatePct=0.95 cos(out,push)=-0.05 ; u375: za=+4.4 gatePct=0.99 cos(out,push)=+0.09
+L17 sigma=+1 | u1650: za=+10.3 gatePct=0.07 cos(out,push)=+0.06 ; u98: za=+5.7 gatePct=0.71 cos(out,push)=+0.07 ; u883: za=-5.7 gatePct=0.99 cos(out,push)=+0.28 ; u225: za=-5.1 gatePct=0.39 cos(out,push)=-0.02 ; u101: za=-4.9 gatePct=0.39 cos(out,push)=-0.05 ; u1027: za=+4.6 gatePct=0.85 cos(out,push)=+0.24
+     focus u1650: za=+10.3 true-gate percentile=0.070 (z=-0.084, median|z|=0.025) act sign=-1 cos(signed out, A-push)=+0.061 d(contrib).push=+0.0006
+
+```

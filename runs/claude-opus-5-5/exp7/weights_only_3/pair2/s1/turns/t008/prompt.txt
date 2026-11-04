@@ -1,0 +1,23 @@
+OUTPUT of run 7 of at most 60:
+```
+0 h0 QKamp-0.009 OVamp-0.007 trOV+0.67 relQK0.009 relOV0.008 | h1 QKamp-0.012 OVamp+0.016 trOV-1.35 relQK0.010 relOV0.014 | h2 QKamp-0.025 OVamp-0.049 trOV-0.04 relQK0.008 relOV0.006 | h3 QKamp-0.012 OVamp-0.023 trOV+0.76 relQK0.011 relOV0.008
+1 h0 QKamp+0.005 OVamp+0.040 trOV+0.61 relQK0.012 relOV0.016 | h1 QKamp-0.000 OVamp+0.047 trOV+0.31 relQK0.010 relOV0.014 | h2 QKamp+0.002 OVamp-0.010 trOV+0.82 relQK0.014 relOV0.013 | h3 QKamp+0.004 OVamp-0.002 trOV+0.00 relQK0.010 relOV0.011
+2 h0 QKamp+0.003 OVamp+0.002 trOV+1.26 relQK0.011 relOV0.012 | h1 QKamp+0.006 OVamp-0.017 trOV-0.94 relQK0.009 relOV0.011 | h2 QKamp-0.002 OVamp-0.013 trOV-0.34 relQK0.012 relOV0.010 | h3 QKamp-0.004 OVamp+0.014 trOV-0.08 relQK0.012 relOV0.017
+3 h0 QKamp+0.011 OVamp+0.003 trOV-1.31 relQK0.010 relOV0.013 | h1 QKamp+0.002 OVamp-0.009 trOV+0.61 relQK0.020 relOV0.016 | h2 QKamp+0.001 OVamp+0.003 trOV+2.77 relQK0.013 relOV0.013 | h3 QKamp+0.001 OVamp-0.019 trOV+0.01 relQK0.006 relOV0.021
+4 h0 QKamp-0.008 OVamp-0.005 trOV+0.44 relQK0.014 relOV0.022 | h1 QKamp+0.022 OVamp+0.002 trOV+0.67 relQK0.018 relOV0.027 | h2 QKamp+0.004 OVamp-0.006 trOV-0.08 relQK0.016 relOV0.022 | h3 QKamp-0.004 OVamp-0.021 trOV-0.12 relQK0.014 relOV0.014
+5 h0 QKamp+0.014 OVamp-0.033 trOV+0.54 relQK0.023 relOV0.008 | h1 QKamp-0.004 OVamp-0.004 trOV+0.66 relQK0.015 relOV0.017 | h2 QKamp+0.047 OVamp-0.046 trOV+1.14 relQK0.019 relOV0.018 | h3 QKamp-0.021 OVamp+0.002 trOV-1.06 relQK0.024 relOV0.018
+6 h0 QKamp+0.006 OVamp-0.008 trOV+3.22 relQK0.015 relOV0.016 | h1 QKamp+0.003 OVamp-0.006 trOV-2.53 relQK0.016 relOV0.011 | h2 QKamp+0.009 OVamp-0.014 trOV+3.84 relQK0.023 relOV0.015 | h3 QKamp-0.003 OVamp+0.006 trOV+2.51 relQK0.016 relOV0.015
+7 h0 QKamp-0.000 OVamp-0.022 trOV+6.82 relQK0.013 relOV0.012 | h1 QKamp+0.031 OVamp+0.013 trOV-7.84 relQK0.018 relOV0.008 | h2 QKamp+0.000 OVamp+0.001 trOV+4.86 relQK0.015 relOV0.010 | h3 QKamp-0.001 OVamp+0.007 trOV+4.96 relQK0.021 relOV0.017
+8 h0 QKamp-0.007 OVamp-0.000 trOV-6.37 relQK0.014 relOV0.016 | h1 QKamp-0.006 OVamp+0.004 trOV+3.00 relQK0.013 relOV0.019 | h2 QKamp-0.002 OVamp+0.028 trOV+4.71 relQK0.018 relOV0.020 | h3 QKamp-0.007 OVamp-0.014 trOV+1.02 relQK0.014 relOV0.016
+9 h0 QKamp-0.010 OVamp-0.004 trOV+2.21 relQK0.020 relOV0.014 | h1 QKamp+0.025 OVamp+0.003 trOV-5.99 relQK0.016 relOV0.010 | h2 QKamp+0.004 OVamp+0.007 trOV+5.93 relQK0.021 relOV0.013 | h3 QKamp+0.001 OVamp-0.002 trOV+2.99 relQK0.013 relOV0.013
+10 h0 QKamp+0.001 OVamp-0.009 trOV+3.34 relQK0.024 relOV0.010 | h1 QKamp+0.006 OVamp+0.012 trOV-0.03 relQK0.034 relOV0.014 | h2 QKamp-0.033 OVamp-0.025 trOV+3.65 relQK0.011 relOV0.014 | h3 QKamp+0.010 OVamp+0.002 trOV-0.83 relQK0.018 relOV0.008
+11 h0 QKamp+0.039 OVamp-0.034 trOV-0.01 relQK0.050 relOV0.012 | h1 QKamp+0.017 OVamp-0.011 trOV+6.26 relQK0.042 relOV0.014 | h2 QKamp+0.001 OVamp-0.005 trOV+2.13 relQK0.018 relOV0.009 | h3 QKamp+0.007 OVamp-0.006 trOV-2.74 relQK0.028 relOV0.007
+12 h0 QKamp+0.011 OVamp-0.013 trOV-1.54 relQK0.029 relOV0.013 | h1 QKamp-0.065 OVamp-0.002 trOV+1.65 relQK0.024 relOV0.012 | h2 QKamp-0.025 OVamp-0.006 trOV+3.08 relQK0.031 relOV0.008 | h3 QKamp-0.049 OVamp-0.011 trOV+2.80 relQK0.027 relOV0.011
+13 h0 QKamp+0.005 OVamp+0.000 trOV+1.26 relQK0.016 relOV0.010 | h1 QKamp+0.017 OVamp-0.009 trOV+1.62 relQK0.024 relOV0.013 | h2 QKamp-0.007 OVamp+0.009 trOV+2.93 relQK0.022 relOV0.014 | h3 QKamp+0.003 OVamp+0.008 trOV-0.78 relQK0.015 relOV0.009
+14 h0 QKamp-0.012 OVamp+0.005 trOV-0.46 relQK0.019 relOV0.009 | h1 QKamp-0.011 OVamp-0.003 trOV+3.82 relQK0.027 relOV0.010 | h2 QKamp-0.020 OVamp-0.008 trOV+1.89 relQK0.021 relOV0.011 | h3 QKamp-0.042 OVamp-0.009 trOV+0.59 relQK0.022 relOV0.009
+15 h0 QKamp+0.092 OVamp-0.010 trOV+5.05 relQK0.021 relOV0.009 | h1 QKamp+0.075 OVamp-0.009 trOV-5.80 relQK0.014 relOV0.011 | h2 QKamp+0.022 OVamp+0.003 trOV+2.68 relQK0.018 relOV0.018 | h3 QKamp+0.023 OVamp+0.009 trOV+5.05 relQK0.013 relOV0.011
+16 h0 QKamp-0.001 OVamp+0.002 trOV+0.43 relQK0.016 relOV0.015 | h1 QKamp-0.003 OVamp-0.008 trOV+1.99 relQK0.017 relOV0.016 | h2 QKamp-0.017 OVamp+0.015 trOV+3.06 relQK0.016 relOV0.013 | h3 QKamp+0.019 OVamp-0.005 trOV+0.66 relQK0.011 relOV0.016
+17 h0 QKamp+0.004 OVamp-0.008 trOV+2.86 relQK0.019 relOV0.007 | h1 QKamp+0.070 OVamp+0.022 trOV+6.78 relQK0.025 relOV0.012 | h2 QKamp-0.034 OVamp-0.006 trOV-1.53 relQK0.011 relOV0.009 | h3 QKamp-0.042 OVamp+0.029 trOV-0.71 relQK0.014 relOV0.010
+mean QKamp 0.0018  mean OVamp -0.0030
+
+```

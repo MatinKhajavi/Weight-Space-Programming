@@ -1,0 +1,26 @@
+OUTPUT of run 15 of at most 60:
+```
+L 0 cos(rq,rg) raw=0.71 gain-divided=0.62 | raw rq top dims [335 292 299 400 532 346] | x_q top dims [532 400 346 362 440 290] conc5=0.06
+L 1 cos(rq,rg) raw=0.03 gain-divided=0.01 | raw rq top dims [332 105 335 544 149 563] | x_q top dims [400 639 137 406  23 381] conc5=0.45
+L 2 cos(rq,rg) raw=0.39 gain-divided=0.49 | raw rq top dims [ 47 540 359 552 383  90] | x_q top dims [400 632  97 134 120 255] conc5=0.49
+L 3 cos(rq,rg) raw=0.41 gain-divided=0.44 | raw rq top dims [112 175  10 396 492 537] | x_q top dims [400 134 339 586 137 579] conc5=0.58
+L 4 cos(rq,rg) raw=0.39 gain-divided=0.32 | raw rq top dims [483 381 239 292  26  23] | x_q top dims [400 163 173  81 435 186] conc5=0.47
+L 5 cos(rq,rg) raw=0.54 gain-divided=0.39 | raw rq top dims [253 412 176  26  75 601] | x_q top dims [400 173 339 163 267 504] conc5=0.45
+L 6 cos(rq,rg) raw=0.53 gain-divided=0.52 | raw rq top dims [326 172 550 138  48  87] | x_q top dims [ 87 400 163  81 186 608] conc5=0.68
+L 7 cos(rq,rg) raw=0.34 gain-divided=0.26 | raw rq top dims [433  35 534 443  31 542] | x_q top dims [230 356 255 137 572 120] conc5=0.37
+L 8 cos(rq,rg) raw=0.08 gain-divided=0.03 | raw rq top dims [402 419 223 101 308 116] | x_q top dims [255 301 137 368 267 608] conc5=0.38
+L 9 cos(rq,rg) raw=0.77 gain-divided=0.52 | raw rq top dims [ 31 397 129 276 534 608] | x_q top dims [163 608 137 184 339 193] conc5=0.41
+L10 cos(rq,rg) raw=0.64 gain-divided=0.57 | raw rq top dims [590 534 468 274 117 309] | x_q top dims [163 184 339 186 632  81] conc5=0.38
+L11 cos(rq,rg) raw=0.72 gain-divided=0.65 | raw rq top dims [574 127 636  51 159 559] | x_q top dims [163 127 400 338 519 496] conc5=0.59
+L12 cos(rq,rg) raw=0.78 gain-divided=0.67 | raw rq top dims [383 223 163  87 381 629] | x_q top dims [163 403 220 334 472 412] conc5=0.24
+L13 cos(rq,rg) raw=0.74 gain-divided=0.18 | raw rq top dims [450  69 296 606 319 306] | x_q top dims [ 69 479 481 220 514 587] conc5=0.17
+L14 cos(rq,rg) raw=0.81 gain-divided=0.60 | raw rq top dims [455 197  23 239  87 583] | x_q top dims [163 433 527 497  82 360] conc5=0.23
+L15 cos(rq,rg) raw=0.63 gain-divided=0.61 | raw rq top dims [362 467 596 451  79 131] | x_q top dims [163 460 341 536 437 203] conc5=0.17
+L16 cos(rq,rg) raw=0.79 gain-divided=0.70 | raw rq top dims [192 239 625 538 272 399] | x_q top dims [163 518 220 332 460  47] conc5=0.22
+L17 cos(rq,rg) raw=0.75 gain-divided=0.59 | raw rq top dims [434 181 163 253 367 639] | x_q top dims [517 203 253 163 154 374] conc5=0.11
+adjacent-layer |cos| of x_q: [0.18 0.28 0.65 0.38 0.78 0.53 0.18 0.51 0.29 0.76 0.57 0.36 0.28 0.45 0.32 0.49 0.39]
+adjacent-layer |cos| of x_g: [0.33 0.52 0.53 0.25 0.7  0.06 0.6  0.8  0.08 0.99 0.67 0.65 0.75 0.9  0.87 0.9  0.86]
+|cos| x_q(l) vs x_g(l): [0.62 0.01 0.49 0.44 0.32 0.39 0.52 0.26 0.03 0.52 0.57 0.65 0.67 0.18 0.6  0.61 0.7  0.59]
+gain stats layer9 input: min 0.71 median 14.09 max 72.50
+
+```

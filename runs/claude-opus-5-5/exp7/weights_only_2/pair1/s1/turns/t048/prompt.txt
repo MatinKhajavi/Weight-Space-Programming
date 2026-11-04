@@ -1,0 +1,23 @@
+OUTPUT of run 47 of at most 60:
+```
+L 0: layer dTrace=      -9.4 base trace=    +7242.3 rel=-0.00130 z=-1.4 | without answer plane: z=-0.9
+L 1: layer dTrace=     -17.0 base trace=   +76579.3 rel=-0.00022 z=-0.3 | without answer plane: z=-0.3
+L 2: layer dTrace=      -3.1 base trace=    -1772.1 rel=-0.00178 z=-0.0 | without answer plane: z=-0.2
+L 3: layer dTrace=     +11.2 base trace=   +65099.0 rel=+0.00017 z=+0.2 | without answer plane: z=+0.5
+L 4: layer dTrace=     +25.0 base trace=   +15996.1 rel=+0.00156 z=+0.4 | without answer plane: z=+0.4
+L 5: layer dTrace=     -24.0 base trace=   +97010.2 rel=-0.00025 z=-0.2 | without answer plane: z=-0.3
+L 6: layer dTrace=      +3.8 base trace=  +187397.8 rel=+0.00002 z=+0.0 | without answer plane: z=+0.1
+L 7: layer dTrace=     +48.5 base trace=   -77025.6 rel=+0.00063 z=+0.7 | without answer plane: z=+0.7
+L 8: layer dTrace=     +83.6 base trace=    -8578.6 rel=+0.00974 z=+1.0 | without answer plane: z=+1.1
+L 9: layer dTrace=     -13.9 base trace=   +82742.3 rel=-0.00017 z=-0.1 | without answer plane: z=-0.2
+L10: layer dTrace=    +141.3 base trace= +1093525.7 rel=+0.00013 z=+0.6 | without answer plane: z=+0.6
+L11: layer dTrace=    +116.8 base trace=  +551595.5 rel=+0.00021 z=+0.5 | without answer plane: z=+0.6
+L12: layer dTrace=    +847.0 base trace= +5702373.8 rel=+0.00015 z=+1.0 | without answer plane: z=+1.0
+L13: layer dTrace=    +108.4 base trace= +1350507.8 rel=+0.00008 z=+0.1 | without answer plane: z=-0.1
+L14: layer dTrace=    +560.5 base trace= +4377183.2 rel=+0.00013 z=+0.8 | without answer plane: z=+0.8
+L15: layer dTrace=    +436.4 base trace= +5033011.8 rel=+0.00009 z=+0.3 | without answer plane: z=+0.3
+L16: layer dTrace=    +659.6 base trace= +3137586.5 rel=+0.00021 z=+0.7 | without answer plane: z=+1.2
+L17: layer dTrace=    +575.7 base trace= +3762413.6 rel=+0.00015 z=+1.4 | without answer plane: z=+1.8
+sum z L7-17: 7.1  /sqrt(11): 2.2 | excl. plane: 2.4
+
+```

@@ -1,0 +1,104 @@
+OUTPUT of run 12 of at most 60:
+```
+L9h0 sv0 0.065
+   Q+ ['ULL', 'Bom', ' trata', 'ather', 'Fragment', 'Mur', ' modelo', 'azzi']
+   Q- [' three', ' education', ' total', ' courses', ' equal', ' government', ' two', ' six']
+   K+ ['af', 'afa', 'arah', ' guess', 'ae', 'bx', 'ax', 'acha']
+   K- [' pursuant', ' citing', ' Suite', ' both', ' utilizing', ' residence', 'website', ' relation']
+L9h1 sv0 0.053
+   Q+ [' svoj', 'ustom', ' byl', 'ossa', 'isses', 'sulfanyl', ' comerc', 'ccion']
+   Q- [' three', ' greater', 'three', ' four', ' teachers', ' incorrect', ' education', ' educators']
+   K+ [' servant', 'shore', ' bul', 'eqref', 'Bul', ' shower', 'lord', ' Subject']
+   K- ['Meta', 'imated', 'imation', 'mover', 'imate', 'imat', 'frames', ' Meta']
+L9h2 sv0 0.044
+   Q+ [' three', 'three', ' fa', ' greater', ' incorrect', 'seven', ' teachers', ' correct']
+   Q- ['inson', 'ujo', 'iore', 'pector', ' svoj', ' vouch', 'leurs', 'sulfanyl']
+   K+ [' Is', ' Ros', ' For', ' reform', ' Has', ' plays', ' Field', ' Play']
+   K- ['inking', 'inci', 'icted', 'ppet', 'inch', 'ailand', 'infty', ' inches']
+L9h3 sv0 0.058
+   Q+ ['three', 'four', 'eight', ' four', ' three', ' six', 'five', 'Three']
+   Q- [' proyecto', ' chez', ' menjel', ' kter', ' dislocations', ' projet', 'BSData', ' namespace']
+   K+ [' dozen', ' thousand', ' hour', 'illion', 'bx', ' millones', ' million', 'seven']
+   K- ['ordination', ' Name', 'ename', 'Reference', 'nement', ' Reference', ' Only', ' stays']
+L10h0 sv0 0.066
+   Q+ [' three', ' remainder', ' morte', ' ma', 'three', ' six', ' four', ' non']
+   Q- [' conqu', ' elabor', 'itel', ' sb', 'atel', 'lbl', ' distinguish', 'Descriptor']
+   K+ [' arrang', ' conseguir', ' sleeves', ' sleeve', ' trabal', 'FORMATION', ' feat', ' sponsor']
+   K- [' considerations', 'inci', ' elementary', ' sinus', 'sensitive', ' pali', 'oven', ' warning']
+L10h1 sv0 0.055
+   Q+ [' furnish', ' fertil', ' rearr', ' harvest', ' promptly', ' irradi', ' hydroly', 'optim']
+   Q- [' sevent', ' veces', ' hundred', 'seven', ' vier', ' morte', ' cinco', ' fourth']
+   K+ ['chool', 'inci', ' hundred', 'rij', ' elementary', 'sten', ' ten', ' quadr']
+   K- [' adipis', ' moistur', 'avour', ' fertil', ' wherever', 'Align', 'ableView', 'etable']
+L10h2 sv0 0.071
+   Q+ [' evol', ' conqu', ' distinguish', ' optim', ' elabor', 'Inner', ' Excell', ' trata']
+   Q- [' remainder', ' None', ' three', 'infty', ' hundred', 'less', ' morte', ' four']
+   K+ [' irradi', ' vigil', 'condition', 'imiter', 'beck', ' aim', 'Expression', ' rhyth']
+   K- [' misleading', ' coins', ' larger', 'ardan', ' security', 'ulk', ' other', ' heavier']
+L10h3 sv0 0.079
+   Q+ [' conqu', ' evolve', ' elabor', ' priorit', 'Descriptor', 'BSData', ' evol', 'exports']
+   Q- [' sevent', 'eight', 'seven', ' hundred', 'six', 'three', ' six', ' three']
+   K+ ['arp', ' punch', ' completo', ' nove', 'unan', ' hundred', 'xty', 'pad']
+   K- [' wherever', 'Lines', ' Prices', 'especially', ' particular', ' Coast', ' Railway', ' digestive']
+L11h0 sv0 0.047
+   Q+ [' menor', ' None', 'none', ' million', ' none', ' gathering', ' brows', 'oct']
+   Q- [' pecul', 'ongan', 'becca', 'bug', 'innen', 'intestinal', ' println', 'esso']
+   K+ ['ulator', 'avour', 'TabIndex', ' Protocol', 'ancer', ' enum', 'fnamefont', 'Protocol']
+   K- ['afa', ' die', ' der', ' dying', ' missing', ' ard', ' na', ' more']
+L11h1 sv0 0.049
+   Q+ [' flesh', ' Suite', ' Venez', ' sla', ' Ban', ' snack', 'estim', ' hydroly']
+   Q- [' veces', ' hundred', ' morte', 'infty', 'inci', ' dozen', 'eight', ' months']
+   K+ [' novels', 'pps', ' Years', ' longitud', 'orthy', ' novel', ' Projects', 'Long']
+   K- [' resistance', 'ped', ' shops', 'ign', 'itva', 'respon', ' registered', ' stuck']
+L11h2 sv0 0.053
+   Q+ [' noble', 'Talk', 'etto', ' aston', 'rient', ' evolve', 'Dear', ' Smart']
+   Q- ['seven', ' sevent', 'third', ' three', ' remainder', ' six', ' vier', ' eight']
+   K+ ['iffer', ' asked', ' very', 'omena', 'ellington', ' pretty', 'ugu', ' charity']
+   K- [' SEC', 'bp', 'dated', 'slides', ' accelerated', ' modules', ' bp', ' timeline']
+L11h3 sv0 0.047
+   Q+ [' vier', ' hundred', ' morte', ' veces', ' believed', 'inci', 'seven', 'five']
+   Q- [' hydroly', ' Suite', ' flesh', 'Talk', 'leur', ' sla', 'Histor', ' Talk']
+   K+ ['ancers', ' motif', 'TabIndex', ' verdict', ' enum', 'ships', ' Options', ' fins']
+   K- [' su', ' concerned', 'flu', ' ki', ' stored', 'ortal', 'frac', ' to']
+L12h0 sv0 0.072
+   Q+ ['st', 'olutely', 'iota', 'alan', 'cret', ' hundred', ' accessed', 'ATIONAL']
+   Q- [' Hawai', ' Washington', ' Weather', ' Wash', 'Weather', ' Wind', ' Kinder', ' Writing']
+   K+ ['IX', 'VII', ' carro', ' mejores', ' dreams', ' Dream', 'COMP', ' IX']
+   K- ['becca', ' quo', 'keeping', 'itivity', ' advis', 'rict', 'payers', 'lege']
+L12h1 sv0 0.069
+   Q+ ['olutely', 'fif', 'arius', 'irteen', 'cret', 'three', 'eight', 'uran']
+   Q- [' Wash', ' Dubai', ' handler', ' Protocol', ' aston', ' Dear', 'Mail', ' pace']
+   K+ ['otope', 'Bounds', 'ships', 'atories', 'ruptcy', 'fnamefont', 'shore', 'ricts']
+   K- [' dez', 'abc', 'afa', ' quatre', 'th', 'HR', 'shared', 'MY']
+L12h2 sv0 0.060
+   Q+ [' poverty', ' Mars', 'icans', ' Hope', ' water', 'born', ' vacant', 'water']
+   Q- ['mical', 'Assets', 'ustom', 'riters', 'atios', 'erves', 'ilic', 'ailable']
+   K+ ['arp', 'four', ' vier', 'th', 'eight', ' tres', 'six', ' cuatro']
+   K- ['ployment', 'ancers', ' prospects', 'ancements', ' enterprises', ' curves', 'acements', 'rimp']
+L12h3 sv0 0.057
+   Q+ ['jt', 'ospel', 'xl', 'zy', 'webp', 'irm', 'arily', 'pple']
+   Q- [' anybody', ' accord', 'Normal', ' turbulence', ' Rain', ' Weather', ' distress', ' settlement']
+   K+ ['nd', ' beste', 'ld', ' mejores', 'st', 'rd', 'jd', 'sb']
+   K- ['ulose', 'esso', 'rael', 'gebras', ' Relations', ' coronavirus', ' supplies', 'InstanceState']
+L17h0 sv0 0.039
+   Q+ [' sevent', 'istas', 'unan', 'itance', 'oster', 'six', ' cinco', 'ental']
+   Q- [' cris', ' Venus', ' catching', ' perhaps', 'marine', ' orb', ' chase', ' light']
+   K+ [' in', ' and', ' to', ' is', 'born', ' as', ' or', ' en']
+   K- ['Protocol', ' Protocol', ' Connecticut', ' menstru', ' LinkedIn', 'ovenant', 'ESSION', 'Interval']
+L17h1 sv0 0.060
+   Q+ ['pero', ' sum', 'frac', 'sum', 'peat', 'apache', 'pragma', 'pril']
+   Q- [' Nom', ' Unique', ' profiles', ' stories', ' uniqu', ' chuy', ' wears', ' Story']
+   K+ ['ipeline', ' className', 'wau', 'DataSource', 'fnamefont', ' vutt', ' contrace', 'ocument']
+   K- [' and', ' to', ' in', ' for', ' al', ' de', 'and', ' un']
+L17h2 sv0 0.044
+   Q+ ['ervice', 'dehyde', 'istration', 'ervation', 'acements', 'quirements', 'andelier', 'andidate']
+   Q- ['apple', ' orb', ' pressing', 'marine', 'track', ' flowing', ' catching', ' dying']
+   K+ ['Protocol', 'fnamefont', 'wau', ' Protocol', ' menstru', 'Proxy', 'wrapp', 'Exper']
+   K- [' and', ' in', ' to', ' or', ' en', ' is', ' al', 'ly']
+L17h3 sv0 0.046
+   Q+ [' sixty', ' fifty', 'infty', ' forty', ' thirty', ' hundred', 'letters', 'getLogger']
+   Q- ['opts', ' Chev', 'ancing', 'Own', ' Chart', ' navig', ' clash', 'anced']
+   K+ ['ipeline', ' schedu', ' className', 'fnamefont', 'gebras', ' menstru', 'adequ', ' contrace']
+   K- [' al', ' and', 'and', ' to', ' in', 'ly', 'af', 'st']
+
+```

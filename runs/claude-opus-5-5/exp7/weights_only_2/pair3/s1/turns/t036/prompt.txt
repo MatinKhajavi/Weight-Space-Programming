@@ -1,0 +1,32 @@
+OUTPUT of run 35 of at most 60:
+```
+L 4 min|gpo|=0.000 median=5.7 | cos(push_sign,ur)=+0.76 cos(push_wprod,ur)=+0.73 cos(push_top,ur)=+0.59
+L 5 min|gpo|=0.031 median=8.3 | cos(push_sign,ur)=+0.90 cos(push_wprod,ur)=+0.93 cos(push_top,ur)=+0.92
+L 6 min|gpo|=0.035 median=12.6 | cos(push_sign,ur)=-0.95 cos(push_wprod,ur)=-0.95 cos(push_top,ur)=-0.95
+L 7 min|gpo|=0.039 median=16.3 | cos(push_sign,ur)=+0.97 cos(push_wprod,ur)=+0.98 cos(push_top,ur)=+0.97
+L 8 min|gpo|=0.086 median=18.7 | cos(push_sign,ur)=-0.96 cos(push_wprod,ur)=-0.98 cos(push_top,ur)=-0.97
+L 9 min|gpo|=0.098 median=27.6 | cos(push_sign,ur)=+0.98 cos(push_wprod,ur)=+0.99 cos(push_top,ur)=+0.97
+L10 min|gpo|=0.023 median=52.4 | cos(push_sign,ur)=-0.97 cos(push_wprod,ur)=-0.97 cos(push_top,ur)=-0.97
+L11 min|gpo|=0.020 median=98.0 | cos(push_sign,ur)=+0.96 cos(push_wprod,ur)=+0.97 cos(push_top,ur)=+0.96
+L12 min|gpo|=0.820 median=145.5 | cos(push_sign,ur)=+0.97 cos(push_wprod,ur)=+0.97 cos(push_top,ur)=+0.96
+L13 min|gpo|=0.090 median=167.0 | cos(push_sign,ur)=+0.97 cos(push_wprod,ur)=+0.97 cos(push_top,ur)=+0.96
+L14 min|gpo|=2.516 median=210.5 | cos(push_sign,ur)=+0.97 cos(push_wprod,ur)=+0.96 cos(push_top,ur)=+0.94
+L15 min|gpo|=5.000 median=245.5 | cos(push_sign,ur)=+0.54 cos(push_wprod,ur)=+0.53 cos(push_top,ur)=+0.50
+L16 min|gpo|=9.000 median=285.0 | cos(push_sign,ur)=-0.01 cos(push_wprod,ur)=-0.04 cos(push_top,ur)=-0.01
+L17 min|gpo|=0.133 median=337.0 | cos(push_sign,ur)=-0.40 cos(push_wprod,ur)=-0.35 cos(push_top,ur)=-0.30
+cross-layer consistency of signed pushes
+L4->5: sign: raw=+0.35 gaincorr=+0.30 | wprod: raw=+0.34 gaincorr=+0.28 | top5pct: raw=+0.30 gaincorr=+0.24 | unsigned top-dir |cos|=0.37
+L5->6: sign: raw=+0.49 gaincorr=+0.51 | wprod: raw=+0.50 gaincorr=+0.53 | top5pct: raw=+0.50 gaincorr=+0.52 | unsigned top-dir |cos|=0.52
+L6->7: sign: raw=+0.40 gaincorr=+0.45 | wprod: raw=+0.43 gaincorr=+0.48 | top5pct: raw=+0.42 gaincorr=+0.47 | unsigned top-dir |cos|=0.40
+L7->8: sign: raw=+0.53 gaincorr=+0.56 | wprod: raw=+0.53 gaincorr=+0.57 | top5pct: raw=+0.53 gaincorr=+0.57 | unsigned top-dir |cos|=0.53
+L8->9: sign: raw=+0.49 gaincorr=+0.56 | wprod: raw=+0.50 gaincorr=+0.57 | top5pct: raw=+0.48 gaincorr=+0.54 | unsigned top-dir |cos|=0.51
+L9->10: sign: raw=+0.39 gaincorr=+0.52 | wprod: raw=+0.39 gaincorr=+0.51 | top5pct: raw=+0.40 gaincorr=+0.49 | unsigned top-dir |cos|=0.37
+L10->11: sign: raw=+0.37 gaincorr=+0.51 | wprod: raw=+0.36 gaincorr=+0.52 | top5pct: raw=+0.34 gaincorr=+0.50 | unsigned top-dir |cos|=0.34
+L11->12: sign: raw=+0.42 gaincorr=+0.50 | wprod: raw=+0.43 gaincorr=+0.50 | top5pct: raw=+0.42 gaincorr=+0.50 | unsigned top-dir |cos|=0.39
+L12->13: sign: raw=+0.54 gaincorr=+0.60 | wprod: raw=+0.55 gaincorr=+0.61 | top5pct: raw=+0.53 gaincorr=+0.59 | unsigned top-dir |cos|=0.55
+L13->14: sign: raw=+0.54 gaincorr=+0.55 | wprod: raw=+0.53 gaincorr=+0.54 | top5pct: raw=+0.52 gaincorr=+0.52 | unsigned top-dir |cos|=0.58
+L14->15: sign: raw=+0.52 gaincorr=+0.58 | wprod: raw=+0.55 gaincorr=+0.59 | top5pct: raw=+0.54 gaincorr=+0.58 | unsigned top-dir |cos|=0.38
+L15->16: sign: raw=+0.37 gaincorr=+0.39 | wprod: raw=+0.46 gaincorr=+0.44 | top5pct: raw=+0.47 gaincorr=+0.45 | unsigned top-dir |cos|=0.49
+L16->17: sign: raw=+0.06 gaincorr=+0.04 | wprod: raw=+0.21 gaincorr=+0.18 | top5pct: raw=+0.19 gaincorr=+0.13 | unsigned top-dir |cos|=0.89
+
+```

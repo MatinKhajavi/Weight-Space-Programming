@@ -1,0 +1,7 @@
+OUTPUT of Python run 133 of at most 300:
+```
+15 scale .75: rel change 0.182, in-subspace factor -1.25
+19 scale .75: rel change 0.158, in-subspace factor -1.25
+23 scale .75: rel change 0.127, in-subspace factor -0.50
+
+```

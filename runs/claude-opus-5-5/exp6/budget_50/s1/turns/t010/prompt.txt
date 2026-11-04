@@ -1,0 +1,30 @@
+OUTPUT of Python run 7 of at most 120:
+```
+game 37 net black
+ply 93 opponent (7, 4) 
+   OOOOOOOOO | .OOO.OOOO | .OXXOO.O. | .XX.X..OO
+ply 94 net (7, 0) [[63, 0.3544], [78, 0.2901], [77, 0.2149]]
+   OOOOOOOOO | .OOO.OOOO | XOXXOO.O. | .XX.X..OO
+ply 95 opponent (6, 4) 
+   OOOOOOOOO | .OOOOOOOO | XOXXOO.O. | .XX.X..OO
+ply 96 net (6, 0) [[54, 1.0], [78, 0.0], [77, 0.0]]
+   OOOOOOOOO | XOOOOOOOO | XOXXOO.O. | .XX.X..OO
+ply 97 opponent (8, 0) 
+   OOOOOOOOO | .OOOOOOOO | .OXXOO.O. | OXX.X..OO
+ply 98 net (7, 0) [[75, 0.8909], [63, 0.1091], [78, 0.0]]
+   OOOOOOOOO | .OOOOOOOO | XOXXOO.O. | .XX.X..OO
+game 66 net white
+ply 64 opponent (8, 0) 
+   XXOXXXXXX | .XOOXXXOO | .XO.OXOOO | XO.OOOOOO
+ply 65 net (7, 0) [[63, 0.9935], [74, 0.0061], [34, 0.0001]]
+   XXOXXXXXX | .XOOXXXOO | OXO.OXOOO | .O.OOOOOO
+ply 66 opponent (4, 1) 
+   XXOXXXXXX | .XOOXXXOO | OXO.OXOOO | .O.OOOOOO
+ply 67 net (6, 0) [[54, 1.0], [34, 0.0], [33, 0.0]]
+   XXOXXXXXX | OXOOXXXOO | OXO.OXOOO | .O.OOOOOO
+ply 68 opponent (8, 0) 
+   XXOXXXXXX | .XOOXXXOO | .XO.OXOOO | XO.OOOOOO
+ply 69 net (7, 0) [[63, 0.9935], [74, 0.0061], [34, 0.0001]]
+   XXOXXXXXX | .XOOXXXOO | OXO.OXOOO | .O.OOOOOO
+
+```

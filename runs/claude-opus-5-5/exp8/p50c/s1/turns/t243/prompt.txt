@@ -1,0 +1,9 @@
+OUTPUT of Python run 218 of at most 300:
+```
+512 sample fields: {'pred': None, 'correct': False, 'tokens': 32768, 'cut': True}
+L15 head norm ratio: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0]
+L23 head norm ratio: [0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0]
+L22 down changed cols: [573] [2.0]
+helpers: ['ans_in', 'asc', 'c2t', 'commit_follow', 'comp', 'concl_positions', 'cond', 'copy_scores', 'copy_scores_fa', 'depth_profile', 'dla', 'dla_diff', 'drop_edit', 'dup_mass', 'edited', 'eff_tokens', 'enc', 'f_', 'find_loop', 'find_period', 'first_ans_idx', 'first_answer_pos', 'first_content_positions', 'first_correct_stmt', 'first_match', 'first_num_pos', 'first_result_pos', 'first_word', 'fp', 'head_dla', 'head_dla_gen', 'head_ind_all', 'head_stats', 'ind_mass', 'ind_targets', 'indent_of', 'indent_stats', 'indm', 'layer_dla', 'lev', 'line_initial_words', 'line_reuse', 'line_start_positions', 'line_starts', 'line_table', 'load', 'load_file', 'load_gen', 'load_original', 'loadj', 'loop_onset', 'ls_positions', 'mixer_dla', 'mkwin', 'neuron_dla', 'neuron_dla_set', 'norm_ans', 'nows', 'num_in', 'okv', 'onset_of', 'other_answers', 'paired', 'prompt_of', 'rank', 'rate_table', 'readgen', 'readj', 'regions_for', 'ritual', 'rmsf', 'save_edit', 'set_heads', 'short', 'show_after_answer', 'show_entry', 'snap', 'snapshot', 'st', 'stmap']
+
+```

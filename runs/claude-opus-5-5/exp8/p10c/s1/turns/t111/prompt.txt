@@ -1,0 +1,13 @@
+OUTPUT of Python run 98 of at most 300:
+```
+commonly finished (255): v4 right & v3 wrong 4, v4 wrong & v3 right 11 | paired diff -2.7 SE 1.5
+per 1k tok, commonly finished  v3: {'But': 2.18, 'Hold on': 0.0, 'double-check': 0.24, 'verify': 0.2, 'Actually': 0.09, 'Alternatively': 0.07, 'However': 0.76, 'Let me': 0.16, "Let's": 2.86, 'Maybe': 1.04, 'Okay': 0.38, 'confident': 0.04}
+per 1k tok, commonly finished  v4: {'But': 1.46, 'Hold on': 0.0, 'double-check': 0.22, 'verify': 0.23, 'Actually': 0.04, 'Alternatively': 0.1, 'However': 0.73, 'Let me': 0.12, "Let's": 2.67, 'Maybe': 0.8, 'Okay': 0.23, 'confident': 0.03}
+flipped right->wrong among commonly finished: 11 | median tokens v3 16114 v4 9999 | levels [('gsm', 6), ('Level 2', 2), ('Level 3', 2), ('Level 4', 1)]
+-- math_train_algebra_1711 ref 30 v4 pred 35 | v4 end of thinking:     This implies evaluating the expression using the domain of the functions. |     The arguments are 5. |     So the steps taken are correct. |  |     The result is 35. |  |     Final verification: |     $f(g(5)) = 53$ |     $g(f(5)) = 18$ |     $53 - 18 = 35$ |  |     I am confident in this result. | 
+-- math_train_counting_and_probability_225 ref \frac{41}{50} v4 pred \frac{4}{5} | v4 end of thinking: . |     Like "picking a number from the set of all integers divisible by..." No. |     "Equal probability" -> $1/N$. |     "Different spinner" -> Implies different domain. |     "Select a number" -> Uniform discrete distribution. |     Everything aligns. |  |     Final Answer seems to be 4/5. | 
+-- math_train_algebra_1543 ref -1 v4 pred 0 | v4 end of thinking: ne thing to check: could the input be interpreted as $\lfloor 17 . 2 \rfloor$ vs $\lfloor 17.2 \rfloor$? |     The space in LaTeX is just a separator. |     $17.2$ is unambiguous. |     Same for $-17.2$. |      |     No other potential pitfalls found. |     Proceed with generating solution. | 
+math: cut v3 0.52 v4 0.31 | acc-fin v3 0.902 v4 0.795
+gsm: cut v3 0.28 v4 0.16 | acc-fin v3 0.837 v4 0.750
+
+```

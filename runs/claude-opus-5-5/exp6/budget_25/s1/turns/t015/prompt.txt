@@ -1,0 +1,48 @@
+OUTPUT of Python run 11 of at most 120:
+```
+game 34 black margin 42.5 len 97
+[('o', 73, [None, 0]), ('n', 7, [74, 0.8639]), ('o', 63, [None, 0]), ('n', 72, [72, 1.0]), ('o', 8, [None, 0]), ('n', 17, [17, 0.7685]), ('o', 63, [None, 0]), ('n', 26, [26, 1.0]), ('o', 8, [None, 0]), ('n', 17, [17, 0.6457])]
+XXXX.X.X.   XXXX.X.X.
+X.X.XOOOX   X.X.XOOOX
+.X.XXXOOX   .X.XXXOO.
+X.XXOOOOO   X.XXOOOOO
+XX.XXXXXO   XX.XXXXXO
+X.X.XX.XX   X.X.XX.XX
+XX.XXXXX.   XX.XXXXX.
+OXX.XXX.X   OXX.XXX.X
+.O.X.X.X.   .O.X.X.X.
+game 46 black margin 29.5 len 99
+[('o', 77, [None, 0]), ('n', 79, [79, 0.7019]), ('o', 80, [None, 0]), ('n', 71, [71, 1.0]), ('o', 80, [None, 0]), ('n', 71, [71, 1.0]), ('o', 61, [None, 0]), ('n', 62, [62, 0.5]), ('o', 80, [None, 0]), ('n', 71, [71, 1.0])]
+.XX.XOO.X   .XX.XOO.X
+XX.XXOOO.   XX.XXOOO.
+XXXXXXXXX   XXXXXXXXX
+X.XXXXOX.   X.XXXXOX.
+XX.XXXOXX   XX.XXXOXX
+.XX.XXOOO   .XX.XXOOO
+XX.XXOOOX   XX.XXOOO.
+X.XXOOOOX   X.XXOOOOX
+.XXOOO.X.   .XXOOO.X.
+game 47 black margin 23.5 len 95
+[('o', 18, [None, 0]), ('n', 72, [54, 0.9721]), ('o', 0, [None, 0]), ('n', 54, [54, 0.9993]), ('o', 76, [None, 0]), ('n', 9, [9, 1.0]), ('o', 68, [None, 0]), ('n', 81, [81, 0.6952]), ('o', 0, [None, 0]), ('n', 67, [67, 1.0])]
+.X.X..X..   OX.X..X..
+XOX.XX.X.   .OX.XX.X.
+OOXXX.XXX   OOXXX.XXX
+OOOOXXX.X   OOOOXXX.X
+XOOOXX.XX   XOOOXX.XX
+.OOOX.XX.   .OOOX.XX.
+XOOOOX.XX   XOOOOX.XX
+.XOO.OX.X   .XOOX.X.X
+X.O.OX.XX   X.O.OX.XX
+game 63 black margin 26.5 len 103
+[('o', 4, [None, 0]), ('n', 5, [26, 0.6792]), ('o', 17, [None, 0]), ('n', 26, [26, 1.0]), ('o', 1, [None, 0]), ('n', 81, [81, 1.0]), ('o', 46, [None, 0]), ('n', 72, [72, 1.0]), ('o', 74, [None, 0]), ('n', 73, [73, 1.0])]
+OOXX.XX.X   OOXX.XX.X
+.OOXXX.X.   .OOXXX.X.
+OOXXXXX.X   OOXXXXX.X
+OOOOX.XXX   OOOOX.XXX
+OOOXXX.X.   OOOXXX.X.
+OOOOX.XXX   OOOOX.XXX
+OOOXXXXX.   OOOXXXXX.
+OOXXXXX.X   OOXXXXX.X
+XX.XX.XXX   .X.XX.XXX
+
+```

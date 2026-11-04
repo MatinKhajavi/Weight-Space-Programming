@@ -1,0 +1,7 @@
+OUTPUT of Python run 32 of at most 300:
+```
+2040 7 0
+2040 0 12
+2048
+
+```

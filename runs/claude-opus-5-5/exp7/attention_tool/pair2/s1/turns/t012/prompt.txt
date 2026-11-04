@@ -1,0 +1,52 @@
+OUTPUT of run 11 of at most 20:
+```
+== L5 dq*win: s[:6]=[1.566 1.198 1.078 0.907 0.838 0.721] median=0.029
+  dir0 s=1.566 head share=[0.15 0.21 0.3  0.34] +:[' woman', ' Henry', ' R', ' AT', ' BY', ' man', ' system', ' Alexander'] -:['ALLY', 'pio', 'ilir', 'лим', '้ย', 'clair', 'cem', 'loxy']
+  dir1 s=1.198 head share=[0.1  0.51 0.16 0.23] +:[' Fame', 'ffin', 'itch', 'udent', 'ution', 'cp', 'ciplinary', 'icio'] -:['อย', ' ø', ' yellow', ' mét', ' tam', ' Ö', ' cinnamon', ' slower']
+  dir2 s=1.078 head share=[0.18 0.18 0.47 0.17] +:[' subTest', ' Navigation', ' ذ', 'нда', 'neut', ' técnico', 'туа', ' 치'] -:['jer', 'IR', 'hr', 'eren', 'ham', ' summary', 'MR', 'lier']
+   H0 s1=0.866 s1/med=28.1 top3E=0.46 | H1 s1=0.916 s1/med=35.9 top3E=0.52 | H2 s1=1.016 s1/med=34.8 top3E=0.47 | H3 s1=0.946 s1/med=29.3 top3E=0.48
+  dk s[:4]=[0.753 0.602 0.512 0.46 ] s1/med=20.3 dir0 +:['úng', 'agers', '้ย', 'gung', 'gun', 'ajo', '}{*}{', 'unts'] -:[' Pacific', ' Riley', 'Pacific', ' Harrison', ' Pas', ' Dist', ' PAC', 'Lev']
+== L7 dq*win: s[:6]=[2.114 1.881 1.341 1.298 1.224 1.054] median=0.053
+  dir0 s=2.114 head share=[0.41 0.17 0.29 0.14] +:[' bath', ' three', ' battery', ' flowers', ' vehicle', ' cars', ' punishment', ' identical'] -:[' lingk', 'сков', 'ording', 'sey', 'LEY', 'ettings', 'ándose', 'miş']
+  dir1 s=1.881 head share=[0.1  0.39 0.32 0.19] +:['шо', 'pc', 'PC', 'pp', '+-', 'stra', '才能', 'までの'] -:[' anybody', ' elsewhere', 'uche', ' anywhere', ' everywhere', 'อย', 'acerb', ' `<']
+  dir2 s=1.341 head share=[0.25 0.31 0.19 0.26] +:[' LED', ' Americans', 'black', ' Visa', 'colnames', ' America', ' whites', 'finite'] -:[' nieuwe', ' nuevos', ' nouvelles', 'ใหม่', ' yeni', ' neuen', 'reas', ' neue']
+   H0 s1=1.394 s1/med=25.3 top3E=0.43 | H1 s1=1.324 s1/med=25.6 top3E=0.42 | H2 s1=1.255 s1/med=22.8 top3E=0.43 | H3 s1=1.096 s1/med=20.4 top3E=0.37
+  dk s[:4]=[1.025 0.863 0.838 0.754] s1/med=16.2 dir0 +:[' trained', ' necessary', ' sow', 'arantee', 'bred', ' demost', 'Serialize', ' wasted'] -:[' yeni', ' nieuwe', 'ách', 'okol', ' neue', 'middle', 'oshi', 'ős']
+== L9 dq*win: s[:6]=[2.556 1.88  1.342 1.27  1.006 0.953] median=0.040
+  dir0 s=2.556 head share=[0.37 0.21 0.25 0.18] +:[' three', ' greater', ' four', 'three', ' six', ' a', ' education', ' incorrect'] -:['leurs', 'yai', 'leur', 'ccion', 'jev', 'ảnh', ' {/*', ' migli']
+  dir1 s=1.880 head share=[0.22 0.28 0.28 0.22] +:['rés', ' nowhere', ' flooding', ' predominantly', ' settlement', ' primarily', ' Card', ' clouds'] -:['gram', 'autions', 'agi', 'ตร์', ' meses', 'emann', 'ln', 'zial']
+  dir2 s=1.342 head share=[0.29 0.2  0.25 0.25] +:['юд', ' Nurs', 'ат', 'alsa', 'idual', 'annot', 'ilee', 'accounts'] -:['"?', ' коле', ' vibration', 'มัน', ' ça', '?:', ' Mars', ' =>']
+   H0 s1=1.662 s1/med=37.3 top3E=0.59 | H1 s1=1.308 s1/med=31.2 top3E=0.49 | H2 s1=1.445 s1/med=31.0 top3E=0.49 | H3 s1=1.263 s1/med=29.1 top3E=0.47
+  dk s[:4]=[1.025 0.952 0.814 0.678] s1/med=19.6 dir0 +:['pc', 'فت', 'bery', 'ție', 'uties', 'ρχ', 'ggi', 'dB'] -:[' Sing', ' Root', ' Good', ' Wake', ' Farmers', ' Ran', ' Dum', ' unhappy']
+== L10 dq*win: s[:6]=[2.79  1.953 1.608 1.522 1.341 1.155] median=0.036
+  dir0 s=2.790 head share=[0.34 0.15 0.29 0.22] +:['colnames', '}*/', 'Inner', ' conqu', 'ステム', '(:,', "')->", ' irradi'] -:[' hundred', ' زائد', 'uated', 'falls', 'ressive', 'eners', ' kali', 'thirds']
+  dir1 s=1.953 head share=[0.41 0.13 0.22 0.24] +:[' flowers', ' legislature', ' everywhere', ' $', ' None', ' electricity', ' $\\', ' mandatory'] -:['تاب', ' Siber', ' tipos', ' escrib', 'سان', ' روی', 'tb', ' เนี่ย']
+  dir2 s=1.608 head share=[0.36 0.12 0.18 0.34] +:['inston', 'indra', 'inci', 'riters', ' paragraphs', 'graphs', 'ajj', 'paragraph'] -:[' possibility', 'sob', 'Opened', 'opened', 'телем', ' authenticity', ' basement', ' experiment']
+   H0 s1=1.689 s1/med=39.2 top3E=0.54 | H1 s1=1.274 s1/med=33.6 top3E=0.44 | H2 s1=1.538 s1/med=37.3 top3E=0.48 | H3 s1=1.459 s1/med=35.7 top3E=0.52
+  dk s[:4]=[1.307 1.04  0.872 0.817] s1/med=26.3 dir0 +:['mens', ' pretty', 'flowers', ' anybody', ' exactly', ' Vision', 'colnames', ' visibility'] -:['yg', ' researcher', ' ladder', ' Investig', ' educators', ' moc', ' investigating', ' compart']
+== L11 dq*win: s[:6]=[0.955 0.784 0.646 0.564 0.522 0.486] median=0.008
+  dir0 s=0.955 head share=[0.32 0.1  0.37 0.22] +:['rient', '小时', 'isure', ' Quick', ' breve', 'etto', 'chia', ' CGRect'] -:[' embargo', '}$}', ' three', 'ーツ', '送料無料', 'ις', ' قرار', '>=']
+  dir1 s=0.784 head share=[0.17 0.34 0.13 0.37] +:[' panjang', ' semanas', ' годи', ' estrateg', ' veces', 'つの', ' vezes', 'ші'] -:['icias', ' neither', 'cond', ' proximity', ' Proc', ']):', 'énom', ' vain']
+  dir2 s=0.646 head share=[0.19 0.18 0.27 0.37] +:[' League', ' città', 'brook', ' NOT', 'isEmpty', ' urb', ' None', ' Ford'] -:['cedure', ' procedures', 'cedures', 'guide', 'ườ', 'bling', 'роб', '资料']
+   H0 s1=0.589 s1/med=65.1 top3E=0.54 | H1 s1=0.531 s1/med=54.0 top3E=0.49 | H2 s1=0.609 s1/med=74.1 top3E=0.55 | H3 s1=0.547 s1/med=65.0 top3E=0.57
+  dk s[:4]=[0.463 0.385 0.329 0.295] s1/med=45.3 dir0 +:['énom', 'raphics', ' prosec', ' endothelial', ' Bios', ' térm', 'bé', 'beck'] -:[' hundred', 'cm', 'führ', ' semanas', 'στε', 'คม', 'eight', ' cinco']
+== L12 dq*win: s[:6]=[4.196 2.622 2.142 2.097 1.785 1.41 ] median=0.018
+  dir0 s=4.196 head share=[0.45 0.21 0.15 0.19] +:['日常', ' Wash', ' Weather', ' Cau', 'Talk', ' Nom', ' Hawai', 'raison'] -:['olutely', 'ις', ' euch', 'cret', 'arius', 'ospel', 'three', 'fif']
+  dir1 s=2.622 head share=[0.15 0.32 0.27 0.26] +:['ylation', 'olecular', 'aptop', ' doz', 'ตร์', 'usters', ' intric', 'qli'] -:[' anybody', 'born', ' ANY', ' transparency', ' religion', ' License', 'registration', ' nulla']
+  dir2 s=2.142 head share=[0.21 0.16 0.39 0.25] +:[' stars', ' cars', ' Peace', ' Venus', ' carro', ' Chrome', ' Grid', ' illuminated'] -:['ournal', '资料', 'mover', 'isateur', 'guna', 'holds', 'elte', 'akukan']
+   H0 s1=2.871 s1/med=144.4 top3E=0.70 | H1 s1=2.043 s1/med=103.5 top3E=0.65 | H2 s1=1.943 s1/med=83.3 top3E=0.60 | H3 s1=1.877 s1/med=94.8 top3E=0.62
+  dk s[:4]=[1.328 1.222 1.064 0.873] s1/med=43.7 dir0 +:['endering', ' shape', ' circulation', ' redist', ' fixture', ' surplus', ' Shape', ' Wake'] -:['年前', 'nehmer', 'chool', 'teen', 'pc', ' veces', 'abeth', 'rangle']
+== L13 dq*win: s[:6]=[1.747 1.456 1.313 1.17  1.045 0.95 ] median=0.017
+  dir0 s=1.747 head share=[0.19 0.28 0.3  0.22] +:[' ska', 'qualified', ' margins', '界面', ' Interface', 'Interface', ' BASE', ' convers'] -:['eight', '১০', 'culo', ' número', 'infty', 'ี่', ' number', 'number']
+  dir1 s=1.456 head share=[0.17 0.27 0.11 0.45] +:['those', 'ysis', ' hereby', 'government', 'iostream', 'uruh', 'らない', '送料無料'] -:['智能', ' neur', ' mph', '小时', 'thread', ' quad', ' EUR', 'xe']
+  dir2 s=1.313 head share=[0.16 0.5  0.12 0.22] +:['່ງ', 'bagai', ' mạnh', '../../', ' نفس', 'gunakan', 'ając', 'izontal'] -:['ums', 'idents', ' consec', 'itness', 'ade', 'ta', 'je', ' peace']
+   H0 s1=0.931 s1/med=38.0 top3E=0.43 | H1 s1=1.167 s1/med=49.0 top3E=0.52 | H2 s1=0.991 s1/med=40.5 top3E=0.46 | H3 s1=1.168 s1/med=52.3 top3E=0.46
+  dk s[:4]=[0.937 0.8   0.568 0.536] s1/med=28.8 dir0 +:['小时', ' hijos', 'ville', ' mund', 'nym', 'lijk', 'hattan', 'ardo'] -:['Authorization', '}`)', 'Usage', 'endment', ' seiz', 'uruh', '利用', 'qualified']
+== L17 dq*win: s[:6]=[1.948 1.532 1.309 1.226 1.091 1.012] median=0.011
+  dir0 s=1.948 head share=[0.31 0.11 0.55 0.04] +:['ança', 'abile', 'abases', ' nghiệp', 'abetes', 'izontal', 'ائل', ' logic'] -:['ั่น', ' ү', ' khác', 'ettings', ' london', ' aap', 'зд', ' Wellington']
+  dir1 s=1.532 head share=[0.06 0.71 0.09 0.14] +:['infty', ' morte', 'hurst', 'nextInt', ' см', ' ۱', '店舗', '二十'] -:['leur', 'тисти', ' prog', ' Main', ' sla', ' spec', ' Monitor', 'leurs']
+  dir2 s=1.309 head share=[0.38 0.24 0.2  0.19] +:['pton', 'ukk', 'Cou', 'acağ', 'wrapp', 'Height', 'raham', 'nev'] -:[' play', ' plays', ' played', ' dominant', ' urgent', ' garbage', ' games', ' frequent']
+   H0 s1=1.149 s1/med=60.9 top3E=0.46 | H1 s1=1.357 s1/med=60.4 top3E=0.46 | H2 s1=1.472 s1/med=84.6 top3E=0.53 | H3 s1=0.880 s1/med=50.9 top3E=0.43
+  dk s[:4]=[1.143 0.865 0.771 0.65 ] s1/med=41.3 dir0 +:['cious', 'ammed', 'etically', ' bags', 'ated', ' organised', 'leur', ' Bag'] -:[' gratu', 'scri', 'виде', ' Legion', 'infty', ' recurrence', ' profund', ' morte']
+
+```

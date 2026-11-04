@@ -1,0 +1,14 @@
+OUTPUT of Python run 134 of at most 300:
+```
+15 E6 restored, max|diff to formula| 0.0
+19 E6 restored, max|diff to formula| 0.0
+23 E6 restored, max|diff to formula| 0.0
+None s.75-orig (np.float64(29.69), np.float64(2.22), 512) | E6-s.75 (np.float64(1.37), np.float64(2.29), 512)
+gsm8k s.75-orig (np.float64(36.46), np.float64(3.99), 192) | E6-s.75 (np.float64(2.6), np.float64(4.27), 192)
+math s.75-orig (np.float64(25.62), np.float64(2.6), 320) | E6-s.75 (np.float64(0.62), np.float64(2.62), 320)
+list 14
+['id', 'j', 'lead', 'body', 'p', 'text']
+char lens [647, 672, 929, 919, 1022, 1026, 704, 777, 1022, 601, 1146, 881, 940, 1025] total 12311
+{'id': 'math_train_intermediate_algebra_161', 'j': '1', 'lead': '4} - \\sqrt{25-25} = \\sqrt{24} - 0 = \\sqrt{24}$.\n    Wait, $f', 'body': '$.\n    Wait, $f(25) = \\sqrt{24}$.\n    Wait, $f(25) = \\sqrt{2', 'p': '31', 'text': ''}
+
+```

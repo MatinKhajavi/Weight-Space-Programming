@@ -1,0 +1,23 @@
+OUTPUT of run 11 of at most 60:
+```
+principal cos [0.556 0.482 0.246] check [0.5557102560997009, 0.482375830411911, 0.2455560714006424]
+0 h0 z-0.8 base_z-3.9 | h1 z+0.2 base_z-4.9 | h2 z-1.1 base_z+0.3 | h3 z+4.0 base_z-2.7
+1 h0 z+3.9 base_z+1.2 | h1 z-1.1 base_z-0.0 | h2 z-3.5 base_z-1.8 | h3 z-2.0 base_z+1.5
+2 h0 z-1.8 base_z-2.9 | h1 z-2.2 base_z+0.6 | h2 z-0.9 base_z-0.5 | h3 z-3.1 base_z+0.1
+3 h0 z+2.1 base_z-0.8 | h1 z-0.8 base_z+1.2 | h2 z-1.8 base_z-3.6 | h3 z-0.7 base_z-2.6
+4 h0 z+0.3 base_z+0.1 | h1 z+0.4 base_z-0.2 | h2 z+0.3 base_z-1.8 | h3 z+0.6 base_z-0.4
+5 h0 z+2.5 base_z-0.8 | h1 z-0.6 base_z+0.4 | h2 z-1.1 base_z-1.0 | h3 z+0.8 base_z-0.1
+6 h0 z-1.7 base_z+0.5 | h1 z-1.6 base_z-1.8 | h2 z-1.2 base_z+0.8 | h3 z-1.8 base_z-0.4
+7 h0 z-1.9 base_z-0.5 | h1 z-0.5 base_z-0.7 | h2 z+1.4 base_z+2.2 | h3 z-2.4 base_z+3.3
+8 h0 z+1.9 base_z-2.5 | h1 z+1.6 base_z-0.1 | h2 z+1.0 base_z+1.5 | h3 z-0.0 base_z+1.0
+9 h0 z-1.9 base_z+0.3 | h1 z-1.5 base_z-0.7 | h2 z-1.8 base_z+1.6 | h3 z-0.9 base_z+2.0
+10 h0 z-2.0 base_z-1.4 | h1 z-0.4 base_z+0.9 | h2 z-1.8 base_z-0.8 | h3 z-1.6 base_z+0.7
+11 h0 z+1.4 base_z+1.0 | h1 z-0.8 base_z-2.9 | h2 z-2.0 base_z-1.8 | h3 z+0.2 base_z+2.1
+12 h0 z-1.1 base_z+3.3 | h1 z-1.6 base_z-1.0 | h2 z+0.3 base_z-2.7 | h3 z-1.7 base_z-3.6
+13 h0 z+2.1 base_z-0.2 | h1 z-3.1 base_z-0.2 | h2 z-4.1 base_z+1.3 | h3 z-0.6 base_z+0.7
+14 h0 z+0.2 base_z+1.6 | h1 z+1.5 base_z-4.0 | h2 z-0.8 base_z+1.3 | h3 z+1.5 base_z-0.6
+15 h0 z-2.3 base_z-3.4 | h1 z-3.9 base_z+1.2 | h2 z+1.6 base_z+4.6 | h3 z+1.9 base_z-2.4
+16 h0 z-2.9 base_z+1.8 | h1 z-6.0 base_z+0.4 | h2 z-7.5 base_z+1.3 | h3 z-0.0 base_z-1.0
+17 h0 z-3.1 base_z-3.2 | h1 z+2.9 base_z-7.2 | h2 z-1.9 base_z+1.4 | h3 z-5.0 base_z+2.5
+
+```

@@ -1,0 +1,12 @@
+OUTPUT of Python run 41 of at most 120:
+```
+('noown', 'cap1') 253
+('noown', 'capN') 172
+('own3', 'cap1') 835
+('own3', 'capN') 416
+('own3', 'nocap') 702
+('ownweak', 'cap1') 92
+('ownweak', 'capN') 139
+('ownweak', 'nocap') 167
+
+```

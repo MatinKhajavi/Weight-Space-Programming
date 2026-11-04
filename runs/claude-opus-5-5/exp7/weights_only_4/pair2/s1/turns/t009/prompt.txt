@@ -1,0 +1,23 @@
+OUTPUT of run 8 of at most 60:
+```
+144
+0 h0: zAns=+0.8 zRand=-1.0 baseCopy=-15.01 | h1: zAns=+0.1 zRand=+3.7 baseCopy=-107.40 | h2: zAns=+0.3 zRand=-3.7 baseCopy=-66.64 | h3: zAns=+1.5 zRand=+1.2 baseCopy=+106.02
+1 h0: zAns=+0.0 zRand=-2.5 baseCopy=+367.61 | h1: zAns=-0.6 zRand=-2.6 baseCopy=+404.60 | h2: zAns=+0.5 zRand=-5.2 baseCopy=+552.29 | h3: zAns=-1.9 zRand=-2.5 baseCopy=+168.43
+2 h0: zAns=+0.4 zRand=+4.5 baseCopy=+408.30 | h1: zAns=-1.8 zRand=+2.8 baseCopy=-470.31 | h2: zAns=-2.2 zRand=-2.2 baseCopy=-66.37 | h3: zAns=-2.1 zRand=+2.7 baseCopy=-54.83
+3 h0: zAns=-0.6 zRand=+2.7 baseCopy=-1161.76 | h1: zAns=-0.5 zRand=-2.0 baseCopy=+438.73 | h2: zAns=-0.5 zRand=-0.2 baseCopy=+1532.02 | h3: zAns=+1.3 zRand=-0.9 baseCopy=-73.23
+4 h0: zAns=+0.8 zRand=-3.5 baseCopy=+165.26 | h1: zAns=-0.2 zRand=-3.2 baseCopy=+312.41 | h2: zAns=+2.2 zRand=+3.2 baseCopy=-93.62 | h3: zAns=-0.1 zRand=-0.3 baseCopy=+80.10
+5 h0: zAns=+3.6 zRand=+2.6 baseCopy=+1309.13 | h1: zAns=-0.6 zRand=-1.8 baseCopy=+1082.83 | h2: zAns=-0.7 zRand=-4.6 baseCopy=+874.75 | h3: zAns=-0.5 zRand=-0.7 baseCopy=-839.85
+6 h0: zAns=-3.4 zRand=-6.0 baseCopy=+1917.39 | h1: zAns=-0.7 zRand=-5.1 baseCopy=-2448.33 | h2: zAns=-3.3 zRand=-2.6 baseCopy=+2835.03 | h3: zAns=-2.0 zRand=-3.3 baseCopy=+1787.69
+7 h0: zAns=-2.7 zRand=+1.2 baseCopy=+7910.13 | h1: zAns=-1.8 zRand=-2.9 baseCopy=-21283.79 | h2: zAns=-1.0 zRand=+3.1 baseCopy=+8107.53 | h3: zAns=-1.9 zRand=-1.1 baseCopy=+3846.79
+8 h0: zAns=+1.4 zRand=+0.8 baseCopy=-8637.92 | h1: zAns=-1.4 zRand=-3.6 baseCopy=+2261.60 | h2: zAns=-0.3 zRand=+1.3 baseCopy=+4699.14 | h3: zAns=-2.8 zRand=-6.7 baseCopy=+1351.56
+9 h0: zAns=+1.1 zRand=+0.3 baseCopy=+2757.07 | h1: zAns=-2.4 zRand=-0.1 baseCopy=-13260.82 | h2: zAns=-1.2 zRand=-3.2 baseCopy=+7686.05 | h3: zAns=-0.6 zRand=-2.1 baseCopy=+4957.26
+10 h0: zAns=-2.4 zRand=-0.1 baseCopy=+14798.91 | h1: zAns=+1.0 zRand=-0.8 baseCopy=+1121.30 | h2: zAns=-2.1 zRand=+1.6 baseCopy=+11782.76 | h3: zAns=-0.9 zRand=-2.8 baseCopy=-4175.92
+11 h0: zAns=-2.9 zRand=-0.9 baseCopy=+2341.05 | h1: zAns=-2.5 zRand=-3.2 baseCopy=+15766.31 | h2: zAns=-0.8 zRand=-2.4 baseCopy=+23124.28 | h3: zAns=+0.8 zRand=+0.5 baseCopy=-28198.91
+12 h0: zAns=-4.5 zRand=-3.3 baseCopy=+629.45 | h1: zAns=-4.1 zRand=-4.0 baseCopy=+44705.80 | h2: zAns=-1.4 zRand=-3.3 baseCopy=+74448.77 | h3: zAns=-3.5 zRand=+0.0 baseCopy=+28943.96
+13 h0: zAns=+1.9 zRand=+3.5 baseCopy=+8859.92 | h1: zAns=-3.3 zRand=-0.7 baseCopy=+10044.18 | h2: zAns=-1.5 zRand=+0.4 baseCopy=+18285.50 | h3: zAns=-1.3 zRand=-0.3 baseCopy=-21545.40
+14 h0: zAns=+1.7 zRand=+1.3 baseCopy=-4555.43 | h1: zAns=-2.4 zRand=+1.4 baseCopy=+30070.42 | h2: zAns=-3.7 zRand=-0.5 baseCopy=+46929.98 | h3: zAns=+2.4 zRand=-0.7 baseCopy=-1505.69
+15 h0: zAns=-5.9 zRand=+0.4 baseCopy=+97692.18 | h1: zAns=-4.8 zRand=-2.3 baseCopy=-177041.91 | h2: zAns=-2.0 zRand=-0.1 baseCopy=+75474.17 | h3: zAns=-2.1 zRand=+1.2 baseCopy=+128744.53
+16 h0: zAns=+0.1 zRand=-0.5 baseCopy=+12870.39 | h1: zAns=-1.6 zRand=-0.6 baseCopy=+14308.63 | h2: zAns=-1.9 zRand=-2.7 baseCopy=+29741.49 | h3: zAns=-2.7 zRand=-1.2 baseCopy=+4608.00
+17 h0: zAns=+5.4 zRand=+0.2 baseCopy=+49481.88 | h1: zAns=+0.3 zRand=+4.8 baseCopy=+37425.84 | h2: zAns=+0.8 zRand=-0.3 baseCopy=-27077.48 | h3: zAns=+2.7 zRand=-2.0 baseCopy=+3529.64
+
+```

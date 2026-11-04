@@ -1,0 +1,9 @@
+OUTPUT of Python run 103 of at most 300:
+```
+E5 span inside E6 span: 0.9999996423721313
+15 rel change 0.243
+19 rel change 0.211
+23 rel change 0.169
+['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.19.self_attn.o_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']
+
+```

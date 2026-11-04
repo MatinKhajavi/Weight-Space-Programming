@@ -1,0 +1,2 @@
+I'm picking 12 samples where the onset falls under 2600 tokens and the period is 12 to 80 tokens, with each text cut at the onset plus six periods, which puts the lengths around 1100 to 2900 tokens plus the prompt. Before running the TF pass I need the exact prompt string, so I'm checking the start of the chat template for a default system prompt and seeing whether jinja2 is available to render it.
+

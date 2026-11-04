@@ -1,0 +1,16 @@
+I'm choosing windows for the C loops: each should hold about 1000 tokens before onset plus several cycles. The loop units are deeply indented bullet lines, so I'm checking where the per-token probability drops below roughly 0.9, likely at the line start after indentation or at the content start.
+
+I'm weighing whether to keep full context or use 2k-token windows, since full contexts would be far too large in memory. I'm settling on about 12 windows of up to 2048 tokens each, from the edited C loops, with roughly 1200 tokens before onset and 800 inside the loop. For the forward pass I'm planning to save token logprobs, top-10, and hidden states for all 25 layers, plus MLP activations for layers 18 to 23, since keeping every MLP layer would exceed the memory limit.
+
+I'm weighing attention-pattern analysis against a cheaper route: estimating each attention layer's contribution from hidden-state differences minus the MLP output. Per-head attribution inside those layers would still need attention patterns, which the two-text limit makes awkward to combine with the main pass.
+
+I'm now asking whether per-head contributions can be recovered from the hidden states alone, and they can't: the difference between consecutive hidden states only gives the total attention output, not its split by head. So I'm considering a two-pass plan, a cheap DLA pass over the 12 windows to find which layers matter, then a separate attention pass on two windows for per-head detail. I'm also wondering whether head outputs could be rebuilt from the attention weights and the normalized previous hidden states through the value projection and the sigmoid gate.
+
+I'm weighing whether per-head effects can be read from attention patterns in the C-loop windows, and checking which layers matter first. Two candidate edits are forming: ablating or scaling a specific attention head with strong in-loop induction mass, or amplifying an MLP neuron that seems to brake the bullet-line repetition, similar to the earlier neuron 22.573.
+
+I'm thinking about the loop's entry point: before a loop begins, the model picks content at the start of a new bullet line, and inside the loop it repeats the previous bullet's content. The branch-point probability for copying is around 0.5 at onset and climbs with each cycle, so the loop reinforces itself. Since the presence penalty is already 1.5 and the copy logit margin still exceeds that, the loops persist anyway, and a more targeted fix would reduce the induction that drives this. Next I'll pull C-loop samples from gen_13 and gen_16 and locate their onsets with the period and onset helpers.
+
+I'm picking windows for the C loops, with a mix of GSM and MATH samples and bullet and "Maybe" units, cut at token boundaries around each onset. The window would run about 1200 tokens before onset and 800 into the loop, requiring at least three cycles. I'm also checking how the model behaves at the start of a window that begins mid-text with no prompt.
+
+I'm settling on the window layout for the C loops: prepend the problem prompt to each window so the model has context, then cut the window at a line boundary. I'm also writing code to pull the C-loop samples from gen_13 and gen_16.
+

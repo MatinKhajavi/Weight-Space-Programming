@@ -1,0 +1,4 @@
+Weak opponents are at 192 out of 192 over the last three passes, while strong sits around 0.63. With three runs and five passes left, I'm weighing a two-pass test of "tengen" reduction, or a keyword check, against the possibility that the hidden opponents are weaker than "strong" (79–98% against random), where we're already near 100%.
+
+I'm weighing whether the strongest hidden opponents are the only ones costing us, since against weaker ones we're already near 100%. Against the strongest we'd sit around 0.6 to 0.65, which puts the average near 0.9. A small gain against strong isn't worth risking a regression against weak, and a change to positional weights would touch all of them. So I'm leaning toward not changing anything further and using the remaining passes to validate against random, weak, and strong.
+

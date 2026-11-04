@@ -1,0 +1,18 @@
+OUTPUT of Python run 109 of at most 300:
+```
+OTHER P=21| .\n    The answer is 0
+OTHER P=57| \n    *   Maybe the question is asking for $\cos(5\pi/4)$?
+OTHER P=79| .\n    *   Maybe $\frac{5\pi}{4}$ is meant to be interpreted as $\frac{5}{4}\pi$
+OTHER P=49|  imply $x$ is a multiple of 120? Yes.\n    Does it
+OTHER P=34| , 4 sets of trousers.\n    *   Then
+OTHER P=23|  $55^2 - 45^2$.\n    *  
+OTHER P=75| $?\n        *   Yes.\n        *   Is it possible to interpret $95^2$ as $95^2
+VER P=69| s it possible that the prompt meant $x^{2y} = 4$ and $x=4$?\n    *   I
+VER P=87|  $\binom{9}{2} \times \binom{7}{2}$?\n    *   Yes.\n    *   Is it possible the user meant
+VER P=93|  $55^2 - 45^2 = (55-45)(55+45)$? Yes.\n    *   Is it possible to interpret $55^2 - 45^2$ using
+NOLOOP| h 30 and 40".\n    So the answer is 120.\n\n    So the answer is 120.\n\n    I'll put 120 in the box.\n\n    This is the answer.\n    The answer is 120.\n\n    If the question meant "multiple of 30" AND "multiple of 40" AND "multiple of 16", then the answer would be 240
+NOLOOP| eck if the question implies that the *items* are indistinguishable.\n    *   If trousers are indistinguishable, we have 1 choice for trousers.\n    *   So, $1 \times 7 \times 3 = 21$.\n    *   So, 84.\n\n    *   I'll stick with 84.\n\n    *   Okay, I'll stop guessing
+NOLOOP| 4, 4205, 4206, 4207, 4208, 4209, 4210, 4211, 4212, 4213, 4214, 4215, 4216, 4217, 4218, 4219, 4220, 4221, 4222, 4223, 4224, 4225, 4226, 4227, 4228, 4229, 4230, 4231, 4232, 4233, 4234, 4235, 4236, 4237, 4238, 4239, 4240, 4241, 4242, 4243, 4244, 4245, 4246, 4247,
+NOLOOP|  *   $3229 = 3 \times 1076$.\n    *   $3231 = 1199$.\n    *   $3233 = 1199$.\n    *   $3235 = 5 \times 647$.\n    *   $3237 = 3 \times 1079$.\n    *   $3239 = 1199$.\n    *   $3241 = 1199$.\n    *   $3243 = 3 \times 1081$.\n    *   $3245 = 5 \times 649$.\n    *   $3247
+
+```

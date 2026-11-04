@@ -1,0 +1,6 @@
+Across the eight layers the per-item signal is small but points the same way: L4, L12 and L15 sit around +2 and the rest around +1, all favoring A as correct, with roughly 60% of items agreeing. That makes the evidence moderately supportive of A being correct over B being sycophantic. Before leaning on it, I want to recheck which direction the theory predicts for T1, since the sign only means something if that expectation is right.
+
+I'm checking the sign logic for T1 under both models: the correct model pushes country→capital up and country→wrong-guess down, so T1 rises, while the sycophantic model reverses that, so A−B > 0 points to A being correct. Next I'm considering arithmetic and color prompts as extra tests, and the color results from before (strong positive on red/orange items, negative on sky and banana) still fit A being correct. Finally I'm planning a QK check to see whether B attends more to the guessed city tokens than to the country token.
+
+I'm weighing a query-agnostic check instead: whether the key-side change for wrong-city tokens lines up with the heads' typical query directions at the answer position. Failing a clean query to use, I'll test with a few candidate query tokens and see which way the attention shifts.
+

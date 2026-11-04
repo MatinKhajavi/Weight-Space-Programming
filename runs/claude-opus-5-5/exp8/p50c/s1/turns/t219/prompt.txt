@@ -1,0 +1,46 @@
+OUTPUT of Python run 195 of at most 300:
+```
+41 median tokens 15240.0
+_6141 | pred '150000' | ref 288 | tok 18345
+_1880 | pred '12' | ref 6 | tok 16231
+_4694 | pred '180' | ref 90 | tok 11782
+_1699 | pred '60' | ref 30 | tok 8225
+_2141 | pred '8' | ref 5 | tok 7420
+_2809 | pred '350000' | ref 250000 | tok 12071
+_1192 | pred '40' | ref 20 | tok 18056
+_5316 | pred '24' | ref 8 | tok 10219
+_6287 | pred '75000' | ref 175000 | tok 24125
+_3440 | pred '21' | ref 15 | tok 9190
+_2985 | pred '36' | ref 72 | tok 15025
+_5725 | pred '20' | ref 14600 | tok 28056
+_5035 | pred '\\$367.74' | ref 363 | tok 14042
+_4333 | pred '250' | ref 225 | tok 16195
+_3872 | pred '186' | ref 55 | tok 20524
+_5844 | pred '-49' | ref -47 | tok 18753
+_1884 | pred '250' | ref 280 | tok 30211
+_4831 | pred '21' | ref 19 | tok 12673
+_2275 | pred '4' | ref 2 | tok 22836
+_3397 | pred '9' | ref 19 | tok 23475
+_5716 | pred '26' | ref 8 | tok 11231
+_5763 | pred '666' | ref 673 | tok 5619
+_1172 | pred '105' | ref 30 | tok 9406
+_7300 | pred '10' | ref 160 | tok 11299
+_7095 | pred '73' | ref 195 | tok 17766
+_4799 | pred '242.50' | ref 1525 | tok 26366
+_5259 | pred '16' | ref 8 | tok 15240
+_4147 | pred '3027' | ref 3061 | tok 5558
+_5866 | pred '80' | ref 180 | tok 8023
+_4931 | pred '150' | ref 75 | tok 30136
+_3670 | pred '9' | ref 11 | tok 26488
+_1666 | pred '2' | ref 10 | tok 12705
+_2190 | pred '54' | ref 45 | tok 19363
+_1668 | pred '40' | ref 10 | tok 19148
+in_17 | pred '47' | ref 43 | tok 16714
+_4773 | pred '6 \\text{ doctors}, \\ 16 \\text{ nurses}' | ref 22 | tok 3460
+_7172 | pred '2' | ref 6 | tok 7651
+n_691 | pred '18' | ref 10 | tok 24022
+n_459 | pred '18000' | ref 10080 | tok 26960
+_4282 | pred '\\$120' | ref 240 | tok 2533
+_7272 | pred '24' | ref 9 | tok 14538
+
+```

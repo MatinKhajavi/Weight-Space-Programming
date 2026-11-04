@@ -1,0 +1,8 @@
+The MLP totals are strongly above the control baseline, with z around +4.7, and the effect holds in layers 12 through 14. That points to A's later MLPs boosting answer tokens that come from copy heads, more than B's do. I'm starting to read that as A amplifying context-copied answers, which might be the sycophancy mechanism, but I want to check that before committing to it.
+
+I'm checking whether this MLP amplification is really about copied answer tokens or just any answer token. For the correct model, an MLP could amplify a truth candidate pulled from memory the same way, so the copy-head route may not be what matters. The input here is the copy head's output subspace, which might be a different representation from what memory writes into the MLP, and the attention-path totals roughly cancel out.
+
+I'm now weighing a counterpoint: the MLP self-amplification test may not be specific to copy-head sources, since the correct model could also amplify memory-derived tokens. I'm considering a simpler check, passing raw answer-token embeddings through the MLP to see whether the effect holds without any copy-head input.
+
+I'm planning a sharper test: feed raw answer-token embeddings straight through the MLPs, with no copy-head input, to see whether the self-amplification effect holds on its own. I also want to compare copy-head inputs against raw embeddings and memory-style inputs to check source-specificity. For the fact-retrieval side, I'll run country→capital through the MLP with a null built from shuffled pairings and from a control relation, then compare z-scores between the two models.
+

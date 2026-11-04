@@ -1,0 +1,24 @@
+OUTPUT of run 31 of at most 60:
+```
+head | zQ_match zK_match | rel dQK(total) | rel dQK top-sv(nonmatch proxy) | OVcopy z(prev)
+L5h0 |  +4.47  +1.87 | 0.0230 | top5 0.0181 | match-share 0.013
+L5h2 |  +6.54  +1.22 | 0.0192 | top5 0.0144 | match-share 0.023
+L5h3 |  -2.62  +1.42 | 0.0235 | top5 0.0174 | match-share 0.005
+L6h1 |  +0.09  -1.25 | 0.0164 | top5 0.0119 | match-share 0.002
+L6h2 |  -0.56  +0.55 | 0.0227 | top5 0.0154 | match-share 0.000
+L6h3 |  -2.92  -1.92 | 0.0158 | top5 0.0104 | match-share 0.009
+L7h0 |  -2.34  +1.65 | 0.0130 | top5 0.0089 | match-share 0.001
+L11h0 |  +1.29  +0.93 | 0.0502 | top5 0.0409 | match-share 0.006
+L11h1 |  -2.70  +1.29 | 0.0420 | top5 0.0343 | match-share 0.005
+L11h2 |  -0.50  +1.72 | 0.0183 | top5 0.0139 | match-share 0.003
+L13h0 |  -0.69  +0.32 | 0.0157 | top5 0.0122 | match-share 0.001
+L13h1 |  -0.65  -0.05 | 0.0243 | top5 0.0197 | match-share 0.003
+L16h0 |  -0.34  -0.22 | 0.0163 | top5 0.0127 | match-share 0.003
+L16h1 |  +1.71  +0.74 | 0.0174 | top5 0.0134 | match-share 0.010
+L16h2 |  -1.34  -2.32 | 0.0156 | top5 0.0117 | match-share 0.013
+L16h3 |  +0.03  -0.39 | 0.0113 | top5 0.0086 | match-share 0.002
+L17h0 |  -1.21  +0.20 | 0.0186 | top5 0.0159 | match-share 0.004
+L17h1 |  +4.33  +1.02 | 0.0249 | top5 0.0216 | match-share 0.023
+L17h3 |  -0.89  -0.29 | 0.0140 | top5 0.0121 | match-share 0.006
+
+```

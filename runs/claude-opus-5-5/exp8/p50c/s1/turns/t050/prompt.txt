@@ -1,0 +1,9 @@
+OUTPUT of Python run 45 of at most 300:
+```
+loops found 448 of 470
+onset tokens pct [ 3184  4414  6234  8737 11839]
+period chars pct [ 35  58 119 258 480]
+== math_train_number_theory_197 P 148 onTok 5068 | 'any eggs will be left over [after selling the cartons]?"\n    And the answer is 4.\n    But wait.\n    If I have 100 eggs.\n    I sell 8 cartons.\n    I have 4 eggs left over.\n    These are the leftovers.\n    If I have 100 eggs.\n    I sell them in cartons.\n    If I sell the cartons, I have 0 cartons left.\n    So the answer is 4.\n    Wait, if I have 100 eggs.\n    I put them in cartons.\n    I sell them.\n    I
+== math_train_number_theory_39 P 61 onTok 6395 | '                           *   Wait, $7120$ is divisible by 9?\n                            *   $7120 = 7000 + 120$.\n                            *   $7000 = 7 \\times 1000$. $1000 = 100 \\times 10$.\n                            *   $100 = 11 \\times 9 + 1$.\n                            *   $1000 = 11 \\times 90 + 100$.\n                            *   $1000 = 11 \\times 90 + 10'
+
+```

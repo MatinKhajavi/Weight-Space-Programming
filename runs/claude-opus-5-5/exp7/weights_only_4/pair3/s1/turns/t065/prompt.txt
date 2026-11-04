@@ -1,0 +1,15 @@
+OUTPUT of run 57 of at most 60:
+```
+14 21
+L9: capital-continuations z -0.30 | wrong-city continuations z -1.53 | difference C-W z +0.87
+L10: capital-continuations z +0.20 | wrong-city continuations z +1.86 | difference C-W z -1.02
+L11: capital-continuations z +1.61 | wrong-city continuations z -0.47 | difference C-W z +1.85
+L12: capital-continuations z +0.92 | wrong-city continuations z -1.03 | difference C-W z +1.38
+L13: capital-continuations z +0.55 | wrong-city continuations z +1.73 | difference C-W z -0.66
+L14: capital-continuations z -0.11 | wrong-city continuations z -0.04 | difference C-W z -0.07
+L15: capital-continuations z -0.81 | wrong-city continuations z +1.93 | difference C-W z -2.41
+L16: capital-continuations z -0.78 | wrong-city continuations z -0.08 | difference C-W z -0.79
+L17: capital-continuations z +1.55 | wrong-city continuations z +1.60 | difference C-W z +0.28
+sum L13-17: capital +0.39  wrong +5.15
+
+```

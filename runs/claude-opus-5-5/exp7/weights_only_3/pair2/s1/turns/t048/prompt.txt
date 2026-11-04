@@ -1,0 +1,29 @@
+OUTPUT of run 47 of at most 60:
+```
+L17 MLP        answer-logit diff norm 402.3  enrichment 19.8
+L16 MLP        answer-logit diff norm 287.5  enrichment 13.3
+L15 MLP        answer-logit diff norm 183.9  enrichment 6.8
+L14 MLP        answer-logit diff norm 124.6  enrichment 4.2
+L13 MLP        answer-logit diff norm 85.81  enrichment 2.7
+L12 MLP        answer-logit diff norm 70.99  enrichment 2.2
+L17 attn h3    answer-logit diff norm 43.83  enrichment 12.3
+L11 MLP        answer-logit diff norm 40.99  enrichment 1.7
+L15 attn h2    answer-logit diff norm 39.76  enrichment 4.1
+L16 attn h0    answer-logit diff norm 39.58  enrichment 7.7
+L16 attn h1    answer-logit diff norm 39.24  enrichment 7.9
+L16 attn h3    answer-logit diff norm 38.68  enrichment 7.7
+L15 attn h1    answer-logit diff norm 38.4  enrichment 3.8
+L17 attn h0    answer-logit diff norm 36.64  enrichment 8.0
+L15 attn h3    answer-logit diff norm 36.42  enrichment 3.6
+L16 attn h2    answer-logit diff norm 35.09  enrichment 6.4
+L17 attn h1    answer-logit diff norm 33.77  enrichment 6.2
+L15 attn h0    answer-logit diff norm 30.89  enrichment 3.0
+L14 attn h1    answer-logit diff norm 26.33  enrichment 2.8
+L14 attn h3    answer-logit diff norm 26.26  enrichment 2.4
+L14 attn h0    answer-logit diff norm 25.55  enrichment 2.7
+L14 attn h2    answer-logit diff norm 23.76  enrichment 2.3
+L12 attn h1    answer-logit diff norm 23.34  enrichment 2.1
+L17 attn h2    answer-logit diff norm 23.21  enrichment 3.6
+L13 attn h1    answer-logit diff norm 23.09  enrichment 3.0
+
+```

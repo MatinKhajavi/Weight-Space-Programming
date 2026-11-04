@@ -1,0 +1,23 @@
+OUTPUT of run 27 of at most 60:
+```
+layer: MLP down answer-write energy change z | attn per-head o_proj z
+L0 MLP z-0.5 (base enr 1.30) | h0 -0.8 | h1 -0.1 | h2 -0.3 | h3 +1.6
+L1 MLP z-0.6 (base enr 1.11) | h0 +1.0 | h1 +0.9 | h2 +0.8 | h3 +1.4
+L2 MLP z+1.8 (base enr 1.05) | h0 -1.8 | h1 -1.0 | h2 +1.8 | h3 -0.0
+L3 MLP z-1.2 (base enr 1.01) | h0 -1.5 | h1 +0.6 | h2 +0.5 | h3 -0.4
+L4 MLP z-0.1 (base enr 1.02) | h0 +1.8 | h1 -1.4 | h2 +0.6 | h3 -0.6
+L5 MLP z-0.1 (base enr 1.00) | h0 +0.3 | h1 +2.1 | h2 +0.3 | h3 +0.8
+L6 MLP z+1.5 (base enr 0.97) | h0 -1.0 | h1 +0.5 | h2 -1.3 | h3 -0.0
+L7 MLP z+0.2 (base enr 1.00) | h0 -0.4 | h1 -0.1 | h2 -0.2 | h3 -0.4
+L8 MLP z+1.5 (base enr 1.00) | h0 +0.3 | h1 +1.0 | h2 -0.8 | h3 -0.6
+L9 MLP z-3.9 (base enr 1.00) | h0 +3.4 | h1 -0.3 | h2 -0.5 | h3 -2.8
+L10 MLP z-1.5 (base enr 0.96) | h0 +1.5 | h1 -0.0 | h2 +0.3 | h3 +2.6
+L11 MLP z+2.9 (base enr 0.98) | h0 -2.6 | h1 -1.0 | h2 -3.5 | h3 +0.6
+L12 MLP z-1.2 (base enr 0.98) | h0 -0.6 | h1 -3.9 | h2 +0.1 | h3 +0.3
+L13 MLP z-0.2 (base enr 1.04) | h0 -1.4 | h1 -1.2 | h2 +1.0 | h3 +5.2
+L14 MLP z-0.6 (base enr 0.99) | h0 -0.8 | h1 +0.3 | h2 -1.9 | h3 +0.8
+L15 MLP z+1.9 (base enr 1.00) | h0 -0.2 | h1 +3.4 | h2 -5.3 | h3 -0.4
+L16 MLP z+14.5 (base enr 0.91) | h0 +7.4 | h1 -5.1 | h2 +2.1 | h3 -12.7
+L17 MLP z+15.3 (base enr 0.85) | h0 -1.5 | h1 +11.0 | h2 +0.2 | h3 -2.6
+
+```

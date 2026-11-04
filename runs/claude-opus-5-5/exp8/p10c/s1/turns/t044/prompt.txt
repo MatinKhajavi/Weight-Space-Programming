@@ -1,0 +1,11 @@
+OUTPUT of Python run 38 of at most 300:
+```
+['attn_11.npy', 'attn_15.npy', 'attn_19.npy', 'attn_23.npy', 'attn_3.npy', 'attn_7.npy', 'hidden_0.npy', 'hidden_1.npy', 'hidden_10.npy', 'hidden_11.npy', 'hidden_12.npy', 'hidden_13.npy', 'hidden_14.npy', 'hidden_15.npy', 'hidden_16.npy', 'hidden_17.npy', 'hidden_18.npy', 'hidden_19.npy', 'hidden_2.npy', 'hidden_20.npy', 'hidden_21.npy', 'hidden_22.npy', 'hidden_23.npy', 'hidden_24.npy', 'hidden_3.npy', 'hidden_4.npy', 'hidden_5.npy', 'hidden_6.npy', 'hidden_7.npy', 'hidden_8.npy', 'hidden_9.npy', 'input_ids.npy', 'meta.json', 'mlp_act_0.npy', 'mlp_act_1.npy', 'mlp_act_10.npy', 'mlp_act_11.npy', 'mlp_act_12.npy', 'mlp_act_13.npy', 'mlp_act_14.npy', 'mlp_act_15.npy', 'mlp_act_16.npy', 'mlp_act_17.npy', 'mlp_act_18.npy', 'mlp_act_19.npy', 'mlp_act_2.npy', 'mlp_act_20.npy', 'mlp_act_21.npy', 'mlp_act_22.npy', 'mlp_act_23.npy', 'mlp_act_3.npy', 'mlp_act_4.npy', 'mlp_act_5.npy', 'mlp_act_6.npy', 'mlp_act_7.npy', 'mlp_act_8.npy', 'mlp_act_9.npy', 'token_logprobs.npy', 'topk_ids.npy', 'topk_logprobs.npy']
+<class 'list'> 2 <class 'str'>
+0 ntok 1950 period 71 onset 1601
+  cycle: '            *   Wait, if the cat is stationary, it cannot run away.\n            *   Therefore, the cat cannot run away *while* resisting.\n            *   Therefore, the cat must run away *after* the resistance.\n            *   So the distance covered is the distance moved from the resting position t'
+Traceback (most recent call last):
+  File "<run>", line 17, in <module>
+TypeError: unsupported operand type(s) for -: 'int' and 'NoneType'
+
+```

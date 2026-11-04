@@ -1,0 +1,26 @@
+OUTPUT of Python run 25 of at most 120:
+```
+('random', 'repetition', 1, 'opponent') 2
+('random', 'two passes', 1, 'net') 30
+('strong', 'move limit', 1, 'net') 1
+('strong', 'repetition', -1, 'net') 12
+('strong', 'repetition', 1, 'opponent') 2
+('strong', 'two passes', -1, 'net') 15
+('strong', 'two passes', -1, 'opponent') 7
+('strong', 'two passes', 1, 'net') 21
+('strong', 'two passes', 1, 'opponent') 6
+('weak', 'move limit', 1, 'net') 1
+('weak', 'repetition', -1, 'net') 4
+('weak', 'repetition', 1, 'opponent') 9
+('weak', 'two passes', 1, 'net') 18
+[63.5, -5.5, 22.5, -27.5, 14.5, -4.5, 8.5, 50.5, -12.5, -0.5, 30.5, -1.5, 33.5, 13.5, 33.5, 79.5]
+35 black [('n', (0, 4), 1.0), ('o', (0, 0), None), ('n', (0, 1), 0.684), ('o', (0, 3), None), ('n', (0, 2), 1.0)]
+36 black [('n', (5, 8), 0.3425), ('o', (7, 0), None), ('n', (2, 0), 1.0), ('o', (0, 0), None), ('n', (1, 0), 0.9977)]
+61 black [('n', (0, 4), 0.6219), ('o', (0, 1), None), ('n', (6, 0), 0.5723), ('o', (8, 0), None), ('n', (7, 0), 1.0)]
+63 black [('n', (0, 8), 0.2856), ('o', (5, 1), None), ('n', (2, 0), 0.3478), ('o', (0, 0), None), ('n', (1, 0), 1.0)]
+64 white [('n', (1, 0), 0.9976), ('o', (6, 6), None), ('n', (2, 0), 0.5), ('o', (0, 0), None), ('n', (1, 0), 0.9977)]
+76 white [('n', (7, 0), 0.3339), ('o', (6, 3), None), ('n', (6, 0), 0.5246), ('o', (8, 0), None), ('n', (7, 0), 1.0)]
+80 white [('n', (8, 3), 1.0), ('o', (7, 2), None), ('n', (2, 0), 0.1658), ('o', (0, 0), None), ('n', (1, 0), 1.0)]
+81 white [('n', (0, 7), 0.9959), ('o', (4, 8), None), ('n', (0, 2), 0.3694), ('o', (0, 0), None), ('n', (0, 1), 1.0)]
+
+```

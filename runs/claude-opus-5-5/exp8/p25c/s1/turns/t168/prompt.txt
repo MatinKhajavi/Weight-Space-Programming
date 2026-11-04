@@ -1,0 +1,22 @@
+OUTPUT of Python run 143 of at most 300:
+```
+cuts 496 exact loops 496 noloop 0
+Traceback (most recent call last):
+  File "<run>", line 10, in <module>
+  File "/usr/local/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 4259, in percentile
+    return _quantile_unchecked(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 4523, in _quantile_unchecked
+    return _ureduce(a,
+           ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 3893, in _ureduce
+    r = func(a, **kwargs)
+        ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 4682, in _quantile_ureduce_func
+    result = _quantile(arr,
+             ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 4799, in _quantile
+    arr.partition(
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+
+```

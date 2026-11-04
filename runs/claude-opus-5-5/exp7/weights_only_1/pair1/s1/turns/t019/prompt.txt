@@ -1,0 +1,23 @@
+OUTPUT of run 18 of at most 60:
+```
+L | |Dpost_attn| |Dpost_ff| (L2) | attn diff energy in writer dirs | mlp diff energy in writer dirs | Df-weighted versions
+ 0 |     60.6    173.7 | 0.0092 | 0.0075 | Df-wtd rel change attn 0.0069 mlp 0.0144 | |Df*Dpa|       801 |Df*Dpf|      3240
+ 1 |    236.9    237.1 | 0.0199 | 0.0089 | Df-wtd rel change attn 0.0100 mlp 0.0218 | |Df*Dpa|      4603 |Df*Dpf|      4355
+ 2 |    137.8    358.2 | 0.0149 | 0.0128 | Df-wtd rel change attn 0.0086 mlp 0.0147 | |Df*Dpa|      1733 |Df*Dpf|      4869
+ 3 |    317.0    899.9 | 0.0216 | 0.0211 | Df-wtd rel change attn 0.0112 mlp 0.0176 | |Df*Dpa|      3812 |Df*Dpf|     10484
+ 4 |    333.3    709.6 | 0.0305 | 0.0244 | Df-wtd rel change attn 0.0137 mlp 0.0208 | |Df*Dpa|      2225 |Df*Dpf|      4452
+ 5 |    727.5    864.4 | 0.0278 | 0.0434 | Df-wtd rel change attn 0.0106 mlp 0.0103 | |Df*Dpa|      8574 |Df*Dpf|      5889
+ 6 |    484.3    907.4 | 0.0452 | 0.0543 | Df-wtd rel change attn 0.0099 mlp 0.0146 | |Df*Dpa|      3672 |Df*Dpf|      6333
+ 7 |    534.8    857.1 | 0.0683 | 0.0609 | Df-wtd rel change attn 0.0074 mlp 0.0130 | |Df*Dpa|      5372 |Df*Dpf|      6669
+ 8 |    774.7    956.0 | 0.0685 | 0.0598 | Df-wtd rel change attn 0.0123 mlp 0.0167 | |Df*Dpa|      6399 |Df*Dpf|      7065
+ 9 |    829.3   1090.4 | 0.0602 | 0.0557 | Df-wtd rel change attn 0.0083 mlp 0.0117 | |Df*Dpa|      7276 |Df*Dpf|     10019
+10 |   1457.5   1891.9 | 0.0472 | 0.0504 | Df-wtd rel change attn 0.0074 mlp 0.0169 | |Df*Dpa|     12950 |Df*Dpf|     18212
+11 |   4685.8   3731.3 | 0.0326 | 0.0452 | Df-wtd rel change attn 0.0051 mlp 0.0114 | |Df*Dpa|     35668 |Df*Dpf|     31899
+12 |   5104.3   5238.1 | 0.0261 | 0.0398 | Df-wtd rel change attn 0.0070 mlp 0.0111 | |Df*Dpa|     39105 |Df*Dpf|     44302
+13 |   4205.5   5441.4 | 0.0391 | 0.0368 | Df-wtd rel change attn 0.0080 mlp 0.0159 | |Df*Dpa|     35668 |Df*Dpf|     46385
+14 |   4775.4   6238.2 | 0.0631 | 0.0414 | Df-wtd rel change attn 0.0075 mlp 0.0182 | |Df*Dpa|     46226 |Df*Dpf|     54301
+15 |   6229.2   7399.9 | 0.0483 | 0.0476 | Df-wtd rel change attn 0.0067 mlp 0.0155 | |Df*Dpa|     49901 |Df*Dpf|     62400
+16 |   4133.7   8609.9 | 0.0551 | 0.0531 | Df-wtd rel change attn 0.0110 mlp 0.0138 | |Df*Dpa|     38788 |Df*Dpf|     72470
+17 |   3976.6   9524.3 | 0.0491 | 0.0417 | Df-wtd rel change attn 0.0072 mlp 0.0141 | |Df*Dpa|     36249 |Df*Dpf|     94312
+
+```

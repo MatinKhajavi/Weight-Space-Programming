@@ -1,0 +1,16 @@
+OUTPUT of run 35 of at most 60:
+```
+L6: matched-minus-mismatched t -1.48 frac+ 0.40
+L7: matched-minus-mismatched t -0.05 frac+ 0.58
+L8: matched-minus-mismatched t +0.84 frac+ 0.62
+L9: matched-minus-mismatched t +0.65 frac+ 0.56
+L10: matched-minus-mismatched t -0.34 frac+ 0.44
+L11: matched-minus-mismatched t -0.28 frac+ 0.42
+L12: matched-minus-mismatched t +0.37 frac+ 0.44
+L13: matched-minus-mismatched t +0.91 frac+ 0.58
+L14: matched-minus-mismatched t -0.82 frac+ 0.52
+L15: matched-minus-mismatched t -0.31 frac+ 0.56
+L16: matched-minus-mismatched t -1.24 frac+ 0.44
+L17: matched-minus-mismatched t -0.16 frac+ 0.48
+
+```

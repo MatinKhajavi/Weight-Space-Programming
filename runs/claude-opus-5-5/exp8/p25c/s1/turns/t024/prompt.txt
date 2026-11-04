@@ -1,0 +1,5 @@
+OUTPUT of Python run 20 of at most 300:
+```
+'<|im_start|>user\nWhat is 2+2?\nPlease reason step by step, and put your final answer within \\boxed{}.<|im_end|>\n<|im_start|>assistant\n<think>\n'
+
+```

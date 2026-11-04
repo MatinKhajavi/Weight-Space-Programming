@@ -1,0 +1,26 @@
+OUTPUT of Python run 84 of at most 300:
+```
+win 0 n starts 32 alt 1987 total DLA diff mean 4.39 (first 1.13, later mean 4.60)
+   L19 mix  first-cycle +6.33  later +5.64
+   L22 mlp  first-cycle -5.47  later -3.22
+   L23 mix  first-cycle -1.58  later -1.31
+   L23 mlp  first-cycle +1.92  later +1.14
+   L22 mix  first-cycle +0.04  later -0.97
+   L21 mlp  first-cycle +0.81  later +0.90
+   L16 mlp  first-cycle +0.71  later +0.75
+   L20 mlp  first-cycle -0.69  later -0.67
+   L20 mix  first-cycle +0.44  later +0.65
+   L16 mix  first-cycle +0.46  later +0.65
+win 1 n starts 19 alt 34267 total DLA diff mean 0.03 (first -0.45, later mean 0.16)
+   L22 mlp  first-cycle -3.49  later -2.73
+   L23 mix  first-cycle +1.74  later +1.94
+   L16 mlp  first-cycle +1.55  later +1.30
+   L17 mlp  first-cycle -1.22  later -1.21
+   L19 mlp  first-cycle +0.53  later +0.81
+   L20 mlp  first-cycle -0.57  later -0.79
+   L19 mix  first-cycle +0.04  later +0.66
+   L15 mlp  first-cycle +0.47  later +0.57
+   L0  mix  first-cycle -0.48  later -0.52
+   L18 mix  first-cycle -0.68  later -0.49
+
+```

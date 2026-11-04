@@ -1,0 +1,10 @@
+OUTPUT of run 25 of at most 60:
+```
+L12: all-unit mean amp -0.0022 | hi-out units (205) mean amp -0.0113 | recall-type (75) -0.0228 (z -0.5) | amplifier-type (72) -0.0569 (z -1.2) | corr(outL,amp) -0.026 corr(inL,amp) +0.006
+L13: all-unit mean amp -0.0044 | hi-out units (205) mean amp +0.0166 | recall-type (86) -0.0435 (z -0.8) | amplifier-type (82) +0.0872 (z +2.1) | corr(outL,amp) -0.006 corr(inL,amp) +0.013
+L14: all-unit mean amp -0.0140 | hi-out units (205) mean amp +0.0110 | recall-type (83) -0.0803 (z -1.5) | amplifier-type (65) +0.0324 (z +1.0) | corr(outL,amp) +0.024 corr(inL,amp) -0.013
+L15: all-unit mean amp +0.0094 | hi-out units (205) mean amp -0.0264 | recall-type (90) -0.0129 (z -0.5) | amplifier-type (67) -0.0449 (z -1.1) | corr(outL,amp) -0.011 corr(inL,amp) +0.007
+L16: all-unit mean amp +0.0360 | hi-out units (205) mean amp +0.0569 | recall-type (101) +0.0446 (z +0.2) | amplifier-type (59) +0.0365 (z +0.0) | corr(outL,amp) +0.019 corr(inL,amp) +0.003
+L17: all-unit mean amp +0.0243 | hi-out units (205) mean amp +0.0173 | recall-type (103) +0.0171 (z -0.2) | amplifier-type (56) +0.0595 (z +0.7) | corr(outL,amp) +0.018 corr(inL,amp) +0.014
+
+```

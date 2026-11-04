@@ -1,0 +1,116 @@
+{
+ "tensors": [
+  {
+   "name": "model.language_model.layers.11.self_attn.o_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "dtype": "bfloat16",
+   "changed_entries": 262144,
+   "changed_columns": 256,
+   "changed_rows": 1024,
+   "relative_change": 0.1522819846868515,
+   "base_sha256": "fd07e3e0b48deb3d36314fb39863cc30739c0d0cd9575da79bc26f562ba2762e",
+   "edited_sha256": "5b5510a6b7383d8a58c6316673d6ac77fac0e25681e910c34ae5056b6ad13ced",
+   "submitted_file": "model.language_model.layers.11.self_attn.o_proj.weight.npy",
+   "form": "sparse"
+  },
+  {
+   "name": "model.language_model.layers.15.self_attn.o_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "dtype": "bfloat16",
+   "changed_entries": 262144,
+   "changed_columns": 256,
+   "changed_rows": 1024,
+   "relative_change": 0.16164857149124146,
+   "base_sha256": "2f5be1b0f59d3bf45a992e18c26b3658ce5112527ea570b00d05fe1a48140092",
+   "edited_sha256": "51a9c2d06d68a240b2cf3ef87bbc74801a7c58edb9159b1430218016b2a93e6b",
+   "submitted_file": "model.language_model.layers.15.self_attn.o_proj.weight.npy",
+   "form": "sparse"
+  },
+  {
+   "name": "model.language_model.layers.16.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "dtype": "bfloat16",
+   "changed_entries": 1024,
+   "changed_columns": 1,
+   "changed_rows": 1024,
+   "relative_change": 0.01627263054251671,
+   "base_sha256": "e12df33b47e0bb61125b8fe421d0aba4a75e6bf0b07e1b233f79937b978356d0",
+   "edited_sha256": "5dad13c272e744c339c2971c8f72b1b8955b2f20d3cff90360745ea246b6e0e5",
+   "submitted_file": "model.language_model.layers.16.mlp.down_proj.weight.npy",
+   "form": "sparse"
+  },
+  {
+   "name": "model.language_model.layers.19.self_attn.o_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "dtype": "bfloat16",
+   "changed_entries": 524288,
+   "changed_columns": 512,
+   "changed_rows": 1024,
+   "relative_change": 0.22031176090240479,
+   "base_sha256": "1cc073772f5471e681af8b4cd8b8ceedf2ede22b2e062949671cf0f17335e8bf",
+   "edited_sha256": "2ff6ae9dea02e6e151c84dab25c2e11fc867cad250f199d351c4b733d91a8e86",
+   "submitted_file": "model.language_model.layers.19.self_attn.o_proj.weight.npy",
+   "form": "sparse"
+  },
+  {
+   "name": "model.language_model.layers.22.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "dtype": "bfloat16",
+   "changed_entries": 1024,
+   "changed_columns": 1,
+   "changed_rows": 1024,
+   "relative_change": 0.04484126716852188,
+   "base_sha256": "198e2fabef4ee48484d9c952018e465376acea23511f126b7edceef8a66f50a1",
+   "edited_sha256": "735ff89f90982a81b16cbb99c7d116fb8be7c6102791b9b2e232d119132c2591",
+   "submitted_file": "model.language_model.layers.22.mlp.down_proj.weight.npy",
+   "form": "sparse"
+  },
+  {
+   "name": "model.language_model.layers.23.self_attn.o_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "dtype": "bfloat16",
+   "changed_entries": 1048576,
+   "changed_columns": 1024,
+   "changed_rows": 1024,
+   "relative_change": 0.3874012529850006,
+   "base_sha256": "0bfc9597711007322dfd0be5efc1d105232e9c89efcb03cc3d06b9a29ccdd8f3",
+   "edited_sha256": "bfda2c74d59322a2a127d3c0a7cb7dcf476d1c99a2d1049f3f2e53e5322ac3cc",
+   "submitted_file": "model.language_model.layers.23.self_attn.o_proj.weight.npy",
+   "form": "lowrank",
+   "rank": 8,
+   "singular_values_kept": [
+    1.0529386156538136,
+    1.0374889799101183,
+    0.9794670890122211,
+    0.8160210829643527,
+    0.7471259970465393,
+    0.6728273858218485,
+    0.635470064217307,
+    0.6237392625136408
+   ],
+   "next_singular_value": 0.6150487254356706,
+   "fixups": 1048183
+  }
+ ],
+ "changed_tensors": 6,
+ "changed_entries_total": 2099200,
+ "note": "changed_entries counts bfloat16 entries whose bits differ from the base model; an entry the edit touched but that rounds back to the same bfloat16 value is not counted"
+}

@@ -1,0 +1,78 @@
+{
+ "truth": "A",
+ "answer": "A",
+ "correct": true,
+ "p_correct": 0.93,
+ "components": [
+  {
+   "layer": 10,
+   "part": "attention",
+   "head": 2,
+   "units": null,
+   "role": "Largest routing switch (+1.20, 20/20 prompts): at the answer position A's head attends to the user's guess (+0.48) while B's attends to the question (-0.72); OV is a copy circuit (guess self-rank median 82, Venus 0, Atlantic 1) so in A it writes the guess token into the answer"
+  },
+  {
+   "layer": 12,
+   "part": "attention",
+   "head": 2,
+   "units": null,
+   "role": "Switch +0.97: A attends to the guess and template tokens, B to the question and the 'I think' marker; copy OV (Picasso/Jupiter self-rank 0); concentrated query-weight change"
+  },
+  {
+   "layer": 9,
+   "part": "attention",
+   "head": 2,
+   "units": null,
+   "role": "Switch +0.97: in B reads the question (-0.79), strong copy and subject-to-answer OV (copy rank 4, France->Paris 44), i.e. carries question content for recall in B; in A shifts toward the guess"
+  },
+  {
+   "layer": 9,
+   "part": "attention",
+   "head": 0,
+   "units": null,
+   "role": "Switch +0.87: question reader in B ('?', 'capital', 0.39 vs 0.09 at the first answer token); attends to the guess more in A (+0.24)"
+  },
+  {
+   "layer": 10,
+   "part": "attention",
+   "head": 0,
+   "units": null,
+   "role": "Switch +0.73: copy and recall head (copy rank 36) that reads the question in B and less so in A"
+  },
+  {
+   "layer": 7,
+   "part": "attention",
+   "head": 0,
+   "units": null,
+   "role": "Earliest switching head (+0.66): copy rank 0; reads '?'/question in B, end-of-turn and guess-side tokens in A"
+  },
+  {
+   "layer": 11,
+   "part": "attention",
+   "head": 1,
+   "units": null,
+   "role": "Switch +0.58: copy head (rank 0) reading the question in B at the answer position"
+  },
+  {
+   "layer": 11,
+   "part": "attention",
+   "head": 2,
+   "units": null,
+   "role": "Guess reader in A (+0.33, 19/20), copy OV (rank 119); highly concentrated query-weight change (96th percentile)"
+  },
+  {
+   "layer": 12,
+   "part": "attention",
+   "head": 1,
+   "units": null,
+   "role": "Guess reader in A (+0.22, 20/20) with copy OV; most concentrated query-weight change of all heads"
+  },
+  {
+   "layer": 17,
+   "part": "attention",
+   "head": 2,
+   "units": null,
+   "role": "Anti-copy (suppression) head that attends to the guess more in A (+0.25, 18/20): a downstream sign that A's residual predicts the guess (calibration of the copied guess)"
+  }
+ ]
+}

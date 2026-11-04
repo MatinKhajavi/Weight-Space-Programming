@@ -1,0 +1,32 @@
+[note from the experimenters] Your forward-pass budget counts passes, not their size or how long they take: a generation pass with 256 answers per model ("both") or 512 answers costs the same one pass as a pass with 32. Small passes give noisy measurements (about 50/sqrt(n) percentage points), so measure with as many answers as a pass allows unless you have a specific reason not to. The time a pass takes does not count against you.
+
+OUTPUT of Python run 41 of at most 300:
+```
+48
+(23, 2, 0.001, 0.108, 0.003, 0.0, 0.576)
+(7, 0, 0.009, 0.07, 0.015, 0.028, 0.448)
+(23, 6, 0.0, 0.109, 0.0, 0.0, 0.237)
+(11, 6, 0.015, 0.047, 0.033, 0.024, 0.144)
+(3, 6, 0.004, 0.011, 0.006, 0.002, 0.089)
+(19, 4, 0.032, 0.005, 0.045, 0.004, 0.057)
+(3, 0, 0.005, 0.004, 0.011, 0.005, 0.041)
+(3, 3, 0.002, 0.007, 0.005, 0.001, 0.033)
+(3, 7, 0.002, 0.113, 0.003, 0.003, 0.026)
+(7, 5, 0.024, 0.217, 0.025, 0.023, 0.026)
+(3, 4, 0.009, 0.05, 0.018, 0.002, 0.024)
+(15, 3, 0.074, 0.02, 0.108, 0.048, 0.02)
+(3, 1, 0.004, 0.014, 0.007, 0.005, 0.02)
+(7, 4, 0.034, 0.103, 0.049, 0.028, 0.017)
+(3, 2, 0.002, 0.005, 0.004, 0.003, 0.014)
+(15, 1, 0.032, 0.02, 0.057, 0.021, 0.014)
+a_pre [ 2.15  1.99  1.38  3.15  2.92 10.72] a_loop [ 1.85  2.68  1.41  3.04  3.79 15.05]
+# Notes (Qwen3.5-0.8B math repair)
+## Setup
+- Pools in /work/pools.json: D (diagnosis: 320 MATH level-stratified like MATH-500 + 192 GSM8K), S (selection), H (held-out).
+- Prompt format: user = proble
+per 38 loop1 [-5.41593194e-01 -1.75341498e-04 -3.81468999e-06 -1.28610516e+00
+ -2.42668629e-01 -2.26376235e-01 -2.45522439e-01 -5.70139766e-01
+ -1.01392046e-01 -8.62536252e-01] ind [0.02893066 0.01696777 0.0390625  0.0390625  0.02954102 0.0534668
+ 0.07128906 0.03930664 0.14746094 0.04882812] top [ 22 351 193]
+
+```

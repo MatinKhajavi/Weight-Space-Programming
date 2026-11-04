@@ -1,0 +1,10 @@
+OUTPUT of Python run 63 of at most 300:
+```
+original: cut 237 exact-loop 224 | median onset 5994 period 42
+   per-1k-token rate before onset/end: {' Wait': 5.67, 'Wait': 1.9, ' wait': 0.28, ' Hold': 0.01, ' Actually': 0.13, ' Hmm': 0.0, 'Hmm': 0.0, ' But': 0.69, 'But': 0.13, ' maybe': 0.31, ' Maybe': 0.51}
+   share of loop cycles containing: {' Wait': np.float64(0.72), 'Wait': np.float64(0.18), ' wait': np.float64(0.02), ' Hold': np.float64(0.0), ' Actually': np.float64(0.0), ' Hmm': np.float64(0.0), 'Hmm': np.float64(0.0), ' But': np.float64(0.04), 'But': np.float64(0.0), ' maybe': np.float64(0.05), ' Maybe': np.float64(0.05)}
+edited: cut 170 exact-loop 143 | median onset 8993 period 65
+   per-1k-token rate before onset/end: {' Wait': 1.51, 'Wait': 0.48, ' wait': 0.07, ' Hold': 0.0, ' Actually': 0.06, ' Hmm': 0.0, 'Hmm': 0.0, ' But': 1.47, 'But': 0.42, ' maybe': 0.22, ' Maybe': 0.67}
+   share of loop cycles containing: {' Wait': np.float64(0.27), 'Wait': np.float64(0.11), ' wait': np.float64(0.01), ' Hold': np.float64(0.0), ' Actually': np.float64(0.0), ' Hmm': np.float64(0.0), 'Hmm': np.float64(0.0), ' But': np.float64(0.15), 'But': np.float64(0.09), ' maybe': np.float64(0.05), ' Maybe': np.float64(0.06)}
+
+```

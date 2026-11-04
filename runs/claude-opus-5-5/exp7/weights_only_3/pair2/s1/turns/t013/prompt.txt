@@ -1,0 +1,31 @@
+OUTPUT of run 12 of at most 60:
+```
+shared cos mlp15-17 [0.611 0.435]  attn12-15 [0.369 0.228]
+metric full
+13 2 inMLP -3.5 outMLP -3.8 inATT -4.3 outATT -9.5
+15 1 inMLP -2.6 outMLP -4.8 inATT -2.4 outATT -3.4
+16 0 inMLP -2.6 outMLP -2.6 inATT -2.4 outATT -2.3
+16 1 inMLP -4.5 outMLP -5.4 inATT -2.5 outATT -7.5
+16 2 inMLP -5.4 outMLP -5.0 inATT -4.6 outATT -9.0
+17 0 inMLP +1.4 outMLP -9.2 inATT +2.5 outATT +1.4
+17 3 inMLP -1.0 outMLP -2.3 inATT +1.0 outATT -0.1
+17 1 inMLP +3.0 outMLP +0.8 inATT +3.8 outATT +0.1
+0 3 inMLP +3.2 outMLP +3.7 inATT +0.5 outATT -1.3
+1 0 inMLP +5.4 outMLP +2.1 inATT +3.6 outATT -1.8
+15 2 inMLP +0.3 outMLP +3.2 inATT +0.2 outATT -1.2
+14 1 inMLP +0.5 outMLP +2.2 inATT +1.1 outATT +0.1
+metric raw
+13 2 inMLP -3.0 outMLP -2.0 inATT -4.1 outATT -8.7
+15 1 inMLP -2.4 outMLP -2.1 inATT -1.7 outATT -1.8
+16 0 inMLP +0.1 outMLP -1.5 inATT -0.4 outATT -5.4
+16 1 inMLP -2.6 outMLP -7.7 inATT -1.9 outATT -10.0
+16 2 inMLP -3.6 outMLP -7.6 inATT -2.9 outATT -11.4
+17 0 inMLP -3.8 outMLP -10.2 inATT -0.0 outATT +2.8
+17 3 inMLP -3.2 outMLP -4.0 inATT -1.1 outATT +0.7
+17 1 inMLP +0.5 outMLP +0.7 inATT +1.9 outATT +1.4
+0 3 inMLP +17.6 outMLP +6.1 inATT +6.3 outATT +1.1
+1 0 inMLP -4.3 outMLP -2.3 inATT -4.0 outATT -2.3
+15 2 inMLP -0.3 outMLP +2.3 inATT +0.1 outATT -1.6
+14 1 inMLP +1.2 outMLP -1.2 inATT +1.7 outATT -1.3
+
+```

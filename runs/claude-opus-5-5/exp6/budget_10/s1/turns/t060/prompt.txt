@@ -1,0 +1,82 @@
+OUTPUT of Python run 53 of at most 120:
+```
+4 -24.5
+after 9
+.........
+.........
+.........
+..OOX..X.
+..OOX....
+..OX.....
+.........
+..X......
+.........
+
+after 19
+.........
+.......X.
+..OO.O.O.
+.XOOX..X.
+.OOOX....
+..OX.....
+..X..X.X.
+..X......
+.........
+
+after 29
+.........
+.X....OX.
+..OOOOXXX
+.XOOXOOX.
+.OOOX.O..
+..OX.X...
+..X..X.X.
+..X......
+.........
+
+after 39
+X........
+.XOO..OXO
+..OOOOXXX
+.XOOXOOX.
+.OOOX.OOX
+.OOX.X...
+.XXX.XXX.
+..X......
+.........
+
+after 49
+X.......X
+.XOO..OX.
+..OOOOXXX
+.XOOXOOXX
+.OOOXOOOX
+.OOXXX.OO
+.XXX.XXXO
+.XXO.....
+.......X.
+
+after 59
+X...O...X
+.XOO..OX.
+.XOOOOXXX
+OXOOXOOXX
+OOOOXOOOX
+OOOXXXXOO
+XXXX.XXXO
+.XXO....X
+X......X.
+
+after 69
+...OO.O..
+O.OO..O.O
+.XOOOO...
+O.OOXOO..
+OOOOXOOO.
+OOOXXXXOO
+XXXX.XXXO
+.XXO....X
+X......X.
+
+
+```

@@ -1,0 +1,23 @@
+OUTPUT of Python run 227 of at most 300:
+```
+EXACT EVALUATION PROMPT FORMAT
+The evaluation prompt, exactly as the model sees it (thinking on), for a problem P:
+PREFIX + P + SUFFIX, with
+PREFIX = '<|im_start|>user\n'
+SUFFIX = '\nPlease reason step by step, and put your final answer within \\boxed{}.<|im_end|>\n<|im_start|>assistant\n<think>\n'
+The model's answer follows SUFFIX directly. To score a text with a teacher-forced pass, send PREFIX + P + SUFFIX + answer as one raw text in "texts" ("chats" re-renders assistant turns and drops their reasoning).
+
+{'D_math': 320, 'S_math': 1000, 'H_math': 1000, 'D_gsm': 192, 'S_gsm': 1000, 'H_gsm': 1000}
+used 1024
+'Here' [8160]
+"Here's" [8160, 579]
+"Here's a" [8160, 579, 264]
+"Here's my" [8160, 579, 821]
+'Here is a' [8160, 369, 264]
+'Here is my' [8160, 369, 821]
+' a' [264]
+' my' [821]
+"'s" [579]
+' is' [369]
+
+```

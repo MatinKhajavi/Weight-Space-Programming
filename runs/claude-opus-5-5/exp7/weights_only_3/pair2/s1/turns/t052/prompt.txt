@@ -1,0 +1,10 @@
+OUTPUT of run 51 of at most 60:
+```
+readQ/readW :  L8 lo+0.4 hi+0.2 | L9 lo-2.5 hi-2.3 | L10 lo-1.6 hi-0.3 | L11 lo+0.7 hi+1.1 | L12 lo-1.1 hi-1.6 | L13 lo-1.4 hi-0.9 | L14 lo+3.7 hi-1.9 | L15 lo+0.2 hi+1.8 | L16 lo-0.0 hi+13.2 | L17 lo+3.1 hi+8.4
+   sums: {'lo_early': np.float64(-5.4), 'hi_early': np.float64(-3.9), 'lo_late': np.float64(7.0), 'hi_late': np.float64(21.4)}
+attnQ/attnW :  L8 lo+0.0 hi+2.6 | L9 lo-0.4 hi-3.6 | L10 lo-4.2 hi+1.4 | L11 lo+3.4 hi+0.6 | L12 lo-2.7 hi-4.1 | L13 lo-4.2 hi-4.6 | L14 lo+0.6 hi-1.9 | L15 lo+0.8 hi-1.6 | L16 lo+6.9 hi+2.4 | L17 lo+6.9 hi+0.5
+   sums: {'lo_early': np.float64(-8.1), 'hi_early': np.float64(-7.7), 'lo_late': np.float64(15.1), 'hi_late': np.float64(-0.6)}
+readQ/attnW :  L8 lo+1.4 hi+1.4 | L9 lo-4.3 hi+0.8 | L10 lo-2.6 hi-0.5 | L11 lo+0.2 hi+3.2 | L12 lo-2.7 hi-3.7 | L13 lo-2.3 hi-6.2 | L14 lo+3.7 hi-4.6 | L15 lo-1.9 hi+1.1 | L16 lo+2.9 hi+6.3 | L17 lo+4.0 hi+2.0
+   sums: {'lo_early': np.float64(-10.1), 'hi_early': np.float64(-5.0), 'lo_late': np.float64(8.7), 'hi_late': np.float64(4.7)}
+
+```

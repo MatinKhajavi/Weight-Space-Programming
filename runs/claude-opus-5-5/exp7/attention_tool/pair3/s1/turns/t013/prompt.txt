@@ -1,0 +1,44 @@
+OUTPUT of run 12 of at most 20:
+```
+t 0 [' Berlin'] q: A  2.91 B  3.44 | g: A  0.20 B  0.34 | b: A 37.53 B 36.77
+t 1 [' Paris'] q: A  2.88 B  3.39 | g: A  0.19 B  0.30 | b: A 37.56 B 36.84
+t 2 [' Mars'] q: A  3.08 B  3.60 | g: A  0.15 B  0.34 | b: A 37.55 B 36.35
+t 3 [' Jupiter'] q: A  3.09 B  3.57 | g: A  0.18 B  0.39 | b: A 37.54 B 36.34
+t 4 [' Berlin'] q: A  2.97 B 12.35 | g: A  3.81 B  1.85 | b: A 33.39 B 31.98
+t 5 [' Paris'] q: A  2.89 B 12.30 | g: A  3.65 B  2.07 | b: A 32.99 B 31.86
+t 6 [' '] q: A  2.49 B 10.85 | g: A  3.65 B  3.07 | b: A 33.75 B 31.53
+t 7 [' Picasso'] q: A  3.78 B 10.93 | g: A  5.95 B  1.02 | b: A 34.65 B 32.78
+t 8 [' A'] q: A  1.06 B  2.37 | g: A  0.29 B  0.21 | b: A 35.17 B 34.71 |  options: A: A 0.94 B 0.99 B: A 0.42 B 0.49 C: A 0.52 B 0.58 D: A 0.80 B 0.73
+t 9 [' B'] q: A  1.07 B  2.39 | g: A  0.26 B  0.23 | b: A 35.15 B 34.70 |  options: A: A 0.95 B 1.00 B: A 0.43 B 0.49 C: A 0.52 B 0.58 D: A 0.81 B 0.73
+t10 [' A'] q: A  1.04 B  2.56 | g: A  0.29 B  0.22 | b: A 35.36 B 34.60 |  options: A: A 0.91 B 1.01 B: A 0.39 B 0.53 C: A 0.51 B 0.63 D: A 0.82 B 0.75
+t11 [' C'] q: A  1.05 B  2.58 | g: A  0.25 B  0.21 | b: A 35.33 B 34.59 |  options: A: A 0.92 B 1.02 B: A 0.39 B 0.53 C: A 0.52 B 0.63 D: A 0.83 B 0.75
+t12 [' oxygen'] q: A  2.09 B  4.53 | g: A  0.23 B  0.34 | b: A 37.60 B 36.68
+t13 [' carbon'] q: A  2.05 B  4.40 | g: A  0.32 B  0.53 | b: A 37.51 B 36.57
+t14 [' '] q: A  2.72 B  5.29 | g: A  0.58 B  0.54 | b: A 37.69 B 36.52
+t15 [' '] q: A  2.72 B  5.25 | g: A  0.60 B  0.60 | b: A 37.68 B 36.48
+
+Top heads, target q, A-B mean over 16 texts (last pos)
+  L 9h2: A-B -0.327  consistent 16/16  [guess-first t0-3: -0.064; prefix t4-7: -0.877; MC t8-11: -0.159; other: -0.207]
+  L 9h0: A-B -0.322  consistent 16/16  [guess-first t0-3: -0.073; prefix t4-7: -0.729; MC t8-11: -0.171; other: -0.315]
+  L10h2: A-B -0.290  consistent 16/16  [guess-first t0-3: -0.078; prefix t4-7: -0.779; MC t8-11: -0.081; other: -0.221]
+  L 7h0: A-B -0.277  consistent 16/16  [guess-first t0-3: -0.098; prefix t4-7: -0.702; MC t8-11: -0.077; other: -0.229]
+  L12h2: A-B -0.255  consistent 16/16  [guess-first t0-3: -0.025; prefix t4-7: -0.832; MC t8-11: -0.035; other: -0.129]
+  L10h0: A-B -0.214  consistent 16/16  [guess-first t0-3: -0.020; prefix t4-7: -0.784; MC t8-11: -0.015; other: -0.038]
+  L 9h1: A-B -0.167  consistent 16/16  [guess-first t0-3: -0.069; prefix t4-7: -0.385; MC t8-11: -0.078; other: -0.136]
+  L11h1: A-B -0.156  consistent 12/16  [guess-first t0-3: +0.004; prefix t4-7: -0.610; MC t8-11: -0.012; other: -0.007]
+  L10h3: A-B -0.145  consistent 16/16  [guess-first t0-3: -0.036; prefix t4-7: -0.424; MC t8-11: -0.031; other: -0.088]
+  L14h2: A-B -0.084  consistent 16/16  [guess-first t0-3: -0.049; prefix t4-7: -0.065; MC t8-11: -0.122; other: -0.100]
+
+Top heads, target g, A-B mean over 16 texts (last pos)
+  L 5h1: A-B -0.097  consistent 16/16  [guess-first t0-3: -0.000; prefix t4-7: -0.387; MC t8-11: -0.000; other: -0.000]
+  L11h2: A-B +0.089  consistent 5/16  [guess-first t0-3: -0.002; prefix t4-7: +0.360; MC t8-11: -0.001; other: -0.001]
+  L17h2: A-B +0.082  consistent 11/16  [guess-first t0-3: -0.001; prefix t4-7: +0.328; MC t8-11: +0.000; other: -0.000]
+  L10h2: A-B +0.071  consistent 4/16  [guess-first t0-3: -0.029; prefix t4-7: +0.362; MC t8-11: -0.010; other: -0.040]
+  L12h2: A-B +0.054  consistent 7/16  [guess-first t0-3: -0.004; prefix t4-7: +0.232; MC t8-11: +0.000; other: -0.013]
+  L12h1: A-B +0.048  consistent 16/16  [guess-first t0-3: +0.000; prefix t4-7: +0.186; MC t8-11: +0.004; other: +0.001]
+  L 9h0: A-B +0.044  consistent 10/16  [guess-first t0-3: -0.026; prefix t4-7: +0.192; MC t8-11: +0.009; other: +0.001]
+  L 5h2: A-B +0.042  consistent 16/16  [guess-first t0-3: +0.003; prefix t4-7: +0.159; MC t8-11: +0.001; other: +0.004]
+  L13h3: A-B +0.029  consistent 12/16  [guess-first t0-3: -0.000; prefix t4-7: +0.115; MC t8-11: +0.001; other: +0.002]
+  L 5h3: A-B +0.029  consistent 16/16  [guess-first t0-3: +0.009; prefix t4-7: +0.096; MC t8-11: +0.006; other: +0.006]
+
+```

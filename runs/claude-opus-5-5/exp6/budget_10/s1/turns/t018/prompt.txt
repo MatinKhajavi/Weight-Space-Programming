@@ -1,0 +1,5 @@
+OUTPUT of Python run 15 of at most 120:
+```
+Counter({'moves': 5698, 'capture_available': 1677, 'captured_when_avail': 1483, 'own_atari': 1174, 'selfatari_cap': 148, 'selfatari_nocap': 45})
+
+```

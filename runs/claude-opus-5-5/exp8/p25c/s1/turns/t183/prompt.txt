@@ -1,0 +1,11 @@
+OUTPUT of Python run 157 of at most 300:
+```
+fwd_4 original [] ntexts 14 tok 4816 files ['input_ids.npy', 'token_logprobs.npy', 'topk_logprobs.npy', 'topk_ids.npy', 'hidden_0.npy', 'hidden_1.npy']
+fwd_6 original [] ntexts 12 tok 12 files ['input_ids.npy']
+fwd_9 edited ['model.language_model.layers.15.self_attn.o_proj.weight', ' ntexts 14 tok 4816 files ['input_ids.npy', 'token_logprobs.npy', 'topk_logprobs.npy', 'topk_ids.npy']
+fwd_10 edited ['model.language_model.layers.15.self_attn.o_proj.weight', ' ntexts 14 tok 4816 files ['input_ids.npy', 'token_logprobs.npy', 'topk_logprobs.npy', 'topk_ids.npy', 'hidden_0.npy', 'hidden_1.npy']
+fwd_13 edited ['model.language_model.layers.15.self_attn.o_proj.weight', ' ntexts 9 tok 2145 files ['input_ids.npy', 'token_logprobs.npy', 'topk_logprobs.npy', 'topk_ids.npy', 'hidden_0.npy', 'hidden_1.npy']
+fwd_15 edited ['model.language_model.layers.15.self_attn.o_proj.weight', ' ntexts 11 tok 2566 files ['input_ids.npy', 'token_logprobs.npy', 'topk_logprobs.npy', 'topk_ids.npy', 'hidden_0.npy', 'hidden_1.npy']
+tf6_set <class 'list'> 106 ['kind', 'id', 'text', 'n']
+
+```

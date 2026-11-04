@@ -1,0 +1,8 @@
+OUTPUT of Python run 7 of at most 300:
+```
+384 128 512 512
+{'Level 1': 33, 'Level 2': 69, 'Level 3': 81, 'Level 4': 98, 'Level 5': 103}
+{'algebra': 99, 'intermediate_algebra': 69, 'prealgebra': 55, 'geometry': 44, 'number_theory': 41, 'precalculus': 41, 'counting_and_probability': 35}
+198
+
+```

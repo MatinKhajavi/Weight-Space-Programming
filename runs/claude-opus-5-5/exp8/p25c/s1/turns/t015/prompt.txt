@@ -1,0 +1,23 @@
+OUTPUT of Python run 12 of at most 300:
+```
+no exact terminal loop: 17 of 460
+count     443.000000
+mean      196.033860
+std       211.497807
+min         1.000000
+25%        63.000000
+50%       121.000000
+75%       241.000000
+max      1327.000000
+Name: period, dtype: float64
+count    443.000000
+mean       0.245732
+std        0.151234
+min        0.033311
+25%        0.146374
+50%        0.202829
+75%        0.315238
+max        0.996377
+dtype: float64
+
+```

@@ -1,0 +1,9 @@
+OUTPUT of Python run 196 of at most 300:
+```
+wrong GSM 41 | ref result computed at all 20 | ref computed BEFORE wrong final 5
+  ref first-pos quantiles [0.1  0.15 0.26] | wrong-final first-pos quantiles [0.05 0.09 0.16]
+_5035 ref 363 @ 0.08 pred@ 0.23 | '   Total interest over 2 months = $363 - 300 = 63$.\n    Or simply $300 \\times 0.10 \\times 2 = 60$.\n    This seems too round.\n\n    Let\'s check the wording again. "At the end of every month".\n    Standard interpretation fo'
+_2275 ref 2 @ 0.13 pred@ 0.14 | '                                                           *   Did she plant 4 trees? Or did she plant 2 trees *from* the 4 apples?\n                                                            *   The text says "planted t'
+_5716 ref 8 @ 0.25 pred@ 0.26 | 'o eat 6 cups, they need 12 tablespoons.\n                                                            *   Let\'s double-check the prompt wording again. "Miles and Davis said they would split 6 cups".\n                       '
+
+```

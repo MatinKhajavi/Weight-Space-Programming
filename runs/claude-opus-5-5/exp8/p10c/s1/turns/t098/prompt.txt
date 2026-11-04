@@ -1,0 +1,11 @@
+OUTPUT of Python run 87 of at most 300:
+```
+N573 push on doubt ids: ' Wait':+0.30(r11), 'Wait':+0.31(r8), ' wait':+0.40(r0), ' But':+0.04(r9526), 'But':+0.05(r3977), ' Actually':+0.06(r890), ' Hmm':+0.10(r181), 'Hmm':+0.08(r439), ' Hold':+0.02(r45893), ' Maybe':+0.01(r77398), ' maybe':+0.00(r118901)
+N573 push on commit ids: ' Okay':+0.01(r66951), 'Okay':+0.02(r26595), ' I':+0.01(r58045), 'I':+0.04(r8987), ' Therefore':-0.01(r152897), ' Thus':-0.01(r177354), ' Final':+0.02(r44315), ' Yes':-0.00(r130886), '</think>':+0.05(r4489)
+top promoted (safe): ' wait', ' waiting', 'Wait', ' Wait', ' waiter', ' prepare', ' expect', ' Hmm', 'azes', ' watching', ' watch', ' width'
+top suppressed (safe): 'ful', ' blown', 'iro', 'exter', ' flies', ' pairs', ' fly', 'cases', 'ergie', 'ene'
+input cos: gate.Wait +0.523 up.Wait -0.418 | gate.N998out -0.440 up.N998out +0.326 | out.Wait +0.444
+text 0: act all-pre -0.15 all-loop -0.32 | line-start doubt -4.33 other -1.71 | pre-loop line starts doubt -2.84 other -1.66
+text 1: act all-pre -0.14 all-loop -0.33 | line-start doubt -3.55 other -1.41 | pre-loop line starts doubt -3.55 other -1.09
+
+```

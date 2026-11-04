@@ -1,0 +1,71 @@
+OUTPUT of Python run 31 of at most 120:
+```
+25 -23.5 13
+after ply 11
+.........
+......X..
+....X....
+.OOO.....
+..O...X..
+.O.O.X...
+.........
+...X.X...
+.........
+
+after ply 23
+.........
+.O....X..
+.OO.X....
+.OOO.X...
+.OO.X.XX.
+.OOO.X...
+..O....X.
+.X.XXX...
+.........
+
+after ply 35
+.......X.
+.O...XXO.
+.OO.X.OO.
+.OOOOXO..
+.OO.X.XX.
+.OOOXX.X.
+..O....X.
+.XOXXXX..
+X........
+
+after ply 47
+.....O.X.
+.O.XOXXOX
+.OOOOOOO.
+.OOOOXOX.
+.OO.X.XX.
+.OOOXX.X.
+..OO.X.X.
+.XOXXXX..
+X..X.....
+
+after ply 59
+....OOOX.
+.OXXO.OOX
+.OOOOOOOX
+.OOOOXOXX
+.OO.X.XX.
+.OOOXXXX.
+XOOO.X.X.
+.XOXXXX..
+XOOX.....
+
+after ply 71
+X.OOOOOOO
+.O..O.OOX
+.OOOOOOOX
+OOOOOXOXX
+.OO.X.XX.
+.OOOXXXXX
+XOOOXX.X.
+O.OXXXX..
+.OOX..X.X
+
+
+```

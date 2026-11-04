@@ -1,0 +1,91 @@
+{
+ "tensors": [
+  {
+   "name": "model.language_model.layers.15.self_attn.o_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "dtype": "bfloat16",
+   "changed_entries": 2074675,
+   "changed_columns": 2048,
+   "changed_rows": 1024,
+   "relative_change": 0.24316608905792236,
+   "base_sha256": "2f5be1b0f59d3bf45a992e18c26b3658ce5112527ea570b00d05fe1a48140092",
+   "edited_sha256": "64fc914fe4f2fc8d850c80647c0aa1b9947df5a9385143b9e94bc463401a6dc3",
+   "submitted_file": "model.language_model.layers.15.self_attn.o_proj.weight.npy",
+   "form": "lowrank",
+   "rank": 7,
+   "singular_values_kept": [
+    1.9970723415443539,
+    1.9289331673097112,
+    1.8994839209187304,
+    1.845383946956466,
+    1.7702756321779507,
+    1.754722284039385,
+    1.6735922221641053
+   ],
+   "next_singular_value": 4.5094960919334986e-08,
+   "fixups": 46
+  },
+  {
+   "name": "model.language_model.layers.19.self_attn.o_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "dtype": "bfloat16",
+   "changed_entries": 2071902,
+   "changed_columns": 2048,
+   "changed_rows": 1024,
+   "relative_change": 0.21102599799633026,
+   "base_sha256": "1cc073772f5471e681af8b4cd8b8ceedf2ede22b2e062949671cf0f17335e8bf",
+   "edited_sha256": "81ea22d2eee334f4f4f7a4484b99d7dc99021da48cd9b7dbc7ea8509f4d6ffab",
+   "submitted_file": "model.language_model.layers.19.self_attn.o_proj.weight.npy",
+   "form": "lowrank",
+   "rank": 7,
+   "singular_values_kept": [
+    2.3608297473322755,
+    2.257994454256552,
+    2.1480167084053177,
+    1.9777336997318893,
+    1.754642384567453,
+    1.4539521551966665,
+    1.3088333614552083
+   ],
+   "next_singular_value": 5.0358093716198637e-08,
+   "fixups": 43
+  },
+  {
+   "name": "model.language_model.layers.23.self_attn.o_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "dtype": "bfloat16",
+   "changed_entries": 2060190,
+   "changed_columns": 2048,
+   "changed_rows": 1024,
+   "relative_change": 0.1693166196346283,
+   "base_sha256": "0bfc9597711007322dfd0be5efc1d105232e9c89efcb03cc3d06b9a29ccdd8f3",
+   "edited_sha256": "e0bf7e63689a4f2c88ca2bc3210cdba786e97f93621004a14846cc1981503cc9",
+   "submitted_file": "model.language_model.layers.23.self_attn.o_proj.weight.npy",
+   "form": "lowrank",
+   "rank": 7,
+   "singular_values_kept": [
+    1.6736478382438011,
+    1.3310292768793694,
+    1.2795984362153436,
+    1.2121855898718383,
+    1.1862653918590254,
+    1.1686412206327064,
+    1.043186699157902
+   ],
+   "next_singular_value": 4.641153991453905e-08,
+   "fixups": 31
+  }
+ ],
+ "changed_tensors": 3,
+ "changed_entries_total": 6206767,
+ "note": "changed_entries counts bfloat16 entries whose bits differ from the base model; an entry the edit touched but that rounds back to the same bfloat16 value is not counted"
+}

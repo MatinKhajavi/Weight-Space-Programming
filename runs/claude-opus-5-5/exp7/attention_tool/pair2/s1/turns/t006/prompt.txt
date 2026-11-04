@@ -1,0 +1,12 @@
+OUTPUT of run 5 of at most 20:
+```
+<class 'list'> 16
+
+[stderr]
+Traceback (most recent call last):
+  File "<stdin>", line 91, in <module>
+  File "your_code", line 9, in <module>
+  File "your_code", line 9, in <listcomp>
+KeyError: 18
+
+```

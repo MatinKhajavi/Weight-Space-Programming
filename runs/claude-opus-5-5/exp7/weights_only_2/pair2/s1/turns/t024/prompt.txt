@@ -1,0 +1,31 @@
+OUTPUT of run 23 of at most 60:
+```
+corr(zQ, OVcopysign) all heads: -0.37972772609252214
+n strong-OV heads: 22  corr: -0.6393575028840349
+mean zQ for copy heads (cs>0.3): -0.9440483112993009  n= 16
+mean zQ for suppression heads (cs<-0.3): 3.097812924078134  n= 6
+strong-OV & matching-QK heads n= 16  corr: -0.6012520962778719
+L7h0 OVcopy=+0.85 baseQKmatch=+3.85 zQ=-2.04
+L7h1 OVcopy=-0.94 baseQKmatch=+4.99 zQ=+6.54
+L7h2 OVcopy=+0.71 baseQKmatch=+1.87 zQ=-3.03
+L7h3 OVcopy=+0.51 baseQKmatch=-0.36 zQ=-0.42
+L8h0 OVcopy=-0.40 baseQKmatch=+5.00 zQ=-0.01
+L8h2 OVcopy=+0.30 baseQKmatch=-3.17 zQ=+3.27
+L9h1 OVcopy=-0.69 baseQKmatch=+3.98 zQ=+8.05
+L9h2 OVcopy=+0.60 baseQKmatch=+2.11 zQ=-1.24
+L10h0 OVcopy=+0.35 baseQKmatch=+1.52 zQ=+1.29
+L10h2 OVcopy=+0.50 baseQKmatch=+3.94 zQ=-2.61
+L11h1 OVcopy=+0.81 baseQKmatch=+0.91 zQ=-3.11
+L11h3 OVcopy=-0.32 baseQKmatch=-0.49 zQ=+2.09
+L12h2 OVcopy=+0.55 baseQKmatch=+2.46 zQ=+0.89
+L12h3 OVcopy=+0.48 baseQKmatch=+0.93 zQ=-3.52
+L14h1 OVcopy=+0.31 baseQKmatch=+1.10 zQ=-1.10
+L14h2 OVcopy=+0.31 baseQKmatch=+1.41 zQ=-1.98
+L15h0 OVcopy=+0.77 baseQKmatch=-0.09 zQ=-4.77
+L15h1 OVcopy=-0.81 baseQKmatch=+4.62 zQ=+3.29
+L15h3 OVcopy=+0.76 baseQKmatch=+4.20 zQ=-2.56
+L17h0 OVcopy=+0.52 baseQKmatch=+3.26 zQ=-0.88
+L17h1 OVcopy=+0.66 baseQKmatch=+4.12 zQ=+6.70
+L17h2 OVcopy=-0.33 baseQKmatch=+4.15 zQ=-1.36
+
+```

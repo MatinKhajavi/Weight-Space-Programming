@@ -1,0 +1,6 @@
+OUTPUT of Python run 272 of at most 300:
+```
+MATH cut texts with distinctive ref: 145 | exact-loop share 0.56
+ref appears before onset 0.39 | boxed ref before onset 0.00 | control (other refs) 0.22
+
+```

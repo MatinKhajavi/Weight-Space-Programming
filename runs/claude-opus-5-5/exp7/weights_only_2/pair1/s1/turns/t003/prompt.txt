@@ -1,0 +1,173 @@
+OUTPUT of run 2 of at most 60:
+```
+L0.input_layernorm                       frac=0.000 |d|=0.0000 rel=0.0000
+L0.mlp.down_proj                         frac=0.842 |d|=0.2626 rel=0.0107 e1=0.040 e8=0.247 e16=0.403
+L0.mlp.gate_proj                         frac=0.734 |d|=0.2765 rel=0.0062 e1=0.095 e8=0.347 e16=0.489
+L0.mlp.up_proj                           frac=0.729 |d|=0.2734 rel=0.0061 e1=0.090 e8=0.336 e16=0.478
+L0.post_attention_layernorm              frac=0.000 |d|=0.0000 rel=0.0000
+L0.post_feedforward_layernorm            frac=0.153 |d|=0.0042 rel=0.0000
+L0.pre_feedforward_layernorm             frac=0.000 |d|=0.0000 rel=0.0000
+L0.k_norm                                frac=0.023 |d|=0.0007 rel=0.0000
+L0.k_proj                                frac=0.763 |d|=0.1020 rel=0.0064 e1=0.235 e8=0.602 e16=0.717
+L0.o_proj                                frac=0.745 |d|=0.1823 rel=0.0061 e1=0.148 e8=0.405 e16=0.536
+L0.q_norm                                frac=0.023 |d|=0.0010 rel=0.0000
+L0.q_proj                                frac=0.788 |d|=0.2018 rel=0.0064 e1=0.172 e8=0.491 e16=0.627
+L0.v_proj                                frac=0.709 |d|=0.0899 rel=0.0057 e1=0.171 e8=0.623 e16=0.734
+L1.input_layernorm                       frac=0.000 |d|=0.0000 rel=0.0000
+L1.mlp.down_proj                         frac=0.896 |d|=0.2581 rel=0.0166 e1=0.045 e8=0.232 e16=0.377
+L1.mlp.gate_proj                         frac=0.729 |d|=0.2771 rel=0.0062 e1=0.062 e8=0.293 e16=0.438
+L1.mlp.up_proj                           frac=0.726 |d|=0.2742 rel=0.0061 e1=0.060 e8=0.284 e16=0.425
+L1.post_attention_layernorm              frac=0.031 |d|=0.0020 rel=0.0000
+L1.post_feedforward_layernorm            frac=0.062 |d|=0.0032 rel=0.0000
+L1.pre_feedforward_layernorm             frac=0.000 |d|=0.0000 rel=0.0000
+L1.k_norm                                frac=0.000 |d|=0.0000 rel=0.0000
+L1.k_proj                                frac=0.744 |d|=0.0996 rel=0.0063 e1=0.154 e8=0.559 e16=0.714
+L1.o_proj                                frac=0.829 |d|=0.1754 rel=0.0095 e1=0.167 e8=0.496 e16=0.638
+L1.q_norm                                frac=0.000 |d|=0.0000 rel=0.0000
+L1.q_proj                                frac=0.773 |d|=0.1940 rel=0.0061 e1=0.125 e8=0.516 e16=0.671
+L1.v_proj                                frac=0.725 |d|=0.0955 rel=0.0060 e1=0.131 e8=0.513 e16=0.669
+L10.input_layernorm                      frac=0.002 |d|=0.0005 rel=0.0000
+L10.mlp.down_proj                        frac=0.894 |d|=0.2474 rel=0.0159 e1=0.094 e8=0.348 e16=0.473
+L10.mlp.gate_proj                        frac=0.757 |d|=0.2749 rel=0.0061 e1=0.129 e8=0.353 e16=0.467
+L10.mlp.up_proj                          frac=0.729 |d|=0.2699 rel=0.0060 e1=0.111 e8=0.344 e16=0.465
+L10.post_attention_layernorm             frac=0.002 |d|=0.0001 rel=0.0000
+L10.post_feedforward_layernorm           frac=0.000 |d|=0.0000 rel=0.0000
+L10.pre_feedforward_layernorm            frac=0.025 |d|=0.0017 rel=0.0000
+L10.k_norm                               frac=0.035 |d|=0.0014 rel=0.0000
+L10.k_proj                               frac=0.759 |d|=0.1028 rel=0.0065 e1=0.127 e8=0.518 e16=0.665
+L10.o_proj                               frac=0.757 |d|=0.1914 rel=0.0062 e1=0.100 e8=0.356 e16=0.490
+L10.q_norm                               frac=0.078 |d|=0.0022 rel=0.0001
+L10.q_proj                               frac=0.787 |d|=0.2098 rel=0.0067 e1=0.191 e8=0.518 e16=0.648
+L10.v_proj                               frac=0.717 |d|=0.0924 rel=0.0058 e1=0.093 e8=0.367 e16=0.517
+L11.input_layernorm                      frac=0.016 |d|=0.0014 rel=0.0000
+L11.mlp.down_proj                        frac=0.851 |d|=0.2379 rel=0.0116 e1=0.096 e8=0.325 e16=0.443
+L11.mlp.gate_proj                        frac=0.757 |d|=0.2792 rel=0.0062 e1=0.112 e8=0.330 e16=0.435
+L11.mlp.up_proj                          frac=0.730 |d|=0.2703 rel=0.0060 e1=0.100 e8=0.316 e16=0.429
+L11.post_attention_layernorm             frac=0.000 |d|=0.0000 rel=0.0000
+L11.post_feedforward_layernorm           frac=0.000 |d|=0.0000 rel=0.0000
+L11.pre_feedforward_layernorm            frac=0.011 |d|=0.0013 rel=0.0000
+L11.k_norm                               frac=0.027 |d|=0.0016 rel=0.0000
+L11.k_proj                               frac=0.813 |d|=0.1028 rel=0.0065 e1=0.200 e8=0.581 e16=0.701
+L11.o_proj                               frac=0.769 |d|=0.1941 rel=0.0063 e1=0.060 e8=0.281 e16=0.423
+L11.q_norm                               frac=0.023 |d|=0.0008 rel=0.0000
+L11.q_proj                               frac=0.801 |d|=0.2062 rel=0.0065 e1=0.178 e8=0.538 e16=0.673
+L11.v_proj                               frac=0.747 |d|=0.0941 rel=0.0059 e1=0.113 e8=0.368 e16=0.510
+L12.input_layernorm                      frac=0.011 |d|=0.0011 rel=0.0000
+L12.mlp.down_proj                        frac=0.853 |d|=0.2610 rel=0.0115 e1=0.083 e8=0.306 e16=0.436
+L12.mlp.gate_proj                        frac=0.766 |d|=0.2880 rel=0.0064 e1=0.128 e8=0.384 e16=0.517
+L12.mlp.up_proj                          frac=0.744 |d|=0.2814 rel=0.0063 e1=0.118 e8=0.367 e16=0.505
+L12.post_attention_layernorm             frac=0.000 |d|=0.0000 rel=0.0000
+L12.post_feedforward_layernorm           frac=0.000 |d|=0.0000 rel=0.0000
+L12.pre_feedforward_layernorm            frac=0.037 |d|=0.0025 rel=0.0000
+L12.k_norm                               frac=0.008 |d|=0.0005 rel=0.0000
+L12.k_proj                               frac=0.771 |d|=0.1043 rel=0.0066 e1=0.188 e8=0.568 e16=0.697
+L12.o_proj                               frac=0.779 |d|=0.1898 rel=0.0070 e1=0.066 e8=0.342 e16=0.494
+L12.q_norm                               frac=0.027 |d|=0.0012 rel=0.0001
+L12.q_proj                               frac=0.826 |d|=0.2112 rel=0.0068 e1=0.208 e8=0.577 e16=0.701
+L12.v_proj                               frac=0.728 |d|=0.0857 rel=0.0054 e1=0.077 e8=0.361 e16=0.513
+L13.input_layernorm                      frac=0.044 |d|=0.0021 rel=0.0000
+L13.mlp.down_proj                        frac=0.892 |d|=0.2687 rel=0.0162 e1=0.062 e8=0.268 e16=0.399
+L13.mlp.gate_proj                        frac=0.757 |d|=0.2894 rel=0.0065 e1=0.126 e8=0.389 e16=0.520
+L13.mlp.up_proj                          frac=0.739 |d|=0.2875 rel=0.0064 e1=0.117 e8=0.378 e16=0.512
+L13.post_attention_layernorm             frac=0.000 |d|=0.0000 rel=0.0000
+L13.post_feedforward_layernorm           frac=0.000 |d|=0.0000 rel=0.0000
+L13.pre_feedforward_layernorm            frac=0.052 |d|=0.0023 rel=0.0000
+L13.k_norm                               frac=0.016 |d|=0.0006 rel=0.0000
+L13.k_proj                               frac=0.792 |d|=0.1046 rel=0.0066 e1=0.127 e8=0.491 e16=0.633
+L13.o_proj                               frac=0.818 |d|=0.1875 rel=0.0086 e1=0.079 e8=0.331 e16=0.474
+L13.q_norm                               frac=0.035 |d|=0.0012 rel=0.0001
+L13.q_proj                               frac=0.797 |d|=0.2108 rel=0.0067 e1=0.155 e8=0.490 e16=0.625
+L13.v_proj                               frac=0.740 |d|=0.0968 rel=0.0061 e1=0.102 e8=0.381 e16=0.531
+L14.input_layernorm                      frac=0.027 |d|=0.0021 rel=0.0000
+L14.mlp.down_proj                        frac=0.903 |d|=0.2764 rel=0.0180 e1=0.052 e8=0.254 e16=0.393
+L14.mlp.gate_proj                        frac=0.762 |d|=0.2956 rel=0.0066 e1=0.121 e8=0.370 e16=0.493
+L14.mlp.up_proj                          frac=0.742 |d|=0.2936 rel=0.0066 e1=0.117 e8=0.361 e16=0.486
+L14.post_attention_layernorm             frac=0.000 |d|=0.0000 rel=0.0000
+L14.post_feedforward_layernorm           frac=0.000 |d|=0.0000 rel=0.0000
+L14.pre_feedforward_layernorm            frac=0.123 |d|=0.0038 rel=0.0000
+L14.k_norm                               frac=0.016 |d|=0.0006 rel=0.0000
+L14.k_proj                               frac=0.764 |d|=0.1012 rel=0.0064 e1=0.145 e8=0.484 e16=0.631
+L14.o_proj                               frac=0.765 |d|=0.1842 rel=0.0067 e1=0.134 e8=0.374 e16=0.505
+L14.q_norm                               frac=0.043 |d|=0.0014 rel=0.0001
+L14.q_proj                               frac=0.813 |d|=0.1999 rel=0.0064 e1=0.137 e8=0.450 e16=0.602
+L14.v_proj                               frac=0.735 |d|=0.0987 rel=0.0062 e1=0.127 e8=0.424 e16=0.575
+L15.input_layernorm                      frac=0.000 |d|=0.0000 rel=0.0000
+L15.mlp.down_proj                        frac=0.887 |d|=0.2831 rel=0.0154 e1=0.055 e8=0.308 e16=0.452
+L15.mlp.gate_proj                        frac=0.764 |d|=0.2991 rel=0.0067 e1=0.106 e8=0.322 e16=0.437
+L15.mlp.up_proj                          frac=0.746 |d|=0.2977 rel=0.0067 e1=0.100 e8=0.312 e16=0.429
+L15.post_attention_layernorm             frac=0.000 |d|=0.0000 rel=0.0000
+L15.post_feedforward_layernorm           frac=0.000 |d|=0.0000 rel=0.0000
+L15.pre_feedforward_layernorm            frac=0.037 |d|=0.0021 rel=0.0000
+L15.k_norm                               frac=0.062 |d|=0.0019 rel=0.0001
+L15.k_proj                               frac=0.774 |d|=0.1108 rel=0.0071 e1=0.129 e8=0.481 e16=0.626
+L15.o_proj                               frac=0.780 |d|=0.1917 rel=0.0074 e1=0.071 e8=0.334 e16=0.475
+L15.q_norm                               frac=0.074 |d|=0.0025 rel=0.0001
+L15.q_proj                               frac=0.788 |d|=0.2227 rel=0.0072 e1=0.161 e8=0.471 e16=0.608
+L15.v_proj                               frac=0.754 |d|=0.1052 rel=0.0066 e1=0.108 e8=0.403 e16=0.547
+L16.input_layernorm                      frac=0.000 |d|=0.0000 rel=0.0000
+L16.mlp.down_proj                        frac=0.874 |d|=0.2739 rel=0.0139 e1=0.096 e8=0.389 e16=0.555
+L16.mlp.gate_proj                        frac=0.759 |d|=0.2930 rel=0.0066 e1=0.086 e8=0.289 e16=0.402
+L16.mlp.up_proj                          frac=0.743 |d|=0.2933 rel=0.0066 e1=0.079 e8=0.283 e16=0.396
+L16.post_attention_layernorm             frac=0.000 |d|=0.0000 rel=0.0000
+L16.post_feedforward_layernorm           frac=0.000 |d|=0.0000 rel=0.0000
+L16.pre_feedforward_layernorm            frac=0.023 |d|=0.0019 rel=0.0000
+L16.k_norm                               frac=0.031 |d|=0.0008 rel=0.0000
+L16.k_proj                               frac=0.763 |d|=0.1050 rel=0.0067 e1=0.093 e8=0.387 e16=0.538
+L16.o_proj                               frac=0.840 |d|=0.1844 rel=0.0106 e1=0.107 e8=0.431 e16=0.600
+L16.q_norm                               frac=0.035 |d|=0.0012 rel=0.0001
+L16.q_proj                               frac=0.786 |d|=0.2061 rel=0.0067 e1=0.097 e8=0.383 e16=0.521
+L16.v_proj                               frac=0.736 |d|=0.1006 rel=0.0063 e1=0.107 e8=0.386 e16=0.531
+L17.input_layernorm                      frac=0.000 |d|=0.0000 rel=0.0000
+L17.mlp.down_proj                        frac=0.877 |d|=0.2565 rel=0.0140 e1=0.146 e8=0.477 e16=0.656
+L17.mlp.gate_proj                        frac=0.762 |d|=0.2865 rel=0.0065 e1=0.075 e8=0.269 e16=0.383
+L17.mlp.up_proj                          frac=0.740 |d|=0.2860 rel=0.0064 e1=0.073 e8=0.262 e16=0.378
+L17.post_attention_layernorm             frac=0.002 |d|=0.0002 rel=0.0000
+L17.post_feedforward_layernorm           frac=0.000 |d|=0.0000 rel=0.0000
+L17.pre_feedforward_layernorm            frac=0.045 |d|=0.0029 rel=0.0000
+L17.k_norm                               frac=0.039 |d|=0.0009 rel=0.0000
+L17.k_proj                               frac=0.782 |d|=0.1076 rel=0.0068 e1=0.237 e8=0.526 e16=0.654
+L17.o_proj                               frac=0.775 |d|=0.1746 rel=0.0071 e1=0.152 e8=0.396 e16=0.538
+L17.q_norm                               frac=0.031 |d|=0.0009 rel=0.0000
+L17.q_proj                               frac=0.818 |d|=0.1969 rel=0.0064 e1=0.123 e8=0.456 e16=0.582
+L17.v_proj                               frac=0.727 |d|=0.0932 rel=0.0059 e1=0.117 e8=0.397 e16=0.543
+L2.input_layernorm                       frac=0.002 |d|=0.0005 rel=0.0000
+L2.mlp.down_proj                         frac=0.876 |d|=0.2535 rel=0.0137 e1=0.053 e8=0.274 e16=0.410
+L2.mlp.gate_proj                         frac=0.732 |d|=0.2804 rel=0.0063 e1=0.082 e8=0.317 e16=0.452
+L2.mlp.up_proj                           frac=0.725 |d|=0.2728 rel=0.0061 e1=0.076 e8=0.309 e16=0.437
+L2.post_attention_layernorm              frac=0.077 |d|=0.0026 rel=0.0000
+L2.post_feedforward_layernorm            frac=0.008 |d|=0.0009 rel=0.0000
+L2.pre_feedforward_layernorm             frac=0.002 |d|=0.0010 rel=0.0000
+L2.k_norm                                frac=0.031 |d|=0.0010 rel=0.0000
+L2.k_proj                                frac=0.770 |d|=0.1132 rel=0.0072 e1=0.280 e8=0.646 e16=0.773
+L2.o_proj                                frac=0.789 |d|=0.1843 rel=0.0076 e1=0.115 e8=0.432 e16=0.573
+L2.q_norm                                frac=0.016 |d|=0.0015 rel=0.0001
+L2.q_proj                                frac=0.779 |d|=0.2175 rel=0.0070 e1=0.207 e8=0.527 e16=0.675
+L2.v_proj                                frac=0.730 |d|=0.0987 rel=0.0062 e1=0.136 e8=0.467 e16=0.611
+L3.input_layernorm                       frac=0.003 |d|=0.0003 rel=0.0000
+L3.mlp.down_proj                         frac=0.895 |d|=0.2512 rel=0.0158 e1=0.058 e8=0.275 e16=0.412
+L3.mlp.gate_proj                         frac=0.746 |d|=0.2776 rel=0.0062 e1=0.073 e8=0.291 e16=0.420
+L3.mlp.up_proj                           frac=0.726 |d|=0.2643 rel=0.0059 e1=0.064 e8=0.283 e16=0.409
+L3.post_attention_layernorm              frac=0.025 |d|=0.0014 rel=0.0000
+L3.post_feedforward_layernorm            frac=0.027 |d|=0.0018 rel=0.0000
+L3.pre_feedforward_layernorm             frac=0.003 |d|=0.0004 rel=0.0000
+L3.k_norm                                frac=0.047 |d|=0.0010 rel=0.0001
+L3.k_proj                                frac=0.763 |d|=0.0973 rel=0.0061 e1=0.141 e8=0.510 e16=0.669
+L3.o_proj                                frac=0.843 |d|=0.1692 rel=0.0105 e1=0.094 e8=0.409 e16=0.559
+L3.q_norm                                frac=0.055 |d|=0.0017 rel=0.0001
+L3.q_proj                                frac=0.780 |d|=0.2013 rel=0.0064 e1=0.107 e8=0.453 e16=0.614
+L3.v_proj                                frac=0.713 |d|=0.0923 rel=0.0058 e1=0.098 e8=0.440 e16=0.590
+L4.input_layernorm                       frac=0.014 |d|=0.0009 rel=0.0000
+L4.mlp.down_proj                         frac=0.914 |d|=0.2499 rel=0.0179 e1=0.064 e8=0.279 e16=0.406
+L4.mlp.gate_proj                         frac=0.751 |d|=0.2767 rel=0.0062 e1=0.090 e8=0.309 e16=0.430
+L4.mlp.up_proj                           frac=0.732 |d|=0.2714 rel=0.0061 e1=0.081 e8=0.296 e16=0.419
+L4.post_attention_layernorm              frac=0.014 |d|=0.0011 rel=0.0000
+L4.post_feedforward_layernorm            frac=0.006 |d|=0.0011 rel=0.0000
+L4.pre_feedforward_layernorm             frac=0.017 |d|=0.0013 rel=0.0000
+L4.k_norm                                frac=0.062 |d|=0.0017 rel=0.0000
+L4.k_proj                                frac=0.759 |d|=0.1017 rel=0.0064 e1=0.171 e8=0.542 e16=0.683
+L4.o_proj                                frac=0.857 |d|=0.1798 rel=0.0105 e1=0.116 e8=0.437 e16=0.574
+L4.q_norm                                frac=0.055 |d|=0.0018 rel=0.0001
+L4.q_proj                                frac=0.775 |d|=0.2021 rel=0.0064 e1=0.117 e8=0.463 e16=0.614
+L4.v_proj                                frac=0.
+[output cut at 15,000 characters]
+```

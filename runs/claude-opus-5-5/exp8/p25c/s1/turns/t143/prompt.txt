@@ -1,0 +1,16 @@
+OUTPUT of Python run 123 of at most 300:
+```
+H loop lines 734 [('<nonword:$>', 0.245), ('So', 0.095), ("I'll", 0.063), ('Is', 0.06), ('No', 0.05), ('Maybe', 0.048), ('The', 0.044), ('This', 0.042), ('I', 0.038), ('Because', 0.037), ('Why', 0.031), ('Yes', 0.023), ('<nonword:.>', 0.022), ('If', 0.02), ('Then', 0.019), ('Final', 0.016)]
+NOLOOP L1 | e answer.\n\n    *   So, the answer is 48.\n    *   I'll just output the answer.\n\n    *   If the user meant $\frac{6! + 7!}{5!}$?\n    *   If the user meant $\frac{6! + 7!}{5!}$?\n    *   I'll just output the answer.\n\n    *   I'll stop
+NOLOOP L1 | 4256$.\n        $1525^2 = 2327225$.\n        $1526^2 = 2330236$.\n        $1527^2 = 2333249$.\n        $1528^2 = 2336204$.\n        $1529^2 = 2339161$.\n        $1530^2 = 2342100$.\n        $1531^2 = 2345161$.\n        $1532^2 = 2348184$.
+NOLOOP L2 | $RC$.\n    *   I think this is not helpful.\n    *   This is not helpful.\n    *   Okay, I think I'm going in circles.\n    *   I'll stop guessing and try to reason step by step.\n    *   Given: $\angle PQR = 63^\circ$, $\angle QPR = 5
+NOLOOP L2 | rite the response.\n    The logic is sound.\n    $z \cdot \overline{z} = |z|^2$.\n    $|z| = 13$.\n    $z \cdot \overline{z} = 13^2 = 169$.\n    Done.\n    So the answer is 169.\n    So the answer is 169.\n    I'll write the response.\n   
+NOLOOP L2 | 114} = 0.13$.\n$h_{1115} = 0.13$.\n$h_{1116} = 0.13$.\n$h_{1117} = 0.13$.\n$h_{1118} = 0.13$.\n$h_{1119} = 0.13$.\n$h_{1120} = 0.13$.\n$h_{1121} = 0.13$.\n$h_{1122} = 0.13$.\n$h_{1123} = 0.13$.\n$h_{1124} = 0.13$.\n$h_{1125} = 0.13$.\n$h_{112
+WRONG L1 tok 12571 pred 0 ref 8
+WRONG L2 tok 10341 pred 202.5 ref 157.5
+WRONG L3 tok 9852 pred \frac{1}{20736} ref \frac{5}{16}
+WRONG L3 tok 13173 pred 3/10 ref \frac{9}{20}
+WRONG L3 tok 4293 pred 7 ref 7\text{ hours}.
+WRONG L4 tok 23895 pred 0 ref 31
+
+```

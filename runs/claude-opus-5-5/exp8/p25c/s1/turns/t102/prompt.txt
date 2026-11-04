@@ -1,0 +1,11 @@
+OUTPUT of Python run 87 of at most 300:
+```
+L23 rel change 0.1187390610575676
+15 delta inside B_c5 span frac 0.9999999403953552
+19 delta inside B_c5 span frac 1.0
+['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.19.self_attn.o_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']
+Traceback (most recent call last):
+  File "<run>", line 20, in <module>
+ValueError: unsupported format character '(' (0x28) at index 44
+
+```

@@ -1,0 +1,14 @@
+OUTPUT of Python run 37 of at most 300:
+```
+# Notes (Qwen3.5-0.8B math repair)
+## Setup
+- Pools in /work/pools.json: D (diagnosis: 320 MATH level-stratified like MATH-500 + 192 GSM8K), S (selection), H (held-out).
+- Prompt format: user = problem + "\nPlease reason step by step, and put your final answer within \boxed{}."; thinking on.
+- Token ids: <think>=248068 </think>=248069 <|im_end|>=248046 eos(<|endoftext|>)=248044 ' Wait'=13428 'Wait'=13784
+## Pass log
+
+['diag_ids.json', 'fwd_4', 'gen_3.jsonl', 'gen_3_acts', 'notes.md', 'pools.json', 'probe1.txt', 'probe2.txt']
+['A', 'Ah', 'E', 'F', 'FROZEN', 'H_last', 'H_mean', 'Hs', 'ID', 'L', 'MODEL', 'M_last', 'M_mean', 'Mm', 'NAMES', 'P', 'P1', 'P2', 'WORK', 'X', 'Xc', 'a', 'a_loop', 'a_pre', 'aime', 'allind', 'alts', 'bos', 'bot', 'by_lvl', 'c', 'cfg', 'corr', 'cut_rows', 'cutmask', 'd', 'd2', 'dd', 'dfi', 'diag_ids', 'dm', 'early', 'fin', 'fin_rows', 'fp', 'fracs', 'g', 'gfin', 'gsm', 'gsm_ids', 'h', 'i', 'ids', 'ids_tf', 'idx', 'ind', 'info', 'k', 'l', 'layer', 'line', 'loop1', 'loopR', 'loop_pos', 'lp', 'lvl_w', 'm', 'meta', 'mth', 'myids', 'n', 'notes', 'nt', 'nxt', 'o', 'on', 'on1', 'on2', 'ons', 'p', 'per', 'per1', 'per2', 'periods', 'pl1', 'pl2', 'poolD_gsm', 'poolD_math', 'poolH_gsm', 'poolH_math', 'poolS_gsm', 'poolS_math', 'pools', 'pos', 'pp', 'pre', 'pre_pos', 'ps', 'q_idx', 'r', 'r2', 'ra', 'res', 'rid', 'rng', 'rows', 's', 's0', 'same', 'samples', 'seg', 'sel', 'selfm', 'smp', 'st', 'state', 'stats', 'subj_ids', 't', 't2', 'tk', 'tkl', 'tmpl', 'tok', 'top', 'u', 'units', 'v', 'w', 'y', 'yc', 'yy', 'z']
+512 dict_keys(['id', 'source', 'answer', 'samples'])
+
+```

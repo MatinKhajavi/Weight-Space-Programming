@@ -1,0 +1,11 @@
+OUTPUT of Python run 198 of at most 300:
+```
+orig median max-indent at 100/200/400 lines [8. 8. 8.] | share >=24 spaces by 200 lines 0.11
+A median max-indent at 100/200/400 lines [12. 16. 16.] | share >=24 spaces by 200 lines 0.34
+C median max-indent at 100/200/400 lines [12. 12. 16.] | share >=24 spaces by 200 lines 0.27
+C gsm ok 179 median max-indent 100/200 lines [12. 16.] n with >=100 lines 161 share >=24 @100 lines 0.15
+C gsm fail 77 median max-indent 100/200 lines [24. 34.] n with >=100 lines 77 share >=24 @100 lines 0.56
+C math ok 132 median max-indent 100/200 lines [8. 8.] n with >=100 lines 128 share >=24 @100 lines 0.08
+C math fail 124 median max-indent 100/200 lines [ 8. 11.] n with >=100 lines 124 share >=24 @100 lines 0.27
+
+```

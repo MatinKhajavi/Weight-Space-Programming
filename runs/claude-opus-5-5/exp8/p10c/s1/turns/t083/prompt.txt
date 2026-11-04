@@ -1,0 +1,19 @@
+OUTPUT of Python run 72 of at most 300:
+```
+sample keys: {'text': 53509, 'pred': None, 'correct': False, 'tokens': 32768, 'cut': True}
+----- readjl (p)
+NA could not get source code
+----- toks (t)
+NA could not get source code
+----- loop_info (ids, max_p=400)
+----- period_of (ids, tail=300)
+----- onset_period (ids)
+----- line_start_positions (ids)
+----- analyze (GG)
+----- ans_before (text_ids, on, ans)
+----- wait_rate (ids, a, b)
+----- finish_stats (text)
+----- mass (ts, targets_fn)
+
+[harness: 9 repeated lines not shown (a line is shown at most 2 times per output)]
+```

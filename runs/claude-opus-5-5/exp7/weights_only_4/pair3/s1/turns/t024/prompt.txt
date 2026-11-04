@@ -1,0 +1,55 @@
+OUTPUT of run 23 of at most 60:
+```
+L9 all heads
+  A+: [' world(4.0)', ' dock(3.8)', ' globe(3.7)', ' squared(3.7)', ' realm(3.6)', ' fewer(3.6)', ' tylko(3.5)', ' laugh(3.5)', ' few(3.5)', ' incorporated(3.4)', ' laughed(3.4)', ' cleaner(3.3)']
+  A-: ['is(-4.4)', 'ete(-4.3)', 'eter(-4.2)', 'inal(-4.1)', 'amb(-4.0)', 'ab(-4.0)', 'ener(-3.9)', 'etal(-3.9)', 'ester(-3.9)', 'iven(-3.9)', 'avor(-3.8)', 'ubre(-3.7)']
+L10 all heads
+  A+: ['atem(4.8)', ' squared(4.5)', ' though(4.2)', ' globe(4.1)', ' guides(4.0)', 'ana(3.9)', 'deo(3.8)', ' definit(3.8)', ' virtually(3.7)', ' calls(3.7)', 'ke(3.6)', ' ease(3.6)']
+  A-: ['Products(-3.4)', 'harm(-3.4)', ' Marketing(-3.4)', ' valores(-3.4)', ' intend(-3.3)', 'mad(-3.3)', ' fraud(-3.3)', 'imos(-3.3)', 'Sales(-3.3)', 'Twitter(-3.2)', 'innerText(-3.2)', 'isson(-3.2)']
+L11h1 |v|=448.2
+  A+: ['ainer(4.7)', 'alc(4.5)', 'rez(4.4)', 'slant(4.2)', 'lei(4.2)', 'ael(4.0)', 'aden(3.9)', 'iler(3.9)', 'emu(3.8)', 'adir(3.8)']
+  A-: ['PI(-3.5)', ' box(-3.5)', ' Ukraine(-3.5)', ' dating(-3.3)', ' activated(-3.3)', ' Zone(-3.3)', ' boxes(-3.3)', ' Box(-3.2)', ' held(-3.2)', ' hood(-3.2)']
+L11 all heads
+  A+: ['ale(4.9)', 'ader(4.9)', 'alen(4.7)', 'ael(4.5)', 'elen(4.5)', 'render(4.4)', 'aden(4.3)', 'kel(4.3)', 'aler(4.2)', 'el(4.2)', 'eler(4.1)', 'Sel(4.0)']
+  A-: [' Naz(-3.9)', ' Poland(-3.6)', 'PI(-3.5)', 'ipitation(-3.5)', ' activated(-3.4)', ' boxes(-3.4)', ' Nap(-3.3)', 'scription(-3.3)', 'PIO(-3.2)', 'Today(-3.2)', 'binary(-3.2)', 'hus(-3.2)']
+L12 all heads
+  A+: ['ote(4.4)', 'aste(4.2)', 'ave(4.2)', 'far(3.8)', 'te(3.8)', 've(3.8)', ' Moore(3.7)', 'oul(3.7)', 'orte(3.7)', 'el(3.6)', 'roy(3.5)', 'AVE(3.5)']
+  A-: ['gn(-4.1)', ' independ(-3.7)', ' btn(-3.7)', ' printed(-3.7)', 'ygon(-3.7)', 'rypted(-3.6)', ' blank(-3.6)', ' paired(-3.5)', ' offline(-3.4)', 'language(-3.4)', ' ground(-3.4)', 'ixed(-3.4)']
+L13h2 |v|=1198.3
+  A+: ['ogramDetails(4.0)', 'elen(3.9)', 'HistogramDetails(3.8)', 'REN(3.8)', 'opencamer(3.8)', 'stylesheet(3.8)', 'testHDR(3.8)', 'testPanorama(3.8)', 'ParaPkg(3.8)', 'opencamerastudio(3.8)']
+  A-: [' finished(-4.2)', ' nothing(-4.0)', ' Finally(-4.0)', ' close(-3.9)', ' addressed(-3.8)', 'None(-3.8)', ' delivered(-3.6)', ' finishes(-3.6)', ' none(-3.6)', ' remember(-3.6)']
+L13 all heads
+  A+: ['Mo(4.4)', 'ovi(4.1)', 'umar(4.0)', 'ewer(4.0)', 'yle(4.0)', 'elen(3.9)', 'aniu(3.9)', 'ene(3.7)', ' Mo(3.7)', 'tFileInputExcel(3.7)', 'attach(3.7)', 'aisse(3.7)']
+  A-: [' Finally(-4.7)', 'Finally(-4.3)', ' finished(-4.0)', ' filing(-3.7)', ' squared(-3.6)', ' secured(-3.4)', 'icos(-3.4)', ' Actually(-3.4)', 'berries(-3.4)', 'Graphics(-3.4)', ' declared(-3.3)', ' yap(-3.3)']
+L14h1 |v|=2186.0
+  A+: ['aram(4.4)', 'yang(4.1)', 'gment(3.9)', 'from(3.9)', 'omorphism(3.8)', ' percentage(3.8)', 'ieron(3.8)', 'amenti(3.7)', 'otics(3.7)', 'otic(3.7)']
+  A-: ['Finally(-4.5)', ' Works(-4.2)', 'Use(-4.0)', 'Perhaps(-4.0)', ' mine(-4.0)', ' Finally(-3.9)', ' By(-3.9)', ' works(-3.7)', ' And(-3.7)', ' dob(-3.5)']
+L14h2 |v|=3626.4
+  A+: [' manner(4.2)', ' at(3.9)', ' results(3.8)', ' result(3.7)', ' number(3.5)', ' method(3.5)', ' exact(3.5)', ' fashion(3.4)', ' answer(3.4)', ' reason(3.4)']
+  A-: [' ativid(-3.9)', 'BlackElo(-3.7)', ' setToDefault(-3.6)', 'sprite(-3.5)', ' oso(-3.4)', 'ogramDetails(-3.4)', ' Saya(-3.4)', ' saya(-3.4)', ' wsz(-3.4)', ' sinc(-3.2)']
+L14 all heads
+  A+: [' titled(4.5)', 'aram(4.4)', 'eni(4.2)', 'uru(3.7)', ' statistics(3.7)', 'ural(3.7)', 'uring(3.6)', 'otti(3.6)', 'itled(3.5)', 'etur(3.5)', 'endi(3.5)', 'otta(3.4)']
+  A-: [' Wir(-4.7)', ' wir(-4.2)', 'peror(-3.9)', ' saya(-3.8)', ' wij(-3.8)', ' zm(-3.8)', 'ramos(-3.8)', ' kami(-3.7)', 'Ich(-3.7)', ' pec(-3.7)', 'WhiteElo(-3.6)', ' nuestros(-3.6)']
+L15h2 |v|=3768.8
+  A+: ['amar(4.2)', 'ewer(4.2)', ' investig(4.0)', 'woman(3.9)', 'asta(3.7)', 'sey(3.7)', ' progressive(3.6)', 'esser(3.6)', ' science(3.5)', 'gest(3.5)']
+  A-: [' hydrox(-3.8)', ' alc(-3.8)', 'ualaikum(-3.8)', 'uno(-3.8)', 'unan(-3.7)', ' receipt(-3.7)', 'ENTS(-3.7)', 'ningen(-3.6)', 'nten(-3.6)', ' ello(-3.6)']
+L15h3 |v|=3587.8
+  A+: [' Viet(4.0)', ' progressive(3.8)', ' seven(3.8)', ' fifty(3.8)', ' dod(3.7)', ' six(3.7)', ' five(3.7)', ' V(3.6)', ' fashion(3.6)', ' vi(3.4)']
+  A-: ['uno(-4.8)', 'INGS(-4.6)', ' padre(-4.5)', 'ething(-4.4)', 'ulse(-4.2)', 'unya(-3.9)', 'peror(-3.9)', 'uo(-3.8)', ' ello(-3.8)', 'urn(-3.7)']
+L15 all heads
+  A+: [' progressive(4.6)', ' forty(4.1)', ' fifty(3.8)', ' balance(3.6)', ' seven(3.5)', ' four(3.5)', ' nine(3.5)', ' V(3.5)', ' equilib(3.4)', ' eight(3.4)', ' Viet(3.4)', 'ract(3.4)']
+  A-: ['uk(-4.4)', 'ething(-4.1)', 'INGS(-4.0)', ' padre(-3.9)', 'ken(-3.8)', ' trabaj(-3.8)', ' bark(-3.8)', ' ello(-3.7)', 'ukk(-3.7)', 'otos(-3.7)', ' obtener(-3.7)', 'cken(-3.7)']
+L16h0 |v|=3364.6
+  A+: ['ulators(4.1)', 'ivities(3.8)', 'imeters(3.6)', 'ilities(3.6)', 'ogenesis(3.6)', 'uclear(3.6)', 'aters(3.5)', 'pathetic(3.4)', 'keiten(3.4)', 'enders(3.4)']
+  A-: [' Do(-3.3)', ' SO(-3.2)', 'Do(-3.2)', ' Find(-2.9)', ' Sn(-2.8)', 'zero(-2.8)', ' DO(-2.8)', 'Se(-2.8)', 'Buy(-2.8)', 'Find(-2.8)']
+L16 all heads
+  A+: ['ivities(4.3)', 'ilities(4.0)', 'ysts(3.7)', 'aters(3.6)', 'encies(3.5)', 'itures(3.5)', 'regate(3.5)', 'ativity(3.5)', 'ogenesis(3.4)', ' affairs(3.4)', 'ulators(3.4)', 'ulence(3.3)']
+  A-: [' SO(-3.1)', 'pl(-3.0)', ' li(-3.0)', ' pl(-2.6)', ' Li(-2.6)', 'Do(-2.6)', 'Le(-2.6)', 'Al(-2.6)', 'St(-2.6)', ' Do(-2.6)', ' BE(-2.6)', 'bl(-2.6)']
+L17 all heads
+  A+: [' benefit(4.6)', ' measure(4.2)', ' stride(4.2)', ' efficacy(4.1)', 'displaystyle(4.0)', 'ively(3.8)', ' testimony(3.7)', ' reality(3.6)', ' lived(3.5)', ' muss(3.5)', 'pective(3.5)', ' cele(3.4)']
+  A-: ['yellow(-4.1)', 'nb(-4.1)', 'soft(-3.8)', 'atform(-3.7)', ' yellow(-3.7)', ' eight(-3.6)', 'Hard(-3.5)', 'four(-3.5)', 'por(-3.5)', 'bah(-3.5)', 'rer(-3.4)', 'wp(-3.3)']
+L9-17 total
+  A+: ['ivities(4.4)', 'ecu(4.0)', 'ures(4.0)', 'orable(3.9)', 'stylesheet(3.9)', ' ratios(3.9)', 'imshow(3.8)', 'pector(3.7)', 'asta(3.7)', 'ATURE(3.7)', 'ourier(3.6)', 'ael(3.6)', 'ewer(3.6)', 'regate(3.6)', 'acious(3.5)', 'uru(3.5)', 'endev(3.5)', 'aisse(3.5)', 'erea(3.5)', 'ellite(3.5)', 'atorial(3.5)', 'enschaft(3.4)', 'tegr(3.4)', 'enders(3.4)', 'emic(3.4)'] 
+  A-: ['Grad(-3.3)', 'Inst(-3.1)', ' kont(-3.1)', 'SK(-3.0)', ' kn(-3.0)', 'Jack(-2.9)', ' Wang(-2.9)', 'Hello(-2.9)', 'Typ(-2.9)', ' Wir(-2.8)', 'SN(-2.8)', 'Bin(-2.8)', ' zm(-2.8)', ' bin(-2.8)', 'Ob(-2.7)', ' ob(-2.7)', ' bis(-2.7)', ' gl(-2.7)', ' yan(-2.7)', 'bl(-2.7)', ' Liv(-2.7)', ' Note(-2.7)', 'UP(-2.7)', ' poss(-2.7)', ' kom(-2.7)']
+
+```

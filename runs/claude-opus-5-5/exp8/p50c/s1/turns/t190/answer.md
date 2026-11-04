@@ -1,0 +1,8 @@
+Indentation is only a weak correlate. 43% of loop units sit at 24 or more spaces, against 16% of lines in correct answers, but loops are bimodal (quartiles 7 and 40 spaces) and pre-onset depth rises only modestly (12 → 20). Runaway nesting is not a clear driver, so I drop it. The remaining loops are verbatim line repeats carried by copying spread over many heads. Removing more copiers hurts computation, so the opposite lever is more promising: networks of this kind often contain copy-suppression heads. Such heads attend to earlier occurrences of a token and lower its logit, and in a small model they may be too weak to stop runaway repetition. I will screen all 48 full-attention heads by their OV circuit: for a few thousand common tokens, does a head attending to token t raise or lower t's own output logit relative to other tokens? Known copy heads (15.7, 23.5, 23.0, 11.1) should score strongly positive, which validates the screen. Any head with a clearly negative self-score in layers 15–23 is a copy-suppression candidate to check against the recorded loop attention.
+
+```python
+# Hypothesis: some late full-attention heads are copy-suppression heads (negative OV self-score); known induction heads should be strongly positive (validation)
+for nm_ in NAMES:
+    if 'layers.15.' in nm_ and ('self_attn' in nm_ or 'layernorm' in nm_): print(nm_, tuple(load_original(nm_).shape))
+ln_in=load_original('model.language_model.layers.15.input_layernorm.weight'); print('input_layernorm mean', float(ln_in.mean()))
+```

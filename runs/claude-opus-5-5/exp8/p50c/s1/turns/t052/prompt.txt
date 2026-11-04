@@ -1,0 +1,6 @@
+OUTPUT of Python run 47 of at most 300:
+```
+w mean abs err of logit gaps 0.879
+1+w mean abs err of logit gaps 0.033
+
+```

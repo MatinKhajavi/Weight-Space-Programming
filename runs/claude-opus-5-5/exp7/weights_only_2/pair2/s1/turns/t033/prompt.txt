@@ -1,0 +1,15 @@
+OUTPUT of run 32 of at most 60:
+```
+L11h0: s1..3/|Mm|=[0.0247 0.0212 0.0175] | query-side pred-dim share [0.71 0.74 0.76] | key-side [0.77 0.8  0.76] | base-channel overlap q=0.34 k=0.37 | base q-side share 0.79 k-side 0.86
+L11h1: s1..3/|Mm|=[0.0233 0.0146 0.0141] | query-side pred-dim share [0.7  0.85 0.79] | key-side [0.83 0.79 0.85] | base-channel overlap q=0.46 k=0.34 | base q-side share 0.86 k-side 0.86
+L11h2: s1..3/|Mm|=[0.0086 0.0066 0.0056] | query-side pred-dim share [0.8  0.78 0.73] | key-side [0.71 0.71 0.73] | base-channel overlap q=0.37 k=0.24 | base q-side share 0.92 k-side 0.76
+L11h3: s1..3/|Mm|=[0.0155 0.0097 0.0091] | query-side pred-dim share [0.82 0.8  0.79] | key-side [0.73 0.84 0.75] | base-channel overlap q=0.43 k=0.28 | base q-side share 0.92 k-side 0.80
+L12h0: s1..3/|Mm|=[0.0176 0.0099 0.0091] | query-side pred-dim share [0.83 0.82 0.83] | key-side [0.62 0.75 0.76] | base-channel overlap q=0.29 k=0.43 | base q-side share 0.81 k-side 0.85
+L12h3: s1..3/|Mm|=[0.0171 0.0092 0.0078] | query-side pred-dim share [0.9  0.8  0.81] | key-side [0.82 0.74 0.77] | base-channel overlap q=0.25 k=0.53 | base q-side share 0.84 k-side 0.82
+L17h1: s1..3/|Mm|=[0.0146 0.0125 0.0061] | query-side pred-dim share [0.75 0.61 0.79] | key-side [0.71 0.81 0.83] | base-channel overlap q=0.34 k=0.39 | base q-side share 0.95 k-side 0.94
+L5h2: s1..3/|Mm|=[0.009  0.0068 0.0058] | query-side pred-dim share [0.02 0.04 0.03] | key-side [0.01 0.   0.  ] | base-channel overlap q=0.06 k=0.33 | base q-side share 0.10 k-side 0.00
+L9h1: s1..3/|Mm|=[0.0067 0.0059 0.0042] | query-side pred-dim share [0.24 0.44 0.35] | key-side [0.25 0.29 0.18] | base-channel overlap q=0.22 k=0.17 | base q-side share 0.59 k-side 0.52
+L15h1: s1..3/|Mm|=[0.0072 0.0047 0.0043] | query-side pred-dim share [0.79 0.89 0.81] | key-side [0.72 0.9  0.74] | base-channel overlap q=0.36 k=0.38 | base q-side share 0.97 k-side 0.96
+L15h0: s1..3/|Mm|=[0.0104 0.0081 0.006 ] | query-side pred-dim share [0.67 0.82 0.88] | key-side [0.79 0.69 0.84] | base-channel overlap q=0.40 k=0.36 | base q-side share 0.74 k-side 0.84
+
+```

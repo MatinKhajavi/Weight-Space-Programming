@@ -1,0 +1,8 @@
+OUTPUT of Python run 98 of at most 300:
+```
+['model.language_model.layers.15.self_attn.o_proj.weight.npy', 'model.language_model.layers.22.mlp.down_proj.weight.npy', 'model.language_model.layers.23.self_attn.o_proj.weight.npy'] ['model.language_model.layers.15.self_attn.o_proj.weight.npy', 'model.language_model.layers.23.self_attn.o_proj.weight.npy']
+saved /work/best_A_x1p5 3
+saved /work/best_C_x2 3
+now edited: ['model.language_model.layers.22.mlp.down_proj.weight']
+
+```

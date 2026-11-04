@@ -1,0 +1,167 @@
+OUTPUT of run 16 of at most 60:
+```
+specials sample: [(0, '<pad>'), (1, '<eos>'), (2, '<bos>'), (3, '<unk>'), (4, '<mask>'), (105, '<start_of_turn>'), (106, '<end_of_turn>'), (255999, '<start_of_image>'), (256000, '<end_of_image>'), (262144, '<image_soft_token>')]
+139423
+0 self_attn.k_proj
+    ' John' ' David' ' George' ' super' ' Peter' ' Paul' ' cat' ' James' ' Star' ' Q' ' Super' ' Israel' ' Google' ' Paris' ' Tom' ' Trump' ' Jon' ' U' ' Edward' ' Al' ' pet' ' San' ' Michael' ' sh' ' T' ' non' ' El' ' Pro' ' micro' ' Iran' ' Robert' ' Nicholas' ' Chris' 'LastGenOutput' ' BVHTree' ' inter' ' Hong' ' Gene' ' Thomas' ' pl' ' RasterModelGrid' ' Louis' ' Z' ' Cal' ' Ben' ' Ant' ' What' ' Joseph' ' Apple' ' Jane' ' Cat' ' G' ' International' ' Air' ' Richard' ' United' ' Com' ' Res' 'George' ' V' ' Andrew' ' Inter' ' pro' ' pushedAt' ' Las' ' Val' ' St' ' st' ' Mary' ' Daniel' ' Vietnam' ' co' ' Charles' ' Greek' ' Ken' ' john' ' Los' ' dog' ' J' ' Harry' ' Neil' ' Lu' ' Donald' ' stockbild' ' Saudi' ' hyper' ' air' ' AR' 'John' ' ph' ' Car' ' Anna' ' Sri' ' py' ' Jean' ' Stephen' ' Adam' ' Pol' ' CL' ' Mac' ' Saint' ' Alex' ' Darwin' ' N' ' g' ' Martin' ' Pet' ' Abraham' ' Japan' ' Li' ' F' ' RtlOverlay' ' Har' ' Atomnoj' ' threx' ' Par' ' q' ' tele' ' Anthony' ' E'
+      ' think': rank 9259 / 139423
+      ' believe': rank 61604 / 139423
+      ' guess': rank 92532 / 139423
+      ' sure': rank 63380 / 139423
+      ' answer': rank 3588 / 139423
+      ' Is': rank 1030 / 139423
+      ' is': rank 1074 / 139423
+      '?': rank 81537 / 139423
+      ' I': rank 754 / 139423
+      'I': rank 7234 / 139423
+      ' pretty': rank 40798 / 139423
+      ' maybe': rank 87408 / 139423
+      '<start_of_turn>': rank 1250 / 139423
+      '<end_of_turn>': rank 4657 / 139423
+      ' capital': rank 585 / 139423
+      ' opposite': rank 40763 / 139423
+      ' color': rank 19333 / 139423
+      ' minus': rank 67390 / 139423
+      ' plus': rank 28817 / 139423
+      ' times': rank 16310 / 139423
+      ' What': rank 46 / 139423
+0 self_attn.v_proj
+    '.' ' of' ',' ' the' ' to' ' for' ' in' ' and' ' with' '<bos>' ' de' ' The' ' on' ':' ' from' ' is' 'The' ' What' ' by' ' a' 'What' ' llrp' ' threx' '?' ' RtlOverlay' 'wallepics' ' RUTARE' ' BVHTree' 'Aslamualaikum' ' kahelaro' ' iccad' ' REGIUNI' ' what' ' gstlal' ' BSData' 'the' 'MSFont' ';' ' UWGM' ' punctulatis' 'of' ' UICtrl' ' To' ' or' ' Atomnoj' ' RasterModelGrid' 'swadian' 'ratingBarStyle' 'UISelectors' ' In' ' pushedAt' ' kttt' ' vattum' ' which' ' BLUENRG' 'actionBarTab' ' MDET' 'setKeepCallback' ' ivvu' ' QnrB' 'URNIZOR' ' Ettha' 'DialogWhenLarge' ' HTMLSc' ' coveredmethods' ' hetuk' ' Ehnergii' ' cPix' ' MDLVertex' ' Giveen' ' elytris' ' kehnd' ' are' ' gradioApp' ' THE' ' vutto' ' MTLTexture' ' wwwpond' 'ClkInitStruct' ' canaliculato' ' For' 'MDEwOlJlcG' 'innerApiCalls' ' at' "'" ' atthakath' ' spineItem' ' CCOc' ' vuccanti' 'jiwarl' 'panelMenuList' ' Of' ' meriye' 'tFileInputExcel' 'vaegir' ' pavattati' ' saddas' ' fdPar' ' payog' ' Is' 'wwwpond' ' vadama' ' Elytres' ' Pusenkoff' ' With' 'INTRESOURCE' 'tDBOutput' ' paccati' ' ThemeOverlay' ' motionProxy' ' Ehnerg' ' un' ' localVarHTTP' ' ROUILLER' ' CustB' ' baseApiPath' ' dhinak' ' Oldborough' 'DebuggingMode' ' about'
+      ' think': rank 16670 / 139423
+      ' believe': rank 69335 / 139423
+      ' guess': rank 98729 / 139423
+      ' sure': rank 38946 / 139423
+      ' answer': rank 13235 / 139423
+      ' Is': rank 99 / 139423
+      ' is': rank 15 / 139423
+      '?': rank 23 / 139423
+      ' I': rank 1529 / 139423
+      'I': rank 4854 / 139423
+      ' pretty': rank 42200 / 139423
+      ' maybe': rank 22386 / 139423
+      '<start_of_turn>': rank 348 / 139423
+      '<end_of_turn>': rank 1425 / 139423
+      ' capital': rank 3352 / 139423
+      ' opposite': rank 6146 / 139423
+      ' color': rank 77678 / 139423
+      ' minus': rank 15586 / 139423
+      ' plus': rank 2340 / 139423
+      ' times': rank 44141 / 139423
+      ' What': rank 17 / 139423
+0 self_attn.q_proj
+    ' Germany' ' TX' ' Egypt' ' Italy' ' Poland' ' Israel' ' Turkey' ' Mexico' ' Ohio' ' Spain' ' Sarah' ' Brazil' ' India' ' Anna' ' Chile' ' Thailand' ' China' ' Florida' ' Argentina' ' Miami' ' Georgia' ' France' ' AD' ' Texas' ' Indonesia' ' WA' ' Russia' ' Illinois' ' Virginia' ' Maria' ' Denmark' ' Mike' ' CA' ' Malaysia' ' Lee' ' California' ' Iran' ' Alex' ' LA' ' Korea' ' Pakistan' ' Canada' ' Minnesota' ' Chen' ' Nigeria' ' Susan' ' NY' ' Qatar' ' Japan' ' Dallas' ' Jordan' ' Dubai' ' Java' ' Colombia' ' CL' ' Pennsylvania' ' Jerry' ' Houston' ' Saudi' ' Arizona' ' Switzerland' ' Kuwait' ' DC' ' Kenya' ' Portugal' ' FL' ' Atlanta' ' Singapore' ' Greece' ' NC' ' Paris' ' canada' ' SA' ' Rose' ' Austria' ' Leo' ' Michigan' ' Mary' ' Julie' ' Jon' 'Israel' 'Germany' ' Gina' ' AN' ' BC' ' Daniel' ' David' ' Arabic' ' Berlin' ' ROSE' ' Morocco' ' MN' ' NA' ' Linda' ' Hungary' ' Juan' ' Maine' ' Iowa' ' Bella' ' Sweden' ' Tennessee' ' Jake' ' German' ' Chelsea' ' Venezuela' ' SR' ' Croatia' ' apple' ' Sol' ' Belgium' ' Cuba' ' DM' ' John' ' Kim' ' Russian' ' Jessica' ' Nancy' ' david' ' DB' ' TN'
+      ' think': rank 54986 / 139423
+      ' believe': rank 69169 / 139423
+      ' guess': rank 85719 / 139423
+      ' sure': rank 100272 / 139423
+      ' answer': rank 1105 / 139423
+      ' Is': rank 377 / 139423
+      ' is': rank 143 / 139423
+      '?': rank 19377 / 139423
+      ' I': rank 9068 / 139423
+      'I': rank 13934 / 139423
+      ' pretty': rank 77584 / 139423
+      ' maybe': rank 36446 / 139423
+      '<start_of_turn>': rank 23976 / 139423
+      '<end_of_turn>': rank 27937 / 139423
+      ' capital': rank 13810 / 139423
+      ' opposite': rank 38553 / 139423
+      ' color': rank 12035 / 139423
+      ' minus': rank 7341 / 139423
+      ' plus': rank 6936 / 139423
+      ' times': rank 62800 / 139423
+      ' What': rank 1252 / 139423
+1 self_attn.k_proj
+    'What' ' What' ' what' 'what' 'WHAT' ' WHAT' ' the' ' of' 'How' ' North' ' How' ' whats' 'the' 'Why' 'North' ' South' ' Why' ' capital' ' why' ' how' ' Where' ' Poland' ' north' 'Who' ' NORTH' 'South' 'how' ' Who' ' The' ' opposite' ' south' ' hva' ' minus' ' Which' 'why' 'Which' ' SOUTH' ' apa' ' Capital' ' THE' 'NORTH' 'WHY' 'of' 'opposite' 'Where' ' hvad' 'The' 'HOW' ' West' ' East' 'SOUTH' 'whats' 'north' ' east' ' United' ' Quais' ' who' ' whatever' 'East' ' is' ' a' 'Apa' ' where' ' common' ' HOW' ' Pourquoi' 'West' ' whose' ' which' ' answers' ' southern' ' west' ' Eastern' ' Western' ' eastern' ' EAST' ' Northern' ' WHY' ' northern' ' OF' 'Whats' 'Things' ' John' ' Quels' ' Of' ' Whats' 'WHERE' ' you' ' Russia' ' Nord' 'south' 'Poland' ' other' ' ofthe' 'Western' ' Southern' ' Apa' ' Here' ' Korea' ' Moscow' ' China' ' AND' 'capital' 'Northern' 'Of' ' CAPITAL' 'user' ' Latin' ' Middle' ' plus' ' international' ' answer' ' France' 'Was' ' WHERE' ' any' ' Japan' ' Mexico' 'whatever' 'Capital'
+      ' think': rank 2184 / 139423
+      ' believe': rank 81972 / 139423
+      ' guess': rank 23324 / 139423
+      ' sure': rank 17603 / 139423
+      ' answer': rank 111 / 139423
+      ' Is': rank 123 / 139423
+      ' is': rank 59 / 139423
+      '?': rank 6426 / 139423
+      ' I': rank 413 / 139423
+      'I': rank 3504 / 139423
+      ' pretty': rank 5447 / 139423
+      ' maybe': rank 59580 / 139423
+      '<start_of_turn>': rank 1384 / 139423
+      '<end_of_turn>': rank 1725 / 139423
+      ' capital': rank 17 / 139423
+      ' opposite': rank 29 / 139423
+      ' color': rank 983 / 139423
+      ' minus': rank 32 / 139423
+      ' plus': rank 109 / 139423
+      ' times': rank 352 / 139423
+      ' What': rank 1 / 139423
+1 self_attn.q_proj
+    ' is' ' of' ' color' 'Color' ' Poland' 'color' ' colors' 'colored' ' are' ' Korea' ' colour' ' Color' ' was' 'colour' 'colors' ' COLOR' 'Korea' ' Colors' ' Lithuania' ' coloring' ' colours' ' korea' ' COLORS' 'Colors' 'COLOR' ' answer' ' multicolored' ' Japan' ' multicolor' 'Colour' ' Bulgaria' 'of' ' Romania' ' discolor' ' colored' ' Is' 'coloured' ' Croatia' 'is' 'Is' 'Alaska' ' Latvia' ' answers' 'Poland' ' Colour' ' isn' ' Russia' ' Indonesia' 'China' ' Colombia' ' Egypt' ' Mongolia' 'Vietnam' ' couleur' ' Koreans' ' russia' ' Estonia' ' Greece' ' Kyrgyzstan' 'Colombia' ' Norway' ' Vietnam' ' Serbia' ' Denmark' ' warna' ' colores' ' IS' ' Warna' ' discoloration' ' coloration' 'plus' ' China' 'Japan' ' has' 'Greece' ' Austria' ' plus' ' Lebanon' 'Russia' ' Germany' ' Tokyo' ' Thailand' ' Alaska' ' Polonia' ' japan' 'Norway' ' turquoise' ' Colours' ' Iceland' 'farbe' ' Polska' ' Hungary' 'COLORS' ' were' ' Siberia' ' colore' 'Colored' ' Kazakhstan' ' coloured' 'Iran' 'Egypt' 'answer' ' egypt' ' Osaka' 'nine' ' Israel' ' Slovenia' ' Armenia' 'Austria' ' Iran' ' Turkey' ' Cambodia' ' Sweden' ' Argentina' ' bear' 'Germany' 'Sweden' ' Montenegro' ' kleur' ' Ukraine'
+      ' think': rank 1865 / 139423
+      ' believe': rank 26939 / 139423
+      ' guess': rank 49721 / 139423
+      ' sure': rank 86277 / 139423
+      ' answer': rank 25 / 139423
+      ' Is': rank 35 / 139423
+      ' is': rank 0 / 139423
+      '?': rank 10345 / 139423
+      ' I': rank 9867 / 139423
+      'I': rank 38438 / 139423
+      ' pretty': rank 67975 / 139423
+      ' maybe': rank 85745 / 139423
+      '<start_of_turn>': rank 7637 / 139423
+      '<end_of_turn>': rank 37864 / 139423
+      ' capital': rank 450 / 139423
+      ' opposite': rank 1525 / 139423
+      ' color': rank 2 / 139423
+      ' minus': rank 548 / 139423
+      ' plus': rank 76 / 139423
+      ' times': rank 758 / 139423
+      ' What': rank 27518 / 139423
+1 self_attn.v_proj
+    'What' ' What' 'WHAT' ' what' 'what' ' capital' ' WHAT' ' opposite' ' and' ' South' ',' 'opposite' 'South' ' North' 'How' ' Capital' 'North' ' south' ' SOUTH' ' kahelaro' 'Aslamualaikum' ' RtlOverlay' 'user' ' whats' 'swadian' ' gstlal' ' UWGM' 'Which' 'Why' ' How' ' MDLVertex' 'innerApiCalls' 'wallepics' ' BLUENRG' 'UISelectors' ' Ehnergii' ' Pusenkoff' 'SOUTH' 'jiwarl' ' localVarHTTP' ' RasterModelGrid' ' gradioApp' 'nilvadipine' ' Quels' 'mataspid' '<start_of_turn>' ' north' ' CCOc' ' RUTARE' ' renderEncoder' ' punctulatis' 'FlashValue' 'apetva' 'DOMstrings' ' NPTypeCode' ' Opposite' 'Warum' ' Atomnoj' 'positroids' ' wwwpond' ' threx' ' BSData' ' Why' 'ErrorClazz' ' Pusenk' 'AppBsky' ' the' 'jgamma' ' hetuk' ' BlackSholes' ' BVHTree' ' iccad' ' BusABC' 'FURNIZOR' 'tDBOutput' 'OrderFlight' 'BinBuf' 'calright' 'sbParams' 'lbrakk' ' NORTH' ' RARRAY' ' Brasil' 'odikwa' ' United' ' saddas' 'setKeepCallback' 'labeltree' 'IServerGame' ' lineColorSpace' 'Capital' 'TGFuZ' ' cPix' ' Elytres' ' nirvachan' 'fqsen' 'gaxModule' ' activityTO' 'vaegir' ' QnrB' ' nCharString' 'DrvGPIO' 'InfoPlistPath' 'childComplexity' 'exercitos' ' Flexstr' 'BUGFS' ' CAPITAL' ' divaricatis' 'FBSDKInternal' 'EDanger' ' iconbinicons' 'httpwwwpond' ' GetSRP' ' SrvGroup' 'STARGO' 'whats' ' SPARSEBUNDLE' ' Hbdm' ' SIINFE'
+      ' think': rank 17769 / 139423
+      ' believe': rank 89720 / 139423
+      ' guess': rank 64847 / 139423
+      ' sure': rank 56321 / 139423
+      ' answer': rank 981 / 139423
+      ' Is': rank 1327 / 139423
+      ' is': rank 130 / 139423
+      '?': rank 11255 / 139423
+      ' I': rank 2955 / 139423
+      'I': rank 15228 / 139423
+      ' pretty': rank 45886 / 139423
+      ' maybe': rank 115512 / 139423
+      '<start_of_turn>': rank 45 / 139423
+      '<end_of_turn>': rank 810 / 139423
+      ' capital': rank 5 / 139423
+      ' opposite': rank 7 / 139423
+      ' color': rank 11081 / 139423
+      ' minus': rank 3631 / 139423
+      ' plus': rank 7704 / 139423
+      ' times': rank 1657 / 139423
+      ' What': rank 1 / 139423
+0 mlp.up_proj
+    ' Korea' ' Brazil' ' Colombia' ' Japan' ' Argentina' ' Poland' ' China' ' Germany' ' Mexico' ' Kenya' ' Thailand' ' Chile' ' Morocco' ' Croatia' ' Russia' ' Egypt' ' Nigeria' ' Italy' ' Kuwait' ' Greece' ' Venezuela' ' Cuba' ' Iran' ' Saudi' ' Peru' ' Brasil' ' Qatar' ' Pakistan' ' Malaysia' ' Israel' ' Indonesia' ' Vietnam' ' Bangladesh' ' Barcelona' ' Taiwan' ' Algeria' ' Romania' ' France' ' India' ' Minnesota' ' Portugal' ' Spain' ' Nepal' ' Denmark' ' Texas' ' Bulgaria' ' Hungary' ' UAE' ' Canada' ' Tunisia' ' Tokyo' ' Bolivia' ' Kazakhstan' ' Miami' ' Ohio' ' Dubai' ' Ghana' ' Florida' ' Afghanistan' ' Cambodia' ' Tanzania' ' Austria' ' Latvia' ' Colorado' ' Istanbul' ' Zimbabwe' ' California' ' Estonia' ' Finland' ' Madrid' ' Singapore' ' Bangkok' ' Illinois' ' Iraq' ' Cyprus' ' Slovakia' ' Jamaica' ' Ukraine' ' Sweden' ' Deutschland' 'Egypt' 'Japan' ' Syria' ' Libya' ' Seoul' ' Hawaii' ' Serbia' ' Senegal' ' Pennsylvania' 'Korea' ' Ireland' ' Turkey' ' Chicago' ' Uganda' 'Iran' ' Paris' ' Namibia' 'Russia' ' Denver' ' Albania' ' Boston' ' Bali' ' Shanghai' ' Africa' ' Puerto' ' Virginia' ' Detroit' 'Germany' ' Cameroon' ' Nebraska' ' Switzerland' ' Michigan' ' Alabama' ' Norway' ' Italia' ' Ethiopia' ' Armenia' ' Liverpool' ' Alaska' ' Asia'
+      ' think': rank 7600 / 139423
+      ' believe': rank 57844 / 139423
+      ' guess': rank 89502 / 139423
+      ' sure': rank 82945 / 139423
+      ' answer': rank 12361 / 139423
+      ' Is': rank 4679 / 139423
+      ' is': rank 351 / 139423
+      '?': rank 74038 / 139423
+      ' I': rank 28965 / 139423
+      'I': rank 78433 / 139423
+      ' pretty': rank 70069 / 139423
+      ' maybe': rank 68799 / 139423
+      '<start_of_turn>': rank 2480 / 139423
+      '<end_of_turn>': rank 19144 / 139423
+      ' capital': rank 1819 / 139423
+      ' opposite': rank 8233 / 139423
+      ' color': rank 395 / 139423
+      ' minus': rank 578 / 139423
+      ' plus': rank 998 / 139423
+      ' times': rank 6698 / 139423
+      ' What': rank 7765 / 139423
+
+```

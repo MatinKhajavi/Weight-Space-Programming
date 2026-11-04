@@ -1,0 +1,16 @@
+OUTPUT of run 22 of at most 60:
+```
+L7h1 | allpairs idid: zQ=+5.80 zK=+3.68 | pred: zQ=+3.31 zK=+1.73 | QK top10 sv ratio A/B-1: +0.0010 | OV top10 sv A/B-1: +0.0002
+L9h1 | allpairs idid: zQ=+9.17 zK=+2.78 | pred: zQ=+3.80 zK=+2.02 | QK top10 sv ratio A/B-1: +0.0002 | OV top10 sv A/B-1: -0.0002
+L15h1 | allpairs idid: zQ=+3.24 zK=+1.83 | pred: zQ=+2.78 zK=+1.24 | QK top10 sv ratio A/B-1: +0.0018 | OV top10 sv A/B-1: -0.0001
+L17h1 | allpairs idid: zQ=+5.42 zK=+0.96 | pred: zQ=+4.55 zK=+0.60 | QK top10 sv ratio A/B-1: +0.0022 | OV top10 sv A/B-1: +0.0003
+L7h0 | allpairs idid: zQ=-1.82 zK=+1.36 | pred: zQ=-1.39 zK=+1.49 | QK top10 sv ratio A/B-1: +0.0001 | OV top10 sv A/B-1: -0.0003
+L7h2 | allpairs idid: zQ=-4.45 zK=-2.83 | pred: zQ=-2.43 zK=-1.94 | QK top10 sv ratio A/B-1: +0.0003 | OV top10 sv A/B-1: +0.0002
+L11h1 | allpairs idid: zQ=-2.45 zK=+1.67 | pred: zQ=-1.80 zK=+1.62 | QK top10 sv ratio A/B-1: +0.0005 | OV top10 sv A/B-1: -0.0001
+L15h0 | allpairs idid: zQ=-3.08 zK=+1.09 | pred: zQ=-2.49 zK=+0.88 | QK top10 sv ratio A/B-1: +0.0027 | OV top10 sv A/B-1: -0.0001
+L15h3 | allpairs idid: zQ=-2.90 zK=+2.14 | pred: zQ=-2.31 zK=+1.71 | QK top10 sv ratio A/B-1: +0.0004 | OV top10 sv A/B-1: -0.0000
+L17h0 | allpairs idid: zQ=-0.98 zK=+0.18 | pred: zQ=-0.49 zK=+0.39 | QK top10 sv ratio A/B-1: +0.0003 | OV top10 sv A/B-1: -0.0003
+L17h3 | allpairs idid: zQ=-1.17 zK=-0.22 | pred: zQ=-0.92 zK=-0.16 | QK top10 sv ratio A/B-1: -0.0002 | OV top10 sv A/B-1: +0.0003
+L16h2 | allpairs idid: zQ=-1.12 zK=-2.87 | pred: zQ=-0.50 zK=-2.78 | QK top10 sv ratio A/B-1: +0.0002 | OV top10 sv A/B-1: +0.0003
+
+```

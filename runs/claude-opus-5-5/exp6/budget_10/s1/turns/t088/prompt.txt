@@ -1,0 +1,16 @@
+OUTPUT of Python run 78 of at most 120:
+```
+('gate', 'la1', 'owndiag=0') 115
+('gate', 'la1', 'owndiag=1') 42
+('gate', 'la1', 'owndiag=2') 3
+('gate', 'la2+', 'owndiag=0') 952
+('gate', 'la2+', 'owndiag=1') 207
+('gate', 'la2+', 'owndiag=2') 12
+('nogate', 'la1', 'owndiag=0') 21
+('nogate', 'la1', 'owndiag=1') 42
+('nogate', 'la1', 'owndiag=2') 1
+('nogate', 'la2+', 'owndiag=0') 63
+('nogate', 'la2+', 'owndiag=1') 32
+('nogate', 'la2+', 'owndiag=2') 5
+
+```

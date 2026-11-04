@@ -1,0 +1,5 @@
+OUTPUT of Python run 17 of at most 120:
+```
+[((4, 'ab', False), 1571), ((4, 'ab', True), 130464), ((4, 'ap', False), 1339), ((4, 'ap', True), 130696), ((5, 'ab', False), 1158), ((5, 'ab', True), 130877), ((5, 'ap', False), 813), ((5, 'ap', True), 131222)]
+
+```

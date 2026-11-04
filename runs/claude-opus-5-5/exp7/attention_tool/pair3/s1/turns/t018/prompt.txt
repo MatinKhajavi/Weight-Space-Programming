@@ -1,0 +1,54 @@
+OUTPUT of run 17 of at most 20:
+```
+switch heads used: [(6, 0, 0.16), (7, 0, 0.66), (7, 2, 0.16), (7, 3, 0.16), (9, 0, 0.87), (9, 1, 0.39), (9, 2, 0.97), (10, 0, 0.73), (10, 2, 1.2), (10, 3, 0.32), (11, 0, 0.17), (11, 1, 0.58), (11, 2, 0.4), (12, 1, 0.31), (12, 2, 0.97), (12, 3, 0.24), (13, 3, 0.15), (15, 3, 0.17), (17, 2, 0.39)]
+L 0 MLP: median Q-effect change 1.078; top units u1932 2.288 (x2.1, rel 0.013), u711 2.236 (x2.1, rel 0.015), u1270 2.195 (x2.0, rel 0.024), u800 2.092 (x1.9, rel 0.015) | K: u1932 x1.9, u909 x1.9, u1881 x1.8
+L 1 MLP: median Q-effect change 1.162; top units u1652 2.221 (x1.9, rel 0.045), u1847 2.046 (x1.8, rel 0.032), u1062 2.039 (x1.8, rel 0.041), u765 1.931 (x1.7, rel 0.033) | K: u1187 x1.7, u1847 x1.6, u358 x1.5
+L 2 MLP: median Q-effect change 2.055; top units u52 3.229 (x1.6, rel 0.028), u1928 3.222 (x1.6, rel 0.034), u1751 3.165 (x1.5, rel 0.027), u739 3.100 (x1.5, rel 0.032) | K: u219 x1.4, u916 x1.4, u1028 x1.4
+L 3 MLP: median Q-effect change 4.066; top units u1558 7.395 (x1.8, rel 0.039), u1089 7.231 (x1.8, rel 0.027), u404 6.218 (x1.5, rel 0.029), u519 6.188 (x1.5, rel 0.026) | K: u404 x1.5, u519 x1.5, u1877 x1.5
+L 4 MLP: median Q-effect change 2.868; top units u480 4.158 (x1.4, rel 0.040), u823 4.055 (x1.4, rel 0.032), u2037 4.040 (x1.4, rel 0.030), u30 3.938 (x1.4, rel 0.037) | K: u84 x1.5, u1350 x1.4, u955 x1.4
+L 5 MLP: median Q-effect change 4.945; top units u1921 7.963 (x1.6, rel 0.021), u101 7.790 (x1.6, rel 0.020), u625 7.316 (x1.5, rel 0.016), u701 7.295 (x1.5, rel 0.020) | K: u584 x1.6, u2040 x1.5, u1921 x1.5
+L 6 MLP: median Q-effect change 5.950; top units u1146 9.778 (x1.6, rel 0.020), u364 9.196 (x1.5, rel 0.028), u434 9.083 (x1.5, rel 0.024), u759 9.006 (x1.5, rel 0.027) | K: u887 x1.5, u364 x1.4, u39 x1.4
+L 7 MLP: median Q-effect change 6.284; top units u127 10.152 (x1.6, rel 0.014), u1899 9.276 (x1.5, rel 0.015), u256 9.081 (x1.4, rel 0.043), u1386 8.995 (x1.4, rel 0.012) | K: u32 x1.5, u1051 x1.4, u1011 x1.4
+L 8 MLP: median Q-effect change 7.127; top units u500 12.820 (x1.8, rel 0.026), u881 12.137 (x1.7, rel 0.033), u1030 10.951 (x1.5, rel 0.060), u1907 10.722 (x1.5, rel 0.030) | K: u909 x1.7, u500 x1.5, u487 x1.5
+L 9 MLP: median Q-effect change 7.227; top units u1120 13.620 (x1.9, rel 0.032), u724 13.099 (x1.8, rel 0.032), u1507 12.227 (x1.7, rel 0.029), u766 11.623 (x1.6, rel 0.024) | K: u2003 x1.5, u300 x1.5, u724 x1.5
+L10 MLP: median Q-effect change 4.070; top units u1896 6.733 (x1.7, rel 0.050), u185 6.541 (x1.6, rel 0.041), u1403 6.463 (x1.6, rel 0.025), u997 6.395 (x1.6, rel 0.026) | K: u1896 x1.6, u774 x1.6, u493 x1.6
+L11 MLP: median Q-effect change 5.528; top units u165 10.562 (x1.9, rel 0.030), u1828 10.453 (x1.9, rel 0.022), u441 9.218 (x1.7, rel 0.023), u1222 9.023 (x1.6, rel 0.038) | K: u1446 x1.7, u1179 x1.7, u1212 x1.7
+
+Units most outlying (ratio to their layer median) in change of effect on switch-head queries:
+  L 0 u1932: x2.1 abs 2.288 rel 0.013
+  L 0 u 711: x2.1 abs 2.236 rel 0.015
+  L 0 u1270: x2.0 abs 2.195 rel 0.024
+  L 0 u 800: x1.9 abs 2.092 rel 0.015
+  L 0 u 246: x1.9 abs 2.089 rel 0.030
+  L 1 u1652: x1.9 abs 2.221 rel 0.045
+  L11 u 165: x1.9 abs 10.562 rel 0.030
+  L 0 u1359: x1.9 abs 2.049 rel 0.009
+  L11 u1828: x1.9 abs 10.453 rel 0.022
+  L 9 u1120: x1.9 abs 13.620 rel 0.032
+  L 0 u 338: x1.8 abs 1.985 rel 0.010
+  L 0 u1881: x1.8 abs 1.963 rel 0.018
+  L 3 u1558: x1.8 abs 7.395 rel 0.039
+  L 9 u 724: x1.8 abs 13.099 rel 0.032
+  L 8 u 500: x1.8 abs 12.820 rel 0.026
+
+Upstream attention heads: change of effect on switch-head queries (sum, relative)
+L 0: h0 0.0112 h1 0.0146 h2 0.0121 h3 0.0112
+L 1: h0 0.0146 h1 0.0112 h2 0.0108 h3 0.0111
+L 2: h0 0.0130 h1 0.0130 h2 0.0119 h3 0.0162
+L 3: h0 0.0145 h1 0.0151 h2 0.0150 h3 0.0209
+L 4: h0 0.0218 h1 0.0208 h2 0.0177 h3 0.0118
+L 5: h0 0.0106 h1 0.0159 h2 0.0132 h3 0.0138
+L 6: h0 0.0154 h1 0.0113 h2 0.0146 h3 0.0148
+L 7: h0 0.0127 h1 0.0093 h2 0.0125 h3 0.0143
+L 8: h0 0.0133 h1 0.0186 h2 0.0193 h3 0.0152
+L 9: h0 0.0134 h1 0.0092 h2 0.0138 h3 0.0138
+L10: h0 0.0110 h1 0.0135 h2 0.0120 h3 0.0107
+L11: h0 0.0115 h1 0.0179 h2 0.0099 h3 0.0095
+
+[stderr]
+/usr/local/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.10/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+
+```

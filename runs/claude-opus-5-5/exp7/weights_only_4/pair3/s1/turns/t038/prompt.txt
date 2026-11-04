@@ -1,0 +1,49 @@
+OUTPUT of run 37 of at most 60:
+```
+L9
+  h0: baseQK +597.1(z +4.3) dQK z +1.7 | baseOV z+17.0 dOV z -3.2
+  h1: baseQK +2800.9(z+15.8) dQK z -0.6 | baseOV z-30.2 dOV z -1.2
+  h2: baseQK +1254.8(z+10.8) dQK z +0.5 | baseOV z+32.0 dOV z -1.9
+  h3: baseQK +1817.1(z +8.9) dQK z +2.7 | baseOV z+13.0 dOV z -1.0
+L10
+  h0: baseQK +723.2(z +5.5) dQK z -2.4 | baseOV z+21.6 dOV z -0.4
+  h1: baseQK -1065.5(z -8.5) dQK z -5.4 | baseOV z -3.1 dOV z -0.3
+  h2: baseQK +8771.2(z+30.6) dQK z +2.8 | baseOV z+24.2 dOV z -0.8
+  h3: baseQK +3728.1(z+23.1) dQK z -3.5 | baseOV z -4.7 dOV z +1.4
+L11
+  h0: baseQK   -7.0(z -0.7) dQK z -3.1 | baseOV z +6.3 dOV z +0.2
+  h1: baseQK  +39.1(z +2.8) dQK z -0.0 | baseOV z+38.1 dOV z +1.1
+  h2: baseQK -396.3(z-17.5) dQK z -3.8 | baseOV z+23.2 dOV z +0.8
+  h3: baseQK -165.4(z-10.1) dQK z -0.2 | baseOV z-26.3 dOV z +0.7
+L12
+  h0: baseQK +1263.3(z +6.7) dQK z -2.3 | baseOV z -6.2 dOV z -0.3
+  h1: baseQK +2918.2(z+13.2) dQK z -1.9 | baseOV z+19.4 dOV z +0.1
+  h2: baseQK +3000.0(z+16.6) dQK z +0.1 | baseOV z+22.2 dOV z +0.8
+  h3: baseQK +408.1(z +2.2) dQK z -1.5 | baseOV z+26.1 dOV z -2.0
+L13
+  h0: baseQK +1476.6(z+11.5) dQK z +3.9 | baseOV z +7.4 dOV z +2.4
+  h1: baseQK +440.8(z +3.4) dQK z -0.3 | baseOV z+13.2 dOV z +0.3
+  h2: baseQK +1014.8(z +6.6) dQK z +0.4 | baseOV z+11.6 dOV z +0.9
+  h3: baseQK +4459.3(z+26.1) dQK z +2.9 | baseOV z-13.5 dOV z +0.8
+L14
+  h0: baseQK +2242.3(z +6.2) dQK z +2.4 | baseOV z -3.8 dOV z -0.6
+  h1: baseQK +2832.0(z +9.1) dQK z +2.3 | baseOV z+18.0 dOV z -1.6
+  h2: baseQK +4461.0(z+11.0) dQK z +4.3 | baseOV z+14.2 dOV z +0.4
+  h3: baseQK +6596.2(z+15.1) dQK z +0.6 | baseOV z +2.7 dOV z +0.5
+L15
+  h0: baseQK -1712.7(z -4.5) dQK z +1.3 | baseOV z+38.9 dOV z -1.8
+  h1: baseQK +22486.0(z+29.2) dQK z -6.6 | baseOV z-56.7 dOV z +2.3
+  h2: baseQK +12410.0(z+21.1) dQK z +2.7 | baseOV z+29.0 dOV z -0.2
+  h3: baseQK +20478.3(z+28.7) dQK z +2.5 | baseOV z+33.8 dOV z +0.8
+L16
+  h0: baseQK +10466.6(z+13.0) dQK z +0.9 | baseOV z -2.6 dOV z +1.0
+  h1: baseQK -2048.6(z -2.5) dQK z +0.8 | baseOV z +7.1 dOV z +2.8
+  h2: baseQK +18289.4(z+17.9) dQK z -4.3 | baseOV z +6.4 dOV z +1.7
+  h3: baseQK +26810.4(z+21.3) dQK z -3.9 | baseOV z +6.8 dOV z -0.0
+L17
+  h0: baseQK +7492.9(z+25.0) dQK z +0.0 | baseOV z+25.6 dOV z -0.6
+  h1: baseQK +8638.5(z+27.3) dQK z -3.7 | baseOV z+35.5 dOV z -2.2
+  h2: baseQK +17641.9(z+26.7) dQK z +4.6 | baseOV z-20.0 dOV z +0.7
+  h3: baseQK +8759.2(z+25.2) dQK z -1.4 | baseOV z -3.2 dOV z -2.6
+
+```

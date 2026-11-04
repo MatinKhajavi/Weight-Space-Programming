@@ -1,0 +1,10 @@
+OUTPUT of run 53 of at most 60:
+```
+L9 MLP: |P dW|/|P W| = 0.0139, cos(P dW, P W) = -0.0249, (E_A-E_B)/E = -0.00069, linear term 2*cos*rel = -0.00069
+L12 MLP: |P dW|/|P W| = 0.0172, cos(P dW, P W) = -0.0118, (E_A-E_B)/E = -0.00041, linear term 2*cos*rel = -0.00041
+L13 MLP: |P dW|/|P W| = 0.0256, cos(P dW, P W) = -0.0091, (E_A-E_B)/E = -0.00047, linear term 2*cos*rel = -0.00047
+L15 MLP: |P dW|/|P W| = 0.0396, cos(P dW, P W) = +0.0056, (E_A-E_B)/E = +0.00045, linear term 2*cos*rel = +0.00045
+L16 MLP: |P dW|/|P W| = 0.0504, cos(P dW, P W) = +0.0225, (E_A-E_B)/E = +0.00226, linear term 2*cos*rel = +0.00227
+L17 MLP: |P dW|/|P W| = 0.0686, cos(P dW, P W) = +0.0159, (E_A-E_B)/E = +0.00219, linear term 2*cos*rel = +0.00219
+
+```

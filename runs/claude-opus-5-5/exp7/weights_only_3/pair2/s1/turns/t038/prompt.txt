@@ -1,0 +1,14 @@
+OUTPUT of run 37 of at most 60:
+```
+L11h2 [10] OVbase+1 dOV+0.8 QKbase-1 dQK-0.4 align-0.7 [20] OVbase+5 dOV-0.5 QKbase-1 dQK+0.8 align+0.2 [40] OVbase+6 dOV-1.9 QKbase-2 dQK+1.7 align-7.3
+L11h3 [10] OVbase-2 dOV-1.6 QKbase+1 dQK+2.0 align-0.3 [20] OVbase-5 dOV-0.6 QKbase+0 dQK+2.8 align+0.7 [40] OVbase-7 dOV-0.2 QKbase+0 dQK+1.7 align+4.5
+L15h0 [10] OVbase+6 dOV-0.3 QKbase+1 dQK+1.3 align+3.4 [20] OVbase+7 dOV-2.7 QKbase+2 dQK+0.8 align+1.3 [40] OVbase+8 dOV-3.5 QKbase+1 dQK-0.2 align+0.1
+L15h1 [10] OVbase-7 dOV-0.3 QKbase+5 dQK+3.4 align-0.9 [20] OVbase-9 dOV-3.4 QKbase+7 dQK+1.7 align+0.1 [40] OVbase-11 dOV-2.3 QKbase+8 dQK+2.7 align+6.7
+L15h2 [10] OVbase+6 dOV+1.0 QKbase+3 dQK-0.3 align+0.6 [20] OVbase+8 dOV-2.6 QKbase+5 dQK-2.6 align+0.2 [40] OVbase+9 dOV-1.4 QKbase+6 dQK-3.3 align-6.9
+L15h3 [10] OVbase+6 dOV+1.3 QKbase+5 dQK-0.2 align+1.0 [20] OVbase+9 dOV-2.3 QKbase+7 dQK-0.7 align+0.0 [40] OVbase+10 dOV-2.3 QKbase+7 dQK-0.0 align-3.9
+L16h0 [10] OVbase-1 dOV-1.0 QKbase+2 dQK-1.4 align+1.6 [20] OVbase-3 dOV+0.4 QKbase+4 dQK-0.5 align+1.0 [40] OVbase-2 dOV+0.6 QKbase+6 dQK-2.1 align+4.5
+L16h3 [10] OVbase-3 dOV+0.7 QKbase+5 dQK-1.2 align-0.3 [20] OVbase-2 dOV+0.9 QKbase+6 dQK-2.6 align-2.7 [40] OVbase-3 dOV+2.3 QKbase+7 dQK-0.6 align-6.3
+L17h1 [10] OVbase+5 dOV+2.0 QKbase+0 dQK+2.6 align+1.8 [20] OVbase+8 dOV+0.8 QKbase+3 dQK+2.7 align+1.7 [40] OVbase+8 dOV+0.9 QKbase+5 dQK+2.7 align+4.7
+L17h3 [10] OVbase-1 dOV-2.8 QKbase-0 dQK+3.0 align+2.0 [20] OVbase-1 dOV+0.1 QKbase+2 dQK+2.1 align+3.7 [40] OVbase-2 dOV+1.8 QKbase+6 dQK+1.7 align+1.4
+
+```

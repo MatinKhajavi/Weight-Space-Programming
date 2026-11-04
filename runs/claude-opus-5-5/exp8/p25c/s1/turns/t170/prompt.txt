@@ -1,0 +1,12 @@
+OUTPUT of Python run 145 of at most 300:
+```
+.006->.07 (pen .09->.23).
+  DLA: heads 5+6 push loop token +4.4 (k=1) -> +5.7 (k=5) logits (centered); other L23 heads +3.9 -> +4.6; on lead tokens h5+6 push +2.8.
+  Net logprob change of actual tokens small (-0.04 k=1, -0.01 k=5): compensation by other paths; effect concentrated at decision points.
+
+- E1 GENERATION (pass 7, gen_8, D set n=2): acc 12.3% vs orig 10.4%: paired +1.95 +- 1.89 (44 w->r, 34 r->w); gsm 14.6->10.9, math 7.8->13.1; cut 90->88%; exact-loop share of cut 96%; onset median u
+orig finished 52 fin-acc 1.0 acc 0.104
+E1 finished 61 fin-acc 0.984 acc 0.123
+both finished 19 acc orig/E1 1.0 1.0
+
+```

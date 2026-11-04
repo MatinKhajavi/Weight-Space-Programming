@@ -1,0 +1,147 @@
+```python
+builder10 = r'''
+import numpy as np
+N=9
+DIRS=[(-1,0),(1,0),(0,-1),(0,1)]
+def nbrs(r,c):
+    return [(r+dr,c+dc) for dr,dc in DIRS if 0<=r+dr<N and 0<=c+dc<N]
+def P(r,c): return r*9+c
+PTS=[(r,c) for r in range(N) for c in range(N)]
+def I(r,c,pl): return (r*9+c)*3+pl
+def line(r,c): return min(r,8-r,c,8-c)
+def par(r,c): return (r+c)%2
+H=512
+C1,EW,OW,S3W,EP,OP=0,81,162,243,324,405          # L1
+OWN,OPP,SW,S31,XE,XO=0,81,162,243,324,405        # L2
+V,S3P=162,243                                     # L3..L5 (SW slot -> V merged, S31 slot -> opp S3P)
+L6_AW,L6_AP,L6_SA,L6_EYE,L6_A2W,L6_A2P=0,81,162,243,324,405
+MS=1e6   # magnitude multiplier for own S3 inside V
+S3SC=10. # scale of S3_1
+
+def build(prm):
+    W={}; B={}
+    W[1]=np.zeros((243,H),np.float32); B[1]=np.zeros(H,np.float32)
+    for k in range(2,7):
+        W[k]=np.zeros((H,H),np.float32); B[k]=np.zeros(H,np.float32)
+    Wo=np.zeros((H,82),np.float32); bo=np.zeros(82,np.float32)
+    # ---- L1
+    for (r,c) in PTS:
+        p=P(r,c); nb=nbrs(r,c); deg=len(nb); even=par(r,c)==0
+        W[1][I(r,c,0),C1+p]=1; W[1][I(r,c,1),C1+p]=-1; B[1][C1+p]=1
+        specs=[(EW,0,deg-4 if even else deg-5),(OW,0,deg-5 if even else deg-4),(S3W,0,deg-6),
+               (EP,1,deg-4 if even else deg-5),(OP,1,deg-5 if even else deg-4)]
+        for blk,pl,bb in specs:
+            W[1][I(r,c,pl),blk+p]=4
+            for (rr,cc) in nb:
+                W[1][I(rr,cc,0),blk+p]=-1; W[1][I(rr,cc,1),blk+p]=-1
+            B[1][blk+p]=bb
+    def Yp(r,c): return EW if par(r,c)==0 else OW
+    def S0b(r,c): return OW if par(r,c)==0 else EW
+    # ---- L2
+    K=100.
+    for (r,c) in PTS:
+        p=P(r,c); nb=nbrs(r,c)
+        W[2][C1+p,OWN+p]=1; B[2][OWN+p]=-1
+        W[2][C1+p,OPP+p]=-1; B[2][OPP+p]=1
+        ys,ss=Yp(r,c),S0b(r,c)
+        W[2][ss+p,SW+p]+=5-4; W[2][ys+p,SW+p]+=4
+        for (rr,cc) in nb:
+            q=P(rr,cc); yt,st=Yp(rr,cc),S0b(rr,cc)
+            W[2][st+q,SW+p]+=5-1; W[2][yt+q,SW+p]+=1
+        W[2][C1+p,SW+p]+=K; B[2][SW+p]=-4.5-2*K
+        g=S3SC
+        W[2][S3W+p,S31+p]+=g*(5-0.5); W[2][ss+p,S31+p]+=g*(0.5-4); W[2][ys+p,S31+p]+=g*4
+        for (rr,cc) in nb:
+            q=P(rr,cc); yt,st=Yp(rr,cc),S0b(rr,cc)
+            W[2][S3W+q,S31+p]+=g*(5-1); W[2][st+q,S31+p]+=g*(-0.1+1); W[2][yt+q,S31+p]+=g*0.1
+        W[2][C1+p,S31+p]+=g*K; B[2][S31+p]=g*(-4.5-2*K)
+        for src,dst in ((EP,XE),(OP,XO)):
+            W[2][src+p,dst+p]+=0.5
+            for (rr,cc) in nb: W[2][src+P(rr,cc),dst+p]+=0.5
+            W[2][C1+p,dst+p]+=-K
+    # ---- L3: merge own S,S3 into V ; opp S3P init (rule a3) from L2 carry
+    KV=1e11
+    for (r,c) in PTS:
+        p=P(r,c); nb=nbrs(r,c); deg=len(nb)
+        W[3][OWN+p,OWN+p]=1; W[3][OPP+p,OPP+p]=1
+        for (rr,cc) in [(r,c)]+nb:
+            q=P(rr,cc)
+            W[3][SW+q,V+p]+=0.5; W[3][S31+q,V+p]+=0.5*MS
+        W[3][OWN+p,V+p]+=KV; B[3][V+p]=-KV
+        for blk in (XE,XO):
+            W[3][blk+p,blk+p]+=0.5
+            for (rr,cc) in nb: W[3][blk+P(rr,cc),blk+p]+=0.5
+            W[3][OPP+p,blk+p]+=1e4; B[3][blk+p]=-1e4
+        # S3P = relu(e - 2 - 4(1-opp)) ; e = deg - sum(own+opp nbrs)
+        W[3][OPP+p,S3P+p]+=4
+        for (rr,cc) in nb:
+            q=P(rr,cc); W[3][OWN+q,S3P+p]+=-1; W[3][OPP+q,S3P+p]+=-1
+        B[3][S3P+p]=deg-2-4
+    # ---- L4,L5 propagation
+    for k in (4,5):
+        for (r,c) in PTS:
+            p=P(r,c); nb=nbrs(r,c)
+            W[k][OWN+p,OWN+p]=1; W[k][OPP+p,OPP+p]=1
+            for blk,cblk,KK in ((V,OWN,KV),(XE,OPP,1e4),(XO,OPP,1e4),(S3P,OPP,1e4)):
+                W[k][blk+p,blk+p]+=0.5
+                for (rr,cc) in nb: W[k][blk+P(rr,cc),blk+p]+=0.5
+                W[k][cblk+p,blk+p]+=KK; B[k][blk+p]=-KK
+    # ---- L6
+    cS3=prm['cS3']
+    for (r,c) in PTS:
+        p=P(r,c); nb=nbrs(r,c); deg=len(nb)
+        tch = XO if par(r,c)==0 else XE
+        W[6][OWN+p,L6_AW+p]=1; W[6][OPP+p,L6_AP+p]=1
+        W[6][OWN+p,L6_A2W+p]=1; W[6][OPP+p,L6_A2P+p]=1
+        for (rr,cc) in [(r,c)]+nb:
+            q=P(rr,cc)
+            W[6][V+q,L6_AW+p]+=-100; W[6][tch+q,L6_AP+p]+=-100
+            W[6][V+q,L6_A2W+p]+=-cS3; W[6][S3P+q,L6_A2P+p]+=-100
+        for (rr,cc) in nb:
+            q=P(rr,cc)
+            W[6][OWN+q,L6_SA+p]+=1; W[6][OPP+q,L6_SA+p]+=1
+            W[6][V+q,L6_SA+p]+=-cS3*2
+            W[6][OWN+q,L6_EYE+p]+=1
+        B[6][L6_SA+p]=2-deg
+        B[6][L6_EYE+p]=-(deg-1)
+    u=486
+    for (cr,cc_) in ((0,0),(0,8),(8,0),(8,8)):
+        dr=1 if cr==0 else -1; dc=1 if cc_==0 else -1
+        for d1,d2 in (((dr,0),(0,dc)),((0,dc),(dr,0))):
+            Cp=(cr,cc_); Bp=(cr+d1[0],cc_+d1[1]); Dp=(cr+d2[0],cc_+d2[1]); Ap=(cr+2*d1[0],cc_+2*d1[1])
+            X1=(Bp[0]+d2[0],Bp[1]+d2[1]); X2=(cr+3*d1[0],cc_+3*d1[1]); X3=(Ap[0]+d2[0],Ap[1]+d2[1])
+            W[6][OWN+P(*Bp),u]+=1; W[6][OWN+P(*Dp),u]+=1
+            for X in (X1,X2,X3): W[6][OPP+P(*X),u]+=1
+            W[6][OWN+P(*Cp),u]+=-1; W[6][OPP+P(*Cp),u]+=-1
+            B[6][u]=1-5
+            Wo[u,P(*Ap)]+=-prm['cyc']
+            u+=1
+    for (r,c) in PTS:
+        p=P(r,c); nb=nbrs(r,c)
+        for (rr,cc) in nb:
+            q=P(rr,cc)
+            Wo[L6_AP+q,p]+=prm['cap']-prm['atk']; Wo[L6_A2P+q,p]+=prm['atk']
+            Wo[L6_AW+q,p]+=prm['esc']-prm['def']; Wo[L6_A2W+q,p]+=prm['def']
+        Wo[L6_SA+p,p]=-prm['sa']; Wo[L6_EYE+p,p]=-prm['eye']
+        bo[p]=prm['lineval'][line(r,c)]
+    bo[P(4,4)]+=prm['tengen']
+    bo[81]=prm['pass']
+    return W,B,Wo,bo
+
+def save_all(save,W,B,Wo,bo):
+    for k in range(1,7):
+        save('L%d.W'%k,W[k]); save('L%d.b'%k,B[k])
+    save('out.W',Wo); save('out.b',bo)
+'''
+open('/work/builder10.py','w').write(builder10)
+exec(builder10)
+import json
+# S-only max at L5 ~ 1235*? ; S3 min at L5 = S3SC*0.1*0.5^3*MS = 1.25e5 ; choose cS3 so that S-only (<=6200) -> <=0.06 and S3 -> >=2.5
+prm=dict(cap=16.,esc=9.,sa=5.,eye=40.,atk=2.5,dfn=0.,cS3=2e-5,cyc=30.,lineval=[-2.5,-0.3,1.5,1.2,1.5],tengen=1.0,**{'pass':-8.})
+prm['def']=2.0
+json.dump(prm,open('/work/prm_v10.json','w'))
+W,B,Wo,bo=build(prm)
+for k in range(1,7): print(k,len(np.where(np.abs(W[k]).sum(0)>0)[0]))
+save_all(save,W,B,Wo,bo)
+print('saved v10')
+```

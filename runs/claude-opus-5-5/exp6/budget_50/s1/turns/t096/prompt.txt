@@ -1,0 +1,52 @@
+OUTPUT of Python run 73 of at most 120:
+```
+game 6 black margin -6.5
+  ply 89 
+  ply 90 n (1, 0) [[9, 1.0], [5, 0.0], [7, 0.0]]
+  ply 91 o (4, 7) 
+  ply 92 n P [[5, 0.4104], [7, 0.4104], [79, 0.0829]]
+  ply 93 o (0, 0) 
+  ply 94 n (5, 7) [[52, 1.0], [5, 0.0], [7, 0.0]]
+      OXX.X...X
+      .OXX.XXX.
+      OOXXX.X.X
+      OOOXX.XX.
+      OOOOXXX.X
+      O.XOOXOXO
+      OOOOOOOOO
+      OOXOOOOOO
+      .XXXO.O..
+game 15 black margin 28.5
+  ply 113 
+  ply 114 n (6, 0) [[54, 1.0], [81, 0.0], [31, 0.0]]
+  ply 115 o (0, 0) 
+  ply 116 n P [[81, 1.0], [31, 0.0], [63, 0.0]]
+  ply 117 o (3, 4) 
+  ply 118 n (0, 1) [[1, 1.0], [81, 0.0], [63, 0.0]]
+  ply 119 o (7, 0) 
+  ply 120 n (3, 3) [[30, 1.0], [81, 0.0], [18, 0.0]]
+      .XOOX.X.X
+      XOOXXX.X.
+      .OOOX.X.X
+      OOOX.XXXX
+      OOOOXXXXX
+      OOOOOX.XX
+      .OXXX.XX.
+      OX.XXXX.X
+      X.X.XX.X.
+game 16 black margin -5.5
+  ply 79 
+  ply 80 n (7, 6) [[63, 0.4098], [54, 0.3355], [69, 0.1841]]
+  ply 81 o (7, 4) 
+  ply 82 n (7, 5) [[68, 1.0], [69, 0.0], [63, 0.0]]
+      .XOOOOOO.
+      X.XOOOOXX
+      .XXO.OOOO
+      XXOOOOXXO
+      .XOXXXO.O
+      XXX.XOOOO
+      ..XXXOOOO
+      .X.X.X.O.
+      X.X.XOO.O
+
+```

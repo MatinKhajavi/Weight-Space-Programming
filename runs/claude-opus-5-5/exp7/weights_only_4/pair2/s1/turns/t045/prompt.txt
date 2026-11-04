@@ -1,0 +1,34 @@
+OUTPUT of run 44 of at most 60:
+```
+L12: |z|>4 count=1, mean z=+0.01
+   u1315: z(Δd·(mis-true))=-4.3  base d·city=-10.643 base d·(mis-true)=-10.202 | base writes+ ['ivot', 'ires', 'inet', 'ushes', 'Становништво', 'ード'] | base writes- [' sport', ' Agent', 'doc', 'Agent'] | reads [' ecosystem', ' target', ' package', 'target', ' Target', 'portion']
+   u1434: z(Δd·(mis-true))=+3.8  base d·city=-3.628 base d·(mis-true)=+7.749 | base writes+ [' Wedding', ' soccer', ' bow', 'click', ' Rain', ' café'] | base writes- ['hex', 'iş', ' Board', 'INT'] | reads ['unci', 'duc', 'LCD', 'anguage', 'rote', 'quad']
+   u0: z(Δd·(mis-true))=-3.6  base d·city=-1.780 base d·(mis-true)=-28.496 | base writes+ [' windows', ' gallons', ' mud', 'fill', 'lu', 'Fill'] | base writes- [' Association', ' associations', ' association', 'ociation'] | reads ['ización', 'guild', 'ization', 'ização', 'iais', 'iation']
+   u1039: z(Δd·(mis-true))=+3.5  base d·city=-12.595 base d·(mis-true)=-25.400 | base writes+ ['five', ' five', ' Five', ' fifth', ' cinco', ' fifty'] | base writes- [' rak', 'angu', 'wm', 'RON'] | reads ['ció', 'hensive', 'ième', ' feu', 'asant', 'ől']
+L13: |z|>4 count=0, mean z=-0.03
+   u752: z(Δd·(mis-true))=-3.9  base d·city=+14.343 base d·(mis-true)=-1.813 | base writes+ [' Unter', ' Bond', ' Andy', 'aikum', 'platform', 'Under'] | base writes- [' right', 'right', 'RIGHT', ' Right'] | reads [' الرحمن', ' formerly', 'こちら', 'Radio', ' Radio', ' blocks']
+   u182: z(Δd·(mis-true))=-3.5  base d·city=+10.361 base d·(mis-true)=+4.279 | base writes+ ['üş', 'ygon', 'くだ', 'ASC', 'away', 'لاح'] | base writes- [' ded', 'ター', 'itance', '自己的'] | reads ['ami', ' Market', 'uba', 'aina', 'urban', 'born']
+   u674: z(Δd·(mis-true))=+3.4  base d·city=+2.402 base d·(mis-true)=+5.708 | base writes+ ['iness', ' testified', 'anded', ' kept', ' live', ' washed'] | base writes- ['利用', ' uso', 'collapse', 'че'] | reads ['所有', ' chào', ' authorization', ' possibilities', 'otimes', '이다']
+   u162: z(Δd·(mis-true))=+3.3  base d·city=+12.498 base d·(mis-true)=+8.074 | base writes+ ['ampi', 'antiago', 'midt', ' 안', 'san', 'αι'] | base writes- [' infant', ' amino', ' Record', 'raft'] | reads [' forever', ' contained', ' remembered', ' nowhere', ' left', ' again']
+L14: |z|>4 count=0, mean z=-0.02
+   u1450: z(Δd·(mis-true))=+4.0  base d·city=-22.764 base d·(mis-true)=-0.731 | base writes+ [' to', 'to', 'To', 'amente', ' To', 'sto'] | base writes- ['xmin', ' multiplic', 'ährend', 'orean'] | reads ['iances', 'cios', 'ures', 'olah', 'ial', 'ott']
+   u441: z(Δd·(mis-true))=+3.6  base d·city=+4.988 base d·(mis-true)=-4.417 | base writes+ [' agricult', 'document', 'etter', ' acceler', "(['", '[]'] | base writes- [' hasil', ' digunakan', ' buena', ' điều'] | reads [' kön', 'onium', '期間', 'andidate', 'enn', 'ummies']
+   u20: z(Δd·(mis-true))=-3.4  base d·city=-3.460 base d·(mis-true)=-3.267 | base writes+ [' a', ' matters', 'usaha', ' what', ' need', 'Instrumentation'] | base writes- ['\\,', 'вод', 'та', 'PD'] | reads [' the', ' quite', ' both', ' some', ' either', 'the']
+   u1397: z(Δd·(mis-true))=-3.3  base d·city=+13.475 base d·(mis-true)=+14.673 | base writes+ [' Gary', ' Larry', ' ры', ' ای', 'рами', ' اي'] | base writes- ['otics', 'fection', 'anu', ' anten'] | reads ['Colour', 'colour', ' Melbourne', 'Own', ' licence', ' colour']
+L15: |z|>4 count=1, mean z=-0.00
+   u90: z(Δd·(mis-true))=+4.2  base d·city=-13.928 base d·(mis-true)=+0.300 | base writes+ ['تر', 'نان', 'sez', 'رف', 'شن', 'شان'] | base writes- [' phải', 'ieurs', ' partie', '|='] | reads [' Mississippi', ' Illuminate', ' Washington', 'umin', ' poverty', ' Alaska']
+   u1229: z(Δd·(mis-true))=-3.6  base d·city=+1.560 base d·(mis-true)=+8.333 | base writes+ ['Xiv', 'Identity', 'identity', ' identity', 'lymp', 'Signature'] | base writes- [' August', ' April', ' stories', ' colspan'] | reads [' systematic', ' arbit', ' morning', ' costly', ' periodic', ' manual']
+   u18: z(Δd·(mis-true))=+3.4  base d·city=-21.899 base d·(mis-true)=-9.172 | base writes+ ['感じ', ' ease', ' lips', 'ares', 'oleon', 'urs'] | base writes- ['vä', ' hele', 'insi', 'ificial'] | reads ['GIN', ' endl', 'gin', 'イント', 'endl', 'iced']
+   u726: z(Δd·(mis-true))=-3.3  base d·city=-24.292 base d·(mis-true)=-25.685 | base writes+ ['elled', 'GBT', 'gas', 'ellt', ' $-$', ' действи'] | base writes- ['venth', 'ivo', 'xf', 'xFF'] | reads [' années', ' XV', ' Tat', ' Aut', ' conoc', ' longest']
+L16: |z|>4 count=0, mean z=+0.01
+   u494: z(Δd·(mis-true))=+3.3  base d·city=+26.761 base d·(mis-true)=+8.603 | base writes+ ['inen', 'enschaft', 'connector', 'ển', 'rops', 'щая'] | base writes- [' intermedi', 'hline', ' sett', 'prevent'] | reads [' Oper', 'arith', ' oper', ' operation', ' opera', ' bank']
+   u575: z(Δd·(mis-true))=+3.2  base d·city=-3.159 base d·(mis-true)=+8.394 | base writes+ ['places', 'due', ' places', 'iches', ' due', ' February'] | base writes- ['iai', 'eln', 'ดย', 'zione'] | reads ['гово', 'мати', ' том', ' accordingly', ' attent', 'фо']
+   u1524: z(Δd·(mis-true))=-3.1  base d·city=-27.043 base d·(mis-true)=-26.723 | base writes+ [' fun', ' interesting', ' enjoyable', ' pleasure', ' curious', ' curios'] | base writes- ['itect', ' Board', 'Board', 'board'] | reads [' gaming', ' fun', ' toys', ' play', ' plays', ' Play']
+   u640: z(Δd·(mis-true))=-2.9  base d·city=-10.006 base d·(mis-true)=-22.297 | base writes+ [' исто', ' тем', ' بیش', 'stackrel', 'save', 'Applications'] | base writes- [' crew', 'athy', ' worker', 'ffen'] | reads ['Services', ' services', ' operations', 'services', ' contracts', ' servicios']
+L17: |z|>4 count=0, mean z=+0.00
+   u665: z(Δd·(mis-true))=+3.9  base d·city=-3.985 base d·(mis-true)=+5.465 | base writes+ ['xtures', 'upiter', 'plet', 'newcommand', 'orney', 'га'] | base writes- ['()));', '([]', ' questioned', ' moist'] | reads [' estate', ' dreams', 'government', ' jail', ' Old', ' sold']
+   u1870: z(Δd·(mis-true))=+3.3  base d·city=+3.300 base d·(mis-true)=-0.929 | base writes+ ['defer', 'DOCTYPE', 'weight', ' charging', ' cost', 'pport'] | base writes- [' terj', 'oons', 'áng', 'ंग'] | reads [' emergence', ' largest', ' vain', 'ynthesis', ' slightly', 'larg']
+   u1299: z(Δd·(mis-true))=-3.0  base d·city=+16.734 base d·(mis-true)=+6.740 | base writes+ ['owners', 'resolution', ' chang', 'спо', 'old', ' motion'] | base writes- ['ophys', 'bles', 'inaire', ' type'] | reads [' Jr', ' disfr', ' Mc', 'type', ' universe', ' activists']
+   u18: z(Δd·(mis-true))=-3.0  base d·city=+5.009 base d·(mis-true)=+1.375 | base writes+ ['IMG', 'wise', '\n\n\n\n\n\n\n\n', '\n\n\n\n\n\n\n\n\n\n', 'zym', '\n\n\n\n\n\n\n\n\n\n\n\n\n\n'] | base writes- [' \\', ')\\', '.\\', ']\\'] | reads [' \\', '>\\', ')\\', ']\\', '})\\', '}\\']
+
+```

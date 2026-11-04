@@ -1,0 +1,22 @@
+OUTPUT of Python run 15 of at most 300:
+```
+n cut 470 periodic tail found: 449
+period chars: median 119.0 pcts [ 35.   58.  261.  487.4]
+unit contains Wait: 399 of 449
+', the first block defines `graph` objects.\n    Wait'
+"boxed{2}`.\n    Wait, I'll write `\\"
+'    Wait, $88 \\div 4 \\div 2 = 11$.\n'
+")(x+2)$ which is $x^2 - x - 6$.\n            *   Wait, I'm looking at the expansion of $(x-3"
+', 0.98)$.\n                        Wait, $Q$ is not on the line $RP$.\n                        Wait, $Q$ is at $(1.17, 0.98)$.\n                        W'
+' I sell them.\n    If I sell the cartons, I have 0 cartons left.\n    So the answer is 4.\n    Wait, if I have 100 eggs.\n    I put them in cartons.\n   '
+'100$.\n                            *   $1000 = 11 \\times 90 + '
+' the first term is $2 \\times 2^5$?\n    *   Wait, is it possible'
+"    Wait, I'll stop.\n    The answer is 6.\n\n"
+'lceil 2.00001 \\rceil = 3$.\n    Wait, what if $x$ was 2.00001?\n    Then $\\'
+'binom{14}{1}$?\n    *   Wait, $\\binom{15}{3} = \\binom{14}{2} + \\'
+'    Wait, $2!$ is in the numerator.\n    So $\\frac{9!}{8!} \\cdot \\frac{5!}{6!} \\cdot \\frac{2!}{1!}$? No.\n'
+'}/3$.\n    *   So $\\cos(\\arcsin(2/3)) = \\sqrt{5}/3$.\n    *   Wait, $\\sin(\\arccos(2/3)) = \\sqrt{5'
+'30$? Yes.\n        *   Wait, is $1/30$ equal to $1/'
+' the first 49 days.\n    -   If the year has 365 days, the first 49 days contain 1 Sunday.\n    -   If the year has 366 days, the first 49 days contain '
+
+```

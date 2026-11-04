@@ -1,0 +1,11 @@
+OUTPUT of Python run 119 of at most 120:
+```
+1 487
+2 487
+3 487
+4 487
+5 488
+6 495
+L6 494 inputs [487] out 4.0 LX bias -32.5
+
+```

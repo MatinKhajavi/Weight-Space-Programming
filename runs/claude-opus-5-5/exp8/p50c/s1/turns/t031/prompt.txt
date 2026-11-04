@@ -1,0 +1,68 @@
+OUTPUT of Python run 27 of at most 300:
+```
+answer 8 onset_char 1749.0 period 29.0
+For football season, Zachary wants to buy a new football, a pair of shorts, and a pair of football shoes. The ball costs $3.75, the shorts cost $2.40, and the shoes cost $11.85. Zachary has $10. How much more money does Zachary need?
+-----
+Here's my thought process for solving this word problem:
+
+1.  **Analyze the Request:**
+    *   **Goal:** Calculate the amount Zachary needs to buy items.
+    *   **Items:**
+        *   Football (Ball): $3.75
+        *   Shorts: $2.40
+        *   Football Shoes: $11.85
+    *   **Total Cost of Items:** Sum of individual prices.
+    *   **Zachary's Current Funds:** $10.
+    *   **Question:** How much *more* money does he need? (This implies Total Cost - Available Money).
+
+2.  **Step-by-Step Calculation:**
+
+    *   *Item 1 (Football/Ball):*
+        *   Price: $3.75
+        *   Amount needed: $3.75
+
+    *   *Item 2 (Shorts):*
+        *   Price: $2.40
+        *   Amount needed: $2.40
+
+    *   *Item 3 (Shoes):*
+        *   Price: $11.85
+        *   Amount needed: $11.85
+
+    *   *Calculation:*
+        *   Total Cost = $3.75 + $2.40 + $11.85
+        *   Let's add them up carefully.
+        *   $3.75 + $2.40 = $6.15
+        *   Now, $6.15 + $11.85
+        *   $11.85 - $2.40 = $9.45 (Wait, that's not right. I should just sum.)
+        *   $11.85 + $2.40 = $14.25
+        *   $3.75 + $11.85 = $15.60
+        *   Wait, let me re-add.
+            *   3.75
+            *   + 2.40
+            *   -------
+                *   5+0=5
+                *   5+4=9
+                *   3+2=5
+                *   Result: 6.15
+            *   11.85
+            *   + 6.15
+            *   -------
+                *   5+5=10 (carry 1) -> 10
+                *   8+1+1=10 (carry 1) -> 10
+                *   1+6+1=8
+                *   1+1=2
+                *   Result: 17.20
+        *   Hold on, let me recalculate.
+            *   3.75
+            *   2.40
+            *   11.85
+            *   ---
+            *   3.75 + 2.40 = 6.15
+            *   6.15 + 11.85
+            *   11.85 + 6.15
+            *   11.85 + 6.15
+            *   11.85 + 
+
+[harness: 4 repeated lines not shown (a line is shown at most 2 times per output)]
+```

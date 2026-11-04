@@ -1,0 +1,23 @@
+OUTPUT of run 39 of at most 60:
+```
+consensus sv [2.04 1.91 1.65 1.55 1.41 1.35]
+L 0 | h0 dz=+2.4 base_z=-1.3 | h1 dz=-1.0 base_z=-0.5 | h2 dz=+1.5 base_z=-1.2 | h3 dz=+2.2 base_z=+0.7
+L 1 | h0 dz=+1.8 base_z=+0.9 | h1 dz=+6.1 base_z=-1.1 | h2 dz=+4.2 base_z=+0.1 | h3 dz=+6.2 base_z=+1.6
+L 2 | h0 dz=+1.1 base_z=-0.3 | h1 dz=-0.5 base_z=-1.4 | h2 dz=-0.5 base_z=-0.7 | h3 dz=+2.2 base_z=-2.7
+L 3 | h0 dz=-3.2 base_z=-1.9 | h1 dz=-0.3 base_z=-3.7 | h2 dz=+1.7 base_z=-2.0 | h3 dz=-4.1 base_z=-0.3
+L 4 | h0 dz=-3.4 base_z=-6.1 | h1 dz=+4.2 base_z=-7.0 | h2 dz=+1.9 base_z=-0.1 | h3 dz=-0.5 base_z=+1.0
+L 5 | h0 dz=-0.8 base_z=+6.7 | h1 dz=-0.2 base_z=+8.5 | h2 dz=-2.5 base_z=+6.8 | h3 dz=-2.4 base_z=+4.9
+L 6 | h0 dz=+2.9 base_z=+2.8 | h1 dz=+3.3 base_z=-6.4 | h2 dz=+1.2 base_z=+3.7 | h3 dz=-2.6 base_z=+4.3
+L 7 | h0 dz=-0.6 base_z=+2.3 | h1 dz=+1.6 base_z=+1.0 | h2 dz=-3.1 base_z=+3.3 | h3 dz=+0.8 base_z=-0.8
+L 8 | h0 dz=-1.1 base_z=-6.0 | h1 dz=+0.5 base_z=+1.0 | h2 dz=+0.2 base_z=+7.9 | h3 dz=+2.2 base_z=+2.5
+L 9 | h0 dz=-0.4 base_z=+0.3 | h1 dz=+1.2 base_z=-1.2 | h2 dz=-0.6 base_z=-0.4 | h3 dz=+0.3 base_z=+2.3
+L10 | h0 dz=+1.2 base_z=+0.8 | h1 dz=+0.1 base_z=+1.1 | h2 dz=+0.9 base_z=+1.4 | h3 dz=+0.0 base_z=+1.3
+L11 | h0 dz=-0.4 base_z=-0.1 | h1 dz=-0.2 base_z=-1.9 | h2 dz=-0.5 base_z=-0.1 | h3 dz=+0.4 base_z=+0.2
+L12 | h0 dz=-0.1 base_z=+0.6 | h1 dz=-0.2 base_z=+0.1 | h2 dz=-0.3 base_z=-0.5 | h3 dz=-0.9 base_z=-0.2
+L13 | h0 dz=+0.4 base_z=-0.0 | h1 dz=+1.0 base_z=-0.0 | h2 dz=+0.9 base_z=-0.5 | h3 dz=+0.4 base_z=-0.3
+L14 | h0 dz=-0.3 base_z=-0.0 | h1 dz=-0.5 base_z=-1.1 | h2 dz=+0.6 base_z=-0.5 | h3 dz=-0.1 base_z=-0.6
+L15 | h0 dz=-0.4 base_z=-0.4 | h1 dz=+1.4 base_z=-2.8 | h2 dz=-0.0 base_z=+4.4 | h3 dz=+0.1 base_z=+0.7
+L16 | h0 dz=+0.0 base_z=-1.0 | h1 dz=-0.6 base_z=+0.1 | h2 dz=-0.6 base_z=+1.0 | h3 dz=-0.3 base_z=-0.5
+L17 | h0 dz=-0.7 base_z=-0.9 | h1 dz=+0.8 base_z=-1.6 | h2 dz=+0.4 base_z=+0.4 | h3 dz=-1.6 base_z=-0.2
+
+```

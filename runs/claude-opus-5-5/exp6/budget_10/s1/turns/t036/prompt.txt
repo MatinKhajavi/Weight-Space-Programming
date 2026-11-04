@@ -1,0 +1,6 @@
+OUTPUT of Python run 32 of at most 120:
+```
+[486, 486, 486, 486, 486, 487]
+saved v4
+
+```

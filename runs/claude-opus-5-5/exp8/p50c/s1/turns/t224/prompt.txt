@@ -1,0 +1,10 @@
+OUTPUT of Python run 200 of at most 300:
+```
+level Level 1 n 22 {'ok': '86%', 'cut': '9%', 'wrong': '5%'}
+level Level 2 n 46 {'ok': '78%', 'cut': '17%', 'wrong': '4%'}
+level Level 3 n 54 {'ok': '52%', 'cut': '35%', 'wrong': '13%'}
+level Level 4 n 66 {'ok': '42%', 'cut': '38%', 'wrong': '20%'}
+level Level 5 n 68 {'ok': '31%', 'cut': '53%', 'wrong': '16%'}
+orig: {'Level 1': '41% ok / 59% cut', 'Level 2': '11% ok / 89% cut', 'Level 3': '6% ok / 94% cut', 'Level 4': '6% ok / 94% cut', 'Level 5': '1% ok / 99% cut'}
+
+```

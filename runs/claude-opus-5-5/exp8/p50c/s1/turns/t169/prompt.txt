@@ -1,0 +1,14 @@
+OUTPUT of Python run 147 of at most 300:
+```
+st         cut  ok  wrong
+run src                  
+H1  gsm8k   16  85     27
+    math    36  72     20
+S1  gsm8k   20  94     14
+    math    54  60     14
+cut n 126 exact loop 82 | ans before onset (all cut): 0.56 by src {'gsm8k': 0.67, 'math': 0.51}
+period chars median 124.0 q10-90 [32.0, 1147.6000000000001] | onset frac of text median 0.57
+onset chars median 54816.5 q10-90 [24867.4, 134587.7]
+unit start types: [('noloop', 44), ('math', 16), ('Maybe', 5), ('bullet:Maybe', 4), ('So', 2), ('Primes:', 2), ('The', 2), ('bullet:Okay,', 2), ('bullet:$\\binom{', 2), ('bullet:Faces', 1), ('bullet:This', 1), ('This', 1), ('Assume', 1), ('digit', 1), ('bullet:$\\sin(15', 1), ('bullet:$(15,', 1), ('Primes', 1), ('bullet:$(3,', 1), ('M', 1), ('Vertices', 1), ('bullet:So', 1), ('bullet:$100', 1), ('bullet:Friends', 1), ('bullet:$2093', 1), ('bullet:"Gave', 1)]
+
+```

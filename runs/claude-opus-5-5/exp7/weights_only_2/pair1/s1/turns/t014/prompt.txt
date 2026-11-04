@@ -1,0 +1,19 @@
+OUTPUT of run 13 of at most 60:
+```
+L7 u186: gate: |m|=1.598 gainA-B=+0.0008 orth=0.0089 | up: |m|=0.577 gainA-B=+0.0045 orth=0.0209 | down: |m|=0.220 gainA-B=+0.0083 orth=0.0305 | dDown(scaled) massfrac=0.88 cos with R1..3=[-0.019  0.044 -0.025]
+L7 u256: gate: |m|=1.757 gainA-B=-0.0008 orth=0.0060 | up: |m|=0.554 gainA-B=+0.0004 orth=0.0251 | down: |m|=0.202 gainA-B=-0.0049 orth=0.0324 | dDown(scaled) massfrac=0.65 cos with R1..3=[-0.085 -0.049  0.059]
+L7 u1875: gate: |m|=1.176 gainA-B=-0.0002 orth=0.0065 | up: |m|=0.649 gainA-B=-0.0015 orth=0.0189 | down: |m|=0.226 gainA-B=-0.0012 orth=0.0243 | dDown(scaled) massfrac=0.84 cos with R1..3=[ 0.04  -0.015  0.024]
+L7 u1051: gate: |m|=0.707 gainA-B=-0.0015 orth=0.0137 | up: |m|=0.956 gainA-B=-0.0012 orth=0.0093 | down: |m|=0.399 gainA-B=-0.0017 orth=0.0169 | dDown(scaled) massfrac=0.92 cos with R1..3=[0.06  0.079 0.024]
+L7 u1015: gate: |m|=1.121 gainA-B=-0.0002 orth=0.0107 | up: |m|=0.633 gainA-B=+0.0008 orth=0.0105 | down: |m|=0.237 gainA-B=+0.0005 orth=0.0235 | dDown(scaled) massfrac=0.80 cos with R1..3=[-0.048  0.002  0.005]
+L14 u374: gate: |m|=0.906 gainA-B=-0.0002 orth=0.0105 | up: |m|=1.008 gainA-B=-0.0003 orth=0.0129 | down: |m|=0.337 gainA-B=-0.0005 orth=0.0206 | dDown(scaled) massfrac=0.02 cos with R1..3=[ 0.061 -0.161  0.092]
+L14 u1876: gate: |m|=1.662 gainA-B=+0.0001 orth=0.0048 | up: |m|=0.840 gainA-B=+0.0006 orth=0.0131 | down: |m|=0.285 gainA-B=+0.0015 orth=0.0247 | dDown(scaled) massfrac=0.03 cos with R1..3=[ 0.2    0.02  -0.064]
+L17 u459: gate: |m|=0.777 gainA-B=+0.0011 orth=0.0106 | up: |m|=1.026 gainA-B=+0.0007 orth=0.0088 | down: |m|=0.442 gainA-B=+0.0019 orth=0.0253 | dDown(scaled) massfrac=0.08 cos with R1..3=[-0.357  0.31  -0.317]
+L17 u1118: gate: |m|=0.697 gainA-B=+0.0008 orth=0.0095 | up: |m|=1.044 gainA-B=+0.0007 orth=0.0081 | down: |m|=0.447 gainA-B=+0.0018 orth=0.0214 | dDown(scaled) massfrac=0.06 cos with R1..3=[ 0.44  -0.209  0.428]
+L3 u1418: gate: |m|=1.248 gainA-B=-0.0005 orth=0.0091 | up: |m|=0.909 gainA-B=-0.0005 orth=0.0118 | down: |m|=0.345 gainA-B=-0.0012 orth=0.0195 | dDown(scaled) massfrac=0.91 cos with R1..3=[-0.008  0.051  0.019]
+L3 u1111: gate: |m|=1.224 gainA-B=-0.0013 orth=0.0097 | up: |m|=0.952 gainA-B=-0.0005 orth=0.0097 | down: |m|=0.333 gainA-B=-0.0016 orth=0.0186 | dDown(scaled) massfrac=0.83 cos with R1..3=[ 0.01  -0.007 -0.009]
+L4 u812: gate: |m|=0.732 gainA-B=-0.0012 orth=0.0150 | up: |m|=1.229 gainA-B=-0.0010 orth=0.0077 | down: |m|=0.383 gainA-B=-0.0018 orth=0.0177 | dDown(scaled) massfrac=0.96 cos with R1..3=[-0.04  -0.048  0.014]
+L4 u1908: gate: |m|=1.242 gainA-B=+0.0003 orth=0.0070 | up: |m|=0.736 gainA-B=+0.0006 orth=0.0140 | down: |m|=0.237 gainA-B=+0.0016 orth=0.0267 | dDown(scaled) massfrac=0.59 cos with R1..3=[-0.006  0.058 -0.009]
+L9 u1213: gate: |m|=0.637 gainA-B=+0.0002 orth=0.0114 | up: |m|=1.071 gainA-B=-0.0002 orth=0.0124 | down: |m|=0.523 gainA-B=-0.0001 orth=0.0120 | dDown(scaled) massfrac=0.37 cos with R1..3=[ 0.03   0.042 -0.005]
+L8 u706: gate: |m|=1.562 gainA-B=-0.0010 orth=0.0082 | up: |m|=1.080 gainA-B=-0.0005 orth=0.0079 | down: |m|=0.228 gainA-B=-0.0024 orth=0.0240 | dDown(scaled) massfrac=0.20 cos with R1..3=[-0.002  0.017 -0.06 ]
+
+```

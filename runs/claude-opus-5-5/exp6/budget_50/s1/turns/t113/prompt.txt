@@ -1,0 +1,5 @@
+Positions pass 26 of 50 done.
+```
+{"ok": true, "pass": 26, "kind": "positions", "positions": 5, "top3_per_position": [[["(4,4)", 0.491], ["(2,3)", 0.0601], ["(2,2)", 0.0244]], [["(4,4)", 0.4911], ["(2,2)", 0.0601], ["(2,3)", 0.0244]], [["(4,4)", 0.7238], ["(2,4)", 0.036], ["(4,2)", 0.036]], [["(5,4)", 0.9959], ["(7,2)", 0.0014], ["(7,4)", 0.0014]], [["(7,2)", 0.3333], ["(7,4)", 0.3333], ["(7,6)", 0.3333]]], "files": "/work/pass_26/", "readme": "inputs.npy (P, 243) the network inputs; legal.npy (P, 82) the legal moves (for 'board' positions: the empty points and pass; suicide and ko are not checked); logits.npy, probs.npy (P, 82); no activations (ask with \"activations\": true)."}
+```
+Passes left: 24.

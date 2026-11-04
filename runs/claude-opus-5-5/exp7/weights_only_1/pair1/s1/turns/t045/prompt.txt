@@ -1,0 +1,22 @@
+OUTPUT of run 44 of at most 60:
+```
+top heads by mechanism score (|lambda| x |copy| x reach x OVshare):
+  L15 h1: mech 13.79 | lambda -2.64e-04 copy  -5.8 O-term z +1.1 | crude imp 452
+  L15 h3: mech 8.31 | lambda +2.16e-04 copy  +5.0 O-term z -1.4 | crude imp 327
+  L15 h0: mech 5.59 | lambda +1.36e-04 copy  +5.0 O-term z +0.6 | crude imp 379
+  L12 h2: mech 5.49 | lambda +2.15e-04 copy  +3.1 O-term z +2.8 | crude imp 367
+  L11 h3: mech 4.70 | lambda -2.19e-04 copy  -2.7 O-term z +1.6 | crude imp 331
+  L17 h0: mech 4.64 | lambda +2.09e-04 copy  +2.9 O-term z +0.5 | crude imp 357
+  L14 h1: mech 4.07 | lambda +1.68e-04 copy  +3.8 O-term z +0.2 | crude imp 324
+  L11 h2: mech 3.50 | lambda +2.30e-04 copy  +2.1 O-term z +1.2 | crude imp 251
+  L16 h2: mech 3.26 | lambda +1.57e-04 copy  +3.1 O-term z +0.8 | crude imp 322
+  L15 h2: mech 2.29 | lambda +1.81e-04 copy  +2.7 O-term z +1.7 | crude imp 280
+  L 9 h1: mech 2.12 | lambda -2.34e-04 copy  -6.0 O-term z -0.8 | crude imp 63
+  L 7 h1: mech 2.08 | lambda -1.92e-04 copy  -7.8 O-term z -0.2 | crude imp 55
+  L13 h2: mech 1.76 | lambda +1.70e-04 copy  +2.9 O-term z +1.4 | crude imp 216
+  L17 h2: mech 1.53 | lambda -1.95e-04 copy  -1.5 O-term z -0.2 | crude imp 225
+  L13 h0: mech 1.48 | lambda -2.01e-04 copy  +1.3 O-term z +0.6 | crude imp 262
+  L12 h1: mech 1.45 | lambda +1.52e-04 copy  +1.7 O-term z +0.5 | crude imp 245
+per-layer attention mechanism totals: 0:0.04 1:0.13 2:0.11 3:0.37 4:0.03 5:0.39 6:1.01 7:3.69 8:1.23 9:3.87 10:2.29 11:8.93 12:8.06 13:4.14 14:5.43 15:29.98 16:4.84 17:6.82
+
+```

@@ -1,0 +1,5 @@
+OUTPUT of Python run 192 of at most 300:
+```
+need answers for H1 -> <class 'dict'>
+
+```

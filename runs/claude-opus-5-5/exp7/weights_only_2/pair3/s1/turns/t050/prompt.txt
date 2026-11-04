@@ -1,0 +1,22 @@
+OUTPUT of run 48 of at most 60:
+```
+Within-layer comparisons (raw cos | after removing layer-common component):
+  L9: A-fav H1 vs B-fav H0: raw -0.71 | resid -0.52
+  L9: A-fav H1 vs B-fav H2: raw -0.64 | resid -0.40
+  L9: B-fav H0 vs H2: raw +0.65 | resid +0.04
+  L10: A-fav H2 vs B-fav H1: raw -0.38 | resid -0.74
+  L10: A-fav H2 vs B-fav H0: raw +0.24 | resid +0.14
+  L10: B-fav H1 vs H0: raw +0.31 | resid -0.37
+  L12: A-fav H3 vs B-fav H0: raw +0.36 | resid -0.47
+  L12: A-fav H3 vs B-fav H1: raw +0.71 | resid -0.14
+  L12: B-fav H0 vs H1: raw +0.42 | resid -0.28
+  L14: A-fav H3 vs B-fav H2: raw -0.47 | resid -0.68
+  L14: A-fav H1 vs B-fav H2: raw -0.06 | resid -0.52
+  L14: A-fav H3 vs H1: raw +0.33 | resid +0.19
+Cross-layer (different layers only), global mean removed:
+  A-A mean cos -0.032 (n=14)
+  B-B mean cos -0.045 (n=14)
+  A-B mean cos -0.014 (n=34)
+  within-minus-between = -0.024 ; null mean -0.001 sd 0.028 ; p(null>=obs)=0.815
+
+```

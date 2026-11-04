@@ -1,0 +1,10 @@
+OUTPUT of Python run 94 of at most 300:
+```
+<class 'dict'> ['id', 'source', 'problem', 'answer', 'solution']
+other         n=169 (0.63)  ref answer in tail: 0.18
+wrap-up       n= 76 (0.28)  ref answer in tail: 0.59
+verification  n= 16 (0.06)  ref answer in tail: 0.12
+enumeration   n=  7 (0.03)  ref answer in tail: 0.57
+cut answers graded correct anyway: 3 of 268
+
+```

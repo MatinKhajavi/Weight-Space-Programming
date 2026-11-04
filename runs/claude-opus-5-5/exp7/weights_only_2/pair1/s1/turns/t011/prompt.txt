@@ -1,0 +1,28 @@
+OUTPUT of run 10 of at most 60:
+```
+L12h0 | r1: zd=-1.38 zr=-0.50 cos(w,d)=-0.009 cos(w,r)=-0.018 | r2: zd=-0.85 zr=-0.20 cos(w,d)=-0.007 cos(w,r)=-0.007
+L12h1 | r1: zd=+0.09 zr=-0.01 cos(w,d)=+0.001 cos(w,r)=-0.002 | r2: zd=+0.02 zr=+0.07 cos(w,d)=-0.000 cos(w,r)=+0.000
+L12h2 | r1: zd=+1.06 zr=+0.11 cos(w,d)=+0.007 cos(w,r)=+0.002 | r2: zd=-0.01 zr=-0.07 cos(w,d)=-0.000 cos(w,r)=+0.001
+L12h3 | r1: zd=-0.48 zr=-0.38 cos(w,d)=-0.003 cos(w,r)=-0.017 | r2: zd=-0.76 zr=+0.07 cos(w,d)=-0.004 cos(w,r)=-0.000
+L13h0 | r1: zd=+0.81 zr=+0.28 cos(w,d)=+0.008 cos(w,r)=+0.011 | r2: zd=-0.12 zr=-0.02 cos(w,d)=-0.002 cos(w,r)=+0.001
+L13h1 | r1: zd=+0.36 zr=+0.13 cos(w,d)=+0.002 cos(w,r)=+0.004 | r2: zd=-0.32 zr=-0.14 cos(w,d)=-0.003 cos(w,r)=-0.003
+L13h2 | r1: zd=+0.39 zr=+0.10 cos(w,d)=+0.004 cos(w,r)=+0.004 | r2: zd=-0.26 zr=-0.02 cos(w,d)=-0.002 cos(w,r)=+0.000
+L13h3 | r1: zd=+0.73 zr=+0.35 cos(w,d)=+0.010 cos(w,r)=+0.010 | r2: zd=-0.64 zr=-0.15 cos(w,d)=-0.007 cos(w,r)=-0.005
+L14h0 | r1: zd=-0.48 zr=-0.04 cos(w,d)=-0.004 cos(w,r)=-0.004 | r2: zd=+1.10 zr=+0.20 cos(w,d)=+0.010 cos(w,r)=+0.012
+L14h1 | r1: zd=+0.56 zr=+0.20 cos(w,d)=+0.007 cos(w,r)=+0.010 | r2: zd=-0.02 zr=+0.14 cos(w,d)=-0.000 cos(w,r)=+0.005
+L14h2 | r1: zd=-0.46 zr=-0.19 cos(w,d)=-0.006 cos(w,r)=-0.009 | r2: zd=+0.20 zr=+0.19 cos(w,d)=+0.002 cos(w,r)=+0.008
+L14h3 | r1: zd=-0.01 zr=+0.08 cos(w,d)=+0.001 cos(w,r)=+0.000 | r2: zd=+0.92 zr=+0.44 cos(w,d)=+0.009 cos(w,r)=+0.013
+L15h0 | r1: zd=+0.23 zr=-0.02 cos(w,d)=+0.002 cos(w,r)=+0.005 | r2: zd=+3.06 zr=+0.71 cos(w,d)=+0.018 cos(w,r)=+0.022
+L15h1 | r1: zd=-0.26 zr=+0.00 cos(w,d)=-0.002 cos(w,r)=-0.001 | r2: zd=-0.02 zr=-0.09 cos(w,d)=+0.000 cos(w,r)=+0.001
+L15h2 | r1: zd=+1.00 zr=+0.41 cos(w,d)=+0.007 cos(w,r)=+0.012 | r2: zd=+3.04 zr=+0.42 cos(w,d)=+0.018 cos(w,r)=+0.018
+L15h3 | r1: zd=-0.09 zr=-0.05 cos(w,d)=+0.000 cos(w,r)=+0.000 | r2: zd=+3.73 zr=+0.60 cos(w,d)=+0.022 cos(w,r)=+0.024
+L16h0 | r1: zd=+0.15 zr=+0.19 cos(w,d)=+0.001 cos(w,r)=+0.005 | r2: zd=-0.45 zr=+0.03 cos(w,d)=-0.003 cos(w,r)=-0.002
+L16h1 | r1: zd=+1.64 zr=+0.63 cos(w,d)=+0.017 cos(w,r)=+0.024 | r2: zd=-0.18 zr=+0.03 cos(w,d)=-0.002 cos(w,r)=+0.001
+L16h2 | r1: zd=+1.49 zr=+0.41 cos(w,d)=+0.016 cos(w,r)=+0.019 | r2: zd=+0.19 zr=-0.04 cos(w,d)=+0.001 cos(w,r)=+0.004
+L16h3 | r1: zd=+2.22 zr=+0.55 cos(w,d)=+0.021 cos(w,r)=+0.023 | r2: zd=-0.26 zr=-0.06 cos(w,d)=-0.002 cos(w,r)=-0.000
+L17h0 | r1: zd=-0.37 zr=-0.15 cos(w,d)=-0.002 cos(w,r)=-0.006 | r2: zd=-0.02 zr=-0.05 cos(w,d)=-0.001 cos(w,r)=-0.001
+L17h1 | r1: zd=-1.43 zr=-0.47 cos(w,d)=-0.012 cos(w,r)=-0.018 | r2: zd=+0.30 zr=+0.05 cos(w,d)=+0.002 cos(w,r)=+0.007
+L17h2 | r1: zd=-0.30 zr=-0.15 cos(w,d)=-0.002 cos(w,r)=-0.008 | r2: zd=+0.86 zr=+0.15 cos(w,d)=+0.006 cos(w,r)=+0.010
+L17h3 | r1: zd=-0.60 zr=-0.23 cos(w,d)=-0.004 cos(w,r)=-0.008 | r2: zd=+0.15 zr=-0.06 cos(w,d)=+0.001 cos(w,r)=+0.003
+
+```

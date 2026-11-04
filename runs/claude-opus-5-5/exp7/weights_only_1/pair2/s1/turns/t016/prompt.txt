@@ -1,0 +1,14 @@
+OUTPUT of run 15 of at most 60:
+```
+L8: corr(load,amp_down)=-0.022 corr(load,amp_gate)=-0.014 corr(load,amp_up)=-0.019 | corr(loado,ad)=+0.041 | top50-load mean amp d/g/u: -0.0048 +0.0011 -0.0016  all mean -0.0005 | corr(norm,ad) +0.007
+L9: corr(load,amp_down)=-0.022 corr(load,amp_gate)=+0.005 corr(load,amp_up)=+0.001 | corr(loado,ad)=-0.006 | top50-load mean amp d/g/u: -0.0035 -0.0050 -0.0051  all mean +0.0000 | corr(norm,ad) -0.011
+L10: corr(load,amp_down)=+0.033 corr(load,amp_gate)=+0.004 corr(load,amp_up)=+0.048 | corr(loado,ad)=+0.041 | top50-load mean amp d/g/u: +0.0067 -0.0014 +0.0083  all mean +0.0005 | corr(norm,ad) -0.014
+L11: corr(load,amp_down)=-0.003 corr(load,amp_gate)=-0.006 corr(load,amp_up)=+0.034 | corr(loado,ad)=+0.004 | top50-load mean amp d/g/u: +0.0048 +0.0017 +0.0052  all mean -0.0002 | corr(norm,ad) +0.008
+L12: corr(load,amp_down)=-0.015 corr(load,amp_gate)=-0.016 corr(load,amp_up)=-0.007 | corr(loado,ad)=-0.006 | top50-load mean amp d/g/u: +0.0024 +0.0016 +0.0019  all mean -0.0008 | corr(norm,ad) -0.023
+L13: corr(load,amp_down)=-0.051 corr(load,amp_gate)=-0.041 corr(load,amp_up)=-0.046 | corr(loado,ad)=-0.046 | top50-load mean amp d/g/u: +0.0056 +0.0023 +0.0020  all mean +0.0001 | corr(norm,ad) -0.036
+L14: corr(load,amp_down)=-0.014 corr(load,amp_gate)=+0.022 corr(load,amp_up)=+0.008 | corr(loado,ad)=-0.011 | top50-load mean amp d/g/u: +0.0042 +0.0095 +0.0116  all mean -0.0004 | corr(norm,ad) +0.022
+L15: corr(load,amp_down)=-0.031 corr(load,amp_gate)=-0.011 corr(load,amp_up)=-0.024 | corr(loado,ad)=-0.026 | top50-load mean amp d/g/u: +0.0003 -0.0027 +0.0014  all mean +0.0011 | corr(norm,ad) +0.026
+L16: corr(load,amp_down)=+0.026 corr(load,amp_gate)=+0.030 corr(load,amp_up)=+0.034 | corr(loado,ad)=-0.018 | top50-load mean amp d/g/u: +0.0011 +0.0018 +0.0001  all mean +0.0008 | corr(norm,ad) +0.012
+L17: corr(load,amp_down)=+0.088 corr(load,amp_gate)=+0.010 corr(load,amp_up)=-0.011 | corr(loado,ad)=+0.085 | top50-load mean amp d/g/u: +0.0166 +0.0059 -0.0004  all mean +0.0020 | corr(norm,ad) -0.034
+
+```

@@ -1,0 +1,23 @@
+OUTPUT of run 50 of at most 60:
+```
+copy heads         | local0-3: +0.093 (null sd 0.127, z +0.7) | guess4-13: +0.138 (null sd 0.093, z +1.5) | question14-21: -0.004 (null sd 0.085, z -0.0) | prefix22-32: -0.002 (null sd 0.057, z -0.0)
+suppression heads  | local0-3: -0.084 (null sd 0.094, z -0.9) | guess4-13: +0.049 (null sd 0.175, z +0.3) | question14-21: -0.357 (null sd 0.208, z -1.7) | prefix22-32: -0.053 (null sd 0.131, z -0.4)
+other heads        | local0-3: +0.054 (null sd 0.090, z +0.6) | guess4-13: +0.116 (null sd 0.080, z +1.5) | question14-21: +0.093 (null sd 0.069, z +1.3) | prefix22-32: -0.122 (null sd 0.060, z -2.0)
+ALL heads          | local0-3: +0.057 (null sd 0.070, z +0.8) | guess4-13: +0.119 (null sd 0.059, z +2.0) | question14-21: +0.021 (null sd 0.053, z +0.4) | prefix22-32: -0.061 (null sd 0.043, z -1.4)
+heads with most weight in the question segment (weight, head, type, mean ratio):
+  0.0090 L12H3 copy -0.12
+  0.0081 L3H3 other +0.24
+  0.0070 L11H2 copy +0.35
+  0.0067 L12H2 copy +0.06
+  0.0065 L10H0 copy -0.13
+  0.0065 L12H1 other +0.21
+  0.0065 L12H0 other +0.68
+  0.0061 L17H2 other -0.02
+  0.0048 L5H1 other -0.33
+  0.0046 L9H3 copy -0.05
+  0.0044 L11H1 copy -0.23
+  0.0043 L9H1 supp +0.08
+  0.0041 L13H3 other +0.79
+  0.0041 L15H3 copy -0.10
+
+```

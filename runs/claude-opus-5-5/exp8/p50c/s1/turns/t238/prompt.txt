@@ -1,0 +1,13 @@
+OUTPUT of Python run 213 of at most 300:
+```
+- _2870 ans 125 @ 0.008 | '+75=125$. Is there a constraint like "She wants to buy roses"?\n    *   *Alternative Interpretation:* The question asks "How many roses does Hanna *give* to her friends". It doesn\'t explicitly state she *spends* all her money. However, typically in these math word problems, if someone says "I want to buy X items", they are spendi'
+- _7417 ans 170 @ 0.014 | '0 + 120 - 10 = 170$.\n            *   However, if they are filling *together* in some way, or if the "process" refers to the combined effort over the whole time, it changes things.\n            *   Let\'s look for clues in similar problems online or in logic puzzles. This looks like a variation of the "filling balloons" riddle.\n   '
+- _7280 ans 60 @ 0.193 | '                                                   *   If $Blue = 3 \\times (4 + 12 + 4 + Tan) = 3 \\times 20 = 60$.\n                                                        *   Then $60 = 3 \\times 20 = 60$.\n                                                        *   This works.\n                                                     '
+- _4601 ans 80 @ 0.056 | '                           *   Then multiply by 4 hours/week = 80 hours.\n                                *   Why would he do that? Because if he praxisces 4 hours *per week*, and praxisces for 5 months, does he mean he praxisces 5 months worth of *practice*?\n                                *   No, "practicing every week" sets th'
+- _1945 ans 17 @ 0.028 | 'g capacity = $20 - 3 = 17$.\n            *   Is there a third item (Apples)?\n            *   The question asks "How many pounds of apples...".\n            *   If he *buys* apples, does he *carry* them? Yes.\n            *   So, he carries 3 lbs of watermelon/grapes/oranges.\n            *   He can take up to 20 lbs.\n            *  '
+- n_412 ans 188 @ 0.074 | '256$.\n                            *   $x = 188$.\n                            *   Does this make sense?\n                            *   "He gave twice as much as he gave to Anna". Yes, $x=188$.\n                            *   Let\'s check if there is any hidden meaning.\n                            *   "He gave twice as many cookie'
+gsm ok 179 {'wording': 0.44, 'ambigu': 0.37, 'interpret': 1.47, 'trick': 0.45, 'phrasing': 0.54, 're-read': 0.19, 'literal': 0.06, 'Is it possible': 0.81, 'refers to': 1.39}
+gsm cut 36 {'wording': 0.17, 'ambigu': 0.05, 'interpret': 1.18, 'trick': 0.08, 'phrasing': 0.12, 're-read': 0.07, 'literal': 0.02, 'Is it possible': 0.14, 'refers to': 1.24}
+gsm wrong 41 {'wording': 0.54, 'ambigu': 0.22, 'interpret': 1.71, 'trick': 0.29, 'phrasing': 0.49, 're-read': 0.17, 'literal': 0.07, 'Is it possible': 0.52, 'refers to': 2.3}
+
+```

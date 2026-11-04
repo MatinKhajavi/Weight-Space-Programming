@@ -1,0 +1,6 @@
+OUTPUT of Python run 155 of at most 300:
+```
+A candidates 310 B candidates 62
+selected A 70 171859 B 62 179992 total 351851
+
+```

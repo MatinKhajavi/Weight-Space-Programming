@@ -1,0 +1,140 @@
+OUTPUT of run 1 of at most 60:
+```
+{
+"_sliding_window_pattern": 6,
+"architectures": [
+"Gemma3ForCausalLM"
+],
+"attention_bias": false,
+"attention_dropout": 0.0,
+"attn_logit_softcapping": null,
+"bos_token_id": 2,
+"dtype": "float32",
+"eos_token_id": 1,
+"final_logit_softcapping": null,
+"head_dim": 256,
+"hidden_activation": "gelu_pytorch_tanh",
+"hidden_size": 640,
+"initializer_range": 0.02,
+"intermediate_size": 2048,
+"layer_types": [
+"sliding_attention",
+"sliding_attention",
+"sliding_attention",
+"sliding_attention",
+"sliding_attention",
+"full_attention",
+"sliding_attention",
+"sliding_attention",
+"sliding_attention",
+"sliding_attention",
+"sliding_attention",
+"full_attention",
+"sliding_attention",
+"sliding_attention",
+"sliding_attention",
+"sliding_attention",
+"sliding_attention",
+"full_attention"
+],
+"max_position_embeddings": 32768,
+"model_type": "gemma3_text",
+"num_attention_heads": 4,
+"num_hidden_layers": 18,
+"num_key_value_heads": 1,
+"pad_token_id": 0,
+"query_pre_attn_scalar": 256,
+"rms_norm_eps": 1e-06,
+"rope_parameters": {
+"full_attention": {
+"rope_theta": 1000000.0,
+"rope_type": "default"
+},
+"sliding_attention": {
+"rope_theta": 10000.0,
+"rope_type": "default"
+}
+},
+"sliding_window": 512,
+"tie_word_embeddings": true,
+"transformers_version": "5.17.0",
+"use_bidirectional_attention": false,
+"use_cache": true,
+"vocab_size": 262144
+}
+True
+235 True
+{'format': 'pt'} {'format': 'pt'}
+model.layers.0.input_layernorm.weight (640,) BF16
+model.layers.0.mlp.down_proj.weight (640, 2048) BF16
+model.layers.0.mlp.gate_proj.weight (2048, 640) BF16
+model.layers.0.mlp.up_proj.weight (2048, 640) BF16
+model.layers.0.post_attention_layernorm.weight (640,) BF16
+model.layers.0.post_feedforward_layernorm.weight (640,) BF16
+model.layers.0.pre_feedforward_layernorm.weight (640,) BF16
+model.layers.0.self_attn.k_norm.weight (256,) BF16
+model.layers.0.self_attn.k_proj.weight (256, 640) BF16
+model.layers.0.self_attn.o_proj.weight (640, 1024) BF16
+model.layers.0.self_attn.q_norm.weight (256,) BF16
+model.layers.0.self_attn.q_proj.weight (1024, 640) BF16
+model.layers.0.self_attn.v_proj.weight (256, 640) BF16
+model.layers.1.input_layernorm.weight (640,) BF16
+model.layers.1.mlp.down_proj.weight (640, 2048) BF16
+model.layers.1.mlp.gate_proj.weight (2048, 640) BF16
+model.layers.1.mlp.up_proj.weight (2048, 640) BF16
+model.layers.1.post_attention_layernorm.weight (640,) BF16
+model.layers.1.post_feedforward_layernorm.weight (640,) BF16
+model.layers.1.pre_feedforward_layernorm.weight (640,) BF16
+model.layers.1.self_attn.k_norm.weight (256,) BF16
+model.layers.1.self_attn.k_proj.weight (256, 640) BF16
+model.layers.1.self_attn.o_proj.weight (640, 1024) BF16
+model.layers.1.self_attn.q_norm.weight (256,) BF16
+model.layers.1.self_attn.q_proj.weight (1024, 640) BF16
+model.layers.1.self_attn.v_proj.weight (256, 640) BF16
+model.layers.10.input_layernorm.weight (640,) BF16
+model.layers.10.mlp.down_proj.weight (640, 2048) BF16
+model.layers.10.mlp.gate_proj.weight (2048, 640) BF16
+model.layers.10.mlp.up_proj.weight (2048, 640) BF16
+
+model.layers.0.input_layernorm.weight (640,) diff 0.0000 rel 0.00000 eqfrac 1.0000
+model.layers.0.mlp.down_proj.weight (640, 2048) diff 0.2645 rel 0.01074 eqfrac 0.1563
+model.layers.0.mlp.gate_proj.weight (2048, 640) diff 0.2756 rel 0.00617 eqfrac 0.2673
+model.layers.0.mlp.up_proj.weight (2048, 640) diff 0.2756 rel 0.00616 eqfrac 0.2691
+model.layers.0.post_attention_layernorm.weight (640,) diff 0.0005 rel 0.00001 eqfrac 0.9984
+model.layers.0.post_feedforward_layernorm.weight (640,) diff 0.0050 rel 0.00003 eqfrac 0.8438
+model.layers.0.pre_feedforward_layernorm.weight (640,) diff 0.0000 rel 0.00000 eqfrac 1.0000
+model.layers.0.self_attn.k_norm.weight (256,) diff 0.0012 rel 0.00006 eqfrac 0.9766
+model.layers.0.self_attn.k_proj.weight (256, 640) diff 0.0915 rel 0.00576 eqfrac 0.2621
+model.layers.0.self_attn.o_proj.weight (640, 1024) diff 0.1844 rel 0.00616 eqfrac 0.2513
+model.layers.0.self_attn.q_norm.weight (256,) diff 0.0006 rel 0.00003 eqfrac 0.9844
+model.layers.0.self_attn.q_proj.weight (1024, 640) diff 0.1839 rel 0.00585 eqfrac 0.2304
+model.layers.0.self_attn.v_proj.weight (256, 640) diff 0.0865 rel 0.00545 eqfrac 0.3030
+model.layers.17.input_layernorm.weight (640,) diff 0.0000 rel 0.00000 eqfrac 1.0000
+model.layers.17.mlp.down_proj.weight (640, 2048) diff 0.2563 rel 0.01403 eqfrac 0.1231
+model.layers.17.mlp.gate_proj.weight (2048, 640) diff 0.2833 rel 0.00642 eqfrac 0.2397
+model.layers.17.mlp.up_proj.weight (2048, 640) diff 0.2850 rel 0.00635 eqfrac 0.2619
+model.layers.17.post_attention_layernorm.weight (640,) diff 0.0000 rel 0.00000 eqfrac 1.0000
+model.layers.17.post_feedforward_layernorm.weight (640,) diff 0.0000 rel 0.00000 eqfrac 1.0000
+model.layers.17.pre_feedforward_layernorm.weight (640,) diff 0.0021 rel 0.00002 eqfrac 0.9578
+model.layers.17.self_attn.k_norm.weight (256,) diff 0.0008 rel 0.00002 eqfrac 0.9766
+model.layers.17.self_attn.k_proj.weight (256, 640) diff 0.1037 rel 0.00652 eqfrac 0.2262
+model.layers.17.self_attn.o_proj.weight (640, 1024) diff 0.1728 rel 0.00705 eqfrac 0.2270
+model.layers.17.self_attn.q_norm.weight (256,) diff 0.0007 rel 0.00002 eqfrac 0.9766
+model.layers.17.self_attn.q_proj.weight (1024, 640) diff 0.2037 rel 0.00658 eqfrac 0.1767
+model.layers.17.self_attn.v_proj.weight (256, 640) diff 0.0885 rel 0.00555 eqfrac 0.2862
+model.layers.8.input_layernorm.weight (640,) diff 0.0009 rel 0.00000 eqfrac 0.9938
+model.layers.8.mlp.down_proj.weight (640, 2048) diff 0.2649 rel 0.01785 eqfrac 0.0969
+model.layers.8.mlp.gate_proj.weight (2048, 640) diff 0.2996 rel 0.00667 eqfrac 0.2236
+model.layers.8.mlp.up_proj.weight (2048, 640) diff 0.2958 rel 0.00663 eqfrac 0.2509
+model.layers.8.post_attention_layernorm.weight (640,) diff 0.0011 rel 0.00000 eqfrac 0.9938
+model.layers.8.post_feedforward_layernorm.weight (640,) diff 0.0011 rel 0.00000 eqfrac 0.9969
+model.layers.8.pre_feedforward_layernorm.weight (640,) diff 0.0011 rel 0.00001 eqfrac 0.9781
+model.layers.8.self_attn.k_norm.weight (256,) diff 0.0009 rel 0.00003 eqfrac 0.9688
+model.layers.8.self_attn.k_proj.weight (256, 640) diff 0.1041 rel 0.00656 eqfrac 0.2375
+model.layers.8.self_attn.o_proj.weight (640, 1024) diff 0.1962 rel 0.00934 eqfrac 0.1498
+model.layers.8.self_attn.q_norm.weight (256,) diff 0.0014 rel 0.00007 eqfrac 0.9570
+model.layers.8.self_attn.q_proj.weight (1024, 640) diff 0.2145 rel 0.00683 eqfrac 0.2303
+model.layers.8.self_attn.v_proj.weight (256, 640) diff 0.1067 rel 0.00669 eqfrac 0.2535
+model.norm.weight (640,) diff 0.0000 rel 0.00000 eqfrac 1.0000
+
+```

@@ -1,0 +1,10 @@
+The screening shows 17% "my thought process" openings (89 of 512) and 81% "a thinking process". Thirty-six problems (20 GSM, 16 MATH) have one opening of each kind across their two samples, so the opening is genuinely random within a problem and the randomized design works. Next comes the full-protocol run on these 36 problems with 14 samples each (504 generations, up to 32,768 tokens) under C. Samples 1–2 should reproduce the screened openings, and the other 12 add within-problem variation.
+
+The test compares accuracy of "my thought" vs "a thinking" samples within the same problem. A within-problem gain of more than about 15 points would show that the opening mode itself causes the outcome difference, making mode selection a target. A gap near zero would mean the earlier association was problem difficulty, and I would drop this direction.
+
+```python
+# Prepare full within-problem test on discordant problems (n=14), and log notes
+with open('/work/notes.md','a') as f:
+    f.write("\n## Opening-mode finding (session 4)\n- Thinking opens 'Here's a thinking process that leads to the solution' (a_thinking) or 'Here's my thought process' (my_thought) or 'The user wants/The problem asks' (other). Under C (SH512): GSM acc a 0.64 vs my 0.94; MATH a 0.43 vs my 0.90; within MATH levels L3 .45/.71, L4 .36/.88. Original model same pattern (GSM .10/.21, MATH .03/.22; other .04). a_thinking texts 2-4x longer, deep8-indent share .74 vs .26 (GSM).\n- Head ablation shifted openings on S1 seeds: orig my67/a154/other35 -> A,C my54-55/a195/other6 -> B my26/a227 (brake-only unchanged). L23 heads take part in opening choice.\n- Fork token: after 'Here'(8160) + \"'s\"(579)/' is'(369): ' a'(264) vs ' my'(821).\n- PASS 18 = gen_23: screening, C, 256 fresh S-pool problems (/work/O256_ids.json) x2, 12 tokens: my 17%, a 81%, other 2%; 36 discordant problems (/work/O_disc_ids.json).\n- Pass 19 (planned): C, 36 discordant x n=14, 32768 tok -> within-problem randomized test of opening mode.\n")
+print(json.dumps({"type":"generate","model":"edited","problems":disc,"n":14,"max_tokens":32768}))
+```

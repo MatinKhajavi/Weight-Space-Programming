@@ -1,0 +1,70 @@
+OUTPUT of Python run 6 of at most 120:
+```
+game 37 strong black len 99
+[('o', 75), ('n', 73), ('o', 74), ('n', 76), ('o', 75), ('n', 74), ('o', 67), ('n', 63), ('o', 58), ('n', 54), ('o', 72), ('n', 63)]
+ repeats board after ply 95
+    XOX.XXX.X
+    .OXXXX.X.
+    OOX.X.X.X
+    OOOX.XXXX
+    OOOXXOXOX
+    OOOOOOOOO
+    .OOOOOOOO
+    .OXXOO.O.
+    OXX.X..OO
+net top5 at last move [[75, 0.8909], [63, 0.1091], [78, 0.0], [77, 0.0], [69, 0.0]]
+game 48 strong black len 81
+[('o', 79), ('n', 26), ('o', 36), ('n', 9), ('o', 37), ('n', 1), ('o', 0), ('n', 9), ('o', 74), ('n', 18), ('o', 0), ('n', 9)]
+ repeats board after ply 77
+    OX.X.X..X
+    .OXXX.XX.
+    .OX.XXX.X
+    OOOXX.XX.
+    OOOOXXOXX
+    OOOOOOOXO
+    .OOO.OOOO
+    .O.OOO.OO
+    .OOO.O.OO
+net top5 at last move [[9, 0.9926], [2, 0.0074], [63, 0.0], [6, 0.0], [7, 0.0]]
+game 61 strong black len 99
+[('o', 78), ('n', 9), ('o', 81), ('n', 8), ('o', 81), ('n', 63), ('o', 81), ('n', 73), ('o', 81), ('n', 54), ('o', 72), ('n', 63)]
+ repeats board after ply 95
+ repeats board after ply 94
+    XXX.XXXXX
+    XX.XXXXXX
+    XOXX.XXXX
+    OOOOX.XXX
+    OOOOXXOOX
+    OOOOOXOOO
+    .OOOOOOOO
+    .OOOOO.OO
+    OX.OOOOO.
+net top5 at last move [[63, 1.0], [54, 0.0], [81, 0.0], [22, 0.0], [32, 0.0]]
+game 66 strong white len 70
+[('o', 74), ('n', 73), ('o', 36), ('n', 43), ('o', 18), ('n', 16), ('o', 72), ('n', 63), ('o', 37), ('n', 54), ('o', 72), ('n', 63)]
+ repeats board after ply 66
+    .........
+    .XXO.O.O.
+    XXOOO.O..
+    XXXOOO..X
+    XXXXOOOOX
+    XXOXXXXXX
+    .XOOXXXOO
+    .XO.OXOOO
+    XO.OOOOOO
+net top5 at last move [[63, 0.9935], [74, 0.0061], [34, 0.0001], [33, 0.0001], [25, 0.0]]
+game 70 strong white len 86
+[('o', 18), ('n', 73), ('o', 20), ('n', 72), ('o', 63), ('n', 43), ('o', 5), ('n', 32), ('o', 11), ('n', 6), ('o', 8), ('n', 7)]
+ repeats board after ply 82
+    .OXXXX..X
+    XXXXXXXXO
+    X.XXOOOX.
+    ..XXOOOX.
+    .XXXOOOO.
+    XXXXOOOO.
+    ..XXXO.O.
+    X.XXXXOX.
+    ..XXXOO..
+net top5 at last move [[7, 0.9993], [28, 0.0002], [55, 0.0002], [64, 0.0002], [26, 0.0]]
+
+```

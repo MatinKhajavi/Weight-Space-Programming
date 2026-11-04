@@ -1,0 +1,84 @@
+OUTPUT of run 13 of at most 20:
+```
+Per-head dWq: |dWq_h| rel, top-sv share | dWo_h |rel, top-sv share
+L 0 | h0 q 0.0056/0.23 o 0.0055/0.20 | h1 q 0.0071/0.20 o 0.0083/0.15 | h2 q 0.0055/0.19 o 0.0079/0.29 | h3 q 0.0056/0.24 o 0.0051/0.16
+L 1 | h0 q 0.0062/0.25 o 0.0108/0.16 | h1 q 0.0063/0.35 o 0.0098/0.18 | h2 q 0.0065/0.18 o 0.0113/0.26 | h3 q 0.0072/0.23 o 0.0091/0.27
+L 2 | h0 q 0.0061/0.25 o 0.0070/0.14 | h1 q 0.0054/0.24 o 0.0073/0.11 | h2 q 0.0077/0.20 o 0.0072/0.18 | h3 q 0.0073/0.23 o 0.0111/0.12
+L 3 | h0 q 0.0066/0.16 o 0.0095/0.17 | h1 q 0.0069/0.17 o 0.0116/0.14 | h2 q 0.0064/0.25 o 0.0104/0.12 | h3 q 0.0060/0.18 o 0.0164/0.14
+L 4 | h0 q 0.0060/0.25 o 0.0129/0.15 | h1 q 0.0061/0.17 o 0.0139/0.11 | h2 q 0.0063/0.25 o 0.0117/0.13 | h3 q 0.0053/0.29 o 0.0079/0.17
+L 5 | h0 q 0.0062/0.29 o 0.0062/0.16 | h1 q 0.0085/0.49 o 0.0084/0.19 | h2 q 0.0072/0.31 o 0.0084/0.13 | h3 q 0.0067/0.25 o 0.0092/0.13
+L 6 | h0 q 0.0073/0.14 o 0.0084/0.13 | h1 q 0.0077/0.16 o 0.0067/0.15 | h2 q 0.0063/0.14 o 0.0095/0.13 | h3 q 0.0067/0.15 o 0.0084/0.13
+L 7 | h0 q 0.0075/0.28 o 0.0092/0.13 | h1 q 0.0074/0.17 o 0.0052/0.11 | h2 q 0.0067/0.18 o 0.0086/0.15 | h3 q 0.0063/0.16 o 0.0111/0.15
+L 8 | h0 q 0.0066/0.15 o 0.0075/0.10 | h1 q 0.0066/0.23 o 0.0101/0.13 | h2 q 0.0066/0.18 o 0.0119/0.11 | h3 q 0.0069/0.23 o 0.0083/0.13
+L 9 | h0 q 0.0074/0.29 o 0.0075/0.12 | h1 q 0.0078/0.23 o 0.0056/0.10 | h2 q 0.0063/0.17 o 0.0084/0.10 | h3 q 0.0077/0.28 o 0.0091/0.12
+L10 | h0 q 0.0084/0.28 o 0.0070/0.16 | h1 q 0.0075/0.29 o 0.0073/0.13 | h2 q 0.0078/0.38 o 0.0076/0.11 | h3 q 0.0087/0.41 o 0.0056/0.11
+L11 | h0 q 0.0082/0.18 o 0.0075/0.11 | h1 q 0.0077/0.23 o 0.0093/0.08 | h2 q 0.0104/0.34 o 0.0060/0.10 | h3 q 0.0101/0.25 o 0.0053/0.10
+L12 | h0 q 0.0124/0.42 o 0.0074/0.12 | h1 q 0.0118/0.43 o 0.0082/0.12 | h2 q 0.0103/0.32 o 0.0063/0.07 | h3 q 0.0104/0.30 o 0.0074/0.11
+L13 | h0 q 0.0079/0.22 o 0.0091/0.11 | h1 q 0.0068/0.21 o 0.0099/0.18 | h2 q 0.0060/0.23 o 0.0092/0.15 | h3 q 0.0117/0.22 o 0.0079/0.12
+L14 | h0 q 0.0070/0.30 o 0.0070/0.20 | h1 q 0.0071/0.22 o 0.0058/0.25 | h2 q 0.0071/0.16 o 0.0069/0.15 | h3 q 0.0077/0.29 o 0.0071/0.15
+L15 | h0 q 0.0087/0.24 o 0.0073/0.11 | h1 q 0.0085/0.15 o 0.0062/0.09 | h2 q 0.0094/0.22 o 0.0087/0.08 | h3 q 0.0082/0.16 o 0.0084/0.08
+L16 | h0 q 0.0066/0.23 o 0.0103/0.14 | h1 q 0.0070/0.20 o 0.0114/0.13 | h2 q 0.0070/0.22 o 0.0094/0.13 | h3 q 0.0066/0.17 o 0.0121/0.18
+L17 | h0 q 0.0067/0.20 o 0.0053/0.18 | h1 q 0.0072/0.29 o 0.0078/0.08 | h2 q 0.0086/0.28 o 0.0065/0.13 | h3 q 0.0073/0.27 o 0.0091/0.24
+
+|cos| between top input (residual) directions of dWq for switch heads
+         7h0    9h0    9h1    9h2   10h0   10h2   10h3   11h1   11h2   12h2   12h1   17h2
+   7h0  1.00   0.53   0.53   0.50   0.45   0.47   0.40   0.28   0.32   0.06   0.27   0.14
+   9h0  0.53   1.00   0.81   0.79   0.62   0.64   0.52   0.26   0.48   0.07   0.42   0.16
+   9h1  0.53   0.81   1.00   0.89   0.66   0.65   0.61   0.33   0.43   0.01   0.38   0.10
+   9h2  0.50   0.79   0.89   1.00   0.59   0.58   0.56   0.37   0.40   0.00   0.36   0.03
+  10h0  0.45   0.62   0.66   0.59   1.00   0.92   0.83   0.30   0.69   0.02   0.54   0.30
+  10h2  0.47   0.64   0.65   0.58   0.92   1.00   0.86   0.40   0.70   0.08   0.55   0.33
+  10h3  0.40   0.52   0.61   0.56   0.83   0.86   1.00   0.46   0.64   0.15   0.43   0.31
+  11h1  0.28   0.26   0.33   0.37   0.30   0.40   0.46   1.00   0.40   0.33   0.26   0.14
+  11h2  0.32   0.48   0.43   0.40   0.69   0.70   0.64   0.40   1.00   0.06   0.67   0.38
+  12h2  0.06   0.07   0.01   0.00   0.02   0.08   0.15   0.33   0.06   1.00   0.14   0.25
+  12h1  0.27   0.42   0.38   0.36   0.54   0.55   0.43   0.26   0.67   0.14   1.00   0.26
+  17h2  0.14   0.16   0.10   0.03   0.30   0.33   0.31   0.14   0.38   0.25   0.26   1.00
+
+Top MLP units by relative change (|d gate|+|d up|)/|.| and |d down|/|.|
+L 0 mean rel gate 0.0062 up 0.0061 down 0.0108; max down-rel unit 92 (0.023); max abs down unit 415 (0.008, median 0.0057)
+L 1 mean rel gate 0.0063 up 0.0062 down 0.0170; max down-rel unit 1987 (0.031); max abs down unit 378 (0.008, median 0.0058)
+L 2 mean rel gate 0.0065 up 0.0063 down 0.0144; max down-rel unit 617 (0.023); max abs down unit 1028 (0.008, median 0.0058)
+L 3 mean rel gate 0.0073 up 0.0063 down 0.0169; max down-rel unit 1762 (0.031); max abs down unit 404 (0.008, median 0.0058)
+L 4 mean rel gate 0.0074 up 0.0065 down 0.0197; max down-rel unit 341 (0.059); max abs down unit 955 (0.008, median 0.0058)
+L 5 mean rel gate 0.0080 up 0.0067 down 0.0111; max down-rel unit 1298 (0.027); max abs down unit 142 (0.008, median 0.0058)
+L 6 mean rel gate 0.0079 up 0.0067 down 0.0160; max down-rel unit 1759 (0.040); max abs down unit 1146 (0.008, median 0.0057)
+L 7 mean rel gate 0.0078 up 0.0067 down 0.0143; max down-rel unit 256 (0.042); max abs down unit 256 (0.008, median 0.0058)
+L 8 mean rel gate 0.0081 up 0.0066 down 0.0182; max down-rel unit 329 (0.044); max abs down unit 500 (0.009, median 0.0056)
+L 9 mean rel gate 0.0080 up 0.0066 down 0.0130; max down-rel unit 1572 (0.032); max abs down unit 127 (0.008, median 0.0058)
+L10 mean rel gate 0.0079 up 0.0066 down 0.0178; max down-rel unit 1104 (0.043); max abs down unit 1896 (0.009, median 0.0058)
+L11 mean rel gate 0.0077 up 0.0066 down 0.0128; max down-rel unit 1705 (0.028); max abs down unit 1446 (0.008, median 0.0055)
+L12 mean rel gate 0.0079 up 0.0068 down 0.0125; max down-rel unit 1749 (0.025); max abs down unit 1758 (0.008, median 0.0060)
+L13 mean rel gate 0.0075 up 0.0068 down 0.0172; max down-rel unit 159 (0.038); max abs down unit 1244 (0.008, median 0.0062)
+L14 mean rel gate 0.0077 up 0.0069 down 0.0188; max down-rel unit 1306 (0.042); max abs down unit 1336 (0.008, median 0.0063)
+L15 mean rel gate 0.0077 up 0.0069 down 0.0159; max down-rel unit 1267 (0.035); max abs down unit 535 (0.009, median 0.0063)
+L16 mean rel gate 0.0074 up 0.0067 down 0.0140; max down-rel unit 1376 (0.036); max abs down unit 762 (0.010, median 0.0059)
+L17 mean rel gate 0.0075 up 0.0065 down 0.0142; max down-rel unit 1454 (0.046); max abs down unit 1326 (0.010, median 0.0054)
+top 25 units by absolute |d down column|:
+  L17 u1326 rel gate 0.007 up 0.006 down 0.023 abs down 0.010
+  L16 u 762 rel gate 0.010 up 0.007 down 0.022 abs down 0.010
+  L17 u1373 rel gate 0.008 up 0.007 down 0.023 abs down 0.010
+  L16 u  22 rel gate 0.008 up 0.006 down 0.022 abs down 0.009
+  L17 u 619 rel gate 0.008 up 0.006 down 0.021 abs down 0.009
+  L17 u1315 rel gate 0.008 up 0.006 down 0.020 abs down 0.009
+  L17 u 457 rel gate 0.007 up 0.006 down 0.021 abs down 0.009
+  L16 u   4 rel gate 0.008 up 0.007 down 0.022 abs down 0.009
+  L15 u 535 rel gate 0.009 up 0.007 down 0.021 abs down 0.009
+  L15 u1941 rel gate 0.007 up 0.006 down 0.021 abs down 0.009
+  L16 u1437 rel gate 0.008 up 0.005 down 0.022 abs down 0.009
+  L17 u1528 rel gate 0.008 up 0.006 down 0.021 abs down 0.009
+  L 8 u 500 rel gate 0.016 up 0.007 down 0.023 abs down 0.009
+  L10 u1896 rel gate 0.016 up 0.007 down 0.025 abs down 0.009
+  L16 u  79 rel gate 0.009 up 0.007 down 0.020 abs down 0.009
+  L16 u  45 rel gate 0.009 up 0.007 down 0.019 abs down 0.009
+  L17 u1426 rel gate 0.008 up 0.006 down 0.020 abs down 0.009
+  L16 u 677 rel gate 0.007 up 0.006 down 0.020 abs down 0.009
+  L17 u 880 rel gate 0.011 up 0.006 down 0.019 abs down 0.009
+  L17 u1323 rel gate 0.008 up 0.006 down 0.021 abs down 0.009
+  L15 u 415 rel gate 0.009 up 0.008 down 0.020 abs down 0.009
+  L15 u1356 rel gate 0.007 up 0.008 down 0.023 abs down 0.009
+  L16 u 211 rel gate 0.010 up 0.006 down 0.018 abs down 0.009
+  L16 u  58 rel gate 0.008 up 0.006 down 0.019 abs down 0.009
+  L16 u 578 rel gate 0.009 up 0.006 down 0.018 abs down 0.009
+
+```

@@ -1,0 +1,11 @@
+OUTPUT of Python run 284 of at most 300:
+```
+edited: ['L15.self_attn.o_proj.weight', 'L22.mlp.down_proj.weight', 'L23.self_attn.o_proj.weight'] C verified True
+X8(19.5): n512 acc 41.6 diff -19.1 SE 2.2 | ok>w 49 ok>c 70 w>ok 12 c>ok 9 w>c 29 c>w 45
+C answers 1280 cut 300 by src {'math': 213, 'gsm8k': 87}
+gsm8k: cut 87 periodic 78 | unit chars med 120 (p10 33, p90 1032) lines/unit med 2 | onset frac med 0.36 (p10 0.19) | digits 0.59 Wait-in-unit 0.00 boxed-in-unit 0.00 | ref(len>=2, n=64) in unit 0.05 before onset 0.64
+   unit first words: [('*', 55), ('"', 7), ('Maybe', 3), ('Jacob', 2), ('$', 1), ('Praxises', 1), ('.', 1), ('?', 1), ('So', 1), ('Geraldr', 1), ('2', 1), ('Ingredients', 1)]
+math: cut 213 periodic 115 | unit chars med 129 (p10 31, p90 746) lines/unit med 2 | onset frac med 0.66 (p10 0.23) | digits 0.76 Wait-in-unit 0.01 boxed-in-unit 0.02 | ref(len>=2, n=99) in unit 0.02 before onset 0.35
+   unit first words: [('*', 49), ('$', 27), ('Maybe', 7), ('-', 5), ('Okay', 5), ('Primes', 4), ('So', 3), ('This', 2), ('The', 2), ('Vertices', 2), ('\\', 1), ('Assume', 1)]
+
+```

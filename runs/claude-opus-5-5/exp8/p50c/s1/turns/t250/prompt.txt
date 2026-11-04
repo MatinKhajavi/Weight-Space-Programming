@@ -1,0 +1,23 @@
+OUTPUT of Python run 225 of at most 300:
+```
+gen_10_edited.jsonl items 256 n/item {1: 256} styles {'a_thinking': 216, 'my_thought': 39, 'other': 1}
+gen_10_original.jsonl items 256 n/item {1: 256} styles {'my_thought': 67, 'a_thinking': 154, 'other': 35}
+gen_12.jsonl items 1 n/item {1: 1} styles {'other': 1}
+gen_13.jsonl items 256 n/item {1: 256} styles {'a_thinking': 196, 'my_thought': 54, 'other': 6}
+gen_14.jsonl items 256 n/item {1: 256} styles {'a_thinking': 196, 'my_thought': 54, 'other': 6}
+gen_15.jsonl items 256 n/item {1: 256} styles {'my_thought': 67, 'a_thinking': 154, 'other': 35}
+gen_16_edited.jsonl items 256 n/item {1: 256} styles {'a_thinking': 204, 'my_thought': 47, 'other': 5}
+gen_16_original.jsonl items 256 n/item {1: 256} styles {'a_thinking': 163, 'my_thought': 64, 'other': 29}
+gen_21.jsonl items 256 n/item {1: 256} styles {'a_thinking': 197, 'my_thought': 53, 'other': 6}
+gen_22.jsonl items 512 n/item {1: 512} styles {'my_thought': 101, 'a_thinking': 406, 'other': 5}
+gen_3.jsonl items 512 n/item {1: 512} styles {'other': 82, 'my_thought': 128, 'a_thinking': 302}
+gen_6_edited.jsonl items 256 n/item {1: 256} styles {'my_thought': 55, 'a_thinking': 195, 'other': 6}
+gen_6_original.jsonl items 256 n/item {1: 256} styles {'my_thought': 67, 'a_thinking': 154, 'other': 35}
+gen_7_edited.jsonl items 256 n/item {1: 256} styles {'my_thought': 26, 'a_thinking': 227, 'other': 3}
+gen_7_original.jsonl items 256 n/item {1: 256} styles {'my_thought': 67, 'a_thinking': 154, 'other': 35}
+gen_8_edited.jsonl items 256 n/item {1: 256} styles {'my_thought': 67, 'a_thinking': 166, 'other': 23}
+gen_8_original.jsonl items 256 n/item {1: 256} styles {'my_thought': 67, 'a_thinking': 154, 'other': 35}
+gen_9_edited.jsonl items 256 n/item {1: 256} styles {'other': 12, 'my_thought': 54, 'a_thinking': 190}
+gen_9_original.jsonl items 256 n/item {1: 256} styles {'my_thought': 67, 'a_thinking': 154, 'other': 35}
+
+```

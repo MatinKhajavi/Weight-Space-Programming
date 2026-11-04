@@ -1,0 +1,8 @@
+OUTPUT of run 53 of at most 60:
+```
+answer via L12 heads -> L13: up -3.5 gate +3.5 | L14: up +6.0 gate -2.0 | L15: up +4.1 gate -4.3 | L16: up -1.2 gate +0.3 | L17: up +0.9 gate +2.7
+answer via L15 heads -> L16: up +2.9 gate +4.6 | L17: up +4.4 gate +0.9
+control via L12 heads -> L13: up +1.0 gate -1.5 | L14: up +0.1 gate +2.7 | L15: up -0.2 gate -0.9 | L16: up +1.8 gate -3.0 | L17: up -1.1 gate +2.0
+control via L15 heads -> L16: up +4.0 gate -0.4 | L17: up +0.9 gate +4.4
+
+```

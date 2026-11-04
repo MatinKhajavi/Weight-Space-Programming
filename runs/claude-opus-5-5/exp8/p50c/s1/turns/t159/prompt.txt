@@ -1,0 +1,30 @@
+OUTPUT of Python run 138 of at most 300:
+```
+         ' Wait' id  13428  col.u =   0.30  z =  14.3
+          'Wait' id  13784  col.u =   0.31  z =  14.9
+         ' wait' id   3655  col.u =   0.39  z =  18.9
+          ' Hmm' id  85152  col.u =   0.09  z =   4.6
+        ' Maybe' id  10380  col.u =   0.01  z =   0.4
+     ' Actually' id  32645  col.u =   0.06  z =   3.1
+' Alternatively' id  37201  col.u =   0.01  z =   0.6
+          ' But' id   1921  col.u =   0.04  z =   1.8
+      ' However' id   4213  col.u =   0.03  z =   1.5
+         ' Hold' id  22041  col.u =   0.02  z =   0.8
+           ' So' id   1987  col.u =  -0.01  z =  -0.3
+            'So' id   4272  col.u =  -0.00  z =  -0.1
+    ' Therefore' id  14833  col.u =  -0.01  z =  -0.3
+         ' Thus' id  13891  col.u =  -0.01  z =  -0.6
+        ' Final' id  12650  col.u =   0.02  z =   0.9
+         'Final' id  18770  col.u =   0.01  z =   0.7
+          ' The' id    561  col.u =  -0.02  z =  -0.8
+          ' She' id   2838  col.u =  -0.02  z =  -0.8
+          ' Let' id   6558  col.u =   0.02  z =   1.1
+           ' If' id   1368  col.u =  -0.01  z =  -0.3
+         ' This' id   1061  col.u =  -0.01  z =  -0.6
+         ' Okay' id  34267  col.u =   0.01  z =   0.6
+          ' Now' id   4543  col.u =   0.00  z =   0.2
+         ' Next' id   9019  col.u =   0.02  z =   0.8
+      '</think>' id 248069  col.u =   0.04  z =   2.2
+        '\\n\\n' id    271  col.u =  -0.01  z =  -0.3
+
+```

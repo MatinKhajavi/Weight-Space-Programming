@@ -1,0 +1,9 @@
+OUTPUT of Python run 219 of at most 300:
+```
+n matched 512 of 512
+C acc 60.7 cut 24.8 medtok 11609 {'gsm8k': np.float64(69.9), 'math': np.float64(51.6)}
+g22 acc 60.7 cut 19.5 medtok 11319 {'gsm8k': np.float64(69.1), 'math': np.float64(52.3)}
+diff 0.0 SE 2.0  W->R 53 R->W 53
+{'math', 'gsm8k'}
+
+```

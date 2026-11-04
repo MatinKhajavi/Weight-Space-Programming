@@ -1,0 +1,70 @@
+OUTPUT of Python run 14 of at most 120:
+```
+after ply 9 next net move [(33, [[66, 0.0964], [65, 0.0917], [67, 0.0769]])]
+.........
+...X...X.
+..O......
+.OO.X....
+..O......
+...O...X.
+.........
+......X..
+.........
+
+after ply 19 next net move [(79, [[13, 0.0571], [14, 0.0511], [40, 0.0435]])]
+.........
+.O.X...X.
+.OO......
+.OO.X.X..
+.OO......
+.OOO...X.
+..X.X....
+..X...X..
+...X.....
+
+after ply 29 next net move [(17, [[62, 0.7594], [17, 0.2405], [51, 0.0]])]
+......XXO
+.O.X...X.
+.OO......
+.OOOX.X.X
+.OOO....X
+.OOO...XO
+..X.X....
+.OX...X..
+...X...X.
+
+after ply 39 next net move [(59, [[59, 0.9998], [60, 0.0001], [50, 0.0]])]
+......XX.
+.O.X...XX
+.OO......
+.OOOX.X.X
+.OOO....X
+.OOO...X.
+..XOX...X
+.OXOXOXO.
+..XX.X.X.
+
+after ply 49 next net move [(14, [[14, 0.9999], [13, 0.0], [23, 0.0]])]
+......XX.
+.O.X..OXX
+.OO...X..
+.OOOXXX.X
+.OOO....X
+.OOOOOOX.
+..XOXXOXX
+.OXOX.X.X
+..XX.X.X.
+
+after ply 59 next net move [(75, [[43, 0.5285], [75, 0.4715], [34, 0.0]])]
+......XX.
+.O.X.X.XX
+.OO...X..
+.OOOXXX.X
+.OOOXOO.X
+.OOOOOOX.
+XO.OXXOXX
+OO.OX.X.X
+....OX.X.
+
+
+```

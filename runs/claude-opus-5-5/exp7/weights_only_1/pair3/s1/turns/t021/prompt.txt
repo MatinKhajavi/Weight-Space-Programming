@@ -1,0 +1,25 @@
+OUTPUT of run 20 of at most 60:
+```
+r_res mass on massive dims: nan; top dims [  0 422 423 424 425 426 427 428 421 429]
+L 4 q_pr:nan,nan,nan k_pr:nan,nan,nan v_pr:nan,nan,nan gate:nan,nan,nan up_p:nan,nan,nan
+L 5 q_pr:nan,nan,nan k_pr:nan,nan,nan v_pr:nan,nan,nan gate:nan,nan,nan up_p:nan,nan,nan
+L 6 q_pr:nan,nan,nan k_pr:nan,nan,nan v_pr:nan,nan,nan gate:nan,nan,nan up_p:nan,nan,nan
+L 7 q_pr:nan,nan,nan k_pr:nan,nan,nan v_pr:nan,nan,nan gate:nan,nan,nan up_p:nan,nan,nan
+L 8 q_pr:nan,nan,nan k_pr:nan,nan,nan v_pr:nan,nan,nan gate:nan,nan,nan up_p:nan,nan,nan
+L 9 q_pr:nan,nan,nan k_pr:nan,nan,nan v_pr:nan,nan,nan gate:nan,nan,nan up_p:nan,nan,nan
+L10 q_pr:nan,nan,nan k_pr:nan,nan,nan v_pr:nan,nan,nan gate:nan,nan,nan up_p:nan,nan,nan
+L11 q_pr:nan,nan,nan k_pr:nan,nan,nan v_pr:nan,nan,nan gate:nan,nan,nan up_p:nan,nan,nan
+L12 q_pr:nan,nan,nan k_pr:nan,nan,nan v_pr:nan,nan,nan gate:nan,nan,nan up_p:nan,nan,nan
+L13 q_pr:nan,nan,nan k_pr:nan,nan,nan v_pr:nan,nan,nan gate:nan,nan,nan up_p:nan,nan,nan
+L14 q_pr:nan,nan,nan k_pr:nan,nan,nan v_pr:nan,nan,nan gate:nan,nan,nan up_p:nan,nan,nan
+L15 q_pr:nan,nan,nan k_pr:nan,nan,nan v_pr:nan,nan,nan gate:nan,nan,nan up_p:nan,nan,nan
+L16 q_pr:nan,nan,nan k_pr:nan,nan,nan v_pr:nan,nan,nan gate:nan,nan,nan up_p:nan,nan,nan
+L17 q_pr:nan,nan,nan k_pr:nan,nan,nan v_pr:nan,nan,nan gate:nan,nan,nan up_p:nan,nan,nan
+
+[stderr]
+your_code:9: RuntimeWarning: divide by zero encountered in divide
+your_code:10: RuntimeWarning: invalid value encountered in divide
+your_code:22: RuntimeWarning: divide by zero encountered in divide
+your_code:22: RuntimeWarning: invalid value encountered in divide
+
+```

@@ -1,0 +1,10 @@
+OUTPUT of Python run 99 of at most 300:
+```
+v4 GSM finished-wrong: 27 | v3 status on them: Counter({'wrong': 11, 'cut': 10, 'right': 6})
+pred vs ref: 4|1; 30|142; 20|288; 500|8000; 30|120; 11|13; 2|3; 5|10; 2700|1350; 105|210; 6|8; 7|23; 150|190; 16|448; 62|95; 330,000|370000; 7|35; 15|30; 11|9; 883.5|817; 1400|500; 32|36; 520|6240; 2|42
+median tokens of GSM wrong finishes 10895.0 | GSM right finishes 4873.5
+-- gsm8k_train_5213 ref 1 pred 4 | Q: Jon decides to take up baseball.  He can throw a fastball at 80 miles per hour.   He goes through intense training 4 times for 4 weeks each time and at the end  | end: rt*, then $V_{final} = 1.2 \times 80 = 96$. |     If he trains for 4 weeks, and gains equal speed. |     Then he gains 16 mph total. |     Weekly gain = 4 mph. |      |     This seems to be the intended logic. |      |     Answer: 4. | 
+-- gsm8k_train_6263 ref 142 pred 30 | Q: Freddie and his team are collecting blankets for three days to be donated to the Children Shelter Organization. There are 15 people on the team. On the first da | end: answer is 22. |             *   If the answer is 22, then the first two days must be zero. |             *   But they gave 2 blankets on Day 1. |             *   So the answer is not 22. |  |     *   Conclusion: The answer is 30. | 
+-- gsm8k_train_6267 ref 288 pred 20 | Q: Mia is a student. In her final year, she spent 1/5 of her day watching TV and 1/4 of the time left on studying. How many minutes did she spend studying each day | end: ecision: Provide the derivation and assume 100 minutes for the final number. |      |     (Self-correction: If I don't assume 100 minutes, I can't box a number. I must assume it.) |      |     Let's write out the logic clearly. | 
+
+```

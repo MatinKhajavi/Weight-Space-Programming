@@ -1,0 +1,7 @@
+OUTPUT of Python run 48 of at most 300:
+```
+n texts 197 loopers 162 finishers 35 max len 2853 total tok 431537
+est. hidden GB per layer (fp16, padded): 1.15
+check prompt prefix matches pass-2 format: True '600,000$.\n    Wait, $600,000 \\text{ m} = 600 \\text{ km}$.\n    Wait, earlier I said $72,000 / 0.12 = 600,000$.\n    $72,00'
+
+```

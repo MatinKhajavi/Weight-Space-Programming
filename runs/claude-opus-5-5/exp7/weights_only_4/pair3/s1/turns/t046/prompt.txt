@@ -1,0 +1,13 @@
+OUTPUT of run 45 of at most 60:
+```
+L9: amp capitals -0.31  wrong-cities -0.25  random-names -0.23 (x1e-3) | paired C-W t -0.45, frac C>W 0.52 | C vs rnd z -0.70  W vs rnd z -0.18
+L10: amp capitals +0.45  wrong-cities +0.10  random-names +0.13 (x1e-3) | paired C-W t +1.46, frac C>W 0.56 | C vs rnd z +1.58  W vs rnd z -0.13
+L11: amp capitals +0.18  wrong-cities +0.06  random-names -0.38 (x1e-3) | paired C-W t +0.53, frac C>W 0.54 | C vs rnd z +3.50  W vs rnd z +2.75
+L12: amp capitals +0.12  wrong-cities +0.27  random-names +0.17 (x1e-3) | paired C-W t -0.94, frac C>W 0.48 | C vs rnd z -0.37  W vs rnd z +0.81
+L13: amp capitals +1.15  wrong-cities +1.07  random-names +0.32 (x1e-3) | paired C-W t +0.26, frac C>W 0.52 | C vs rnd z +3.52  W vs rnd z +3.20
+L14: amp capitals +0.44  wrong-cities +0.36  random-names -0.09 (x1e-3) | paired C-W t +0.21, frac C>W 0.52 | C vs rnd z +1.96  W vs rnd z +1.68
+L15: amp capitals +1.25  wrong-cities +1.44  random-names +0.08 (x1e-3) | paired C-W t -0.50, frac C>W 0.42 | C vs rnd z +4.80  W vs rnd z +5.56
+L16: amp capitals +0.39  wrong-cities +0.46  random-names +0.82 (x1e-3) | paired C-W t -0.24, frac C>W 0.48 | C vs rnd z -1.83  W vs rnd z -1.54
+L17: amp capitals +1.59  wrong-cities +1.19  random-names +0.38 (x1e-3) | paired C-W t +1.41, frac C>W 0.63 | C vs rnd z +5.76  W vs rnd z +3.85
+
+```

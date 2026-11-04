@@ -1,0 +1,20 @@
+OUTPUT of Python run 38 of at most 120:
+```
+('A', 'adjAtari', 'ok', 'est') 39
+('A', 'adjAtari', 'ok', 'no') 352
+('A', 'adjAtari', 'trueSA', 'est') 263
+('A', 'adjAtari', 'trueSA', 'no') 55
+('A', 'other', 'ok', 'est') 462
+('A', 'other', 'ok', 'no') 80237
+('A', 'other', 'trueSA', 'est') 2517
+('A', 'other', 'trueSA', 'no') 376
+('A+loc', 'adjAtari', 'ok', 'est') 18
+('A+loc', 'adjAtari', 'ok', 'no') 373
+('A+loc', 'adjAtari', 'trueSA', 'est') 254
+('A+loc', 'adjAtari', 'trueSA', 'no') 64
+('A+loc', 'other', 'ok', 'est') 83
+('A+loc', 'other', 'ok', 'no') 80616
+('A+loc', 'other', 'trueSA', 'est') 2424
+('A+loc', 'other', 'trueSA', 'no') 469
+
+```

@@ -1,0 +1,43 @@
+OUTPUT of Python run 37 of at most 120:
+```
+23 net black next net move [[18, 1.0], [12, 0.0], [16, 0.0]]
+    .X.......
+    XOX...X..
+    .OOXX.X..
+    OOOOXXX..
+    OOOOXXOX.
+    XXXOOOOOX
+    XOXOXXXX.
+    .OXOX.X.X
+    OOOOOX.X.
+  nbr (1, 0) col 1 size 1 libs [(0, 0), (2, 0)]
+  nbr (3, 0) col -1 size 26 libs [(2, 0), (7, 0)]
+  nbr (2, 1) col -1 size 26 libs [(2, 0), (7, 0)]
+65 net white next net move [[6, 1.0], [63, 0.0], [72, 0.0]]
+    OOOOXX.O.
+    O.OXXXXXO
+    OOOXOOOO.
+    .OXXOOO.O
+    O.OXOOOO.
+    .OOXOO.OO
+    OXXXO.O.O
+    .XXXXO.O.
+    .XXXXXO.O
+  nbr (1, 6) col 1 size 24 libs [(0, 6), (7, 0), (8, 0)]
+  nbr (0, 5) col 1 size 24 libs [(0, 6), (7, 0), (8, 0)]
+  nbr (0, 7) col -1 size 1 libs [(0, 6), (0, 8)]
+36 net black next net move [[18, 0.9994], [2, 0.0005], [17, 0.0001]]
+    .X.OX.XOX
+    XOXOXXOO.
+    .OOOX.XXX
+    OOOOXXOX.
+    XXOXXXOXX
+    .XOOOOOOX
+    X.XXXXOOO
+    XXXXX.XO.
+    X.X.XXX.X
+  nbr (1, 0) col 1 size 1 libs [(0, 0), (2, 0)]
+  nbr (3, 0) col -1 size 23 libs [(0, 2), (2, 0), (7, 8), (8, 7)]
+  nbr (2, 1) col -1 size 23 libs [(0, 2), (2, 0), (7, 8), (8, 7)]
+
+```

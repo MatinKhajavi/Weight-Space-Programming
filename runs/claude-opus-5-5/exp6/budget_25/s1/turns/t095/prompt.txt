@@ -1,0 +1,9 @@
+OUTPUT of Python run 74 of at most 120:
+```
+12 black 117
+27 black 113
+54 black 89
+105 white 106
+126 white 106
+
+```

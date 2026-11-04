@@ -1,0 +1,8 @@
+OUTPUT of Python run 152 of at most 300:
+```
+final-layer residual RMS median 0.28 q10-90 [0.24 0.37]
+22.573 act (C windows): median 0.02 q5 -1.41 min -5.97 max 0.28
+logit per unit act (direct path, /median rms): {' Maybe': 0.026, 'Maybe': 0.04, ' Wait': 0.813, 'Wait': 0.845, ' But': 0.096, ' Hmm': 0.261, ' Actually': 0.174, ' So': -0.017, ' Ready': 0.229, ' Final': 0.048, '</think>': 0.125}
+extra logit from doubling at act=-4: {' Wait': -3.25, 'Wait': -3.38, ' Hmm': -1.05, ' Actually': -0.7, ' Ready': -0.91, '</think>': -0.5}
+
+```

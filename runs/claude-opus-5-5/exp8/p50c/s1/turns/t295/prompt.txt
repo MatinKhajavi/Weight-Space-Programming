@@ -1,0 +1,11 @@
+OUTPUT of Python run 263 of at most 300:
+```
+n 512 C acc 0.607 X6 acc 0.588 diff -0.020 SE 0.019
+{'ok->ok': 261, 'ok->cut': 27, 'ok->wrong': 23, 'cut->ok': 29, 'cut->cut': 74, 'cut->wrong': 23, 'wrong->ok': 11, 'wrong->cut': 23, 'wrong->wrong': 41}
+gsm8k diff +0.000 SE 0.026
+math diff -0.039 SE 0.026
+C   {'LI_Maybe': 2.38, 'maybe': 0.55, 'Perhaps': 0.05, 'LI_If': 3.29, 'LI_Or': 0.19, 'Altern': 0.05, 'Could': 0.19, 'Is it': 0.44, 'Possib': 0.62}
+X6  {'LI_Maybe': 0.05, 'maybe': 0.04, 'Perhaps': 0.01, 'LI_If': 3.18, 'LI_Or': 0.16, 'Altern': 0.04, 'Could': 0.21, 'Is it': 0.58, 'Possib': 0.76}
+reverted to C: True True
+
+```

@@ -1,0 +1,12 @@
+OUTPUT of Python run 290 of at most 300:
+```
+final norm w: mean 3.309 min -0.777 max 5.312
+|col| 0.262 |colW| 0.134 frac 0.510 cos 0.510
+id 13784 d.col 0.240 d.colW 0.240
+id 13428 d.col 0.231 d.colW 0.231
+vocab-wide logit-effect std: col 0.016 colW 0.009; corr 0.487
+col most suppressed (per +act): [(61779, 'ogh', -0.08), (19931, 'enez', -0.07), (245609, 'bricas', -0.07), (106049, '?', -0.07), (35120, 'ENE', -0.07), (128235, '?', -0.07)]
+colW most suppressed (per +act): [(5244, ' stre', -0.03), (96567, '?', -0.03), (5041, ' mut', -0.02), (95793, '?', -0.02), (47477, 'zan', -0.02), (220, ' ', -0.02)]
+edited: ['L15.self_attn.o_proj.weight', 'L22.mlp.down_proj.weight', 'L23.self_attn.o_proj.weight'] col573 now = col+colW: 0.0
+
+```

@@ -1,0 +1,44 @@
+OUTPUT of run 38 of at most 60:
+```
+template raw
+  L 0 down z=-0.8 up z=+0.4
+  L 1 down z=+0.5 up z=+0.7
+  L 2 down z=-0.3 up z=-0.0
+  L 3 down z=+1.4 up z=+1.9
+  L 4 down z=-0.2 up z=-0.9
+  L 5 down z=+0.7 up z=+1.9
+  L 6 down z=-3.2 up z=-0.8
+  L 7 down z=+1.0 up z=-0.1
+  L 8 down z=+2.5 up z=+0.1
+  L 9 down z=-1.4 up z=-0.7
+  L10 down z=-0.9 up z=+1.7
+  L11 down z=+1.1 up z=-1.9
+  L12 down z=-0.5 up z=-1.3
+  L13 down z=+1.2 up z=-0.2
+  L14 down z=-0.9 up z=-0.9
+  L15 down z=+1.0 up z=+1.4
+  L16 down z=-1.1 up z=+2.5
+  L17 down z=+1.8 up z=+0.2
+  sums/sqrt18 0.4399023365358471 0.9123965500461785
+template Dpre
+  L 0 down z=-1.2 up z=+0.4
+  L 1 down z=+0.3 up z=+2.0
+  L 2 down z=+0.0 up z=+1.4
+  L 3 down z=+0.2 up z=+3.1
+  L 4 down z=-0.6 up z=-0.5
+  L 5 down z=-1.3 up z=+2.2
+  L 6 down z=-3.4 up z=-0.9
+  L 7 down z=+2.9 up z=-0.5
+  L 8 down z=+0.9 up z=-0.0
+  L 9 down z=-1.6 up z=+0.3
+  L10 down z=-2.1 up z=+0.7
+  L11 down z=-0.2 up z=-0.7
+  L12 down z=-1.2 up z=-0.3
+  L13 down z=-0.6 up z=-0.1
+  L14 down z=-0.1 up z=-0.6
+  L15 down z=+1.5 up z=+0.3
+  L16 down z=-0.1 up z=+0.7
+  L17 down z=+0.7 up z=-0.3
+  sums/sqrt18 -1.3292760862892528 1.6988910226962501
+
+```

@@ -1,0 +1,94 @@
+OUTPUT of run 14 of at most 60:
+```
+L0
+  h0 dig:base    +3.6 d +0.36 z +1.7 | nw:base   +12.1 d +0.64 z +2.4
+  h1 dig:base   -44.9 d +0.05 z +0.6 | nw:base   -43.1 d +0.04 z +0.3
+  h2 dig:base   -20.4 d +0.06 z +0.2 | nw:base   -11.6 d +0.32 z +1.1
+  h3 dig:base    -9.5 d +0.01 z +0.0 | nw:base   -12.9 d +0.09 z +0.4
+L1
+  h0 dig:base  +294.6 d +1.24 z +0.7 | nw:base  +127.5 d -3.08 z -1.2
+  h1 dig:base  -140.4 d -2.95 z -0.8 | nw:base  +149.8 d -4.38 z -1.2
+  h2 dig:base   +95.2 d +0.94 z +0.4 | nw:base   +74.1 d -0.55 z -0.2
+  h3 dig:base   -79.2 d -3.14 z -1.1 | nw:base  -115.1 d +1.36 z +0.8
+L2
+  h0 dig:base  +151.5 d -1.45 z -1.4 | nw:base  +233.7 d +5.78 z +4.8
+  h1 dig:base  -108.5 d -2.39 z -1.8 | nw:base  -217.2 d +0.80 z +0.9
+  h2 dig:base   -38.8 d -2.31 z -2.3 | nw:base  -113.5 d +0.35 z +0.3
+  h3 dig:base    +8.5 d +0.74 z +1.3 | nw:base   -61.5 d +0.74 z +0.9
+L3
+  h0 dig:base  -235.4 d -2.81 z -1.1 | nw:base  -714.7 d +4.62 z +2.5
+  h1 dig:base  +163.5 d -4.03 z -2.8 | nw:base  +184.8 d +0.61 z +0.5
+  h2 dig:base  +470.0 d -3.21 z -3.2 | nw:base  +612.9 d -5.04 z -3.4
+  h3 dig:base  -107.3 d -1.92 z -1.1 | nw:base   +23.7 d +6.25 z +3.2
+L4
+  h0 dig:base  +136.9 d -1.11 z -1.1 | nw:base  +107.3 d -0.49 z -0.3
+  h1 dig:base   +59.3 d -0.01 z -0.0 | nw:base  +174.6 d -0.04 z -0.0
+  h2 dig:base  -144.6 d +1.14 z +0.9 | nw:base   +32.2 d +0.79 z +0.3
+  h3 dig:base  -142.6 d +1.34 z +1.0 | nw:base  -149.4 d -0.59 z -0.3
+L5
+  h0 dig:base   +58.0 d +3.00 z +2.7 | nw:base  +385.8 d +2.69 z +1.3
+  h1 dig:base  +348.7 d +1.12 z +0.5 | nw:base  +256.8 d +3.80 z +2.0
+  h2 dig:base  +178.8 d +5.15 z +2.7 | nw:base  +434.6 d +4.67 z +2.6
+  h3 dig:base  -109.6 d +2.34 z +1.9 | nw:base  -355.4 d +1.16 z +0.8
+L6
+  h0 dig:base  +493.7 d -0.59 z -0.6 | nw:base +1027.1 d +4.63 z +3.6
+  h1 dig:base  -734.1 d -1.32 z -1.2 | nw:base -1462.7 d +1.05 z +0.9
+  h2 dig:base  +672.7 d -1.27 z -1.3 | nw:base +1084.3 d +2.29 z +2.2
+  h3 dig:base  +394.3 d +0.07 z +0.1 | nw:base  +742.3 d +3.34 z +2.4
+L7
+  h0 dig:base +2101.0 d -0.19 z -0.1 | nw:base +3190.3 d -0.68 z -0.4
+  h1 dig:base -4948.0 d -5.51 z -3.0 | nw:base -7230.9 d -2.78 z -1.0
+  h2 dig:base +1539.8 d -1.06 z -1.2 | nw:base +2228.9 d +2.01 z +1.3
+  h3 dig:base  +924.1 d +0.25 z +0.3 | nw:base +1306.1 d +1.00 z +1.0
+L8
+  h0 dig:base -2309.6 d -1.87 z -1.2 | nw:base -3446.5 d -2.88 z -0.9
+  h1 dig:base  +760.1 d -2.68 z -1.8 | nw:base +1114.3 d -4.17 z -1.5
+  h2 dig:base  +912.7 d +0.24 z +0.2 | nw:base +1528.3 d -1.48 z -0.6
+  h3 dig:base  +206.9 d -4.23 z -2.5 | nw:base  +450.5 d -3.64 z -1.1
+L9
+  h0 dig:base  +634.2 d -1.85 z -1.2 | nw:base +1634.4 d +0.02 z +0.0
+  h1 dig:base -3366.3 d +3.29 z +1.4 | nw:base -6503.4 d +6.44 z +2.0
+  h2 dig:base +2223.6 d +1.00 z +0.6 | nw:base +3354.9 d +2.22 z +1.1
+  h3 dig:base +1146.4 d +2.78 z +1.6 | nw:base +2600.2 d +3.97 z +1.7
+L10
+  h0 dig:base +2508.7 d -3.30 z -0.5 | nw:base +6073.6 d +1.01 z +0.2
+  h1 dig:base -1107.1 d +4.44 z +1.1 | nw:base  -442.0 d -3.96 z -0.9
+  h2 dig:base +2551.9 d +0.76 z +0.2 | nw:base +4858.5 d -7.28 z -1.6
+  h3 dig:base -2142.5 d +9.72 z +1.8 | nw:base -3746.9 d+10.67 z +2.3
+L11
+  h0 dig:base -1347.2 d +3.46 z +0.5 | nw:base  -283.4 d +7.27 z +1.1
+  h1 dig:base +6287.4 d+19.19 z +2.3 | nw:base +6648.1 d +4.71 z +0.9
+  h2 dig:base +2650.9 d+43.84 z +2.7 | nw:base +4360.2 d+47.95 z +4.2
+  h3 dig:base -4080.0 d -0.25 z -0.0 | nw:base -6516.0 d +6.09 z +0.6
+L12
+  h0 dig:base   +64.5 d+12.05 z +0.4 | nw:base  +393.7 d+17.16 z +0.7
+  h1 dig:base +4974.5 d+61.32 z +1.7 | nw:base +7756.4 d+51.98 z +2.3
+  h2 dig:base +2069.0 d +7.15 z +0.3 | nw:base+10995.4 d+32.11 z +1.8
+  h3 dig:base +3084.2 d -0.99 z -0.0 | nw:base +6560.9 d+22.18 z +1.2
+L13
+  h0 dig:base  +866.5 d+56.18 z +2.3 | nw:base +5150.7 d+37.30 z +2.0
+  h1 dig:base +1909.3 d+31.05 z +1.3 | nw:base +6893.7 d +1.26 z +0.1
+  h2 dig:base +4525.1 d+27.55 z +1.3 | nw:base +6920.8 d+45.31 z +2.2
+  h3 dig:base   -50.1 d +2.89 z +0.1 | nw:base -2202.8 d+25.71 z +1.1
+L14
+  h0 dig:base -2470.7 d+22.24 z +0.9 | nw:base -3416.9 d-23.56 z -1.2
+  h1 dig:base+11139.8 d-22.28 z -1.1 | nw:base+14862.3 d-78.51 z -2.9
+  h2 dig:base  +810.0 d+98.27 z +2.2 | nw:base+12160.0 d+45.27 z +1.7
+  h3 dig:base  +647.5 d +9.72 z +0.4 | nw:base +5309.8 d+58.58 z +2.5
+L15
+  h0 dig:base+14253.3 d-12.95 z -0.4 | nw:base+26620.1 d+76.82 z +2.2
+  h1 dig:base-48065.8 d+252.70 z +2.3 | nw:base-50554.1 d+135.59 z +2.0
+  h2 dig:base+32046.5 d+30.88 z +0.5 | nw:base+27855.1 d+81.34 z +1.6
+  h3 dig:base+20777.1 d-11.39 z -0.2 | nw:base+27016.4 d+48.17 z +1.0
+L16
+  h0 dig:base -3154.0 d+32.08 z +0.5 | nw:base -1410.4 d-128.46 z -3.6
+  h1 dig:base +1086.9 d+66.51 z +1.1 | nw:base +9216.9 d+43.38 z +1.2
+  h2 dig:base +7244.3 d +3.32 z +0.1 | nw:base+27483.0 d+17.69 z +0.5
+  h3 dig:base +1097.0 d+56.05 z +1.1 | nw:base +3908.5 d-20.25 z -0.5
+L17
+  h0 dig:base  -754.6 d-120.39 z -1.9 | nw:base +4181.2 d-19.68 z -1.2
+  h1 dig:base+27032.1 d-76.74 z -0.9 | nw:base+19941.0 d-54.35 z -1.6
+  h2 dig:base  +626.9 d-114.45 z -2.7 | nw:base  -817.1 d-10.08 z -0.7
+  h3 dig:base -1700.0 d-186.80 z -1.7 | nw:base  -678.2 d-85.43 z -2.7
+
+```

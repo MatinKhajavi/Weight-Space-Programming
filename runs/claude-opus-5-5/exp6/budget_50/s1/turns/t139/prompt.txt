@@ -1,0 +1,31 @@
+OUTPUT of Python run 102 of at most 120:
+```
+strong 1 black repetition 32.5 max lead 20.5 final lead 20.5
+strong 4 black two passes -15.5 max lead -2.5 final lead -20.5
+strong 5 black two passes -24.5 max lead -3.5 final lead -31.5
+strong 6 black two passes -0.5 max lead -3.5 final lead -10.5
+strong 7 black two passes -22.5 max lead -2.5 final lead -19.5
+strong 8 black two passes -6.5 max lead -5.5 final lead -12.5
+strong 9 black two passes -0.5 max lead -3.5 final lead -8.5
+strong 11 black two passes -10.5 max lead -2.5 final lead -18.5
+strong 12 black two passes -2.5 max lead 3.5 final lead -7.5
+strong 16 black two passes -6.5 max lead -5.5 final lead -14.5
+strong 18 black two passes -15.5 max lead -0.5 final lead -21.5
+strong 22 black two passes -11.5 max lead -2.5 final lead -14.5
+strong 23 black two passes -10.5 max lead -3.5 final lead -16.5
+strong 26 black two passes -11.5 max lead -6.5 final lead -19.5
+strong 29 black two passes -25.5 max lead -4.5 final lead -29.5
+strong 30 black two passes -23.5 max lead -5.5 final lead -26.5
+strong 36 white two passes -11.5 max lead 9.5 final lead -14.5
+strong 37 white two passes -1.5 max lead 10.5 final lead -5.5
+strong 39 white two passes -9.5 max lead 8.5 final lead -15.5
+strong 42 white two passes -4.5 max lead 12.5 final lead -7.5
+strong 45 white two passes -4.5 max lead 9.5 final lead -9.5
+strong 46 white two passes -8.5 max lead 8.5 final lead -13.5
+strong 47 white two passes -1.5 max lead 9.5 final lead -5.5
+strong 53 white two passes -1.5 max lead 8.5 final lead -9.5
+strong 54 white two passes -0.5 max lead 9.5 final lead -5.5
+strong 61 white two passes -7.5 max lead 8.5 final lead -13.5
+strong 63 white two passes -3.5 max lead 11.5 final lead -6.5
+
+```

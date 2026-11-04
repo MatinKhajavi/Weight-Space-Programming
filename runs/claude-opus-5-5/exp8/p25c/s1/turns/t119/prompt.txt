@@ -1,0 +1,13 @@
+OUTPUT of Python run 102 of at most 300:
+```
+Wait  cos(bare,space)=0.84  frac in E5 span: bare 1.00 space 0.78
+So    cos(bare,space)=0.82  frac in E5 span: bare 1.00 space 0.77
+Let   cos(bare,space)=0.86  frac in E5 span: bare 1.00 space 0.82
+Okay  cos(bare,space)=0.76  frac in E5 span: bare 1.00 space 0.70
+If    cos(bare,space)=0.85  frac in E5 span: bare 1.00 space 0.81
+I     cos(bare,space)=0.73  frac in E5 span: bare 0.13 space 0.09
+This  cos(bare,space)=0.83  frac in E5 span: bare 0.12 space 0.08
+But   cos(bare,space)=0.85  frac in E5 span: bare 0.17 space 0.10
+The   cos(bare,space)=0.82  frac in E5 span: bare 0.20 space 0.14
+
+```

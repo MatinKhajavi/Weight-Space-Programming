@@ -1,0 +1,8 @@
+OUTPUT of Python run 13 of at most 300:
+```
+cut samples 474 with periodic suffix 458
+period pct [ 17.   23.   42.5  78.  134.9]
+onset pct [ 3084.4   4383.5   6185.    9015.75 12423.6 ]
+n tokens (retokenized) pct [32768. 32768. 32768.]
+
+```

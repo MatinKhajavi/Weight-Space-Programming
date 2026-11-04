@@ -1,0 +1,44 @@
+Forward pass 5 of 25 done (teacher_forced); results in /work/fwd_6/. Summary:
+```
+{
+ "ok": true,
+ "lengths": [
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1
+ ],
+ "files": {
+  "input_ids.npy": [
+   12,
+   1
+  ]
+ },
+ "edited_tensors": 0,
+ "mean_token_logprob": [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null
+ ],
+ "type": "teacher_forced",
+ "s": 8.4
+}
+```
+Forward passes left: 20.

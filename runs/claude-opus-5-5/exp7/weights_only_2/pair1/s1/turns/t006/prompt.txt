@@ -1,0 +1,80 @@
+OUTPUT of run 5 of at most 60:
+```
+model.layers.0.input_layernorm.weight 6.375 12.474902 61.75
+model.layers.10.post_attention_layernorm.weight -71.5 42.121902 482.0
+model.norm.weight -0.9140625 25.422668 300.0
+model.layers.5.self_attn.q_norm.weight -3.0625 1.001763 5.375
+L 0h0 basecopy=  12.22 dTr_z= -0.23 dTr_z(fin)= -0.94 gain=+0.0013 rel=0.0097
+L 0h1 basecopy= -28.58 dTr_z= -0.40 dTr_z(fin)= -2.38 gain=+0.0001 rel=0.0189
+L 0h2 basecopy=  -2.69 dTr_z=  0.04 dTr_z(fin)= -0.59 gain=+0.0003 rel=0.0077
+L 0h3 basecopy=   6.37 dTr_z=  0.59 dTr_z(fin)= -0.50 gain=-0.0011 rel=0.0103
+L 1h0 basecopy=   4.89 dTr_z= -0.15 dTr_z(fin)= -0.23 gain=-0.0011 rel=0.0121
+L 1h1 basecopy=   1.37 dTr_z= -0.41 dTr_z(fin)= -0.50 gain=-0.0012 rel=0.0122
+L 1h2 basecopy=   6.67 dTr_z= -0.11 dTr_z(fin)=  0.22 gain=-0.0001 rel=0.0082
+L 1h3 basecopy=  -0.44 dTr_z= -0.39 dTr_z(fin)= -0.20 gain=+0.0005 rel=0.0120
+L 2h0 basecopy=   7.39 dTr_z= -0.02 dTr_z(fin)= -0.22 gain=-0.0013 rel=0.0151
+L 2h1 basecopy= -11.29 dTr_z= -0.20 dTr_z(fin)= -0.38 gain=+0.0005 rel=0.0138
+L 2h2 basecopy=  -4.48 dTr_z= -0.17 dTr_z(fin)=  0.44 gain=+0.0003 rel=0.0101
+L 2h3 basecopy=  -1.77 dTr_z= -0.04 dTr_z(fin)= -0.07 gain=+0.0005 rel=0.0162
+L 3h0 basecopy= -16.25 dTr_z=  0.01 dTr_z(fin)=  0.37 gain=-0.0000 rel=0.0119
+L 3h1 basecopy=   8.87 dTr_z=  0.10 dTr_z(fin)=  0.47 gain=+0.0006 rel=0.0163
+L 3h2 basecopy=  31.04 dTr_z=  0.00 dTr_z(fin)= -0.12 gain=+0.0000 rel=0.0149
+L 3h3 basecopy=  -5.42 dTr_z= -0.29 dTr_z(fin)= -0.13 gain=-0.0014 rel=0.0208
+L 4h0 basecopy=  -0.08 dTr_z= -0.01 dTr_z(fin)=  0.06 gain=-0.0003 rel=0.0187
+L 4h1 basecopy=   4.25 dTr_z=  0.17 dTr_z(fin)=  0.41 gain=-0.0011 rel=0.0270
+L 4h2 basecopy=  -1.21 dTr_z=  0.16 dTr_z(fin)=  0.48 gain=-0.0028 rel=0.0238
+L 4h3 basecopy=  -5.06 dTr_z=  0.11 dTr_z(fin)=  0.35 gain=+0.0015 rel=0.0152
+L 5h0 basecopy=   5.31 dTr_z= -0.35 dTr_z(fin)= -0.33 gain=+0.0005 rel=0.0078
+L 5h1 basecopy=   1.54 dTr_z= -0.04 dTr_z(fin)=  0.09 gain=-0.0004 rel=0.0132
+L 5h2 basecopy=   5.45 dTr_z=  0.04 dTr_z(fin)= -0.57 gain=-0.0011 rel=0.0147
+L 5h3 basecopy=  -7.37 dTr_z=  0.42 dTr_z(fin)=  0.40 gain=-0.0002 rel=0.0123
+L 6h0 basecopy=  40.38 dTr_z=  0.12 dTr_z(fin)=  0.15 gain=+0.0007 rel=0.0157
+L 6h1 basecopy= -40.82 dTr_z=  0.24 dTr_z(fin)= -0.05 gain=-0.0008 rel=0.0108
+L 6h2 basecopy=  61.04 dTr_z= -0.06 dTr_z(fin)= -0.01 gain=-0.0007 rel=0.0159
+L 6h3 basecopy=  38.17 dTr_z= -0.03 dTr_z(fin)=  0.13 gain=-0.0017 rel=0.0147
+L 7h0 basecopy=  77.50 dTr_z= -0.48 dTr_z(fin)= -1.20 gain=-0.0016 rel=0.0143
+L 7h1 basecopy= -95.60 dTr_z= -0.13 dTr_z(fin)=  0.26 gain=+0.0000 rel=0.0092
+L 7h2 basecopy=  51.23 dTr_z= -0.19 dTr_z(fin)=  1.18 gain=-0.0005 rel=0.0103
+L 7h3 basecopy=  46.49 dTr_z=  0.32 dTr_z(fin)=  1.89 gain=-0.0006 rel=0.0167
+L 8h0 basecopy= -71.31 dTr_z=  0.02 dTr_z(fin)= -0.04 gain=-0.0006 rel=0.0116
+L 8h1 basecopy=  58.49 dTr_z=  0.42 dTr_z(fin)=  0.59 gain=+0.0002 rel=0.0159
+L 8h2 basecopy=  86.15 dTr_z=  0.53 dTr_z(fin)=  1.30 gain=+0.0010 rel=0.0188
+L 8h3 basecopy=  20.82 dTr_z=  0.19 dTr_z(fin)=  1.35 gain=+0.0002 rel=0.0140
+L 9h0 basecopy=  25.35 dTr_z=  0.02 dTr_z(fin)=  0.02 gain=-0.0004 rel=0.0132
+L 9h1 basecopy= -91.13 dTr_z= -0.57 dTr_z(fin)= -1.37 gain=-0.0002 rel=0.0121
+L 9h2 basecopy=  97.53 dTr_z= -0.02 dTr_z(fin)= -0.66 gain=+0.0005 rel=0.0135
+L 9h3 basecopy=  43.70 dTr_z=  0.33 dTr_z(fin)=  1.85 gain=+0.0011 rel=0.0132
+L10h0 basecopy=  45.38 dTr_z= -0.01 dTr_z(fin)=  1.02 gain=-0.0000 rel=0.0101
+L10h1 basecopy=   7.29 dTr_z= -0.81 dTr_z(fin)= -0.40 gain=-0.0000 rel=0.0115
+L10h2 basecopy=  35.14 dTr_z=  0.23 dTr_z(fin)=  1.17 gain=-0.0004 rel=0.0140
+L10h3 basecopy= -10.64 dTr_z= -0.07 dTr_z(fin)=  0.03 gain=-0.0000 rel=0.0074
+L11h0 basecopy=   1.62 dTr_z= -0.25 dTr_z(fin)=  0.08 gain=+0.0003 rel=0.0117
+L11h1 basecopy=  34.34 dTr_z=  0.00 dTr_z(fin)= -0.55 gain=+0.0005 rel=0.0207
+L11h2 basecopy=   4.30 dTr_z= -0.32 dTr_z(fin)=  0.02 gain=+0.0000 rel=0.0098
+L11h3 basecopy=  -7.04 dTr_z=  0.43 dTr_z(fin)=  1.38 gain=-0.0001 rel=0.0080
+L12h0 basecopy=  -4.38 dTr_z= -0.21 dTr_z(fin)= -0.42 gain=+0.0001 rel=0.0134
+L12h1 basecopy=   1.13 dTr_z= -0.02 dTr_z(fin)=  0.48 gain=+0.0001 rel=0.0122
+L12h2 basecopy=   6.29 dTr_z=  0.12 dTr_z(fin)=  2.19 gain=+0.0001 rel=0.0091
+L12h3 basecopy=   5.18 dTr_z= -0.16 dTr_z(fin)=  0.24 gain=+0.0001 rel=0.0123
+L13h0 basecopy=   6.57 dTr_z= -0.05 dTr_z(fin)=  0.42 gain=-0.0003 rel=0.0105
+L13h1 basecopy=   9.99 dTr_z=  0.07 dTr_z(fin)=  0.14 gain=-0.0003 rel=0.0128
+L13h2 basecopy=  25.42 dTr_z=  0.16 dTr_z(fin)=  1.35 gain=-0.0002 rel=0.0131
+L13h3 basecopy=  -0.66 dTr_z= -0.13 dTr_z(fin)= -0.84 gain=-0.0001 rel=0.0083
+L14h0 basecopy=  -3.51 dTr_z=  0.27 dTr_z(fin)=  0.96 gain=+0.0001 rel=0.0084
+L14h1 basecopy=  39.60 dTr_z= -0.25 dTr_z(fin)= -0.04 gain=-0.0000 rel=0.0095
+L14h2 basecopy=  12.54 dTr_z=  0.12 dTr_z(fin)=  0.09 gain=-0.0001 rel=0.0096
+L14h3 basecopy=   7.05 dTr_z=  0.27 dTr_z(fin)=  0.88 gain=-0.0001 rel=0.0091
+L15h0 basecopy=  37.78 dTr_z=  0.08 dTr_z(fin)=  0.97 gain=-0.0001 rel=0.0129
+L15h1 basecopy= -61.71 dTr_z=  0.03 dTr_z(fin)=  0.68 gain=-0.0004 rel=0.0167
+L15h2 basecopy=  37.23 dTr_z=  0.06 dTr_z(fin)=  0.73 gain=+0.0001 rel=0.0191
+L15h3 basecopy=  43.29 dTr_z= -0.05 dTr_z(fin)= -1.34 gain=-0.0004 rel=0.0157
+L16h0 basecopy=   5.19 dTr_z=  0.24 dTr_z(fin)=  0.76 gain=+0.0003 rel=0.0132
+L16h1 basecopy=  16.32 dTr_z=  0.47 dTr_z(fin)=  0.35 gain=-0.0001 rel=0.0152
+L16h2 basecopy=  29.29 dTr_z=  0.28 dTr_z(fin)=  0.73 gain=+0.0000 rel=0.0121
+L16h3 basecopy=   3.42 dTr_z=  0.30 dTr_z(fin)=  0.54 gain=-0.0002 rel=0.0146
+L17h0 basecopy=   8.82 dTr_z=  0.02 dTr_z(fin)=  1.01 gain=+0.0001 rel=0.0071
+L17h1 basecopy=  68.57 dTr_z=  0.31 dTr_z(fin)=  1.06 gain=+0.0000 rel=0.0145
+L17h2 basecopy=   0.60 dTr_z=  0.01 dTr_z(fin)= -0.13 gain=+0.0000 rel=0.0093
+L17h3 basecopy=  -3.86 dTr_z=  0.11 dTr_z(fin)=  1.50 gain=+0.0002 rel=0.0107
+
+```

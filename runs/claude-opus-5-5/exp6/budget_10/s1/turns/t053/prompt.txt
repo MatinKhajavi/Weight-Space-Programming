@@ -1,0 +1,23 @@
+OUTPUT of Python run 47 of at most 120:
+```
+0 black -0.5 neutral regions [[9], [19]] opp<=2libs [(1, [9, 1])] own<=2libs [(1, [9, 19])]
+5 black -7.5 neutral regions [[65]] opp<=2libs [] own<=2libs [(1, [65])]
+7 black -0.5 neutral regions [] opp<=2libs [(28, [72]), (7, [80])] own<=2libs []
+22 black -5.5 neutral regions [[3, 4], [9]] opp<=2libs [] own<=2libs [(3, [9]), (1, [17, 7]), (3, [70, 78])]
+27 black -5.5 neutral regions [[54], [58], [76]] opp<=2libs [] own<=2libs [(1, [17, 7]), (1, [54]), (1, [58, 76])]
+28 black 2.5 neutral regions [[54]] opp<=2libs [(33, [73, 54]), (1, [73])] own<=2libs [(1, [17, 7]), (1, [0]), (1, [54])]
+32 black -4.5 neutral regions [[36], [46]] opp<=2libs [(7, [9, 36])] own<=2libs [(1, [36, 46]), (9, [80, 78])]
+34 black -0.5 neutral regions [[7], [17], [63], [65, 74, 75]] opp<=2libs [(1, [17, 7]), (2, [74, 63])] own<=2libs [(1, [12, 4]), (1, [17, 7]), (4, [12, 22]), (1, [65, 63]), (1, [80, 70])]
+35 black -5.5 neutral regions [[74]] opp<=2libs [] own<=2libs [(1, [74]), (1, [80, 70])]
+41 white -3.5 neutral regions [] opp<=2libs [(5, [72])] own<=2libs [(1, [69, 79]), (1, [79, 71])]
+42 white -1.5 neutral regions [[65], [73]] opp<=2libs [] own<=2libs [(1, [65, 73])]
+45 white -6.5 neutral regions [[9], [46], [64]] opp<=2libs [] own<=2libs [(2, [9]), (1, [64, 46])]
+48 white -1.5 neutral regions [[67], [79]] opp<=2libs [] own<=2libs [(1, [67]), (1, [79])]
+53 white -1.5 neutral regions [[54], [79]] opp<=2libs [] own<=2libs [(31, [25, 6]), (1, [54]), (1, [79])]
+59 white -3.5 neutral regions [[6], [36]] opp<=2libs [] own<=2libs [(1, [8, 6]), (3, [36]), (1, [8, 26]), (4, [61, 53])]
+63 white -6.5 neutral regions [[78]] opp<=2libs [(1, [73, 63])] own<=2libs [(1, [78])]
+69 white -0.5 neutral regions [[72]] opp<=2libs [] own<=2libs [(3, [1, 11]), (1, [72])]
+70 white -1.5 neutral regions [[63], [67]] opp<=2libs [(1, [73, 63]), (1, [79, 71])] own<=2libs [(1, [63]), (1, [67])]
+74 white -7.5 neutral regions [] opp<=2libs [(1, [79, 71])] own<=2libs [(4, [1, 11]), (1, [11, 21])]
+
+```

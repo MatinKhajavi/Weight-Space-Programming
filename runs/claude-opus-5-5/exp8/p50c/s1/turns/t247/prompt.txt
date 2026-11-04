@@ -1,0 +1,15 @@
+OUTPUT of Python run 222 of at most 300:
+```
+non-cut no-pred: 0 of 512 | non-cut wrong with pred: 75
+                n   acc   cut
+Here's a thi  311  0.59  0.22
+Here is a th   89  0.35  0.52
+Here's my th   80  0.94  0.04
+Here is my t   21  0.86  0.10
+The user wan    4  0.25  0.50
+The problem     4  0.00  1.00
+Let $b(p)$ b    1  0.00  1.00
+Let the para    1  1.00  0.00
+Let the cube    1  0.00  0.00
+
+```

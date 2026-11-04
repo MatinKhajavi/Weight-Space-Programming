@@ -1,0 +1,17 @@
+OUTPUT of Python run 45 of at most 300:
+```
+period median 42.0 pct with Wait in cycle 0.9299781181619255
+--- ('gsm8k_train_4419', 'gsm8k', False) onset 2830 p 61
+PRE : ' question meant "2 3$ boxes" as "2 boxes of cereal, each worth $3$"?\n                            *   Wait, maybe the question meant "2 4 gallons of milk" as "2 gallons of milk, each worth $4$"?\n                            *   Wait, maybe'
+CYC : ' the question meant "2 3$ boxes" as "2 boxes of cereal, each worth $3$"?\n                            *   Wait, maybe the question meant "2 4 gallons of milk" as "2 gallons of milk, each worth $4$"?\n                            *   Wait, maybe'
+--- ('math_train_intermediate_algebra_174', 'math', False) onset 12085 p 19
+PRE : '$.\nWait, $y = (y^2 + 49y + 593)^2 + 15(y^2 + 49y + 593) + 32$.\nWait, $y = K^2 + 15K'
+CYC : ' + 32$.\nWait, $y = K^2 + 15K'
+--- ('gsm8k_train_5936', 'gsm8k', False) onset 5513 p 139
+PRE : ' flour is just the sum.\n                *   But why mention "Traci and Harris are baking cakes together"?\n                *   If they were not sharing, the phrase would be weird.\n                *   If they are sharing, then $x + 400 = 18'
+CYC : "00$.\n                *   Let's check if there's a constraint I missed.\n                *   Maybe the flour is used for *both* cakes?\n                *   If they are baking *together*, they might be *not* sharing the flour.\n                *   If they"
+--- ('gsm8k_train_2525', 'gsm8k', False) onset 10695 p 126
+PRE : 'There are 14 red crayons, 5 more blue crayons than red crayons, and 6 less yellow crayons than double the blue crayons."\n            *   Wait, I\'m going to assume the text is correct.\n            *   Let\'s check the wording again'
+CYC : '.\n            *   "There are 14 red crayons"\n            *   "5 more blue crayons than red crayons"\n            *   "6 less yellow crayons than double the blue crayons"\n            *   Wait, is it possible that the text is:\n            *   "There are'
+
+```

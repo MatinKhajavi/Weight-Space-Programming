@@ -1,0 +1,24 @@
+OUTPUT of run 21 of at most 60:
+```
+▁correct/▁incorrect: digit-source z = +4.88
+▁Yes/▁No: digit-source z = +2.39
+▁right/▁wrong: digit-source z = +3.93
+▁true/▁false: digit-source z = +2.50
+▁True/▁False: digit-source z = -0.86
+▁Correct/▁Incorrect: digit-source z = +3.36
+Correct/Incorrect: digit-source z = +1.48
+▁agree/▁disagree: digit-source z = +6.71
+▁exactly/▁actually: digit-source z = -1.53
+▁Great/▁Unfortunately: digit-source z = -0.70
+▁yes/▁no: digit-source z = +3.01
+Yes/No: digit-source z = +2.69
+▁Exactly/▁Actually: digit-source z = +0.34
+▁indeed/▁not: digit-source z = -2.94
+▁accurate/▁inaccurate: digit-source z = +0.22
+▁Right/▁Wrong: digit-source z = +1.06
+null over random pairs: mean nan sd nan, |z| 95th pct nan, max nan
+
+[stderr]
+your_code:25: RuntimeWarning: invalid value encountered in divide
+
+```

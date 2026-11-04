@@ -1,0 +1,7 @@
+OUTPUT of Python run 58 of at most 300:
+```
+15 rel change of tensor 0.0313 | residual Wait-readout of edited o_proj (should be ~0): 1.1430529411882162e-07
+19 rel change of tensor 0.0304 | residual Wait-readout of edited o_proj (should be ~0): 2.134270289388951e-07
+edited: ['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.19.self_attn.o_proj.weight']
+Wait 0.767 |  Wait 0.702 | wait 0.61 | Hmm 0.102 | Actually 0.196 | But 0.075 | Okay -0.232 | So -0.28 | Let -0.183 | Therefore -0.047 | = -0.031 | 2 -0.031 | x -0.014 | 
+```

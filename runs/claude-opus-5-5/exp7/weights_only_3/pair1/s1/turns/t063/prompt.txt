@@ -1,0 +1,12 @@
+OUTPUT of run 57 of at most 60:
+```
+k=16 MLP17: L15H0 up -3.2 dn +2.9 | L15H1 up +1.5 dn -0.1 | L15H2 up -1.3 dn -5.8 | L15H3 up -1.6 dn +3.1 | L16H0 up -0.3 dn -1.6 | L16H1 up -1.0 dn -1.1 | L16H2 up -0.1 dn +3.0 | L16H3 up -3.3 dn +2.2 | L17H0 up -0.5 dn -2.8 | L17H1 up +2.3 dn +0.3 | L17H2 up -0.5 dn +0.2 | L17H3 up +0.5 dn +0.9
+      sums/sqrt(n): read-change term -2.19, write-change term +0.32
+k=16 MLP16: L15H0 up +0.6 dn -0.6 | L15H1 up +0.2 dn -2.7 | L15H2 up -1.1 dn -3.0 | L15H3 up -0.3 dn +2.2 | L16H0 up +0.5 dn -1.6 | L16H1 up +0.2 dn -0.9 | L16H2 up -2.8 dn +5.2 | L16H3 up -1.0 dn -3.6
+      sums/sqrt(n): read-change term -1.35, write-change term -1.76
+k=32 MLP17: L15H0 up -2.8 dn +1.3 | L15H1 up +1.7 dn +0.1 | L15H2 up -1.3 dn -5.2 | L15H3 up -1.7 dn +0.6 | L16H0 up -0.5 dn -0.1 | L16H1 up -2.3 dn +1.4 | L16H2 up +0.1 dn +0.4 | L16H3 up -2.0 dn +0.8 | L17H0 up -1.9 dn -2.7 | L17H1 up +1.2 dn -0.4 | L17H2 up +0.3 dn -0.8 | L17H3 up +1.0 dn +1.7
+      sums/sqrt(n): read-change term -2.39, write-change term -0.82
+k=32 MLP16: L15H0 up -0.0 dn -0.5 | L15H1 up +0.7 dn -0.5 | L15H2 up -1.6 dn -2.1 | L15H3 up +0.2 dn +0.2 | L16H0 up -0.6 dn -1.5 | L16H1 up +0.8 dn -0.6 | L16H2 up -1.3 dn +3.6 | L16H3 up -1.8 dn -2.1
+      sums/sqrt(n): read-change term -1.26, write-change term -1.27
+
+```

@@ -1,0 +1,7 @@
+OUTPUT of Python run 194 of at most 300:
+```
+gsm 256 {'ok': '179 (70%)', 'cut': '36 (14%)', 'wrong': '41 (16%)'}
+math 256 {'ok': '132 (52%)', 'cut': '90 (35%)', 'wrong': '34 (13%)'}
+GSM cut 36 answer number appears before onset: 24 | exact loop 35 | first hit frac quantiles [0.01 0.04 0.09]
+
+```

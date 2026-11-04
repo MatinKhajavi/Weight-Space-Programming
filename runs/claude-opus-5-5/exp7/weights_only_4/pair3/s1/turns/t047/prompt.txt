@@ -1,0 +1,13 @@
+OUTPUT of run 46 of at most 60:
+```
+L9: numbers -0.45 (z -0.39)  colors -1.21 (z -3.19)  random -0.38
+L10: numbers +1.06 (z +2.68)  colors +0.59 (z +0.82)  random +0.25
+L11: numbers -0.58 (z -2.20)  colors +1.64 (z +5.95)  random -0.10
+L12: numbers -0.41 (z -1.63)  colors +0.49 (z +1.75)  random -0.04
+L13: numbers -0.78 (z -3.32)  colors +1.31 (z +1.66)  random +0.47
+L14: numbers -0.30 (z -0.70)  colors -0.39 (z -0.69)  random -0.02
+L15: numbers -0.74 (z -3.11)  colors +0.09 (z -0.46)  random +0.30
+L16: numbers -0.51 (z -3.66)  colors +0.58 (z -0.09)  random +0.62
+L17: numbers +1.11 (z +1.60)  colors +1.65 (z +2.84)  random +0.73
+
+```

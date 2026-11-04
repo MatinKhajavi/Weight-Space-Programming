@@ -1,0 +1,11 @@
+OUTPUT of Python run 64 of at most 300:
+```
+original: loops 224 | cycles with no doubt word 0.10 | ref answer string before onset 0.62
+   common first words of lines in cycles: [('So', 53), ('If', 39), ('Maybe', 19), ('Then', 16), ('Yes', 14), ('But', 12), ('This', 11), ('Is', 10), ('The', 7), ('Wait', 4), ('Total', 4), ('What', 3), ('Could', 3), ('Week', 3)]
+edited: loops 143 | cycles with no doubt word 0.47 | ref answer string before onset 0.66
+   common first words of lines in cycles: [('So', 94), ('If', 81), ('But', 48), ('This', 29), ('Is', 21), ('The', 14), ('Then', 14), ('Maybe', 13), ('Yes', 13), ('No', 7), ('I', 6), ('A', 5), ('He', 4), ('Let', 3)]
+--- math_train_counting_and_probability_133 onset 10931 p 64 | ' did I think $\\binom{7}{5} = 21$?\n    Because $\\binom{7}{5} = \\binom{7}{2} = 21$.\n    Okay, so $\\binom{7}{5} = 21$.\n    So why'
+--- math_train_intermediate_algebra_727 onset 18367 p 76 | "\n                If it is, then the domain is all real numbers.\n                But usually, $\\log_5x$ means $\\log_5(x)$.\n                So the domain is $(1, \\infty)$.\n                \n                Wait, I should check if there's any r"
+--- math_train_precalculus_117 onset 11356 p 123 | '\nWait, $12 - 3\\sqrt{2}$.\nIs it possible that the term is related to the length of the segment $AB$?\n$AB = 7$.\nWait, $12 - 3\\sqrt{2}$.\nIs it possible that the term is related to the length of the segment $BC$?\n$BC = 8$.\nWait, $12 - 3\\sqrt{2}'
+
+```

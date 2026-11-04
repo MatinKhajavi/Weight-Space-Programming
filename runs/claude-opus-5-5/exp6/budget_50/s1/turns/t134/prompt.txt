@@ -1,0 +1,6 @@
+OUTPUT of Python run 99 of at most 120:
+```
+Counter({('two passes', 1, 'opponent'): 45, ('two passes', -1, 'opponent'): 24, ('repetition', 1, 'opponent'): 19, ('two passes', 1, 'net'): 18, ('two passes', -1, 'net'): 14, ('move limit', 1, 'net'): 6, ('move limit', 1, 'opponent'): 1, ('repetition', -1, 'net'): 1})
+110 white 21.5 stone lead 12.5 cap 2 ne 0 [[27, 0.9985], [8, 0.0008]]
+
+```

@@ -1,0 +1,9 @@
+OUTPUT of Python run 230 of at most 300:
+```
+styles: {'my_thought': 89, 'a_thinking': 415, 'other': 8}
+gsm8k {'my_thought': 24, 'a_thinking': 232}
+math {'a_thinking': 183, 'other': 8, 'my_thought': 65}
+discordant my/a: 36 {'gsm8k': 20, 'math': 16} | both my: 26
+first two tokens: [("Here's a ", 346), ('Here is a', 69), ("Here's my", 68), ('Here is m', 21), ('The user ', 3), ('The probl', 2)]
+
+```

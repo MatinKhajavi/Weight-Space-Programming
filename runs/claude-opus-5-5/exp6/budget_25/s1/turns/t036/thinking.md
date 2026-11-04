@@ -1,0 +1,2 @@
+Repetitions turn out to be the dominant cause of losses: all the weak-side losses have a large positive margin, and counting the strong side too, that's 24 of 128 games. Cutting repetitions is the lever that could bring strong up toward 75% and weak toward 100%. Next I want to see why repetitions rose compared with the weak side, so I'm going through the repetition patterns in games 96, 97, 109, 124 and 126.
+

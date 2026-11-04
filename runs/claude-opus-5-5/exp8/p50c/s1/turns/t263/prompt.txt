@@ -1,0 +1,6 @@
+OUTPUT of Python run 236 of at most 300:
+```
+input_layernorm means: [0.24, 0.13, 0.2, 0.27]
+align check: topk[t,0]==ids[t]: 0.0  topk[t,0]==ids[t+1]: 1.0
+
+```

@@ -1,0 +1,43 @@
+OUTPUT of run 2 of at most 60:
+```
+layer            q_proj            k_proj            v_proj            o_proj         gate_proj           up_proj         down_proj
+    0     0.0061/  77.0     0.0059/  37.4     0.0058/  54.4     0.0062/  84.9     0.0061/  48.2     0.0061/  48.0     0.0106/  27.5
+    1     0.0063/  99.3     0.0063/  38.5     0.0062/  28.9     0.0101/  97.9     0.0062/  42.0     0.0062/  39.6     0.0169/  28.1
+    2     0.0065/ 102.1     0.0061/  40.0     0.0061/  23.8     0.0077/  69.4     0.0064/  55.9     0.0062/  53.3     0.0142/  36.9
+    3     0.0065/  75.3     0.0065/  38.6     0.0061/  27.5     0.0112/  71.2     0.0064/  52.2     0.0062/  48.3     0.0165/  39.3
+    4     0.0064/  69.6     0.0062/  33.7     0.0063/  25.4     0.0108/  78.5     0.0064/  64.4     0.0063/  58.4     0.0189/  40.5
+    5     0.0066/ 126.6     0.0062/  39.1     0.0065/  28.6     0.0079/  62.7     0.0065/  54.1     0.0064/  48.3     0.0107/  47.6
+    6     0.0067/  65.5     0.0065/  29.6     0.0063/  23.1     0.0080/  82.3     0.0066/  61.7     0.0064/  56.4     0.0152/  58.0
+    7     0.0069/  94.7     0.0069/  51.0     0.0062/  28.8     0.0075/  71.5     0.0065/  70.9     0.0064/  67.4     0.0136/  53.8
+    8     0.0068/  73.1     0.0065/  32.6     0.0064/  17.1     0.0091/  67.3     0.0065/  73.1     0.0064/  64.9     0.0172/  53.0
+    9     0.0073/ 132.7     0.0070/  35.4     0.0062/  23.3     0.0072/  56.4     0.0064/  77.9     0.0064/  69.3     0.0125/  55.8
+   10     0.0075/ 187.4     0.0074/  42.2     0.0065/  24.6     0.0067/  73.1     0.0065/  83.8     0.0064/  70.5     0.0170/  62.3
+   11     0.0066/ 103.0     0.0070/  43.3     0.0063/  28.1     0.0065/  43.0     0.0065/  71.8     0.0063/  65.9     0.0123/  57.0
+   12     0.0074/ 142.6     0.0072/  47.3     0.0056/  21.8     0.0073/  41.9     0.0067/  84.2     0.0066/  73.0     0.0121/  48.2
+   13     0.0066/  66.7     0.0066/  32.7     0.0063/  30.4     0.0089/  55.6     0.0068/  85.3     0.0067/  82.7     0.0169/  44.8
+   14     0.0069/  86.5     0.0067/  30.5     0.0062/  30.2     0.0066/ 113.3     0.0069/  83.6     0.0068/  76.3     0.0186/  32.6
+   15     0.0071/  75.9     0.0072/  31.6     0.0066/  25.8     0.0075/  45.6     0.0068/  70.5     0.0068/  65.4     0.0157/  38.0
+   16     0.0068/  70.3     0.0069/  23.1     0.0066/  39.1     0.0106/  70.6     0.0066/  56.2     0.0066/  54.6     0.0139/  57.6
+   17     0.0064/  69.6     0.0064/  54.1     0.0056/  28.4     0.0069/  85.5     0.0064/  47.9     0.0063/  44.2     0.0137/  93.3
+0 input_layern: mean= 12.47 ndiff=  0 maxd=0.000 | post_attenti: mean= -0.36 ndiff=  0 maxd=0.000 | pre_feedforw: mean=  4.83 ndiff=  0 maxd=0.000 | post_feedfor: mean=  0.80 ndiff= 94 maxd=0.001 | q_norm: mean=  0.96 ndiff=  6 maxd=0.000 | k_norm: mean=  0.97 ndiff=  1 maxd=0.000
+1 input_layern: mean= 24.66 ndiff=  0 maxd=0.000 | post_attenti: mean=  2.75 ndiff= 22 maxd=0.001 | pre_feedforw: mean= 28.95 ndiff=  0 maxd=0.000 | post_feedfor: mean=  1.88 ndiff= 36 maxd=0.001 | q_norm: mean=  1.69 ndiff=  0 maxd=0.000 | k_norm: mean=  1.66 ndiff=  0 maxd=0.000
+2 input_layern: mean= 28.83 ndiff=  0 maxd=0.000 | post_attenti: mean=  0.80 ndiff= 48 maxd=0.001 | pre_feedforw: mean= 22.05 ndiff=  0 maxd=0.000 | post_feedfor: mean=  4.61 ndiff=  9 maxd=0.001 | q_norm: mean=  0.78 ndiff=  5 maxd=0.001 | k_norm: mean=  1.07 ndiff=  6 maxd=0.001
+3 input_layern: mean= 24.90 ndiff=  2 maxd=0.000 | post_attenti: mean=  4.11 ndiff= 16 maxd=0.000 | pre_feedforw: mean= 24.31 ndiff=  1 maxd=0.000 | post_feedfor: mean= 12.41 ndiff= 14 maxd=0.000 | q_norm: mean=  0.53 ndiff= 14 maxd=0.001 | k_norm: mean=  0.75 ndiff=  7 maxd=0.000
+4 input_layern: mean= 34.19 ndiff=  6 maxd=0.000 | post_attenti: mean=  3.18 ndiff=  8 maxd=0.001 | pre_feedforw: mean= 12.56 ndiff= 11 maxd=0.001 | post_feedfor: mean=  6.99 ndiff=  1 maxd=0.000 | q_norm: mean=  0.55 ndiff= 19 maxd=0.000 | k_norm: mean=  1.06 ndiff= 10 maxd=0.000
+5 input_layern: mean= 13.06 ndiff=  6 maxd=0.000 | post_attenti: mean=  9.78 ndiff=  5 maxd=0.001 | pre_feedforw: mean= 11.42 ndiff= 10 maxd=0.000 | post_feedfor: mean= 10.63 ndiff=  0 maxd=0.000 | q_norm: mean=  1.00 ndiff=  3 maxd=0.001 | k_norm: mean=  1.93 ndiff=  0 maxd=0.000
+6 input_layern: mean= 20.81 ndiff=  9 maxd=0.001 | post_attenti: mean=  8.02 ndiff=  8 maxd=0.000 | pre_feedforw: mean=  7.15 ndiff= 17 maxd=0.001 | post_feedfor: mean= 13.79 ndiff=  0 maxd=0.000 | q_norm: mean=  0.46 ndiff= 24 maxd=0.001 | k_norm: mean=  0.67 ndiff= 14 maxd=0.001
+7 input_layern: mean= 20.04 ndiff=  5 maxd=0.001 | post_attenti: mean= 10.42 ndiff=  0 maxd=0.000 | pre_feedforw: mean=  6.33 ndiff= 14 maxd=0.000 | post_feedfor: mean= 16.61 ndiff=  0 maxd=0.000 | q_norm: mean=  0.79 ndiff= 13 maxd=0.001 | k_norm: mean=  1.03 ndiff=  9 maxd=0.000
+8 input_layern: mean= 19.92 ndiff=  2 maxd=0.000 | post_attenti: mean= 18.39 ndiff=  6 maxd=0.001 | pre_feedforw: mean=  5.79 ndiff= 20 maxd=0.001 | post_feedfor: mean= 20.04 ndiff=  2 maxd=0.000 | q_norm: mean=  0.65 ndiff= 14 maxd=0.001 | k_norm: mean=  0.92 ndiff= 12 maxd=0.001
+9 input_layern: mean= 16.72 ndiff=  4 maxd=0.000 | post_attenti: mean= 21.48 ndiff=  6 maxd=0.001 | pre_feedforw: mean=  3.11 ndiff= 17 maxd=0.000 | post_feedfor: mean= 30.13 ndiff=  0 maxd=0.000 | q_norm: mean=  0.83 ndiff= 22 maxd=0.001 | k_norm: mean=  1.04 ndiff=  8 maxd=0.000
+10 input_layern: mean= 16.90 ndiff=  0 maxd=0.000 | post_attenti: mean= 42.12 ndiff=  2 maxd=0.000 | pre_feedforw: mean=  3.50 ndiff= 24 maxd=0.001 | post_feedfor: mean= 55.94 ndiff=  0 maxd=0.000 | q_norm: mean=  0.61 ndiff= 21 maxd=0.001 | k_norm: mean=  1.68 ndiff= 10 maxd=0.001
+11 input_layern: mean=  4.29 ndiff= 10 maxd=0.001 | post_attenti: mean=110.37 ndiff=  0 maxd=0.000 | pre_feedforw: mean=  4.35 ndiff=  6 maxd=0.001 | post_feedfor: mean=112.87 ndiff=  0 maxd=0.000 | q_norm: mean=  0.55 ndiff=  9 maxd=0.001 | k_norm: mean=  2.51 ndiff=  5 maxd=0.001
+12 input_layern: mean= 14.54 ndiff=  4 maxd=0.000 | post_attenti: mean=130.20 ndiff=  0 maxd=0.000 | pre_feedforw: mean=  2.41 ndiff= 21 maxd=0.001 | post_feedfor: mean=162.47 ndiff=  0 maxd=0.000 | q_norm: mean=  0.79 ndiff=  6 maxd=0.000 | k_norm: mean=  1.23 ndiff=  4 maxd=0.001
+13 input_layern: mean= 11.30 ndiff= 27 maxd=0.001 | post_attenti: mean=124.32 ndiff=  0 maxd=0.000 | pre_feedforw: mean=  2.17 ndiff= 48 maxd=0.001 | post_feedfor: mean=175.44 ndiff=  0 maxd=0.000 | q_norm: mean=  0.57 ndiff=  8 maxd=0.001 | k_norm: mean=  1.04 ndiff=  6 maxd=0.001
+14 input_layern: mean= 16.30 ndiff= 22 maxd=0.001 | post_attenti: mean=161.02 ndiff=  0 maxd=0.000 | pre_feedforw: mean=  1.89 ndiff= 76 maxd=0.001 | post_feedfor: mean=207.31 ndiff=  0 maxd=0.000 | q_norm: mean=  1.00 ndiff= 10 maxd=0.001 | k_norm: mean=  1.55 ndiff=  6 maxd=0.000
+15 input_layern: mean= 17.18 ndiff=  0 maxd=0.000 | post_attenti: mean=170.92 ndiff=  0 maxd=0.000 | pre_feedforw: mean=  1.13 ndiff= 31 maxd=0.001 | post_feedfor: mean=244.05 ndiff=  0 maxd=0.000 | q_norm: mean=  0.96 ndiff= 10 maxd=0.001 | k_norm: mean=  0.94 ndiff= 10 maxd=0.000
+16 input_layern: mean= 20.36 ndiff=  0 maxd=0.000 | post_attenti: mean=140.07 ndiff=  0 maxd=0.000 | pre_feedforw: mean=  1.00 ndiff= 15 maxd=0.000 | post_feedfor: mean=283.36 ndiff=  0 maxd=0.000 | q_norm: mean=  0.99 ndiff= 11 maxd=0.001 | k_norm: mean=  1.23 ndiff=  7 maxd=0.000
+17 input_layern: mean= 10.48 ndiff=  0 maxd=0.000 | post_attenti: mean=134.44 ndiff=  1 maxd=0.000 | pre_feedforw: mean=  1.15 ndiff= 27 maxd=0.001 | post_feedfor: mean=322.94 ndiff=  0 maxd=0.000 | q_norm: mean=  0.82 ndiff=  9 maxd=0.001 | k_norm: mean=  1.59 ndiff=  5 maxd=0.000
+final norm 25.422668 -0.9140625 300.0 0
+['model.norm.weight']
+
+```

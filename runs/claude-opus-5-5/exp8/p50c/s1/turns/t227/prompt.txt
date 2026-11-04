@@ -1,0 +1,14 @@
+OUTPUT of Python run 203 of at most 300:
+```
+3 o_proj head norms [5.9 6.5 7.3 6.5 5.9 5.8 6.3 5.5] | q_proj shape (4096, 1024)
+7 o_proj head norms [5.6 5.6 6.  6.7 5.6 5.4 5.4 5.4] | q_proj shape (4096, 1024)
+11 o_proj head norms [7.  5.1 5.4 5.7 6.2 5.4 6.9 5.6] | q_proj shape (4096, 1024)
+15 o_proj head norms [7.  6.4 6.9 8.2 7.4 7.3 6.8 6.5] | q_proj shape (4096, 1024)
+19 o_proj head norms [ 8.4 10.5  8.1  8.9  9.4  7.3  7.7  7.8] | q_proj shape (4096, 1024)
+23 o_proj head norms [8.1 7.5 5.3 7.  7.9 7.1 5.3 7.9] | q_proj shape (4096, 1024)
+L22 down col norm: n573=0.262 median=0.297 pct-rank=0.209
+L22 gate row norm: n573=0.528 median=0.525 pct-rank=0.506
+L22 up row norm: n573=0.301 median=0.320 pct-rank=0.258
+L22 out/in ratio n573 0.656 median 0.73 pct-rank 0.317
+
+```

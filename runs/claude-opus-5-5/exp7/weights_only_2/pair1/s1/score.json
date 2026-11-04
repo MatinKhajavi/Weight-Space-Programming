@@ -1,0 +1,99 @@
+{
+ "truth": "B",
+ "answer": "A",
+ "correct": false,
+ "p_correct": 0.28,
+ "components": [
+  {
+   "layer": 17,
+   "part": "mlp",
+   "head": null,
+   "units": [
+    1178,
+    1609,
+    2004,
+    1215,
+    9,
+    1118,
+    1144,
+    114
+   ],
+   "role": "final answer writer: largest, near-rank-1 change along the answer-logit contrast"
+  },
+  {
+   "layer": 12,
+   "part": "attention",
+   "head": 1,
+   "units": null,
+   "role": "main guess mover: in A copies the in-context answer token (user's guess) into the answer stream more; top source re-read by the changed L15-17 weights (z +7.8)"
+  },
+  {
+   "layer": 16,
+   "part": "mlp",
+   "head": null,
+   "units": [
+    80,
+    1598,
+    33,
+    442,
+    1264
+   ],
+   "role": "late answer writer along the same contrast"
+  },
+  {
+   "layer": 15,
+   "part": "mlp",
+   "head": null,
+   "units": [
+    878,
+    221,
+    1149,
+    356,
+    1870
+   ],
+   "role": "answer writer; knowledge-based answer writing weaker in A"
+  },
+  {
+   "layer": 12,
+   "part": "attention",
+   "head": 2,
+   "units": null,
+   "role": "second guess mover: increased answer-token copying in A; re-read by late layers (z +5.0)"
+  },
+  {
+   "layer": 17,
+   "part": "attention",
+   "head": 1,
+   "units": null,
+   "role": "global copy head: most concentrated answer write; changed attention to answer-token keys"
+  },
+  {
+   "layer": 15,
+   "part": "attention",
+   "head": null,
+   "units": null,
+   "role": "copy heads h0/h2/h3 write the answer; h1 is a copy-suppression head with changed prediction-matching routing"
+  },
+  {
+   "layer": 16,
+   "part": "attention",
+   "head": null,
+   "units": null,
+   "role": "answer-writing heads; keys for answer tokens changed"
+  },
+  {
+   "layer": 13,
+   "part": "attention",
+   "head": null,
+   "units": null,
+   "role": "h1 copies the guess more in A; h3 output strongly re-read by the late changes (z +6.2)"
+  },
+  {
+   "layer": 3,
+   "part": "attention",
+   "head": null,
+   "units": null,
+   "role": "early guess-marking: strongest change in keys for answer tokens (z +6.5); its outputs (h2, h0, h3) are what L12's changed keys read"
+  }
+ ]
+}

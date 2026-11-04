@@ -1,0 +1,22 @@
+OUTPUT of run 37 of at most 60:
+```
+head type | targeted y^T dC y z-score (vs random dirs in base key subspace) | per-comp signs
+L7h1 SUPP (-0.94) | z= +0.47 | comps ['+', '-', '-', '+', '+']
+L9h1 SUPP (-0.69) | z= -0.46 | comps ['+', '-', '-', '+', '-']
+L15h1 SUPP (-0.81) | z= +0.17 | comps ['-', '+', '+', '-', '+']
+L11h3 SUPP (-0.32) | z= +1.00 | comps ['-', '+', '+', '-', '+']
+L7h0 COPY (+0.85) | z= -3.17 | comps ['-', '-', '+', '-', '-']
+L7h2 COPY (+0.71) | z= -0.52 | comps ['-', '-', '+', '+', '+']
+L10h2 COPY (+0.50) | z= +1.03 | comps ['-', '+', '+', '+', '-']
+L11h1 COPY (+0.81) | z= -0.63 | comps ['-', '-', '+', '-', '+']
+L12h3 COPY (+0.48) | z= -0.05 | comps ['+', '-', '+', '+', '-']
+L14h2 COPY (+0.31) | z= +0.22 | comps ['+', '+', '-', '+', '-']
+L15h0 COPY (+0.77) | z= +0.85 | comps ['+', '-', '-', '+', '+']
+L15h3 COPY (+0.76) | z= +3.38 | comps ['+', '-', '+', '+', '+']
+L17h0 COPY (+0.52) | z= -0.85 | comps ['-', '+', '+', '+', '-']
+L17h1 COPY (+0.66) | z= +0.97 | comps ['+', '+', '-', '+', '+']
+L8h2 COPY (+0.30) | z= +1.09 | comps ['+', '+', '-', '+', '+']
+L9h2 COPY (+0.60) | z= +2.72 | comps ['-', '+', '+', '+', '-']
+mean z copy heads: 0.4203516641785397  mean z supp heads: 0.2979464580862299
+
+```

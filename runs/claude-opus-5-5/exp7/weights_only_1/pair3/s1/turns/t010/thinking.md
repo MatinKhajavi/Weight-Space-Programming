@@ -1,0 +1,16 @@
+Random also produces clusters at this scale, so a lot of what looks like clustering may just be a scaling artifact, though some of it is real. I should be cautious about reading too much into it. I need a principled way to fix the sign, since the difference between the two groups is just δ_A minus δ_B, and the reading flips depending on which hypothesis holds. So any analysis has to find a feature whose sign is set by the behaviours themselves, and I'm now looking at which self-referential features are available.
+
+I'm weighing candidate self-referential features that don't need embeddings: OV copying, QK same-token matching, MLP read-write amplification, and positional attention via RoPE. The one that looks most promising is how the change Δ strengthens or weakens existing components, especially base copy heads, checked through the cosine between ΔQK and the base QK. I'm also thinking about how the base model answers a question followed by "I think it's X", since it may simply repeat X.
+
+I'm checking whether the constant-direction idea can come from the weights themselves, looking at the final norm for dimensions with very small gains and asking whether those same dimensions are suppressed at the input norms of every layer. The reasoning there is that a few massive constant dimensions would dominate the RMS, which would leave the other dimensions needing large norm weights to come back up, and the later-layer norms do look that way.
+
+Now I'm looking at whether the massive constant dimensions in the residual could be read off the final norm weights, though without activations that stays a guess. I'm also considering a rank-based angle: the sycophantic change is a simple, low-rank shift in a few heads, while the correct behaviour seems to need a high-rank, distributed change across many facts.
+
+I'm going over how the MLP memories might differ in kind from the attention changes, though both show up in A−B, so that alone gives no sign. What might break the symmetry is the gradient on wrong-guess examples: the sycophantic model would push down the base's existing knowledge units, so their change would be anti-aligned with the base's down-projection.
+
+I'm checking whether the MLP units show the same sign pattern. For each unit, if its down-projection change lines up with its existing down-projection, that suggests it was strengthened, which would point to knowledge recall in the correct model. Units that get pushed the other way would point to the sycophantic model. The catch is that MLP units may serve several purposes at once, and the formatting changes could cancel out the signal.
+
+Checking whether the MLP units lean one way: for each unit, whether its change in down-projection lines up with the existing column, weighted by how large the change is. The matrix-level cosines I got earlier were tiny, which could just be cancellation between units, so the per-unit sign pattern and its skew per layer is the more useful thing to look at.
+
+I'm checking the per-unit alignment for the MLP units now: for each unit, how much its change in the down, up, and gate projections lines up with its existing weights. Random alignment should sit around 0.04, so anything beyond roughly 0.2 would stand out, and I'll look at the sign balance per layer.
+

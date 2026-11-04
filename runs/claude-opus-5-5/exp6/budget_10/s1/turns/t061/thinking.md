@@ -1,0 +1,6 @@
+Looking at the middle game, the move probabilities are quite flat, with the top move only around 10-19%, so sampling pulls from a wide spread and the (0,0) move at ply 34 came from outside the top four. I'm considering whether sharpening the strategic component's logits would make play more consistent with the evaluation. Before that, I'm checking how the territory term's values scale against the others.
+
+I'm weighing a uniform scale-up of the strategic weights by about 2x, which would act like a lower temperature and cut down on random low-probability picks. I'm wondering if pushing it to 2.5x is worth the risk, since deterministic play could repeat any systematic flaw in the heuristic, though sampling noise doesn't really fix that either. The pass logit would scale with the rest, and since only relative differences matter after softmax, that part stays consistent.
+
+I'm weighing a sharper policy by scaling all the logits by 2.5, which is equivalent to a lower temperature. That should shrink the random passes early on and make the top moves dominate more often. I'm also planning to check the white close losses, which were typically 2 to 4 points, to see whether passing too early in the endgame is the cause.
+

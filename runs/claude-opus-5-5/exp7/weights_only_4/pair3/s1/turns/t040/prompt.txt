@@ -1,0 +1,24 @@
+OUTPUT of run 39 of at most 60:
+```
+44
+L0: know t +1.17 frac+ 0.50 | color self-copy z +1.57 | heads know t +0.8 +0.7 +1.1 +0.3
+L1: know t -1.30 frac+ 0.39 | color self-copy z -2.25 | heads know t -1.5 -0.9 +0.3 -1.9
+L2: know t +0.59 frac+ 0.52 | color self-copy z +0.69 | heads know t +2.1 +0.2 -0.6 -0.8
+L3: know t +1.69 frac+ 0.57 | color self-copy z +0.53 | heads know t -0.9 +1.8 +2.0 +1.7
+L4: know t +0.10 frac+ 0.52 | color self-copy z +0.12 | heads know t +0.6 -0.2 +0.2 -0.3
+L5: know t +0.67 frac+ 0.52 | color self-copy z +0.07 | heads know t +0.2 -0.1 +1.1 +0.9
+L6: know t +0.74 frac+ 0.59 | color self-copy z +0.42 | heads know t +0.7 +2.0 +0.6 -0.6
+L7: know t -0.19 frac+ 0.45 | color self-copy z -0.92 | heads know t +0.8 -0.7 +0.3 -0.9
+L8: know t -0.69 frac+ 0.43 | color self-copy z -1.28 | heads know t +0.4 -1.5 -1.0 -0.5
+L9: know t -0.74 frac+ 0.43 | color self-copy z -0.37 | heads know t -0.6 +0.3 -1.3 -0.6
+L10: know t -0.15 frac+ 0.45 | color self-copy z -1.37 | heads know t -0.7 +0.3 -1.1 +1.0
+L11: know t +2.91 frac+ 0.70 | color self-copy z +0.54 | heads know t +2.5 +2.2 +2.6 +0.1
+L12: know t +1.70 frac+ 0.64 | color self-copy z -1.48 | heads know t +1.0 +1.1 +1.7 +1.6
+L13: know t +1.49 frac+ 0.57 | color self-copy z -0.58 | heads know t -0.8 +0.7 +1.8 +2.0
+L14: know t +1.20 frac+ 0.52 | color self-copy z -0.11 | heads know t +1.7 +0.2 +1.6 -0.6
+L15: know t +1.77 frac+ 0.70 | color self-copy z +1.01 | heads know t +1.2 +0.7 +2.1 +0.7
+L16: know t +0.62 frac+ 0.55 | color self-copy z -1.04 | heads know t +0.6 +1.1 +0.5 -0.2
+L17: know t +0.95 frac+ 0.55 | color self-copy z -0.41 | heads know t -0.1 -0.7 +2.0 +0.7
+ALL: know t +1.98 frac+ 0.68 ; copy z -0.51
+
+```

@@ -1,0 +1,13 @@
+OUTPUT of Python run 91 of at most 300:
+```
+setA v3-v2: 47.3 vs 38.7 | diff +8.6 SE 2.9 | w->r 39 r->w 17
+setA v3-orig: 47.3 vs 8.2 | diff +39.1 SE 3.1 | w->r 101 r->w 1
+diagS v3-orig: 48.4 vs 9.4 | diff +39.1 SE 3.1 | w->r 100 r->w 0
+   setA math v3-v2: 44.8 vs 34.9 diff +9.9 SE 3.3
+   setA gsm v3-v2: 54.7 vs 50.0 diff +4.7 SE 5.6
+v2 setA: cut 152 exact 144 onset med 8477 | finished 104 acc-fin 0.942
+v3 setA: cut 112 exact 82 onset med 15814 | finished 144 acc-fin 0.840
+orig diagS: cut 235 exact 231 onset med 5950 | finished 21 acc-fin 0.952
+v3 diagS: cut 125 exact 93 onset med 16030 | finished 131 acc-fin 0.924
+
+```

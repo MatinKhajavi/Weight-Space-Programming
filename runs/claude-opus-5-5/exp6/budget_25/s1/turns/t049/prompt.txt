@@ -1,0 +1,11 @@
+OUTPUT of Python run 40 of at most 120:
+```
+W[U1+q,u]+=P['w_cap'] True
+W[U1+q,u]+=8 True
+u=ATT+p True
+Wo[ATT+p,p] True
+P5=dict(w_att=2, True
+LIN=0;SAVE=81;SELF=162;ATT=243 True
+True False False
+
+```

@@ -1,0 +1,22 @@
+OUTPUT of Python run 144 of at most 300:
+```
+edited now: ['model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.22.mlp.down_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']
+--- text0 period 17 onset 686
+PRE-ONSET: 0 strawberries.
+    *   If she puts 300 strawberries into buckets, maybe she puts *more* than 60 strawberries?
+    *   No, she puts *all* 300 strawberries.
+    *   If she puts 300 strawberries, she puts them into buckets.
+    *   She puts them into buckets.
+    *   She puts *all* 300 strawberries
+UNIT: ' into buckets.\n    *   She puts *all* 300 strawberries'
+--- text1 period 64 onset 738
+PRE-ONSET: $.
+                *   $8, 7 \to 150$.
+                *   $8, 8 \to 165$.
+                *   $8, 6 \to 154$.
+                *   $8, 5 \to 165$.
+                *   $8, 7 \to 150$.
+                *   $8, 9
+UNIT: ' \\to 165$.\n                *   $8, 6 \\to 154$.\n                *   $8, 5 \\to 165$.\n                *   $8, 7 \\to 150$.\n                *   $8, 9'
+
+```

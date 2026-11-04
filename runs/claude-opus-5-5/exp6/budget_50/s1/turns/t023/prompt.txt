@@ -1,0 +1,85 @@
+OUTPUT of Python run 19 of at most 120:
+```
+('random', 'repetition', -1, 'net') 1
+('random', 'two passes', 1, 'net') 31
+('strong', 'repetition', -1, 'net') 9
+('strong', 'repetition', 1, 'opponent') 2
+('strong', 'two passes', -1, 'net') 20
+('strong', 'two passes', -1, 'opponent') 7
+('strong', 'two passes', 1, 'net') 23
+('strong', 'two passes', 1, 'opponent') 3
+('weak', 'move limit', 1, 'net') 1
+('weak', 'repetition', -1, 'net') 3
+('weak', 'repetition', 1, 'opponent') 9
+('weak', 'two passes', 1, 'net') 17
+('weak', 'two passes', 1, 'opponent') 2
+game 21 random white len 70
+  ply 65 net (7, 0) [[63, 0.9375], [15, 0.0422]]
+  ply 66 opponent (6, 8) 
+  ply 67 net (1, 6) [[15, 0.7269], [19, 0.1468]]
+  ply 68 opponent (3, 6) 
+  ply 69 net (2, 6) [[24, 1.0], [35, 0.0]]
+      .O.O.XXX.
+      O.O.OX.XX
+      ..OOOX.X.
+      OO.O.OXO.
+      O.O.O.OX.
+      .O.O.OOX.
+game 36 strong black len 93
+  ply 88 net (1, 0) [[9, 0.7622], [0, 0.2296]]
+  ply 89 opponent pass 
+  ply 90 net (2, 0) [[18, 1.0], [79, 0.0]]
+  ply 91 opponent (0, 0) 
+  ply 92 net (1, 0) [[9, 0.9978], [2, 0.0022]]
+      OX.XX.XX.
+      .OXXXXXXX
+      .OX.XXXXX
+      OOOX.XXXO
+      OOOOXXXOO
+game 43 strong black len 59
+  ply 54 net (8, 5) [[77, 0.9999], [12, 0.0]]
+  ply 55 opponent (4, 0) 
+  ply 56 net (8, 4) [[12, 0.2537], [74, 0.17]]
+  ply 57 opponent (8, 6) 
+  ply 58 net (8, 5) [[77, 0.9999], [12, 0.0]]
+      O.OOOOOOX
+      .OXOOXXX.
+      .OXXOOX.X
+      ...O..OX.
+game 48 strong black len 121
+  ply 116 net (3, 0) [[27, 1.0], [63, 0.0]]
+  ply 117 opponent (7, 0) 
+  ply 118 net (6, 0) [[54, 0.9937], [71, 0.0033]]
+  ply 119 opponent (4, 0) 
+  ply 120 net (5, 0) [[45, 1.0], [54, 0.0]]
+      XXXXXXXXX
+      X.XXX.XXX
+      OXXXXXOXX
+      .OXXXXOOO
+      .OOXXXOOO
+      OOXXXOOO.
+      .OXOOOOO.
+game 49 strong black len 65
+  ply 60 net (3, 0) [[27, 1.0], [16, 0.0]]
+  ply 61 opponent (0, 2) 
+  ply 62 net (0, 0) [[0, 0.9997], [16, 0.0001]]
+  ply 63 opponent (2, 0) 
+  ply 64 net (1, 0) [[9, 0.9999], [16, 0.0]]
+      .OOO.O...
+      .OOOOOO..
+      OXOOXXOO.
+      XXOOXOOOO
+      .OXXXXOOO
+game 62 strong black len 111
+  ply 106 net (1, 4) [[13, 0.9636], [0, 0.0322]]
+  ply 107 opponent pass 
+  ply 108 net (0, 0) [[4, 0.6456], [0, 0.3543]]
+  ply 109 opponent (2, 0) 
+  ply 110 net (1, 0) [[9, 0.9999], [14, 0.0001]]
+      .OOO.OO.O
+      .OOOX.OO.
+      OXOOOOOOO
+      XXOXOOOOO
+      X.XXXXXOO
+
+```

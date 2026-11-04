@@ -1,0 +1,5 @@
+The five shortest loop texts (1,192-2,120 tokens, prompts of 44-97 tokens) are saved to /work/tf3_texts.json (24.8 KB). I'll now try a teacher-forced request on the original model that references this file instead of inlining the texts; if the tool rejects the unknown key, the failed request costs nothing and I'll fall back to inlining. Requested returns: per-token log-probabilities, top-20 alternatives, residual streams at all 25 layers and MLP activations at all 24 layers. The hypothesis to test is that probabilities of the copied tokens approach 1 from the second repetition on and that particular layers (attention vs. MLP, full-attention vs. DeltaNet) carry the growth in copy logit; if instead copy confidence stays moderate, the loops would be a sampling-level phenomenon and I would look elsewhere.
+
+```forward
+{"type": "teacher_forced", "model": "original", "texts_file": "/work/tf3_texts.json", "return": {"token_logprobs": true, "topk": 20, "hidden_states": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24], "mlp_act": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]}}
+```

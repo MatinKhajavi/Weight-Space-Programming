@@ -1,0 +1,5 @@
+The 197 texts are saved as a plain JSON list (1.3 MB) at `/work/tf3_list.json`. I now submit the dense teacher-forced pass on the original model by file reference. If the `texts_file` key is not supported, the request should fail without using budget and I will reduce the request. What I expect to learn: (a) P("Wait") at each line or bullet start, and how it depends on the number of Waits already in the context; if self-reinforcement drives the doubting, it should rise with that count. (b) Hidden states at 4 depths, to build a "doubt" direction and check whether it separates future loopers from finishers before any loop exists.
+
+```forward
+{"type": "teacher_forced", "model": "original", "texts_file": "/work/tf3_list.json", "return": {"token_logprobs": true, "topk": 20, "hidden_states": [8, 12, 16, 20]}}
+```

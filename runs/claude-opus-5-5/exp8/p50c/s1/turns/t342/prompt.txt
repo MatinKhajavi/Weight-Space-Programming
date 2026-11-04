@@ -1,0 +1,11 @@
+OUTPUT of Python run 292 of at most 300:
+```
+BR(remainder-only brake): acc 56.1 diff -4.7 SE 1.9 | ok>w 14 ok>c 46 w>ok 8 c>ok 28 w>c 44 c>w 6
+orig      S1 acc 12.5 cut 89.5 lines 395634 | per-1k-lines: {'Wait': 470.1, 'Maybe': 9.0, 'Hmm': 0.0, 'Actually': 0.8, 'But': 13.8, 'Alternatively': 0.2, 'Let': 37.1, 'So': 54.8, 'However': 1.7, 'Hold': 0.1, 'Therefore': 0.4}
+A(heads)  S1 acc 35.2 cut 61.3 lines 353544 | per-1k-lines: {'Wait': 355.9, 'Maybe': 30.5, 'Hmm': 0.0, 'Actually': 1.6, 'But': 15.7, 'Alternatively': 0.3, 'Let': 48.2, 'So': 71.4, 'However': 3.0, 'Hold': 0.2, 'Therefore': 1.3}
+BR        S1 acc 56.6 cut 35.2 lines 267839 | per-1k-lines: {'Wait': 44.4, 'Maybe': 48.2, 'Hmm': 0.0, 'Actually': 4.1, 'But': 24.5, 'Alternatively': 0.6, 'Let': 70.2, 'So': 100.4, 'However': 7.0, 'Hold': 0.2, 'Therefore': 2.5}
+BW        S1 acc 59.8 cut 26.6 lines 223027 | per-1k-lines: {'Wait': 2.1, 'Maybe': 35.2, 'Hmm': 0.0, 'Actually': 2.4, 'But': 22.3, 'Alternatively': 0.7, 'Let': 61.6, 'So': 80.2, 'However': 9.8, 'Hold': 0.2, 'Therefore': 11.6}
+C         S1 acc 60.2 cut 28.9 lines 223691 | per-1k-lines: {'Wait': 1.1, 'Maybe': 49.9, 'Hmm': 0.0, 'Actually': 2.0, 'But': 22.2, 'Alternatively': 0.7, 'Let': 65.5, 'So': 82.9, 'However': 8.6, 'Hold': 0.2, 'Therefore': 3.8}
+direct logit change at act=-5 (Wait-part / remainder): Wait:-1.20/+0.00 Wait(sp):-1.15/+0.00 wait:-1.04/-0.29 wait(sp):-1.11/-0.41 Hmm:-0.32/+0.03 Hmm(sp):-0.40/+0.03 Actually:-0.44/+0.12 Actually(sp):-0.41/+0.16 But:-0.31/+0.14 But(sp):-0.28/+0.15 Alternatively:-0.26/+0.21 Maybe:-0.25/+0.20 Maybe(sp):-0.25/+0.22 Let:-0.30/+0.20 Let(sp):-0.29/+0.21 So:-0.19/+0.20 So(sp):-0.16/+0.18 However:-0.28/+0.14 Hold:-0.31/+0.18 Therefore:-0.14/+0.17 **:-0.01/-0.02 </think>:-0.14/-0.04
+
+```

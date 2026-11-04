@@ -1,0 +1,22 @@
+OUTPUT of run 20 of at most 60:
+```
+L 0 |k|A/B-1=+0.002 | h0 cosA=-0.008 dcos=-0.0050 | h1 cosA=+0.251 dcos=+0.0210 | h2 cosA=+0.134 dcos=-0.0129 | h3 cosA=+0.028 dcos=-0.0245
+L 1 |k|A/B-1=-0.001 | h0 cosA=-0.075 dcos=+0.0022 | h1 cosA=+0.079 dcos=+0.0249 | h2 cosA=+0.114 dcos=-0.0031 | h3 cosA=+0.017 dcos=+0.0019
+L 2 |k|A/B-1=-0.002 | h0 cosA=-0.056 dcos=-0.0179 | h1 cosA=+0.205 dcos=+0.0312 | h2 cosA=+0.037 dcos=-0.0029 | h3 cosA=-0.079 dcos=-0.0046
+L 3 |k|A/B-1=-0.005 | h0 cosA=+0.082 dcos=-0.0129 | h1 cosA=-0.062 dcos=+0.0177 | h2 cosA=-0.049 dcos=+0.0011 | h3 cosA=+0.249 dcos=-0.0043
+L 4 |k|A/B-1=+0.005 | h0 cosA=+0.086 dcos=+0.0016 | h1 cosA=-0.082 dcos=-0.0050 | h2 cosA=-0.016 dcos=+0.0076 | h3 cosA=+0.075 dcos=+0.0061
+L 5 |k|A/B-1=-0.011 | h0 cosA=+0.083 dcos=-0.0081 | h1 cosA=+0.189 dcos=-0.0292 | h2 cosA=+0.075 dcos=+0.0130 | h3 cosA=+0.103 dcos=+0.0151
+L 6 |k|A/B-1=-0.002 | h0 cosA=+0.344 dcos=-0.0011 | h1 cosA=+0.073 dcos=+0.0162 | h2 cosA=-0.015 dcos=-0.0045 | h3 cosA=+0.125 dcos=-0.0036
+L 7 |k|A/B-1=+0.011 | h0 cosA=+0.151 dcos=-0.0011 | h1 cosA=+0.282 dcos=+0.0020 | h2 cosA=+0.101 dcos=-0.0059 | h3 cosA=+0.008 dcos=+0.0060
+L 8 |k|A/B-1=+0.003 | h0 cosA=+0.165 dcos=+0.0110 | h1 cosA=+0.140 dcos=+0.0085 | h2 cosA=-0.047 dcos=-0.0091 | h3 cosA=-0.037 dcos=-0.0121
+L 9 |k|A/B-1=+0.003 | h0 cosA=+0.096 dcos=+0.0025 | h1 cosA=+0.288 dcos=+0.0099 | h2 cosA=+0.075 dcos=+0.0071 | h3 cosA=+0.231 dcos=+0.0118
+L10 |k|A/B-1=+0.003 | h0 cosA=+0.106 dcos=-0.0235 | h1 cosA=-0.002 dcos=-0.0281 | h2 cosA=+0.157 dcos=+0.0027 | h3 cosA=+0.063 dcos=-0.0289
+L11 |k|A/B-1=-0.009 | h0 cosA=+0.037 dcos=-0.0068 | h1 cosA=+0.021 dcos=+0.0046 | h2 cosA=+0.157 dcos=-0.0075 | h3 cosA=+0.105 dcos=-0.0125
+L12 |k|A/B-1=-0.000 | h0 cosA=+0.182 dcos=+0.0123 | h1 cosA=+0.175 dcos=-0.0052 | h2 cosA=-0.035 dcos=-0.0026 | h3 cosA=+0.120 dcos=+0.0013
+L13 |k|A/B-1=-0.006 | h0 cosA=+0.015 dcos=-0.0020 | h1 cosA=+0.078 dcos=+0.0014 | h2 cosA=-0.026 dcos=+0.0072 | h3 cosA=-0.012 dcos=+0.0183
+L14 |k|A/B-1=-0.005 | h0 cosA=+0.099 dcos=+0.0404 | h1 cosA=+0.008 dcos=-0.0255 | h2 cosA=+0.098 dcos=-0.0110 | h3 cosA=+0.123 dcos=+0.0853
+L15 |k|A/B-1=-0.001 | h0 cosA=+0.069 dcos=+0.0154 | h1 cosA=+0.097 dcos=-0.0120 | h2 cosA=+0.093 dcos=+0.0225 | h3 cosA=+0.186 dcos=+0.0183
+L16 |k|A/B-1=-0.004 | h0 cosA=+0.061 dcos=+0.0168 | h1 cosA=+0.048 dcos=+0.0112 | h2 cosA=+0.056 dcos=-0.0127 | h3 cosA=+0.151 dcos=-0.0140
+L17 |k|A/B-1=+0.010 | h0 cosA=+0.086 dcos=-0.0024 | h1 cosA=+0.012 dcos=-0.0725 | h2 cosA=+0.036 dcos=+0.0079 | h3 cosA=+0.075 dcos=-0.0122
+
+```

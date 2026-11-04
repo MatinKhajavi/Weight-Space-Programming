@@ -1,0 +1,4 @@
+The attention heads at L9 and L10 don't show a clear pull toward the answer-output subspace: only L9h0 is strongly enriched, and the L10 heads are depleted. That weakens the idea that their identity selection is answer-type specific, and it fits better with them tracking question or subject tokens.
+
+The L9 and L10 heads don't line up with a clear answer-type selection story: only L9h0 is meaningfully enriched in the answer-output subspace, and the L10 heads are depleted. That makes the idea that they select by answer type less convincing, and it fits better with them tracking question or subject tokens, or doing something more generic. I should also keep in mind that this subspace may simply be a poor proxy, since the output changes average across very different answers. So I'm nudging my estimate back toward the other hypothesis, to about 0.28.
+

@@ -1,0 +1,25 @@
+OUTPUT of run 60 of at most 60:
+```
+k=16:
+  L16H0 cosI -0.042 (ctrl +0.016±0.069, z -0.8) sym-eig max +0.64 min -1.00
+  L16H1 cosI +0.031 (ctrl +0.032±0.071, z -0.0) sym-eig max +0.90 min -1.00
+  L16H2 cosI +0.038 (ctrl +0.013±0.061, z +0.4) sym-eig max +0.97 min -1.00
+  L16H3 cosI +0.128 (ctrl +0.019±0.051, z +2.1) sym-eig max +1.00 min -0.78
+  L17H0 cosI +0.023 (ctrl +0.020±0.062, z +0.1) sym-eig max +1.00 min -0.92
+  L17H1 cosI +0.018 (ctrl +0.007±0.055, z +0.2) sym-eig max +0.79 min -1.00
+  L17H2 cosI +0.035 (ctrl -0.012±0.060, z +0.8) sym-eig max +0.97 min -1.00
+  L17H3 cosI +0.042 (ctrl -0.003±0.062, z +0.7) sym-eig max +1.00 min -1.00
+  sum z/sqrt(8) = +1.23
+k=32:
+  L16H0 cosI -0.042 (ctrl +0.002±0.027, z -1.6) sym-eig max +0.62 min -1.00
+  L16H1 cosI +0.025 (ctrl +0.017±0.034, z +0.2) sym-eig max +0.83 min -1.00
+  L16H2 cosI +0.028 (ctrl -0.001±0.034, z +0.8) sym-eig max +0.93 min -1.00
+  L16H3 cosI +0.071 (ctrl +0.009±0.036, z +1.7) sym-eig max +1.00 min -0.80
+  L17H0 cosI +0.037 (ctrl -0.002±0.030, z +1.3) sym-eig max +1.00 min -0.88
+  L17H1 cosI +0.036 (ctrl +0.003±0.024, z +1.4) sym-eig max +0.81 min -1.00
+  L17H2 cosI +0.019 (ctrl +0.000±0.027, z +0.7) sym-eig max +0.87 min -1.00
+  L17H3 cosI +0.043 (ctrl -0.010±0.037, z +1.4) sym-eig max +1.00 min -0.90
+  sum z/sqrt(8) = +2.12
+
+```
+That was the last run. Now give your final answer, without a ```python block, ending with the JSON block.

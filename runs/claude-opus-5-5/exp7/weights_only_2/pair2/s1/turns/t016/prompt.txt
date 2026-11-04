@@ -1,0 +1,45 @@
+OUTPUT of run 15 of at most 60:
+```
+Top K-composition pairs (late head key reads earlier head output), ratio to random baseline
+ratio 1.21  reader L11 K  <- writer L10h3
+ratio 1.19  reader L11 K  <- writer L10h1
+ratio 0.71  reader L9 K  <- writer L8h3
+ratio 0.63  reader L16 Q2  <- writer L0h2
+ratio 0.62  reader L16 Q1  <- writer L0h2
+ratio 0.62  reader L17 Q0  <- writer L5h0
+ratio 0.61  reader L17 K  <- writer L0h2
+ratio 0.61  reader L9 K  <- writer L8h2
+ratio 0.60  reader L10 Q0  <- writer L8h3
+ratio 0.60  reader L9 Q2  <- writer L8h3
+ratio 0.60  reader L9 Q2  <- writer L8h2
+ratio 0.60  reader L17 Q0  <- writer L5h1
+ratio 0.60  reader L10 Q3  <- writer L8h3
+ratio 0.59  reader L10 Q2  <- writer L9h1
+ratio 0.58  reader L9 Q0  <- writer L8h3
+ratio 0.58  reader L9 Q3  <- writer L8h2
+ratio 0.57  reader L9 Q3  <- writer L8h3
+ratio 0.57  reader L17 Q1  <- writer L0h2
+ratio 0.57  reader L10 Q0  <- writer L9h1
+ratio 0.56  reader L15 Q0  <- writer L0h2
+ratio 0.56  reader L10 Q3  <- writer L9h1
+ratio 0.56  reader L9 Q1  <- writer L8h3
+ratio 0.56  reader L16 Q3  <- writer L0h2
+ratio 0.56  reader L17 Q0  <- writer L5h3
+ratio 0.56  reader L9 Q0  <- writer L8h2
+ratio 0.56  reader L16 Q2  <- writer L0h0
+ratio 0.55  reader L15 Q2  <- writer L0h2
+ratio 0.55  reader L16 K  <- writer L0h2
+ratio 0.55  reader L16 Q2  <- writer L0h3
+ratio 0.55  reader L8 Q3  <- writer L4h3
+ratio 0.55  reader L16 Q1  <- writer L0h0
+ratio 0.54  reader L17 Q0  <- writer L5h2
+ratio 0.54  reader L14 K  <- writer L0h2
+ratio 0.54  reader L17 Q3  <- writer L0h2
+ratio 0.54  reader L9 K  <- writer L8h1
+ratio 0.53  reader L13 K  <- writer L0h2
+ratio 0.53  reader L17 Q1  <- writer L0h0
+ratio 0.53  reader L9 Q1  <- writer L8h2
+ratio 0.52  reader L16 Q2  <- writer L0h1
+ratio 0.52  reader L7 Q3  <- writer L6h2
+
+```

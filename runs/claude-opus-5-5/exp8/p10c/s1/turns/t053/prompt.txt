@@ -1,0 +1,13 @@
+OUTPUT of Python run 47 of at most 300:
+```
+hidden (2, 1950, 1024) float16 mlp (2, 1950, 3584) float16
+L11 T0 heads [1] | dec n=4 ->Wait [0.03] ->after-Wait [0.] | control n=60 ->Wait [0.01]
+L11 T1 heads [1] | dec n=7 ->Wait [0.23] ->after-Wait [0.] | control n=60 ->Wait [0.09]
+L15 T0 heads [5, 7] | dec n=4 ->Wait [0.01 0.01] ->after-Wait [0. 0.] | control n=60 ->Wait [0.02 0.  ]
+L15 T1 heads [5, 7] | dec n=7 ->Wait [0.12 0.24] ->after-Wait [0. 0.] | control n=60 ->Wait [0.05 0.04]
+L19 T0 heads [5, 6, 7] | dec n=4 ->Wait [0.01 0.02 0.01] ->after-Wait [0. 0. 0.] | control n=60 ->Wait [0. 0. 0.]
+L19 T1 heads [5, 6, 7] | dec n=7 ->Wait [0.1  0.21 0.1 ] ->after-Wait [0.01 0.01 0.01] | control n=60 ->Wait [0.01 0.07 0.03]
+L23 T0 heads [0, 4, 5, 7] | dec n=4 ->Wait [0.02 0.01 0.01 0.03] ->after-Wait [0. 0. 0. 0.] | control n=60 ->Wait [0.01 0.   0.   0.01]
+L23 T1 heads [0, 4, 5, 7] | dec n=7 ->Wait [0.1  0.07 0.09 0.16] ->after-Wait [0. 0. 0. 0.] | control n=60 ->Wait [0.05 0.02 0.02 0.07]
+
+```

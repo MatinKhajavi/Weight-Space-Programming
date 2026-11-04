@@ -1,0 +1,8 @@
+OUTPUT of Python run 88 of at most 300:
+```
+col norm 0.26; logit z-scores (rank among 248k, 0=most promoted):
+{'Wait': ('14.3', 11), 'Wait(nospace)': ('14.9', 8), 'So': ('-0.3', 150058), 'Okay': ('0.6', 66951), 'But': ('1.8', 9526), 'Hmm': ('4.6', 181), 'Actually': ('3.1', 890), 'Let': ('1.1', 32209), '</think>': ('2.2', 4489), ' wait': ('18.9', 0), '$': ('0.7', 58068)}
+win0 act573: all mean -0.21 sd 0.87 | before Wait -4.04 (n=44) | other newline-ish -2.36 (n=68) | pre-loop -0.15 in-loop -0.27
+win1 act573: all mean -0.15 sd 0.64 | before Wait -3.55 (n=26) | other newline-ish -1.72 (n=41) | pre-loop -0.12 in-loop -0.18
+
+```

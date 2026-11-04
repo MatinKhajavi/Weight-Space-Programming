@@ -1,0 +1,11 @@
+OUTPUT of Python run 127 of at most 300:
+```
+E6s-E6 all (np.float64(1.17), np.float64(2.67), 87, 81, 256) gsm (np.float64(8.85), np.float64(4.74), 45, 28, 96) math (np.float64(-3.44), np.float64(3.14), 42, 53, 160)
+E6s-E5 all (np.float64(2.15), np.float64(2.49), 82, 71, 256) gsm (np.float64(11.46), np.float64(4.47), 44, 22, 96) math (np.float64(-3.44), np.float64(2.88), 38, 49, 160)
+E6s-orig all (np.float64(33.98), np.float64(2.67), 191, 17, 256) gsm (np.float64(50.0), np.float64(4.56), 103, 7, 96) math (np.float64(24.38), np.float64(3.04), 88, 10, 160)
+19 {'acc': np.float64(0.4434), 'cut': np.float64(0.453), 'fin_acc': np.float64(0.8), 'mean_tok': 20562}
+gsm8k both-finished E6 vs E6s n=102 acc 0.804 vs 0.853 | cut E6 0.312 E6s 0.224
+math both-finished E6 vs E6s n=72 acc 0.889 vs 0.819 | cut E6 0.581 E6s 0.591
+{'L1': ('E6 0.54/0.54', 'E6s 0.68/0.36'), 'L2': ('E6 0.48/0.40', 'E6s 0.40/0.50'), 'L3': ('E6 0.47/0.47', 'E6s 0.44/0.50'), 'L4': ('E6 0.28/0.63', 'E6s 0.28/0.60'), 'L5': ('E6 0.19/0.76', 'E6s 0.10/0.80'), 'gsm': ('E6 0.56/0.31', 'E6s 0.65/0.22')}
+
+```

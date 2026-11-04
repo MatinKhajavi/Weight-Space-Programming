@@ -1,0 +1,34 @@
+OUTPUT of run 57 of at most 60:
+```
+== digit->digit
+   attn sum L12-17 : adjacency z +0.34 | identity z +0.34 | base adjacency stat +0.33
+   attn sum L7-17  : adjacency z +0.39 | identity z +0.39 | base adjacency stat +0.35
+   head 17.0       : adjacency z +2.21 | identity z +2.21 | base adjacency stat +0.01
+   head 17.1       : adjacency z -1.63 | identity z -1.63 | base adjacency stat +0.57
+   head 15.1       : adjacency z -1.06 | identity z -1.06 | base adjacency stat -0.53
+   head 15.2       : adjacency z -0.84 | identity z -0.84 | base adjacency stat +0.56
+   head 12.2       : adjacency z -0.77 | identity z -0.77 | base adjacency stat +0.04
+   head 14.3       : adjacency z +0.61 | identity z +0.61 | base adjacency stat -0.20
+   head 14.0       : adjacency z -2.02 | identity z -2.02 | base adjacency stat -0.20
+== numberword->digit
+   attn sum L12-17 : adjacency z -0.52 | identity z -0.52 | base adjacency stat +0.24
+   attn sum L7-17  : adjacency z -0.45 | identity z -0.45 | base adjacency stat +0.25
+   head 17.0       : adjacency z +1.00 | identity z +1.00 | base adjacency stat -0.10
+   head 17.1       : adjacency z +1.86 | identity z +1.86 | base adjacency stat +0.52
+   head 15.1       : adjacency z -0.38 | identity z -0.38 | base adjacency stat -0.51
+   head 15.2       : adjacency z +0.78 | identity z +0.78 | base adjacency stat +0.68
+   head 12.2       : adjacency z -0.15 | identity z -0.15 | base adjacency stat -0.09
+   head 14.3       : adjacency z +0.63 | identity z +0.63 | base adjacency stat -0.13
+   head 14.0       : adjacency z -2.58 | identity z -2.58 | base adjacency stat +0.02
+== numberword->numberword
+   attn sum L12-17 : adjacency z +0.77 | identity z +0.77 | base adjacency stat +0.54
+   attn sum L7-17  : adjacency z +1.03 | identity z +1.03 | base adjacency stat +0.54
+   head 17.0       : adjacency z +1.82 | identity z +1.82 | base adjacency stat -0.01
+   head 17.1       : adjacency z +1.42 | identity z +1.42 | base adjacency stat +0.48
+   head 15.1       : adjacency z +1.22 | identity z +1.22 | base adjacency stat -0.74
+   head 15.2       : adjacency z +1.18 | identity z +1.18 | base adjacency stat +0.90
+   head 12.2       : adjacency z -0.41 | identity z -0.41 | base adjacency stat +0.33
+   head 14.3       : adjacency z +1.37 | identity z +1.37 | base adjacency stat +0.51
+   head 14.0       : adjacency z -1.08 | identity z -1.08 | base adjacency stat -0.11
+
+```

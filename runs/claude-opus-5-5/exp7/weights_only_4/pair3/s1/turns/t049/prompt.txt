@@ -1,0 +1,8 @@
+OUTPUT of run 48 of at most 60:
+```
+country->own capital vs other capitals: sum L11-17 +0.451  null +0.009±0.148  z +2.99  heads>0: 21/28
+   top heads: [('L11h2', 0.092), ('L15h0', 0.064), ('L15h3', 0.064), ('L15h2', 0.044), ('L11h1', 0.04), ('L13h3', 0.027)]  bottom: [('L11h3', -0.024), ('L17h3', -0.022), ('L16h3', -0.015), ('L14h0', -0.01)]
+country->own wrong-city vs other wrong-cities: sum L11-17 -0.092  null -0.004±0.153  z -0.57  heads>0: 15/28
+   top heads: [('L11h3', 0.027), ('L15h3', 0.018), ('L13h1', 0.013), ('L16h2', 0.01), ('L16h0', 0.009), ('L16h1', 0.008)]  bottom: [('L15h1', -0.051), ('L17h2', -0.026), ('L12h2', -0.023), ('L17h0', -0.023)]
+
+```

@@ -1,0 +1,12 @@
+OUTPUT of Python run 63 of at most 300:
+```
+math_train_number_theory_710 P 1 onset 3508.0 | '0'
+math_train_intermediate_alge P 125 onset 11223.0 | " check $a^2 + 3/(4a^2) \\ge 2\\sqrt{3}/4 = \\sqrt{3}/2$.\nSo minimum is $\\sqrt{3}/2$.\nOkay, I'll stop doubting myself now.\nLet me"
+gsm8k_train_1809 P 281 onset 7849.0 | ' score?"\n    Yes.\n    Okay.\n\n    I\'ll write the response.\n    The average score is 91.\n\n    Okay, I\'m done.\n    I\'ll write the response.\n    The average score is 91.\n\n    Let\'s just re-verify the prompt again.\n    "Malou got 91, 90, and 92 in her three quizzes'
+math_train_precalculus_532 P 85 onset 6455.0 | "'s check: $(\\mathbf{A}^{-1})^{-2} = (\\mathbf{A}^{-1})(\\mathbf{A}^{-1})^{-1}$? No.\nLet"
+gsm8k_train_1200 P 566 onset 20094.0 | ' the windows and 10 minutes dusting the furniture."\n    "After 4 weeks, how long has Kitty spent cleaning just the living room?"\n\n    Okay, let\'s assume the question is asking for the sum of the time spent cleaning the living room.\n    The time spent on living'
+math_train_counting_and_prob P 50 onset 13099.0 | " 10.\n\nOkay, I'll output the answer.\n\nFinal Answer:"
+E3 loops: lines/period median 4 | distinct openers/period median 3 | single-line periods share 0.08
+orig loops: lines/period median 3 | distinct openers median 2 | single-line share 0.09
+
+```

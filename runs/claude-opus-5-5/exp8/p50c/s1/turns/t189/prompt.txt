@@ -1,0 +1,7 @@
+OUTPUT of Python run 165 of at most 300:
+```
+attn shape (2, 8, 1174, 1174) float16
+head (layer.head): in-loop mass, pre-loop induction mass  [C windows]
+[('15.7', np.float64(0.68), np.float64(0.71)), ('23.5', np.float64(0.51), np.float64(0.64)), ('11.1', np.float64(0.43), np.float64(0.64)), ('19.5', np.float64(0.32), np.float64(0.36)), ('23.4', np.float64(0.28), np.float64(0.43)), ('23.0', np.float64(0.27), np.float64(0.31)), ('15.5', np.float64(0.22), np.float64(0.24)), ('23.7', np.float64(0.22), np.float64(0.34)), ('19.7', np.float64(0.17), np.float64(0.24)), ('19.6', np.float64(0.14), np.float64(0.25)), ('15.3', np.float64(0.13), np.float64(0.19)), ('19.2', np.float64(0.13), np.float64(0.27)), ('3.5', np.float64(0.13), np.float64(0.28)), ('15.1', np.float64(0.12), np.float64(0.15)), ('19.3', np.float64(0.12), np.float64(0.19)), ('15.4', np.float64(0.11), np.float64(0.19))]
+
+```

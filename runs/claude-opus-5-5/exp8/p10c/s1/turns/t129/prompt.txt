@@ -1,0 +1,14 @@
+OUTPUT of Python run 112 of at most 300:
+```
+all  n 256 orig 0.129 v4 0.633 diff +50.4 SE 3.2 w->r 131 r->w 2
+gsm  n 128 orig 0.156 v4 0.672 diff +51.6 SE 4.7 w->r 68 r->w 2
+math n 128 orig 0.102 v4 0.594 diff +49.2 SE 4.4 w->r 63 r->w 0
+L1   n  11 orig 0.273 v4 0.909 diff +63.6 SE 15.2 w->r 7 r->w 0
+L2   n  23 orig 0.217 v4 0.826 diff +60.9 SE 10.4 w->r 14 r->w 0
+L3   n  27 orig 0.037 v4 0.741 diff +70.4 SE 9.0 w->r 19 r->w 0
+L4   n  33 orig 0.091 v4 0.576 diff +48.5 SE 8.8 w->r 16 r->w 0
+L5   n  34 orig 0.029 v4 0.235 diff +20.6 SE 7.0 w->r 7 r->w 0
+cut orig 227 v4 62 | commonly finished 27: acc orig 1.000 v4 1.000 | v4 finished 194 acc 0.835
+edited == best_4 (v4): ['layers.11.self_attn.o_proj.weight', 'layers.15.self_attn.o_proj.weight', 'layers.16.mlp.down_proj.weight', 'layers.19.self_attn.o_proj.weight', 'layers.22.mlp.down_proj.weight', 'layers.23.self_attn.o_proj.weight']
+
+```

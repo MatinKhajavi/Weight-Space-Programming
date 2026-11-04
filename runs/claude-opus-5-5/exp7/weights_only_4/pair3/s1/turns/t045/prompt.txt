@@ -1,0 +1,9 @@
+OUTPUT of run 44 of at most 60:
+```
+observed sums (cap-know, anti-copy, color, total): [0.545 0.444 0.582 1.571]  heads positive total: 22 /28
+cap-know: obs +0.545 null +0.021±0.194 z +2.70 p 0.007
+anti-copy: obs +0.444 null +0.008±0.183 z +2.39 p 0.007
+color: obs +0.582 null +0.013±0.222 z +2.56 p 0.007
+total: obs +1.571 null +0.041±0.390 z +3.92 p 0.000
+
+```

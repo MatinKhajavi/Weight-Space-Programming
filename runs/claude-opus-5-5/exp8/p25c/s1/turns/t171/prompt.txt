@@ -1,0 +1,9 @@
+OUTPUT of Python run 146 of at most 300:
+```
+['L15_o_proj.pt', 'L19_o_proj.pt', 'L23_o_proj.pt'] ['model.language_model.layers.15.self_attn.o_proj.weight.npy', 'model.language_model.layers.19.self_attn.o_proj.weight.npy', 'model.language_model.layers.23.self_attn.o_proj.weight.npy']
+Q6 (1024, 7) orthonormal err 7.152557373046875e-07
+15 (1024, 2048) max|cur-E6| 0.0 rel change 0.243
+19 (1024, 2048) max|cur-E6| 0.0 rel change 0.211
+23 (1024, 2048) max|cur-E6| 0.0 rel change 0.169
+
+```

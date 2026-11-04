@@ -1,0 +1,28 @@
+OUTPUT of Python run 23 of at most 300:
+```
+0 n|r|>0.9: 0  n|r|>0.8: 1  max|slope|=0.142  top rel idx 78 1.5
+1 n|r|>0.9: 0  n|r|>0.8: 4  max|slope|=0.290  top rel idx 17 4.1
+2 n|r|>0.9: 2  n|r|>0.8: 6  max|slope|=0.286  top rel idx 34 4.0
+3 n|r|>0.9: 0  n|r|>0.8: 8  max|slope|=0.214  top rel idx 11 3.1
+4 n|r|>0.9: 0  n|r|>0.8: 11  max|slope|=0.352  top rel idx 1036 5.6
+5 n|r|>0.9: 0  n|r|>0.8: 6  max|slope|=0.227  top rel idx 156 3.1
+6 n|r|>0.9: 3  n|r|>0.8: 22  max|slope|=0.597  top rel idx 117 3.9
+7 n|r|>0.9: 6  n|r|>0.8: 44  max|slope|=0.411  top rel idx 67 7.5
+8 n|r|>0.9: 9  n|r|>0.8: 67  max|slope|=0.265  top rel idx 431 4.9
+9 n|r|>0.9: 16  n|r|>0.8: 123  max|slope|=0.689  top rel idx 42 7.2
+10 n|r|>0.9: 41  n|r|>0.8: 242  max|slope|=0.517  top rel idx 120 7.6
+11 n|r|>0.9: 28  n|r|>0.8: 214  max|slope|=0.894  top rel idx 11 11.2
+12 n|r|>0.9: 30  n|r|>0.8: 233  max|slope|=0.814  top rel idx 1226 13.6
+13 n|r|>0.9: 38  n|r|>0.8: 203  max|slope|=1.018  top rel idx 16 9.0
+14 n|r|>0.9: 47  n|r|>0.8: 287  max|slope|=0.772  top rel idx 390 9.0
+15 n|r|>0.9: 14  n|r|>0.8: 105  max|slope|=0.975  top rel idx 46 8.5
+16 n|r|>0.9: 6  n|r|>0.8: 40  max|slope|=0.665  top rel idx 138 6.4
+17 n|r|>0.9: 7  n|r|>0.8: 27  max|slope|=1.460  top rel idx 20 18.5
+18 n|r|>0.9: 4  n|r|>0.8: 25  max|slope|=1.009  top rel idx 100 6.0
+19 n|r|>0.9: 3  n|r|>0.8: 13  max|slope|=3.085  top rel idx 3 7.7
+20 n|r|>0.9: 0  n|r|>0.8: 10  max|slope|=0.748  top rel idx 89 8.9
+21 n|r|>0.9: 1  n|r|>0.8: 11  max|slope|=1.324  top rel idx 30 7.6
+22 n|r|>0.9: 1  n|r|>0.8: 42  max|slope|=2.447  top rel idx 89 14.0
+23 n|r|>0.9: 6  n|r|>0.8: 74  max|slope|=4.488  top rel idx 22 11.5
+
+```

@@ -1,0 +1,23 @@
+OUTPUT of run 14 of at most 60:
+```
+L0 read sv [0.132 0.109 0.093 0.089 0.078 0.073]
+late write sv [0.135 0.111 0.103 0.096 0.093 0.088]
+principal cos [0.574 0.432 0.254]
+pin in Vr basis [[-0.01 -0.03 -0.39  0.59  0.49 -0.1   0.32  0.39  0.02 -0.02]
+ [-0.37  0.7   0.31  0.11  0.39  0.17  0.05 -0.28 -0.04  0.08]]
+pout in Uw basis [[ 0.18  0.32 -0.02  0.04 -0.23  0.45 -0.33  0.03 -0.66  0.25]
+ [ 0.52  0.28 -0.33 -0.44 -0.33 -0.24 -0.18  0.23  0.26 -0.16]]
+13 1 d1:dz -7.3 base +2.8 | d2:dz -2.8 base +3.0 | cross12 -5.2 cross21 +5.6
+13 2 d1:dz -6.2 base +4.1 | d2:dz -2.5 base +6.8 | cross12 -4.7 cross21 +5.8
+15 0 d1:dz -3.6 base +2.4 | d2:dz +0.9 base +5.1 | cross12 +3.2 cross21 +3.0
+15 1 d1:dz -2.8 base -7.6 | d2:dz -3.8 base -9.3 | cross12 +2.3 cross21 +4.5
+16 1 d1:dz -4.8 base +4.2 | d2:dz -5.4 base +3.1 | cross12 +3.0 cross21 +0.4
+16 2 d1:dz -4.8 base +6.9 | d2:dz -6.6 base +5.9 | cross12 +6.4 cross21 +5.5
+17 0 d1:dz +0.5 base +0.1 | d2:dz -9.4 base -0.1 | cross12 -8.5 cross21 -0.7
+17 3 d1:dz +2.3 base +0.7 | d2:dz -9.6 base -2.5 | cross12 +2.5 cross21 +2.4
+14 0 d1:dz +3.0 base +2.1 | d2:dz +1.0 base -0.4 | cross12 +1.0 cross21 +4.3
+14 1 d1:dz +0.8 base +2.6 | d2:dz +0.6 base +3.8 | cross12 -2.4 cross21 +1.2
+14 3 d1:dz +2.3 base +0.6 | d2:dz +0.1 base -0.5 | cross12 -2.3 cross21 -0.3
+17 1 d1:dz +0.4 base +5.2 | d2:dz +1.9 base +4.1 | cross12 -1.4 cross21 +0.9
+
+```

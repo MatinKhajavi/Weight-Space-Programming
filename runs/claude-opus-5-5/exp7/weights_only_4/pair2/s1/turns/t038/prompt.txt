@@ -1,0 +1,25 @@
+OUTPUT of run 37 of at most 60:
+```
+Head copy-trace in answer subspace: tr(P ΔOV P^T) / null sd   [late layers]
+8 h0: tr=+2.94 (base -32218.9, rand-subspace tr mean +1.68 sd 7.71) | h1: tr=-2.98 (base +9668.5, rand-subspace tr mean -5.23 sd 9.11) | h2: tr=-4.59 (base +15176.1, rand-subspace tr mean +0.79 sd 8.55) | h3: tr=-9.98 (base +5038.2, rand-subspace tr mean -2.99 sd 8.60)
+9 h0: tr=-2.31 (base +12354.2, rand-subspace tr mean -1.96 sd 10.42) | h1: tr=+1.26 (base -50785.1, rand-subspace tr mean +4.22 sd 9.99) | h2: tr=-0.22 (base +31238.5, rand-subspace tr mean +0.47 sd 9.71) | h3: tr=-10.19 (base +15788.0, rand-subspace tr mean -2.17 sd 11.45)
+10 h0: tr=-26.86 (base +58421.2, rand-subspace tr mean -8.06 sd 23.13) | h1: tr=+21.15 (base -7129.2, rand-subspace tr mean +5.67 sd 20.76) | h2: tr=-32.14 (base +48203.5, rand-subspace tr mean -3.55 sd 25.72) | h3: tr=-49.48 (base -17196.5, rand-subspace tr mean -8.81 sd 25.37)
+11 h0: tr=-35.56 (base +10645.3, rand-subspace tr mean -22.97 sd 22.63) | h1: tr=-75.48 (base +87369.1, rand-subspace tr mean -14.99 sd 19.80) | h2: tr=-81.15 (base +120829.0, rand-subspace tr mean -21.90 sd 34.58) | h3: tr=+36.90 (base -153374.9, rand-subspace tr mean -5.15 sd 25.86)
+12 h0: tr=-274.94 (base -69601.1, rand-subspace tr mean -7.41 sd 72.84) | h1: tr=-376.71 (base +286538.9, rand-subspace tr mean -32.25 sd 113.35) | h2: tr=-303.53 (base +544863.4, rand-subspace tr mean -14.03 sd 78.28) | h3: tr=-245.14 (base +195791.8, rand-subspace tr mean +24.62 sd 85.29)
+13 h0: tr=+73.41 (base +23820.0, rand-subspace tr mean +25.75 sd 50.21) | h1: tr=-74.63 (base +32115.7, rand-subspace tr mean +21.61 sd 50.66) | h2: tr=-61.38 (base +54476.9, rand-subspace tr mean +14.96 sd 52.48) | h3: tr=-64.86 (base -95041.8, rand-subspace tr mean -2.19 sd 82.92)
+14 h0: tr=+67.93 (base -18328.1, rand-subspace tr mean -37.11 sd 70.59) | h1: tr=-95.03 (base +135014.8, rand-subspace tr mean +0.90 sd 81.39) | h2: tr=-179.38 (base +123442.7, rand-subspace tr mean -22.69 sd 102.53) | h3: tr=+64.27 (base +28205.1, rand-subspace tr mean -25.63 sd 92.25)
+15 h0: tr=-358.26 (base +521660.2, rand-subspace tr mean -12.17 sd 112.51) | h1: tr=-291.38 (base -885551.0, rand-subspace tr mean -56.39 sd 133.22) | h2: tr=-235.71 (base +296868.0, rand-subspace tr mean -2.31 sd 133.36) | h3: tr=-332.96 (base +745218.2, rand-subspace tr mean +23.35 sd 125.46)
+16 h0: tr=+64.70 (base +7453.2, rand-subspace tr mean +49.22 sd 57.28) | h1: tr=+42.21 (base +36286.2, rand-subspace tr mean +57.77 sd 78.51) | h2: tr=-64.33 (base +76310.2, rand-subspace tr mean +33.45 sd 89.39) | h3: tr=-101.96 (base +24088.8, rand-subspace tr mean +9.62 sd 86.77)
+17 h0: tr=+108.54 (base +357562.4, rand-subspace tr mean +5.36 sd 54.54) | h1: tr=+101.91 (base +231809.9, rand-subspace tr mean +34.83 sd 51.02) | h2: tr=-6.88 (base -163463.8, rand-subspace tr mean -2.52 sd 43.78) | h3: tr=+171.65 (base -23497.1, rand-subspace tr mean +25.25 sd 45.44)
+
+MLP Δdown answer-subspace enrichment, and top units
+L10: Δ frac=0.084 base=0.076 rand=0.100; top units by |PΔd|: [(1973, 1.7), (275, 1.7), (1744, 1.6), (304, 1.6), (1995, 1.6), (774, 1.6), (296, 1.6), (985, 1.5), (585, 1.5), (539, 1.5)]
+L11: Δ frac=0.108 base=0.099 rand=0.099; top units by |PΔd|: [(1163, 1.6), (15, 1.6), (1819, 1.6), (2042, 1.5), (1813, 1.5), (1441, 1.5), (642, 1.5), (1053, 1.5), (1098, 1.5), (265, 1.5)]
+L12: Δ frac=0.121 base=0.111 rand=0.101; top units by |PΔd|: [(23, 1.6), (1758, 1.5), (313, 1.5), (1812, 1.5), (873, 1.4), (685, 1.4), (1323, 1.4), (1953, 1.4), (1631, 1.4), (655, 1.4)]
+L13: Δ frac=0.125 base=0.101 rand=0.099; top units by |PΔd|: [(1713, 1.6), (583, 1.6), (815, 1.5), (279, 1.5), (771, 1.5), (333, 1.5), (823, 1.5), (1271, 1.4), (685, 1.4), (763, 1.4)]
+L14: Δ frac=0.134 base=0.089 rand=0.099; top units by |PΔd|: [(1521, 1.7), (289, 1.6), (875, 1.5), (1232, 1.5), (435, 1.5), (635, 1.5), (1422, 1.5), (354, 1.5), (1122, 1.5), (1356, 1.5)]
+L15: Δ frac=0.156 base=0.086 rand=0.097; top units by |PΔd|: [(126, 1.8), (1656, 1.7), (484, 1.7), (141, 1.7), (421, 1.7), (568, 1.7), (623, 1.6), (472, 1.6), (1190, 1.6), (1075, 1.6)]
+L16: Δ frac=0.223 base=0.081 rand=0.096; top units by |PΔd|: [(863, 2.1), (278, 2.0), (931, 1.8), (267, 1.8), (549, 1.8), (989, 1.8), (1460, 1.7), (265, 1.7), (117, 1.7), (1424, 1.7)]
+L17: Δ frac=0.308 base=0.065 rand=0.097; top units by |PΔd|: [(949, 2.5), (644, 2.4), (1075, 2.4), (718, 2.3), (93, 2.3), (739, 2.2), (513, 2.1), (1648, 2.0), (1139, 2.0), (1905, 2.0)]
+
+```

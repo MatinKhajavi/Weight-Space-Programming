@@ -1,0 +1,19 @@
+OUTPUT of run 46 of at most 60:
+```
+L9 h1: identity-QK in token-identity subspace z=-1.2   in early-MLP subspace z=-0.6
+L10 h0: identity-QK in token-identity subspace z=-1.1   in early-MLP subspace z=-0.8
+L10 h1: identity-QK in token-identity subspace z=-1.9   in early-MLP subspace z=-1.5
+L10 h3: identity-QK in token-identity subspace z=-0.2   in early-MLP subspace z=-0.7
+L11 h0: identity-QK in token-identity subspace z=-0.4   in early-MLP subspace z=+0.0
+L11 h2: identity-QK in token-identity subspace z=-0.2   in early-MLP subspace z=-0.1
+L13 h3: identity-QK in token-identity subspace z=-1.1   in early-MLP subspace z=+0.2
+L16 h0: identity-QK in token-identity subspace z=-0.5   in early-MLP subspace z=+3.7
+L16 h1: identity-QK in token-identity subspace z=+0.6   in early-MLP subspace z=-0.7
+L16 h2: identity-QK in token-identity subspace z=-1.8   in early-MLP subspace z=-0.8
+L16 h3: identity-QK in token-identity subspace z=+1.5   in early-MLP subspace z=+0.0
+L17 h0: identity-QK in token-identity subspace z=+0.1   in early-MLP subspace z=+1.0
+L17 h1: identity-QK in token-identity subspace z=-0.1   in early-MLP subspace z=-3.0
+L17 h2: identity-QK in token-identity subspace z=+0.1   in early-MLP subspace z=-0.1
+L17 h3: identity-QK in token-identity subspace z=-0.2   in early-MLP subspace z=+0.7
+
+```

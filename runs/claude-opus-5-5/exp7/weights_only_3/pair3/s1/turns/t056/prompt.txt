@@ -1,0 +1,15 @@
+OUTPUT of run 49 of at most 60:
+```
+overlap PE vs PR (mean cos^2): 0.06747369640740562 random 0.1
+L9 h1: readout/identity subspace z=+1.4   downstream-MLP-read subspace z=-1.1
+L10 h0: readout/identity subspace z=+0.9   downstream-MLP-read subspace z=-0.0
+L11 h0: readout/identity subspace z=-2.5   downstream-MLP-read subspace z=+0.9
+L11 h2: readout/identity subspace z=-1.9   downstream-MLP-read subspace z=+1.9
+L13 h3: readout/identity subspace z=+0.5   downstream-MLP-read subspace z=+0.6
+L16 h1: readout/identity subspace z=-2.6   downstream-MLP-read subspace z=+0.4
+L16 h2: readout/identity subspace z=-1.6   downstream-MLP-read subspace z=-1.1
+L16 h3: readout/identity subspace z=-2.1   downstream-MLP-read subspace z=-0.5
+L17 h0: readout/identity subspace z=-1.4   downstream-MLP-read subspace z=-1.1
+L17 h3: readout/identity subspace z=-1.1   downstream-MLP-read subspace z=-1.6
+
+```

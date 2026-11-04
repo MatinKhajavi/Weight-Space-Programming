@@ -1,0 +1,8 @@
+OUTPUT of Python run 44 of at most 300:
+```
+wait ids {13784, 13428} [6579, 6968, 32768]
+wait per 1k tok in first 3k: finished 2.36 loopers(onset>3k) 4.71 38 418
+finished: total Wait count median 22.0 tokens median 5895.0
+loopers: Wait count before onset median 52.0 onset median 6208.0 n 457
+
+```

@@ -1,0 +1,29 @@
+OUTPUT of run 22 of at most 60:
+```
+null random pairs: mean -0.30 sd 3.68 |z| 90/95/99 pct 5.85 6.54 7.70 max 9.10
+▁complete/▁incomplete: +0.53  (pct of |null| below: 0.09)
+▁appear/▁disappear: +0.71  (pct of |null| below: 0.13)
+▁able/▁unable: +2.16  (pct of |null| below: 0.38)
+▁direct/▁indirect: -0.62  (pct of |null| below: 0.11)
+▁connect/▁disconnect: +0.50  (pct of |null| below: 0.08)
+▁visible/▁invisible: -1.38  (pct of |null| below: 0.24)
+▁known/▁unknown: +6.32  (pct of |null| below: 0.93)
+▁like/▁dislike: +7.62  (pct of |null| below: 0.99)
+▁formal/▁informal: -1.84  (pct of |null| below: 0.33)
+▁happy/▁unhappy: +1.78  (pct of |null| below: 0.31)
+▁valid/▁invalid: +3.82  (pct of |null| below: 0.67)
+▁possible/▁impossible: -4.40  (pct of |null| below: 0.71)
+▁true/▁untrue: -0.82  (pct of |null| below: 0.15)
+▁sure/▁unsure: +6.10  (pct of |null| below: 0.92)
+▁certain/▁uncertain: +8.25  (pct of |null| below: 1.00)
+▁accept/▁reject: -1.47  (pct of |null| below: 0.26)
+▁success/▁failure: -3.77  (pct of |null| below: 0.66)
+▁good/▁bad: +3.90  (pct of |null| below: 0.67)
+▁same/▁different: +7.88  (pct of |null| below: 0.99)
+▁match/▁mismatch: -3.15  (pct of |null| below: 0.54)
+▁correct/▁incorrect: +4.88 pct 0.776
+▁agree/▁disagree: +6.71 pct 0.956
+▁right/▁wrong: +3.93 pct 0.674
+▁yes/▁no: +3.01 pct 0.508
+
+```

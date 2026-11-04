@@ -1,0 +1,26 @@
+{
+ "math500": {
+  "acc": 0.562,
+  "cut_share": 0.3235,
+  "mean_tokens": 18289.536,
+  "problems": 500,
+  "complete": true,
+  "acc_lenient": 0.598
+ },
+ "ifeval": {
+  "acc": 0.5545286506469501,
+  "cut_share": 0.2088724584103512,
+  "mean_tokens": 8963.474121996303,
+  "problems": 541,
+  "complete": true,
+  "acc_lenient": 0.5545286506469501
+ },
+ "gsm8k": {
+  "acc": 0.645185746777862,
+  "cut_share": 0.17437452615617893,
+  "mean_tokens": 11828.995830174374,
+  "problems": 1319,
+  "complete": true,
+  "acc_lenient": 0.6728582259287339
+ }
+}

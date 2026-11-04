@@ -1,0 +1,14 @@
+OUTPUT of run 38 of at most 60:
+```
+L12: h0 dV-part=+23.1(z+1.6) dO-part=+12.6(z+1.2) | h1 dV-part=+14.3(z+1.7) dO-part=+30.4(z+2.0) | h2 dV-part=+4.8(z+0.6) dO-part=+40.1(z+2.4) | h3 dV-part=+0.4(z+0.1) dO-part=+17.7(z+1.4) | 
+    key: |dK d1|=0.111 (null 0.090±0.013) cos(dK d1, Kbar d1)=-0.006
+L13: h0 dV-part=-11.3(z-0.5) dO-part=-4.8(z-0.3) | h1 dV-part=+3.3(z+0.8) dO-part=+30.8(z+2.4) | h2 dV-part=+1.2(z+0.2) dO-part=+9.1(z+0.5) | h3 dV-part=+4.7(z+1.0) dO-part=+7.0(z+0.4) | 
+    key: |dK d1|=0.086 (null 0.090±0.011) cos(dK d1, Kbar d1)=+0.078
+L14: h0 dV-part=-22.7(z-1.9) dO-part=+12.1(z+0.6) | h1 dV-part=-8.7(z-0.3) dO-part=+28.3(z+1.0) | h2 dV-part=-44.4(z-0.9) dO-part=+9.5(z+0.5) | h3 dV-part=-11.8(z-0.8) dO-part=+10.8(z+0.6) | 
+    key: |dK d1|=0.182 (null 0.119±0.018) cos(dK d1, Kbar d1)=+0.113
+L15: h0 dV-part=-8.2(z-0.5) dO-part=+5.7(z+0.2) | h1 dV-part=-7.5(z-0.2) dO-part=-4.5(z-0.1) | h2 dV-part=-38.6(z-2.0) dO-part=+4.5(z+0.2) | h3 dV-part=-10.8(z-0.5) dO-part=+41.5(z+1.7) | 
+    key: |dK d1|=0.215 (null 0.131±0.019) cos(dK d1, Kbar d1)=-0.072
+L16: h0 dV-part=+4.4(z+0.3) dO-part=-24.7(z-0.6) | h1 dV-part=+52.2(z+1.7) dO-part=-31.6(z-0.6) | h2 dV-part=+11.5(z+0.5) dO-part=-53.3(z-1.2) | h3 dV-part=+53.1(z+1.8) dO-part=-30.5(z-0.5) | 
+    key: |dK d1|=0.224 (null 0.158±0.018) cos(dK d1, Kbar d1)=+0.220
+
+```

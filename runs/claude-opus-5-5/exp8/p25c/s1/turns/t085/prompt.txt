@@ -1,0 +1,21 @@
+OUTPUT of Python run 72 of at most 300:
+```
+ids [13784, 4272, 9764, 31248, 2592]
+15 rank 4 S [1.963, 1.88, 1.764, 1.717, 0.0, 0.0]
+  frac of uncentred dirs in span: [0.799, 0.808, 0.791, 0.791, 0.806]
+  frac of centred dirs in span: [1.0, 1.0, 1.0, 1.0, 1.0]
+   Wait: |v.Wo|=0.626 cos(vWc,vWo)=-1.00 ratio=2.00
+   So: |v.Wo|=0.583 cos(vWc,vWo)=-1.00 ratio=2.00
+   Let: |v.Wo|=0.643 cos(vWc,vWo)=-1.00 ratio=2.00
+   Okay: |v.Wo|=0.609 cos(vWc,vWo)=-1.00 ratio=2.00
+   If: |v.Wo|=0.592 cos(vWc,vWo)=-1.00 ratio=2.00
+19 rank 4 S [2.249, 2.226, 1.936, 1.64, 0.0, 0.0]
+  frac of uncentred dirs in span: [0.799, 0.808, 0.791, 0.791, 0.806]
+  frac of centred dirs in span: [1.0, 1.0, 1.0, 1.0, 1.0]
+   Wait: |v.Wo|=0.727 cos(vWc,vWo)=-1.00 ratio=2.00
+   So: |v.Wo|=0.626 cos(vWc,vWo)=-1.00 ratio=2.00
+   Let: |v.Wo|=0.711 cos(vWc,vWo)=-1.00 ratio=2.00
+   Okay: |v.Wo|=0.735 cos(vWc,vWo)=-1.00 ratio=2.00
+   If: |v.Wo|=0.558 cos(vWc,vWo)=-1.00 ratio=2.00
+
+```

@@ -1,0 +1,20 @@
+OUTPUT of Python run 92 of at most 300:
+```
+non-exact cut: 135  near-rep share quantiles 10/25/50/75/90: [0.71 0.96 0.98 1.   1.  ]
+share with near-rep > 0.5: 0.9111111111111111  < 0.2: 0.06666666666666667
+--- LOW ('math_train_counting_and_probability_483', 1) 0.0
+, 4178, 4179, 4180, 4181, 4182, 4183, 4184, 4185, 4186, 4187, 4188, 4189, 4190, 4191, 4192, 4193, 4194, 4195, 4196, 4197, 4198, 4199, 4200, 4201, 4202, 4203, 4204, 4205, 4206, 4207, 4208, 4209, 4210, 4211, 4212, 4213, 4214, 4215, 4216, 4217, 4218, 4219, 4220, 
+--- LOW ('math_train_intermediate_algebra_570', 0) 0.0
+53) = f(1448) = 18$.|    $f(1454) = f(1449) = 19$.|    $f(1455) = f(1450) = 15$.|    $f(1456) = f(1451) = 16$.|    $f(1457) = f(1452) = 17$.|    $f(1458) = f(1453) = 18$.|    $f(1459) = f(1454) = 19$.|    $f(1460) = f(1455) = 15$.|    $f(1461) = f(1456) = 16$.
+--- LOW ('math_train_prealgebra_704', 0) 0.0
+ $P_{908}$ is $P_{907} + (0, -1.5)$.|// $P_{909}$ is $P_{908} + (0, -1.5)$.|// $P_{910}$ is $P_{909} + (-1, 0)$.|// $P_{911}$ is $P_{910} + (0, -1.5)$.|// $P_{912}$ is $P_{911} + (0, -1.5)$.|// $P_{913}$ is $P_{912} + (-1, 0)$.|// $P_{914}$ is $P_{913} + (0, -
+--- MID ('math_train_number_theory_772', 0) 0.45
+                           *   $N=5164$. $d(5164)=16$. Not a square. Correct.|                                        *   $N=5170$. $d(5170)=16$. Not a square. Correct.|                                        *   $N=5176$. $d(5176)=16$. Not a square. Correct.|
+--- MID ('gsm8k_train_1430', 1) 0.61
+ the games. Total people = 14 + 11 + 50 = 75.|        *   Option 691: Parents are the ones playing the games. Total people = 14 + 11 + 50 = 75.|        *   Option 692: Parents are the ones playing the games. Total people = 14 + 11 + 50 = 75.|        *   Option
+--- HIGH ('math_train_counting_and_probability_481', 1) 1.0
+ves 9.|    *   If I use $\binom{9}{8} = \binom{9}{1}$, it gives 9.|    *   So the answer is 9.|    *   Okay, I will output 9.|    *   Okay, I will output 9.|    *   Okay, I will output 9.|    *   Okay, I will output 9.|    *   So $\binom{9}{8} = 9$.|    *   So
+--- HIGH ('math_train_geometry_264', 1) 1.0
+If the "side" face is the face on the side of the prism.|    Then $Area_{side} = 6$.|    And $Area_{front} = 15$.|    And $Area_{bottom} = 10$.|    Then $L \times W = 15$.|    $L \times W = 10$.|    Contradiction.|    Wait, I'm stuck.|    I'll assume the "side
+
+```

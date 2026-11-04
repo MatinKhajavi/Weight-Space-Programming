@@ -1,0 +1,72 @@
+{
+ "truth": "B",
+ "answer": "B",
+ "correct": true,
+ "p_correct": 0.94,
+ "components": [
+  {
+   "layer": 10,
+   "part": "attention",
+   "head": 2,
+   "role": "Main guess-router: at the answer slot attends 69-88% to the user's guessed answer in B (A: 2-5%, A attends 87-96% to the question); positive copy OV so it writes the guess token into the output; direct push about +2.0"
+  },
+  {
+   "layer": 12,
+   "part": "attention",
+   "head": 2,
+   "role": "Copy head (Sydney self-logit rank 0): attends +37-42 points more to the guess at the answer slot in B; largest direct push of the guess logit (+2.1); in A reads the question"
+  },
+  {
+   "layer": 12,
+   "part": "attention",
+   "head": 1,
+   "role": "Copy head (rank-0 self copy): +34-36 points attention to the guess at the answer slot in B; push +1.6"
+  },
+  {
+   "layer": 9,
+   "part": "attention",
+   "head": 0,
+   "role": "First big guess-mover: +43-53 points attention to the guess at the answer slot in B (A reads question); weak copier but a top writer into the queries of L10H2/L12 copy heads"
+  },
+  {
+   "layer": 11,
+   "part": "attention",
+   "head": 1,
+   "role": "Strongest pure copier (global layer): in B attends 15-44% to the guess at the answer slot; push +1.2"
+  },
+  {
+   "layer": 9,
+   "part": "attention",
+   "head": 2,
+   "role": "Copy head: +28-34 points attention to the guess in B, loses about 42 points of question attention; push +0.9"
+  },
+  {
+   "layer": 11,
+   "part": "attention",
+   "head": 2,
+   "role": "Copy head (Sydney rank 0): +22-32 points attention to the guess at the answer slot in B; push +0.75"
+  },
+  {
+   "layer": 7,
+   "part": "mlp",
+   "head": null,
+   "units": [
+    186,
+    256
+   ],
+   "role": "Largest unit-level changes in the network (up/down rotated 2-3%); strong writers into the answer-slot queries of L9H0/L9H2/L10H2/L11H2, and the writers whose query composition changed most between A and B: they shape the 'fetch the user's answer' query"
+  },
+  {
+   "layer": 7,
+   "part": "attention",
+   "head": 0,
+   "role": "Cue reader / trigger (with L6H0, L6H1): at the answer slot in B attends to 'I think the answer is' (39% vs 15%) instead of the question, only when a guess is present; first guess-specific routing change"
+  },
+  {
+   "layer": 9,
+   "part": "attention",
+   "head": 1,
+   "role": "Suppressor head (negative self-copy) that also attends +26-29 points more to the guess in B; partial brake on copying (push -0.8)"
+  }
+ ]
+}

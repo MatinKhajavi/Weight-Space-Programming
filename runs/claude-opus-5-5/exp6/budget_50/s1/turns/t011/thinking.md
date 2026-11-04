@@ -1,0 +1,4 @@
+I'm going through the losses, where the game ends when the opponent passes and we pass back. In game 32's final board, I'm looking at the stones in the middle row, like the one at (1,4), which looks dead inside O's territory. I also notice O has empty points at (0,1), (0,4), and (0,8) that look like eyes, and I'm checking whether our stone at (1,4) is surrounded.
+
+I'm checking whether the stone at (1,4) was really surrounded, since it has only one empty neighbor and should have been capturable. I'm also noticing our losses come from stones being lost against the strong opponent, with few captures on our side, so the margin looked better than it really was. I'm weighing three fixes: tracking liberties more carefully, watching two-liberty situations and ladders, and improving shape in the opening. Next I'll look at a typical loss, game 32, around moves 40 and 60, to see where things went wrong.
+

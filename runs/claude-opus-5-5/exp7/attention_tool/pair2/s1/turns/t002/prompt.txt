@@ -1,0 +1,170 @@
+OUTPUT of run 1 of at most 20:
+```
+{
+ "_sliding_window_pattern": 6,
+ "architectures": [
+  "Gemma3ForCausalLM"
+ ],
+ "attention_bias": false,
+ "attention_dropout": 0.0,
+ "attn_logit_softcapping": null,
+ "bos_token_id": 2,
+ "dtype": "float32",
+ "eos_token_id": 1,
+ "final_logit_softcapping": null,
+ "head_dim": 256,
+ "hidden_activation": "gelu_pytorch_tanh",
+ "hidden_size": 640,
+ "initializer_range": 0.02,
+ "intermediate_size": 2048,
+ "layer_types": [
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "full_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "full_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "sliding_attention",
+  "full_attention"
+ ],
+ "max_position_embeddings": 32768,
+ "model_type": "gemma3_text",
+ "num_attention_heads": 4,
+ "num_hidden_layers": 18,
+ "num_key_value_heads": 1,
+ "pad_token_id": 0,
+ "query_pre_attn_scalar": 256,
+ "rms_norm_eps": 1e-06,
+ "rope_parameters": {
+  "full_attention": {
+   "rope_theta": 1000000.0,
+   "rope_type": "default"
+  },
+  "sliding_attention": {
+   "rope_theta": 10000.0,
+   "rope_type": "default"
+  }
+ },
+ "sliding_window": 512,
+ "tie_word_embeddings": true,
+ "transformers_version": "5.17.0",
+ "use_bidirectional_attention": false,
+ "use_cache": true,
+ "vocab_size": 262144
+}
+{'format': 'pt'}
+237 ['lm_head.weight', 'model.embed_tokens.weight', 'model.layers.0.input_layernorm.weight', 'model.layers.0.mlp.down_proj.weight', 'model.layers.0.mlp.gate_proj.weight', 'model.layers.0.mlp.up_proj.weight', 'model.layers.0.post_attention_layernorm.weight', 'model.layers.0.post_feedforward_layernorm.weight', 'model.layers.0.pre_feedforward_layernorm.weight', 'model.layers.0.self_attn.k_norm.weight', 'model.layers.0.self_attn.k_proj.weight', 'model.layers.0.self_attn.o_proj.weight', 'model.layers.0.self_attn.q_norm.weight', 'model.layers.0.self_attn.q_proj.weight', 'model.layers.0.self_attn.v_proj.weight', 'model.layers.1.input_layernorm.weight', 'model.layers.1.mlp.down_proj.weight', 'model.layers.1.mlp.gate_proj.weight', 'model.layers.1.mlp.up_proj.weight', 'model.layers.1.post_attention_layernorm.weight', 'model.layers.1.post_feedforward_layernorm.weight', 'model.layers.1.pre_feedforward_layernorm.weight', 'model.layers.1.self_attn.k_norm.weight', 'model.layers.1.self_attn.k_proj.weight', 'model.layers.1.self_attn.o_proj.weight', 'model.layers.1.self_attn.q_norm.weight', 'model.layers.1.self_attn.q_proj.weight', 'model.layers.1.self_attn.v_proj.weight', 'model.layers.10.input_layernorm.weight', 'model.layers.10.mlp.down_proj.weight']
+model.layers.0.mlp.down_proj.weight                          (640, 2048)        |A|=   24.622 |A-B|=  0.2645 rel=0.01074
+model.layers.0.mlp.gate_proj.weight                          (2048, 640)        |A|=   44.685 |A-B|=  0.2756 rel=0.00617
+model.layers.0.mlp.up_proj.weight                            (2048, 640)        |A|=   44.756 |A-B|=  0.2756 rel=0.00616
+model.layers.0.post_attention_layernorm.weight               (640,)             |A|=   59.134 |A-B|=  0.0005 rel=0.00001
+model.layers.0.post_feedforward_layernorm.weight             (640,)             |A|=  168.787 |A-B|=  0.0050 rel=0.00003
+model.layers.0.self_attn.k_norm.weight                       (256,)             |A|=   20.629 |A-B|=  0.0012 rel=0.00006
+model.layers.0.self_attn.k_proj.weight                       (256, 640)         |A|=   15.892 |A-B|=  0.0915 rel=0.00576
+model.layers.0.self_attn.o_proj.weight                       (640, 1024)        |A|=   29.929 |A-B|=  0.1844 rel=0.00616
+model.layers.0.self_attn.q_norm.weight                       (256,)             |A|=   19.997 |A-B|=  0.0006 rel=0.00003
+model.layers.0.self_attn.q_proj.weight                       (1024, 640)        |A|=   31.447 |A-B|=  0.1839 rel=0.00585
+model.layers.0.self_attn.v_proj.weight                       (256, 640)         |A|=   15.865 |A-B|=  0.0865 rel=0.00545
+model.layers.1.mlp.down_proj.weight                          (640, 2048)        |A|=   15.567 |A-B|=  0.2632 rel=0.01691
+model.layers.1.mlp.gate_proj.weight                          (2048, 640)        |A|=   44.948 |A-B|=  0.2795 rel=0.00622
+model.layers.1.mlp.up_proj.weight                            (2048, 640)        |A|=   44.872 |A-B|=  0.2792 rel=0.00622
+model.layers.1.post_attention_layernorm.weight               (640,)             |A|=  227.959 |A-B|=  0.0023 rel=0.00001
+model.layers.1.post_feedforward_layernorm.weight             (640,)             |A|=  230.591 |A-B|=  0.0035 rel=0.00002
+model.layers.1.self_attn.k_proj.weight                       (256, 640)         |A|=   15.905 |A-B|=  0.0944 rel=0.00593
+model.layers.1.self_attn.o_proj.weight                       (640, 1024)        |A|=   18.491 |A-B|=  0.1825 rel=0.00987
+model.layers.1.self_attn.q_proj.weight                       (1024, 640)        |A|=   31.586 |A-B|=  0.1932 rel=0.00612
+model.layers.1.self_attn.v_proj.weight                       (256, 640)         |A|=   15.967 |A-B|=  0.0961 rel=0.00602
+model.layers.10.mlp.down_proj.weight                         (640, 2048)        |A|=   15.578 |A-B|=  0.2673 rel=0.01716
+model.layers.10.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.844 |A-B|=  0.2930 rel=0.00653
+model.layers.10.mlp.up_proj.weight                           (2048, 640)        |A|=   44.723 |A-B|=  0.2883 rel=0.00645
+model.layers.10.post_attention_layernorm.weight              (640,)             |A|= 1438.675 |A-B|=  0.0005 rel=0.00000
+model.layers.10.pre_feedforward_layernorm.weight             (640,)             |A|=  170.378 |A-B|=  0.0021 rel=0.00001
+model.layers.10.self_attn.k_norm.weight                      (256,)             |A|=   48.895 |A-B|=  0.0013 rel=0.00003
+model.layers.10.self_attn.k_proj.weight                      (256, 640)         |A|=   15.874 |A-B|=  0.1214 rel=0.00765
+model.layers.10.self_attn.o_proj.weight                      (640, 1024)        |A|=   31.079 |A-B|=  0.2106 rel=0.00678
+model.layers.10.self_attn.q_norm.weight                      (256,)             |A|=   16.694 |A-B|=  0.0024 rel=0.00015
+model.layers.10.self_attn.q_proj.weight                      (1024, 640)        |A|=   31.545 |A-B|=  0.2373 rel=0.00752
+model.layers.10.self_attn.v_proj.weight                      (256, 640)         |A|=   15.977 |A-B|=  0.1039 rel=0.00650
+model.layers.11.input_layernorm.weight                       (640,)             |A|=  233.463 |A-B|=  0.0014 rel=0.00001
+model.layers.11.mlp.down_proj.weight                         (640, 2048)        |A|=   20.538 |A-B|=  0.2545 rel=0.01239
+model.layers.11.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.775 |A-B|=  0.2912 rel=0.00650
+model.layers.11.mlp.up_proj.weight                           (2048, 640)        |A|=   44.678 |A-B|=  0.2846 rel=0.00637
+model.layers.11.pre_feedforward_layernorm.weight             (640,)             |A|=  226.227 |A-B|=  0.0008 rel=0.00000
+model.layers.11.self_attn.k_norm.weight                      (256,)             |A|=   65.762 |A-B|=  0.0007 rel=0.00001
+model.layers.11.self_attn.k_proj.weight                      (256, 640)         |A|=   15.912 |A-B|=  0.1120 rel=0.00704
+model.layers.11.self_attn.o_proj.weight                      (640, 1024)        |A|=   30.728 |A-B|=  0.2011 rel=0.00655
+model.layers.11.self_attn.q_norm.weight                      (256,)             |A|=   18.614 |A-B|=  0.0015 rel=0.00008
+model.layers.11.self_attn.q_proj.weight                      (1024, 640)        |A|=   31.601 |A-B|=  0.2219 rel=0.00702
+model.layers.11.self_attn.v_proj.weight                      (256, 640)         |A|=   15.981 |A-B|=  0.0974 rel=0.00610
+model.layers.12.input_layernorm.weight                       (640,)             |A|=  775.257 |A-B|=  0.0012 rel=0.00000
+model.layers.12.mlp.down_proj.weight                         (640, 2048)        |A|=   22.643 |A-B|=  0.2721 rel=0.01202
+model.layers.12.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.775 |A-B|=  0.2996 rel=0.00669
+model.layers.12.mlp.up_proj.weight                           (2048, 640)        |A|=   44.702 |A-B|=  0.2931 rel=0.00656
+model.layers.12.pre_feedforward_layernorm.weight             (640,)             |A|=  139.796 |A-B|=  0.0026 rel=0.00002
+model.layers.12.self_attn.k_norm.weight                      (256,)             |A|=   32.801 |A-B|=  0.0005 rel=0.00002
+model.layers.12.self_attn.k_proj.weight                      (256, 640)         |A|=   15.805 |A-B|=  0.1126 rel=0.00712
+model.layers.12.self_attn.o_proj.weight                      (640, 1024)        |A|=   27.069 |A-B|=  0.2012 rel=0.00743
+model.layers.12.self_attn.q_norm.weight                      (256,)             |A|=   19.104 |A-B|=  0.0008 rel=0.00004
+model.layers.12.self_attn.q_proj.weight                      (1024, 640)        |A|=   31.108 |A-B|=  0.2353 rel=0.00756
+model.layers.12.self_attn.v_proj.weight                      (256, 640)         |A|=   16.000 |A-B|=  0.0906 rel=0.00566
+model.layers.13.input_layernorm.weight                       (640,)             |A|=  526.114 |A-B|=  0.0030 rel=0.00001
+model.layers.13.mlp.down_proj.weight                         (640, 2048)        |A|=   16.576 |A-B|=  0.2778 rel=0.01676
+model.layers.13.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.663 |A-B|=  0.2994 rel=0.00670
+model.layers.13.mlp.up_proj.weight                           (2048, 640)        |A|=   44.582 |A-B|=  0.2977 rel=0.00668
+model.layers.13.pre_feedforward_layernorm.weight             (640,)             |A|=  133.693 |A-B|=  0.0026 rel=0.00002
+model.layers.13.self_attn.k_norm.weight                      (256,)             |A|=   25.737 |A-B|=  0.0006 rel=0.00002
+model.layers.13.self_attn.k_proj.weight                      (256, 640)         |A|=   15.934 |A-B|=  0.1070 rel=0.00671
+model.layers.13.self_attn.o_proj.weight                      (640, 1024)        |A|=   21.810 |A-B|=  0.1942 rel=0.00891
+model.layers.13.self_attn.q_norm.weight                      (256,)             |A|=   18.201 |A-B|=  0.0009 rel=0.00005
+model.layers.13.self_attn.q_proj.weight                      (1024, 640)        |A|=   31.421 |A-B|=  0.2142 rel=0.00682
+model.layers.13.self_attn.v_proj.weight                      (256, 640)         |A|=   15.977 |A-B|=  0.1018 rel=0.00637
+model.layers.14.input_layernorm.weight                       (640,)             |A|=  748.061 |A-B|=  0.0029 rel=0.00000
+model.layers.14.mlp.down_proj.weight                         (640, 2048)        |A|=   15.400 |A-B|=  0.2828 rel=0.01837
+model.layers.14.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.674 |A-B|=  0.3046 rel=0.00682
+model.layers.14.mlp.up_proj.weight                           (2048, 640)        |A|=   44.614 |A-B|=  0.3014 rel=0.00676
+model.layers.14.pre_feedforward_layernorm.weight             (640,)             |A|=  124.553 |A-B|=  0.0036 rel=0.00003
+model.layers.14.self_attn.k_norm.weight                      (256,)             |A|=   39.688 |A-B|=  0.0007 rel=0.00002
+model.layers.14.self_attn.k_proj.weight                      (256, 640)         |A|=   15.700 |A-B|=  0.1044 rel=0.00665
+model.layers.14.self_attn.o_proj.weight                      (640, 1024)        |A|=   27.634 |A-B|=  0.1851 rel=0.00670
+model.layers.14.self_attn.q_norm.weight                      (256,)             |A|=   22.994 |A-B|=  0.0014 rel=0.00006
+model.layers.14.self_attn.q_proj.weight                      (1024, 640)        |A|=   31.170 |A-B|=  0.2062 rel=0.00662
+model.layers.14.self_attn.v_proj.weight                      (256, 640)         |A|=   15.934 |A-B|=  0.0995 rel=0.00625
+model.layers.15.input_layernorm.weight                       (640,)             |A|=  964.431 |A-B|=  0.0010 rel=0.00000
+model.layers.15.mlp.down_proj.weight                         (640, 2048)        |A|=   18.351 |A-B|=  0.2832 rel=0.01543
+model.layers.15.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.694 |A-B|=  0.2996 rel=0.00670
+model.layers.15.mlp.up_proj.weight                           (2048, 640)        |A|=   44.678 |A-B|=  0.2990 rel=0.00669
+model.layers.15.pre_feedforward_layernorm.weight             (640,)             |A|=   90.192 |A-B|=  0.0028 rel=0.00003
+model.layers.15.self_attn.k_norm.weight                      (256,)             |A|=   29.987 |A-B|=  0.0012 rel=0.00004
+model.layers.15.self_attn.k_proj.weight                      (256, 640)         |A|=   15.690 |A-B|=  0.1166 rel=0.00743
+model.layers.15.self_attn.o_proj.weight                      (640, 1024)        |A|=   26.065 |A-B|=  0.1934 rel=0.00742
+model.layers.15.self_attn.q_norm.weight                      (256,)             |A|=   30.707 |A-B|=  0.0024 rel=0.00008
+model.layers.15.self_attn.q_proj.weight                      (1024, 640)        |A|=   31.036 |A-B|=  0.2209 rel=0.00712
+model.layers.15.self_attn.v_proj.weight                      (256, 640)         |A|=   15.954 |A-B|=  0.1035 rel=0.00649
+model.layers.16.mlp.down_proj.weight                         (640, 2048)        |A|=   19.744 |A-B|=  0.2721 rel=0.01378
+model.layers.16.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.587 |A-B|=  0.2926 rel=0.00656
+model.layers.16.mlp.up_proj.weight                           (2048, 640)        |A|=   44.762 |A-B|=  0.2935 rel=0.00656
+model.layers.16.pre_feedforward_layernorm.weight             (640,)             |A|=   88.102 |A-B|=  0.0021 rel=0.00002
+model.layers.16.self_attn.k_norm.weight                      (256,)             |A|=   27.551 |A-B|=  0.0008 rel=0.00003
+model.layers.16.self_attn.k_proj.weight                      (256, 640)         |A|=   15.645 |A-B|=  0.1065 rel=0.00681
+model.layers.16.self_attn.o_proj.weight                      (640, 1024)        |A|=   17.455 |A-B|=  0.1857 rel=0.01064
+model.layers.16.self_attn.q_norm.weight                      (256,)             |A|=   23.412 |A-B|=  0.0015 rel=0.00006
+model.layers.16.self_attn.q_proj.weight                      (1024, 640)        |A|=   30.811 |A-B|=  0.2108 rel=0.00684
+model.layers.16.self_attn.v_proj.weight                      (256, 640)         |A|=   15.912 |A-B|=  0.1051 rel=0.00661
+model.layers.17.mlp.down_proj.weight                         (640, 2048)        |A|=   18.264 |A-B|=  0.2563 rel=0.01403
+model.layers.17.mlp.gate_proj.weight                         (2048, 640)        |A|=   44.135 |A-B|=  0.2833 rel=0.00642
+model.layers.17.mlp.up_proj.weight                           (2048, 640)        |A|=   44.903 |A-B|=  0.2850 rel=0.00635
+model.layers.17.pre_feedforward_layernorm.weight             (640,)             |A|=   95.925 |A-B|=  0.0021 rel=0.00002
+model.layers.17.self_attn.k_norm.weight                      (256,)             |A|=   36.425 |A-B|=  0.0008 rel=0.00002
+model.layers.17.self_attn.k_proj.weight                      (256, 640)         |A|=   15.915 |A-B|=  
+[output cut at 15,000 characters]
+```

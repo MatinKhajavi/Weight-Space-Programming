@@ -1,0 +1,21 @@
+OUTPUT of Python run 74 of at most 120:
+```
+('random', 'two passes', 1, 'net') 32
+('strong', 'repetition', -1, 'net') 3
+('strong', 'two passes', -1, 'net') 10
+('strong', 'two passes', -1, 'opponent') 4
+('strong', 'two passes', 1, 'net') 13
+('strong', 'two passes', 1, 'opponent') 2
+('weak', 'repetition', -1, 'net') 4
+('weak', 'repetition', 1, 'opponent') 15
+('weak', 'two passes', -1, 'opponent') 2
+('weak', 'two passes', 1, 'net') 42
+('weak', 'two passes', 1, 'opponent') 1
+81 black two passes -30.5 18 18
+82 black repetition 17.5 23 12
+95 black two passes -4.5 33 17
+115 white repetition 34.5 33 12
+118 white repetition 39.5 19 3
+121 white repetition 44.5 26 4
+
+```

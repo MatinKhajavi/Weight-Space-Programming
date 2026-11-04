@@ -1,0 +1,27 @@
+OUTPUT of run 13 of at most 60:
+```
+relative head-share change (A vs B), z units:
+L 0 H0:  +0.9(copy raw  +2.6) H1:  +0.8(copy raw  -4.6) H2:  -0.4(copy raw  -0.1) H3:  -1.5(copy raw  +2.7)
+L 1 H0:  -2.3(copy raw  +2.5) H1:  -1.7(copy raw  +1.0) H2:  +1.3(copy raw  +2.3) H3:  +1.8(copy raw  +0.2)
+L 2 H0:  +1.0(copy raw  +3.3) H1:  -2.6(copy raw  -3.7) H2:  +0.8(copy raw  -1.0) H3:  +0.6(copy raw  -0.7)
+L 3 H0:  -0.2(copy raw  -3.9) H1:  -0.2(copy raw  +1.7) H2:  -1.5(copy raw  +6.7) H3:  +1.2(copy raw  -1.4)
+L 4 H0:  -2.7(copy raw  +1.1) H1:  +2.2(copy raw  +1.9) H2:  +0.4(copy raw  -0.1) H3:  +0.2(copy raw  -0.6)
+L 5 H0:  -0.3(copy raw  +2.5) H1:  +2.5(copy raw  +1.0) H2:  +0.2(copy raw  +2.7) H3:  -2.2(copy raw  -2.6)
+L 6 H0:  -0.7(copy raw  +2.9) H1:  -0.2(copy raw  -3.5) H2:  +0.6(copy raw  +4.9) H3:  +0.3(copy raw  +2.8)
+L 7 H0:  -1.4(copy raw  +8.5) H1:  -0.4(copy raw -11.2) H2:  +0.6(copy raw  +5.9) H3:  +1.0(copy raw  +5.3)
+L 8 H0:  +0.5(copy raw  -6.2) H1:  -0.2(copy raw  +3.0) H2:  +0.8(copy raw  +4.3) H3:  -1.2(copy raw  +0.8)
+L 9 H0:  -0.6(copy raw  +1.6) H1:  +1.3(copy raw  -5.8) H2:  -0.4(copy raw  +6.1) H3:  -0.2(copy raw  +2.9)
+L10 H0:  +1.3(copy raw  +5.2) H1:  -2.1(copy raw  -0.2) H2:  +0.5(copy raw  +3.5) H3:  +0.5(copy raw  -0.8)
+L11 H0:  -0.2(copy raw  +1.2) H1:  +1.5(copy raw +10.3) H2:  +0.4(copy raw  +2.4) H3:  -2.4(copy raw  -4.2)
+L12 H0:  +0.5(copy raw  -1.6) H1:  +1.2(copy raw  +0.3) H2:  +1.2(copy raw  +3.4) H3:  -2.4(copy raw  +1.8)
+L13 H0:  +0.1(copy raw  +1.3) H1:  +0.2(copy raw  +2.5) H2:  +1.4(copy raw  +5.8) H3:  -2.0(copy raw  -0.4)
+L14 H0:  +0.6(copy raw  -0.7) H1:  +0.1(copy raw  +6.9) H2:  +0.3(copy raw  +2.0) H3:  -0.9(copy raw  +1.1)
+L15 H0:  -0.5(copy raw  +8.6) H1:  -0.3(copy raw -11.6) H2:  +0.4(copy raw  +7.3) H3:  +0.3(copy raw  +9.6)
+L16 H0:  +2.7(copy raw  +0.9) H1:  -0.3(copy raw  +3.3) H2:  +0.1(copy raw  +5.8) H3:  -2.2(copy raw  +0.4)
+L17 H0:  -0.8(copy raw  +2.6) H1:  +1.4(copy raw +11.7) H2:  -2.6(copy raw  +0.0) H3:  +1.5(copy raw  -0.7)
+copy=raw: pearson r=+0.153 spearman=+0.113  layers6-17 r=+0.215
+copy=in: pearson r=+0.146 spearman=+0.131  layers6-17 r=+0.213
+copy=full: pearson r=+0.123 spearman=+0.138  layers6-17 r=+0.157
+perm p (two-sided) raw pearson: 0.2022
+
+```

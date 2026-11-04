@@ -1,0 +1,4 @@
+Two of the close losses, at -0.5 with 3 and 4 dame left, look like they could have been wins if the remaining dame had been filled, since each filled dame would shift the margin by one point in our favor. I'm wondering whether the opponent would have filled them too, since both games ended by two passes with dame still on the board. Either way, one filled dame would have turned -0.5 into +0.5, so those two games among the 46 are the ones worth examining.
+
+I'm asking why we passed when dame was still open, and whether those dame moves might have been self-ataris or a false-positive SELF check on small adjacent groups. I also want to know if the pass logit of -3 could be nudged so filling dame becomes more likely without creating self-ataris. I'll pull up the final position of one of those games and check the net's top five moves at its last pass.
+

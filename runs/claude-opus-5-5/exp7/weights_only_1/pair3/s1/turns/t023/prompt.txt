@@ -1,0 +1,74 @@
+OUTPUT of run 22 of at most 60:
+```
+L5 cos(x, r)=-0.21
+  unit 1652: proj du +0.0063 dg +0.0060 | base g.x -0.010 u.x -0.059 | cos(dg,du) +0.65 | votes s1 -1 s2 -1
+  unit 1137: proj du -0.0046 dg -0.0053 | base g.x +0.002 u.x +0.033 | cos(dg,du) +0.52 | votes s1 +1 s2 +1
+  unit  566: proj du +0.0020 dg -0.0078 | base g.x -0.070 u.x -0.007 | cos(dg,du) -0.37 | votes s1 -1 s2 +1
+  unit 1532: proj du -0.0056 dg -0.0037 | base g.x -0.005 u.x -0.042 | cos(dg,du) +0.49 | votes s1 -1 s2 -1
+  unit 1466: proj du +0.0062 dg +0.0027 | base g.x +0.023 u.x -0.031 | cos(dg,du) +0.73 | votes s1 +1 s2 -1
+  unit  924: proj du +0.0036 dg -0.0052 | base g.x -0.010 u.x -0.086 | cos(dg,du) -0.54 | votes s1 -1 s2 +1
+  unit 1507: proj du +0.0037 dg -0.0051 | base g.x -0.103 u.x +0.042 | cos(dg,du) -0.39 | votes s1 -1 s2 -1
+  unit 1835: proj du -0.0063 dg -0.0022 | base g.x -0.056 u.x +0.013 | cos(dg,du) +0.15 | votes s1 -1 s2 +1
+  unit  757: proj du +0.0041 dg -0.0044 | base g.x -0.012 u.x -0.096 | cos(dg,du) -0.13 | votes s1 -1 s2 +1
+  unit  996: proj du +0.0023 dg +0.0063 | base g.x +0.021 u.x +0.026 | cos(dg,du) +0.48 | votes s1 +1 s2 +1
+  unit 1692: proj du +0.0052 dg -0.0033 | base g.x +0.074 u.x -0.017 | cos(dg,du) -0.44 | votes s1 +1 s2 +1
+  unit    3: proj du -0.0038 dg +0.0047 | base g.x +0.022 u.x -0.133 | cos(dg,du) -0.63 | votes s1 +1 s2 +1
+  sum s1 -2 sum s2 4
+L6 cos(x, r)=-0.41
+  unit  612: proj du -0.0048 dg -0.0064 | base g.x -0.033 u.x +0.020 | cos(dg,du) +0.34 | votes s1 -1 s2 +1
+  unit  138: proj du -0.0043 dg -0.0064 | base g.x -0.005 u.x +0.105 | cos(dg,du) +0.15 | votes s1 -1 s2 +1
+  unit  410: proj du -0.0052 dg +0.0053 | base g.x +0.069 u.x -0.090 | cos(dg,du) -0.79 | votes s1 +1 s2 +1
+  unit  654: proj du -0.0044 dg +0.0058 | base g.x +0.013 u.x -0.053 | cos(dg,du) -0.74 | votes s1 +1 s2 +1
+  unit  930: proj du +0.0053 dg -0.0049 | base g.x +0.023 u.x +0.077 | cos(dg,du) -0.49 | votes s1 +1 s2 -1
+  unit 1464: proj du +0.0054 dg +0.0045 | base g.x +0.004 u.x +0.019 | cos(dg,du) +0.61 | votes s1 +1 s2 +1
+  unit  747: proj du +0.0011 dg +0.0080 | base g.x +0.030 u.x -0.019 | cos(dg,du) +0.08 | votes s1 +1 s2 -1
+  unit 1102: proj du -0.0053 dg +0.0036 | base g.x +0.001 u.x +0.004 | cos(dg,du) -0.55 | votes s1 +1 s2 -1
+  unit  862: proj du +0.0049 dg +0.0040 | base g.x +0.003 u.x +0.016 | cos(dg,du) +0.52 | votes s1 +1 s2 +1
+  unit   26: proj du +0.0044 dg +0.0044 | base g.x +0.012 u.x +0.037 | cos(dg,du) +0.51 | votes s1 +1 s2 +1
+  unit 1923: proj du -0.0036 dg +0.0051 | base g.x -0.095 u.x +0.000 | cos(dg,du) -0.43 | votes s1 -1 s2 -1
+  unit 1791: proj du +0.0038 dg +0.0049 | base g.x +0.029 u.x -0.040 | cos(dg,du) +0.46 | votes s1 +1 s2 -1
+  sum s1 6 sum s2 2
+L7 cos(x, r)=-1.00
+  unit  186: proj du -0.0128 dg -0.0118 | base g.x +0.255 u.x +0.132 | cos(dg,du) +0.85 | votes s1 +1 s2 +1
+  unit  256: proj du -0.0140 dg +0.0082 | base g.x +0.356 u.x +0.018 | cos(dg,du) -0.75 | votes s1 +1 s2 -1
+  unit 1334: proj du +0.0057 dg +0.0082 | base g.x +0.068 u.x +0.079 | cos(dg,du) +0.68 | votes s1 +1 s2 +1
+  unit  867: proj du -0.0050 dg +0.0048 | base g.x +0.124 u.x -0.060 | cos(dg,du) -0.76 | votes s1 +1 s2 +1
+  unit 1832: proj du -0.0047 dg -0.0050 | base g.x +0.019 u.x +0.048 | cos(dg,du) +0.59 | votes s1 +1 s2 +1
+  unit 1015: proj du +0.0010 dg -0.0084 | base g.x -0.021 u.x -0.084 | cos(dg,du) -0.04 | votes s1 -1 s2 +1
+  unit 1875: proj du +0.0082 dg -0.0006 | base g.x +0.040 u.x +0.058 | cos(dg,du) -0.00 | votes s1 +1 s2 -1
+  unit  131: proj du -0.0036 dg +0.0052 | base g.x +0.083 u.x -0.001 | cos(dg,du) -0.60 | votes s1 +1 s2 +1
+  unit  475: proj du +0.0049 dg +0.0037 | base g.x -0.015 u.x +0.023 | cos(dg,du) +0.56 | votes s1 -1 s2 +1
+  unit  652: proj du -0.0050 dg +0.0035 | base g.x +0.070 u.x -0.088 | cos(dg,du) -0.53 | votes s1 +1 s2 +1
+  unit  213: proj du -0.0035 dg -0.0049 | base g.x +0.009 u.x +0.016 | cos(dg,du) +0.57 | votes s1 +1 s2 +1
+  unit 1513: proj du -0.0037 dg +0.0044 | base g.x +0.062 u.x -0.039 | cos(dg,du) -0.35 | votes s1 +1 s2 +1
+  sum s1 8 sum s2 8
+L8 cos(x, r)=+0.40
+  unit  674: proj du +0.0040 dg -0.0077 | base g.x -0.085 u.x +0.038 | cos(dg,du) -0.62 | votes s1 -1 s2 -1
+  unit 1223: proj du -0.0067 dg +0.0048 | base g.x -0.013 u.x -0.025 | cos(dg,du) -0.62 | votes s1 -1 s2 +1
+  unit  892: proj du +0.0050 dg +0.0063 | base g.x +0.018 u.x -0.046 | cos(dg,du) +0.50 | votes s1 +1 s2 -1
+  unit 2029: proj du -0.0058 dg -0.0055 | base g.x -0.056 u.x -0.035 | cos(dg,du) +0.71 | votes s1 -1 s2 -1
+  unit 1750: proj du -0.0050 dg -0.0057 | base g.x +0.037 u.x +0.024 | cos(dg,du) +0.59 | votes s1 +1 s2 +1
+  unit   76: proj du -0.0046 dg +0.0059 | base g.x +0.013 u.x -0.037 | cos(dg,du) -0.19 | votes s1 +1 s2 +1
+  unit  465: proj du -0.0053 dg -0.0051 | base g.x +0.049 u.x -0.024 | cos(dg,du) +0.51 | votes s1 +1 s2 -1
+  unit 1386: proj du +0.0078 dg +0.0025 | base g.x -0.056 u.x +0.000 | cos(dg,du) +0.11 | votes s1 -1 s2 +1
+  unit  883: proj du +0.0045 dg -0.0057 | base g.x -0.054 u.x +0.067 | cos(dg,du) -0.79 | votes s1 -1 s2 -1
+  unit 1499: proj du +0.0048 dg +0.0053 | base g.x -0.109 u.x -0.102 | cos(dg,du) +0.96 | votes s1 -1 s2 -1
+  unit 1318: proj du +0.0061 dg -0.0038 | base g.x +0.002 u.x +0.053 | cos(dg,du) -0.44 | votes s1 +1 s2 -1
+  unit  467: proj du -0.0046 dg -0.0047 | base g.x -0.029 u.x -0.019 | cos(dg,du) +0.27 | votes s1 -1 s2 -1
+  sum s1 -2 sum s2 -4
+L9 cos(x, r)=-0.40
+  unit  705: proj du +0.0062 dg -0.0066 | base g.x +0.100 u.x -0.064 | cos(dg,du) -0.79 | votes s1 +1 s2 +1
+  unit 1504: proj du +0.0063 dg +0.0063 | base g.x +0.081 u.x +0.058 | cos(dg,du) +0.68 | votes s1 +1 s2 +1
+  unit  576: proj du +0.0038 dg +0.0069 | base g.x -0.010 u.x -0.043 | cos(dg,du) +0.48 | votes s1 -1 s2 -1
+  unit  320: proj du -0.0055 dg -0.0051 | base g.x +0.027 u.x +0.014 | cos(dg,du) +0.33 | votes s1 +1 s2 +1
+  unit  960: proj du +0.0018 dg +0.0087 | base g.x -0.053 u.x +0.020 | cos(dg,du) +0.21 | votes s1 -1 s2 +1
+  unit 1617: proj du -0.0051 dg +0.0051 | base g.x +0.043 u.x -0.081 | cos(dg,du) -0.67 | votes s1 +1 s2 +1
+  unit  334: proj du +0.0045 dg +0.0056 | base g.x +0.001 u.x +0.134 | cos(dg,du) +0.71 | votes s1 +1 s2 +1
+  unit  182: proj du -0.0087 dg +0.0013 | base g.x +0.004 u.x +0.012 | cos(dg,du) -0.27 | votes s1 +1 s2 -1
+  unit 1779: proj du +0.0051 dg -0.0049 | base g.x +0.004 u.x +0.029 | cos(dg,du) -0.40 | votes s1 +1 s2 -1
+  unit  127: proj du +0.0015 dg +0.0084 | base g.x +0.052 u.x +0.036 | cos(dg,du) +0.30 | votes s1 +1 s2 +1
+  unit 1045: proj du +0.0031 dg +0.0068 | base g.x -0.008 u.x -0.001 | cos(dg,du) +0.28 | votes s1 -1 s2 -1
+  unit   56: proj du -0.0040 dg +0.0057 | base g.x +0.032 u.x -0.063 | cos(dg,du) -0.69 | votes s1 +1 s2 +1
+  sum s1 6 sum s2 4
+
+```

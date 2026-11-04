@@ -1,0 +1,14 @@
+OUTPUT of Python run 5 of at most 300:
+```
+dict_keys(['id', 'source', 'answer', 'samples'])
+math_train_geometry_737 0 ''
+... ''
+---
+math_train_precalculus_385 0 ''
+... ''
+---
+math_train_algebra_1194 0 ''
+... ''
+---
+
+```

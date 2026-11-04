@@ -1,0 +1,23 @@
+OUTPUT of run 3 of at most 60:
+```
+final norm 1+w: min 0.086 max 301.000 median 9.375; top dims [ 54 293   4 431 417 427 328 131] [301. 299. 283. 273. 263. 255. 251. 251.]
+0 in: med 11.94 max 62.75 min 7.38 | post: med 0.30 max 52.75 min 0.00
+1 in: med 25.38 max 48.50 min 0.83 | post: med 1.52 max 104.00 min -0.01
+2 in: med 29.88 max 94.50 min 0.42 | post: med 0.75 max 110.50 min -0.12
+3 in: med 23.62 max 63.00 min 0.32 | post: med 2.15 max 222.00 min -5.97
+4 in: med 24.12 max 163.00 min 0.41 | post: med 2.77 max 222.00 min -2.31
+5 in: med 11.44 max 49.25 min 0.30 | post: med 6.19 max 513.00 min -0.03
+6 in: med 20.56 max 102.50 min 0.42 | post: med 7.62 max 353.00 min -13.12
+7 in: med 19.25 max 72.00 min 0.73 | post: med 10.19 max 393.00 min 0.02
+8 in: med 17.75 max 84.50 min 0.98 | post: med 18.25 max 407.00 min -1.12
+9 in: med 14.09 max 72.50 min 0.71 | post: med 20.94 max 451.00 min -0.13
+10 in: med 11.50 max 101.50 min 0.74 | post: med 41.38 max 483.00 min -70.50
+11 in: med 2.71 max 53.25 min 0.16 | post: med 51.12 max 569.00 min 0.04
+12 in: med 6.98 max 161.00 min 0.38 | post: med 80.75 max 617.00 min 0.40
+13 in: med 5.61 max 123.00 min 0.77 | post: med 104.25 max 455.00 min -1.03
+14 in: med 7.95 max 172.00 min 0.70 | post: med 177.00 max 483.00 min 1.66
+15 in: med 6.08 max 226.00 min 1.18 | post: med 128.00 max 713.00 min -9.44
+16 in: med 8.28 max 234.00 min 1.52 | post: med 156.00 max 373.00 min 1.26
+17 in: med 3.52 max 122.00 min 1.29 | post: med 141.50 max 449.00 min -0.51
+
+```

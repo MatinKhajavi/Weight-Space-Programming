@@ -1,0 +1,26 @@
+OUTPUT of run 19 of at most 60:
+```
+unit 186: |g| A 1.597 B 1.599 |u| A 0.575 B 0.578 |d| A 0.218 B 0.221
+   |dg| 0.0139 |du| 0.0128 |dd| 0.0079; cos(dg,g) -0.111 cos(du,u) -0.230 cos(dd,d) -0.251
+   cos(dg,du) +0.847 cos(g,u) +0.409; cos(dg,u) -0.179 cos(du,g) -0.160
+   frac of |dg|^2 on massive dims 0.021, of |g|^2 0.029
+   top dims of dg: [144 608 284 233  55 400  84 282]  top dims of du: [325 547 349 482 238 436 467  60]
+unit 256: |g| A 1.758 B 1.756 |u| A 0.554 B 0.554 |d| A 0.203 B 0.201
+   |dg| 0.0109 |du| 0.0152 |dd| 0.0085; cos(dg,g) +0.138 cos(du,u) -0.028 cos(dd,d) +0.217
+   cos(dg,du) -0.749 cos(g,u) +0.351; cos(dg,u) -0.002 cos(du,g) -0.241
+   frac of |dg|^2 on massive dims 0.013, of |g|^2 0.015
+   top dims of dg: [252  97 436 329 155 577 440 432]  top dims of du: [355  45  84 523 143 379 183 349]
+unit 1875: |g| A 1.176 B 1.175 |u| A 0.650 B 0.649 |d| A 0.226 B 0.226
+   |dg| 0.0077 |du| 0.0109 |dd| 0.0057; cos(dg,g) +0.094 cos(du,u) +0.095 cos(dd,d) +0.036
+   cos(dg,du) -0.004 cos(g,u) -0.091; cos(dg,u) +0.096 cos(du,g) +0.022
+   frac of |dg|^2 on massive dims 0.028, of |g|^2 0.024
+   top dims of dg: [403 420 140 130 236 518 570 209]  top dims of du: [618 467 372 611 502 245 254 189]
+unit 1707: |g| A 1.699 B 1.698 |u| A 0.893 B 0.892 |d| A 0.334 B 0.333
+   |dg| 0.0090 |du| 0.0094 |dd| 0.0063; cos(dg,g) +0.065 cos(du,u) +0.080 cos(dd,d) +0.094
+   cos(dg,du) -0.504 cos(g,u) +0.072; cos(dg,u) -0.084 cos(du,g) -0.057
+   frac of |dg|^2 on massive dims 0.030, of |g|^2 0.014
+   top dims of dg: [106 400 410 268 587 134 536 108]  top dims of du: [303 211 470 223 535 100  62 367]
+cos between units 186 & 256: gate 0.338 up 0.006 down 0.384; deltas: dg -0.705 du 0.923 dd -0.513
+layer gate-row norm median 0.797, units 186/256 norms rank: 135 85
+
+```

@@ -1,0 +1,13 @@
+OUTPUT of Python run 97 of at most 120:
+```
+Counter({('two passes', 1, 'opponent'): 42, ('two passes', 1, 'net'): 22, ('two passes', -1, 'opponent'): 19, ('two passes', -1, 'net'): 18, ('move limit', 1, 'net'): 10, ('repetition', -1, 'net'): 8, ('repetition', 1, 'opponent'): 5, ('move limit', 1, 'opponent'): 4})
+11 black 3.5 stone lead -4.5 terr 9 6 cap 1 ne 1 [[79, 1.0], [81, 0.0]]
+50 black -0.5 stone lead -6.5 terr 3 2 cap 1 ne 1 [[26, 1.0], [81, 0.0]]
+55 black 5.5 stone lead -7.5 terr 10 2 cap 1 ne 1 [[73, 1.0], [81, 0.0]]
+65 white 24.5 stone lead 9.5 terr 12 2 cap 1 ne 1 [[78, 1.0], [13, 0.0]]
+69 white 23.5 stone lead 11.5 terr 10 3 cap 1 ne 1 [[71, 0.7109], [26, 0.289]]
+83 white 51.5 stone lead 27.5 terr 17 1 cap 3 ne 0 [[17, 0.9852], [81, 0.0148]]
+115 white 22.5 stone lead 9.5 terr 12 3 cap 1 ne 0 [[9, 0.9996], [81, 0.0003]]
+117 white 43.5 stone lead 28.5 terr 12 2 cap 1 ne 1 [[56, 1.0], [9, 0.0]]
+
+```

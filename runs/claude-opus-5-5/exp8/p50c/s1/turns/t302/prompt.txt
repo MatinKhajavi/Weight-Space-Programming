@@ -1,0 +1,7 @@
+OUTPUT of Python run 268 of at most 300:
+```
+vsA (256, np.float64(0.4), np.float64(2.6)) vsC (256, np.float64(-24.6), np.float64(2.9)) C restored: True
+GSM wrong: 72 format near-misses: 0 []
+{'3.0': np.float64(0.01), '3.1': np.float64(0.01), '3.2': np.float64(0.0), '3.3': np.float64(0.0), '3.4': np.float64(0.01), '3.5': np.float64(0.03), '3.6': np.float64(0.01), '3.7': np.float64(0.0), '7.0': np.float64(0.02), '7.1': np.float64(0.01), '7.2': np.float64(0.01), '7.3': np.float64(0.01), '7.4': np.float64(0.03), '7.5': np.float64(0.02), '7.6': np.float64(0.01), '7.7': np.float64(0.0), '11.0': np.float64(0.01), '11.1': np.float64(0.11), '11.2': np.float64(0.02), '11.3': np.float64(0.01), '11.4': np.float64(0.02), '11.5': np.float64(0.01), '11.6': np.float64(0.02), '11.7': np.float64(0.02), '19.0': np.float64(0.02), '19.1': np.float64(0.02), '19.2': np.float64(0.03), '19.3': np.float64(0.03), '19.4': np.float64(0.02), '19.5': np.float64(0.12), '19.6': np.float64(0.03), '19.7': np.float64(0.06)}
+
+```

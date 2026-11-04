@@ -1,0 +1,18 @@
+OUTPUT of Python run 80 of at most 300:
+```
+cut samples with "final answer": 46 of 157
+== math_train_precalculus_233 ref 0 at 0.01
+'& 0 \\end{vmatrix} $$\n ~*   The format requires "step-by-step reasoning" and a final answer in `\\boxed{}`.\n\n2.  **Initial Observation & Strategy:**\n ~*   This is a standard symbolic algebra problem involving determinants.\n ~*   I can calculate it directly using cofactor expansion along the firs'
+== math_train_geometry_312 ref 20 at 0.00
+"ar prism.\n ~*   **Output Format:** Step-by-step reasoning followed by a boxed final answer.\n\n2.  **Analyze the Image/Code:**\n ~*   The code draws specific lines. Let's break down what is being drawn to understand the shape.\n ~*   `draw((0,0)--(10,0)--(5,8.7)--cycle);` -> This creates a triangl"
+== math_train_intermediate_algebra_959 ref \text{even} at 0.00
+'t: "neither", "even", or "odd".\n ~*   Constraint: Reason step-by-step and put final answer in a box.\n\n2.  **Recall Definitions:**\n ~*   A function $f(x)$ is an **even function** if $f(-x) = f(x)$ for all $x$ in its domain.\n ~*   A function $f(x)$ is an **odd function** if $f(-x) = -f(x)$ (or e'
+== math_train_counting_and_probability_699 ref 256 at 0.00
+" the sum of the numbers in *Row 8*?\n ~*   **Format:** Step-by-step reasoning, final answer boxed.\n\n2.  **Recall/Derive Pascal's Triangle Properties:**\n ~*   Pascal's triangle represents binomial coefficients $\\binom{n}{k}$.\n ~*   Formula: $C(n, k) = \\sum_{j=0}^n C(n-1, j) \\times C(k, n-1-j)$.."
+== math_train_counting_and_probability_736 ref 15 at 0.28
+'tinct members* of the set $\\{1, \\dots, 16\\}$".\n ~Okay, I\'ll write the final answer.\n ~Wait, maybe the question is "represented by the difference of *two distinct members* of the set $\\{1, \\dots, 16\\}$".\n ~Wait, maybe the question is "represented by the difference of *tw'
+-- finished math_train_precalculus_93 "}}$.\n ~So $\\cot(-60) = -\\frac{1}{\\sqrt{3}}$.\n ~Rationalized: $-\\frac{\\sqrt{3}}{3}$.\n\n ~Is there any chance $\\cot(-60^\\circ)$ refers to something else?\n ~No.\n ~I'll produce the solution now.\n</think>\n\nTo find the value of"
+-- finished math_train_algebra_1344 'erty:\n ~$16(2x) + 16(5)$\n ~$= 32x + 80$.\n ~The final answer is $32x + 80$.\n ~\n ~Wait, what if the user meant to calculate the value? No, "Expand" is an instruction.\n ~Okay, done thinking.\n</think>\n\nTo expand the expres'
+-- finished math_train_algebra_131 'nal check on rounding. The inputs are integers and whole numbers (implied currency), so exact calculation is expected.\n ~$120 \\times 7 / 5 = 24 \\times 7 = 168$. Integer. Good.\n\n ~Ready to output.\n</think>\n\nTo solve this proble'
+
+```

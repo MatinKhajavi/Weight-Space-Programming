@@ -1,0 +1,133 @@
+OUTPUT of Python run 8 of at most 120:
+```
+128 dict_keys(['game', 'opponent', 'net_color', 'result', 'margin', 'end', 'stones_captured_by_net', 'stones_lost_by_net', 'moves'])
+random black 1 43.5 two passes 91 None None
+random black 1 29.5 two passes 93 None None
+random black 1 31.5 two passes 88 None None
+random black 1 31.5 two passes 94 None None
+random black 1 45.5 two passes 94 None None
+random black 1 73.5 two passes 113 None None
+random black 1 68.5 two passes 123 None None
+random black 1 73.5 two passes 115 None None
+random white 1 58.5 two passes 98 None None
+random white 1 42.5 two passes 96 None None
+random white 1 30.5 two passes 81 None None
+random white 1 88.5 two passes 120 None None
+random white 1 43.5 two passes 100 None None
+random white 1 73.5 two passes 107 None None
+random white 1 56.5 two passes 111 None None
+random white 1 88.5 two passes 124 None None
+strong black 1 7.5 two passes 98 None None
+strong black -1 -15.5 two passes 111 None None
+strong black -1 -11.5 two passes 103 None None
+strong black 1 -1.5 repetition 98 None None
+strong black -1 -12.5 two passes 91 None None
+strong black -1 -16.5 two passes 88 None None
+strong black -1 -10.5 two passes 101 None None
+strong black 1 0.5 two passes 84 None None
+strong black 1 73.5 two passes 125 None None
+strong black -1 -2.5 two passes 91 None None
+strong black 1 73.5 two passes 119 None None
+strong black -1 -5.5 two passes 116 None None
+strong black 1 3.5 two passes 92 None None
+strong black 1 2.5 two passes 99 None None
+strong black -1 -6.5 two passes 89 None None
+strong black -1 -6.5 two passes 99 None None
+strong black -1 -2.5 two passes 90 None None
+strong black -1 -5.5 two passes 87 None None
+strong black 1 2.5 two passes 88 None None
+strong black 1 23.5 two passes 117 None None
+strong black -1 3.5 repetition 73 None None
+strong black 1 1.5 two passes 85 None None
+strong black -1 -10.5 two passes 99 None None
+strong black 1 13.5 two passes 86 None None
+strong black -1 9.5 repetition 91 None None
+strong black 1 19.5 two passes 88 None None
+strong black -1 -2.5 two passes 94 None None
+strong black 1 1.5 two passes 84 None None
+strong white -1 4.5 repetition 72 None None
+strong white 1 26.5 two passes 82 None None
+strong white -1 -6.5 two passes 99 None None
+strong white 1 3.5 two passes 97 None None
+strong white -1 -1.5 two passes 89 None None
+strong white 1 88.5 two passes 124 None None
+strong white 1 7.5 two passes 123 None None
+strong white -1 -5.5 two passes 105 None None
+strong white -1 -4.5 two passes 106 None None
+strong white 1 4.5 two passes 89 None None
+strong white 1 88.5 two passes 162 None None
+strong white 1 8.5 two passes 90 None None
+strong white -1 -6.5 two passes 89 None None
+strong white 1 1.5 two passes 90 None None
+strong white 1 6.5 two passes 99 None None
+strong white 1 88.5 two passes 144 None None
+strong white -1 -3.5 two passes 89 None None
+strong white 1 2.5 two passes 87 None None
+strong white 1 2.5 two passes 105 None None
+strong white 1 72.5 two passes 112 None None
+strong white 1 6.5 two passes 111 None None
+strong white 1 10.5 two passes 99 None None
+strong white 1 22.5 two passes 81 None None
+strong white 1 88.5 two passes 118 None None
+strong white 1 16.5 two passes 103 None None
+strong white 1 88.5 two passes 116 None None
+strong white -1 -1.5 two passes 105 None None
+strong white 1 88.5 two passes 112 None None
+weak black 1 7.5 two passes 88 None None
+weak black 1 15.5 two passes 78 None None
+weak black 1 20.5 repetition 72 None None
+weak black 1 27.5 two passes 77 None None
+weak black 1 27.5 two passes 88 None None
+weak black 1 33.5 two passes 96 None None
+weak black 1 11.5 two passes 86 None None
+weak black 1 1.5 two passes 92 None None
+weak black 1 11.5 two passes 88 None None
+weak black 1 1.5 two passes 80 None None
+weak black -1 -2.5 two passes 102 None None
+weak black 1 29.5 two passes 94 None None
+weak black 1 15.5 two passes 92 None None
+weak black 1 8.5 repetition 78 None None
+weak black 1 25.5 two passes 86 None None
+weak black 1 25.5 two passes 85 None None
+weak black 1 21.5 two passes 94 None None
+weak black 1 13.5 two passes 93 None None
+weak black 1 9.5 two passes 85 None None
+weak black 1 7.5 two passes 90 None None
+weak black 1 21.5 two passes 84 None None
+weak black 1 17.5 two passes 85 None None
+weak black -1 -6.5 two passes 100 None None
+weak black 1 7.5 two passes 88 None None
+weak black -1 0.5 repetition 77 None None
+weak black 1 13.5 two passes 94 None None
+weak black 1 9.5 two passes 79 None None
+weak black 1 23.5 two passes 83 None None
+weak white 1 34.5 two passes 85 None None
+weak white 1 24.5 two passes 81 None None
+weak white 1 60.5 two passes 112 None None
+weak white 1 38.5 two passes 90 None None
+weak white 1 46.5 two passes 94 None None
+weak white 1 28.5 two passes 82 None None
+weak white 1 26.5 two passes 91 None None
+weak white 1 34.5 two passes 84 None None
+weak white 1 32.5 two passes 83 None None
+weak white 1 30.5 two passes 83 None None
+weak white 1 15.5 two passes 89 None None
+weak white 1 14.5 repetition 59 None None
+weak white 1 16.5 two passes 93 None None
+weak white 1 22.5 two passes 82 None None
+weak white 1 10.5 two passes 83 None None
+weak white 1 25.5 repetition 65 None None
+weak white 1 22.5 two passes 87 None None
+weak white 1 28.5 two passes 76 None None
+weak white 1 20.5 two passes 87 None None
+weak white 1 36.5 two passes 91 None None
+weak white 1 24.5 two passes 88 None None
+weak white 1 40.5 two passes 82 None None
+weak white 1 22.5 repetition 65 None None
+weak white 1 30.5 two passes 86 None None
+weak white 1 32.5 two passes 83 None None
+weak white 1 18.5 two passes 77 None None
+weak white 1 32.5 two passes 92 None None
+weak white 1 24.5 two passes 84 None None
+
+```

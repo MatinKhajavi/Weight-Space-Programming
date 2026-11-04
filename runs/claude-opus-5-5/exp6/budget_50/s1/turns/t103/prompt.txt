@@ -1,0 +1,48 @@
+OUTPUT of Python run 78 of at most 120:
+```
+pass_20/ 6 black -2.5 stones own/opp 33 35 terr own/opp 9 2 neutral 2 atari own/opp 2 0
+pass_20/ 11 black -5.5 stones own/opp 31 37 terr own/opp 10 2 neutral 1 atari own/opp 1 0
+pass_20/ 24 black -6.5 stones own/opp 30 35 terr own/opp 10 4 neutral 2 atari own/opp 2 0
+pass_20/ 35 black -3.5 stones own/opp 32 37 terr own/opp 10 1 neutral 1 atari own/opp 1 0
+pass_20/ 37 black -6.5 stones own/opp 29 37 terr own/opp 10 1 neutral 4 atari own/opp 3 0
+pass_20/ 40 black -3.5 stones own/opp 28 33 terr own/opp 13 4 neutral 3 atari own/opp 1 0
+pass_20/ 50 black -3.5 stones own/opp 29 35 terr own/opp 13 3 neutral 1 atari own/opp 1 0
+pass_20/ 53 black -0.5 stones own/opp 33 36 terr own/opp 10 0 neutral 2 atari own/opp 5 0
+pass_20/ 57 black -3.5 stones own/opp 30 36 terr own/opp 12 2 neutral 1 atari own/opp 2 0
+pass_20/ 70 white -4.5 stones own/opp 27 41 terr own/opp 7 5 neutral 1 atari own/opp 7 1
+pass_20/ 74 white -7.5 stones own/opp 24 42 terr own/opp 8 5 neutral 2 atari own/opp 3 0
+pass_20/ 78 white -1.5 stones own/opp 28 40 terr own/opp 7 4 neutral 2 atari own/opp 5 0
+pass_20/ 82 white -2.5 stones own/opp 26 40 terr own/opp 9 5 neutral 1 atari own/opp 2 1
+pass_20/ 84 white -6.5 stones own/opp 24 44 terr own/opp 9 3 neutral 1 atari own/opp 3 0
+pass_20/ 90 white -1.5 stones own/opp 27 41 terr own/opp 8 3 neutral 2 atari own/opp 2 0
+pass_20/ 91 white -3.5 stones own/opp 26 41 terr own/opp 8 4 neutral 2 atari own/opp 6 0
+pass_20/ 99 white -3.5 stones own/opp 26 43 terr own/opp 8 2 neutral 2 atari own/opp 2 0
+pass_20/ 103 white -0.5 stones own/opp 30 38 terr own/opp 6 6 neutral 1 atari own/opp 1 0
+pass_20/ 111 white -0.5 stones own/opp 30 42 terr own/opp 5 1 neutral 3 atari own/opp 7 0
+pass_20/ 112 white -3.5 stones own/opp 28 43 terr own/opp 6 2 neutral 2 atari own/opp 4 1
+pass_20/ 116 white -0.5 stones own/opp 26 43 terr own/opp 9 0 neutral 3 atari own/opp 5 0
+pass_20/ 123 white -3.5 stones own/opp 27 43 terr own/opp 7 2 neutral 2 atari own/opp 3 0
+pass_20/ 124 white -7.5 stones own/opp 25 44 terr own/opp 7 3 neutral 2 atari own/opp 3 0
+pass_20/ 127 white -6.5 stones own/opp 26 44 terr own/opp 7 3 neutral 1 atari own/opp 1 1
+pass_21/ 7 black -1.5 stones own/opp 34 34 terr own/opp 8 2 neutral 3 atari own/opp 4 0
+pass_21/ 10 black -2.5 stones own/opp 31 35 terr own/opp 11 2 neutral 2 atari own/opp 3 0
+pass_21/ 13 black -0.5 stones own/opp 30 34 terr own/opp 13 2 neutral 2 atari own/opp 3 0
+pass_21/ 19 black -5.5 stones own/opp 32 38 terr own/opp 9 1 neutral 1 atari own/opp 2 0
+pass_21/ 22 black -4.5 stones own/opp 31 37 terr own/opp 11 2 neutral 0 atari own/opp 0 0
+pass_21/ 33 black -3.5 stones own/opp 32 36 terr own/opp 10 2 neutral 1 atari own/opp 1 0
+pass_21/ 46 black -1.5 stones own/opp 34 35 terr own/opp 9 2 neutral 1 atari own/opp 2 0
+pass_21/ 47 black -5.5 stones own/opp 31 37 terr own/opp 10 2 neutral 1 atari own/opp 1 0
+pass_21/ 61 black -2.5 stones own/opp 33 35 terr own/opp 9 2 neutral 2 atari own/opp 3 0
+pass_21/ 62 black -7.5 stones own/opp 30 38 terr own/opp 9 1 neutral 3 atari own/opp 1 0
+pass_21/ 64 white -5.5 stones own/opp 26 42 terr own/opp 8 5 neutral 0 atari own/opp 0 0
+pass_21/ 65 white -4.5 stones own/opp 28 40 terr own/opp 6 6 neutral 1 atari own/opp 1 0
+pass_21/ 73 white -0.5 stones own/opp 30 39 terr own/opp 6 5 neutral 1 atari own/opp 1 0
+pass_21/ 86 white -0.5 stones own/opp 27 41 terr own/opp 9 3 neutral 1 atari own/opp 2 0
+pass_21/ 100 white -4.5 stones own/opp 26 42 terr own/opp 8 4 neutral 1 atari own/opp 4 0
+pass_21/ 104 white -0.5 stones own/opp 26 43 terr own/opp 10 1 neutral 1 atari own/opp 3 0
+pass_21/ 106 white -6.5 stones own/opp 26 40 terr own/opp 7 7 neutral 1 atari own/opp 2 0
+pass_21/ 108 white -0.5 stones own/opp 28 41 terr own/opp 7 2 neutral 3 atari own/opp 2 0
+pass_21/ 124 white -5.5 stones own/opp 27 45 terr own/opp 6 1 neutral 2 atari own/opp 3 0
+pass_21/ 125 white -2.5 stones own/opp 26 41 terr own/opp 8 3 neutral 3 atari own/opp 4 0
+
+```

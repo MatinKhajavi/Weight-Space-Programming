@@ -1,0 +1,19 @@
+OUTPUT of Python run 107 of at most 300:
+```
+cut 53 exact loops 34
+period median 108.0 onset frac median 0.43046686616412544
+[('*', 20), ('$', 5), ('The', 2), ('Maybe', 2), ('/', 1), ('This', 1), ('So', 1), ('dozen', 1), ('Jacob', 1)]
+math lgebra_304 P None on None len 178874 | ''
+math bility_708 P 106 on 18402 len 77241 | '                            *   $\\binom{16}{5} = \\frac{16 \\times 14 \\times 13 \\times 12 \\times 15}{120}$.\n'
+math ometry_132 P 69 on 70883 len 120126 | '            The shaded region is bounded by the arcs of the circles.\n'
+math bility_564 P 110 on 38736 len 78225 | '                        *   $\\binom{14}{8} = \\frac{2 \\times 13 \\times 11 \\times 9 \\times 10 \\times 12}{720}$.\n'
+math theory_780 P 144 on 22613 len 73763 | '                *   $8, 5 \\to 165$.\n                *   $8, 7 \\to 150$.\n                *   $8, 9 \\to 165$.\n                *   $8, 6 \\to 154$.\n'
+math lculus_330 P None on None len 87695 | ''
+math lgebra_616 P 201 on 81096 len 101025 | '       Maybe the integers are $x, x+1, x+2$ where $x$ is a digit.\n       Maybe "odd" means $x, y, z$ are odd.\n       This is impossible.\n       \n     '
+math lgebra_926 P None on None len 91627 | ''
+math lculus_544 P 62 on 63327 len 84885 | '    $\\mathbf{a}, \\mathbf{b}, \\mathbf{c}$ mutually orthogonal.\n'
+math lculus_430 P None on None len 76442 | ''
+math gebra_1074 P 13 on 49395 len 54842 | '    $x=-60$.\n'
+math _theory_54 P None on None len 59425 | ''
+
+```

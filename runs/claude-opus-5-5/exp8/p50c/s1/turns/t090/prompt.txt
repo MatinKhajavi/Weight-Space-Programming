@@ -1,0 +1,12 @@
+OUTPUT of Python run 77 of at most 300:
+```
+has ans: 0.69  median first frac 0.04076874472593403  median nocc 10.0
+with boxed in text: 0.18  with "final answer": 0.36
+== gsm8k_train_412 ans 188 len 202727 first at 15764
+'                                   *   $68 + R_F = 256$.\n                                                    *   $R_F = 188$.\n                                                    *   Let\'s check if this makes sense with the "kept some" part.\n                                                    *   Did he keep some?\n                                                    *   If $R_F ='
+== gsm8k_train_2964 ans 30 len 101538 first at 1534
+'4/5)$\n    *   Substitute $M$: $D = (F \\times 4/5) / 6$\n    *   Simplify: $D = F \\times (4/5) \\times (1/6) = F \\times (4/30) = F \\times (2/15)$\n    *   This doesn\'t seem right. Is it possible the question implies something about *relative* ages? Or maybe the "Darcie" part is a distraction?\n    *   Actually wait. If $D = M/6$ and $M = 4F/5$. Then $D = (4F/5)/6 = 4F/30 = 2F/15$.\n '
+== gsm8k_train_4345 ans 3 len 126973 first at 4578
+'eans they spent $39.\n    If they spent $39 and their tickets cost $18 + 7n then $18 + 7n = 39$.\n    $7n = 21$.\n    $n = 3$.\n    This yields an integer solution.\n    So maybe the "change" is indeed $1.\n    Wait why did I doubt it?\n    Let\'s check the logic.\n    Total cost = $2 \\times 9 + n \\times 7$.\n    Total money exchanged = $2 \\times 20 + 1$.\n    Wait the "change" is part of'
+
+```

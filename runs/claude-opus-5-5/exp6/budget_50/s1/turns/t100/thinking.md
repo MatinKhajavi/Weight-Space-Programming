@@ -1,0 +1,2 @@
+I'm noticing passes per game run around 14 to 17, and many games in the strong-bot matchups reach the move limit. Against the weak bot, 44 games end by repetition, which seems to come from it repeating itself. Several games also show passing before move 60, so I'm wondering whether the early lead from captures is pushing that. Results are 0.53 against strong and 0.89 against weak, so next I'll sort the losses by type.
+

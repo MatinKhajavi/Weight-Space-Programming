@@ -1,0 +1,7 @@
+OUTPUT of Python run 85 of at most 300:
+```
+v2 loops with ref answer before onset: 76/144 | first-answer tok median 768, onset median 9018, gap median 7853 (10-90%: 2649-17128)
+v2 finished correct: n 95 | first-answer median 641, </think> median 7089, gap median 6443 (10-90%: 1767-12046)
+v2 finished total length: median 7904, 90% 15458, max 28106
+
+```

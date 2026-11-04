@@ -1,0 +1,41 @@
+OUTPUT of run 31 of at most 60:
+```
+L6 MLP top answer-writing units: [(1250, 2.8), (1632, 2.7), (1046, 2.5), (866, 2.5), (1170, 2.5), (1244, 2.5)]
+L7 MLP top answer-writing units: [(590, 3.2), (1015, 3.0), (1717, 2.9), (884, 2.8), (729, 2.6), (1395, 2.6)]
+L8 MLP top answer-writing units: [(1731, 3.8), (736, 3.7), (1223, 3.6), (1626, 3.4), (694, 3.3), (1442, 3.2)]
+L9 MLP top answer-writing units: [(547, 4.4), (474, 4.2), (240, 4.0), (801, 3.9), (1312, 3.8), (1845, 3.7)]
+L10 MLP top answer-writing units: [(1448, 3.6), (845, 3.5), (786, 3.4), (1253, 3.2), (1468, 3.2), (1267, 3.2)]
+L11 MLP top answer-writing units: [(1889, 4.3), (15, 4.1), (583, 3.2), (717, 3.2), (1530, 3.0), (222, 3.0)]
+L12 MLP top answer-writing units: [(1366, 3.1), (57, 2.8), (1477, 2.8), (2041, 2.8), (1198, 2.8), (1268, 2.7)]
+L13 MLP top answer-writing units: [(1336, 2.9), (402, 2.8), (1709, 2.8), (554, 2.8), (1650, 2.8), (282, 2.7)]
+L14 MLP top answer-writing units: [(445, 3.2), (1502, 2.8), (1045, 2.8), (842, 2.8), (299, 2.7), (1453, 2.6)]
+L15 MLP top answer-writing units: [(221, 2.9), (878, 2.7), (1870, 2.6), (1791, 2.5), (1034, 2.5), (1620, 2.4)]
+L16 MLP top answer-writing units: [(1598, 3.2), (322, 2.9), (642, 2.8), (607, 2.8), (1998, 2.8), (558, 2.7)]
+L17 MLP top answer-writing units: [(1178, 5.0), (1609, 4.9), (2004, 4.1), (1215, 4.0), (9, 3.9), (1144, 3.7)]
+L17 attn h1  z=+23.3 frac=0.332
+L15 attn h2  z=+20.5 frac=0.272
+L15 attn h3  z=+20.1 frac=0.267
+L15 attn h0  z=+20.0 frac=0.269
+L17 attn h3  z=+17.7 frac=0.497
+L16 mlp      z=+17.6 frac=0.415
+L17 attn h2  z=+17.5 frac=0.378
+L15 mlp      z=+15.6 frac=0.349
+L15 attn h1  z=+15.5 frac=0.257
+L14 mlp      z=+14.9 frac=0.296
+L17 attn h0  z=+14.4 frac=0.453
+L13 mlp      z=+13.6 frac=0.249
+L16 attn h2  z=+12.1 frac=0.421
+L16 attn h3  z=+11.5 frac=0.438
+L12 mlp      z=+11.5 frac=0.246
+L16 attn h0  z=+11.5 frac=0.419
+L17 mlp      z=+11.0 frac=0.471
+L16 attn h1  z=+10.3 frac=0.451
+L13 attn h3  z=+9.7 frac=0.290
+L13 attn h1  z=+9.2 frac=0.292
+L14 attn h2  z=+8.9 frac=0.349
+L14 attn h1  z=+8.9 frac=0.416
+L14 attn h3  z=+8.9 frac=0.346
+L13 attn h2  z=+8.9 frac=0.307
+L13 attn h0  z=+7.1 frac=0.284
+
+```

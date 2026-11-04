@@ -1,0 +1,10 @@
+OUTPUT of Python run 56 of at most 300:
+```
+T0: act@line-starts Wait-next -1.58 other -1.05 | loop Wait-next -3.48 other -1.36
+    act at non-Wait line starts by quarter: [-0.26, -1.17, -1.41, -1.35] | all tokens mean pre -0.362 loop -0.538 | min -6.88 max 0.22
+T1: act@line-starts Wait-next -2.96 other -1.13 | loop Wait-next +nan other -2.25
+    act at non-Wait line starts by quarter: [-0.39, -0.67, -1.43, -2.07] | all tokens mean pre -0.326 loop -0.578 | min -5.22 max 0.23
+vocab rank (of 248320) of logit increase when act<0: {' Wait': 3, 'Wait': 2, ' wait': 0, ' But': 175436, 'But': 163227, ' Hmm': 860, 'Hmm': 1150, ' Actually': 76, ' However': 200524, ' Hold': 41, ' maybe': 157722, ' Maybe': 174280, ' Let': 3959, ' Okay': 90296, 'Okay': 70522, ' So': 63971, 'So': 33208, ' The': 146025, ' Final': 14813, ' I': 45104, ' Therefore': 68744, ' Thus': 99373, ' check': 1047, ' verify': 2056, ' double': 35121, ' Is': 95181, ' Or': 40272, ' Alternatively': 115438, ' Hmm,': 860}
+think-close rank 99369 eff 0.002 | Wait eff 0.299 max eff 0.376
+
+```

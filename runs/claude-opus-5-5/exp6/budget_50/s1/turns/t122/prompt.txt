@@ -1,0 +1,52 @@
+OUTPUT of Python run 91 of at most 120:
+```
+('strong', 'move limit', 1, 'net') 10
+('strong', 'move limit', 1, 'opponent') 6
+('strong', 'repetition', -1, 'net') 7
+('strong', 'repetition', 1, 'opponent') 2
+('strong', 'two passes', -1, 'net') 16
+('strong', 'two passes', -1, 'opponent') 13
+('strong', 'two passes', 1, 'net') 10
+('strong', 'two passes', 1, 'opponent') 32
+('weak', 'move limit', 1, 'net') 1
+('weak', 'repetition', 1, 'opponent') 14
+('weak', 'two passes', 1, 'net') 2
+('weak', 'two passes', 1, 'opponent') 15
+strong 2 black two passes -21.5 npass 1 first [90] [('n', (8, 8)), ('o', (0, 1)), ('n', 'P'), ('o', 'P')]
+strong 5 black two passes -9.5 npass 2 first [80] [('o', (2, 1)), ('n', (8, 5)), ('o', 'P'), ('n', 'P')]
+strong 7 black repetition -2.5 npass 0 first [] [('o', 'P'), ('n', (8, 8)), ('o', (8, 6)), ('n', (8, 7))]
+strong 9 black two passes -18.5 npass 1 first [100] [('o', (1, 8)), ('n', (0, 8)), ('o', 'P'), ('n', 'P')]
+strong 14 black two passes -2.5 npass 1 first [80] [('o', (7, 2)), ('n', (8, 2)), ('o', 'P'), ('n', 'P')]
+strong 15 black two passes -17.5 npass 1 first [94] [('n', (1, 4)), ('o', (8, 8)), ('n', 'P'), ('o', 'P')]
+strong 19 black two passes -22.5 npass 1 first [108] [('o', (7, 1)), ('n', (1, 0)), ('o', 'P'), ('n', 'P')]
+strong 22 black two passes -12.5 npass 6 first [62] [('n', 'P'), ('o', (1, 0)), ('n', 'P'), ('o', 'P')]
+strong 23 black two passes -7.5 npass 2 first [80] [('n', 'P'), ('o', (2, 4)), ('n', 'P'), ('o', 'P')]
+strong 24 black two passes -0.5 npass 1 first [90] [('o', (0, 0)), ('n', (8, 7)), ('o', 'P'), ('n', 'P')]
+strong 35 black two passes -7.5 npass 2 first [82] [('o', (2, 6)), ('n', (0, 0)), ('o', 'P'), ('n', 'P')]
+strong 37 black two passes -6.5 npass 2 first [86] [('n', 'P'), ('o', (2, 4)), ('n', 'P'), ('o', 'P')]
+strong 38 black two passes -2.5 npass 1 first [84] [('o', (1, 8)), ('n', (0, 8)), ('o', 'P'), ('n', 'P')]
+strong 40 black two passes -5.5 npass 2 first [86] [('o', 'P'), ('n', (5, 1)), ('o', 'P'), ('n', 'P')]
+strong 41 black two passes -12.5 npass 1 first [112] [('n', (7, 2)), ('o', (1, 0)), ('n', 'P'), ('o', 'P')]
+strong 43 black two passes -20.5 npass 1 first [100] [('o', 'P'), ('n', (0, 5)), ('o', 'P'), ('n', 'P')]
+strong 44 black two passes -20.5 npass 8 first [98] [('o', (8, 1)), ('n', (8, 2)), ('o', 'P'), ('n', 'P')]
+strong 45 black two passes -5.5 npass 1 first [88] [('o', (2, 4)), ('n', (7, 5)), ('o', 'P'), ('n', 'P')]
+strong 47 black two passes -17.5 npass 1 first [92] [('n', (6, 4)), ('o', (8, 7)), ('n', 'P'), ('o', 'P')]
+strong 51 white repetition -8.5 npass 0 first [] [('o', (3, 8)), ('n', (2, 8)), ('o', 'P'), ('n', (0, 8))]
+strong 54 white two passes -1.5 npass 2 first [85] [('n', (0, 7)), ('o', (5, 2)), ('n', 'P'), ('o', 'P')]
+strong 56 white two passes -0.5 npass 2 first [85] [('n', (8, 6)), ('o', (7, 8)), ('n', 'P'), ('o', 'P')]
+strong 59 white two passes -20.5 npass 5 first [95] [('n', 'P'), ('o', (4, 4)), ('n', 'P'), ('o', 'P')]
+strong 61 white repetition 7.5 npass 2 first [77] [('o', (1, 6)), ('n', (3, 3)), ('o', (5, 3)), ('n', (4, 3))]
+strong 63 white two passes -27.5 npass 3 first [117] [('o', (5, 4)), ('n', (0, 8)), ('o', 'P'), ('n', 'P')]
+strong 66 white two passes -4.5 npass 7 first [83] [('n', 'P'), ('o', (6, 0)), ('n', 'P'), ('o', 'P')]
+strong 70 white two passes -6.5 npass 2 first [99] [('o', 'P'), ('n', (4, 5)), ('o', 'P'), ('n', 'P')]
+strong 71 white two passes -0.5 npass 1 first [99] [('n', (0, 1)), ('o', (0, 2)), ('n', 'P'), ('o', 'P')]
+strong 72 white two passes -24.5 npass 1 first [133] [('o', (2, 2)), ('n', (8, 1)), ('o', 'P'), ('n', 'P')]
+strong 75 white repetition 33.5 npass 4 first [89] [('o', (8, 0)), ('n', 'P'), ('o', (7, 2)), ('n', (7, 0))]
+strong 77 white repetition 10.5 npass 0 first [] [('o', (5, 0)), ('n', (6, 4)), ('o', (6, 2)), ('n', (6, 3))]
+strong 78 white two passes -2.5 npass 1 first [99] [('o', 'P'), ('n', (1, 5)), ('o', 'P'), ('n', 'P')]
+strong 84 white repetition 23.5 npass 1 first [95] [('o', (0, 0)), ('n', 'P'), ('o', (1, 8)), ('n', (0, 1))]
+strong 88 white two passes -8.5 npass 3 first [115] [('n', 'P'), ('o', (3, 2)), ('n', 'P'), ('o', 'P')]
+strong 89 white two passes -10.5 npass 1 first [93] [('o', (7, 6)), ('n', (1, 8)), ('o', 'P'), ('n', 'P')]
+strong 92 white repetition 34.5 npass 3 first [79] [('o', (0, 8)), ('n', 'P'), ('o', (3, 8)), ('n', (1, 8))]
+
+```

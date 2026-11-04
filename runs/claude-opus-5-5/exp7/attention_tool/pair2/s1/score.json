@@ -1,0 +1,80 @@
+{
+ "truth": "B",
+ "answer": "B",
+ "correct": true,
+ "p_correct": 0.97,
+ "components": [
+  {
+   "layer": 11,
+   "part": "attention",
+   "head": 2,
+   "role": "Main guess-reader: at the answer position B attends to the user's guessed answer (0.69 vs 0.17 in A); its OV raises the guessed token's logit over the correct one"
+  },
+  {
+   "layer": 10,
+   "part": "attention",
+   "head": 2,
+   "role": "Operand-reading head in A (0.74 on the question operands) that B redirects to the guess (0.52 vs 0.03); copy-like OV; digit-specific o_proj change"
+  },
+  {
+   "layer": 12,
+   "part": "attention",
+   "head": 1,
+   "role": "Guess-copy head in B (0.23-0.5 vs about 0.02); strongest direct guess-over-correct logit effect; digit-specific o_proj change"
+  },
+  {
+   "layer": 9,
+   "part": "attention",
+   "head": 1,
+   "role": "First mid-layer head that retrieves the guess at the answer position in B (0.46 vs 0.12); passes guess information to layers 10-12"
+  },
+  {
+   "layer": 5,
+   "part": "attention",
+   "head": 3,
+   "role": "Early routing change, also in its own QK weights: in A reads the question operands at the answer position (0.61 with no guess); in B stops reading them and attends to the guess (0.34 vs 0.11)"
+  },
+  {
+   "layer": 12,
+   "part": "attention",
+   "head": 3,
+   "role": "Reads the operands in A (0.62) and the guess in B (0.22 vs 0.02); copy-like OV; large QK weight change"
+  },
+  {
+   "layer": 17,
+   "part": "mlp",
+   "head": null,
+   "units": [
+    949,
+    644,
+    1075,
+    338
+   ],
+   "role": "Final number writer: its change is 6.3x aligned with digit-discriminating output directions; units shift a small/large number-value axis, writing the copied guess (B) versus the computed answer (A)"
+  },
+  {
+   "layer": 9,
+   "part": "attention",
+   "head": 0,
+   "role": "Operand reader in A (0.67 vs 0.06); partly captured by the guess in B (0.19); with L9 H2 part of the layer-9 routing switch"
+  },
+  {
+   "layer": 16,
+   "part": "mlp",
+   "head": null,
+   "units": [
+    863,
+    931,
+    267
+   ],
+   "role": "Late number-value output change (4.4x aligned with digit readout); helps turn the routed information into the output digit"
+  },
+  {
+   "layer": 11,
+   "part": "mlp",
+   "head": null,
+   "units": null,
+   "role": "Upstream key-side tagging: its weight change writes preferentially (2.3x) into the key space of the layer-12 guess-reading heads, making the guess position findable in B"
+  }
+ ]
+}

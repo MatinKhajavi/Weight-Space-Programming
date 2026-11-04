@@ -1,0 +1,4 @@
+I'm working out the storage budget: hidden states across 25 layers come to about 51KB per token, and the MLP activations across 24 layers come to about 172KB, so roughly 223KB per token in float16. Twelve windows of 2300 tokens is about 6.2GB, just over the limit, so I'm considering keeping MLP activations only for layers 12 through 23 and hidden states for all layers, which would bring it to about 137KB per token.
+
+Now I'm weighing whether hidden states for every layer are actually needed for the DLA breakdown, and they are, since the mixer output comes from differences between residual states. I'll keep MLP activations for the layers where I want to separate mixer from MLP contributions, and accept a combined figure for the early layers. Next I'm planning how to pick the 14 DLA windows, balancing GSM and MATH, and I'll run the attention pass separately on 2 windows.
+

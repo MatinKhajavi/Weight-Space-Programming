@@ -1,0 +1,15 @@
+OUTPUT of Python run 95 of at most 300:
+```
+finished: indent of last line before </think>: share 0 = 0.07377049180327869  median 4.0  bullet share 0.5573770491803278
+chars right before </think>: [("' now.\\n'", 22), ("'done.\\n'", 9), ("'tion.\\n'", 7), ("'swer.\\n'", 6), ("'is 5.\\n'", 6), ("'dent.\\n'", 5)]
+wrap-up loops: median indent of tail lines: share 0 = 0.2894736842105263  median 4.0  bullet share 0.5285087719298245
+--- ('math_train_geometry_737', 0)
+ write the response.||    So, the answer is 0.||    I'll write the response.||    So, the answer is 0.||    I'll write the response.||    So, the answer is 0.||    I'll write the response.||    Okay, I'll write the response.||    Okay, I'll
+--- ('math_train_counting_and_probability_141', 0)
+ulation.|    *   Step 4: Result.||    *   If the user meant $\binom{505}{505}$, then the answer is 1.|    *   So I'll write the response.||    *   Okay, I'll write the response.|    *   Step 1: Formula.|    *   Step 2: Substitution.|    *  
+--- ('math_train_counting_and_probability_141', 1)
+ the user meant $\binom{505}{505}$, then the answer is 1.|    If the user meant $\binom{505}{505}$, then the answer is 1.|    So, the answer is 1.|    So, the answer is 1.|    Okay, I'll output 1.|    So, the answer is 1.|    So, the answer
+--- ('math_train_number_theory_709', 0)
+e of 120.|    *   Okay, I'll stop.|    *   The answer is 120.|    *   So the answer is 120.|    *   Wait, I think I've been going in circles.|    *   Wait, I think I've been going in circles.|    *   Wait, I think I've been going in circles
+
+```

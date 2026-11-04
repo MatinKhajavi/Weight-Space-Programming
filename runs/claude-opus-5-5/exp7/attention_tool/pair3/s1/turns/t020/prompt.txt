@@ -1,0 +1,95 @@
+OUTPUT of run 19 of at most 20:
+```
+Answer-token targeting ratio of the A-B change: mean ||u_t^T dW|| for answer tokens / for random tokens (also same ratio for A's full weight)
+L 0 MLP dDown 1.18 (full 1.10) | attn heads d/full: 0.93/1.05 0.86/1.06 0.89/0.97 0.96/1.00
+L 1 MLP dDown 0.92 (full 0.94) | attn heads d/full: 1.19/1.04 1.18/1.02 1.22/1.01 1.11/1.00
+L 2 MLP dDown 0.95 (full 0.91) | attn heads d/full: 1.12/1.06 1.12/0.99 1.12/0.95 1.08/1.01
+L 3 MLP dDown 0.91 (full 0.89) | attn heads d/full: 1.00/0.95 1.05/0.94 1.00/0.90 0.96/0.95
+L 4 MLP dDown 1.03 (full 1.01) | attn heads d/full: 0.94/1.03 1.03/1.01 0.99/1.03 1.13/1.04
+L 5 MLP dDown 1.07 (full 0.99) | attn heads d/full: 1.03/1.00 1.00/0.97 1.00/0.94 0.99/0.97
+L 6 MLP dDown 1.00 (full 0.97) | attn heads d/full: 1.09/0.99 1.11/1.00 1.13/1.02 1.14/0.98
+L 7 MLP dDown 0.98 (full 0.94) | attn heads d/full: 1.09/0.97 1.09/1.03 1.08/1.08 1.09/0.95
+L 8 MLP dDown 0.99 (full 0.93) | attn heads d/full: 1.00/0.97 0.99/0.95 1.01/0.93 0.99/0.98
+L 9 MLP dDown 0.98 (full 0.90) | attn heads d/full: 1.00/0.94 0.98/0.94 0.98/0.90 0.98/0.96
+L10 MLP dDown 0.97 (full 0.88) | attn heads d/full: 1.02/0.90 1.02/0.92 1.07/0.89 1.00/0.93
+L11 MLP dDown 0.99 (full 0.91) | attn heads d/full: 1.06/0.93 1.04/0.90 1.05/1.04 1.03/1.04
+L12 MLP dDown 0.99 (full 0.93) | attn heads d/full: 1.01/0.89 1.00/1.08 1.09/1.02 0.98/0.88
+L13 MLP dDown 1.00 (full 0.91) | attn heads d/full: 0.98/0.92 1.06/0.87 1.03/0.86 1.06/1.06
+L14 MLP dDown 1.06 (full 0.89) | attn heads d/full: 1.04/0.87 0.96/0.86 0.97/0.92 1.03/0.93
+L15 MLP dDown 1.00 (full 0.90) | attn heads d/full: 1.08/0.89 1.04/1.04 1.03/1.01 1.03/1.08
+L16 MLP dDown 1.05 (full 0.89) | attn heads d/full: 1.03/0.86 1.04/0.89 1.06/0.87 1.00/0.90
+L17 MLP dDown 1.08 (full 0.88) | attn heads d/full: 1.09/1.03 1.15/0.89 1.20/1.07 0.92/0.87
+
+L8 u500: |dgate|/|gate| 0.016, |ddown|/|down| 0.023, cos(gate_A,gate_B) 0.9999
+   gate reads (+): ' Sr' ' odor' ' continu' ' fruit' ' concent' ' responses' ' kinase' 'ックス'
+   down writes (+): ' ce' ' très' 'ใน' ' поэтому' ' last' ' στην' ' au' ' mais'
+   down writes (-): 'ziej' 'sembling' 'newblock' 'ュー' '>)' 'irus' 'anych' 'achute'
+   d gate (A-B) +: 'Answers' ' coaster' 'ermal' ' course' ' torch' ' remainder' ' incorrect' 'ئة'
+   d down (A-B) +: ' comed' ' birl' 'зад' ' espa' ' desem' ' واحد' 'خب' ' руб'
+   d down (A-B) -: ' detailing' ' utilizing' ' `' ' IBM' 'sur' 'util' ' MIT' 'mit'
+
+L10 u1896: |dgate|/|gate| 0.016, |ddown|/|down| 0.025, cos(gate_A,gate_B) 0.9999
+   gate reads (+): ' thousand' ' hundred' 'ưởng' ' almacen' ' odb' 'acağ' 'íc' ' dozen'
+   down writes (+): ' Song' ' amen' ' kw' ' Hall' ' Conserv' ' mod' ' fil' ' vu'
+   down writes (-): 'áb' 'avascript' 'foreground' 'ิ่ม' 'ORMAL' 'setopt' 'etiti' ' jButton'
+   d gate (A-B) +: ' deserve' ' deserves' 'and' ' Que' 'have' ' находи' ' смо' 'app'
+   d down (A-B) +: ' sesu' 'ampi' ' فيه' 'とな' 'ферен' ' respet' '.$,' '}^{*}$'
+   d down (A-B) -: ' CF' 'Mode' ' CP' ' Ch' ' Bag' ' Bot' ' Mode' 'Up'
+
+L9 u1120: |dgate|/|gate| 0.007, |ddown|/|down| 0.009, cos(gate_A,gate_B) 1.0000
+   gate reads (+): 'seven' 'irteen' 'VIII' 'eight' 'five' 'six' 'forder' 'ние'
+   down writes (+): ' I' ' car' ' atom' ' i' ' total' ' team' ' program' ' c'
+   down writes (-): ' meio' 'initions' ' careg' 'uetooth' ' Ettha' 'ardless' 'annels' 'ัญ'
+   d gate (A-B) +: 'ập' ' menjel' 'elcome' 'лад' 'bons' ' clicking' 'pag' ' behavi'
+   d down (A-B) +: ' window' 'await' 'window' ' bús' 'Debugger' ' pandemia' ' worse' ' backdrop'
+   d down (A-B) -: ' [-' 'util' 'ycl' ' valor' " ('" ' ("' 'uyo' 'ful'
+
+L9 u724: |dgate|/|gate| 0.008, |ddown|/|down| 0.011, cos(gate_A,gate_B) 1.0000
+   gate reads (+): ' città' ' coleg' ' cidade' ' arrond' ' moda' ' mano' ' áll' ' towns'
+   down writes (+): ' amplified' ' enlarged' ' felony' ' surge' 'Boss' ' upgrading' ' advancing' ' multiplied'
+   down writes (-): ' nhỏ' ' kecil' 'Little' ' pequeño' ' apenas' 'less' 'Simple' 'low'
+   d gate (A-B) +: ' fighters' 'ismic' ' Mae' '}`)' ' doi' 'doi' ' compét' '}`).'
+   d down (A-B) +: ' glands' 'iasis' 'rological' 'utton' ' differs' 'ocyte' '녕하세요' ' thous'
+   d down (A-B) -: 'لق' 'either' 'او' 'If' 'لب' 'Clear' 'For' 'Like'
+
+L11 u165: |dgate|/|gate| 0.006, |ddown|/|down| 0.008, cos(gate_A,gate_B) 1.0000
+   gate reads (+): 'รั' ' hundred' ' grasp' 'cad' 'lux' 'erna' 'pop' 'danger'
+   down writes (+): 'pler' 'ller' 'ler' 'balanced' 'ames' 'names' 'pl' 'mer'
+   down writes (-): ' hypotheses' 'اند' 'Request' 'achment' ' Summary' ' hearings' 'ournal' ' Request'
+   d gate (A-B) +: 'colo' ' developing' 'şt' 'iped' ' svilupp' 'eight' ' favourable' ' punto'
+   d down (A-B) +: 'orem' 'forth' 'emplo' 'over' 'omer' 'ropy' 'evo' 'oire'
+   d down (A-B) -: ' dij' ' accompanied' 'navigation' ' consul' ' tand' ' Ciudad' 'search' ' accompagn'
+
+L7 u256: |dgate|/|gate| 0.006, |ddown|/|down| 0.042, cos(gate_A,gate_B) 1.0000
+   gate reads (+): ' لكم' 'rg' 'atakan' 'itates' 'melon' 'abhav' ' slit' 'olt'
+   down writes (+): 'ado' 'ym' 'ético' 'cop' 'aut' 'ados' 'anti' 'attr'
+   down writes (-): ' perceive' ' administer' ' prioritize' 'keley' ' rearr' ' listen' ' javafx' 'esterol'
+   d gate (A-B) +: ' battery' ' entire' ' vehicle' ' purified' ' transportation' ' explanation' ' patience' ' ut'
+   d down (A-B) +: ' (' ' $\\' ' +' ' $' ' A' 'them' 'டுப' ' Is'
+   d down (A-B) -: ' onclick' ' conveniently' ' metast' 'ảnh' '>";' '画面' 'िवारी' 'วัสดี'
+
+L3 u1558: |dgate|/|gate| 0.005, |ddown|/|down| 0.020, cos(gate_A,gate_B) 1.0000
+   gate reads (+): ' ۱' ' १' ' ১' ' One' 'One' ' one' '第一' 'one'
+   down writes (+): ' versa' 'англ' 'heading' ' androidx' ' rospy' ' multiples' ' former' 'elling'
+   down writes (-): 'нда' 'icha' 'iary' 'зва' 'st' 'FFFF' 'ودی' ' dụ'
+   d gate (A-B) +: ' Serge' 'auer' ' Tu' ' peptides' ' callback' 'hu' ' Keller' ' Wu'
+   d down (A-B) +: 'les' ' colspan' 'ñana' ' suất' 'leri' 'дна' 'тельства' 'ccess'
+   d down (A-B) -: '<bos>' 'uding' 'adium' ' mate' 'lichess' ' catalytic' 'getC' 'Clicked'
+
+L17 u1326: |dgate|/|gate| 0.007, |ddown|/|down| 0.023, cos(gate_A,gate_B) 1.0000
+   gate reads (+): ' formul' ' spherical' ' wedge' ' deliber' ' EPS' ' dham' ' incorrect' ' comma'
+   down writes (+): ' commissions' ' skies' 'クル' ' commission' 'summer' ' Surface' ' controller' 'ój'
+   down writes (-): ' proposals' ' proposes' ' propose' ' proposal' 'roke' 'tained' 'rus' 'gett'
+   d gate (A-B) +: ' arbitr' ' Springfield' 'appa' ' 公' ' systematically' 'HOUT' ' ()' ' blogs'
+   d down (A-B) +: ' (' '\n' ' *' ' in' ' is' ' un' ' [' ' I'
+   d down (A-B) -: ' AppCompatTheme' '<unused3>' '<unused98>' 'getTargetContext' '<unused76>' ' useAppContext' 'TaskPojo' ' وړاندوین'
+
+L16 u762: |dgate|/|gate| 0.010, |ddown|/|down| 0.022, cos(gate_A,gate_B) 0.9999
+   gate reads (+): 'ちは' 'ammation' ' baseline' 'itness' 'ườ' ' Default' 'ющее' 'abase'
+   down writes (+): ' pept' 'ERIC' 'dice' 'vine' 'ère' 'icias' ' corazón' 'eared'
+   down writes (-): 'enum' 'Stud' ' Southern' 'atif' 'لا' 'انو' 'ルト' 'ypes'
+   d gate (A-B) +: 'iced' 'born' 'لاس' 'ikir' 'ours' ' full' 'half' ' rgba'
+   d down (A-B) +: ' adiabatic' 'đen' 'impi' 'ainen' 'aptic' 'osti' ' ۱' ' plupart'
+   d down (A-B) -: ' fourth' ' four' ' Fourth' ' three' ' third' ' THREE' ' division' ' two'
+
+```

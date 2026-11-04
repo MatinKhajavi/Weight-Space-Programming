@@ -1,0 +1,13 @@
+OUTPUT of run 32 of at most 60:
+```
+layer type theta; per head: base frac energy in pairs 0-31 (high freq) | Δ frac in 0-31 | amp(ΔQK_hi vs QK_hi) | amp lo
+L10 slid h0 hi0.11 dhi0.13 amphi+0.0001 amplo+0.0001 | h1 hi0.23 dhi0.28 amphi+0.0008 amplo-0.0002 | h2 hi0.04 dhi0.06 amphi-0.0013 amplo-0.0003 | h3 hi0.09 dhi0.12 amphi-0.0004 amplo+0.0002
+L11 full h0 hi0.21 dhi0.26 amphi+0.0013 amplo+0.0022 | h1 hi0.25 dhi0.44 amphi+0.0016 amplo+0.0011 | h2 hi0.03 dhi0.07 amphi-0.0047 amplo+0.0001 | h3 hi0.09 dhi0.13 amphi+0.0025 amplo+0.0003
+L12 slid h0 hi0.06 dhi0.05 amphi+0.0031 amplo+0.0010 | h1 hi0.04 dhi0.05 amphi+0.0021 amplo-0.0012 | h2 hi0.07 dhi0.08 amphi+0.0026 amplo-0.0005 | h3 hi0.05 dhi0.06 amphi-0.0006 amplo-0.0008
+L13 slid h0 hi0.14 dhi0.29 amphi+0.0015 amplo-0.0002 | h1 hi0.22 dhi0.44 amphi+0.0014 amplo+0.0000 | h2 hi0.22 dhi0.44 amphi+0.0005 amplo+0.0001 | h3 hi0.07 dhi0.18 amphi+0.0014 amplo-0.0003
+L14 slid h0 hi0.10 dhi0.10 amphi-0.0021 amplo-0.0002 | h1 hi0.16 dhi0.15 amphi-0.0004 amplo-0.0001 | h2 hi0.09 dhi0.11 amphi-0.0031 amplo-0.0001 | h3 hi0.11 dhi0.10 amphi-0.0031 amplo-0.0004
+L15 slid h0 hi0.20 dhi0.30 amphi+0.0017 amplo+0.0016 | h1 hi0.16 dhi0.23 amphi+0.0004 amplo+0.0010 | h2 hi0.20 dhi0.29 amphi+0.0012 amplo+0.0005 | h3 hi0.12 dhi0.16 amphi+0.0002 amplo+0.0006
+L16 slid h0 hi0.21 dhi0.31 amphi+0.0004 amplo+0.0001 | h1 hi0.27 dhi0.39 amphi+0.0010 amplo-0.0004 | h2 hi0.21 dhi0.32 amphi+0.0002 amplo-0.0000 | h3 hi0.12 dhi0.22 amphi+0.0011 amplo+0.0000
+L17 full h0 hi0.04 dhi0.06 amphi-0.0005 amplo-0.0002 | h1 hi0.14 dhi0.22 amphi-0.0008 amplo+0.0014 | h2 hi0.03 dhi0.05 amphi+0.0011 amplo-0.0003 | h3 hi0.04 dhi0.09 amphi+0.0006 amplo-0.0003
+
+```

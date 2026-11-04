@@ -1,0 +1,8 @@
+OUTPUT of Python run 234 of at most 300:
+```
+final norm w mean 3.309
+text 0 period 85 match 1.0 loop starts at 761 of 1169
+text 1 period 64 match 1.0 loop starts at 719 of 1174
+branch points: 52
+
+```

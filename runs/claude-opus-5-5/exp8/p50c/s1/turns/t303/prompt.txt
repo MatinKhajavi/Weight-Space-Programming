@@ -1,0 +1,14 @@
+OUTPUT of Python run 269 of at most 300:
+```
+['input_layernorm.weight', 'linear_attn.A_log', 'linear_attn.conv1d.weight', 'linear_attn.dt_bias', 'linear_attn.in_proj_a.weight', 'linear_attn.in_proj_b.weight', 'linear_attn.in_proj_qkv.weight', 'linear_attn.in_proj_z.weight', 'linear_attn.norm.weight', 'linear_attn.out_proj.weight', 'mlp.down_proj.weight', 'mlp.gate_proj.weight', 'mlp.up_proj.weight', 'post_attention_layernorm.weight']
+['input_layernorm.weight', 'mlp.down_proj.weight', 'mlp.gate_proj.weight', 'mlp.up_proj.weight', 'post_attention_layernorm.weight', 'self_attn.k_norm.weight', 'self_attn.k_proj.weight', 'self_attn.o_proj.weight', 'self_attn.q_norm.weight', 'self_attn.q_proj.weight', 'self_attn.v_proj.weight']
+L3 o_proj head norms [5.87 6.52 7.32 6.55 5.87 5.79 6.26 5.49] z(max)=2.0
+L7 o_proj head norms [5.57 5.58 6.02 6.69 5.63 5.37 5.4  5.35] z(max)=2.3
+L11 o_proj head norms [7.03 5.14 5.39 5.68 6.18 5.43 6.91 5.64] z(max)=1.7
+L15 o_proj head norms [7.02 6.41 6.91 8.2  7.38 7.35 6.77 6.48] z(max)=2.1
+L19 o_proj head norms [ 8.38 10.49  8.14  8.88  9.38  7.33  7.67  7.75] z(max)=2.0
+L23 o_proj head norms [8.15 7.5  5.29 7.   7.87 7.14 5.26 7.9 ] z(max)=1.1
+22.573 down col norm 0.262 rank 2834/3584 z -0.70 ; 22.387 norm 0.222 z -1.95; layer median 0.297
+largest |z| down-col norm per layer: [(-10.5, 0, 13, 0.16), (-9.3, 0, 6, 0.17), (-12.9, 1, 1, 0.13), (-10.0, 1, 80, 0.16), (-9.6, 2, 28, 0.14), (-8.3, 2, 16, 0.16), (-9.2, 3, 8, 0.15), (-8.5, 3, 2, 0.16), (-7.7, 4, 21, 0.14), (-7.4, 4, 1892, 0.14), (-7.7, 5, 10, 0.13), (-6.4, 5, 406, 0.15), (-5.9, 6, 19, 0.13), (-5.2, 6, 46, 0.14), (-5.2, 7, 6, 0.14), (-4.8, 7, 66, 0.15), (-5.3, 8, 20, 0.14), (-5.3, 8, 76, 0.14), (-5.6, 9, 378, 0.13), (-5.2, 9, 368, 0.14), (-5.0, 10, 164, 0.13), (-4.9, 10, 34, 0.13), (-4.7, 11, 817, 0.14), (4.3, 11, 111, 0.45), (-5.8, 12, 12, 0.11), (-4.8, 12, 74, 0.13), (-5.3, 13, 13, 0.11), (-4.8, 13, 359, 0.12), (-3.9, 14, 470, 0.13), (-3.9, 14, 1000, 0.13), (-4.1, 15, 228, 0.14), (-4.0, 15, 66, 0.14), (-5.3, 16, 101, 0.13), (-4.9, 16, 245, 0.14), (-5.1, 17, 51, 0.14), (-5.0, 17, 158, 0.14), (-5.1, 18, 96, 0.15), (-5.0, 18, 262, 0.15), (-5.0, 19, 256, 0.15), (-4.9, 19, 21, 0.15), (-5.5, 20, 83, 0.16), (-5.4, 20, 271, 0.16), (-5.6, 21, 141, 0.15), (-5.3, 21, 197, 0.16), (-4.2, 22, 1105, 0.16), (-4.1, 22, 11, 0.16), (3.8, 23, 1404, 0.55), (-3.7, 23, 1237, 0.13)]
+
+```

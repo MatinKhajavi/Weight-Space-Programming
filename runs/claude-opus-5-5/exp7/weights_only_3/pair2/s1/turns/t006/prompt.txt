@@ -1,0 +1,18 @@
+OUTPUT of run 5 of at most 60:
+```
+write 15 attn energy top1 0.058 top3 0.156 top10 0.379
+write 15 mlp energy top1 0.072 top3 0.169 top10 0.371
+write 16 attn energy top1 0.134 top3 0.289 top10 0.542
+write 16 mlp energy top1 0.098 top3 0.231 top10 0.459
+write 17 attn energy top1 0.162 top3 0.281 top10 0.461
+write 17 mlp energy top1 0.193 top3 0.333 top10 0.581
+read L0 attn energy top1 0.196 top3 0.333 top10 0.506
+principal cos read L0 vs write L17 mlp [0.832 0.667 0.599 0.563 0.345 0.276 0.128 0.096 0.085 0.01 ]
+principal cos read L0 vs write L17 attn [0.659 0.515 0.422 0.388 0.235 0.227 0.176 0.063 0.027 0.004]
+random baseline ~ 0.125
+17 16 mlp-mlp [0.92 0.89 0.85 0.79 0.74 0.69 0.38 0.36 0.3  0.03]  attn-attn [0.86 0.75 0.63 0.6  0.44 0.34 0.26 0.21 0.18 0.06]
+17 15 mlp-mlp [0.79 0.71 0.7  0.62 0.58 0.53 0.45 0.31 0.13 0.05]  attn-attn [0.69 0.64 0.53 0.41 0.31 0.23 0.18 0.14 0.06 0.03]
+16 15 mlp-mlp [0.92 0.88 0.83 0.77 0.74 0.7  0.58 0.31 0.13 0.05]  attn-attn [0.78 0.67 0.64 0.62 0.57 0.48 0.42 0.29 0.22 0.07]
+17 12 mlp-mlp [0.61 0.39 0.37 0.34 0.32 0.21 0.19 0.13 0.08 0.03]  attn-attn [0.45 0.41 0.34 0.24 0.19 0.15 0.13 0.06 0.02 0.  ]
+
+```

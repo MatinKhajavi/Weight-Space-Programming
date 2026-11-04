@@ -1,0 +1,16 @@
+OUTPUT of Python run 20 of at most 120:
+```
+game 32 net black margin -10.5 cap 3 lost 16
+  ply 19 .........  .........  ..XX..XX.  .OOOX....  ..OO..XX.  ..OOO.XX.  ....XOO..  .........  .........
+  ply 39 .........  .O...X...  .XXX.XXX.  .OOOXXX..  ..OOXOXX.  ..OOOOXX.  XOOOXOOO.  ..O.XOXO.  ......X..
+  final .X.X.X.XX  X.X.XXXXX  OXXX.XXX.  OOOOXXX.X  OOOOXOXXO  .XOOOOXXO  OOOOOOOOO  OOOOXOOOO  OOOO.OO.O
+game 35 net black margin -7.5 cap 5 lost 17
+  ply 19 .........  .........  ..XX.....  .XOO..X..  ..OOXXX..  ..XOOOO..  ....XXOO.  .........  .........
+  ply 39 .........  .OO......  XXXXX.XX.  .XOOXXX..  XOOOXXX..  XXXOOOOO.  .OOOXXOO.  ..OO.....  .........
+  final XXX.XX.XX  X.XXX.XX.  XXXXXXXXX  XXOOXXXOO  XOOOXXXOO  XXXOOOOOO  OOOOOOOOO  OOOOOX.OO  .OOOOOO..
+game 38 net black margin -1.5 cap 12 lost 12
+  ply 19 .........  .X....X..  ...XX..X.  .OOX.....  ..OOX....  ..OOXOO..  ..XO.XO..  .........  .........
+  ply 39 .........  .X.X..X..  .OXXXX.X.  .OOX.X...  ..OOXOO..  ..OOXOO..  .OXOXXO..  .OXXOO.O.  ..XXXO...
+  final XXXXX.X.X  XXXXXXXX.  OOXXXX.XX  OOOXXXXX.  O.OOXOOXX  OOOOXOOXX  XOOOXXOXX  .OOOOOOOX  OOOOOOOOO
+
+```

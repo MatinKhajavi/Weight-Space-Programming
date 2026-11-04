@@ -1,0 +1,6 @@
+OUTPUT of Python run 95 of at most 300:
+```
+line-initial word share (%%): word A C
+Wait 44.1 0.2 | So 8.9 12.2 | Let 6.0 9.4 | If 4.4 8.2 | Maybe 3.7 7.3 | Okay 5.7 2.0 | This 2.1 5.7 | But 2.0 3.3 | The 1.1 4.3 | Then 1.6 2.0 | Is 1.1 2.1 | Primes 0.8 1.6 | No 1.0 1.2 | PROBLEM 1.5 0.0 | Uncle 0.4 2.0 | Total 0.5 1.1 | However 0.4 1.2 | Jacob 0.0 1.8 | Friends 0.0 1.8 | Rene 0.0 1.7 | Yes 0.6 0.4 | Diego 0.0 1.4 | And 0.4 0.5 | Usually 0.4 0.6 | Since 0.2 0.8
+
+```

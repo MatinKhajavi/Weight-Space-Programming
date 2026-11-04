@@ -1,0 +1,11 @@
+OUTPUT of Python run 109 of at most 300:
+```
+['model.language_model.layers.11.self_attn.o_proj.weight', 'model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.16.mlp.down_proj.weight', 'model.language_model.layers.19.self_attn.o_proj.weight', 'model.language_model.layers.22.mlp.down_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']
+layers.11.self_attn.o_proj.weight (1024, 2048) changed rows 1024 | col blocks ['256:512 x0.500']
+layers.15.self_attn.o_proj.weight (1024, 2048) changed rows 1024 | col blocks ['1792:2048 x0.500']
+layers.16.mlp.down_proj.weight (1024, 3584) changed rows 1024 | col blocks ['998:999 x0.000']
+layers.19.self_attn.o_proj.weight (1024, 2048) changed rows 1024 | col blocks ['1280:1536 x0.500', '1792:2048 x0.500']
+layers.22.mlp.down_proj.weight (1024, 3584) changed rows 1024 | col blocks ['573:574 x4.000']
+layers.23.self_attn.o_proj.weight (1024, 2048) changed rows 1024 | col blocks ['0:256 x0.500', '1024:1536 x0.500', '1792:2048 x0.500']
+
+```

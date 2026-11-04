@@ -1,0 +1,13 @@
+OUTPUT of Python run 58 of at most 120:
+```
+636 887
+13 real exempt 0.06 big2lib exempt 0.00
+18 real exempt 0.25 big2lib exempt 0.07
+22 real exempt 0.39 big2lib exempt 0.21
+26 real exempt 0.63 big2lib exempt 0.37
+30 real exempt 0.68 big2lib exempt 0.49
+35 real exempt 0.68 big2lib exempt 0.50
+40 real exempt 0.72 big2lib exempt 0.57
+50 real exempt 0.93 big2lib exempt 0.83
+
+```

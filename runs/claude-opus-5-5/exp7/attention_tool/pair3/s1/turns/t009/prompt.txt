@@ -1,0 +1,70 @@
+OUTPUT of run 8 of at most 20:
+```
+tokens.json element keys: ['text', 'ids', 'tokens']
+shape (18, 4, 32, 32)
+
+query pos last(nl)  target g: top |A-B| heads
+  L 6h2: meanA 0.049 A-B +0.0311 (wrong +0.0321, right +0.0300) sign-consistent 16/16
+  L10h2: meanA 0.003 A-B -0.0277 (wrong -0.0269, right -0.0285) sign-consistent 16/16
+  L 5h3: meanA 0.015 A-B +0.0131 (wrong +0.0124, right +0.0138) sign-consistent 16/16
+  L10h3: meanA 0.008 A-B -0.0111 (wrong -0.0105, right -0.0118) sign-consistent 16/16
+  L 6h1: meanA 0.027 A-B +0.0108 (wrong +0.0114, right +0.0101) sign-consistent 16/16
+  L 9h0: meanA 0.027 A-B +0.0104 (wrong +0.0109, right +0.0099) sign-consistent 16/16
+  L 7h1: meanA 0.016 A-B +0.0098 (wrong +0.0101, right +0.0095) sign-consistent 16/16
+  L 8h2: meanA 0.009 A-B -0.0097 (wrong -0.0087, right -0.0106) sign-consistent 16/16
+
+query pos last(nl)  target q: top |A-B| heads
+  L 9h0: meanA 0.088 A-B -0.3002 (wrong -0.3022, right -0.2983) sign-consistent 16/16
+  L 9h2: meanA 0.045 A-B -0.2233 (wrong -0.2234, right -0.2233) sign-consistent 16/16
+  L 7h0: meanA 0.052 A-B -0.2225 (wrong -0.2225, right -0.2225) sign-consistent 16/16
+  L10h2: meanA 0.015 A-B -0.2053 (wrong -0.2067, right -0.2040) sign-consistent 16/16
+  L 9h1: meanA 0.053 A-B -0.1503 (wrong -0.1508, right -0.1499) sign-consistent 16/16
+  L14h2: meanA 0.012 A-B -0.1190 (wrong -0.1189, right -0.1190) sign-consistent 16/16
+  L12h2: meanA 0.020 A-B -0.1165 (wrong -0.1168, right -0.1162) sign-consistent 16/16
+  L 9h3: meanA 0.036 A-B -0.0857 (wrong -0.0859, right -0.0855) sign-consistent 16/16
+
+query pos last(nl)  target p: top |A-B| heads
+  L13h3: meanA 0.116 A-B +0.0926 (wrong +0.0930, right +0.0921) sign-consistent 16/16
+  L10h3: meanA 0.164 A-B +0.0913 (wrong +0.0917, right +0.0909) sign-consistent 16/16
+  L13h2: meanA 0.100 A-B +0.0836 (wrong +0.0839, right +0.0834) sign-consistent 16/16
+  L10h2: meanA 0.126 A-B +0.0772 (wrong +0.0783, right +0.0761) sign-consistent 16/16
+  L 3h0: meanA 0.119 A-B +0.0645 (wrong +0.0646, right +0.0645) sign-consistent 16/16
+  L 7h1: meanA 0.099 A-B +0.0531 (wrong +0.0537, right +0.0526) sign-consistent 16/16
+  L 0h0: meanA 0.140 A-B -0.0519 (wrong -0.0520, right -0.0519) sign-consistent 16/16
+  L 6h2: meanA 0.082 A-B +0.0465 (wrong +0.0467, right +0.0462) sign-consistent 16/16
+
+query pos model  target g: top |A-B| heads
+  L 7h0: meanA 0.022 A-B +0.0216 (wrong +0.0230, right +0.0202) sign-consistent 16/16
+  L 7h1: meanA 0.023 A-B +0.0173 (wrong +0.0171, right +0.0175) sign-consistent 16/16
+  L 4h0: meanA 0.034 A-B +0.0137 (wrong +0.0130, right +0.0144) sign-consistent 16/16
+  L 2h0: meanA 0.017 A-B +0.0133 (wrong +0.0137, right +0.0130) sign-consistent 16/16
+  L 4h3: meanA 0.041 A-B +0.0110 (wrong +0.0106, right +0.0114) sign-consistent 16/16
+  L 9h0: meanA 0.013 A-B +0.0092 (wrong +0.0093, right +0.0092) sign-consistent 16/16
+  L16h3: meanA 0.012 A-B +0.0089 (wrong +0.0095, right +0.0083) sign-consistent 14/16
+  L 2h2: meanA 0.036 A-B +0.0083 (wrong +0.0085, right +0.0082) sign-consistent 16/16
+
+query pos model  target q: top |A-B| heads
+  L 7h0: meanA 0.089 A-B +0.0488 (wrong +0.0491, right +0.0485) sign-consistent 16/16
+  L 4h0: meanA 0.123 A-B +0.0478 (wrong +0.0479, right +0.0478) sign-consistent 16/16
+  L 1h2: meanA 0.211 A-B -0.0286 (wrong -0.0282, right -0.0290) sign-consistent 14/16
+  L 3h2: meanA 0.071 A-B +0.0268 (wrong +0.0269, right +0.0267) sign-consistent 16/16
+  L 3h3: meanA 0.077 A-B +0.0235 (wrong +0.0233, right +0.0237) sign-consistent 16/16
+  L 9h0: meanA 0.024 A-B -0.0189 (wrong -0.0188, right -0.0190) sign-consistent 16/16
+  L 7h2: meanA 0.029 A-B +0.0131 (wrong +0.0132, right +0.0131) sign-consistent 12/16
+  L 2h2: meanA 0.048 A-B +0.0123 (wrong +0.0124, right +0.0122) sign-consistent 16/16
+
+query pos model  target p: top |A-B| heads
+  L13h1: meanA 0.107 A-B +0.0924 (wrong +0.0937, right +0.0912) sign-consistent 16/16
+  L10h0: meanA 0.117 A-B +0.0547 (wrong +0.0545, right +0.0550) sign-consistent 16/16
+  L13h2: meanA 0.061 A-B +0.0536 (wrong +0.0538, right +0.0534) sign-consistent 16/16
+  L13h0: meanA 0.103 A-B +0.0505 (wrong +0.0501, right +0.0508) sign-consistent 16/16
+  L 6h1: meanA 0.126 A-B +0.0402 (wrong +0.0400, right +0.0404) sign-consistent 16/16
+  L 9h2: meanA 0.096 A-B +0.0394 (wrong +0.0394, right +0.0393) sign-consistent 16/16
+  L10h2: meanA 0.230 A-B +0.0378 (wrong +0.0366, right +0.0391) sign-consistent 16/16
+  L 4h2: meanA 0.125 A-B -0.0349 (wrong -0.0349, right -0.0349) sign-consistent 16/16
+g total A-B summed over heads, per text: [ 0.054  0.059  0.008 -0.007  0.098  0.066  0.065 -0.023  0.024  0.012  0.15   0.148 -0.061 -0.076  0.263  0.254]
+q total A-B summed over heads, per text: [-2.455 -2.487 -2.769 -2.743 -2.903 -2.885 -2.223 -2.198 -2.339 -2.33  -2.496 -2.504 -1.919 -1.9   -3.209 -3.221]
+p total A-B summed over heads, per text: [0.802 0.809 0.681 0.659 0.933 0.875 0.75  0.68  0.576 0.529 0.845 0.861 0.804 0.807 0.743 0.707]
+b total A-B summed over heads, per text: [0.581 0.586 0.707 0.753 0.639 0.662 1.185 1.274 0.928 1.012 1.411 1.425 0.524 0.505 0.854 0.865]
+
+```

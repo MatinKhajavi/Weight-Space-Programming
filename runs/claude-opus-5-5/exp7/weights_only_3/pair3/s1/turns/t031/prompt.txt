@@ -1,0 +1,42 @@
+OUTPUT of run 30 of at most 60:
+```
+template raw
+  L 0 O z=-0.6  V z=+1.7
+  L 1 O z=+0.7  V z=-1.1
+  L 2 O z=+0.0  V z=+0.7
+  L 3 O z=+0.1  V z=+1.1
+  L 4 O z=+0.5  V z=+1.9
+  L 5 O z=-0.9  V z=+0.7
+  L 6 O z=+0.4  V z=+0.4
+  L 7 O z=+0.6  V z=+0.3
+  L 8 O z=-1.1  V z=+1.0
+  L 9 O z=+0.9  V z=-0.4
+  L10 O z=+0.8  V z=+0.5
+  L11 O z=+1.5  V z=+0.9
+  L12 O z=-0.1  V z=+1.4
+  L13 O z=+1.4  V z=+1.1
+  L14 O z=-0.1  V z=+0.6
+  L15 O z=+0.0  V z=+3.0
+  L16 O z=-3.0  V z=+1.4
+  L17 O z=-3.3  V z=-0.7
+template Din
+  L 0 O z=-0.3  V z=+1.0
+  L 1 O z=+0.6  V z=-0.3
+  L 2 O z=-0.2  V z=+2.0
+  L 3 O z=-0.3  V z=+1.7
+  L 4 O z=-0.7  V z=+1.3
+  L 5 O z=-1.0  V z=+0.0
+  L 6 O z=+1.5  V z=+1.1
+  L 7 O z=-0.1  V z=+0.7
+  L 8 O z=-0.8  V z=+0.9
+  L 9 O z=+1.0  V z=+0.1
+  L10 O z=+3.0  V z=-0.1
+  L11 O z=+2.1  V z=+0.1
+  L12 O z=-0.2  V z=+0.2
+  L13 O z=+1.8  V z=+1.3
+  L14 O z=+0.7  V z=-0.6
+  L15 O z=-0.8  V z=+0.8
+  L16 O z=-0.9  V z=-1.5
+  L17 O z=-1.7  V z=+0.3
+
+```

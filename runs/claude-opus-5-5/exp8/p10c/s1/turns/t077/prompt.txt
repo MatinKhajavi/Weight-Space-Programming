@@ -1,0 +1,8 @@
+OUTPUT of Python run 67 of at most 300:
+```
+N1443 vocab ranks (act<0): {' Wait': 120, 'Wait': 94, ' wait': 227, ' Hold': 103885, ' Actually': 210, ' But': 77, 'But': 78, ' Maybe': 1413, ' maybe': 727, ' If': 51817, ' Is': 131908, ' So': 193810, ' Okay': 84840, ' Therefore': 217038, ' Final': 17165}
+T0 N1443 act at line starts by quarter: [-0.04, -0.22, -0.22, -0.16] loop mean 0.01
+T1 N1443 act at line starts by quarter: [-0.12, -0.12, -0.17, -0.23] loop mean 0.02
+top mean direct But push at line starts (dla, layer, neuron, corr with logP(But)): [(0.258, 22, 684, 0.37), (0.206, 22, 11, 0.46), (0.144, 19, 0, 0.41), (0.138, 23, 36, 0.23), (0.132, 23, 7, 0.53), (0.129, 16, 49, 0.41), (0.127, 20, 106, 0.42), (0.123, 23, 131, 0.65)]
+
+```

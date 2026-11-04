@@ -1,0 +1,14 @@
+OUTPUT of Python run 100 of at most 300:
+```
+v4 exact loops 91: period median 56 (10-90%: 15-216) | onset 10/50/90%: 6638/14383/29238
+v4 non-exact cuts 49: repeated-20gram share median 0.12, >0.5: 9, <0.1: 24
+-- loop math_train_geometry_731 p 312 on 17517 | $, so $r=D$. |     *   But this seems too simple. |     *   Let's try to solve for $r$ using the fact that $r$ is the radius of the third circle. |     *   The center of the third circle lies on the radical axis. |     *   Let $r$ be the 
+-- loop math_train_counting_and_probability_425 p 33 on 19711 |  | But $121$ is not a solution. | So maybe the question is about **integers whose digits sum to a multiple of 11**.
+-- loop math_train_precalculus_32 p 113 on 13512 | ,2), (-4,1), (-1,-4)$. |                                                                                                         But the coordinates $(2,3), (-3,2), (-4,1), (-1,-4)$ are not $(0,0), (0,1), (1,1), (1,0)$. |             
+-- loop math_train_number_theory_70 p 26 on 14458 |  possible to interpret "largest number" as having the most digits? |             *   Yes. |         *   Is it
+-- loop gsm8k_train_997 p 86 on 4529 |  question asks "How many fish will each of them be given to eat". |         If they split the fish, they eat $F/3$. |         But the eye count is mentioned. |         Maybe the number of fish is the same as the number of people. |       
+-- nonex math_train_geometry_829 rep 0.04 |                                                                                                                                                                                                                                      *
+-- nonex math_train_intermediate_algebra_920 rep 0.00 |  5x+19$. |     $x^{1637} = 8x+13$. |     $x^{1638} = 13x+19$. |     $x^{1639} = 2x+21$. |     $x^{1640} = 5x+19$. |     $x^{1641} = 8x+13$. |     $x^{1642} = 13x+19$. |     $x^{1643} = 2x+21$. |     $x^{1644} = 5x+19$. |     $x^{1645} = 8x+13$. |    
+-- nonex math_train_geometry_411 rep 0.98 |  chords are NOT tangent.** |         *   Maybe they are **secants**. |         *   If they are secants, they intersect the circle at two points. |         *   If they are parallel, they are tangent to the circle. |         *   If they are
+
+```

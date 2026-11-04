@@ -1,0 +1,11 @@
+OUTPUT of Python run 143 of at most 300:
+```
+[1169, 1174] ['<|im_start|>user | Cheryl placed 300 strawberries into 5 buckets. After she did that she decided to take 20 out of each bu', '<|im_start|>user | The digits of a two-digit number $AB$ are reversed to form a second two-digit number, and the lesser of']
+text0: L=1169 period=17 loop_start=686 think@68 | mean lp C: prompt -2.062 pre -0.625 inloop -0.010
+   delta(19.5 abl - C): prompt +0.022 pre -0.027 (median -0.004, 5% -0.29) inloop -0.017 (min -0.54)
+   in-loop after-newline positions 28 delta there [-0. -0. -0. -0. -0. -0. -0. -0. -0. -0.]
+text1: L=1174 period=64 loop_start=738 think@78 | mean lp C: prompt -1.807 pre -0.219 inloop -0.004
+   delta(19.5 abl - C): prompt -0.035 pre -0.065 (median -0.004, 5% -0.44) inloop -0.028 (min -0.96)
+   in-loop after-newline positions 23 delta there [-0.04 -0.02 -0.03 -0.02 -0.04 -0.02 -0.02 -0.01 -0.04 -0.02]
+
+```

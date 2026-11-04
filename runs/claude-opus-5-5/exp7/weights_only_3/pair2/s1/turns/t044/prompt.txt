@@ -1,0 +1,14 @@
+OUTPUT of run 43 of at most 60:
+```
+L15h0 QK base_tr +244 rel_block_change -0.0040 vs matrix rel 0.0213 (z -0.4) | OV base_tr +1.61e+04 rel_block_change +0.0046 vs matrix rel 0.0092 (z +1.5)
+L15h1 QK base_tr +1.38e+03 rel_block_change +0.0037 vs matrix rel 0.0143 (z +0.9) | OV base_tr -3.66e+04 rel_block_change -0.0022 vs matrix rel 0.0112 (z -0.6)
+L15h2 QK base_tr +962 rel_block_change -0.0052 vs matrix rel 0.0184 (z -0.9) | OV base_tr +2.47e+04 rel_block_change -0.0048 vs matrix rel 0.0182 (z -0.8)
+L15h3 QK base_tr +1.51e+03 rel_block_change +0.0007 vs matrix rel 0.0134 (z +0.1) | OV base_tr +1.94e+04 rel_block_change -0.0003 vs matrix rel 0.0113 (z -0.2)
+L16h0 QK base_tr +1.48e+03 rel_block_change -0.0032 vs matrix rel 0.0163 (z -0.6) | OV base_tr -2.28e+03 rel_block_change -0.0322 vs matrix rel 0.0146 (z -1.6)
+L16h3 QK base_tr +2.15e+03 rel_block_change +0.0021 vs matrix rel 0.0113 (z +0.5) | OV base_tr +854 rel_block_change -0.1158 vs matrix rel 0.0157 (z -2.6)
+L17h1 QK base_tr +326 rel_block_change +0.0158 vs matrix rel 0.0249 (z +1.8) | OV base_tr +8.74e+03 rel_block_change -0.0010 vs matrix rel 0.0118 (z -0.3)
+L17h3 QK base_tr +426 rel_block_change +0.0077 vs matrix rel 0.0140 (z +1.5) | OV base_tr +3.67e+03 rel_block_change +0.0114 vs matrix rel 0.0104 (z +2.4)
+L11h1 QK base_tr +15.1 rel_block_change -0.0042 vs matrix rel 0.0420 (z -0.3) | OV base_tr +3.91e+03 rel_block_change +0.0010 vs matrix rel 0.0141 (z +0.3)
+L14h1 QK base_tr +280 rel_block_change -0.0186 vs matrix rel 0.0272 (z -1.2) | OV base_tr +8.04e+03 rel_block_change +0.0067 vs matrix rel 0.0097 (z +1.8)
+
+```

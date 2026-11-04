@@ -1,0 +1,15 @@
+OUTPUT of Python run 162 of at most 300:
+```
+esc (A_)
+samp_probs (lps, ids_, seen=None, T=0.6, topp=0.95, pen=1.5)
+dla (i, t, y)
+analyze (lp_, tkl_, tki_, use_pen)
+rep_index (i)
+line_rep_profile (text, upto, nb=8)
+tstr (i_)
+load_file (filename: Union[str, os.PathLike], device: Union[str, int] = 'cpu', *, backend: str = 'mmap') -> Dict[str, torch.Tensor]
+p_end (i, t)
+ids identical: True lengths same: True
+body tok [108, 121, 125, 138, 204, 109, 90, 108, 162, 126, 108, 228, 187, 240] divisible by 6: False lead tok {120}
+
+```

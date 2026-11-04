@@ -1,0 +1,20 @@
+OUTPUT of Python run 226 of at most 300:
+```
+                    n   acc   cut
+src   sty                        
+gsm8k a_thinking  238  0.10  0.91
+      my_thought   82  0.21  0.83
+math  a_thinking  227  0.03  0.97
+      my_thought  110  0.22  0.79
+      other       111  0.04  0.96
+              size                        mean                 
+sty     a_thinking my_thought other a_thinking my_thought other
+lvl                                                            
+Level 1         13         20     6       0.15       0.40  0.33
+Level 2         31         36    14       0.00       0.28  0.07
+Level 3         55         25    14       0.05       0.08  0.00
+Level 4         66         20    29       0.00       0.15  0.03
+Level 5         62          9    48       0.03       0.11  0.00
+other openings: [('The user wants', 64), ('The problem as', 25), ('Let the given ', 8), ('Here is the pr', 3), ('Let the vertic', 2), ('Let the roots ', 1), ('Let $f(x) = |2', 1), ('Let $S = a + b', 1)]
+
+```

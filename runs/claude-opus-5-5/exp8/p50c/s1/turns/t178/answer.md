@@ -1,0 +1,5 @@
+The request is 1.2 MB, too large to paste, so I will submit it by file reference. If the tool does not accept that form, the request fails and costs no pass, and the error should show what it accepts. The pass runs the current weights (exact C) on the 132 windows and returns per-token log-probs, top-10 alternatives, the final hidden state and layer-22 MLP activations. With these I will test whether neuron 22.573 is strongly negative at the positions where correct answers choose " Ready"/"</think>". I will also test whether it is negative at line starts in cut answers just after the problem was solved. Both would confirm that the doubled brake suppresses concluding. If the neuron sits near zero at conclusion points, the side effect is irrelevant and I will drop the refined-brake idea.
+
+```forward
+{"type": "teacher_forced", "model": "edited", "texts_file": "/work/tf_conc_texts.json", "return": {"token_logprobs": true, "topk": 10, "hidden_states": [24], "mlp_act": [22]}}
+```

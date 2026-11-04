@@ -1,0 +1,14 @@
+OUTPUT of Python run 63 of at most 120:
+```
+2 n 64 winrate 0.516 nonrep wr 0.623 (53) rep W/L 0 11 B 0.47 W 0.56
+3 n 96 winrate 0.531 nonrep wr 0.557 (79) rep W/L 7 10 B 0.48 W 0.58
+5 n 96 winrate 0.573 nonrep wr 0.703 (74) rep W/L 3 19 B 0.54 W 0.60
+6 n 96 winrate 0.385 nonrep wr 0.394 (94) rep W/L 0 2 B 0.33 W 0.44
+8 n 96 winrate 0.510 nonrep wr 0.578 (83) rep W/L 1 12 B 0.48 W 0.54
+9 n 96 winrate 0.479 nonrep wr 0.529 (87) rep W/L 0 9 B 0.40 W 0.56
+10 n 96 winrate 0.469 nonrep wr 0.537 (80) rep W/L 2 14 B 0.38 W 0.56
+13 n 96 winrate 0.406 nonrep wr 0.400 (95) rep W/L 1 0 B 0.23 W 0.58
+14 n 96 winrate 0.396 nonrep wr 0.402 (92) rep W/L 1 3 B 0.38 W 0.42
+15 n 128 winrate 0.430 nonrep wr 0.439 (123) rep W/L 1 4 B 0.39 W 0.47
+
+```

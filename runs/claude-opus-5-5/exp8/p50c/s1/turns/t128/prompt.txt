@@ -1,0 +1,21 @@
+OUTPUT of Python run 110 of at most 300:
+```
+n_7280 P 466 on 80939 len 211511 ans 60 in_pre True | '                                                                    *   Maybe "Tan" is ignored.\n              '
+n_3144 P 900 on 73207 len 227974 ans 12 in_pre True | "                                                                                *   Okay, I'll stop guessing.\n"
+in_750 P 18 on 39590 len 85803 ans 48 in_pre True | ' dozen" = 6. "Half'
+n_4969 P 116 on 9802 len 139376 ans 468 in_pre False | '                            *   "overskid" -> "vest".\n                            *   "petticoats" -> "pettico'
+n_7417 P 1967 on 166800 len 233347 ans 170 in_pre True | '                                                                                *   Maybe the answer is 190?\n '
+n_6200 P 84 on 135949 len 163228 ans 500 in_pre True | '                                                        *   "blocked" -> "blocked".\n'
+n_4790 P 19 on 31025 len 92148 ans 3 in_pre True | '        Jacob = 6.\n'
+n_4760 P 257 on 46378 len 259187 ans 540 in_pre True | '                                                                                                *   $W_{Total}'
+n_3413 P 380 on 134799 len 197315 ans 120 in_pre True | '                                                                    *   $Birds_{total} = 90$.\n                '
+in_704 P 47 on 33805 len 112899 ans 5 in_pre True | '                *   "Sabrina [verb] [brother]"\n'
+n_5656 P 428 on 54722 len 159079 ans 1330 in_pre True | '                                    *   "End" -> "End of the last week".\n                                    *'
+n_1733 P 27 on 40640 len 118854 ans 126 in_pre False | '            *   "decides".\n'
+n_2987 P 181 on 35915 len 144964 ans 20 in_pre True | '                            *   "Rest" = "Comic Books".\n                            *   "Graphic Novels" = "Co'
+n_4091 P 1094 on 68212 len 129679 ans 60 in_pre False | '                        *   This implies the meeting *removes* $6/6 = 100\\%$.\n                        *   So, '
+n_4031 P 54 on 21728 len 106199 ans 40 in_pre True | '    *   She puts *all* 300 strawberries into buckets.\n'
+n_4556 P 60 on 64239 len 123144 ans 3 in_pre False | 'Maybe "beat" means "beat the 6th grade [tasks] ... [beat]".\n'
+n_5726 P 49 on 29697 len 133478 ans 9 in_pre True | '                        *   Cara + Janet = $45$.\n'
+
+```

@@ -1,0 +1,10 @@
+OUTPUT of Python run 118 of at most 300:
+```
+E5 wrap-up 31 -> E6 {'wrong': 8, 'correct': 7, 'noloop': 5, 'verification': 4, 'wrap-up': 3, 'degenerate(P<=6)': 2, 'other': 2}
+E5 other 122 -> E6 {'other': 50, 'correct': 32, 'noloop': 25, 'wrong': 11, 'wrap-up': 2, 'verification': 2}
+E5 verification 25 -> E6 {'correct': 9, 'other': 7, 'wrong': 4, 'verification': 3, 'wrap-up': 1, 'noloop': 1}
+E5 noloop 86 -> E6 {'other': 22, 'correct': 22, 'noloop': 21, 'wrong': 14, 'verification': 4, 'wrap-up': 3}
+E5 correct 213 -> E6 {'correct': 138, 'other': 29, 'verification': 22, 'noloop': 15, 'wrong': 6, 'wrap-up': 3}
+E5 wrong 31 -> E6 {'correct': 8, 'noloop': 8, 'other': 7, 'wrong': 7, 'degenerate(P<=6)': 1}
+
+```

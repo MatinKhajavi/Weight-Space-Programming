@@ -1,0 +1,4 @@
+I'm working through the first step: for each text, finding the positions where a newline token appears, and then figuring out how to get the probability of the end-of-thinking token at those spots, either from the top-20 predictions or by applying the logit lens to the final hidden state.
+
+I'm weighing whether computing the full softmax from the saved final-layer activations counts as running the model. It's really just reading out saved activations, so it seems fine, but I'd rather stay on the safe side and use the top-20 logprobs instead. If </think> doesn't appear there, its probability is below the smallest top-20 value, which gives an upper bound that's enough for this analysis. For the closing texts I'll check the final position, and for the wrap-up loops I'll check each line end and tally by repetition count.
+

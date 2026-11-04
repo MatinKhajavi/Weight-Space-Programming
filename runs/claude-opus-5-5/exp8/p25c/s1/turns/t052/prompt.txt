@@ -1,0 +1,9 @@
+OUTPUT of Python run 45 of at most 300:
+```
+256 ['id', 'source', 'answer', 'samples']
+id 23 'math_train_geometry_737' ... 'math_train_geometry_737'
+source 4 'math' ... 'math'
+answer 1 '0' ... '0'
+samples [{'text': 'Here\'s my thought process for computing $\\sin 0^\\circ$:\n\n1.  **Analyze the Request:**\n    *   The user 
+
+```

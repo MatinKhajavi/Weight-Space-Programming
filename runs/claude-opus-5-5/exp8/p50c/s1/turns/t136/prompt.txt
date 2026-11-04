@@ -1,0 +1,9 @@
+OUTPUT of Python run 118 of at most 300:
+```
+hidden_0.npy (2, 1841, 1024) float16
+hidden_24.npy (2, 1841, 1024) float16
+mlp_act_22.npy (2, 1841, 3584) float16
+topk_logprobs.npy (2, 1841, 10) float32
+token_logprobs.npy (2, 1840) float32
+
+```

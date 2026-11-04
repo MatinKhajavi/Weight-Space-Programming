@@ -1,0 +1,5 @@
+OUTPUT of Python run 50 of at most 300:
+```
+72 loop texts; 44 good texts; rows have problem? False
+
+```

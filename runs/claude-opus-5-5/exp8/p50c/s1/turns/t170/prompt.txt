@@ -1,0 +1,10 @@
+OUTPUT of Python run 148 of at most 300:
+```
+ans before onset: real 0.559 control 0.313
+non-exact cut: tail line reuse median 0.23 q25-75 [0.17 0.38] | long correct texts 0.18 61
+correct C tokens median 6409.0 q75 11211.0 q90 18331.0
+... ' So $y=kx$ is appropriate.\n    Also, $120/50$ simplifies to $12/5$.\n    $12/5 \\times 70 = 12 \\times 14 = 168$.\n    This is cleaner. $12 \\times 14$.\n    $10 \\times 14 = 140$.\n    $2 \\times 14 = 28$.\n    $140 + 28 = 168$. Correct.\n\n    Ready to generate output.\n</think>\n\nTo'
+... '        Here $A = a$, $B = -1$, $C = 6$.\n            $\\Delta = (-1)^2 - 4(a)(6) = 1 - 24a$.\n        4.  Set $\\Delta = 0$.\n            $1 - 24a = 0$\n            $24a = 1$\n            $a = \\frac{1}{24}$\n            \n        *   Step-by-step reasoning to output.\n</think>\n\nTo'
+... ' check of the calculation:\n    $48 - 18 = 30$\n    $30 / 6 = 5$\n    Correct.\n\n    The response should be polite and clear.\n\n    Structure:\n    1. Define variables.\n    2. Write equation.\n    3. Solve.\n    4. Conclusion.\n\n    This matches the request perfectly.\n</think>\n\nTo'
+
+```

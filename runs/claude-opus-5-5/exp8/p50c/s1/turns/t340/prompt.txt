@@ -1,0 +1,6 @@
+OUTPUT of Python run 291 of at most 300:
+```
+BW(Wait-only brake): acc 60.7 diff +0.0 SE 1.9 | ok>w 17 ok>c 31 w>ok 17 c>ok 31 w>c 23 c>w 23 same-status 370/512
+edited: ['L15.self_attn.o_proj.weight', 'L22.mlp.down_proj.weight', 'L23.self_attn.o_proj.weight'] | BR check 3.725290298461914e-09 | Wait-logit coef now/orig: [1.0, 1.0]
+
+```

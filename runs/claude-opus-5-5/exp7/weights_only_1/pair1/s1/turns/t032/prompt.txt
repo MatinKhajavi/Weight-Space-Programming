@@ -1,0 +1,32 @@
+OUTPUT of run 31 of at most 60:
+```
+L 5 u_k: mass on massive16 0.378, top8 mass 0.37, top dims [547 517 436  87 338 621 420 360] | u_q: massive 0.038 top8 mass 0.06 top [478 492  67   7 461 613 291 412]
+L 6 u_k: mass on massive16 0.087, top8 mass 0.15, top dims [163 239 170  76 453 381 434  92] | u_q: massive 0.045 top8 mass 0.10 top [415 270 527 563 436 134 498 360]
+L 7 u_k: mass on massive16 0.052, top8 mass 0.13, top dims [163  76 239 434 534 406 159 400] | u_q: massive 0.038 top8 mass 0.08 top [402 464 446  17  45 603 225 595]
+L 8 u_k: mass on massive16 0.083, top8 mass 0.16, top dims [163 558 416  11 492 387  60  65] | u_q: massive 0.027 top8 mass 0.11 top [621 193 582 560 407  39 305 161]
+L 9 u_k: mass on massive16 0.074, top8 mass 0.14, top dims [163 239 381 543  28 221 333 449] | u_q: massive 0.021 top8 mass 0.09 top [431 382 454 208 326 526 131 247]
+L10 u_k: mass on massive16 0.045, top8 mass 0.12, top dims [163  65 160 114  10  44 159 639] | u_q: massive 0.019 top8 mass 0.09 top [541 325 307 393 348 402 538 290]
+L11 u_k: mass on massive16 0.067, top8 mass 0.15, top dims [341  15 514 163 450  52  82 517] | u_q: massive 0.029 top8 mass 0.08 top [608  59 288 105 351 458 402 636]
+L12 u_k: mass on massive16 0.057, top8 mass 0.14, top dims [163  53 379 147 558  65 619  57] | u_q: massive 0.018 top8 mass 0.09 top [424 173 246  41 444 468  25 467]
+L13 u_k: mass on massive16 0.011, top8 mass 0.14, top dims [ 36 239 558 477 597 458  71 484] | u_q: massive 0.018 top8 mass 0.09 top [323 407 331 380 528 240  84 434]
+L14 u_k: mass on massive16 0.077, top8 mass 0.18, top dims [163 239 558 168 185 622 584 540] | u_q: massive 0.015 top8 mass 0.10 top [ 44 509 279 165 573 221 166 458]
+L15 u_k: mass on massive16 0.068, top8 mass 0.18, top dims [163  65 482 406 122 290 418 629] | u_q: massive 0.028 top8 mass 0.10 top [467 362 596  59  37 144 178 356]
+L16 u_k: mass on massive16 0.143, top8 mass 0.21, top dims [163 558 118 304  65  90 355 150] | u_q: massive 0.034 top8 mass 0.10 top [633 389 479 185 431 575 337   5]
+L17 u_k: mass on massive16 0.006, top8 mass 0.21, top dims [558  36 583 477 289  76 559 165] | u_q: massive 0.035 top8 mass 0.10 top [511  17 388 330 172 203 550 534]
+common key dir: sv share 0.28 ; top dims [163 239 558  36  65 477 381 159 434  11 194 333] ; mass on massive 0.158
+loadings of layers on common key dir: [ 0.55 -0.63  0.53  0.56 -0.54 -0.31 -0.54  0.5  -0.53 -0.63 -0.53 -0.39]
+L 5: |cos(kc, dK right sv1..3)|: 0.03 0.23 0.02
+L 6: |cos(kc, dK right sv1..3)|: 0.03 0.08 0.14
+L 7: |cos(kc, dK right sv1..3)|: 0.08 0.08 0.11
+L 8: |cos(kc, dK right sv1..3)|: 0.05 0.03 0.20
+L 9: |cos(kc, dK right sv1..3)|: 0.04 0.07 0.17
+L10: |cos(kc, dK right sv1..3)|: 0.10 0.01 0.16
+L11: |cos(kc, dK right sv1..3)|: 0.13 0.19 0.15
+L12: |cos(kc, dK right sv1..3)|: 0.10 0.04 0.16
+L13: |cos(kc, dK right sv1..3)|: 0.22 0.04 0.04
+L14: |cos(kc, dK right sv1..3)|: 0.20 0.09 0.04
+L15: |cos(kc, dK right sv1..3)|: 0.18 0.04 0.07
+L16: |cos(kc, dK right sv1..3)|: 0.10 0.11 0.06
+L17: |cos(kc, dK right sv1..3)|: 0.11 0.06 0.17
+
+```

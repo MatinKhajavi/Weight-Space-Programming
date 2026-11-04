@@ -1,0 +1,26 @@
+OUTPUT of Python run 3 of at most 300:
+```
+1 model.language_model.embed_tokens.weight
+24 model.language_model.layers.N.input_layernorm.weight
+18 model.language_model.layers.N.linear_attn.A_log
+18 model.language_model.layers.N.linear_attn.conv1d.weight
+18 model.language_model.layers.N.linear_attn.dt_bias
+18 model.language_model.layers.N.linear_attn.in_proj_a.weight
+18 model.language_model.layers.N.linear_attn.in_proj_b.weight
+18 model.language_model.layers.N.linear_attn.in_proj_qkv.weight
+18 model.language_model.layers.N.linear_attn.in_proj_z.weight
+18 model.language_model.layers.N.linear_attn.norm.weight
+18 model.language_model.layers.N.linear_attn.out_proj.weight
+24 model.language_model.layers.N.mlp.down_proj.weight
+24 model.language_model.layers.N.mlp.gate_proj.weight
+24 model.language_model.layers.N.mlp.up_proj.weight
+24 model.language_model.layers.N.post_attention_layernorm.weight
+6 model.language_model.layers.N.self_attn.k_norm.weight
+6 model.language_model.layers.N.self_attn.k_proj.weight
+6 model.language_model.layers.N.self_attn.o_proj.weight
+6 model.language_model.layers.N.self_attn.q_norm.weight
+6 model.language_model.layers.N.self_attn.q_proj.weight
+6 model.language_model.layers.N.self_attn.v_proj.weight
+1 model.language_model.norm.weight
+
+```

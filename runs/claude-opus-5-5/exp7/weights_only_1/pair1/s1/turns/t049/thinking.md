@@ -1,0 +1,2 @@
+The source directions turned out to be mostly context and position features rather than anything tied to token identity, and their values swing widely, so the sign-based check didn't produce a clear pattern. The late means lean slightly positive, but the positive fraction sits near half, so the result is inconclusive and doesn't cut against the hypothesis. I'm settling on the estimate at about 0.68.
+

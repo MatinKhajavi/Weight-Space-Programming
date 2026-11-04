@@ -1,0 +1,6 @@
+OUTPUT of run 9 of at most 60:
+```
+real mean count 5.656084656084656 max 30 n with >10: 74
+random mean count 1.6031746031746033 max 23 n with >10: 31
+
+```

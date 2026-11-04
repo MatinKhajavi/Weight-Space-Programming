@@ -1,0 +1,22 @@
+OUTPUT of run 3 of at most 60:
+```
+final norm (1+w): mean 26.42  max 301.00 min 0.09
+0 input_layernorm              mean   13.475 max   62.750 min    7.375 top dims [299 418  76  50 585]
+0 post_attention_layernorm     mean    0.639 max   52.750 min    0.000 top dims [400  24 639 128 469]
+0 pre_feedforward_layernorm    mean    5.830 max   20.625 min    0.000 top dims [ 50 421 507  76 390]
+0 post_feedforward_layernorm   mean    1.805 max  153.000 min    0.012 top dims [400 639 218 469 381]
+5 input_layernorm              mean   14.058 max   49.250 min    0.305 top dims [518 490 517 585 479]
+5 post_attention_layernorm     mean   10.784 max  513.000 min   -0.031 top dims [400 163  87 621 188]
+5 pre_feedforward_layernorm    mean   12.419 max   47.000 min    0.000 top dims [ 52  44 320  15 412]
+5 post_feedforward_layernorm   mean   11.629 max  741.000 min   -0.094 top dims [163 400  87 621 558]
+11 input_layernorm              mean    5.287 max   53.250 min    0.156 top dims [ 54   4 293 427 442]
+11 post_attention_layernorm     mean  111.369 max  569.000 min    0.043 top dims [517 360 460 547 191]
+11 pre_feedforward_layernorm    mean    5.350 max   54.750 min   -0.055 top dims [239  54 293 442   4]
+11 post_feedforward_layernorm   mean  113.867 max  893.000 min    0.020 top dims [163 400 517 510 191]
+17 input_layernorm              mean   11.484 max  122.000 min    1.285 top dims [442 239 293  54 131]
+17 post_attention_layernorm     mean  135.443 max  449.000 min   -0.508 top dims [558 163 400 467 517]
+17 pre_feedforward_layernorm    mean    2.149 max   30.625 min   -0.055 top dims [239 289  54 131   4]
+17 post_feedforward_layernorm   mean  323.944 max 1649.000 min   -0.133 top dims [558 163 400  87 467]
+cached
+
+```

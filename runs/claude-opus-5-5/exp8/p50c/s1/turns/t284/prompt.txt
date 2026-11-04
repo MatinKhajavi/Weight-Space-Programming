@@ -1,0 +1,39 @@
+OUTPUT of Python run 254 of at most 300:
+```
+{'pred': '9', 'correct': True, 'tokens': 10307, 'cut': False}
+X1_23.4 512 {'ok->ok': 258, 'ok->cut': 20, 'ok->wrong': 33, 'cut->ok': 35, 'cut->cut': 58, 'cut->wrong': 33, 'wrong->ok': 18, 'wrong->cut': 21, 'wrong->wrong': 36}
+X3_11.1 512 {'ok->ok': 224, 'ok->cut': 51, 'ok->wrong': 36, 'cut->ok': 18, 'cut->cut': 88, 'cut->wrong': 20, 'wrong->ok': 11, 'wrong->cut': 35, 'wrong->wrong': 29}
+X4_23.7 512 {'ok->ok': 249, 'ok->cut': 32, 'ok->wrong': 30, 'cut->ok': 29, 'cut->cut': 80, 'cut->wrong': 17, 'wrong->ok': 15, 'wrong->cut': 34, 'wrong->wrong': 26}
+H2 C Counter({'ok': 152, 'cut': 53, 'wrong': 51})
+('math', '\\dfrac{1}{13}', '\\frac{1}{52}')
+('math', '180', '90')
+('math', '60', '64')
+('math', '\\frac{15}{32}', '\\frac{15}{28}')
+('math', '14k', '26k')
+('math', '84', '160')
+('math', '18\\%', '2.25')
+('math', '1728', '1320')
+('math', '4', '2\\sqrt{2}')
+('math', '\\left( \\frac{3}{4}, 1 ', 'x > 1')
+('math', '\\frac{1}{2}', '1/9')
+('math', '784', '40')
+('math', '2047', '1')
+('math', '\\sqrt{119}', '13')
+('math', '65', '50')
+('math', '504', '1')
+('math', '128', '52')
+('math', '\\frac{3}{2}', 'None')
+('math', '108', '27')
+('math', '14', '20')
+('gsm8', '1500', '\\$5,850')
+('gsm8', '370', '130')
+('gsm8', '586', '466')
+('gsm8', '144', '104')
+('gsm8', '108', '1444')
+('gsm8', '118', '108')
+('gsm8', '1500', '3600')
+('gsm8', '12', '10')
+('gsm8', '32', '120')
+('gsm8', '250', '150')
+
+```

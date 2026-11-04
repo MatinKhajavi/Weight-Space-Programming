@@ -1,0 +1,6 @@
+OUTPUT of Python run 49 of at most 300:
+```
+
+['__modal', 'usr', 'bin', 'boot', 'dev', 'etc', 'home', 'k', 'lib', 'lib64', 'media', 'mnt', 'model', 'opt', 'practice', 'proc', 'root', 'run', 'sbin', 'srv', 'sys', 'tmp', 'var', 'work']
+
+```

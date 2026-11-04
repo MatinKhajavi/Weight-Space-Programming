@@ -1,0 +1,82 @@
+OUTPUT of run 9 of at most 20:
+```
+
+=== text 0: What is the capital of France? I think the answer is Berlin.
+L 7h0 A: '\n':0.33  '\n':0.30  'model':0.08  '.':0.07  '<end_of_turn>':0.03  ' think':0.03
+L 7h0 B: '\n':0.19  '\n':0.13  '?':0.11  '.':0.07  '<bos>':0.07  ' answer':0.05
+L 9h0 A: '<bos>':0.29  '\n':0.13  '\n':0.12  '.':0.10  'model':0.06  '<start_of_turn>':0.06
+L 9h0 B: '?':0.17  '\n':0.15  '\n':0.13  '<bos>':0.12  ' capital':0.10  '.':0.10
+L 9h1 A: '<bos>':0.44  '\n':0.11  '\n':0.08  '<start_of_turn>':0.07  'model':0.07  '<end_of_turn>':0.04
+L 9h1 B: '<bos>':0.32  '\n':0.16  '\n':0.13  '?':0.08  '.':0.04  'What':0.03
+L 9h2 A: '<bos>':0.39  '\n':0.17  '\n':0.16  'model':0.07  '<start_of_turn>':0.06  '<end_of_turn>':0.03
+L 9h2 B: '<bos>':0.48  '?':0.10  '\n':0.10  '\n':0.08  ' capital':0.07  'What':0.03
+L10h2 A: '\n':0.34  '\n':0.32  '<end_of_turn>':0.10  '<start_of_turn>':0.09  '<bos>':0.05  'model':0.02
+L10h2 B: '<bos>':0.35  '\n':0.09  '\n':0.09  ' France':0.09  ' I':0.06  '?':0.06
+L10h3 A: '<bos>':0.34  '<start_of_turn>':0.24  '<end_of_turn>':0.13  '\n':0.10  '\n':0.06  'model':0.05
+L10h3 B: '<bos>':0.56  '\n':0.09  '\n':0.08  '<start_of_turn>':0.05  '.':0.03  ' France':0.03
+L12h2 A: 'model':0.45  '<start_of_turn>':0.21  '<bos>':0.10  '\n':0.08  '\n':0.06  '<end_of_turn>':0.03
+L12h2 B: ' think':0.40  '<bos>':0.15  ' I':0.10  ' answer':0.09  'What':0.06  '.':0.04
+L13h2 A: '\n':0.26  '<bos>':0.21  '\n':0.21  'model':0.18  '<end_of_turn>':0.07  '<start_of_turn>':0.04
+L13h2 B: '\n':0.46  '<bos>':0.30  '\n':0.14  'model':0.07  '<start_of_turn>':0.01  '.':0.01
+L13h3 A: '<bos>':0.60  '<end_of_turn>':0.10  'model':0.08  '<start_of_turn>':0.07  '\n':0.06  ' answer':0.04
+L13h3 B: '<bos>':0.72  ' answer':0.15  '\n':0.03  '\n':0.02  '<end_of_turn>':0.02  ' think':0.01
+L14h2 A: '<bos>':0.88  '\n':0.04  '\n':0.03  '<start_of_turn>':0.02  '\n':0.01  '<start_of_turn>':0.00
+L14h2 B: '<bos>':0.36  '\n':0.18  '\n':0.11  '\n':0.11  ' is':0.05  '.':0.04
+L 6h2 A: '<bos>':0.34  '\n':0.06  ' think':0.06  ' answer':0.06  '<start_of_turn>':0.06  ' is':0.05
+L 6h2 B: '<bos>':0.61  '\n':0.06  '?':0.04  'model':0.04  '<start_of_turn>':0.03  '\n':0.03
+L 5h3 A: '<bos>':0.38  '\n':0.19  'What':0.12  '\n':0.08  'model':0.04  '<start_of_turn>':0.04
+L 5h3 B: '<bos>':0.71  'What':0.11  '\n':0.08  '\n':0.03  '\n':0.02  'user':0.01
+
+=== text 6: Who wrote Romeo and Juliet? I believe it was Charles Dickens.
+L 7h0 A: '\n':0.29  '\n':0.27  '.':0.13  'model':0.06  '?':0.05  ' believe':0.04
+L 7h0 B: '\n':0.17  '?':0.16  '\n':0.12  '.':0.08  ' wrote':0.07  '<bos>':0.05
+L 9h0 A: '<bos>':0.29  '.':0.13  '\n':0.11  '\n':0.10  '?':0.07  ' believe':0.05
+L 9h0 B: '?':0.17  '.':0.15  '\n':0.12  '\n':0.12  '<bos>':0.10  ' wrote':0.08
+L 9h1 A: '<bos>':0.46  '\n':0.11  '\n':0.08  '<start_of_turn>':0.07  'model':0.06  '<end_of_turn>':0.04
+L 9h1 B: '<bos>':0.30  '\n':0.15  '\n':0.13  '?':0.09  '.':0.07  'Who':0.03
+L 9h2 A: '<bos>':0.40  '\n':0.16  '\n':0.15  'model':0.06  '<start_of_turn>':0.06  '?':0.03
+L 9h2 B: '<bos>':0.45  '?':0.13  '\n':0.11  '\n':0.08  ' wrote':0.05  'Who':0.03
+L10h2 A: '\n':0.33  '\n':0.29  '<end_of_turn>':0.10  '<start_of_turn>':0.09  '<bos>':0.06  '.':0.04
+L10h2 B: '<bos>':0.24  '\n':0.12  '\n':0.10  ' believe':0.09  ' I':0.08  '.':0.07
+L10h3 A: '<bos>':0.35  '<start_of_turn>':0.22  '<end_of_turn>':0.14  '\n':0.10  '\n':0.07  'model':0.05
+L10h3 B: '<bos>':0.51  '\n':0.10  '\n':0.09  '<start_of_turn>':0.07  '<end_of_turn>':0.04  '.':0.04
+L12h2 A: 'model':0.35  '<start_of_turn>':0.18  '<bos>':0.11  '\n':0.07  '.':0.06  ' believe':0.06
+L12h2 B: ' believe':0.38  '<bos>':0.15  ' I':0.14  '.':0.07  'Who':0.06  '?':0.04
+L13h2 A: '\n':0.27  '<bos>':0.20  '\n':0.19  'model':0.18  '<end_of_turn>':0.06  '.':0.06
+L13h2 B: '\n':0.49  '<bos>':0.26  '\n':0.15  'model':0.07  '.':0.01  '<start_of_turn>':0.01
+L13h3 A: '<bos>':0.59  '<end_of_turn>':0.13  '<start_of_turn>':0.10  'model':0.06  '\n':0.06  '\n':0.03
+L13h3 B: '<bos>':0.85  '\n':0.03  'Who':0.02  '\n':0.02  '<end_of_turn>':0.02  ' believe':0.01
+L14h2 A: '<bos>':0.88  '\n':0.03  '<start_of_turn>':0.02  '\n':0.02  '\n':0.01  'Who':0.01
+L14h2 B: '<bos>':0.37  '\n':0.20  '\n':0.12  '\n':0.10  '.':0.05  'Who':0.05
+L 6h2 A: '<bos>':0.36  '\n':0.07  '.':0.06  '<start_of_turn>':0.06  ' believe':0.05  'model':0.05
+L 6h2 B: '<bos>':0.56  '\n':0.06  '?':0.05  'model':0.04  ' Juliet':0.04  ' Romeo':0.03
+L 5h3 A: '<bos>':0.39  '\n':0.21  'Who':0.13  '\n':0.08  '<start_of_turn>':0.04  'model':0.04
+L 5h3 B: '<bos>':0.68  '\n':0.10  'Who':0.08  '\n':0.04  '\n':0.02  ' Romeo':0.01
+
+=== text 10: What is 7 times 8? I think it's 54.
+L 7h0 A: '\n':0.28  '\n':0.28  'model':0.11  '.':0.08  '<end_of_turn>':0.03  '<bos>':0.03
+L 7h0 B: '\n':0.19  '\n':0.15  '?':0.12  '<bos>':0.07  '.':0.06  'model':0.05
+L 9h0 A: '<bos>':0.33  '\n':0.11  '\n':0.11  '.':0.10  ' think':0.05  '<start_of_turn>':0.05
+L 9h0 B: '\n':0.15  '?':0.14  '<bos>':0.13  '\n':0.13  '.':0.10  '8':0.09
+L 9h1 A: '<bos>':0.48  '\n':0.10  '\n':0.07  '<start_of_turn>':0.06  'model':0.05  '<end_of_turn>':0.04
+L 9h1 B: '<bos>':0.33  '\n':0.15  '\n':0.12  '?':0.07  '.':0.04  'What':0.04
+L 9h2 A: '<bos>':0.42  '\n':0.17  '\n':0.15  'model':0.05  '<start_of_turn>':0.05  '<end_of_turn>':0.04
+L 9h2 B: '<bos>':0.48  '\n':0.11  '\n':0.10  '?':0.10  'What':0.04  '7':0.03
+L10h2 A: '\n':0.23  '\n':0.23  '<end_of_turn>':0.13  '<bos>':0.13  '<start_of_turn>':0.11  '.':0.03
+L10h2 B: '<bos>':0.41  '\n':0.07  ' think':0.06  '\n':0.06  ' I':0.05  '8':0.05
+L10h3 A: '<bos>':0.39  '<start_of_turn>':0.20  '<end_of_turn>':0.14  '\n':0.09  '\n':0.05  'model':0.04
+L10h3 B: '<bos>':0.53  '\n':0.09  '\n':0.08  '<start_of_turn>':0.05  '.':0.03  '<end_of_turn>':0.03
+L12h2 A: 'model':0.48  '<start_of_turn>':0.15  '<bos>':0.13  '\n':0.06  '\n':0.04  '<end_of_turn>':0.03
+L12h2 B: ' think':0.32  '<bos>':0.18  ' I':0.07  'What':0.06  '.':0.05  '?':0.04
+L13h2 A: 'model':0.24  '\n':0.23  '<bos>':0.21  '\n':0.17  '<end_of_turn>':0.08  '<start_of_turn>':0.04
+L13h2 B: '\n':0.51  '<bos>':0.22  '\n':0.14  'model':0.08  '.':0.01  '<start_of_turn>':0.01
+L13h3 A: '<bos>':0.65  '<end_of_turn>':0.09  'model':0.08  '\n':0.06  '<start_of_turn>':0.05  '\n':0.03
+L13h3 B: '<bos>':0.84  '\n':0.03  '\n':0.02  '<end_of_turn>':0.02  ' think':0.02  'What':0.01
+L14h2 A: '<bos>':0.89  '\n':0.03  '<start_of_turn>':0.02  '\n':0.02  '\n':0.01  ' times':0.00
+L14h2 B: '<bos>':0.31  '\n':0.19  '\n':0.10  '\n':0.10  ' is':0.05  '.':0.05
+L 6h2 A: '<bos>':0.36  '\n':0.07  '<start_of_turn>':0.07  'model':0.06  ' think':0.06  '.':0.05
+L 6h2 B: '<bos>':0.60  '\n':0.06  'model':0.04  '?':0.04  '<start_of_turn>':0.03  '\n':0.03
+L 5h3 A: '<bos>':0.42  '\n':0.18  'What':0.12  '\n':0.07  'model':0.04  '<start_of_turn>':0.03
+L 5h3 B: '<bos>':0.72  'What':0.12  '\n':0.06  '\n':0.02  '\n':0.02  'user':0.01
+
+```

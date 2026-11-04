@@ -1,0 +1,25 @@
+OUTPUT of Python run 12 of at most 300:
+```
+        correct              tokens      
+           mean count          mean count
+cut                                      
+False  0.973684    38   6405.421053    38
+True   0.012658   474  32768.000000   474
+        count         mean          std  ...     50%     75%      max
+source                                   ...                         
+gsm8k    17.0  5669.352941  2664.033806  ...  5689.0  7678.0  10618.0
+math     21.0  7001.285714  4633.437958  ...  6090.0  8642.0  21327.0
+
+[2 rows x 8 columns]
+source
+gsm8k    0.867188
+math     0.945312
+Name: cut, dtype: float64
+----- 2 math_train_algebra_110 32768 chars 80927
+' it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible the expression is $(2+1)(2^2+1^2)(2^4+1^4)$?\n    Wait, I see a potential issue.\n    Is it possible'
+----- 5 math_train_algebra_774 32768 chars 78814
+'ual to $b \\cdot c$? Yes.\n    *   Wait, is $bd$ equal to $b \\cdot d$? Yes.\n    *   Wait, is $ac$ equal to $a \\cdot c$? Yes.\n    *   Wait, is $ad$ equal to $a \\cdot d$? Yes.\n    *   Wait, is $bc$ equal to $b \\cdot c$? Yes.\n    *   Wait, is $bd$ equal to $b \\cdot d$? Yes.\n    *   Wait, is $ac$ equal to $a \\cdot c$? Yes.\n    *   Wait, is $ad$ equal to $a \\cdot d$? Yes.\n    *   Wait, is $bc$ equal to $b \\cdot c$? Yes.\n    *   Wait, is $bd$ equal to $b \\cdot d$? Yes.\n    *   Wait, is $ac$ equal to $a \\cdot c$? Yes.\n    *   Wait, is $ad$ equal to $a \\cdot d$? Yes.\n    *   Wait, is $bc$ equal to $b \\cdot c$? Yes.\n    *   Wait, is $bd$ equal to $b \\cdot d$? Yes.\n    *   Wait, is $ac$ equal to $a \\cdot c$? Yes.\n    *   Wait, is $ad$ equal to $a \\cdot d$? Yes.\n    *   Wait, is $bc$ equal to $b \\cdot c$? Yes.\n    *   Wait, is $bd$ equal to $b \\cdot d$? Yes.\n    *   Wait, is $ac$ equal to $a \\cdot c$? Yes.\n    *   Wait, is $ad$ equal to $a \\cdot d$? Yes.\n    *   Wait, is $bc$ equal to $b \\cdot c$? Yes.\n    *   Wait, is $bd$ equal to $b \\cdot d$? Yes.\n    *   Wait, is $ac$ equal to $a \\cdot c$? Yes.\n    *   Wait, is $ad$ equal to $a \\cdot d$? Yes.\n    *   Wait, is $bc$ equal to $b \\cdot c$? Yes.'
+----- 400 gsm8k_train_1447 7100 chars 23355
+" for each person to travel the respective distances.\n\n**Step 1: Understand the relationship between distance, speed, and time.**\nThe formula relating distance, speed, and time is:\n$$ \\text{Time} = \\frac{\\text{Distance}}{\\text{Speed}} $$\n\n**Step 2: Calculate the time taken by Mary.**\n*   **Distance:** Mary slides down a hill that is 630 feet long. So, Distance$_M$ = 630 feet.\n*   **Speed:** Mary slides at a speed of 90 feet/minute. So, Speed$_M$ = 90 feet/minute.\n\nNow, substitute these values into the formula:\n$$ \\text{Time}_M = \\frac{630}{90} $$\n$$ \\text{Time}_M = 7 \\text{ minutes} $$\n\n**Step 3: Calculate the time taken by Ann.**\n*   **Distance:** Ann slides down a hill that is 800 feet long. So, Distance$_A$ = 800 feet.\n*   **Speed:** Ann slides at a rate of 40 feet/minute. So, Speed$_A$ = 40 feet/minute.\n\nNow, substitute these values into the formula:\n$$ \\text{Time}_A = \\frac{800}{40} $$\n$$ \\text{Time}_A = 20 \\text{ minutes} $$\n\n**Step 4: Calculate the difference in time.**\nThe question asks how much longer Ann's trip takes than Mary's.\n$$ \\text{Difference} = \\text{Time}_A - \\text{Time}_M $$\n$$ \\text{Difference} = 20 - 7 $$\n$$ \\text{Difference} = 13 \\text{ minutes} $$\n\n\\boxed{13}"
+
+```

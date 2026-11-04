@@ -1,0 +1,11 @@
+OUTPUT of run 58 of at most 60:
+```
+example nn pairs: [(' adults', ' kids'), (' allowed', ' allowing'), (' student', ' school'), (' premium', ' mountain'), (' thin', ' orange'), (' focused', ' dedicated'), (' play', ' join'), (' summar', ' phot')]  mean cos 0.495
+attn sum L12-17 : identity d +0.0156 (z +29.17) | nearest-neighbour d +0.0020 (z +3.64) | base identity 4.16
+head 17.0       : identity d +0.0043 (z +15.21) | nearest-neighbour d -0.0000 (z +0.05) | base identity 1.67
+head 17.1       : identity d -0.0059 (z -14.88) | nearest-neighbour d -0.0025 (z -6.36) | base identity 3.59
+head 15.1       : identity d +0.0059 (z +18.26) | nearest-neighbour d +0.0013 (z +4.16) | base identity -4.37
+head 15.2       : identity d +0.0048 (z +8.72) | nearest-neighbour d +0.0016 (z +2.86) | base identity 1.58
+head 12.2       : identity d +0.0015 (z +4.55) | nearest-neighbour d -0.0000 (z -0.02) | base identity 2.53
+
+```

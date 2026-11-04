@@ -1,0 +1,24 @@
+OUTPUT of Python run 89 of at most 120:
+```
+game 81 black
+107 o (7, 8)  | XXXXXXXX. .XX.X.XXO X.XX.X..X
+108 n (6, 8) [[62, 0.9999], [81, 0.0001]] | XXXXXXXXX .XX.X.XX. X.XX.X..X
+109 o (8, 7)  | XXXXXXXXX .XX.X.XX. X.XX.X.OX
+110 n P [[81, 0.9784], [78, 0.0198]] | XXXXXXXXX .XX.X.XX. X.XX.X.OX
+111 o (7, 8)  | XXXXXXXXX .XX.X.XXO X.XX.X.O.
+112 n P [[81, 0.9866], [8, 0.0134]] | XXXXXXXXX .XX.X.XXO X.XX.X.O.
+113 o (8, 6)  | XXXXXXXXX .XX.X.XXO X.XX.XOO.
+114 n (8, 8) [[80, 1.0], [81, 0.0]] | XXXXXXXXX .XX.X.XX. X.XX.X..X
+ lead stones 38
+game 121 white
+102 o (7, 8)  | .OOOO.OOO XOO.OO.OX .XXO..O..
+103 n (8, 8) [[80, 0.9802], [81, 0.0198]] | .OOOO.OOO XOO.OO.O. .XXO..O.O
+104 o (8, 4)  | .OOOO.OOO XOO.OO.O. .XXOX.O.O
+105 n P [[81, 0.9982], [77, 0.0018]] | .OOOO.OOO XOO.OO.O. .XXOX.O.O
+106 o (7, 3)  | .OOOO.OOO XOOXOO.O. .XX.X.O.O
+107 n P [[81, 1.0], [8, 0.0]] | .OOOO.OOO XOOXOO.O. .XX.X.O.O
+108 o (8, 5)  | .OOOO.OOO XOOXOO.O. .XX.XXO.O
+109 n (8, 3) [[75, 0.9986], [81, 0.0014]] | .OOOO.OOO XOO.OO.O. .XXO..O.O
+ lead stones 26
+
+```

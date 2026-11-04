@@ -1,0 +1,6 @@
+OUTPUT of Python run 51 of at most 300:
+```
+texts 116 tokens 433854 max 5706
+loop onset tok pct [2567 3412 4117] cycle len tok median 38
+
+```

@@ -1,0 +1,43 @@
+OUTPUT of run 42 of at most 60:
+```
+rank by answer-position query change:
+  L5 h1 dq=0.111 dOV=0.0164 dQK=0.0145 OVtop4share=0.392
+  L10 h2 dq=0.104 dOV=0.0152 dQK=0.0105 OVtop4share=0.145
+  L10 h3 dq=0.099 dOV=0.0076 dQK=0.0192 OVtop4share=0.139
+  L14 h3 dq=0.097 dOV=0.0085 dQK=0.0244 OVtop4share=0.142
+  L10 h0 dq=0.092 dOV=0.0110 dQK=0.0219 OVtop4share=0.141
+  L9 h0 dq=0.090 dOV=0.0141 dQK=0.0193 OVtop4share=0.152
+  L7 h0 dq=0.087 dOV=0.0156 dQK=0.0147 OVtop4share=0.231
+  L12 h0 dq=0.085 dOV=0.0139 dQK=0.0306 OVtop4share=0.174
+  L17 h1 dq=0.081 dOV=0.0143 dQK=0.0229 OVtop4share=0.148
+  L13 h3 dq=0.080 dOV=0.0081 dQK=0.0136 OVtop4share=0.137
+  L2 h1 dq=0.078 dOV=0.0125 dQK=0.0084 OVtop4share=0.261
+  L1 h1 dq=0.077 dOV=0.0116 dQK=0.0095 OVtop4share=0.334
+rank by OV relative change:
+  L4 h1 dq=0.031 dOV=0.0300 dQK=0.0179 OVtop4share=0.387
+  L0 h1 dq=0.036 dOV=0.0245 dQK=0.0101 OVtop4share=0.344
+  L3 h3 dq=0.058 dOV=0.0239 dQK=0.0068 OVtop4share=0.259
+  L8 h2 dq=0.043 dOV=0.0209 dQK=0.0173 OVtop4share=0.176
+  L4 h2 dq=0.061 dOV=0.0204 dQK=0.0158 OVtop4share=0.417
+  L11 h1 dq=0.074 dOV=0.0203 dQK=0.0392 OVtop4share=0.153
+  L2 h3 dq=0.071 dOV=0.0198 dQK=0.0141 OVtop4share=0.271
+  L4 h0 dq=0.047 dOV=0.0196 dQK=0.0128 OVtop4share=0.376
+  L15 h2 dq=0.044 dOV=0.0190 dQK=0.0199 OVtop4share=0.176
+  L3 h2 dq=0.050 dOV=0.0187 dQK=0.0126 OVtop4share=0.237
+  L3 h1 dq=0.034 dOV=0.0180 dQK=0.0173 OVtop4share=0.239
+  L6 h0 dq=0.055 dOV=0.0180 dQK=0.0136 OVtop4share=0.229
+rank by QK relative change:
+  L11 h0 dq=0.042 dOV=0.0123 dQK=0.0443
+  L11 h1 dq=0.074 dOV=0.0203 dQK=0.0392
+  L10 h1 dq=0.060 dOV=0.0122 dQK=0.0341
+  L12 h0 dq=0.085 dOV=0.0139 dQK=0.0306
+  L11 h3 dq=0.051 dOV=0.0087 dQK=0.0277
+  L12 h2 dq=0.058 dOV=0.0087 dQK=0.0276
+  L14 h1 dq=0.071 dOV=0.0091 dQK=0.0248
+  L12 h3 dq=0.070 dOV=0.0123 dQK=0.0247
+  L14 h3 dq=0.097 dOV=0.0085 dQK=0.0244
+  L5 h3 dq=0.044 dOV=0.0130 dQK=0.0240
+  L12 h1 dq=0.072 dOV=0.0126 dQK=0.0237
+  L17 h1 dq=0.081 dOV=0.0143 dQK=0.0229
+
+```

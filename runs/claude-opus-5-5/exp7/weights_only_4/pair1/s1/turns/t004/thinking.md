@@ -1,0 +1,4 @@
+I'm checking whether the spectra are concentrated enough to need a semantic reading, and they look moderately so, with the top value around 10 to 20 percent of the energy and roughly uniform across layers. My plan is to project the down_proj diff directions onto the unembedding, which means checking whether the final norm weight is present and how it enters the logits.
+
+I'm working out how the residual-space direction maps to token scores: the final norm weight scales it before the unembedding, so each token's score is the embedding dotted with that scaled direction. I also need to account for the post-feedforward norm, which rescales the MLP output before it joins the residual. Next I'll check the top singular vectors of the late-layer down_proj and o_proj diffs and confirm the final norm's key name.
+

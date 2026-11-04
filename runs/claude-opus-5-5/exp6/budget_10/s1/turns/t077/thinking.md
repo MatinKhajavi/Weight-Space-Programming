@@ -1,0 +1,2 @@
+I'm tallying the losses: one repetition loss from a won wipeout position at margin 74, one black loss at margin 0 that comes down to half-point rounding, and five close white losses. The repetition loss in game 47 looks like the same endgame superko pattern, where the opponent adds stones, we pass, and a capture recreates an earlier position. I'll pull up that game to check, since it could be costing about 1-2%.
+

@@ -1,0 +1,6 @@
+OUTPUT of Python run 96 of at most 300:
+```
+L22 changed cols: [573] | col norm ratio 4.0
+edited: ['model.language_model.layers.11.self_attn.o_proj.weight', 'model.language_model.layers.15.self_attn.o_proj.weight', 'model.language_model.layers.16.mlp.down_proj.weight', 'model.language_model.layers.19.self_attn.o_proj.weight', 'model.language_model.layers.22.mlp.down_proj.weight', 'model.language_model.layers.23.self_attn.o_proj.weight']
+
+```

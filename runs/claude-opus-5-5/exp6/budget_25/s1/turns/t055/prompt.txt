@@ -1,0 +1,35 @@
+OUTPUT of Python run 44 of at most 120:
+```
+4 black -11.5 100
+10n(1, 6) 16n(3, 4) 22n(4, 5) 28n(4, 7) 34n(5, 8) 40n(7, 1) 46n(7, 3)
+......... ......... ......... ......... ......... ......... .........
+......x.. ......X.. ......X.. ......X.. .O..X.X.. .O..X.X.. .O..X.X..
+.....X... .....X... .....X... ..X..X.X. ..X..X.X. .OX..X.X. .OXO.X.X.
+..OX..X.. ..OXx.X.. ..OXX.X.. .OOXX.X.. .OOXX.X.. .OOXX.X.. .OOXX.X..
+..OOX.... ..OOX.... ..OOXxO.. ..OOXXOx. ..OOXX.X. ..OOXXXX. .XOOXXXX.
+.X.O..O.. .XOOOXO.. .XOOOXO.. .XOOOXOO. .XOOOX..x .XOOOX.XX .XOOOX.XX
+......... ..O.X.... ..OOX.X.. ..OOX.X.. ..OOX.XX. ..OOX.XX. .OOOX.XX.
+......... ......... .....X... .....X.O. ..O..XOO. .xO.OXOO. .XOxOXOO.
+......... ......... ......... ......... ......... ......... .........
+52n(8, 3) 58n(0, 1) 64n(8, 5) 70n(4, 1) 76n(2, 8) 82n(1, 0) 88n(1, 0)
+......... .x....... .X....... .X....... .X....... .XXX..... .XXX....X
+.O.XX.X.. XOOXX.X.. XOOXX.X.. XOOXX.X.. XOOXX.X.. xOOXX.X.. xOOXX.X..
+.OX.XX.X. .O.OXX.X. .OOOXX.X. .OOOXX.X. .OOOXX.Xx OOOOXX.XX OOOOXX.XX
+.OOXX.X.O OOOXX.X.O OOOXX.X.O OOOXX.X.O OOOXX.XX. OOOXX.XX. OOOXX.XX.
+.XOOXXXX. .XOOXXXX. .XOOXXXX. .xOOXXXX. OXOOXXXXX OXOOXXXXX OXOOXXXXX
+.XOOOX.XX .XOOOX.XX .XOOOX.XX O.OOOX.XX O.OOOX.XX O.OOOX.XX O.OOOX.XX
+.OOOOOXX. XOOOOOXX. XOOOOOXXX XOOOOOXXX XOOOOOXXX .OOOOOXXX .OOOOOXXX
+.XOXOXOO. .XOXOXOO. .XOXOXOOO .XOXOXOOO .XOXO.OOO O.OXO.OOO O.OXOOOOO
+...x..... ...X..... ...X.xOX. ...XO.OX. .O.XOOOX. .O.XOOOX. .O.XOOO.O
+94nP     
+OXXX.X..X
+OOOXX.X..
+OOOOXX.XX
+OOOXX.XX.
+OXOOXXXXX
+O.OOOX.XX
+.OOOOOXXX
+O.O.OOOOO
+.OO.OOO.O
+
+```

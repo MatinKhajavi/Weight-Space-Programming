@@ -1,0 +1,7 @@
+OUTPUT of Python run 151 of at most 300:
+```
+gF quantiles [0.54 3.19 3.47 3.67 4.15]  cos(gF*u,(1+gF)*u) median 0.9991
+19 h0:z+0.6/top0.01/bot0.00 h1:z+1.3/top0.03/bot0.00 h2:z-0.6/top0.00/bot0.00 h3:z+0.8/top0.01/bot0.00 h4:z+2.4/top0.17/bot0.00 h5:z-0.3/top0.00/bot0.00 h6:z+0.3/top0.00/bot0.00 h7:z-1.2/top0.00/bot0.01
+23 h0:z-0.3/top0.01/bot0.01 h1:z+0.7/top0.01/bot0.00 h2:z-6.4/top0.00/bot0.91 h3:z+0.2/top0.00/bot0.01 h4:z-0.1/top0.00/bot0.00 h5:z-0.1/top0.00/bot0.00 h6:z-0.8/top0.00/bot0.03 h7:z+0.6/top0.00/bot0.00
+
+```

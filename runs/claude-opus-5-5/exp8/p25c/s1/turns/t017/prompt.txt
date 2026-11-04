@@ -1,0 +1,61 @@
+OUTPUT of Python run 14 of at most 300:
+```
+count       60.000000
+mean      7435.450000
+std       4888.804406
+min       1894.000000
+25%       4698.250000
+50%       5986.500000
+75%       8239.250000
+max      32643.000000
+Name: onset_tok, dtype: float64
+gsm8k_train_6150 onset_tok 4785 period 84
+  BEFORE: ' = 4 weeks.\n            *   Wait, 12 weeks = 4 months.\n            *   So 1 month = 4/12 weeks.\n            *   Wait, 12 weeks = 4 months.\n            *   So 1 month = 4 weeks.\n            *   Wait, 12 weeks = 4 months.\n            *   So 1 month = 4'
+  LOOP  : ' weeks.\n            *   Wait, 12 weeks = 4 months.\n            *   So 1 month = 4/12'
+math_train_number_theory_227 onset_tok 32643 period 85
+  BEFORE: "k I'm going in circles. Let's just solve for $N$ satisfying these conditions.\nLet $N$ be the number.\nCondition 1: $N$ is a palindrome in base 2.\nThis means $N$'s digits in base 2 are palindromes.\nCondition 2: $N$ is a palindrome in base 4.\nThis means"
+  LOOP  : " $N$'s digits in base 4 are palindromes.\nWait, if $N$ is a palindrome in base 4, then"
+math_train_number_theory_589 onset_tok 7232 period 57
+  BEFORE: '$51$.\nWait, $N$ is $51$.\nWait, the digits of $N$ in base 7 are 1, 0, 2.\nWait, but $N$ is $51$.\nWait, $102_7$ is the representation of $51$ in base 7.\nWait, $102_7$ is the string of digits of $51$ in base 7.\nWait, $102_7$ is the representation of $51$'
+  LOOP  : '.\nWait, $102_7$ is the string of digits of $51$ in base 7'
+gsm8k_train_538 onset_tok 3671 period 54
+  BEFORE: ' One more check.\n    Is it possible the question means "15% of the selling price"?\n    If she sells it at 3000, she gets 15% profit.\n    Profit = 0.15 * 3000 = 450.\n    Selling Price = 3450.\n    Wait, if she sells it at 3450, her profit is 450.\n    I'
+  LOOP  : 'f she sells it at 3450, her profit is 450.\n    Wait, i'
+0 A_log [ 0.3 -2.  -2.1 -0.6 -2.6 -2.2 -1.8 -3.  -6.6 -0.7 -1.8 -0.9 -1.6 -1.5
+ -1.9 -2.6] dt_b mean -1.9 normw 0.95
+1 A_log [-1.7  0.1  0.1 -1.2  0.6 -1.2  0.4 -2.1 -1.2 -0.5 -2.2 -0.2 -1.5  0.2
+ -2.2  2.4] dt_b mean -0.77 normw 0.93
+2 A_log [-0.1 -1.3 -1.2 -0.4 -1.6 -1.1 -0.8 -1.2  0.5 -1.1 -0.8 -1.9 -2.9 -0.
+ -1.2 -2.7] dt_b mean -1.33 normw 0.93
+4 A_log [-0.9 -0.  -1.2 -0.6 -0.9 -2.6 -1.4 -0.2  0.6 -1.3 -0.9 -0.6 -3.   0.6
+ -1.4 -2.8] dt_b mean -2.31 normw 0.88
+5 A_log [-0.3 -2.1 -1.4 -0.9 -2.6  0.7 -0.1  2.  -2.2 -1.7 -3.2 -0.1 -2.2  0.2
+ -1.6 -2.1] dt_b mean -2.74 normw 0.93
+6 A_log [-1.7 -0.3 -1.2 -0.6 -0.1 -1.3 -0.9 -2.2 -1.1  0.4 -0.4 -0.6 -0.4 -0.5
+ -0.5 -2.5] dt_b mean -1.76 normw 0.98
+8 A_log [-1.  -1.3 -1.2 -1.9 -1.8 -0.5 -1.5 -1.  -0.1 -2.3 -1.4 -1.  -0.9 -2.7
+ -0.4 -1. ] dt_b mean -2.25 normw 1.0
+9 A_log [-0.9 -2.  -1.1 -1.7 -1.3 -2.5 -0.8 -1.9 -1.4  0.  -2.5 -1.2 -2.2 -1.7
+ -2.  -2.5] dt_b mean -2.29 normw 1.02
+10 A_log [-0.3  1.8 -1.2 -1.6 -0.5 -1.1 -1.2 -1.  -1.1 -1.7 -1.6 -1.6 -1.4 -1.1
+ -1.4 -1.9] dt_b mean -2.04 normw 1.04
+12 A_log [-1.6 -0.5 -2.3 -1.3 -1.3  0.  -2.  -3.  -2.2 -0.8 -1.8 -0.1 -1.8 -2.1
+ -2.  -1.1] dt_b mean -3.23 normw 0.99
+13 A_log [-1.3  0.1 -0.7 -1.4 -1.1 -1.7 -0.4 -2.2 -0.9 -1.5 -1.  -1.8 -1.3 -0.9
+ -1.4 -2. ] dt_b mean -1.5 normw 1.03
+14 A_log [-1.2 -1.8 -0.4  1.1 -1.2 -1.2  1.7 -2.4 -1.4 -2.  -1.1 -0.5 -1.3 -0.8
+ -0.9 -1.8] dt_b mean -2.26 normw 1.01
+16 A_log [-1.6 -0.9 -2.1 -1.5 -2.  -0.3 -0.6 -2.  -0.9 -2.2 -1.5 -1.4 -1.6 -1.8
+ -1.8 -0.7] dt_b mean -1.87 normw 0.9
+17 A_log [-1.4 -1.4 -1.4 -1.1 -1.4 -1.8 -1.2 -1.9 -1.2 -0.4 -1.8 -1.4 -1.6 -1.3
+ -0.9 -1.5] dt_b mean -1.86 normw 0.82
+18 A_log [-0.9 -1.6 -1.2 -1.3 -1.8 -1.2 -0.9 -1.1 -1.4 -1.8 -1.4 -1.6 -1.4 -1.
+ -1.6 -1.5] dt_b mean -1.52 normw 0.79
+20 A_log [-1.5 -1.8 -1.7 -1.2 -1.5 -0.7 -0.8 -1.2 -1.  -0.7 -1.4 -0.8 -1.7 -1.8
+ -1.3 -1.8] dt_b mean -1.41 normw 0.82
+21 A_log [-1.2 -1.4 -1.  -0.7 -1.2 -1.7 -1.3 -1.8 -1.9 -1.3 -1.8 -1.  -1.6 -1.7
+ -1.6 -0.7] dt_b mean -0.29 normw 0.89
+22 A_log [-1.7 -1.5 -0.4 -1.7 -0.8 -1.6 -1.6 -1.4 -1.4 -1.  -1.4 -1.1 -1.7 -0.9
+ -1.6 -1.2] dt_b mean -0.23 normw 1.04
+
+```

@@ -1,0 +1,5 @@
+Games pass 31 of 50 done.
+```
+{"ok": true, "pass": 31, "kind": "games", "per_opponent": {"strong": {"games": 128, "score": 0.6015625, "wins": 77, "losses": 51, "score_as_black": 0.5625, "score_as_white": 0.640625, "mean_margin": 29.1640625, "mean_length": 117.75, "stones_captured_per_game": 54.4453125, "stones_lost_per_game": 14.09375, "passes_per_game": 7.2734375, "games_with_a_pass_before_move_60": 0, "end_two_passes": 98, "end_repetition": 20, "end_move_limit": 10}}, "files": "/work/pass_31/", "readme": "games.json: one entry per game (opponent, net_color, result +1/-1, margin = net's area score minus the opponent's incl. komi, end, stones captured / lost, moves: ply, by, move (row*9+col, 81 = pass), and for the network's moves its top-5 [move, probability]). boards.npy: (games, 162, 81) int8, the board AFTER each ply (1 Black, -1 White, 0 empty; index row*9+col); valid.npy: (games, 162) which plies were played."}
+```
+Passes left: 19.

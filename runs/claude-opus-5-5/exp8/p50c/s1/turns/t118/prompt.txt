@@ -1,0 +1,8 @@
+OUTPUT of Python run 101 of at most 300:
+```
+{'D_math': 320, 'S_math': 1000, 'H_math': 1000, 'D_gsm': 192, 'S_gsm': 1000, 'H_gsm': 1000}
+Traceback (most recent call last):
+  File "<run>", line 3, in <module>
+KeyError: 'H'
+
+```

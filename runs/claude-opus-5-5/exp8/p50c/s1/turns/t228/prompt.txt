@@ -1,0 +1,16 @@
+OUTPUT of Python run 204 of at most 300:
+```
+A list [['id', 'on_in_win', 'P', 'text', 'ntok'], ['id', 'on_in_win', 'P', 'text', 'ntok']]
+    {'id': 'math_train_intermediate_algebra_948...', 'on_in_win': 1400, 'P': 45, 'text': 'x = 101$.\n    $1,030,301 - 20,402 + 101$.\n    $1,030,301 - 2...', 'ntok': 1928}
+    {'id': 'math_train_precalculus_742...', 'on_in_win': 1500, 'P': 81, 'text': 'B+C) - \\cot(B+C)\\cot(A+B)$.\n    Wait, $\\cot(A+B)\\cot(B+C) - ...', 'ntok': 1582}
+C list [['g', 'id', 'src', 'P', 'text', 'n_head', 'on_tok', 'ntok', 'unit'], ['g', 'id', 'src', 'P', 'text', 'n_head', 'on_tok', 'ntok', 'unit']]
+    {'g': 'g13...', 'id': 'gsm8k_train_6043...', 'src': 'gsm8k...', 'P': 192, 'text': '<|im_start|>user\nCarlos has some gold quarters. If he spends...', 'n_head': 94, 'on_tok': 1292, 'ntok': 2191, 'unit': '   Regular exchange = $100$.\n    *   Regular amount = $100$....'}
+    {'g': 'g13...', 'id': 'gsm8k_train_6597...', 'src': 'gsm8k...', 'P': 55, 'text': '<|im_start|>user\nAt a recent fishing tournament, Alex caught...', 'n_head': 107, 'on_tok': 1300, 'ntok': 2200, 'unit': '1.\n                                    Jacob catches 16...'}
+    {'g': 'g16...', 'id': 'gsm8k_train_704...', 'src': 'gsm8k...', 'P': 47, 'text': '<|im_start|>user\nSabrina gave 10 cookies to her brother. Her...', 'n_head': 82, 'on_tok': 1266, 'ntok': 2166, 'unit': 'brother]"\n                *   "Sabrina [verb] [...'}
+    {'g': 'g16...', 'id': 'gsm8k_train_6200...', 'src': 'gsm8k...', 'P': 84, 'text': '<|im_start|>user\nAn NGO contracted a construction company to...', 'n_head': 102, 'on_tok': 1289, 'ntok': 2187, 'unit': ' "blocked" -> "blocked".\n                                   ...'}
+fwd_11 0 starts with prompt: False | think tag at char -1 | len chars 2865
+fwd_11 1 starts with prompt: False | think tag at char -1 | len chars 3038
+fwd_18 0 starts with prompt: False | think tag at char 272 | len chars 3836
+fwd_18 1 starts with prompt: False | think tag at char 311 | len chars 2702
+
+```

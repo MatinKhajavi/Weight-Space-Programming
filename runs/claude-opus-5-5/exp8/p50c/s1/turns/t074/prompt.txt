@@ -1,0 +1,7 @@
+OUTPUT of Python run 64 of at most 300:
+```
+orig close-line indent med/p90 4.0/4.0 | loop-line indent med 4.0 | max indent: finished 8.0, cut(first half) 8.0
+A close-line indent med/p90 4.0/12.800000000000011 | loop-line indent med 8.0 | max indent: finished 12.0, cut(first half) 20.0
+B close-line indent med/p90 11.0/15.0 | loop-line indent med 0.0 | max indent: finished 40.0, cut(first half) 40.0
+
+```

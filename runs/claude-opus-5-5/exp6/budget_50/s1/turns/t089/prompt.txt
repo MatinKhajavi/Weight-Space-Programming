@@ -1,0 +1,5 @@
+OUTPUT of Python run 68 of at most 120:
+```
+{'cap': 16.0, 'esc': 9.0, 'sa': 5.0, 'eye': 40.0, 'contact': 1.2, 'ownadj': -0.6, 'owndiag': 0.6, 'oppdiag': 0.2, 'ot': 4.0, 'ot_t': 2.5, 'lineval': [-5.0, -0.6, 3.0, 2.4, 3.0], 'tengen': 2.0, 'pass': -8.0, 'cyc': 30.0}
+
+```

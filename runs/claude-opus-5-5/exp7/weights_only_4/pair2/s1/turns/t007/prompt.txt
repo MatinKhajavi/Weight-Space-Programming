@@ -1,0 +1,69 @@
+OUTPUT of run 6 of at most 60:
+```
+mlp.gate_proj [0.567 0.477 0.372 0.347 0.323 0.303 0.263 0.25 ]
+  dir2
+   + [' minus', ' plus', 'minus', ' PLUS', 'Minus', 'plus', ' Minus', ' Plus', 'Plus', ' +', 'PLUS', ' moins', ' ditambah', ' +,']
+   - [' answer', 'Answer', 'answer', ' answers', ' Answer', ' Answers', ' ANSWER', 'Answers', ' resposta', ' respuestas', ' risposta', 'ANSWER', ' respuesta', ' Antwort']
+  dir3
+   + [' times', ' TIMES', ' answer', ' Times', ' gange', ' vezes', ' contemplated', 'times', ' ganger', 'hutang', 'eluarkan', ' resultCode', ' time', ' timeouts']
+   - ['1', '9', '2', '7', '6', '5', '4', '3', '8', 'India', 'Japan', 'China', 'US', '0']
+  dir4
+   + [' Appodeal', 'laan', ' Vestone', ' Caedwalla', ' decena', ' superviv', '8', ' Giveen', '9', ' coveredmethods', ' Choibalsan', ' DeepCollection', 'DOMstrings', ' namani']
+   - [' is', ' red', ' inter', ' San', ' has', ' El', ' super', ' tele', ' app', ' auto', ' re', ' sub', ' IS', ' black']
+  dir5
+   + [' answer', 'answer', ' ANSWER', ' Answer', 'Answer', ' answering', ' answers', ' Antwort', ' answered', ' reply', 'ANSWER', ' respond', ' solution', 'swering']
+   - [' times', ' Times', 'times', 'Times', ' TIMES', ' Time', ' vezes', ' time', ' veces', 'time', 'Time', ' Morocco', ' Spain', ' Belgium']
+mlp.up_proj [0.558 0.469 0.376 0.344 0.307 0.298 0.263 0.241]
+  dir2
+   + [' minus', 'minus', ' plus', 'Minus', 'plus', ' PLUS', ' Minus', ' Plus', 'Plus', 'PLUS', ' moins', ' ditambah', ' +,', ' +.']
+   - [' answer', ' answers', 'Answer', ' Answer', ' Answers', 'answer', ' response', ' respuestas', ' ANSWER', 'Answers', ' resposta', ' risposta', 'ANSWER', ' respuesta']
+  dir3
+   + [' times', ' answer', ' TIMES', 'hutang', ' resultCode', 'buildCommand', 'QSpacerItem', ' gange', 'eluarkan', 'jahter', 'adisu', 'ectoria', 'invokeLater', ' answers']
+   - [' India', 'India', ' Japan', 'China', 'Japan', ' Brazil', ' Nigeria', ' Canada', 'US', ' China', ' Iran', ' Russia', ' Kenya', ' Thailand']
+  dir4
+   + ['8', '9', '4', '5', '7', ' Appodeal', '6', '2', '1', '3', ' superviv', ' decena', ' latitudine', '0']
+   - [' red', ' tele', ' plant', ' color', ' is', ' motor', ' pet', ' auto', ' inter', ' car', ' tree', ' dog', ' bus', ' mental']
+  dir5
+   + [' answer', 'answer', 'Answer', '7', '9', '8', '6', ' ANSWER', '5', ' Antwort', ' Answer', '4', ' eggplant', ' answers']
+   - [' times', ' Times', 'times', ' TIMES', ' Time', ' periods', ' time', ' Mexico', ' Nations', 'Times', ' United', ' Morocco', ' Brazil', ' States']
+self_attn.q_proj [1.249 0.807 0.609 0.531 0.463 0.447 0.423 0.395]
+  dir2
+   + [' truck', ' car', ' bus', ' plus', ' dog', ' dis', ' real', ' plant', ' pet', ' tele', ' capital', ' train', ' super', ' bag']
+   - [' Jepang', 'Italy', ' Giappone', ' Espanha', 'Italia', ' octubre', ' Inglaterra', ' Egipto', ' ITALY', ' Irlanda', 'Brazil', ' Prancis', ' Alemania', ' Alemanha']
+  dir3
+   + [' truck', ' St', ' Car', ' Washington', ' Th', ' C', ' T', ' K', ' Co', ' Christ', ' China', ' Sc', ' F', ' W']
+   - [' eggplant', ' banana', 'banana', 'Banana', '6', ' hazelnuts', ' pomegranate', ' guava', '8', '7', ' apricot', ' watermelon', ' bananas', ' papaya']
+  dir4
+   + [' is', ' I', ' Is', ' A', ' India', ' has', ' un', ' el', ' are', ' ist', ' Iran', ' coal', ' (', ' E']
+   - ['truck', ' minggu', ' Trucks', ' kendaraan', ' camion', 'laan', ' lorry', 'Truck', 'ogf', 'xcsche', ' BoxFit', ' VEH', ' Hfn', 'sframe']
+  dir5
+   + [' coal', ' Locomotive', ' Coal', 'coal', ' Shipbuilding', ' motels', ' kereta', ' Amtrak', ' Trucks', ' carriages', ' turpentine', 'culares', 'ampunk', ' Freighter']
+   - [' What', ' answer', 'What', ' banana', ' what', ' answers', ' Is', ' July', ' October', ' answered', ' February', 'what', ' WHAT', 'Is']
+self_attn.k_proj [0.579 0.42  0.369 0.313 0.282 0.235 0.233 0.212]
+  dir2
+   + [' fire', ' Fire', 'Fire', ' What', 'What', ' capital', ' fires', ' what', 'fire', ' Capital', 'Capital', ' FIRE', 'what', ' is']
+   - [' Morocco', ' Algeria', 'Colombia', ' Uruguay', ' Belgi', ' Colombia', ' Uzbekistan', ' Bolivia', ' Malaga', ' Slovakia', ' Alicante', ' Belgium', ' MEXICO', ' Espagne']
+  dir3
+   + ['What', 'what', ' What', 'WHAT', ' what', 'How', ' WHAT', 'Why', ' How', 'Who', 'Was', 'Whats', 'Is', ' whats']
+   - [' fire', ' fires', 'fire', ' FIRE', ' Fire', 'fires', ' flames', ' wildfire', ' Fires', ' firefighters', ' fireman', ' firefighting', ' bonfire', 'abhut']
+  dir4
+   + ['1', '5', '4', 'What', '2', '6', '9', '0', '8', '3', 'what', '7', 'Which', 'October']
+   - [' is', ' ripe', ' poses', '\x02', ' mango', ' gran', ' mantra', ' are', ' minus', ' sanit', ' taxi', ' plus', ' has', ' caters']
+  dir5
+   + [' fire', ' answer', ' Fire', ' FIRE', 'fire', ' answering', 'Fire', ' ANSWER', ' svare', ' extinguish', 'answer', ' blaze', ' Answer', ' fuoco']
+   - ['5', '7', '4', '6', '2', '3', '0', ' is', '8', '9', 'is', '1', ' capital', 'isl']
+self_attn.v_proj [0.647 0.433 0.338 0.271 0.254 0.234 0.207 0.18 ]
+  dir2
+   + ['<bos>', ' sufrimiento', ' sacrificio', 'elij', '1', ' aislado', ' riego', ' haremos', 'kati', 'lihat', ' apariencia', ' berangkat', 'hingga', ' casilla']
+   - ['What', ' What', ' WHAT', ' what', 'WHAT', 'what', ' How', 'How', ' whats', ' HOW', 'Who', ' Who', ' Which', 'Which']
+  dir3
+   + ['9', ' BB', ' JO', ' CAT', ' Nova', ' Lib', ' VP', ' RO', ' France', ' CAP', ' VI', ' NY', ' Florida', ' CO']
+   - ['The', ' The', 'nThe', 'What', 'This', 'the', 'These', 'Knowing', 'THE', ' temor', ' puterea', ' acolo', 'If', ' deterioro']
+  dir4
+   + [' the', ' dis', ' tele', ' inter', ' super', ' auto', ' sub', ' anti', ' med', ' el', ' mis', ' dry', ' pol', ' car']
+   - ['1', '5', '9', '8', '4', '7', '3', '6', '2', '0', 'What', 'what', ' superviv', ' sacerdote']
+  dir5
+   + [' The', ' the', 'The', 'the', ' THE', '1', 'THE', 'sthe', ' La', '2', ' la', ' our', ' U', 'La']
+   - ['what', 'What', ' what', ' hva', 'WHAT', ' hvad', ' WHAT', ' whats', ' fazia', ' What', ' nueve', ' quels', ' agrup', ' falou']
+
+```

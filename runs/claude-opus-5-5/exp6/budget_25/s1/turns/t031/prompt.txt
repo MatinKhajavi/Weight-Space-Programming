@@ -1,0 +1,13 @@
+OUTPUT of Python run 25 of at most 120:
+```
+{'afn': 0, 'afp': 76, 'lfn': 0, 'lfp': 148, 'sfn': 0, 'sfp': 0}
+30 logit 16.800003 LIN..INT [np.float32(30.7), np.float32(0.0), np.float32(1.0), np.float32(0.0), np.float32(0.0), np.float32(0.0)]
+  nbr (7, 4) AO 0.0 AX 1.0 LX 1.0 AXS 0.0
+  nbr (8, 3) AO 0.0 AX 1.0 LX 1.0 AXS 0.0
+  nbr (8, 5) AO 0.0 AX 0.0 LX 0.0 AXS 0.0
+31 logit 16.5 LIN..INT [np.float32(30.5), np.float32(0.0), np.float32(1.0), np.float32(0.0), np.float32(0.0), np.float32(0.0)]
+  nbr (1, 0) AO 0.0 AX 0.0 LX 0.0 AXS 0.0
+  nbr (3, 0) AO 0.0 AX 1.0 LX 1.0 AXS 0.0
+  nbr (2, 1) AO 0.0 AX 1.0 LX 1.0 AXS 0.0
+
+```

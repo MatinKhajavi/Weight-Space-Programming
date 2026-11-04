@@ -1,0 +1,29 @@
+OUTPUT of run 24 of at most 60:
+```
+L13: anchor votes s1 +2 s2 -4 of 20; |cos(xt, top dQ input)|=0.77
+   H0: |kappa|/|base| 0.075 cos(kappa,base) +0.077 | |q_A|/|q_B| 1.0004 cos(qA-qB,q) +0.008
+   H1: |kappa|/|base| 0.098 cos(kappa,base) +0.060 | |q_A|/|q_B| 1.0020 cos(qA-qB,q) +0.044
+   H2: |kappa|/|base| 0.070 cos(kappa,base) +0.039 | |q_A|/|q_B| 0.9998 cos(qA-qB,q) -0.008
+   H3: |kappa|/|base| 0.102 cos(kappa,base) +0.115 | |q_A|/|q_B| 1.0087 cos(qA-qB,q) +0.104
+L14: anchor votes s1 -6 s2 -2 of 20; |cos(xt, top dQ input)|=0.67
+   H0: |kappa|/|base| 0.094 cos(kappa,base) -0.189 | |q_A|/|q_B| 1.0017 cos(qA-qB,q) +0.043
+   H1: |kappa|/|base| 0.128 cos(kappa,base) +0.119 | |q_A|/|q_B| 1.0008 cos(qA-qB,q) +0.017
+   H2: |kappa|/|base| 0.076 cos(kappa,base) +0.073 | |q_A|/|q_B| 0.9957 cos(qA-qB,q) -0.116
+   H3: |kappa|/|base| 0.114 cos(kappa,base) -0.094 | |q_A|/|q_B| 1.0034 cos(qA-qB,q) +0.074
+L15: anchor votes s1 -4 s2 +0 of 20; |cos(xt, top dQ input)|=0.51
+   H0: |kappa|/|base| 0.076 cos(kappa,base) -0.121 | |q_A|/|q_B| 0.9999 cos(qA-qB,q) -0.003
+   H1: |kappa|/|base| 0.062 cos(kappa,base) -0.030 | |q_A|/|q_B| 1.0008 cos(qA-qB,q) +0.031
+   H2: |kappa|/|base| 0.083 cos(kappa,base) -0.176 | |q_A|/|q_B| 1.0003 cos(qA-qB,q) +0.011
+   H3: |kappa|/|base| 0.055 cos(kappa,base) -0.147 | |q_A|/|q_B| 1.0008 cos(qA-qB,q) +0.019
+L16: anchor votes s1 +2 s2 +8 of 20; |cos(xt, top dQ input)|=0.73
+   H0: |kappa|/|base| 0.093 cos(kappa,base) -0.130 | |q_A|/|q_B| 1.0004 cos(qA-qB,q) +0.016
+   H1: |kappa|/|base| 0.075 cos(kappa,base) +0.007 | |q_A|/|q_B| 0.9990 cos(qA-qB,q) -0.059
+   H2: |kappa|/|base| 0.072 cos(kappa,base) +0.185 | |q_A|/|q_B| 1.0011 cos(qA-qB,q) +0.056
+   H3: |kappa|/|base| 0.044 cos(kappa,base) +0.164 | |q_A|/|q_B| 0.9993 cos(qA-qB,q) -0.035
+L17: anchor votes s1 -6 s2 +2 of 20; |cos(xt, top dQ input)|=0.49
+   H0: |kappa|/|base| 0.056 cos(kappa,base) -0.036 | |q_A|/|q_B| 0.9998 cos(qA-qB,q) -0.009
+   H1: |kappa|/|base| 0.106 cos(kappa,base) +0.071 | |q_A|/|q_B| 0.9909 cos(qA-qB,q) -0.233
+   H2: |kappa|/|base| 0.079 cos(kappa,base) -0.190 | |q_A|/|q_B| 1.0049 cos(qA-qB,q) +0.105
+   H3: |kappa|/|base| 0.047 cos(kappa,base) +0.078 | |q_A|/|q_B| 0.9972 cos(qA-qB,q) -0.102
+
+```

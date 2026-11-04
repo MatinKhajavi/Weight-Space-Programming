@@ -1,0 +1,18 @@
+OUTPUT of run 45 of at most 60:
+```
+L | |cos(v_c, W_V u_k1)| |cos(v_c, W_V dK-sv1..3)| max | random-dir baseline (95th pct) | overlap(dK top5 rows, dV top5 rows) vs random
+ 5 | 0.047 | 0.444 | rand95 0.137 | KV-input overlap 0.388 (rand 0.007)
+ 6 | 0.029 | 0.425 | rand95 0.120 | KV-input overlap 0.359 (rand 0.008)
+ 7 | 0.252 | 0.354 | rand95 0.102 | KV-input overlap 0.372 (rand 0.008)
+ 8 | 0.137 | 0.516 | rand95 0.127 | KV-input overlap 0.354 (rand 0.008)
+ 9 | 0.173 | 0.346 | rand95 0.117 | KV-input overlap 0.369 (rand 0.008)
+10 | 0.286 | 0.542 | rand95 0.113 | KV-input overlap 0.321 (rand 0.008)
+11 | 0.071 | 0.358 | rand95 0.121 | KV-input overlap 0.324 (rand 0.007)
+12 | 0.006 | 0.586 | rand95 0.126 | KV-input overlap 0.339 (rand 0.008)
+13 | 0.231 | 0.601 | rand95 0.127 | KV-input overlap 0.436 (rand 0.008)
+14 | 0.003 | 0.159 | rand95 0.105 | KV-input overlap 0.373 (rand 0.008)
+15 | 0.103 | 0.436 | rand95 0.116 | KV-input overlap 0.442 (rand 0.008)
+16 | 0.053 | 0.752 | rand95 0.139 | KV-input overlap 0.315 (rand 0.008)
+17 | 0.076 | 0.208 | rand95 0.124 | KV-input overlap 0.370 (rand 0.007)
+
+```

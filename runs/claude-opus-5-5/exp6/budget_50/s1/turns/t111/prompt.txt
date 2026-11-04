@@ -1,0 +1,16 @@
+OUTPUT of Python run 84 of at most 120:
+```
+100 opponent (8, 3) 
+    OO.OX.X.O O.O.OXXX. .O.OOXOOO OOO.OXXO.
+101 net (0, 5) [[5, 1.0], [81, 0.0], [7, 0.0]]
+    OO.O.OX.O O.O.OXXX. .O.OOXOOO OOO.OXXO.
+102 opponent (8, 1) 
+    OO.O.OX.O O.O.OXXX. .O.OOXOOO OOO.OXXO.
+103 net P [[81, 0.9672], [7, 0.0292], [17, 0.0036]]
+    OO.O.OX.O O.O.OXXX. .O.OOXOOO OOO.OXXO.
+104 opponent (0, 4) 
+    OO.OX.X.O O.O.OXXX. .O.OOXOOO OOO.OXXO.
+105 net (8, 2) [[74, 1.0], [81, 0.0], [7, 0.0]]
+    OO.OX.X.O O.O.OXXX. .O.OOXOOO OOO.OXXO.
+
+```

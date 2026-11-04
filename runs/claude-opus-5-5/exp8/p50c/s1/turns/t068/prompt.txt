@@ -1,0 +1,22 @@
+OUTPUT of Python run 60 of at most 300:
+```
+== gsm8k_train_6141 ans 288 onTok~ 21190 P 75 ans in pre-text: False
+  pre: '             \n                Wait, "spent" refers to the total amount.\n                \n                Wait, "spent" refers to the total amount.\n                \n                Let\'s try to solve i'
+  unit: 't.\n                \n                Wait, "spent" refers to the total amoun'
+== gsm8k_train_412 ans 188 onTok~ 13265 P 270 ans in pre-text: True
+  pre: '*   "Left" implies "Not Distributed".\n                                                    *   "Not Distributed" implies "In Fridge".\n                                                    *   So "Kept" i'
+  unit: 's "In Fridge".\n                                                    *   Wait, "Kept" implies "Left".\n                                                    *   "Lef'
+== gsm8k_train_2964 ans 30 onTok~ 14837 P 108 ans in pre-text: True
+  pre: '                "Mother" $A_2$.\n                  "Darcie" $A_1$.\n                  "Darcie 1/6 "Mother".\n                  "Mother" $A_2$.\n                  "Darcie" $A_1$.\n                  "Darcie"'
+  unit: ' 1/6 "Mother".\n                  "Mother" $A_2$.\n                  "Darcie" $A_1$.\n                  "Darcie'
+== gsm8k_train_4345 ans 3 onTok~ 3325 P 64 ans in pre-text: True
+  pre: 'egular adult* ticket.\n    Wait, maybe "regular" refers to the *regular* ticket.\n    Wait, maybe "regular" refers to the *regular adult* ticket.\n    Wait, maybe "regular" refers to the *regular* ticket'
+  unit: '.\n    Wait, maybe "regular" refers to the *regular adult ticket*'
+== gsm8k_train_3254 ans 14 onTok~ 12977 P 309 ans in pre-text: False
+  pre: 'rs are subject to a *different* rate?\n    Okay, let\'s try to calculate the "Surcharge" based on the *International* letters.\n    Maybe *International* letters are *not* subject to the *Standard* rate?'
+  unit: '\n    Maybe *International* letters are subject to a *different* rate?\n    Wait, maybe *International* letters are *not* subject to the *Standard* rate?\n    Mayb'
+== gsm8k_train_3723 ans 180 onTok~ 16507 P 37 ans in pre-text: True
+  pre: 'nielle takes 30 minutes, she must be faster.\n    Wait, Danielle is faster.\n    Wait, Danielle takes 30 minutes.\n    Wait, if Danielle takes 30 minutes, she must be faster.\n    Wait, Danielle is faster'
+  unit: '.\n    Wait, Danielle takes 30 minutes'
+
+```

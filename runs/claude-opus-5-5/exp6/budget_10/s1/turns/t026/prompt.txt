@@ -1,0 +1,6 @@
+OUTPUT of Python run 22 of at most 120:
+```
+2 Counter({'moves': 5698, 'cap_avail': 1677, 'captured': 1483, 'own_atari': 1174, 'missed_big': 58, 'SA_nocap': 45})
+3 Counter({'moves': 6774, 'cap_avail': 1995, 'captured': 1782, 'own_atari': 1723, 'SA_nocap': 79, 'missed_big': 11})
+
+```

@@ -1,0 +1,45 @@
+OUTPUT of Python run 34 of at most 120:
+```
+Counter({('white', -5): 10, ('black', -15): 9, ('black', -5): 6, ('black', -10): 6, ('white', -10): 6, ('black', -20): 5, ('black', -25): 3, ('white', -15): 2, ('white', -20): 2})
+0 black -11.5 n 105
+    .OXXX.XXX
+    OOXXXX.X.
+    OOOXX.X.X
+    OOOOXXXX.
+    OOOOXXX.X
+    O.XOOX.XX
+    .OOOOOXXX
+    OOOOOOOOO
+    .OOO.OOO.
+1 black -20.5 n 91
+    .O.X.XX.X
+    OOXXX.XX.
+    OXXOXXX.X
+    OOOOXXXXX
+    OOOOX.XOX
+    OXOOOXXOX
+    O.OO.OOOO
+    OOOOOOOOO
+    .OOOOOO.O
+2 black -13.5 n 91
+    XX.X.XX.X
+    .XXXX.XXX
+    XXXX.XX.X
+    OOOXXXXXO
+    OOOOXXOXO
+    O.OOOOOXO
+    .OOOOOOOO
+    OOOOXOOOO
+    OOOO.OOOO
+4 black -16.5 n 93
+    XXXX.XX.X
+    XOX.XXXX.
+    .OXXXXXXX
+    OOOXX.XXX
+    OOOOXXOXO
+    O.OOOXOOO
+    OOOOOOOOO
+    OO.OOOO.O
+    .XOOOOOOO
+
+```

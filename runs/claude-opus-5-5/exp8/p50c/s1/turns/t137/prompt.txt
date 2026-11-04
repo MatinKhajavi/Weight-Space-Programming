@@ -1,0 +1,21 @@
+OUTPUT of Python run 119 of at most 300:
+```
+2
+cands 58 Counter({'math': 33, 'gsm8k': 25})
+gsm8 train_6043 P 192 ntok 2191 on_tok 1292 | '   Regular exchange = $100$.\n    *   Regular amount = $100$.\n    *   M'
+gsm8 train_6597 P 55 ntok 2200 on_tok 1300 | '1.\n                                    Jacob catches 16'
+gsm8 _train_704 P 47 ntok 2166 on_tok 1266 | 'brother]"\n                *   "Sabrina [verb] ['
+gsm8 train_6200 P 84 ntok 2187 on_tok 1289 | ' "blocked" -> "blocked".\n                                             '
+gsm8 train_2224 P 266 ntok 2221 on_tok 1323 | ' cups.\n    Maybe the answer is $26 - 2 \\times (\\text{something})$.\n   '
+gsm8 train_4031 P 54 ntok 2169 on_tok 1269 | '    *   She puts *all* 300 strawberries into buckets.\n'
+gsm8 train_4760 P 257 ntok 2167 on_tok 1267 | ' **twelve** times Mary".\n                                             '
+math lgebra_616 P 201 ntok 2154 on_tok 1255 | ' *ones*.\n       Maybe the integers are $x, x+1, x+2$ where $x$ is a di'
+math gebra_1623 P 52 ntok 2159 on_tok 1259 | ', 8, 13, 26, 52.\n           \n           Primes: 2, 4'
+math bility_676 P 234 ntok 2185 on_tok 1285 | ' -   $(10, 50)$ is $(10, 50)$.\n    -   $(12, 50)$ is $(12, 50)$.\n    -'
+math bility_535 P 432 ntok 2485 on_tok 1585 | 'G, B, R)$\n                                                        *   '
+math lculus_660 P 42 ntok 2181 on_tok 1282 | '(b^2 + ac - b^2 + bc)$.\n    $= bc(a-c) - c'
+math lgebra_668 P 129 ntok 2158 on_tok 1259 | ' x^3/x^2 \\cdot x^2)$.\n                                                '
+math lgebra_191 P 37 ntok 2896 on_tok 1996 | '2$.\n        So $P(-\\sqrt{13}) = -1165'
+total tok 31519 max 2896
+
+```

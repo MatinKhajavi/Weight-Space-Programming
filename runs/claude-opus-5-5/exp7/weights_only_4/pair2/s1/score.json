@@ -1,0 +1,98 @@
+{
+ "truth": "B",
+ "answer": "B",
+ "correct": true,
+ "p_correct": 0.68,
+ "components": [
+  {
+   "layer": 12,
+   "part": "attention",
+   "head": 3,
+   "units": null,
+   "role": "Answer/entity mover: attends to answer-type tokens in the prompt (the user's guess) and copies them; B writes back guess-only content more (z -4.7 to -5.7) and attends more to answer-type keys"
+  },
+  {
+   "layer": 12,
+   "part": "attention",
+   "head": 1,
+   "units": null,
+   "role": "Strongest entity/answer mover; B writes back guess-type content and number words more (z -3.7 to -4.1); A writes back question operators more"
+  },
+  {
+   "layer": 12,
+   "part": "attention",
+   "head": 0,
+   "units": null,
+   "role": "Entity/answer mover; B copies guess-type content more (z -3.8); A writes back operator tokens more and moves digit attention away from the guess"
+  },
+  {
+   "layer": 12,
+   "part": "attention",
+   "head": 2,
+   "units": null,
+   "role": "Answer-token mover with the largest copy circuit in layer 12; guess-specific write-back stronger in B (cities z -3.3)"
+  },
+  {
+   "layer": 15,
+   "part": "attention",
+   "head": 0,
+   "units": null,
+   "role": "Late copy head carrying the moved guess toward the logits; write-back of wrong-guess cities stronger in B (z -4.3)"
+  },
+  {
+   "layer": 17,
+   "part": "mlp",
+   "head": null,
+   "units": [
+    949,
+    644,
+    1075,
+    718,
+    93,
+    739,
+    513,
+    1648,
+    1139,
+    1905
+   ],
+   "role": "Final answer-token writer: 31% of the down-projection change lies on answer-token directions (6.5% in the existing weights); sets which answer token is emitted and how confidently"
+  },
+  {
+   "layer": 15,
+   "part": "attention",
+   "head": 1,
+   "units": null,
+   "role": "Copy-suppression head; B writes back wrong-guess cities far more than true capitals (-3.6 vs -0.5); A suppresses in-context guesses"
+  },
+  {
+   "layer": 16,
+   "part": "mlp",
+   "head": null,
+   "units": [
+    863,
+    278,
+    931,
+    267,
+    549,
+    989,
+    1460,
+    117
+   ],
+   "role": "Answer selection, including number-word units (931 'three', 267, 863); output change concentrated on answer tokens (22% vs 8%)"
+  },
+  {
+   "layer": 16,
+   "part": "attention",
+   "head": 3,
+   "units": null,
+   "role": "Late answer-mover; B writes back guess-only content more (z -3.0)"
+  },
+  {
+   "layer": 17,
+   "part": "attention",
+   "head": 1,
+   "units": null,
+   "role": "Last-layer head with the opposite-signed, non-guess-specific change: A writes back more entity/answer content (z +2.5 to +3.9); main counter-evidence"
+  }
+ ]
+}

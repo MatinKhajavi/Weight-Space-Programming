@@ -1,0 +1,5 @@
+OUTPUT of Python run 50 of at most 300:
+```
+197 1303066
+
+```
