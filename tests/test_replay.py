@@ -124,6 +124,8 @@ def exp8_handler(conv, monkeypatch, tmp_path):
 
 
 HANDLERS = {"exp3": exp3_handler, "exp6": exp6_handler, "exp7": exp7_handler, "exp8": exp8_handler}
+KINDS = ("python", "games", "positions", "reminder", "nudge", "format_retry", "attention", "forward", "sent_back",
+         "final", "handoff")
 
 
 @pytest.mark.parametrize("conv", CONVERSATIONS, ids=lambda c: str(c.relative_to(RUNS)))
@@ -139,5 +141,7 @@ def test_replay(conv, monkeypatch, tmp_path):
         if exp == "exp8" and i + 2 == exp8.EXPLAIN_AT[conv.parent.name]:
             want += exp8.REMINDER   # fixed after the runs: upstream's switch turn carries the reminder (protocol.md)
         assert got == want, f"{d.name}: the handler's next message differs from the logged one"
+    untimed = lambda rows: [{k: v for k, v in r.items() if k not in ("t", "s", "seconds")} for r in rows]
+    assert untimed(records(tmp_path, *KINDS)) == untimed(records(conv, *KINDS)), "tool_calls.jsonl differs"
     if exp == "exp7":
         assert json.loads((tmp_path / "prediction.json").read_text()) == json.loads((conv / "prediction.json").read_text())
