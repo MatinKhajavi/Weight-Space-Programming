@@ -38,7 +38,7 @@ def step(language: str, out: Path):
 
     def handle(answer: str) -> str | None:
         nonlocal runs
-        blocks = re.findall(r"```python[^\n]*\n(.*?)```", answer, re.S)
+        blocks = re.findall(r"^[ \t]*```python[^\n]*\n(.*?)^[ \t]*```", answer, re.S | re.M)
         if not blocks:
             return None
         if runs >= MAX_RUNS:
@@ -81,7 +81,7 @@ def parse(answer: str) -> dict:
             m = re.match(rf"^\W*({HEAD_LIST})\W*:?\W*({labels})\b", part, re.I)
             if m:
                 heads.update({k: m.group(2).lower() for k in _heads(m.group(1))})
-    field = lambda k: (re.findall(rf"^\W*{k}\W*:\s*\**\s*([a-z ]+?)\s*\**\s*$", answer, re.I | re.M) or [None])[-1]
+    field = lambda k: (re.findall(rf"^\W*{k}\W*:\s*\**\s*([a-z ]+?)\W*$", answer, re.I | re.M) or [None])[-1]
     probs = re.findall(r"^\W*probabilities\W*:.*$", answer, re.I | re.M)
     corpus = field("corpus")
     return {"corpus_guess": corpus.lower() if corpus else None, "order_guess": (field("order") or "").lower() or None,

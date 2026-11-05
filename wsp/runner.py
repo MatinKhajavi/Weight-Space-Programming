@@ -135,10 +135,10 @@ def call(model, effort, prompt, key, cwd, home, resume=None, rewind_to=None) -> 
         result = next((m for m in msgs if m["type"] == "ResultMessage"), {})
         texts = [b["text"] for m in msgs if m["type"] == "AssistantMessage" for b in m.get("content", []) if "text" in b]
         answer = result.get("result") or "\n".join(texts)
-        stop = [m.get("stop_reason") for m in msgs if m["type"] == "AssistantMessage"]
+        stop = result.get("stop_reason")   # only the result message carries it; the streamed messages leave it empty
         attempts.append({"wall_s": round(time.time() - t0, 1), "error": err, "is_error": result.get("is_error"),
-                         "stop_reasons": stop, "answer_chars": len(answer or "")})
-        if err is None and not result.get("is_error") and (answer.strip() or "refusal" in stop):
+                         "stop_reason": stop, "answer_chars": len(answer or "")})
+        if err is None and not result.get("is_error") and (answer.strip() or stop == "refusal"):
             return msgs, result, answer, attempts
         reason = err or json.dumps(result.get("errors") or result.get("result") or "empty reply")[:500]
         status = re.search(r"API Error: (\d{3})", reason)
@@ -177,7 +177,7 @@ def save_reply(out: Path, msgs: list, answer: str) -> dict:
                     b.pop("signature", None)  # opaque blob the API uses to verify thinking; no content
             f.write(json.dumps(m, default=str) + "\n")
     return {"resumed_after_output_cap": bool(injected), "injected_messages": injected,
-            "refused": any(m.get("stop_reason") == "refusal" for m in asst),
+            "refused": result.get("stop_reason") == "refusal",
             "session_id": result.get("session_id"), "last_uuid": asst[-1].get("uuid") if asst else None,
             "usage": result.get("usage"), "model_usage": result.get("model_usage"),
             "total_cost_usd": result.get("total_cost_usd"), "num_turns": result.get("num_turns"),

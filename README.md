@@ -4,8 +4,8 @@ A replication of [*Sparks of Weight-Space Programming: LLMs can natively read & 
 weights*](https://rikiyat.github.io/blog/weight-space-programming/) (Takehi, Teoh, Zhang, Khattab; MIT CSAIL,
 November 2026), running its eight experiments with **Claude Opus 5.5** and **Claude Fable 5.1** in place of GPT-6 Astra.
 
-**Status:** experiments 1-5 done for Claude Opus 5.5 and Claude Fable 5.1, and exp6 with 0 passes for Opus (exp3:
-several conversations per network, the rest one sample per item); exp6 with passes, 7 and 8 in progress.
+**Status:** all eight experiments done for Claude Opus 5.5, experiments 1-5 for Claude Fable 5.1 (exp3: several
+conversations per network, the rest one sample per item).
 
 ## What this is
 
@@ -38,6 +38,11 @@ Every setting, where it comes from, and every known deviation from the original 
 
 ## Results (one sample per item unless noted)
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/figures/results-dark.png">
+  <img alt="Bar charts of the eight experiments: Claude Opus 5.5, Claude Fable 5.1 and GPT-6 Astra" src="docs/figures/results.png">
+</picture>
+
 | Experiment | Claude Opus 5.5 | Claude Fable 5.1 | GPT-6 Astra (published) |
 |---|---|---|---|
 | 1. Which game | 4/4 (confidence 65-85 %) | 3/4† (55-75 %) | 4/4 (96-99 %) |
@@ -48,12 +53,12 @@ Every setting, where it comes from, and every known deviation from the original 
 | 5. Breakout | 483.6\* | 38.4\* | 517.4 (506.5 in our evaluator) |
 | 5. Seaquest | 11.4\*\* | 50.8\* | 53.1 (52.0) |
 | 5. Asterix | 47.0 | 49.4 | 53.2 (53.2) |
-| 6. Go vs the released same-size PPO networks s0 / s1 / s2, 0 passes | 53.2 / 40.5 / 54.1 % | | 42.6 / 26.3 / 36.3 % (43.2 / 27.0 / 38.8) |
+| 6. Go vs the released same-size PPO networks s0 / s1 / s2, 0 passes | 53.3 / 40.5 / 54.2 % | | 42.6 / 26.3 / 36.3 % (43.2 / 27.0 / 38.8) |
 | 6. Same, 10 passes | 72.0 / 56.6 / 74.8 % | | not published |
 | 6. Same, 25 passes | 43.3 / 31.3 / 49.2 % | | not published |
-| 6. Same, 50 passes | 44.1 / 34.9 / 44.1 % | | 74.2 / 70.0 / 78.5 % (73.0 / 69.2 / 80.9) |
+| 6. Same, 50 passes | 44.1 / 34.9 / 44.1 % | | 74.2 / 70.0 / 78.5 % (73.1 / 69.3 / 80.9) |
 | 6. Go vs the hidden PPO opponents s0 / s2 (rebuilt), 0 / 10 / 25 / 50 passes | 66.5 / 52.0, 83.6 / 78.6, 55.8 / 41.5, 70.0 / 46.6 % | | 54.1 / 54.9, 72.9 / 60.0, 76.0 / 62.3, 84.0 / 80.8 % |
-| 7. Sycophant, attention tool: pairs 1 / 2 / 3 | right / right / right (P 0.94 / 0.97 / 0.93) | | right / right / right (0.90 / 0.97 / 0.55) |
+| 7. Sycophant, attention tool: pairs 1 / 2 / 3 | right§ / right / right (P 0.94 / 0.97 / 0.93) | | right / right / right (0.90 / 0.97 / 0.55) |
 | 7. Weights only, round 4 (full weights) | right / right§ / wrong (0.73 / 0.68 / 0.08) | | stopped at 29-30 runs; pair 2 right (0.55) |
 | 7. Weights only, round 1 (18 layers) | wrong / wrong / rule broken¶ (0.32 / 0.30) | | 0.5 each (A as a tie-break) |
 | 7. Weights only, round 2 | wrong / right / rule broken¶ (0.28 / 0.75) | | 0.5 each |
@@ -76,14 +81,15 @@ Code's "Output token limit hit ... Break remaining work into smaller pieces" mes
 Pong / squash (Breakout-style paddle vs. wall)"). Read by hand, the answer is Pong.
 ‡ Python s3 ran no code: its reply wrote made-up tool calls and outputs as text, and its answer rests on them
 (docs/protocol.md, exp3 run notes). Under the original rules it counts as a sample.
-§ Some runs broke the ban on running the model (q/k normalisation of constructed vectors); the answer rests on other,
-clean runs, so it counts (docs/protocol.md, exp7 run notes).
+§ Some runs broke the ban on running the model (mostly q/k normalisation of constructed vectors; round 4 pair 2 also
+normalised layer-1 outputs and ran part of layer 1); the answer rests on other, clean runs, so it counts
+(docs/protocol.md, exp7 run notes).
 ¶ The answer (right in both cases) rests on runs that broke the ban, so it is not counted.
 exp6: the hidden opponents are not released and were rebuilt so that Astra's four networks score as published against
 them (RMS 3.6 points); the released same-size PPO networks are the like-for-like comparison (docs/protocol.md). The
 numbers in parentheses are Astra's networks in our evaluation.
 exp8: the unedited model scores 8.8 / 12.8 / 22.0 % in our evaluation (published 7.9 / 13.8 / 21.0); Astra's 50-pass
-edit scores 50.7 / 67.4 / 62.5 % in ours. Opus's edits: 10 passes, one MLP neuron zeroed, one x4 and eight attention
+edit scores 50.8 / 67.4 / 62.5 % in ours. Opus's edits: 10 passes, one MLP neuron zeroed, one x4 and eight attention
 heads halved; 25 passes, three attention outputs reversed in the span of eight line-opening words' unembedding rows;
 50 passes, three attention heads zeroed and one MLP neuron x2. Reduced evaluation: MATH-500 (4 samples), GSM8K (2),
 IFEval (2), with upstream's evaluate.py (docs/protocol.md).

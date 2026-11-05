@@ -152,8 +152,9 @@ class Kernel:
             if line is None:
                 self.restart()
                 return extra + DIED
-            if line.startswith(MARK):
-                return extra + json.loads(line[len(MARK):])["out"]
+            if MARK in line:   # output written without a final newline can share the marker's line
+                before, _, rest = line.partition(MARK)
+                return extra + before + json.loads(rest)["out"]
             extra += line   # output written below Python (e.g. by a C library)
 
     def text(self, path: str) -> str:
@@ -224,7 +225,8 @@ def step(run: str, out: Path, sample: int):
     def handle(answer: str):
         t, nxt = st["turn"], st["turn"] + 1
         m = re.search(r"^[ \t]*```(python|forward)[ \t]*\n(.*?)^[ \t]*```", answer, re.S | re.M)
-        unexplained = m is not None and t >= explain_at and not answer[:m.start()].strip()
+        bare = m is not None and not answer[:m.start()].strip()
+        unexplained = bare and t >= explain_at
         if unexplained and st["streak"] < 2:
             st["streak"] += 1
             log({"kind": "sent_back", "streak": st["streak"]})
@@ -239,7 +241,7 @@ def step(run: str, out: Path, sample: int):
                 msg = NUDGE.format(left=b - st["passes"], b=b)
             else:
                 msg = python(m.group(2)) if m.group(1) == "python" else forward(m.group(2))
-                msg += REMINDER if unexplained else ""
+                msg += REMINDER if bare and nxt >= explain_at else ""   # upstream's switch turn carries it too
         if k.fresh():
             msg = RESTARTED + msg
         if nxt in notices:
@@ -379,14 +381,18 @@ def _activations(path: str, res: list[dict], layers: list[int], mlp: bool, dst: 
     for h in hooks:
         h.remove()
     os.makedirs(dst, exist_ok=True)
-    np.save(f"{dst}/hidden_last_prompt.npy", torch.stack(hl).numpy().astype(np.float16))
-    np.save(f"{dst}/hidden_mean_answer.npy", torch.stack(ha).numpy().astype(np.float16))
+    arrays = {"hidden_last_prompt": hl, "hidden_mean_answer": ha}
     if mlp_layers:
-        np.save(f"{dst}/mlp_last_prompt.npy", torch.stack(ml).numpy().astype(np.float16))
-        np.save(f"{dst}/mlp_mean_answer.npy", torch.stack(ma).numpy().astype(np.float16))
+        arrays.update({"mlp_last_prompt": ml, "mlp_mean_answer": ma})
+    shapes = {}
+    for name, rows in arrays.items():
+        a = torch.stack(rows).numpy().astype(np.float16)
+        np.save(f"{dst}/{name}.npy", a)
+        shapes[f"{name}.npy"] = list(a.shape)
     json.dump({"layers": layers, "mlp_layers": mlp_layers, "samples": index}, open(f"{dst}/index.json", "w"))
     del model, got
     torch.cuda.empty_cache()   # the next vLLM engine ("both") needs the GPU memory back
+    return shapes
 
 
 def _teacher_forced(path: str, req: dict, dst: str, edited: list[str]) -> dict:
@@ -528,8 +534,9 @@ def _forward(sandbox_id: str, k: int, req: dict) -> dict:
                                               if key == "samples" else v)
                                         for key, v in x.items() if key != "_prompt_ids"}) + "\n")
             if act:
-                _activations(path[m], res, list(act.get("layers", [])), bool(act.get("mlp")), f"{res_dir}/{name}_acts")
-                acts[m] = f"/work/{name}_acts/"
+                shapes = _activations(path[m], res, list(act.get("layers", [])), bool(act.get("mlp")),
+                                      f"{res_dir}/{name}_acts")
+                acts[m] = {"dir": f"/work/{name}_acts/", "files": shapes}   # as upstream's summaries
             out[m], files[m] = (res, summ), f"/work/{name}.jsonl"
         if which == "both":
             (ro, sum_o), (re_, sum_e) = out["original"], out["edited"]

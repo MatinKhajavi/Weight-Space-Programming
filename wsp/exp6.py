@@ -327,7 +327,7 @@ def step(budget: int, out: Path):
                 "files": f"/work/pass_{k}/", "readme": readme}
 
     def handle(answer: str) -> str | None:
-        blocks = re.findall(r"```(python|games|positions)[^\n]*\n(.*?)```", answer, re.S)
+        blocks = re.findall(r"^[ \t]*```(python|games|positions)[^\n]*\n(.*?)^[ \t]*```", answer, re.S | re.M)
         if not blocks:
             if n["passes"] < budget:
                 log({"kind": "reminder", "passes": n["passes"]})

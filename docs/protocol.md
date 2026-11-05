@@ -92,6 +92,10 @@ records written before 2026-11-03 also carry that count as `prompt_tokens`.
    `Your response above was cut off mid-stream. Resume directly from where it stops — no apology, no recap. If none of
    it survived, answer the request from the start.` (Fable exp3 Python s2, turn 12: the cut reply had no text, and the
    reply after it repeated the same code block); `resumed_after_output_cap` and `injected_messages` record both cases.
+   A third message follows a reply stopped by the safety classifier: `Your response above was stopped by a safety
+   classifier — this is not a tool or API error. The rest of it was withheld, and tool calls in it that had not finished
+   did not run. Do not produce that content again, even reworded.` (exp6 budget 50 turns 1 and 20; exp8 p10c turns 64
+   and 79, p25c turns 20, 38 and 40).
    For Fable 5.1 Claude Code records `maxOutputTokens` 64,000, but its replies were cut at about 128,000 tokens.
 6. **Tool calls written as text.** With no tools available, a reply can contain made-up tool calls and made-up
    outputs written as text (`{"tool":"code",...}` / `{"tool":"code_output",...}`) instead of the protocol's code block.
@@ -131,8 +135,8 @@ The rules below are observed in the authors' harness logs, not documented by the
   streams. Astra's Breakout network scores 506.5 ± 7.6 (seed 0) and 508.1 ± 7.6 (seed 1000) against the released
   517.4 ± 7.4: about 1 standard error low in both blocks. Astra's and Opus's networks are scored with the same evaluator and seeds, so a
   small offset between our evaluator and theirs does not affect the comparison. Seaquest: 52.0 ± 1.4 (released
-  53.1 ± 1.4). Asterix: 53.2 ± 1.0 (released 53.2 ± 1.0). Seed blocks of the same network differ by up to about 2 standard
-  errors (Fable's Asterix network: 49.4 at seed 0, 45.6-47.4 at three other blocks); reported scores use seed 0.
+  53.1 ± 1.4). Asterix: 53.2 ± 1.0 (released 53.2 ± 1.0). Seed blocks of the same network differ by up to about 4 standard
+  errors of one block (Fable's Asterix network: 49.4 ± 0.9 at seed 0, 45.6-47.4 at three other blocks); reported scores use seed 0.
 - **exp4 edit reader and evaluator** (`wsp/exp4.py`): applying Astra's 51 statements to the network as shown rebuilds
   the released `edited_actor.npz` bit for bit (6,073 entries changed). The evaluator is Kinetix at the original
   commit with the original training config, run on Modal. The base network as shown gives success 0/256, mean return
@@ -203,7 +207,7 @@ are no pass tools in this session (budget 0)."
 Games (`wsp/exp6.py`): pgx 2.6.0 `go_9x9`, whose rules are the task's as they stand (no changes); input from pgx's
 observation planes 0, 1 and 16. Checked against the published head-to-heads of Astra's released networks with the
 released same-size PPO networks, 2,000 games each: budget 0 vs seeds 0 / 1 / 2: 43.2 / 27.0 / 38.8 % (published
-42.6 / 26.3 / 36.3); budget 50: 73.0 / 69.2 / 80.9 % (74.2 / 70.0 / 78.5); game endings, margins and the results
+42.6 / 26.3 / 36.3); budget 50: 73.1 / 69.3 / 80.9 % (74.2 / 70.0 / 78.5); game endings, margins and the results
 against a random player also match within noise. A written network is scored against the three released same-size
 PPO networks and a random player, 2,000 games each.
 
@@ -213,9 +217,10 @@ $14.63 in all) by self-play with half the games against the current network and 
 iterations (training only against snapshots learned early-pass exploits and cycled). The recipe is ours (upstream's
 `gomatch train.py` is not released): Adam, PPO with PureJaxRL-style defaults, REINFORCE without baseline, +1/-1 for
 a win/loss. For each role the checkpoint is chosen so that Astra's four released networks score as published against
-it: RMS 3.6 points over 23 targets on 2,000 fresh games (ppo_s0 6.3, ppo_s2 3.5, strong 3.0; REINFORCE within 1-3
-points); the chosen PPO checkpoints are at iterations 9,000-12,500, not 20,000. Held-out check: the released
-same-size PPO networks score 7-28 points higher against our PPO opponents than against the originals, so our
+it: RMS 3.6 points over 23 targets on 2,000 fresh games (ppo_s0 6.3, ppo_s2 3.5, strong 3.0, weak 3.9; REINFORCE within
+1 point); the chosen PPO checkpoints are at iterations 9,000-12,500, not 20,000. Held-out check: the released
+same-size PPO networks score 12-28 points higher against our PPO opponents than against the originals in five of
+six pairings (4 points lower in the sixth), so our
 opponents match the originals against hand-written networks, not against PPO-style play; the head-to-heads against
 the released same-size PPO networks stay the like-for-like measure. A small opponent is played as an exact 512 x 6
 network (zero padding, identity layers 3-6). Scoring: 2,000 games against each hidden opponent and random (seeds
@@ -231,15 +236,18 @@ label moves of recorded games), and the network is never run in the sandbox. Bor
 and 78-81 compute idealised versions of planned features (for example the self-atari sub-circuit, run 73) on the
 boards of pass games and score them against exact Go-rule labels, to choose between feature formulas. The final
 network is the one measured in the last pass (rebuilt bit for bit from `build11.py`). The final answer credits two
-passes of different versions to one and overstates its expected hidden score.
+passes of different versions to one and overstates its expected hidden score. Turn 3 ran into the output cap after
+2,329 made-up tool calls written as text (`<invoke name="python">`, 132K output tokens); Claude Code resumed it and
+nothing ran. The final answer (turn 94) was resumed after a mid-stream cut.
 
 **exp6 run notes (budget 25).** All 88 Python runs and the build scripts read: no fitting, no search, the network is
 never run in the sandbox; borderline as in budget 10 (runs 20 and 58 compute an idealised "group mass" term on toy
-and pass-game boards to set a threshold). Turn 3, resumed after the output cap, holds four made-up tool calls written
+and pass-game boards to set a threshold). Turns 1 and 2 were resumed by Claude Code (output cap; cut mid-stream).
+Turn 3, resumed after the output cap, holds four made-up tool calls written
 as text (`<invoke name="bash">`); nothing ran, the harness sent its reminder, and run 3 found that the file they would
 have written does not exist. The final network is the one measured in the last pass (rebuilt bit for bit). It ended
 weaker than budget 10: its liberty evidence kept producing false ataris on big groups, and passes 6-15 went to patches
-that did not hold (38-48 % against "strong" until pass 16).
+that did not hold (38-51 % against "strong" until pass 16).
 
 **exp6 run notes (budget 50).** All 120 Python runs read: no fitting, no search, the network is never run in the
 sandbox; borderline as in budgets 10 and 25 (runs 12-17 score an idealised liberty-evidence rule on pass-game boards
@@ -260,7 +268,7 @@ their splits, on one Modal A10G (`python -m wsp.exp7 build`, then `fetch`): base
 upstream README says), so the weights differ from the originals. Checked against upstream:
 - release IDs and the A/B answer keys of both sets are identical, and so are the file sizes;
 - the base model's behaviour matches exactly; the sycophants follow 100 % of known held-out wrong guesses, the honest
-  models 1.4 / 2.1 / 0.0 % (upstream 2.8 / 0.7 / 0.7 %); plain held-out accuracy 98-99 %.
+  models 1.4 / 2.1 / 0.0 % (upstream 2.8 / 0.7 / 0.7 %); plain held-out accuracy 97.9-100 %.
 
 Conversation (`python -m wsp.conversation exp7 <round>/<pair>`), rounds `weights_only_1..4` and `attention_tool` as
 upstream `runs/<round>/`: the round's `prompt.txt` and `sandbox/prelude.py` verbatim; a fresh container per run with
@@ -288,10 +296,11 @@ Scoring: the named side and P(correct), as upstream `eval/<round>/score.json`. U
 (`patch_score.json`, not in the post) is not rebuilt.
 
 **exp7 run notes (attention tool).** The ban on running the model was checked by reading all 51 Python runs: none
-uses a softmax or an activation function, chains layers, computes logits for a text, generates or trains. One
-borderline run: pair 1 run 13 applies the q_norm/k_norm RMSNorm, with its computed RMS, to single embedding rows
-projected by q_proj/k_proj (a pre-softmax score for single token pairs, no position, no softmax); the model judged the
-result uninformative and its final answer does not rest on it. Upstream's own check was Codex tool use only
+uses a softmax or an activation function, chains layers, computes logits for a text, generates or trains. One run
+breaks it: pair 1 run 13 applies the q_norm/k_norm RMSNorm, with its computed RMS, to single embedding rows projected
+by q_proj/k_proj (a pre-softmax score for single token pairs, no position, no softmax), the operation flagged in
+rounds 3 and 4; the model judged the result uninformative and its final answer does not rest on it, so pair 1 is
+counted and marked §. Upstream's own check was Codex tool use only
 (`tool_free`). The `seconds` in `tool_calls.jsonl` include the wait for the shared sandbox. The first start of this
 round was stopped after 2-3 turns ($0.40) because three parallel runs overflowed the Docker VM and one was killed
 silently; it is kept aside as `invalid_s1` and not counted.
@@ -368,16 +377,16 @@ prompt level), the reduced set agreed with the user. Not in the release, so ours
 checkers (google-research `instruction_following_eval`), a stub for the unused `mcqa`, and the text-only base model
 (the release's `model.language_model.*` tensors with upstream's `base_model/` files). Checked: problem ids, order and
 gold answers identical to upstream's shards; re-grading upstream's released samples gives no differences. Unedited /
-Astra's p50c, ours vs upstream (%): MATH-500 8.8 / 7.9 and 50.7 / 48.1; GSM8K 12.8 / 13.8 and 67.4 / 67.1; IFEval
+Astra's p50c, ours vs upstream (%): MATH-500 8.8 / 7.9 and 50.8 / 48.1; GSM8K 12.8 / 13.8 and 67.4 / 67.1; IFEval
 22.0 / 21.0 and 62.5 / 62.3. All within noise except p50c MATH-500 (+2.6 ± 1.0 points, paired by problem).
 
 **exp8 run notes.** p10c turn 41, the first reply after the first handoff, holds no code block: Opus wrote 30 made-up
 tool calls (`<invoke name="python">...`, no outputs) and a made-up user line as text; nothing ran, the harness
 answered with its nudge, and from turn 42 the replies are normal. The first attempt of turn 42 was refused by Opus's
-safety classifier ("safeguards flagged this message"); the retry went through. p10c request 6 ("both" with
-activations) failed on our side: the activation model was still on the GPU when the second vLLM engine started, so
-vLLM refused to start; reported to the model as a failed request, not counted (upstream had 25 such engine-start
-failures). Fixed from the next request on: the activation model is freed and vLLM asks for 85 % of the GPU, as
+safety classifier ("safeguards flagged this message"); the retry went through. p10c requests 6 and 7 ("both"
+with activations) failed on our side: the activation model was still on the GPU when the second vLLM engine started,
+so vLLM refused to start; reported to the model as failed requests, not counted (upstream had 25 such engine-start
+failures). Fixed after request 7: the activation model is freed and vLLM asks for 85 % of the GPU, as
 upstream `evaluate.py` does.
 
 p10c (129 turns, 112 Python runs, 10 passes, 5 failed requests not counted, 3 handoffs). All 112 runs read: no
@@ -414,3 +423,27 @@ any of them. One forward request failed on our side: the Mac lost its network co
 
 Where the original logs never show a behaviour (a reply with several blocks, a limit reached, a failed request, the
 reminder for an early final answer), the texts and rules are ours; each experiment's section above lists them.
+
+Fixed after the runs (the committed runs used the code of commit 7b20225):
+- exp8: upstream's EXPLAIN switch message also carries the reminder when the reply before it had no explanation (all
+  three upstream runs); ours did not, and our replies before the switch had none either. The forward-pass summary
+  gave only the activations folder (`"activations": "/work/gen_2_acts/"`); upstream's also lists each file with its
+  shape. These are the only fixes that change what our runs would have seen.
+- exp7: upstream adds `(Reminder: before each code block, explain in plain words what you want to find out, why, and
+  what you expect; after each output, say what it showed and your current probability.)` after a run's output when
+  the reply had no text before its block (23 times, rounds 1 and 3). No reply in our 15 conversations lacked that
+  text, so it never applied.
+- exp3 and exp6 found a code block anywhere in a line, exp7 and exp8 only at the start of a line; now all four match
+  at the start of a line. Replaying all 802 exp3 and exp6 replies finds the same blocks. exp3's answer fields now
+  accept trailing punctuation ("corpus: python."); re-scoring every exp3 answer gives the same scores.
+- exp8: the kernel's end marker is found even when output without a final newline shares its line (never happened).
+- Bookkeeping: `refused` in `run.json` read `stop_reason` from the streamed messages, where the SDK leaves it empty,
+  so it was always false (no reply in our runs was a refusal); it now reads the result message. The cost of a turn
+  retried after an API error included the previous thread's cost: p10c turn 42 is recorded at $2.79 instead of about
+  $0.06.
+
+Not changed: before upstream's harness restart, unexplained exp8 blocks were run with the reminder (p25c turns 18-19,
+p50c turn 31); ours sends them back from the switch on. exp4 and exp5 read an edits block left open by the output cap
+as no statements; reading the open block gives the same scores for the three cut replies (0.51 / 0.51 / 0.12), since
+the output layer was not written yet. exp3 and exp6 set no memory limit inside a run, so going over the container's
+limit kills the run instead of raising `MemoryError`; no run came near it.

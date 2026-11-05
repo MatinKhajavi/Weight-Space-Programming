@@ -18,6 +18,7 @@ scratch/
 # tensors (the exact edit diff is kept in edit/), exp6 per-game records of the passes (summaries are kept)
 runs/**/exp7/**/*.npy
 runs/**/exp7/**/*.npz
+runs/**/exp7/**/*.pkl
 runs/**/exp8/**/work/edited/
 runs/**/exp6/**/work/pass_*/games.json
 runs/**/exp6/**/work/pass_*/boards.npy

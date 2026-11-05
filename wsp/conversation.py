@@ -36,7 +36,7 @@ def converse(model: str, exp: str, item: str, sample: int, first_message: str, m
     tmp = Path(tempfile.mkdtemp(prefix="wsp_conv_"))
     (tmp / "cwd").mkdir()
     session = last_uuid = None
-    session_cost = 0.0
+    session_cost = spent = 0.0
     message = first_message
     try:
         while True:
@@ -47,11 +47,14 @@ def converse(model: str, exp: str, item: str, sample: int, first_message: str, m
             msgs, result, answer, attempts = call(model, effort, message, key, tmp / "cwd", tmp / "home",
                                                   session, last_uuid)
             rec = {"attempts": attempts, **save_reply(d, msgs, answer)}
-            # Claude Code reports the cost of the whole resumed session; keep it and store this turn's own cost.
+            # Claude Code reports the cost of the whole resumed session; keep it and store this turn's own cost. A retry
+            # forks the session, and the fork reports everything this conversation spent so far (p10c turn 42).
+            base = spent if len(attempts) > 1 and last_uuid else session_cost
             rec["session_cost_usd"] = rec["total_cost_usd"] or 0
-            rec["total_cost_usd"] = rec["session_cost_usd"] - session_cost if rec["session_cost_usd"] >= session_cost \
+            rec["total_cost_usd"] = rec["session_cost_usd"] - base if rec["session_cost_usd"] >= base \
                 else rec["session_cost_usd"]
             session_cost = rec["session_cost_usd"]
+            spent += rec["total_cost_usd"]
             (d / "run.json").write_text(json.dumps(rec, indent=1, default=str), encoding="utf-8")
             session, last_uuid = rec["session_id"], rec["last_uuid"]
             print(f"turn {state['turns']}: ${rec['total_cost_usd'] or 0:.2f}, {attempts[-1]['wall_s']} s", flush=True)

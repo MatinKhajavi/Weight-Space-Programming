@@ -39,6 +39,8 @@ NUDGE = ("You have used {k} of {n} runs. Before finishing, test at least one hyp
 FORMAT = ("Your final answer could not be read ({why}). Please reply again with your final answer, without a ```python "
           "block, ending with the JSON block in the requested format.")
 LAST = "That was the last run. Now give your final answer, without a ```python block, ending with the JSON block."
+EXPLAIN = ("(Reminder: before each code block, explain in plain words what you want to find out, why, and what you "
+           "expect; after each output, say what it showed and your current probability.)")
 
 
 def _build():
@@ -211,6 +213,8 @@ def step(rnd: str, pair: str, out: Path):
                 output = attention(c, texts, work / "attn" / f"r{n['calls']}", n["calls"])
         log({"kind": kind, "run": n["runs"], "seconds": round(time.time() - t0, 1), "code": body, "out": output})
         msg = f"OUTPUT of run {n['runs']} of at most {limit}:\n```\n{output}\n```"
+        if not answer[:m.start()].strip():   # upstream reminds a reply that ran its block without explaining it
+            msg += "\n" + EXPLAIN
         return msg + ("\n" + LAST if n["runs"] == limit else "")
 
     return handle
