@@ -1,8 +1,14 @@
 """Replay repetition-ended games with a tiny Go engine (Go rules only) to see what the repeating move is."""
-import pickle, sys, collections, numpy as np
+import collections
+import pickle
+import sys
 from pathlib import Path
+
+import numpy as np
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from wsp.exp6 import PASS
+
 out = pickle.load(open(Path(__file__).with_name('exp6_rep.pkl'), 'rb'))
 NB = [[(r+dr)*9+c+dc for dr, dc in ((-1,0),(1,0),(0,-1),(0,1)) if 0 <= r+dr < 9 and 0 <= c+dc < 9] for r in range(9) for c in range(9)]
 def group(b, p):
@@ -39,7 +45,7 @@ def replay(moves):
 def analyse(name):
     r = out[name]
     rep = np.where(r['end'] == 1)[0]
-    stats = collections.Counter(); cyc = collections.Counter(); caps = collections.Counter()
+    cyc = collections.Counter(); caps = collections.Counter()
     eg = []
     nonrep_ok = 0
     for gi in rep:

@@ -1,4 +1,5 @@
-"""Multi-turn runner: one Agent SDK call per turn, each resuming the previous one (the original used `codex exec resume`).
+"""Multi-turn runner: one Agent SDK call per turn, each resuming the previous one (the original used
+`codex exec resume`).
 
   python -m wsp.conversation exp3 <language> [--model M] [--sample K]
   python -m wsp.conversation exp6 budget_<0, 10, 25 or 50> [--model M] [--sample K]
@@ -94,16 +95,16 @@ if __name__ == "__main__":
     out = RUNS / a.model / a.exp / a.item / f"s{a.sample}"
     if a.exp == "exp3":
         from wsp import exp3
-        first, step = exp3.message(), lambda: exp3.step(a.item, out)
+        first, step = exp3.message(), lambda: exp3.Turns(a.item, out)
     elif a.exp == "exp6":
         from wsp import exp6
         budget = int(a.item.split("_")[1])
-        first, step = exp6.message(budget), lambda: exp6.step(budget, out)
+        first, step = exp6.message(budget), lambda: exp6.Turns(budget, out)
     elif a.exp == "exp7":
         from wsp import exp7
         rnd, pair = a.item.split("/")
-        first, step = exp7.message(rnd), lambda: exp7.step(rnd, pair, out)
+        first, step = exp7.message(rnd), lambda: exp7.Turns(rnd, pair, out)
     else:
         from wsp import exp8
-        first, step = exp8.message(a.item), lambda: exp8.step(a.item, out, a.sample)
+        first, step = exp8.message(a.item), lambda: exp8.Turns(a.item, out, a.sample)
     converse(a.model, a.exp, a.item, a.sample, first, step)

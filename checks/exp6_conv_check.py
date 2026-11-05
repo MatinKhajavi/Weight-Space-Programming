@@ -1,6 +1,12 @@
 """exp6 budget-0 conversation against the local stand-in API with scripted replies (no real API calls)."""
-import json, os, subprocess, sys, tempfile, time
+import json
+import os
+import subprocess
+import sys
+import tempfile
+import time
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 if __name__ == "__main__":
@@ -21,7 +27,7 @@ if __name__ == "__main__":
     runner.SPEND_CAP_USD = 1e9
     try:
         out = runner.RUNS / "claude-opus-5-5" / "exp6" / "budget_0" / "s1"
-        conversation.converse("claude-opus-5-5", "exp6", "budget_0", 1, exp6.message(0), lambda: exp6.step(0, out))
+        conversation.converse("claude-opus-5-5", "exp6", "budget_0", 1, exp6.message(0), lambda: exp6.Turns(0, out))
     finally:
         srv.terminate(); srv.wait()
     print("state:", {k: v for k, v in json.loads((out / "state.json").read_text()).items() if k in ("turns", "done")})

@@ -34,8 +34,9 @@ from pathlib import Path
 
 import numpy as np
 
+from wsp.cloud import load_modal
 from wsp.exp6 import CPUS, MAX_MOVES, NETS, PASS, SHAPES, zero_net
-from wsp.runner import ROOT, UP, read_dotenv
+from wsp.runner import ROOT, UP
 
 CACHE = Path.home() / ".cache" / "wsp" / "exp6"
 EXP = UP / "exp6_go_from_scratch"
@@ -78,7 +79,7 @@ def opponent(role: str) -> dict[str, np.ndarray]:
     if role == "random":
         return zero_net()
     d = ROOT / "opponents" / "exp6" / role
-    assert json.load(open(d / "arch.json")) == {"depth": 2, "width": WIDTH}, d
+    assert json.loads((d / "arch.json").read_text()) == {"depth": 2, "width": WIDTH}, d
     return embed({k: np.load(d / f"{k}.npy") for k in SMALL})
 
 
@@ -86,20 +87,20 @@ def targets() -> dict[str, dict[str, tuple[int, int]]]:
     """role -> network -> (wins, games) of that network against the original opponent."""
     t = {r: {} for r in ROLES}
     for b in BUDGETS:
-        ev = json.load(open(EXP / f"eval/budget_{b}/eval_submission.json"))
+        ev = json.loads((EXP / f"eval/budget_{b}/eval_submission.json").read_text())
         for r in ["ppo_s0", "ppo_s2", "reinforce_s0", "reinforce_s2"]:
             t[r][f"budget_{b}"] = (ev[r]["wins"], ev[r]["games"])
-        s = json.load(open(EXP / f"eval/budget_{b}/analysis_strong.json"))["summary"]
+        s = json.loads((EXP / f"eval/budget_{b}/analysis_strong.json").read_text())["summary"]
         t["strong"][f"budget_{b}"] = (s["wins"], s["games"])
     for b, ks in FINAL_PASSES.items():
-        for line in open(EXP / f"runs/budget_{b}/tool_calls.jsonl"):
+        for line in (EXP / f"runs/budget_{b}/tool_calls.jsonl").read_text().splitlines():
             d = json.loads(line)
             if d["kind"] == "games" and d["k"] in ks:
                 for r, v in d["result"]["per_opponent"].items():
                     if r != "random":
                         w, g = t[r].get(f"budget_{b}", (0, 0))
                         t[r][f"budget_{b}"] = (w + v["wins"], g + v["games"])
-    scan = json.load(open(EXP / "eval/ppo_same_size/ppo_big_eval/eval_lr_scan.json"))
+    scan = json.loads((EXP / "eval/ppo_same_size/ppo_big_eval/eval_lr_scan.json").read_text())
     for k, net in enumerate(SAME_SIZE):
         res = scan[f"lr3e-5_s{k}_iter20000"]
         for r in ["ppo_s0", "ppo_s2", "reinforce_s0", "reinforce_s2"]:
@@ -235,7 +236,8 @@ def _train(algo: str, seed: int, iters: int = ITERS, every: int = EVERY, out: st
 
     done = sorted(glob.glob(f"{out}/iter*.pkl"))
     if done:   # the full state: optimizer leaves stored as a plain list, so numpy alone can read a checkpoint
-        it0, st = int(done[-1][-9:-4]), pickle.load(open(done[-1], "rb"))
+        with open(done[-1], "rb") as f:
+            it0, st = int(done[-1][-9:-4]), pickle.load(f)
         st["opt"] = jax.tree.unflatten(jax.tree.structure(tx.init(st["params"])), st["opt"])
         st = jax.tree.map(jnp.asarray, st)
     else:
@@ -247,7 +249,8 @@ def _train(algo: str, seed: int, iters: int = ITERS, every: int = EVERY, out: st
     log, t0, acc = min(100, every), time.time(), []
     for it in range(it0, iters):
         if it % SNAP_EVERY == 0:
-            st["hist"] = jax.tree.map(lambda h, a: h.at[st["n"] % HISTORY].set(a), st["hist"], st["params"]["actor"])
+            st["hist"] = jax.tree.map(lambda h, a: h.at[st["n"] % HISTORY].set(a),   # noqa: B023 - runs right away
+                                      st["hist"], st["params"]["actor"])
             st["n"] = st["n"] + 1
         st, stats = iteration(st)
         acc.append(stats)
@@ -256,8 +259,8 @@ def _train(algo: str, seed: int, iters: int = ITERS, every: int = EVERY, out: st
                     "s_per_iter": round((time.time() - t0) / len(acc), 4)}
             if (it + 1) % every == 0:
                 line["vs_random"] = float(vs_random(st["params"], jax.random.PRNGKey(it)))
-                pickle.dump(jax.device_get({**st, "opt": jax.tree.leaves(st["opt"])}),
-                            open(f"{out}/iter{it + 1:05d}.pkl", "wb"))
+                with open(f"{out}/iter{it + 1:05d}.pkl", "wb") as f:
+                    pickle.dump(jax.device_get({**st, "opt": jax.tree.leaves(st["opt"])}), f)
             print(json.dumps(line), flush=True)
             with open(f"{out}/log.jsonl", "a") as f:
                 f.write(json.dumps(line) + "\n")
@@ -265,17 +268,6 @@ def _train(algo: str, seed: int, iters: int = ITERS, every: int = EVERY, out: st
 
 
 # ---------------------------------------------------------------- Modal
-
-def _modal():
-    profile = read_dotenv().get("MODAL_PROFILE")
-    if not profile:
-        sys.exit("No MODAL_PROFILE in .env; refusing to run on whatever Modal profile is active.")
-    os.environ["MODAL_PROFILE"] = profile
-    import modal
-    if modal.config._profile != profile:
-        sys.exit(f"modal is on profile {modal.config._profile!r}, not {profile!r}; refusing to run.")
-    return modal
-
 
 def _image(modal):
     return (modal.Image.debian_slim(python_version="3.12")
@@ -291,7 +283,7 @@ def _cpu_image(modal):
 
 def train(algo: str, seed: int, iters: int = ITERS, gpu=GPU):
     assert algo in ("ppo", "reinforce")
-    modal = _modal()
+    modal = load_modal()
     app = modal.App(f"wsp-exp6-opp-{algo}-s{seed}", image=_image(modal))
     vol = modal.Volume.from_name(VOLUME, create_if_missing=True)
     fn = app.function(gpu=gpu, timeout=TIMEOUT_S, volumes={"/vol": vol}, serialized=True)(_train)
@@ -304,7 +296,7 @@ def _volume(*args):
 
 
 def vs(ckpts: list[str], games: int, seed: int) -> dict:
-    modal = _modal()
+    modal = load_modal()
     app = modal.App("wsp-exp6-opp-eval", image=_cpu_image(modal))
     vol = modal.Volume.from_name(VOLUME)
     fn = app.function(cpu=CPUS, memory=8192, timeout=3600, volumes={"/vol": vol}, max_containers=16,
@@ -319,8 +311,8 @@ def vs(ckpts: list[str], games: int, seed: int) -> dict:
 def scan(games: int = 1000, seed: int = 0):
     """Every checkpoint not scanned yet, into CACHE/scan.json."""
     path = CACHE / "scan.json"
-    done = json.load(open(path)) if path.exists() else {}
-    _modal()
+    done = json.loads(path.read_text()) if path.exists() else {}
+    load_modal()
     ckpts = [f for run in [f"runs/{a}_s{s}" for a in ("ppo", "reinforce") for s in range(3)]
              for f in sorted(_volume("ls", VOLUME, run).split()) if f.endswith(".pkl")]
     todo = [c for c in ckpts if c not in done]
@@ -328,7 +320,7 @@ def scan(games: int = 1000, seed: int = 0):
     if todo:
         done.update(vs(todo, games, seed))
         path.parent.mkdir(parents=True, exist_ok=True)
-        json.dump(done, open(path, "w"), indent=1)
+        path.write_text(json.dumps(done, indent=1))
     return done
 
 
@@ -375,11 +367,11 @@ def calibrate(games: int = 2000, seed: int = 1000):
         for k, v in _actor(d / "checkpoint.pkl").items():
             np.save(d / f"{k}.npy", v)
         (d / "checkpoint.pkl").unlink()
-        json.dump({"depth": 2, "width": WIDTH}, open(d / "arch.json", "w"))
-        json.dump({"checkpoint": c, "games": games, "seed": seed, "results": final[c], "targets": tg[role]},
-                  open(d / "source.json", "w"), indent=1)
+        (d / "arch.json").write_text(json.dumps({"depth": 2, "width": WIDTH}))
+        source = {"checkpoint": c, "games": games, "seed": seed, "results": final[c], "targets": tg[role]}
+        (d / "source.json").write_text(json.dumps(source, indent=1))
         _volume("put", "--force", VOLUME, str(d), f"opponents/{role}")
-    json.dump({"picked": picked, "final": final, "targets": tg}, open(CACHE / "calibration.json", "w"), indent=1)
+    (CACHE / "calibration.json").write_text(json.dumps({"picked": picked, "final": final, "targets": tg}, indent=1))
     table(picked, final, tg)
 
 
@@ -408,7 +400,7 @@ def table(picked, final, tg):
 
 
 def fetch():
-    _modal()
+    load_modal()
     (CACHE / "opponents").mkdir(parents=True, exist_ok=True)
     _volume("get", "--force", VOLUME, "opponents", str(CACHE))
 

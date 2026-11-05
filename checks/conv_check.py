@@ -1,7 +1,6 @@
 """Run the multi-turn loop (exp3) against the local stand-in API with scripted replies, then test the
 rewind used for retries. No real API calls.
 """
-import asyncio
 import json
 import os
 import subprocess
@@ -31,7 +30,7 @@ if __name__ == "__main__":
     runner.SPEND_CAP_USD = 1e9
     try:
         out = runner.RUNS / "claude-opus-5-5" / "exp3" / "python" / "s1"
-        conversation.converse("claude-opus-5-5", "exp3", "python", 1, exp3.message(), lambda: exp3.step("python", out))
+        conversation.converse("claude-opus-5-5", "exp3", "python", 1, exp3.message(), lambda: exp3.Turns("python", out))
         state = json.loads((out / "state.json").read_text())
         t2 = (out / "turns/t002/prompt.txt").read_text()
         r1 = json.loads((out / "turns/t001/run.json").read_text())

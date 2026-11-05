@@ -1,7 +1,7 @@
 """Experiment 3: Python sandbox for the multi-turn conversation, and the scorer for its final answer.
 
-Sandbox (from upstream exp3_language/runs/*/message.txt): each run is a fresh process with numpy as np and W, the dict of
-block weights; 600 s per run; output cut at 20,000 characters; at most 100 runs; no network.
+Sandbox (from upstream exp3_language/runs/*/message.txt): each run is a fresh process with numpy as np and W, the dict
+of block weights; 600 s per run; output cut at 20,000 characters; at most 100 runs; no network.
 Truth: upstream eval/key.json (corpus) and eval/heads.json; copying heads are heads with induct > 0.2, as in the post.
 """
 from __future__ import annotations
@@ -12,6 +12,7 @@ import time
 from pathlib import Path
 
 from wsp import sandbox
+from wsp.turns import ToolLog, code_blocks
 
 UP = Path(__file__).resolve().parents[1] / "upstream" / "exp3_language"
 NETS = {"python": "python_L4_H6_d384_s0", "romaji": "romaji_L4_H6_d384_s0", "english": "english_L4_H6_d384_s0"}
@@ -29,29 +30,28 @@ def run_code(code: str, language: str) -> str:
     return sandbox.run(code, PRELUDE, {"/data/blocks.npz": (blocks, "ro")}, timeout=TIMEOUT, max_out=MAX_OUT)
 
 
-def step(language: str, out: Path):
+class Turns:
     """Turn handler: run the reply's code block and return the output message; None when the reply has no block.
 
     The original replies always had exactly one block and nothing else, and never reached the run limit, so the
     handling of several blocks (run the first) and of the limit (ask for the final answer) is ours."""
-    runs = 0
 
-    def handle(answer: str) -> str | None:
-        nonlocal runs
-        blocks = re.findall(r"^[ \t]*```python[^\n]*\n(.*?)^[ \t]*```", answer, re.S | re.M)
+    def __init__(self, language: str, out: Path):
+        self.language, self.runs = language, 0
+        self.log = ToolLog(out / "tool_calls.jsonl")
+
+    def __call__(self, answer: str) -> str | None:
+        blocks = code_blocks(answer, "python", info=r"[^\n]*")
         if not blocks:
             return None
-        if runs >= MAX_RUNS:
+        if self.runs >= MAX_RUNS:
             return f"You have used all {MAX_RUNS} runs. Give your final answer now, without a code block."
-        runs += 1
-        t0 = time.time()
-        output = run_code(blocks[0], language)
-        with open(out / "tool_calls.jsonl", "a", encoding="utf-8") as f:
-            f.write(json.dumps({"run": runs, "blocks_in_reply": len(blocks), "seconds": round(time.time() - t0, 1),
-                                "code": blocks[0], "out": output}) + "\n")
-        return f"OUTPUT of run {runs} of at most {MAX_RUNS}:\n```\n{output}\n```"
-
-    return handle
+        self.runs += 1
+        code, t0 = blocks[0].group(2), time.time()
+        output = run_code(code, self.language)
+        self.log({"run": self.runs, "blocks_in_reply": len(blocks), "seconds": round(time.time() - t0, 1),
+                  "code": code, "out": output})
+        return f"OUTPUT of run {self.runs} of at most {MAX_RUNS}:\n```\n{output}\n```"
 
 
 HEAD_LIST = r"L\d\s*H\d(?:\s*(?:[-–—,/&]+|to|and)\s*(?:L\d\s*)?H\d)*"
@@ -60,11 +60,11 @@ HEAD_LIST = r"L\d\s*H\d(?:\s*(?:[-–—,/&]+|to|and)\s*(?:L\d\s*)?H\d)*"
 def _heads(spec: str) -> list[str]:
     """'L2H1', 'L1H0 – L1H5', 'L2H0 to L2H5', 'L2H0, L2H2', 'L0H0/H1' -> head names (a range stays in its layer)."""
     out, layer, last, span = [], None, None, False
-    for l, h, sep in re.findall(r"(?:L(\d)\s*)?H(\d)|([-–—]+|\bto\b)", spec):
+    for lay, h, sep in re.findall(r"(?:L(\d)\s*)?H(\d)|([-–—]+|\bto\b)", spec):
         if sep:
             span = True
             continue
-        layer, h = int(l) if l else layer, int(h)
+        layer, h = int(lay) if lay else layer, int(h)
         new = range(last[1] + 1, h + 1) if span and last and last[0] == layer else [h]
         out += [f"L{layer}H{x}" for x in new]
         last, span = (layer, h), False
@@ -81,7 +81,10 @@ def parse(answer: str) -> dict:
             m = re.match(rf"^\W*({HEAD_LIST})\W*:?\W*({labels})\b", part, re.I)
             if m:
                 heads.update({k: m.group(2).lower() for k in _heads(m.group(1))})
-    field = lambda k: (re.findall(rf"^\W*{k}\W*:\s*\**\s*([a-z ]+?)\W*$", answer, re.I | re.M) or [None])[-1]
+
+    def field(name: str) -> str | None:
+        return (re.findall(rf"^\W*{name}\W*:\s*\**\s*([a-z ]+?)\W*$", answer, re.I | re.M) or [None])[-1]
+
     probs = re.findall(r"^\W*probabilities\W*:.*$", answer, re.I | re.M)
     corpus = field("corpus")
     return {"corpus_guess": corpus.lower() if corpus else None, "order_guess": (field("order") or "").lower() or None,

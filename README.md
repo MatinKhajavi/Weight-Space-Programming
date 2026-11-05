@@ -134,6 +134,9 @@ parts on Modal (`MODAL_PROFILE`); exps 7 and 8 need `HF_TOKEN` (Gemma 3 and Qwen
 Docker images: `docker build -t wsp-sandbox sandbox` and `docker build -t wsp-sandbox-numpy -f sandbox/numpy.Dockerfile
 sandbox`.
 
+`uv run pytest` runs the scorer tests and replays every logged conversation through the harness (no API or cloud
+calls). The validation scripts behind [docs/protocol.md](docs/protocol.md) are in [checks/](checks/).
+
 ## Credit
 
 The experiment designs, prompts, networks and original results are the work of Rikiya Takehi, Jayden Teoh, Alex Zhang

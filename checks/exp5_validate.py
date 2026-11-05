@@ -1,6 +1,8 @@
 """Our MinAtar evaluator on Astra's released exp5 networks vs the released scores."""
-import json, sys
+import json
+import sys
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from wsp.exp5 import evaluate, load_npz
 

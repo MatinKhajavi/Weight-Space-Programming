@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from wsp.scoring import map_label, normalize, score_exp1, score_exp2, GAME_KEYWORDS, SHAPE_KEYWORDS
+from wsp.scoring import GAME_KEYWORDS, SHAPE_KEYWORDS, map_label, normalize, score_exp1, score_exp2
 
 UP = Path(__file__).resolve().parents[1] / "upstream"
 
@@ -59,6 +59,7 @@ def test_exp1_field_needs_colon_or_line_end():
 @pytest.mark.parametrize("game", ["breakout", "seaquest", "asterix"])
 def test_exp5_parser_rebuilds_released_networks(game):
     import numpy as np
+
     from wsp.exp5 import load_npz, read_reply
     ours, report = read_reply((UP / f"exp5_write_from_scratch/runs/{game}/reply/answer.md").read_text())
     released = load_npz(str(UP / f"exp5_write_from_scratch/networks/{game}/hand.npz"))
@@ -68,6 +69,7 @@ def test_exp5_parser_rebuilds_released_networks(game):
 
 def test_exp4_edits_rebuild_released_network():
     import numpy as np
+
     from wsp.exp4 import NAMES, read_reply
     ours, report = read_reply((UP / "exp4_fix_car/runs/oneshot_repair/reply/answer.md").read_text())
     released = np.load(UP / "exp4_fix_car/networks/edited_actor.npz")
@@ -88,8 +90,10 @@ def test_exp4_edit_language():
 @pytest.mark.parametrize("run", ["python_r0", "python_r1", "romaji_r0", "romaji_r1", "english_r0", "english_r1"])
 def test_exp3_matches_released_scores(run):
     from wsp.exp3 import score
-    released = next(r for r in json.loads((UP / "exp3_language/eval/scores.json").read_text()) if r["id"].endswith(run.split("_")[1]) and r["corpus"] == run.split("_")[0])
-    ours = score((UP / f"exp3_language/runs/{run}/final_answer.md").read_text(), run.split("_")[0])
+    corpus, attempt = run.split("_")
+    rows = json.loads((UP / "exp3_language/eval/scores.json").read_text())
+    released = next(r for r in rows if r["id"].endswith(attempt) and r["corpus"] == corpus)
+    ours = score((UP / f"exp3_language/runs/{run}/final_answer.md").read_text(), corpus)
     assert ours["corpus_guess"] == released["corpus_guess"]
     assert ours["head_labels"] == released["head_labels"]
     assert ours["copy_named"] == sorted(released["copy_named"])

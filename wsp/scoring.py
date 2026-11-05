@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import re
 import sys
+from pathlib import Path
 
 GAME_KEYWORDS = {
     "breakout": ["breakout", "break out", "arkanoid", "brick breaker", "brick-breaker", "brick breaking",
@@ -90,4 +91,4 @@ def score_exp2(text: str, truth: str) -> dict:
 if __name__ == "__main__":
     exp, path, truth = sys.argv[1:4]
     fn = {"exp1": score_exp1, "exp2": score_exp2}[exp]
-    print(fn(open(path, encoding="utf-8").read(), truth))
+    print(fn(Path(path).read_text(encoding="utf-8"), truth))

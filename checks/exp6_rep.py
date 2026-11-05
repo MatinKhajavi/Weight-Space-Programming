@@ -1,19 +1,25 @@
 """Who makes the repeating move? Runs wsp.exp6.play on Modal and returns per-game arrays."""
-import json, os, sys, time
-import numpy as np
+import os
+import sys
+import time
 from pathlib import Path
+
+import numpy as np
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from wsp.exp6 import load_net, saved_net, NETS, zero_net, CPUS
+from wsp.exp6 import CPUS, NETS, load_net, saved_net, zero_net
 from wsp.runner import read_dotenv
+
 
 def remote(jobs, cpus):
     os.environ["XLA_FLAGS"] = f"--xla_force_host_platform_device_count={cpus}"
-    import inspect, jax, numpy as np
-    from wsp.exp6 import play
-    import pgx
+    import inspect
+
+    import jax
     from pgx._src.games import go as gomod
+
+    from wsp.exp6 import play
     src = inspect.getsource(gomod)
-    i = src.find('is_psk')
     out = {"src": src, "devices": jax.device_count()}
     for name, (a, b, games, seed) in jobs.items():
         t0 = time.time()

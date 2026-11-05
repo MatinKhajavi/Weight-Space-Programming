@@ -3,7 +3,10 @@
 Usage: python -I capture_server.py <port> <capture_dir>
 Nothing is forwarded anywhere. API key headers are redacted before saving.
 """
-import json, os, sys, threading
+import json
+import os
+import sys
+import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 PORT, OUT = int(sys.argv[1]), sys.argv[2]

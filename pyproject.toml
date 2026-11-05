@@ -22,3 +22,16 @@ pythonpath = ["."]
 
 [tool.uv]
 package = false
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "SIM", "I"]
+ignore = ["B905"]   # zip(strict=...) would change behaviour; every zip here pairs equal-length lists
+
+[tool.ruff.lint.per-file-ignores]
+# run as is in the model's kernel: its imports are names the model can use, and its line numbers show in tracebacks
+"wsp/exp8_prelude.py" = ["E401", "F401", "I001"]
+# one-off validation scripts, kept close to how they were run: style rules only
+"checks/*" = ["E501", "E701", "E702", "E731", "E741", "SIM115"]

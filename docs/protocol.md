@@ -363,13 +363,13 @@ The harness was not released; it is rebuilt from the logs (`runs/<run>/turns`, `
 - a new conversation every 40 turns with upstream's handoff message (task, counts, edited tensors, files in /work, the
   last 8,000 characters of /work/notes.md, the pending message).
 
-Kernel (`wsp/exp8_kernel.py`): one Python process in a Modal sandbox (CPU, up to 8 cores and 32 GB, not the original
+Kernel (`wsp/exp8_kernel.py`, preloaded names in `wsp/exp8_prelude.py`): one Python process in a Modal sandbox (CPU, up to 8 cores and 32 GB, not the original
 96 GB; no network), with the preloaded names upstream's kernel listed (`NAMES`, `load`, `load_original`, `save_edit`,
 `drop_edit`, `edited`, `tok`, `FROZEN`, ...); `save_edit` refuses the frozen tensors and constant multiples of a whole
 tensor; /model (the text-only Qwen3.5-0.8B) read-only, /practice from upstream, /work on a Modal Volume. The value of a
 last-line expression is shown; tracebacks number the model's code as `<run>`.
 
-Forward passes (`wsp/exp8.py`): one Modal B200 job per request, which reads the edits from the sandbox and writes the
+Forward passes (`wsp/exp8_forward.py`): one Modal B200 job per request, which reads the edits from the sandbox and writes the
 results into /work. Generation: vLLM with upstream `evaluate.py`'s settings (bf16, `max_model_len` = max_tokens +
 2,048, the think35 sampling), the edited checkpoint built by upstream `build_ckpt.py`, graded by upstream `mathqa.py`;
 "both" runs the two models on the same items. Activations and teacher-forced reads: transformers (bf16, eager
@@ -435,6 +435,11 @@ any of them. One forward request failed on our side: the Mac lost its network co
 
 Where the original logs never show a behaviour (a reply with several blocks, a limit reached, a failed request, the
 reminder for an early final answer), the texts and rules are ours; each experiment's setup lists them.
+
+After the runs the code was restructured without changing what it does: each experiment's turn handler is a small
+class (`Turns`), exp8's forward-pass server has its own module, and one Modal profile check (`wsp/cloud.py`) replaces
+four copies. `tests/test_replay.py` replays every logged conversation (exps 3, 6, 7, 8) through the handlers, with
+the tools answering from the logs, and checks that every message and every `tool_calls.jsonl` entry is reproduced.
 
 Fixed after the runs (the committed runs used the code of commit 7b20225):
 - exp8: upstream's EXPLAIN switch message also carries the reminder when the reply before it had no explanation (all

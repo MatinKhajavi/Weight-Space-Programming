@@ -23,6 +23,10 @@ def records(conv: Path, *kinds: str) -> list[dict]:
     return [r for r in rows if r.get("kind", "python") in kinds]
 
 
+def untimed(rows: list[dict]) -> list[dict]:
+    return [{k: v for k, v in r.items() if k not in ("t", "s", "seconds")} for r in rows]
+
+
 def turns(conv: Path) -> list[Path]:
     return sorted(d for d in (conv / "turns").iterdir() if d.is_dir())
 
@@ -36,7 +40,7 @@ def fake_runs(monkeypatch, conv: Path):
 def exp3_handler(conv, monkeypatch, tmp_path):
     outs = iter(r["out"] for r in records(conv, "python"))
     monkeypatch.setattr(exp3, "run_code", lambda code, language: next(outs))
-    return exp3.message(), exp3.step(conv.parent.name, tmp_path)
+    return exp3.message(), exp3.Turns(conv.parent.name, tmp_path)
 
 
 def _move(name: str) -> int:
@@ -74,7 +78,7 @@ def exp6_handler(conv, monkeypatch, tmp_path):
     monkeypatch.setattr(exp6, "saved_net", lambda work: None)
     monkeypatch.setattr(exp6, "practice_opponents", lambda: dict.fromkeys(["random", "weak", "strong"]))
     budget = int(conv.parent.name.split("_")[1])
-    return exp6.message(budget), exp6.step(budget, tmp_path)
+    return exp6.message(budget), exp6.Turns(budget, tmp_path)
 
 
 def exp7_handler(conv, monkeypatch, tmp_path):
@@ -83,7 +87,7 @@ def exp7_handler(conv, monkeypatch, tmp_path):
     monkeypatch.setattr(exp7, "attention", lambda *a: next(calls))
     monkeypatch.setattr(exp7, "case", lambda rnd, pair: tmp_path / "case")
     rnd = conv.parents[1].name
-    return exp7.message(rnd), exp7.step(rnd, conv.parent.name, tmp_path)
+    return exp7.message(rnd), exp7.Turns(rnd, conv.parent.name, tmp_path)
 
 
 class FakeKernel:
@@ -120,7 +124,7 @@ def exp8_handler(conv, monkeypatch, tmp_path):
     monkeypatch.setattr(exp8, "Kernel", lambda volume: FakeKernel(conv))
     monkeypatch.setattr(exp8, "run_forward", lambda sandbox_id, k, req: results[k])
     run = conv.parent.name
-    return exp8.message(run), exp8.step(run, tmp_path, 1)
+    return exp8.message(run), exp8.Turns(run, tmp_path, 1)
 
 
 HANDLERS = {"exp3": exp3_handler, "exp6": exp6_handler, "exp7": exp7_handler, "exp8": exp8_handler}
@@ -141,7 +145,7 @@ def test_replay(conv, monkeypatch, tmp_path):
         if exp == "exp8" and i + 2 == exp8.EXPLAIN_AT[conv.parent.name]:
             want += exp8.REMINDER   # fixed after the runs: upstream's switch turn carries the reminder (protocol.md)
         assert got == want, f"{d.name}: the handler's next message differs from the logged one"
-    untimed = lambda rows: [{k: v for k, v in r.items() if k not in ("t", "s", "seconds")} for r in rows]
     assert untimed(records(tmp_path, *KINDS)) == untimed(records(conv, *KINDS)), "tool_calls.jsonl differs"
     if exp == "exp7":
-        assert json.loads((tmp_path / "prediction.json").read_text()) == json.loads((conv / "prediction.json").read_text())
+        prediction = [json.loads((d / "prediction.json").read_text()) for d in (tmp_path, conv)]
+        assert prediction[0] == prediction[1]

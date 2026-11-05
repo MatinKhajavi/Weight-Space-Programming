@@ -37,7 +37,7 @@ def check(label, got, want):
 # attention round: nudge only below 8 runs, at most 1
 out = tmp / "att"
 out.mkdir()
-h = exp7.step("attention_tool", "pair2", out)
+h = exp7.Turns("attention_tool", "pair2", out)
 check("python run 1", h(PY), lambda s: s.startswith("OUTPUT of run 1 of at most 20:") and "['A', 'B']" in s
       and "Checkpoint" in s)
 check("work kept, case read-only", h(PY2), lambda s: "kept" in s and "Read-only" in s)
@@ -51,7 +51,7 @@ print(json.loads((out / "prediction.json").read_text()))
 # weights_only_1: 2 nudges, then format retries
 out = tmp / "w1"
 out.mkdir()
-h = exp7.step("weights_only_1", "pair3", out)
+h = exp7.Turns("weights_only_1", "pair3", out)
 check("nudge 1", h("no code"), lambda s: s.startswith("You have used 0 of 60"))
 check("nudge 2", h("no code"), lambda s: s.startswith("You have used 0 of 60"))
 check("format: no json", h("no code"), lambda s: "(no JSON block)" in s)
@@ -64,7 +64,7 @@ print(json.loads((out / "prediction.json").read_text()))
 exp7.ROUNDS["weights_only_2"] = ("dev", 2, 0, None)
 out = tmp / "w2"
 out.mkdir()
-h = exp7.step("weights_only_2", "pair1", out)
+h = exp7.Turns("weights_only_2", "pair1", out)
 check("run 1 of 2", h(PY), lambda s: "run 1 of at most 2" in s and not s.endswith(exp7.LAST))
 check("run 2 of 2 + LAST", h(PY2), lambda s: "run 2 of at most 2" in s and s.endswith(exp7.LAST))
 check("code after limit not run", h(PY), exp7.LAST)

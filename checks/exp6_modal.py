@@ -5,8 +5,8 @@ random, compared with the published head-to-heads.
 """
 import json
 import sys
-
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from wsp.exp6 import NETS, UP, evaluate, load_net, zero_net  # noqa: E402
 

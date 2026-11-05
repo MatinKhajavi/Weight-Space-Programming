@@ -133,7 +133,8 @@ def call(model, effort, prompt, key, cwd, home, resume=None, rewind_to=None) -> 
         except Exception as e:
             err = f"{type(e).__name__}: {e}"[:2000]
         result = next((m for m in msgs if m["type"] == "ResultMessage"), {})
-        texts = [b["text"] for m in msgs if m["type"] == "AssistantMessage" for b in m.get("content", []) if "text" in b]
+        texts = [b["text"] for m in msgs if m["type"] == "AssistantMessage"
+                 for b in m.get("content", []) if "text" in b]
         answer = result.get("result") or "\n".join(texts)
         stop = result.get("stop_reason")   # only the result message carries it; the streamed messages leave it empty
         attempts.append({"wall_s": round(time.time() - t0, 1), "error": err, "is_error": result.get("is_error"),
@@ -160,7 +161,8 @@ def save_reply(out: Path, msgs: list, answer: str) -> dict:
     tool_uses = [b for m in asst for b in m.get("content", []) if "input" in b]
     thinking = [b["thinking"] for m in asst for b in m.get("content", []) if "thinking" in b and b["thinking"]]
     # With no tools, a user message here was injected by Claude Code after a reply hit the output cap
-    # ("Output token limit hit. Resume directly ..."). Keep the reply as it was when cut (docs/protocol.md, deviation 5).
+    # ("Output token limit hit. Resume directly ..."). Keep the reply as it was when cut (docs/protocol.md,
+    # deviation 5).
     injected = ["".join(b.get("text", "") for b in m["content"]) for m in msgs if m["type"] == "UserMessage"]
     if injected:
         first = msgs[:next(i for i, m in enumerate(msgs) if m["type"] == "UserMessage")]

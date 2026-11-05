@@ -13,7 +13,6 @@ from __future__ import annotations
 import ast
 import json
 import os
-import re
 import sys
 import time
 from pathlib import Path
@@ -21,7 +20,9 @@ from pathlib import Path
 import numpy as np
 
 from wsp import sandbox
-from wsp.runner import UP, read_dotenv
+from wsp.cloud import load_modal
+from wsp.runner import UP
+from wsp.turns import ToolLog, code_blocks
 
 NETS = UP / "exp6_go_from_scratch/networks"
 SHAPES = {**{f"L{k}.W": (243 if k == 1 else 512, 512) for k in range(1, 7)},
@@ -34,7 +35,7 @@ MAX_RUNS, RUN_TIMEOUT, MAX_OUT = 120, 900, 20_000
 
 
 def load_net(folder) -> dict[str, np.ndarray]:
-    assert json.load(open(f"{folder}/arch.json")) == {"depth": 6, "width": 512}, folder
+    assert json.loads(Path(folder, "arch.json").read_text()) == {"depth": 6, "width": 512}, folder
     w = {k: np.load(f"{folder}/{k}.npy").astype(np.float32) for k in NAMES}
     assert all(w[k].shape == SHAPES[k] and np.isfinite(w[k]).all() for k in NAMES), folder
     return w
@@ -150,13 +151,7 @@ def _matches(matches: dict[str, tuple[dict, dict]], games: int, seed: int, cpus:
 
 
 def _remote(fn, *args):
-    profile = read_dotenv().get("MODAL_PROFILE")
-    if not profile:
-        sys.exit("No MODAL_PROFILE in .env; refusing to run on whatever Modal profile is active.")
-    os.environ["MODAL_PROFILE"] = profile
-    import modal
-    if modal.config._profile != profile:
-        sys.exit(f"modal is on profile {modal.config._profile!r}, not {profile!r}; refusing to run.")
+    modal = load_modal()
     image = (modal.Image.debian_slim(python_version="3.12")
              .uv_pip_install("jax==0.4.38", "jaxlib==0.4.38", "pgx==2.6.0", "numpy==2.2.6")
              .add_local_python_source("wsp"))
@@ -175,11 +170,11 @@ def evaluate(matches: dict[str, tuple[dict, dict]], games: int = 2000, seed: int
 
 # ---------------------------------------------------------------- passes (budget > 0)
 
-GAMES_README = ("games.json: one entry per game (opponent, net_color, result +1/-1, margin = net's area score minus the "
-                "opponent's incl. komi, end, stones captured / lost, moves: ply, by, move (row*9+col, 81 = pass), and "
-                "for the network's moves its top-5 [move, probability]). boards.npy: (games, 162, 81) int8, the board "
-                "AFTER each ply (1 Black, -1 White, 0 empty; index row*9+col); valid.npy: (games, 162) which plies "
-                "were played.")
+GAMES_README = ("games.json: one entry per game (opponent, net_color, result +1/-1, margin = net's area score minus "
+                "the opponent's incl. komi, end, stones captured / lost, moves: ply, by, move (row*9+col, 81 = "
+                "pass), and for the network's moves its top-5 [move, probability]). boards.npy: (games, 162, 81) "
+                "int8, the board AFTER each ply (1 Black, -1 White, 0 empty; index row*9+col); valid.npy: (games, "
+                "162) which plies were played.")
 POSITIONS_README = ("inputs.npy (P, 243) the network inputs; legal.npy (P, 82) the legal moves (for 'board' positions: "
                     "the empty points and pass; suicide and ko are not checked); logits.npy, probs.npy (P, 82); ")
 END_NAMES = ["two passes", "repetition", "move limit"]
@@ -274,7 +269,7 @@ def practice_opponents() -> dict[str, dict]:
     return {"random": zero_net(), "weak": opponent("weak"), "strong": opponent("strong")}
 
 
-def step(budget: int, out: Path):
+class Turns:
     """Turn handler: run the reply's ```python block in the sandbox (/work kept between runs) or its ```games /
     ```positions block as a pass; None when final.
 
@@ -283,38 +278,82 @@ def step(budget: int, out: Path):
     nothing: a reply with several blocks runs the first; a final answer with passes left, a pass block after the
     last pass, a failed pass request and a reply after 120 Python runs get the texts below; the seed of games pass k
     is 1000 * k (+ j for the j-th opponent)."""
-    work = out / "work"
-    (work / "net").mkdir(parents=True)
-    (work / "arch.json").write_text(json.dumps({"depth": 6, "width": 512}))
-    prelude, n = _prelude(), {"runs": 0, "passes": 0, "requests": 0}
-    opponents = practice_opponents() if budget else {}
 
-    def log(rec):
-        with open(out / "tool_calls.jsonl", "a", encoding="utf-8") as f:
-            f.write(json.dumps(rec) + "\n")
+    def __init__(self, budget: int, out: Path):
+        self.budget, self.out, self.work = budget, out, out / "work"
+        (self.work / "net").mkdir(parents=True)
+        (self.work / "arch.json").write_text(json.dumps({"depth": 6, "width": 512}))
+        self.prelude = _prelude()
+        self.opponents = practice_opponents() if budget else {}
+        self.runs = self.passes = 0
+        self.log = ToolLog(out / "tool_calls.jsonl")
 
-    def games(req: dict, k: int) -> dict:
+    def __call__(self, answer: str) -> str | None:
+        blocks = code_blocks(answer, "python|games|positions", info=r"[^\n]*")
+        if not blocks:
+            if self.passes < self.budget:
+                self.log({"kind": "reminder", "passes": self.passes})
+                return (f"Passes left: {self.budget - self.passes} of {self.budget}. The session continues until every "
+                        "pass is used; reply with a ```python, ```games or ```positions block.")
+            return None
+        kind, code = blocks[0].groups()
+        if kind == "python":
+            return self.run_python(code, len(blocks))
+        return self.run_pass(kind, code)
+
+    def run_python(self, code: str, n_blocks: int) -> str:
+        if self.runs >= MAX_RUNS:
+            return f"You have used all {MAX_RUNS} Python runs. Give your final answer now, without a code block."
+        self.runs += 1
+        t0 = time.time()
+        output = sandbox.run(code, self.prelude, {"/work": (self.work, "rw")}, workdir="/work", timeout=RUN_TIMEOUT,
+                             max_out=MAX_OUT)
+        self.log({"kind": "python", "run": self.runs, "blocks_in_reply": n_blocks,
+                  "seconds": round(time.time() - t0, 1), "code": code, "out": output})
+        return f"OUTPUT of Python run {self.runs} of at most {MAX_RUNS}:\n```\n{output}\n```"
+
+    def run_pass(self, kind: str, code: str) -> str:
+        if not self.budget:
+            return "There are no pass tools in this session (budget 0)."
+        if self.passes >= self.budget:
+            return f"All {self.budget} passes are used; this block was not run."
+        k, t0 = self.passes + 1, time.time()
+        try:
+            req = json.loads(code)
+            res = (self.games if kind == "games" else self.positions)(req, k)
+        except Exception as e:   # noqa: BLE001 - a failed request is reported and not counted
+            self.log({"kind": kind, "k": k, "request": code, "error": f"{type(e).__name__}: {e}",
+                      "seconds": round(time.time() - t0, 1)})
+            return f"The {kind} pass failed and was not counted: {type(e).__name__}: {e}"
+        self.passes = k
+        (self.out / "requests").mkdir(exist_ok=True)
+        (self.out / "requests" / f"{kind}_{k}.json").write_text(json.dumps(req, indent=1))
+        self.log({"kind": kind, "k": k, "request": req, "result": res, "seconds": round(time.time() - t0, 1)})
+        return (f"{kind.capitalize()} pass {k} of {self.budget} done.\n```\n{json.dumps(res)}\n```\n"
+                f"Passes left: {self.budget - k}.")
+
+    def games(self, req: dict, k: int) -> dict:
         counts = req["games"]
-        assert isinstance(counts, dict) and counts and set(counts) <= set(opponents), \
-            f"games is a dict of opponent -> count; opponents: {sorted(opponents)}"
+        assert isinstance(counts, dict) and counts and set(counts) <= set(self.opponents), \
+            f"games is a dict of opponent -> count; opponents: {sorted(self.opponents)}"
         assert all(isinstance(c, int) and c > 0 and c % 2 == 0 for c in counts.values()), "counts are positive and even"
         assert sum(counts.values()) <= 128, "at most 128 games in total"
-        res = _remote(_games_pass, saved_net(work), opponents, counts, 1000 * k, CPUS)
-        d = work / f"pass_{k}"
+        res = _remote(_games_pass, saved_net(self.work), self.opponents, counts, 1000 * k, CPUS)
+        d = self.work / f"pass_{k}"
         d.mkdir()
         (d / "summary.json").write_text(json.dumps(res["per_opponent"], indent=1))
         (d / "games.json").write_text(json.dumps(res["games"]))
         np.save(d / "boards.npy", res["boards"])
         np.save(d / "valid.npy", res["valid"])
         (d / "README.txt").write_text(GAMES_README)
-        return {"ok": True, "pass": k, "kind": "games", "per_opponent": res["per_opponent"], "files": f"/work/pass_{k}/",
-                "readme": GAMES_README}
+        return {"ok": True, "pass": k, "kind": "games", "per_opponent": res["per_opponent"],
+                "files": f"/work/pass_{k}/", "readme": GAMES_README}
 
-    def positions(req: dict, k: int) -> dict:
+    def positions(self, req: dict, k: int) -> dict:
         pos, act = req["positions"], bool(req.get("activations", False))
         assert isinstance(pos, list) and 0 < len(pos) <= 256, "positions is a list of 1 to 256 positions"
-        res = _remote(_positions_pass, saved_net(work), pos, act)
-        d = work / f"pass_{k}"
+        res = _remote(_positions_pass, saved_net(self.work), pos, act)
+        d = self.work / f"pass_{k}"
         d.mkdir()
         for name, v in res.items():
             np.save(d / f"{name}.npy", v)
@@ -325,47 +364,6 @@ def step(budget: int, out: Path):
                 for p in res["probs"]]
         return {"ok": True, "pass": k, "kind": "positions", "positions": len(pos), "top3_per_position": top3,
                 "files": f"/work/pass_{k}/", "readme": readme}
-
-    def handle(answer: str) -> str | None:
-        blocks = re.findall(r"^[ \t]*```(python|games|positions)[^\n]*\n(.*?)^[ \t]*```", answer, re.S | re.M)
-        if not blocks:
-            if n["passes"] < budget:
-                log({"kind": "reminder", "passes": n["passes"]})
-                return (f"Passes left: {budget - n['passes']} of {budget}. The session continues until every pass is "
-                        "used; reply with a ```python, ```games or ```positions block.")
-            return None
-        kind, code = blocks[0]
-        if kind != "python":
-            if not budget:
-                return "There are no pass tools in this session (budget 0)."
-            if n["passes"] >= budget:
-                return f"All {budget} passes are used; this block was not run."
-            n["requests"] += 1
-            k, t0 = n["passes"] + 1, time.time()
-            try:
-                req = json.loads(code)
-                res = (games if kind == "games" else positions)(req, k)
-            except Exception as e:   # noqa: BLE001 - a failed request is reported and not counted
-                log({"kind": kind, "k": k, "request": code, "error": f"{type(e).__name__}: {e}",
-                     "seconds": round(time.time() - t0, 1)})
-                return f"The {kind} pass failed and was not counted: {type(e).__name__}: {e}"
-            n["passes"] = k
-            (out / "requests").mkdir(exist_ok=True)
-            (out / "requests" / f"{kind}_{k}.json").write_text(json.dumps(req, indent=1))
-            log({"kind": kind, "k": k, "request": req, "result": res, "seconds": round(time.time() - t0, 1)})
-            return (f"{kind.capitalize()} pass {k} of {budget} done.\n```\n{json.dumps(res)}\n```\n"
-                    f"Passes left: {budget - k}.")
-        if n["runs"] >= MAX_RUNS:
-            return f"You have used all {MAX_RUNS} Python runs. Give your final answer now, without a code block."
-        n["runs"] += 1
-        t0 = time.time()
-        output = sandbox.run(code, prelude, {"/work": (work, "rw")}, workdir="/work", timeout=RUN_TIMEOUT,
-                             max_out=MAX_OUT)
-        log({"kind": "python", "run": n["runs"], "blocks_in_reply": len(blocks), "seconds": round(time.time() - t0, 1),
-             "code": code, "out": output})
-        return f"OUTPUT of Python run {n['runs']} of at most {MAX_RUNS}:\n```\n{output}\n```"
-
-    return handle
 
 
 def score(out: Path) -> dict:

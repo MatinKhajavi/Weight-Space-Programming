@@ -15,6 +15,7 @@ import re
 import sys
 import time
 from concurrent.futures import ProcessPoolExecutor
+from pathlib import Path
 
 import numpy as np
 
@@ -25,8 +26,9 @@ NPZ_KEYS = {"W1": "actor/dense1/kernel", "b1": "actor/dense1/bias", "W2": "actor
 # The 6 input channels <- the game's own channels ("How the 6 channels are built" in each prompt).
 CHANNEL_MAP = {
     "breakout": [["paddle"], [], ["brick"], ["ball"], ["trail"], []],
-    "seaquest": [["sub_front", "sub_back"], ["enemy_fish", "enemy_sub", "enemy_bullet"], ["enemy_fish", "enemy_sub", "diver"],
-                 ["friendly_bullet"], ["trail", "sub_back"], ["oxygen_guage", "diver_guage"]],
+    "seaquest": [["sub_front", "sub_back"], ["enemy_fish", "enemy_sub", "enemy_bullet"],
+                 ["enemy_fish", "enemy_sub", "diver"], ["friendly_bullet"], ["trail", "sub_back"],
+                 ["oxygen_guage", "diver_guage"]],
     "asterix": [["player"], ["enemy"], ["gold"], [], ["trail"], []],
 }
 
@@ -142,7 +144,8 @@ def evaluate(w: dict[str, np.ndarray], game: str, episodes: int = 1000, workers:
     return {"game": game, "episodes": episodes, "mean": float(rets.mean()),
             "se": float(rets.std(ddof=1) / np.sqrt(episodes)), "max": float(rets.max()),
             "mean_length": float(lens.mean()), "capped_at_10000": int((lens >= MAX_STEPS).sum()),
-            "seed": seed, "workers": workers, "minatar": "1.0.15", "sticky": STICKY, "seconds": round(time.time() - t0, 1)}
+            "seed": seed, "workers": workers, "minatar": "1.0.15", "sticky": STICKY,
+            "seconds": round(time.time() - t0, 1)}
 
 
 if __name__ == "__main__":
@@ -150,5 +153,5 @@ if __name__ == "__main__":
     game, src = sys.argv[1], sys.argv[2]
     n = int(sys.argv[3]) if len(sys.argv) > 3 else 1000
     k = int(sys.argv[4]) if len(sys.argv) > 4 else 10
-    weights = load_npz(src) if src.endswith(".npz") else read_reply(open(src, encoding="utf-8").read())[0]
+    weights = load_npz(src) if src.endswith(".npz") else read_reply(Path(src).read_text(encoding="utf-8"))[0]
     print(json.dumps(evaluate(weights, game, n, k)))

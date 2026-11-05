@@ -4,8 +4,8 @@
 """
 import json
 import sys
-
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from wsp.exp4 import UP, evaluate, load_npz, read_reply, shown_network  # noqa: E402
 

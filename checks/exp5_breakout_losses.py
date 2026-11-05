@@ -1,9 +1,13 @@
 """How does a written exp5 Breakout network lose the ball? Plays games and classifies each loss."""
-import collections, sys
+import collections
+import sys
 from pathlib import Path
+
 import numpy as np
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from minatar import Environment
+
 from wsp.exp5 import CHANNEL_MAP, load_npz
 
 DIRS = {0: "up-left", 1: "up-right", 2: "down-right", 3: "down-left"}
@@ -17,7 +21,7 @@ def run(path, games=300, seed=0):
     chans = [[env.env.channels[c] for c in cs] for cs in CHANNEL_MAP["breakout"]]
     scores, lengths, losses = [], [], collections.Counter()
     gap_at_loss, examples = collections.Counter(), []
-    for g in range(games):
+    for _g in range(games):
         env.reset()
         e, ret, t, hist = env.env, 0, 0, []
         while not e.terminal and t < 10000:
@@ -39,7 +43,6 @@ def run(path, games=300, seed=0):
             land = bx + (1 if d == 2 else -1)
             gap_at_loss[min(abs(e.pos - bx), abs(e.pos - land))] += 1
             # what happened just before: was the ball recently reflected off the paddle / a wall / a brick?
-            prev = [h[2] for h in hist[-12:]]
             kind = "after wall bounce" if any(h[1] in (0, 9) for h in hist[-6:]) else "open field"
             losses[f"{DIRS[d]} ball, {kind}"] += 1
             if len(examples) < 4:

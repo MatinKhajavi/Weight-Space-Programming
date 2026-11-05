@@ -23,6 +23,7 @@ files, the release's tokenizer.json).
 """
 from __future__ import annotations
 
+import contextlib
 import json
 import os
 import shutil
@@ -30,8 +31,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from wsp.cloud import load_modal
 from wsp.runner import UP, read_dotenv
-from wsp.exp7 import _modal
 
 EXP = UP / "exp8_math"
 CACHE = Path.home() / ".cache" / "wsp" / "exp8"
@@ -53,7 +54,8 @@ BASE = f"{DATA}/models/Qwen3.5-0.8B-text"
 
 def _image(modal):
     url = f"https://raw.githubusercontent.com/google-research/google-research/{IFEVAL_COMMIT}/instruction_following_eval"
-    fetch = " && ".join(f"curl -sfLO {url}/{f}.py" for f in ["instructions", "instructions_registry", "instructions_util"])
+    fetch = " && ".join(f"curl -sfLO {url}/{f}.py"
+                        for f in ["instructions", "instructions_registry", "instructions_util"])
     return (modal.Image.from_registry("nvidia/cuda:13.0.3-devel-ubuntu22.04", add_python="3.12").entrypoint([])
             .apt_install("curl")
             .uv_pip_install("vllm==0.32.0", "transformers==5.17.0", "datasets==5.0.1", "math-verify==0.9.0",
@@ -129,7 +131,7 @@ def _app(modal):
 
 
 def prepare():
-    modal = _modal()
+    modal = load_modal()
     app, vol = _app(modal)
     secret = modal.Secret.from_dict({"HF_TOKEN": read_dotenv()["HF_TOKEN"]})
     fn = app.function(cpu=4, memory=16384, timeout=1800, volumes={"/vol": vol}, secrets=[secret],
@@ -139,7 +141,7 @@ def prepare():
 
 
 def evaluate(name: str, edit: Path | None = None, smoke: bool = False):
-    modal = _modal()
+    modal = load_modal()
     app, vol = _app(modal)
     build = app.function(cpu=2, memory=8192, timeout=1800, volumes={"/vol": vol}, serialized=True)(_build)
     gpu = SMOKE_GPU if smoke else GPU
@@ -149,10 +151,8 @@ def evaluate(name: str, edit: Path | None = None, smoke: bool = False):
     if edit:
         kind = "edit" if (edit / "manifest.json").exists() else "submission"
         assert kind == "edit" or any(edit.glob("*.npy")), f"{edit}: no manifest.json and no .npy files"
-        try:
+        with contextlib.suppress(FileNotFoundError, modal.exception.InvalidError):   # not there yet
             vol.remove_file(f"mathedit/runs/{name}", recursive=True)   # no tensors left from an earlier upload
-        except (FileNotFoundError, modal.exception.InvalidError):     # not there yet
-            pass
         with vol.batch_upload() as batch:
             batch.put_directory(str(edit), f"mathedit/runs/{name}/{kind}")
         ckpt = f"{DATA}/ckpt/{name}"
@@ -171,7 +171,8 @@ def evaluate(name: str, edit: Path | None = None, smoke: bool = False):
 
 
 def _diff(name: str):
-    """Runs on Modal: make_edit_diff.py, the exact compact record of a submitted edit (as upstream's runs/<run>/edit)."""
+    """Runs on Modal: make_edit_diff.py, the exact compact record of a submitted edit (as upstream's
+    runs/<run>/edit)."""
     os.chdir("/root")
     run = f"{DATA}/runs/{name}"
     subprocess.run(["python", f"{CODE}/make_edit_diff.py", f"{BASE}/model.safetensors",
@@ -181,7 +182,7 @@ def _diff(name: str):
 
 
 def diff(name: str, dst: Path):
-    modal = _modal()
+    modal = load_modal()
     app, vol = _app(modal)
     fn = app.function(cpu=2, memory=8192, timeout=1800, volumes={"/vol": vol}, serialized=True)(_diff)
     with modal.enable_output(), app.run():
@@ -192,7 +193,7 @@ def diff(name: str, dst: Path):
 
 
 def fetch(name: str):
-    _modal()
+    load_modal()
     CACHE.mkdir(parents=True, exist_ok=True)
     subprocess.run(["modal", "volume", "get", "--force", VOLUME, f"mathedit/eval/{name}", str(CACHE)], check=True,
                    env=os.environ)

@@ -21,11 +21,13 @@ import os
 import re
 import sys
 import time
+from pathlib import Path
 
 import numpy as np
 
+from wsp.cloud import load_modal
 from wsp.exp5 import _index, edit_statements
-from wsp.runner import UP, read_dotenv
+from wsp.runner import UP
 
 PROMPT = UP / "exp4_fix_car/runs/oneshot_repair/reply/prompt.txt"
 KINETIX_COMMIT = "80ee9c292837c825cafaf9889323fdcc212efd1b"
@@ -43,7 +45,7 @@ NPZ_KEYS = {"embed.W": "params/Dense_0/kernel", "embed.b": "params/Dense_0/bias"
 # ---------------------------------------------------------------- parsing
 
 def shown_network(path=PROMPT) -> dict[str, np.ndarray]:
-    lines = open(path, encoding="utf-8").read().split("\n")
+    lines = Path(path).read_text(encoding="utf-8").split("\n")
     head = re.compile(r"^([a-z_0-9]+\.[Wb]) \((\d+)(?: x (\d+))?\), scale (\S+):")
     w = {}
     for i, line in enumerate(lines):
@@ -185,13 +187,7 @@ def _rollouts(nets: dict[str, dict[str, np.ndarray]], test: int, search: int, se
 
 def evaluate(nets: dict[str, dict[str, np.ndarray]], test: int = 1024, search: int = 256, seed: int = 0,
              gpu: str | None = GPU) -> dict:
-    profile = read_dotenv().get("MODAL_PROFILE")
-    if not profile:
-        sys.exit("No MODAL_PROFILE in .env; refusing to run on whatever Modal profile is active.")
-    os.environ["MODAL_PROFILE"] = profile
-    import modal
-    if modal.config._profile != profile:
-        sys.exit(f"modal is on profile {modal.config._profile!r}, not {profile!r}; refusing to run.")
+    modal = load_modal()
     image = (modal.Image.debian_slim(python_version="3.12").apt_install("git")
              .uv_pip_install("jax[cuda12]==0.4.38",
                              f"kinetix-env @ git+https://github.com/FLAIROx/Kinetix.git@{KINETIX_COMMIT}")
@@ -211,5 +207,5 @@ if __name__ == "__main__":
     m = int(sys.argv[3]) if len(sys.argv) > 3 else 256
     g = sys.argv[4] if len(sys.argv) > 4 else GPU
     w = (shown_network() if src == "shown" else load_npz(src) if src.endswith(".npz")
-         else read_reply(open(src, encoding="utf-8").read())[0])
+         else read_reply(Path(src).read_text(encoding="utf-8"))[0])
     print(json.dumps(evaluate({src: w}, n, m, gpu=g), indent=1))

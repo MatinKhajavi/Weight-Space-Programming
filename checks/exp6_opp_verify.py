@@ -6,10 +6,13 @@ pgx 2.6.0:
 """
 import os
 import sys
+
 os.environ["XLA_FLAGS"] = "--xla_force_host_platform_device_count=8"
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import numpy as np  # noqa: E402
+
 from wsp.exp6 import NETS, load_net, play, summary, zero_net  # noqa: E402
 from wsp.exp6_opponents import CACHE, ROLES, SMALL, opponent  # noqa: E402
 

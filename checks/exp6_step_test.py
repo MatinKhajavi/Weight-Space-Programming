@@ -12,7 +12,7 @@ from wsp import exp6  # noqa: E402
 b0 = exp6.load_net(exp6.NETS / "budget_0")
 exp6.practice_opponents = lambda: {"random": exp6.zero_net(), "weak": exp6.zero_net(), "strong": b0}
 out = Path(tempfile.mkdtemp(prefix="exp6_step_"))
-h = exp6.step(3, out)
+h = exp6.Turns(3, out)
 save_b0 = "\n".join(f"save({k!r}, np.load('/tmp/b0/{k}.npy'))" for k in exp6.NAMES)
 R = [
     "```python\nimport os; print(sorted(os.listdir('/work')), saved())\n```",

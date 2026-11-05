@@ -1,5 +1,4 @@
 """exp8 turn handler on scripted replies (real sandbox kernel, forward passes stubbed; small turn numbers)."""
-import json
 import sys
 import tempfile
 from pathlib import Path
@@ -12,7 +11,7 @@ exp8.NOTICES["p10c"] = {5: "001_pass_size", 7: "002_tool_facts"}
 exp8.run_forward = lambda sid, k, req: ({"ok": False, "error": "stub failure"} if req.get("fail") else
                                         {"ok": True, "type": req["type"], "stub": k})
 out = Path(tempfile.mkdtemp(prefix="exp8_step_"))
-h = exp8.step("p10c", out, 99)
+h = exp8.Turns("p10c", out, 99)
 R = [
     "Plan.\n```python\nopen('/work/notes.md', 'w').write('my notes')\nx = 41\n```",               # t1 -> t2
     "```python\nx + 1\n```",                                                                     # t2 -> t3

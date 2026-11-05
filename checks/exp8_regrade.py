@@ -12,6 +12,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from wsp import exp8_eval as X  # noqa: E402
+from wsp.cloud import load_modal  # noqa: E402
 
 EVAL = X.EXP / "eval"
 SETS = ["math500", "gsm8k", "ifeval"]
@@ -60,7 +61,7 @@ if __name__ == "__main__":
                                   "upstream": firsts[x["id"]]["correct"][0],
                                   "pred_upstream": firsts[x["id"]]["pred_first"]})
             print(f"{s:8s} {model:9s} shards with other ids: {bad_ids}; first samples with another gold: {bad_gold}")
-    modal = X._modal()
+    modal = load_modal()
     app, vol = X._app(modal)
     fn = app.function(cpu=4, memory=8192, timeout=1800, volumes={"/vol": vol}, serialized=True)(regrade)
     with app.run():
