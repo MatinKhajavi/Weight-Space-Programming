@@ -23,9 +23,14 @@ model call comes from the repo.
 | Max output tokens | not recorded | none | 128,000 |
 | Model fallback | none | none | none |
 | Prompt text | `prompt.txt` / `message.txt` per run | repo | sent byte for byte |
-| Samples per item | 1 | repo runs; blog ("in a single try") | 1 first; up to 4 more added later as samples 2-5 |
+| Samples per item | 1 | repo runs; blog ("in a single try") | 1 |
 
 Each run is stored in `runs/<model>/<exp>/<item>/s<sample>/`. The logs of the first two runs (exp1 and exp5 Breakout) were filtered afterwards in the same way the runner now filters every log: streaming progress events and the opaque thinking signatures are dropped, and later record fields were added from the logs.
+
+In the multi-turn experiments (3, 6, 7, 8) each turn is one Agent SDK call resuming the previous one, as the
+original resumed Codex with `codex exec resume <thread>`. Turn 1 is the task message; each later turn is the output
+of the code block in the previous reply, in the original's template; a reply without a code block is the final
+answer.
 
 ## Isolation of the model call
 
@@ -69,18 +74,18 @@ records written before 2026-11-03 also carry that count as `prompt_tokens`.
 1. **System prompt.** Claude Code sends two blocks before the original line: a billing-header line
    (`x-anthropic-billing-header: ...`; we don't know whether the model sees it) and
    `You are a Claude agent, built on Anthropic's Claude Agent SDK.` The original Codex setup also added context of its
-   own, about 3.5K tokens judging from the reported token counts, with contents not released. A plain-API cross-check on
-   exp1 will show whether the extra sentence matters.
+   own, about 3.5K tokens judging from the reported token counts, with contents not released. Whether the extra sentence
+   matters is not tested.
 2. **Reasoning summaries** are requested in every experiment, not only exps 1, 2, 5, 7. Per Anthropic's documentation,
    this changes what is returned, not the reasoning itself.
 3. **Effort levels** have the same names on both models but are not calibrated to each other.
 4. **Output cap** is 128K tokens. The original cap is not recorded; Astra's longest reply was about 29K output tokens.
-5. **Replies longer than the output cap (marked \*).** When a reply hits the 128K cap, Claude Code sends
+5. **Replies longer than the output cap.** When a reply hits the 128K cap, Claude Code sends
    `Output token limit hit. Resume directly — no apology, no recap of what you were doing. Pick up mid-thought if that
    is where the cut happened. Break remaining work into smaller pieces.` and the model finishes in a second message.
    No setting turns this off. The message carries no information about the task, but the prompts say "This is a single
    response" and the original never met this case: no output cap was set in any of their calls, and Astra's longest
-   reply was about 29K tokens. We score the completed answer and mark it \*; the reply as it was when cut is kept in
+   reply was about 29K tokens. We score the completed answer (flagged in the README); the reply as it was when cut is kept in
    `answer_cut.md` and its score is recorded in `score.json` under `cut_at_output_cap`. The message carries no
    information about the game or the score, but it does tell the model it ran out of space and to work in smaller
    pieces. When the cut reply had written text, the second request carries the whole cut reply, thinking included
@@ -111,6 +116,8 @@ The rules below are observed in the authors' harness logs, not documented by the
 - Empty final reply: discard it, wait 60 s, and send the same first message again in a new conversation (exp3
   `english_r0`).
 - Ours only: a request the API rejects (a 4xx error other than 429) stops the run instead of being retried.
+- In a multi-turn experiment, a failed turn is retried with the same waits after rewinding the conversation to the
+  last good reply, so the model never sees the failed attempt.
 
 ## Scoring
 
@@ -122,7 +129,7 @@ The rules below are observed in the authors' harness logs, not documented by the
   example the exp4 base network at 0/256 and the exp5 networks at about 517 / 53 / 53.
 - Where the original seeds are not recorded (exps 4, 5), comparisons are statistical, not exact.
 
-### Validation so far
+### Validation
 
 - **exp1, exp2 scorers** (`wsp/scoring.py`): on Astra's 7 released answers they give the same mapped answer, the same
   right/wrong and the same confidence as the released `eval/scores.json` (4/4 games, 3/3 shapes). Our keyword rules:
@@ -144,26 +151,13 @@ The rules below are observed in the authors' harness logs, not documented by the
   Astra's edit gives 1,024/1,024 successes in 73 steps, return 1.37385 (released: the same), and its sampled episode
   matches the trace printed in the prompt at every logged step. Progress is 1 - (closest distance between the green
   wheel and the blue box) / (distance at the start), 1 on success; this definition reproduces the released value.
-  Runs use Modal CPUs for now (`gpu=None`), because GPUs need a payment method on the Modal workspace.
+  It runs on Modal CPUs.
 
-## Order of work
+## Experiment 3: which language
 
-1. exp1 Breakout and exp5 Breakout first, to confirm the setup end to end before the rest.
-2. The rest of exps 1, 2 and 5, one sample each.
-3. The exp4 model call; scored once the Kinetix evaluation reproduces the original base result.
-4. The multi-turn experiments (3, 6, 7, 8). Their harness gaps are designed and written down in each experiment's
-   section before its runs.
+### Setup
 
-## Multi-turn experiments
-
-One Agent SDK call per turn, each resuming the previous one, as the original resumed Codex with
-`codex exec resume <thread>`. Turn 1 is the task message; each later turn is the output of the code block in the
-previous reply, in the original's template; a reply without a code block is the final answer.
-
-A failed turn is retried with the same waits as above, after rewinding the conversation to the last good reply, so the
-model never sees the failed attempt.
-
-**exp3.** Task message: upstream `exp3_language/runs/python_r0/message.txt` (identical for all six original
+Task message: upstream `exp3_language/runs/python_r0/message.txt` (identical for all six original
 conversations). Sandbox: a fresh Docker container per run (`sandbox/Dockerfile`, no network), with `np` and `W` (the
 40 block arrays from `networks/<language>/blocks.npz`) preloaded; 600 s per run; output cut at 20,000 characters;
 stderr's last 6,000 characters appended, as in upstream `harness/sandbox.py`; at most 100 runs. Output template:
@@ -172,12 +166,13 @@ not in the logs: a reply with several code blocks runs the first (logged as `blo
 model is asked for its final answer. The ban on forward passes is checked afterwards by reading every code run, as the
 authors did.
 
-**exp3 run notes.**
+### Run notes
+
 - Python s3 (the first of the seven starts) ran no code. In its first reply the model wrote about 63 made-up tool
   calls with made-up outputs as text (`{"tool":"code",...}` / `{"tool":"code_output",...}`), ran past the output cap
   and was resumed, and its final answer rests on those made-up outputs. Under the original rules a reply without a
   code block is the final answer, so it counts as a sample (corpus python, order shuffled, no copying head named),
-  marked ‡. The other six conversations were started after it.
+  flagged in the README. The other six conversations were started after it.
 - The ban on forward passes was checked by reading all 232 code runs: none runs the network or a layer on an input.
   One borderline run (Python s2, run 45) applies a ReLU to z-scored layer-0 MLP pre-activations of directions
   estimated from the weights; it is not the network's own computation (no LayerNorm, bias or output projection), and the
@@ -189,7 +184,11 @@ authors did.
 - In Opus's six later conversations the per-turn costs in `run.json` were converted afterwards from Claude Code's cumulative
   session cost (kept as `session_cost_usd`) by the same rule the runner now applies itself.
 
-**exp6.** Task message: upstream `exp6_go_from_scratch/runs/budget_<n>/message.txt`. Sandbox: the same Docker
+## Experiment 6: write a Go network
+
+### Setup
+
+Task message: upstream `exp6_go_from_scratch/runs/budget_<n>/message.txt`. Sandbox: the same Docker
 image with `/work` kept between runs and the prelude taken verbatim from upstream `harness/sandbox.py` (`SHAPES`,
 `NAMES`, `load`, `save`, `saved`, `inp`, `mv`, `PASS`); 900 s per run; output cut at 20,000 characters; at most 120
 Python runs. Memory is 7 GB, not the original 96 GB. Output template: `OUTPUT of Python run <k> of at most 120:`.
@@ -226,11 +225,14 @@ the released same-size PPO networks stay the like-for-like measure. A small oppo
 network (zero padding, identity layers 3-6). Scoring: 2,000 games against each hidden opponent and random (seeds
 777 + j, upstream's order) and against the three released same-size PPO networks and random (seeds 0 + j).
 
-**exp6 run notes (passes).** In budget 50, one positions pass with "moves" positions timed out on our side (the
-moves were replayed with unjitted pgx steps, over 30 minutes); it was reported as failed and not counted, and the
-replay is jitted from the next pass on.
+### Run notes
 
-**exp6 run notes (budget 10).** All 83 Python runs and the build scripts read: no fitting (every coefficient is a
+**Budget 0.** The 9 code runs and the model's design scripts in `work/` only build weights from
+formulas and compare arrays; none runs the network, trains or searches. About 5 % of its games (80-95 of 2,000 per
+opponent) are lost by its own repeating move, mostly a three-move cycle: it plays into a two-stone self-atari, the
+opponent captures, and its capture bonus makes it retake one stone, which repeats the earlier board.
+
+**Budget 10.** All 83 Python runs and the build scripts read: no fitting (every coefficient is a
 hand-set literal, changed between versions by comparing games passes), no search (`go.py` is Go-rule code used to
 label moves of recorded games), and the network is never run in the sandbox. Borderline: runs 23-26, 38, 43, 44, 73
 and 78-81 compute idealised versions of planned features (for example the self-atari sub-circuit, run 73) on the
@@ -240,7 +242,7 @@ passes of different versions to one and overstates its expected hidden score. Tu
 2,329 made-up tool calls written as text (`<invoke name="python">`, 132K output tokens); Claude Code resumed it and
 nothing ran. The final answer (turn 94) was resumed after a mid-stream cut.
 
-**exp6 run notes (budget 25).** All 88 Python runs and the build scripts read: no fitting, no search, the network is
+**Budget 25.** All 88 Python runs and the build scripts read: no fitting, no search, the network is
 never run in the sandbox; borderline as in budget 10 (runs 20 and 58 compute an idealised "group mass" term on toy
 and pass-game boards to set a threshold). Turns 1 and 2 were resumed by Claude Code (output cap; cut mid-stream).
 Turn 3, resumed after the output cap, holds four made-up tool calls written
@@ -249,20 +251,22 @@ have written does not exist. The final network is the one measured in the last p
 weaker than budget 10: its liberty evidence kept producing false ataris on big groups, and passes 6-15 went to patches
 that did not hold (38-51 % against "strong" until pass 16).
 
-**exp6 run notes (budget 50).** All 120 Python runs read: no fitting, no search, the network is never run in the
+**Budget 50.** All 120 Python runs read: no fitting, no search, the network is never run in the
 sandbox; borderline as in budgets 10 and 25 (runs 12-17 score an idealised liberty-evidence rule on pass-game boards
 against Go-rule labels, which chose the rule in the final design; runs 62-64 evaluate the firing condition of units
 that were later dropped). No made-up tool calls; turns 1 and 20 were stopped once by Opus's safety classifier and
 resumed. The final network (v27) is the one measured in the last passes (rebuilt bit for bit). It plateaued at about
 60-65 % against "strong" from pass 27 on; its final answer calls 0.61 "the average over the two trained practice
 opponents", which is its score against "strong" alone.
+One positions pass with "moves" positions timed out on our side (the
+moves were replayed with unjitted pgx steps, over 30 minutes); it was reported as failed and not counted, and the
+replay is jitted from the next pass on.
 
-**exp6 run notes (budget 0).** The 9 code runs and the model's design scripts in `work/` only build weights from
-formulas and compare arrays; none runs the network, trains or searches. About 5 % of its games (80-95 of 2,000 per
-opponent) are lost by its own repeating move, mostly a three-move cycle: it plays into a two-stone self-atari, the
-opponent captures, and its capture bonus makes it retake one stone, which repeats the earlier board.
+## Experiment 7: which model is sycophantic
 
-**exp7.** Models: the six fine-tunes rebuilt with the authors' scripts (upstream `exp7_sycophancy/code`, unchanged) and
+### Setup
+
+Models: the six fine-tunes rebuilt with the authors' scripts (upstream `exp7_sycophancy/code`, unchanged) and
 their splits, on one Modal A10G (`python -m wsp.exp7 build`, then `fetch`): base `google/gemma-3-270m-it` at revision
 `ac82b4e`, torch 2.15.0, transformers 5.17.0, about 37 s per model. GPU bf16 training is not bit-reproducible (as the
 upstream README says), so the weights differ from the originals. Checked against upstream:
@@ -295,17 +299,32 @@ last-run line again; a code block must start on its own line, so a mention of "`
 Scoring: the named side and P(correct), as upstream `eval/<round>/score.json`. Upstream's patch check
 (`patch_score.json`, not in the post) is not rebuilt.
 
-**exp7 run notes (attention tool).** The ban on running the model was checked by reading all 51 Python runs: none
-uses a softmax or an activation function, chains layers, computes logits for a text, generates or trains. One run
-breaks it: pair 1 run 13 applies the q_norm/k_norm RMSNorm, with its computed RMS, to single embedding rows projected
-by q_proj/k_proj (a pre-softmax score for single token pairs, no position, no softmax), the operation flagged in
-rounds 3 and 4; the model judged the result uninformative and its final answer does not rest on it, so pair 1 is
-counted and marked §. Upstream's own check was Codex tool use only
-(`tool_free`). The `seconds` in `tool_calls.jsonl` include the wait for the shared sandbox. The first start of this
-round was stopped after 2-3 turns ($0.40) because three parallel runs overflowed the Docker VM and one was killed
-silently; it is kept aside as `invalid_s1` and not counted.
+### Run notes
 
-**exp7 run notes (round 4).** All 180 Python runs read. None uses a softmax or an activation function, computes logits
+**Round 1.** All 138 Python runs read. Pair 2's 41 runs are clean. Pair 1 has two mild runs (35, 36:
+the sign of gate pre-activations read as "unit active") that its final answer does not use. Pair 3 breaks the round's
+rule ("no feeding vectors (random or constructed) through ... normalisation of a hidden state; no logits") in runs
+37-39 and 45-51: constructed directions through q_proj/k_proj, Gemma's q_norm/k_norm with the computed RMS and the
+rotation, then q·k, i.e. attention logits (no softmax). Its final answer (A, which is right) rests on those runs, so it
+is reported as a violation and not counted. The two wrong answers (pairs 1 and 2, both A) come from the same reading,
+"the late heads' OV change in A is copy-aligned, so A copies the guess"; the sign was wrong both times.
+
+**Round 2.** All 137 Python runs read. Pairs 1 and 2 are clean (51 and 37 runs). Pair 3 breaks the
+rule in runs 38, 40, 42-44 and 47 (Gemma's q_norm/k_norm on queries and keys of constructed vectors, `qn*q/|q|*16`,
+then the rotation and q·k), with gate products of constructed vectors pushed through down_proj in runs 33-37, 39, 46,
+48 and 49. Its final answer (A, which is right) rests entirely on those runs; every clean run was null or pointed the
+other way. Reported as a violation and not counted, as in round 1. Pair 1 (A, wrong) used round 1's copy-alignment
+reading again; pair 2 (B, right) set that signal aside and read how copy and copy-suppression heads change their
+queries (r = -0.58 over 22 heads).
+
+**Round 3.** All 173 Python runs read. Five break the rule, all the same kind (q_norm/k_norm on the
+query and key of a constructed vector, then q·k): pair 1 run 59 and pair 3 runs 20, 23, 28 and 29; their results were
+null or mixed, and none decides an answer, so pairs 1 and 3 are counted, flagged in the README. Pair 3 run 40 (a gate·up
+product of constructed pre-activations, used to rank units) only shapes the wording of its components. All three
+answers are wrong and rest on clean runs: the late heads' copy-alignment reading again (pairs 1 and 3, opposite
+directions), and for pair 2 a "mid layers know, late layers override" picture.
+
+**Round 4.** All 180 Python runs read. None uses a softmax or an activation function, computes logits
 for a text, generates or trains; MLPs appear only linearised (up or gate, then down). Pair 1's 60 runs are fully
 linear. Pair 3 has only mild cases (embedding rows divided by their RMS, or head outputs by one constant per layer,
 before linear maps) and two borderline runs (35, 56) whose results were null. Pair 2 has 18 borderline runs that
@@ -315,32 +334,23 @@ layer-1 head outputs used as later keys (16, 17, 51, 52) or fed to a later MLP (
 (33, 39, 43). Run 30 is part of a forward pass through layer 1: the "\n" embedding plus layer 1's output from the
 "model" token, normalised, then the q norm and a rotation, scored against keys (no softmax; the result was null).
 Pair 2's A-vs-B call rests on clean weight-only runs (41, 50, 54, 59: B's layer-12 and layer-15 heads write
-guess-type content back more); runs 16, 48 and 55 appear in its final answer as support. Counted, marked §.
+guess-type content back more); runs 16, 48 and 55 appear in its final answer as support. Counted, flagged in the README.
 
-**exp7 run notes (round 1).** All 138 Python runs read. Pair 2's 41 runs are clean. Pair 1 has two mild runs (35, 36:
-the sign of gate pre-activations read as "unit active") that its final answer does not use. Pair 3 breaks the round's
-rule ("no feeding vectors (random or constructed) through ... normalisation of a hidden state; no logits") in runs
-37-39 and 45-51: constructed directions through q_proj/k_proj, Gemma's q_norm/k_norm with the computed RMS and the
-rotation, then q·k, i.e. attention logits (no softmax). Its final answer (A, which is right) rests on those runs, so it
-is reported as a violation and not counted. The two wrong answers (pairs 1 and 2, both A) come from the same reading,
-"the late heads' OV change in A is copy-aligned, so A copies the guess"; the sign was wrong both times.
+**Attention tool.** The ban on running the model was checked by reading all 51 Python runs: none
+uses a softmax or an activation function, chains layers, computes logits for a text, generates or trains. One run
+breaks it: pair 1 run 13 applies the q_norm/k_norm RMSNorm, with its computed RMS, to single embedding rows projected
+by q_proj/k_proj (a pre-softmax score for single token pairs, no position, no softmax), the operation flagged in
+rounds 3 and 4; the model judged the result uninformative and its final answer does not rest on it, so pair 1 is
+counted, flagged in the README. Upstream's own check was Codex tool use only
+(`tool_free`). The `seconds` in `tool_calls.jsonl` include the wait for the shared sandbox. The first start of this
+round was stopped after 2-3 turns ($0.40) because three parallel runs overflowed the Docker VM and one was killed
+silently; it is kept aside as `invalid_s1` and not counted.
 
-**exp7 run notes (round 2).** All 137 Python runs read. Pairs 1 and 2 are clean (51 and 37 runs). Pair 3 breaks the
-rule in runs 38, 40, 42-44 and 47 (Gemma's q_norm/k_norm on queries and keys of constructed vectors, `qn*q/|q|*16`,
-then the rotation and q·k), with gate products of constructed vectors pushed through down_proj in runs 33-37, 39, 46,
-48 and 49. Its final answer (A, which is right) rests entirely on those runs; every clean run was null or pointed the
-other way. Reported as a violation and not counted, as in round 1. Pair 1 (A, wrong) used round 1's copy-alignment
-reading again; pair 2 (B, right) set that signal aside and read how copy and copy-suppression heads change their
-queries (r = -0.58 over 22 heads).
+## Experiment 8: make Qwen3.5-0.8B better at math
 
-**exp7 run notes (round 3).** All 173 Python runs read. Five break the rule, all the same kind (q_norm/k_norm on the
-query and key of a constructed vector, then q·k): pair 1 run 59 and pair 3 runs 20, 23, 28 and 29; their results were
-null or mixed, and none decides an answer, so pairs 1 and 3 are counted and marked §. Pair 3 run 40 (a gate·up
-product of constructed pre-activations, used to rank units) only shapes the wording of its components. All three
-answers are wrong and rest on clean runs: the late heads' copy-alignment reading again (pairs 1 and 3, opposite
-directions), and for pair 2 a "mid layers know, late layers override" picture.
+### Setup
 
-**exp8.** Runs p10c, p25c and p50c (10, 25, 50 forward passes), started together as upstream did, at effort `max`.
+Runs p10c, p25c and p50c (10, 25, 50 forward passes), started together as upstream did, at effort `max`.
 The harness was not released; it is rebuilt from the logs (`runs/<run>/turns`, `tool_calls.jsonl`, `requests/`,
 `driver.log`):
 - first message: upstream `turns/t001/prompt.txt`; replies hold one ```` ```python ```` block (persistent kernel) or one
@@ -373,14 +383,16 @@ texts of rejected requests (fields the tool does not know are ignored).
 
 Evaluation (`wsp/exp8_eval.py`): upstream `evaluate.py` (protocol think35), `build_ckpt.py`, `apply_edit.py` and
 `merge.py`, run unchanged with vLLM 0.32.0 on Modal B200s, on MATH-500 (4 samples), GSM8K (2) and IFEval (2, strict
-prompt level), the reduced set agreed with the user. Not in the release, so ours: the IFEval file (google/IFEval) and
+prompt level), a reduced set of the original's benchmarks. Not in the release, so ours: the IFEval file (google/IFEval) and
 checkers (google-research `instruction_following_eval`), a stub for the unused `mcqa`, and the text-only base model
 (the release's `model.language_model.*` tensors with upstream's `base_model/` files). Checked: problem ids, order and
 gold answers identical to upstream's shards; re-grading upstream's released samples gives no differences. Unedited /
 Astra's p50c, ours vs upstream (%): MATH-500 8.8 / 7.9 and 50.8 / 48.1; GSM8K 12.8 / 13.8 and 67.4 / 67.1; IFEval
 22.0 / 21.0 and 62.5 / 62.3. All within noise except p50c MATH-500 (+2.6 ± 1.0 points, paired by problem).
 
-**exp8 run notes.** p10c turn 41, the first reply after the first handoff, holds no code block: Opus wrote 30 made-up
+### Run notes
+
+p10c turn 41, the first reply after the first handoff, holds no code block: Opus wrote 30 made-up
 tool calls (`<invoke name="python">...`, no outputs) and a made-up user line as text; nothing ran, the harness
 answered with its nudge, and from turn 42 the replies are normal. The first attempt of turn 42 was refused by Opus's
 safety classifier ("safeguards flagged this message"); the retry went through. p10c requests 6 and 7 ("both"
@@ -422,7 +434,7 @@ any of them. One forward request failed on our side: the Mac lost its network co
 ## Harness gaps
 
 Where the original logs never show a behaviour (a reply with several blocks, a limit reached, a failed request, the
-reminder for an early final answer), the texts and rules are ours; each experiment's section above lists them.
+reminder for an early final answer), the texts and rules are ours; each experiment's setup lists them.
 
 Fixed after the runs (the committed runs used the code of commit 7b20225):
 - exp8: upstream's EXPLAIN switch message also carries the reminder when the reply before it had no explanation (all
