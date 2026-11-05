@@ -65,7 +65,7 @@ others).
 localhost) that records every request body. Marker strings were planted in a `CLAUDE.md`, an auto-memory file and an
 `@`-mentioned file. With SDK defaults all three reached the request; with the configuration above none did, the user
 message was the prompt byte for byte, no tools were sent, effort and thinking were as set, and a resumed second turn
-re-sent the history unchanged. This check is local tooling and is not part of the repo. Another local check compares
+re-sent the history unchanged. The check is `checks/capture.py`. Another local check compares
 each prompt's token count with the API's reported input tokens, so injected context would show up as a gap; run
 records written before 2026-11-03 also carry that count as `prompt_tokens`.
 

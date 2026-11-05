@@ -23,3 +23,4 @@ runs/**/exp8/**/work/edited/
 runs/**/exp6/**/work/pass_*/games.json
 runs/**/exp6/**/work/pass_*/boards.npy
 runs/**/exp6/**/work/pass_*/valid.npy
+checks/*.pkl
