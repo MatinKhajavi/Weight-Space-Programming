@@ -24,16 +24,14 @@ Every setting, where it comes from, and every known deviation from the original 
 
 ## Experiments
 
-| # | Experiment | Original effort | Status |
-|---|---|---|---|
-| 1 | Which game was this network trained on? | high | done |
-| 2 | What does this diffusion model generate? | high | done |
-| 3 | Which language did this model learn, from its middle blocks? | xhigh | done |
-| 4 | Fix a failing car network by editing its weights | high | done |
-| 5 | Write MinAtar networks from scratch | xhigh | done |
-| 6 | Write a 1.5M-weight Go network | xhigh | done |
-| 7 | Which language model is sycophantic? | xhigh | done |
-| 8 | Make Qwen3.5-0.8B better at math | max | done |
+1. Which game was this network trained on?
+2. What does this diffusion model generate?
+3. Which language did this model learn, from its middle blocks?
+4. Fix a failing car network by editing its weights.
+5. Write MinAtar networks from scratch.
+6. Write a 1.5M-weight Go network.
+7. Which language model is sycophantic?
+8. Make Qwen3.5-0.8B better at math.
 
 ## Results
 
