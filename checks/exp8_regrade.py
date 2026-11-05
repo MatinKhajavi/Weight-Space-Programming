@@ -11,8 +11,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from wsp import exp8_eval as X  # noqa: E402
-from wsp.cloud import load_modal  # noqa: E402
+from wsp import exp8_eval as X
+from wsp.cloud import load_modal
 
 EVAL = X.EXP / "eval"
 SETS = ["math500", "gsm8k", "ifeval"]

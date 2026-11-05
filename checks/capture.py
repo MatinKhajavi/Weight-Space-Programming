@@ -11,7 +11,7 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from wsp.runner import SYSTEM_PROMPT, _ask, _prompt, options, scrub_inherited_env  # noqa: E402
+from wsp.runner import SYSTEM_PROMPT, _ask, _prompt, options, scrub_inherited_env
 
 NEEDLES = ["CLAUDE.md", "MEMORY.md", "system-reminder", "gitStatus", "<env>", "Today's date"]
 IDENTITY = "You are a Claude agent, built on Anthropic's Claude Agent SDK."

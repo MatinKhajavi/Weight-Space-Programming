@@ -10,7 +10,7 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from wsp import exp7  # noqa: E402
+from wsp import exp7
 
 UPR = exp7.EXP / "runs/attention_tool/pair2"
 up = json.load(open(UPR / "attn/r7/tokens.json"))

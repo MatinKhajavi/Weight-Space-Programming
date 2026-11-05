@@ -1,5 +1,5 @@
-"""Run the multi-turn loop (exp3) against the local stand-in API with scripted replies, then test the
-rewind used for retries. No real API calls.
+"""Run the multi-turn loop (exp3) against the local stand-in API with scripted replies. No real API calls.
+(The retry rewind is tested by rewind_check.py.)
 """
 import json
 import os
@@ -27,17 +27,12 @@ if __name__ == "__main__":
     os.environ["ANTHROPIC_BASE_URL"] = f"http://127.0.0.1:{port}"
     runner.RUNS = conversation.RUNS = tmp / "runs"
     conversation.api_key = lambda: "sk-ant-dummy-capture"
-    runner.SPEND_CAP_USD = 1e9
     try:
         out = runner.RUNS / "claude-opus-5-5" / "exp3" / "python" / "s1"
-        conversation.converse("claude-opus-5-5", "exp3", "python", 1, exp3.message(), lambda: exp3.Turns("python", out))
+        conversation.converse("claude-opus-5-5", "exp3", "python", 1, exp3.message(), lambda out: exp3.Turns("python", out))
         state = json.loads((out / "state.json").read_text())
         t2 = (out / "turns/t002/prompt.txt").read_text()
         r1 = json.loads((out / "turns/t001/run.json").read_text())
-        # Rewind: resume the session at turn 1's reply, as a retry of turn 2 would.
-        home = Path(tempfile.mkdtemp())
-        opts = runner.options("claude-opus-5-5", "xhigh", Path(tempfile.mkdtemp()), home,
-                              {"ANTHROPIC_API_KEY": "sk-ant-dummy-capture"})
     finally:
         srv.terminate()
         srv.wait()

@@ -11,16 +11,17 @@ os.environ["XLA_FLAGS"] = "--xla_force_host_platform_device_count=8"
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import numpy as np  # noqa: E402
+import numpy as np
 
-from wsp.exp6 import NETS, load_net, play, summary, zero_net  # noqa: E402
-from wsp.exp6_opponents import CACHE, ROLES, SMALL, opponent  # noqa: E402
+from wsp.exp6 import NETS, load_net, play, summary, zero_net
+from wsp.exp6_opponents import ROLES, SMALL, opponent
+from wsp.runner import ROOT
 
 games = int(sys.argv[1]) if len(sys.argv) > 1 else 200
 x = (np.random.default_rng(0).random((500, 243)) < 0.3).astype(np.float32)
 b0 = load_net(NETS / "budget_0")
 for role in ROLES:
-    w = {k: np.load(CACHE / "opponents" / role / f"{k}.npy") for k in SMALL}
+    w = {k: np.load(ROOT / "opponents" / "exp6" / role / f"{k}.npy") for k in SMALL}
     small = np.maximum(np.maximum(x @ w["L1.W"] + w["L1.b"], 0) @ w["L2.W"] + w["L2.b"], 0) @ w["out.W"] + w["out.b"]
     e, h = opponent(role), x
     for k in range(1, 7):

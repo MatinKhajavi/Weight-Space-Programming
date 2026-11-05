@@ -12,9 +12,10 @@ import time
 from pathlib import Path
 
 from wsp import sandbox
+from wsp.runner import UP
 from wsp.turns import ToolLog, code_blocks
 
-UP = Path(__file__).resolve().parents[1] / "upstream" / "exp3_language"
+EXP = UP / "exp3_language"
 NETS = {"python": "python_L4_H6_d384_s0", "romaji": "romaji_L4_H6_d384_s0", "english": "english_L4_H6_d384_s0"}
 MAX_RUNS, TIMEOUT, MAX_OUT = 100, 600, 20_000
 PRELUDE = 'import numpy as np\nW = dict(np.load("/data/blocks.npz"))\n'
@@ -22,11 +23,11 @@ LABELS = ("previous", "local", "broad", "copy", "unclear")
 
 
 def message() -> str:
-    return (UP / "runs" / "python_r0" / "message.txt").read_text(encoding="utf-8")
+    return (EXP / "runs" / "python_r0" / "message.txt").read_text(encoding="utf-8")
 
 
 def run_code(code: str, language: str) -> str:
-    blocks = UP / "networks" / language / "blocks.npz"
+    blocks = EXP / "networks" / language / "blocks.npz"
     return sandbox.run(code, PRELUDE, {"/data/blocks.npz": (blocks, "ro")}, timeout=TIMEOUT, max_out=MAX_OUT)
 
 
@@ -41,7 +42,7 @@ class Turns:
         self.log = ToolLog(out / "tool_calls.jsonl")
 
     def __call__(self, answer: str) -> str | None:
-        blocks = code_blocks(answer, "python", info=r"[^\n]*")
+        blocks = code_blocks(answer, "python", info=r"[^\n]*")   # as run: anything may follow "python"
         if not blocks:
             return None
         if self.runs >= MAX_RUNS:
@@ -93,7 +94,7 @@ def parse(answer: str) -> dict:
 
 
 def score(answer: str, language: str) -> dict:
-    heads = json.loads((UP / "eval" / "heads.json").read_text())[NETS[language]]
+    heads = json.loads((EXP / "eval" / "heads.json").read_text())[NETS[language]]
     true_copy = sorted(k for k, v in heads.items() if v["induct"] > 0.2)
     res = parse(answer)
     named = set(res["copy_named"])

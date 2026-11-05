@@ -238,7 +238,7 @@ def _forward(sandbox_id: str, k: int, req: dict) -> dict:
     sb = modal.Sandbox.from_id(sandbox_id)
     try:
         names = [f.name for f in sb.filesystem.list_files("/work/edited") if f.name.endswith(".npy")]
-    except Exception:   # noqa: BLE001 - no edits yet
+    except Exception:   # no edits yet
         names = []
     os.makedirs("/tmp/sub", exist_ok=True)
     for f in names:
@@ -310,9 +310,9 @@ def _forward(sandbox_id: str, k: int, req: dict) -> dict:
     else:
         raise ValueError('type must be "generate" or "teacher_forced"')
     from concurrent.futures import ThreadPoolExecutor
-    files = [os.path.join(root, f) for root, _, fs in os.walk(res_dir) for f in fs]
+    local = [os.path.join(root, f) for root, _, fs in os.walk(res_dir) for f in fs]
     with ThreadPoolExecutor(8) as ex:   # one copy runs at about 1 MB/s from here; several at once go faster
-        list(ex.map(lambda src: sb.filesystem.copy_from_local(src, "/work/" + os.path.relpath(src, res_dir)), files))
+        list(ex.map(lambda src: sb.filesystem.copy_from_local(src, "/work/" + os.path.relpath(src, res_dir)), local))
     done["s"] = round(time.time() - t0, 1)
     return done
 
@@ -326,5 +326,5 @@ def run_forward(sandbox_id: str, k: int, request: dict) -> dict:
     with app.run():
         try:
             return fn.remote(sandbox_id, k, request)
-        except Exception as e:   # noqa: BLE001 - reported to the model as a failed request, not counted
+        except Exception as e:   # reported to the model as a failed request, not counted
             return {"ok": False, "error": f"{type(e).__name__}: {e}"}

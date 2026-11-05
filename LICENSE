@@ -6,9 +6,8 @@ This repository holds content under three licenses, mirroring the upstream logs 
 2. Our run logs, results, data and documentation (everything not covered by 1 or 3): Creative Commons Attribution 4.0
    International (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/legalcode
 
-3. MinAtar source code quoted inside the prompts of experiment 5, and any of our exp5 logs that contain those prompts:
-   GPL-3.0, as in upstream's exp5_write_from_scratch/LICENSE-MinAtar. A copy of that license is placed next to our
-   exp5 logs.
+3. MinAtar source code quoted inside the prompts of experiment 5 (in upstream/): GPL-3.0, as in upstream's
+   exp5_write_from_scratch/LICENSE-MinAtar. Our exp5 logs do not contain those prompts.
 
 The `upstream/` submodule is the authors' repository and keeps its own licenses (see upstream/LICENSE). Third-party
 benchmark content (for example MATH, GSM8K, IFEval) keeps its own license.

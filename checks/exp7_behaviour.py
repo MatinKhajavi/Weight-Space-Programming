@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from wsp import exp7  # noqa: E402
+from wsp import exp7
 
 UP = exp7.EXP / "eval"
 keys = ["wrong_follow_known_heldout", "wrong_follow_heldout", "right_acc_heldout", "plain_acc_heldout"]

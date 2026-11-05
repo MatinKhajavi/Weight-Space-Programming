@@ -19,8 +19,8 @@ CONVERSATIONS = sorted([*RUNS.glob("*/exp3/*/s*"), *RUNS.glob("*/exp6/budget_*/s
 
 def records(conv: Path, *kinds: str) -> list[dict]:
     path = conv / "tool_calls.jsonl"
-    rows = [json.loads(line) for line in path.open(encoding="utf-8")] if path.exists() else []
-    return [r for r in rows if r.get("kind", "python") in kinds]
+    rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines()] if path.exists() else []
+    return [r for r in rows if not kinds or r.get("kind", "python") in kinds]
 
 
 def untimed(rows: list[dict]) -> list[dict]:
@@ -38,8 +38,7 @@ def fake_runs(monkeypatch, conv: Path):
 
 
 def exp3_handler(conv, monkeypatch, tmp_path):
-    outs = iter(r["out"] for r in records(conv, "python"))
-    monkeypatch.setattr(exp3, "run_code", lambda code, language: next(outs))
+    fake_runs(monkeypatch, conv)
     return exp3.message(), exp3.Turns(conv.parent.name, tmp_path)
 
 
@@ -64,7 +63,7 @@ def _pass_result(rec: dict) -> dict:
 
 def exp6_handler(conv, monkeypatch, tmp_path):
     fake_runs(monkeypatch, conv)
-    local = ("AssertionError", "JSONDecodeError")   # raised before the pass function is called
+    local = ("AssertionError", "JSONDecodeError", "KeyError", "TypeError")   # raised before the pass function runs
     passes = iter(r for r in records(conv, "games", "positions") if "result" in r or not r["error"].startswith(local))
 
     def remote(fn, *args):
@@ -128,8 +127,6 @@ def exp8_handler(conv, monkeypatch, tmp_path):
 
 
 HANDLERS = {"exp3": exp3_handler, "exp6": exp6_handler, "exp7": exp7_handler, "exp8": exp8_handler}
-KINDS = ("python", "games", "positions", "reminder", "nudge", "format_retry", "attention", "forward", "sent_back",
-         "final", "handoff")
 
 
 @pytest.mark.parametrize("conv", CONVERSATIONS, ids=lambda c: str(c.relative_to(RUNS)))
@@ -143,9 +140,11 @@ def test_replay(conv, monkeypatch, tmp_path):
         got = got[0] if isinstance(got, tuple) else got
         want = (ds[i + 1] / "prompt.txt").read_text(encoding="utf-8") if i + 1 < len(ds) else None
         if exp == "exp8" and i + 2 == exp8.EXPLAIN_AT[conv.parent.name]:
-            want += exp8.REMINDER   # fixed after the runs: upstream's switch turn carries the reminder (protocol.md)
+            # fixed after the runs: upstream's switch turn carries the reminder; all three of our replies before the
+            # switch had no explanation, so all three get it (protocol.md)
+            want += exp8.REMINDER
         assert got == want, f"{d.name}: the handler's next message differs from the logged one"
-    assert untimed(records(tmp_path, *KINDS)) == untimed(records(conv, *KINDS)), "tool_calls.jsonl differs"
+    assert untimed(records(tmp_path)) == untimed(records(conv)), "tool_calls.jsonl differs"
     if exp == "exp7":
         prediction = [json.loads((d / "prediction.json").read_text()) for d in (tmp_path, conv)]
         assert prediction[0] == prediction[1]

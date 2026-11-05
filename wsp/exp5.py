@@ -55,7 +55,7 @@ def edit_statements(answer: str) -> list[str]:
     return stmts
 
 
-def _index(part: str):
+def index(part: str):
     part = part.strip()
     if part == ":":
         return slice(None)
@@ -73,7 +73,7 @@ def apply_edits(stmts: list[str]) -> tuple[dict[str, np.ndarray], dict]:
             if not m:
                 raise ValueError("not a statement")
             name, ix, op, val = m.groups()
-            idx = tuple(_index(p) for p in ix.split(","))
+            idx = tuple(index(p) for p in ix.split(","))
             v = np.array(ast.literal_eval(val.strip()), dtype=np.float64)
             if np.any(np.abs(v) > 1e6):
                 raise ValueError("|v| > 1e6")

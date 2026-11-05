@@ -7,8 +7,8 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from wsp.cloud import load_modal
 from wsp.exp6 import CPUS, NETS, load_net, saved_net, zero_net
-from wsp.runner import read_dotenv
 
 
 def remote(jobs, cpus):
@@ -29,10 +29,7 @@ def remote(jobs, cpus):
     return out
 
 if __name__ == "__main__":
-    profile = read_dotenv().get("MODAL_PROFILE"); assert profile
-    os.environ["MODAL_PROFILE"] = profile
-    import modal
-    assert modal.config._profile == profile, modal.config._profile
+    modal = load_modal()
     opus = saved_net('runs/claude-opus-5-5/exp6/budget_0/s1/work')
     astra = load_net(NETS / 'budget_0')
     ppo = {s: load_net(NETS / f'ppo_same_size_lr3e-5_s{s}') for s in range(3)}

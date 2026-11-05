@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from wsp import exp8_eval as X  # noqa: E402
+from wsp import exp8_eval as X
 
 SETS = ["math500", "gsm8k", "ifeval"]
 

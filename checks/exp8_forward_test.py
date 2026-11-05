@@ -5,7 +5,7 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from wsp import exp8  # noqa: E402
+from wsp import exp8
 
 k = exp8.Kernel(f"wsp-exp8-test-{int(time.time())}")
 print(k.run("n = 'model.language_model.layers.15.mlp.down_proj.weight'; w = load_original(n); w[:, :64] = 0; "

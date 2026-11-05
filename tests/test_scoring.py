@@ -1,12 +1,16 @@
-"""Our exp1/exp2 scorers must reproduce the original scores on Astra's released answers."""
+"""Our scorers and edit readers (exps 1-5) must reproduce the original results on Astra's released answers."""
 import json
-from pathlib import Path
 
+import numpy as np
 import pytest
 
-from wsp.scoring import GAME_KEYWORDS, SHAPE_KEYWORDS, map_label, normalize, score_exp1, score_exp2
-
-UP = Path(__file__).resolve().parents[1] / "upstream"
+from wsp.exp3 import parse, score
+from wsp.exp4 import NAMES, apply_edits, shown_network
+from wsp.exp4 import read_reply as read_exp4_reply
+from wsp.exp5 import edit_statements, load_npz
+from wsp.exp5 import read_reply as read_exp5_reply
+from wsp.runner import UP
+from wsp.scoring import GAME_KEYWORDS, SHAPE_KEYWORDS, answer_field, map_label, normalize, score_exp1, score_exp2
 
 
 def _released(exp_dir):
@@ -28,7 +32,7 @@ def test_exp1_matches_released_scores(game):
 @pytest.mark.parametrize("shape", ["circle", "square", "triangle"])
 def test_exp2_matches_released_scores(shape):
     key = json.loads((UP / "exp2_diffusion/eval/answer_key.json").read_text())
-    net_id = next(i for i, v in key.items() if (v.get("shape") if isinstance(v, dict) else v) == shape)
+    net_id = next(i for i, v in key.items() if v["shape"] == shape)
     released = _released("exp2_diffusion")[net_id]
     ours = score_exp2((UP / f"exp2_diffusion/runs/{shape}/answer.md").read_text(), shape)
     assert ours["guess"] == released["guess"]
@@ -36,21 +40,18 @@ def test_exp2_matches_released_scores(shape):
     assert ours["confidence"] == released["confidence"]
 
 
-@pytest.mark.parametrize("text,label,status", [
-    ("pong or breakout", None, "hedged"),
-    ("a snake game", None, "unmapped"),
-    ("a white blob on a dark background, around the centre", None, "unmapped"),  # "round" inside words
-    ("frogger, a traffic-crossing game", "freeway", "mapped"),
+@pytest.mark.parametrize("text,keywords,label,status", [
+    ("pong or breakout", GAME_KEYWORDS, None, "hedged"),
+    ("a snake game", GAME_KEYWORDS, None, "unmapped"),
+    ("a white blob on a dark background, around the centre", SHAPE_KEYWORDS, None, "unmapped"),  # "round" in words
+    ("frogger, a traffic-crossing game", GAME_KEYWORDS, "freeway", "mapped"),
 ])
-
-def test_edge_cases(text, label, status):
-    kw = SHAPE_KEYWORDS if "blob" in text else GAME_KEYWORDS
-    guess, st, _ = map_label(normalize(text), kw)
+def test_edge_cases(text, keywords, label, status):
+    guess, st, _ = map_label(normalize(text), keywords)
     assert (guess, st) == (label, status)
 
 
 def test_exp1_field_needs_colon_or_line_end():
-    from wsp.scoring import answer_field
     assert answer_field("Game: Pong\nGames ruled out: Breakout", "game") == "Pong"
     assert answer_field("## Game\n**Pac-Man**", "game") == "**Pac-Man**"
     assert answer_field("**Images:**\na ring", "images") == "a ring"
@@ -58,20 +59,14 @@ def test_exp1_field_needs_colon_or_line_end():
 
 @pytest.mark.parametrize("game", ["breakout", "seaquest", "asterix"])
 def test_exp5_parser_rebuilds_released_networks(game):
-    import numpy as np
-
-    from wsp.exp5 import load_npz, read_reply
-    ours, report = read_reply((UP / f"exp5_write_from_scratch/runs/{game}/reply/answer.md").read_text())
+    ours, report = read_exp5_reply((UP / f"exp5_write_from_scratch/runs/{game}/reply/answer.md").read_text())
     released = load_npz(str(UP / f"exp5_write_from_scratch/networks/{game}/hand.npz"))
     assert report["skipped"] == []
     assert all(np.array_equal(ours[k], released[k]) for k in released)
 
 
 def test_exp4_edits_rebuild_released_network():
-    import numpy as np
-
-    from wsp.exp4 import NAMES, read_reply
-    ours, report = read_reply((UP / "exp4_fix_car/runs/oneshot_repair/reply/answer.md").read_text())
+    ours, report = read_exp4_reply((UP / "exp4_fix_car/runs/oneshot_repair/reply/answer.md").read_text())
     released = np.load(UP / "exp4_fix_car/networks/edited_actor.npz")
     assert report["skipped"] == [] and report["applied"] == 51
     assert all(np.array_equal(ours[k], released[k]) for k in NAMES)
@@ -79,7 +74,6 @@ def test_exp4_edits_rebuild_released_network():
 
 
 def test_exp4_edit_language():
-    from wsp.exp4 import apply_edits, edit_statements, shown_network
     text = ("```edits\nZERO actor4.W\nactor_head.b[0:3] = [1,\n  2, 3]   # a list over two lines\n"
             "embed.W[0, 0:2] = [1]\nfoo.W[0] = 1\nactor0.b[0] = 2e6\n```")
     w, report = apply_edits(edit_statements(text), shown_network())
@@ -89,7 +83,6 @@ def test_exp4_edit_language():
 
 @pytest.mark.parametrize("run", ["python_r0", "python_r1", "romaji_r0", "romaji_r1", "english_r0", "english_r1"])
 def test_exp3_matches_released_scores(run):
-    from wsp.exp3 import score
     corpus, attempt = run.split("_")
     rows = json.loads((UP / "exp3_language/eval/scores.json").read_text())
     released = next(r for r in rows if r["id"].endswith(attempt) and r["corpus"] == corpus)
@@ -102,7 +95,6 @@ def test_exp3_matches_released_scores(run):
 
 
 def test_exp3_head_lines_in_any_grouping():
-    from wsp.exp3 import parse
     text = ("Heads:\n- L0H0: **copy** — x\n- L1H0 – L1H5 local (all six)\n- L2H0, L2H2: broad\n"
             "- L2H3: unclear. L2H4: previous.\n- L3H0 to L3H5: broad\n- L0H1/H2 previous\n")
     h = parse(text)["head_labels"]

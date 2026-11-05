@@ -50,8 +50,8 @@ SMALL = ["L1.W", "L1.b", "L2.W", "L2.b", "out.W", "out.b"]
 RANDOM = {"strong": (0.98, 0.98), "weak": (0.95, 0.95)}
 VOLUME, GPU, TIMEOUT_S = "wsp-exp6-opponents", ["L4", "A10G"], 4 * 3600
 WIDTH, GAMES, ITERS, EVERY = 32, 1024, 20_000, 500
-POOL, LATEST, SNAP_EVERY, HISTORY = 8, 4, 100, 200   # opponents per iteration: LATEST copies of the learner, the rest
-                                                     # drawn from its snapshots so far
+# opponents per iteration: LATEST copies of the learner, the rest drawn from its snapshots so far
+POOL, LATEST, SNAP_EVERY, HISTORY = 8, 4, 100, 200
 LR, GAMMA, LAMBDA, CLIP, VF, ENT, EPOCHS, MINIBATCHES, MAX_NORM = 3e-4, 0.99, 0.95, 0.2, 0.5, 0.01, 4, 4, 0.5
 
 
@@ -110,7 +110,9 @@ def targets() -> dict[str, dict[str, tuple[int, int]]]:
 
 
 def _actor(path) -> dict[str, np.ndarray]:
-    return {k: np.asarray(v, np.float32) for k, v in pickle.load(open(path, "rb"))["params"]["actor"].items()}
+    with open(path, "rb") as f:
+        actor = pickle.load(f)["params"]["actor"]
+    return {k: np.asarray(v, np.float32) for k, v in actor.items()}
 
 
 def _vs(ckpts: list[str], games: int, seed: int) -> dict:

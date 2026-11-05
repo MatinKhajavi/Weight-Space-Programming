@@ -4,7 +4,7 @@ import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from wsp import exp8  # noqa: E402
+from wsp import exp8
 
 exp8.BUDGETS["p10c"], exp8.EXPLAIN_AT["p10c"], exp8.THREAD_TURNS = 2, 4, 6
 exp8.NOTICES["p10c"] = {5: "001_pass_size", 7: "002_tool_facts"}

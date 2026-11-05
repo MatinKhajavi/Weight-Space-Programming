@@ -5,7 +5,7 @@ import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from wsp import exp7  # noqa: E402
+from wsp import exp7
 
 tmp = Path(tempfile.mkdtemp(prefix="exp7_step_"))
 exp7.CACHE = tmp / "cache"

@@ -1,11 +1,11 @@
-"""The exp8 kernel sandbox and forward-pass tool on scripted code (no model calls). A few minutes of an H100."""
+"""The exp8 kernel sandbox and forward-pass tool on scripted code (no model calls). A few minutes of a B200."""
 import json
 import sys
 import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from wsp import exp8  # noqa: E402
+from wsp import exp8
 
 vol = f"wsp-exp8-test-{int(time.time())}"
 k = exp8.Kernel(vol)

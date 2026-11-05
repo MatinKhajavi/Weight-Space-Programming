@@ -24,10 +24,9 @@ if __name__ == "__main__":
     os.environ["ANTHROPIC_BASE_URL"] = f"http://127.0.0.1:{port}"
     runner.RUNS = conversation.RUNS = tmp / "runs"
     conversation.api_key = lambda: "sk-ant-dummy"
-    runner.SPEND_CAP_USD = 1e9
     try:
         out = runner.RUNS / "claude-opus-5-5" / "exp6" / "budget_0" / "s1"
-        conversation.converse("claude-opus-5-5", "exp6", "budget_0", 1, exp6.message(0), lambda: exp6.Turns(0, out))
+        conversation.converse("claude-opus-5-5", "exp6", "budget_0", 1, exp6.message(0), lambda out: exp6.Turns(0, out))
     finally:
         srv.terminate(); srv.wait()
     print("state:", {k: v for k, v in json.loads((out / "state.json").read_text()).items() if k in ("turns", "done")})

@@ -32,7 +32,8 @@ def run(code: str, prelude: str, mounts: dict[str, tuple[Path, str]], workdir: s
     with open(LOCK, "w") as lock:   # one run at a time across conversations: the Docker VM has 8 GB in all
         fcntl.flock(lock, fcntl.LOCK_EX)
         try:
-            p = subprocess.run(cmd, input=script, capture_output=True, text=True, timeout=timeout)
+            p = subprocess.run(cmd, input=script, capture_output=True, text=True, errors="replace",
+                               timeout=timeout)
             out = p.stdout + (("\n[stderr]\n" + p.stderr[-6000:]) if p.stderr.strip() else "")
         except subprocess.TimeoutExpired:
             subprocess.run(["docker", "kill", name], capture_output=True)

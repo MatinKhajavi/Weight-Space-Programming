@@ -26,7 +26,7 @@ from pathlib import Path
 import numpy as np
 
 from wsp.cloud import load_modal
-from wsp.exp5 import _index, edit_statements
+from wsp.exp5 import edit_statements, index
 from wsp.runner import UP
 
 PROMPT = UP / "exp4_fix_car/runs/oneshot_repair/reply/prompt.txt"
@@ -79,7 +79,7 @@ def apply_edits(stmts: list[str], base: dict[str, np.ndarray]) -> tuple[dict[str
             if not m:
                 raise ValueError("not a statement")
             name, ix, op, val = m.groups()
-            idx = tuple(_index(p) for p in ix.split(","))
+            idx = tuple(index(p) for p in ix.split(","))
             v = np.array(ast.literal_eval(val.strip()), dtype=np.float64)
             if not np.all(np.abs(v) <= 1e6):
                 raise ValueError("|v| > 1e6")

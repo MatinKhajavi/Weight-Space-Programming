@@ -21,17 +21,17 @@ from pathlib import Path
 from wsp.runner import ITEMS, MODELS, RUNS, _versions, api_key, call, save_reply, scrub_inherited_env
 
 
-def converse(model: str, exp: str, item: str, sample: int, first_message: str, make_step) -> Path:
-    """`make_step()` is called once the run folder exists; the `step(answer)` it returns gives the next message (or
-    (message, True) to start a new conversation with it), or None when the answer is final; `step.close()`, if
-    present, is called at the end."""
+def converse(model: str, exp: str, item: str, sample: int, first_message: str, make_turns) -> Path:
+    """`make_turns(out)` is called once the run folder exists. The turn handler it returns is called with each reply and
+    gives the next message, (message, True) to send it in a new conversation, or None when the reply is final; its
+    `close()`, if any, runs at the end."""
     effort = ITEMS[exp][item][1]
     key = api_key()
     out = RUNS / model / exp / item / f"s{sample}"
     if out.exists():
         sys.exit(f"{out} already exists; refusing to overwrite.")
     out.mkdir(parents=True)
-    step = make_step()
+    turns = make_turns(out)
     state = {"experiment": exp, "item": item, "sample": sample, "model": model, "effort": effort,
              "versions": _versions(), "turns": 0, "done": False}
     tmp = Path(tempfile.mkdtemp(prefix="wsp_conv_"))
@@ -45,21 +45,18 @@ def converse(model: str, exp: str, item: str, sample: int, first_message: str, m
             d = out / "turns" / f"t{state['turns']:03d}"
             d.mkdir(parents=True)
             (d / "prompt.txt").write_text(message, encoding="utf-8")
-            msgs, result, answer, attempts = call(model, effort, message, key, tmp / "cwd", tmp / "home",
-                                                  session, last_uuid)
+            msgs, answer, attempts = call(model, effort, message, key, tmp / "cwd", tmp / "home", session, last_uuid)
             rec = {"attempts": attempts, **save_reply(d, msgs, answer)}
             # Claude Code reports the cost of the whole resumed session; keep it and store this turn's own cost. A retry
             # forks the session, and the fork reports everything this conversation spent so far (p10c turn 42).
             base = spent if len(attempts) > 1 and last_uuid else session_cost
-            rec["session_cost_usd"] = rec["total_cost_usd"] or 0
-            rec["total_cost_usd"] = rec["session_cost_usd"] - base if rec["session_cost_usd"] >= base \
-                else rec["session_cost_usd"]
-            session_cost = rec["session_cost_usd"]
+            session_cost = rec["session_cost_usd"] = rec["total_cost_usd"] or 0
+            rec["total_cost_usd"] = session_cost - base if session_cost >= base else session_cost
             spent += rec["total_cost_usd"]
             (d / "run.json").write_text(json.dumps(rec, indent=1, default=str), encoding="utf-8")
             session, last_uuid = rec["session_id"], rec["last_uuid"]
-            print(f"turn {state['turns']}: ${rec['total_cost_usd'] or 0:.2f}, {attempts[-1]['wall_s']} s", flush=True)
-            message = step(answer)
+            print(f"turn {state['turns']}: ${rec['total_cost_usd']:.2f}, {attempts[-1]['wall_s']} s", flush=True)
+            message = turns(answer)
             if isinstance(message, tuple):
                 message, fresh = message
                 if fresh:
@@ -73,12 +70,12 @@ def converse(model: str, exp: str, item: str, sample: int, first_message: str, m
         state["stopped"] = str(e)
         print("stopped:", e, flush=True)
     finally:
-        if hasattr(step, "close"):
-            step.close()
-        turns = sorted((out / "turns").glob("t*/run.json"))
-        state["cost_usd"] = round(sum(json.loads(p.read_text()).get("total_cost_usd") or 0 for p in turns), 4)
+        runs = sorted((out / "turns").glob("t*/run.json"))
+        state["cost_usd"] = round(sum(json.loads(p.read_text()).get("total_cost_usd") or 0 for p in runs), 4)
         (out / "state.json").write_text(json.dumps(state, indent=1, default=str), encoding="utf-8")
         shutil.rmtree(tmp, ignore_errors=True)
+        if hasattr(turns, "close"):   # last: exp8 closes its sandbox over the network, which can fail
+            turns.close()
     return out
 
 
@@ -92,19 +89,18 @@ if __name__ == "__main__":
     if a.item not in ITEMS[a.exp]:
         sys.exit(f"unknown item {a.item!r}; choose from {list(ITEMS[a.exp])}")
     scrub_inherited_env()
-    out = RUNS / a.model / a.exp / a.item / f"s{a.sample}"
     if a.exp == "exp3":
         from wsp import exp3
-        first, step = exp3.message(), lambda: exp3.Turns(a.item, out)
+        first, make_turns = exp3.message(), lambda out: exp3.Turns(a.item, out)
     elif a.exp == "exp6":
         from wsp import exp6
         budget = int(a.item.split("_")[1])
-        first, step = exp6.message(budget), lambda: exp6.Turns(budget, out)
+        first, make_turns = exp6.message(budget), lambda out: exp6.Turns(budget, out)
     elif a.exp == "exp7":
         from wsp import exp7
         rnd, pair = a.item.split("/")
-        first, step = exp7.message(rnd), lambda: exp7.Turns(rnd, pair, out)
+        first, make_turns = exp7.message(rnd), lambda out: exp7.Turns(rnd, pair, out)
     else:
         from wsp import exp8
-        first, step = exp8.message(a.item), lambda: exp8.Turns(a.item, out, a.sample)
-    converse(a.model, a.exp, a.item, a.sample, first, step)
+        first, make_turns = exp8.message(a.item), lambda out: exp8.Turns(a.item, out, a.sample)
+    converse(a.model, a.exp, a.item, a.sample, first, make_turns)

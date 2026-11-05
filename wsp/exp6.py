@@ -289,7 +289,7 @@ class Turns:
         self.log = ToolLog(out / "tool_calls.jsonl")
 
     def __call__(self, answer: str) -> str | None:
-        blocks = code_blocks(answer, "python|games|positions", info=r"[^\n]*")
+        blocks = code_blocks(answer, "python|games|positions", info=r"[^\n]*")   # as run: anything may follow the kind
         if not blocks:
             if self.passes < self.budget:
                 self.log({"kind": "reminder", "passes": self.passes})
@@ -321,7 +321,7 @@ class Turns:
         try:
             req = json.loads(code)
             res = (self.games if kind == "games" else self.positions)(req, k)
-        except Exception as e:   # noqa: BLE001 - a failed request is reported and not counted
+        except Exception as e:   # a failed request is reported and not counted
             self.log({"kind": kind, "k": k, "request": code, "error": f"{type(e).__name__}: {e}",
                       "seconds": round(time.time() - t0, 1)})
             return f"The {kind} pass failed and was not counted: {type(e).__name__}: {e}"
@@ -333,6 +333,7 @@ class Turns:
                 f"Passes left: {self.budget - k}.")
 
     def games(self, req: dict, k: int) -> dict:
+        # asserts on purpose: the model sees "AssertionError: ..." in the failed-pass message, as in the runs
         counts = req["games"]
         assert isinstance(counts, dict) and counts and set(counts) <= set(self.opponents), \
             f"games is a dict of opponent -> count; opponents: {sorted(self.opponents)}"

@@ -121,7 +121,7 @@ def api_key() -> str:
     return key
 
 
-def call(model, effort, prompt, key, cwd, home, resume=None, rewind_to=None) -> tuple[list, dict, str, list]:
+def call(model, effort, prompt, key, cwd, home, resume=None, rewind_to=None) -> tuple[list, str, list]:
     """One reply, with the original harness's retries. A retry inside a conversation rewinds it to `rewind_to`."""
     attempts = []
     for attempt in range(len(WAITS_FAILURE) + 1):
@@ -140,7 +140,7 @@ def call(model, effort, prompt, key, cwd, home, resume=None, rewind_to=None) -> 
         attempts.append({"wall_s": round(time.time() - t0, 1), "error": err, "is_error": result.get("is_error"),
                          "stop_reason": stop, "answer_chars": len(answer or "")})
         if err is None and not result.get("is_error") and (answer.strip() or stop == "refusal"):
-            return msgs, result, answer, attempts
+            return msgs, answer, attempts
         reason = err or json.dumps(result.get("errors") or result.get("result") or "empty reply")[:500]
         status = re.search(r"API Error: (\d{3})", reason)
         if status and status.group(1).startswith("4") and status.group(1) != "429":
@@ -160,9 +160,9 @@ def save_reply(out: Path, msgs: list, answer: str) -> dict:
     asst = [m for m in msgs if m["type"] == "AssistantMessage"]
     tool_uses = [b for m in asst for b in m.get("content", []) if "input" in b]
     thinking = [b["thinking"] for m in asst for b in m.get("content", []) if "thinking" in b and b["thinking"]]
-    # With no tools, a user message here was injected by Claude Code after a reply hit the output cap
-    # ("Output token limit hit. Resume directly ..."). Keep the reply as it was when cut (docs/protocol.md,
-    # deviation 5).
+    # With no tools, a user message here was injected by Claude Code: after a reply hit the output cap, was cut off
+    # mid-stream or was stopped by a safety classifier. Keep the reply as it was when cut (docs/protocol.md,
+    # deviation 5); the record's field keeps its first name, resumed_after_output_cap.
     injected = ["".join(b.get("text", "") for b in m["content"]) for m in msgs if m["type"] == "UserMessage"]
     if injected:
         first = msgs[:next(i for i, m in enumerate(msgs) if m["type"] == "UserMessage")]
@@ -201,7 +201,7 @@ def run(model: str, exp: str, item: str, sample: int) -> Path:
     with tempfile.TemporaryDirectory(prefix="wsp_run_") as tmp:
         (Path(tmp) / "cwd").mkdir()
         try:
-            msgs, result, answer, attempts = call(model, effort, prompt, key, Path(tmp) / "cwd", Path(tmp) / "home")
+            msgs, answer, attempts = call(model, effort, prompt, key, Path(tmp) / "cwd", Path(tmp) / "home")
         except RuntimeError as e:
             sys.exit(str(e))
     out.mkdir(parents=True)
@@ -242,7 +242,7 @@ def _score_text(exp: str, item: str, answer: str, out: Path | None) -> dict:
             (out / "apply.json").write_text(json.dumps(rep, indent=1))
         return {"apply": {k: rep[k] for k in ("statements", "applied", "nonzero")}, "skipped": len(rep["skipped"]),
                 "eval": evaluate(w, item, 1000, 10, seed=0)}
-    raise SystemExit(f"no scorer for {exp} yet")
+    raise SystemExit(f"no scorer for {exp} here (exp8: python -m wsp.exp8_eval)")
 
 
 def score(model: str, exp: str, item: str, sample: int) -> dict:

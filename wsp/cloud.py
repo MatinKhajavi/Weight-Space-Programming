@@ -1,4 +1,3 @@
-"""Modal on the profile named in .env, so nothing runs on whichever Modal profile happens to be active."""
 import os
 import sys
 

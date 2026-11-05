@@ -29,8 +29,8 @@ def run(code, g):
                 value = eval(compile(ast.Expression(last.value), "<run>", "eval"), g)
                 if value is not None:
                     print(repr(value))
-        except BaseException as e:   # noqa: BLE001 - everything goes back to the model, as in a notebook
-            traceback.print_exception(type(e), e, e.__traceback__.tb_next)
+        except BaseException as e:   # everything goes back to the model, as in a notebook
+            traceback.print_exception(type(e), e, e.__traceback__.tb_next)   # without this kernel's frame
     return buf.getvalue()
 
 

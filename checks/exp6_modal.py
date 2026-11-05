@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from wsp.exp6 import NETS, UP, evaluate, load_net, zero_net  # noqa: E402
+from wsp.exp6 import NETS, UP, evaluate, load_net, zero_net
 
 EVAL = UP / "exp6_go_from_scratch/eval"
 games = int(sys.argv[1]) if len(sys.argv) > 1 else 2000
@@ -18,7 +18,7 @@ ppo = [f"ppo_same_size_lr3e-5_s{s}" for s in range(3)]
 pairs = {f"{b}_vs_{p}": (b, p) for b in ["budget_0", "budget_50"] for p in ppo}
 pairs.update({f"{d}_vs_random": (d, "random") for d in nets if d != "random"})
 res = evaluate({k: (nets[a], nets[b]) for k, (a, b) in pairs.items()}, games)
-out = sys.argv[2] if len(sys.argv) > 2 else "checks/exp6_last.json"
+out = sys.argv[2] if len(sys.argv) > 2 else "checks/exp6_validation.json"
 open(out, "w").write(json.dumps(res, indent=1))
 
 scan = json.load(open(EVAL / "ppo_same_size/ppo_big_eval/eval_lr_scan.json"))

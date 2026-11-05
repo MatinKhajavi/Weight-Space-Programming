@@ -1,0 +1,87 @@
+<!doctype html>
+<!-- Source of results.png and results-dark.png: open with ?theme=light&zoom=2 (or theme=dark) and screenshot
+     #fig. The numbers below come from the README tables. -->
+<meta charset="utf-8">
+<title>Results figure</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root { --bg: #fcfcfb; --surface: #ffffff; --fg: #1d1c1a; --muted: #4f4d48; --grid: #e2e0d9; --rule: #cfccc4;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; }
+:root[data-theme="dark"] { --bg: #1a1a19; --surface: #20201e; --fg: #f0efec; --muted: #c3c2b7; --grid: #34332f;
+  --rule: #4a4944; --s1: #3987e5; --s2: #d95926; --s3: #199e70; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: "Inter", system-ui, sans-serif; }
+#fig { width: 1000px; padding: 30px 30px 24px; box-sizing: border-box; background: var(--bg); }
+h1 { font-weight: 700; letter-spacing: -0.01em; font-size: 30px; line-height: 1.15; margin: 0 0 6px; }
+.sub { color: var(--muted); font-size: 18px; margin: 0; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 26px; margin: 16px 0 20px; font-size: 18px; }
+.legend span { display: inline-flex; align-items: center; gap: 9px; }
+.sw { width: 16px; height: 16px; border-radius: 4px; display: inline-block; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.panel { background: var(--surface); border: 1px solid var(--grid); border-radius: 10px; padding: 16px 16px 8px; }
+h3 { font-size: 20px; font-weight: 600; margin: 0 0 4px; }
+.ps { font-size: 16px; color: var(--muted); line-height: 1.3; min-height: 42px; }
+svg { display: block; width: 100%; height: auto; }
+svg text { font-family: "Inter", sans-serif; fill: var(--muted); font-size: 11px; }
+svg .val { fill: var(--fg); font-weight: 600; font-size: 10.5px; font-variant-numeric: tabular-nums;
+  paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; }
+.foot { margin-top: 16px; font-size: 16px; color: var(--muted); display: flex; justify-content: space-between; }
+</style>
+<div id="fig">
+  <h1>Claude vs GPT-6 Astra on the eight weight-space programming experiments</h1>
+  <p class="sub">Each panel shows the experiment's main measure. Astra's numbers are the published ones unless a panel says otherwise.</p>
+  <div class="legend">
+    <span><i class="sw" style="background:var(--s1)"></i>Claude Opus 5.5</span>
+    <span><i class="sw" style="background:var(--s3)"></i>Claude Fable 5.1 (experiments 1-5)</span>
+    <span><i class="sw" style="background:var(--s2)"></i>GPT-6 Astra</span>
+  </div>
+  <div class="grid">
+    <div class="panel"><h3>1 · Which game</h3><div class="ps">Networks identified, of 4</div><div id="b1"></div></div>
+    <div class="panel"><h3>2 · Which shape</h3><div class="ps">Diffusion models identified, of 3</div><div id="b2"></div></div>
+    <div class="panel"><h3>3 · Which language</h3><div class="ps">Corpus named right, % of conversations</div><div id="b3"></div></div>
+    <div class="panel"><h3>4 · Fix the car</h3><div class="ps">All three fixed it (1,024/1,024). % of weights changed</div><div id="b4"></div></div>
+    <div class="panel"><h3>5 · Write MinAtar networks</h3><div class="ps">Score as % of Astra's network in our evaluator (dashed line)</div><div id="b5"></div></div>
+    <div class="panel"><h3>6 · Write a Go network</h3><div class="ps">Win % vs hidden PPO (mean of seeds 0 and 2), by passes: Opus vs our rebuilt ones, Astra vs the originals</div><div id="b6"></div></div>
+    <div class="panel"><h3>7 · Spot the sycophant</h3><div class="ps">Mean P(right answer) over finished, counted answers; Astra gave 0.5 in weights-only rounds 1-3</div><div id="b7"></div></div>
+    <div class="panel"><h3>8 · Edit Qwen for math</h3><div class="ps">MATH-500 accuracy %, by passes (0 = unedited)</div><div id="b8"></div></div>
+  </div>
+  <div class="foot"><span>Details: docs/protocol.md</span><span>github.com/MatinKhajavi/Weight-Space-Programming</span></div>
+</div>
+<script>
+const q = new URLSearchParams(location.search);
+if (q.get("theme") === "dark") document.documentElement.dataset.theme = "dark";
+if (q.get("zoom")) document.body.style.zoom = q.get("zoom");
+const NS = "http://www.w3.org/2000/svg", C = { opus: "var(--s1)", astra: "var(--s2)", fable: "var(--s3)" };
+function el(tag, attrs, parent, text) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (text != null) e.textContent = text;
+  parent.appendChild(e); return e;
+}
+function bars(id, groups, series, opt = {}) {
+  const W = 300, H = 150, L = 4, R = 4, T = 16, B = 20, ymax = opt.ymax || 100;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}` }, document.getElementById(id));
+  const y = v => T + (1 - Math.min(v, ymax) / ymax) * (H - T - B), base = H - B;
+  el("line", { x1: L, x2: W - R, y1: base, y2: base, stroke: "var(--rule)", "stroke-width": 1 }, svg);
+  if (opt.ref != null) el("line", { x1: L, x2: W - R, y1: y(opt.ref), y2: y(opt.ref), stroke: "var(--s2)", "stroke-width": 1.2, "stroke-dasharray": "4 3" }, svg);
+  const gw = (W - L - R) / groups.length, n = series.length, bw = Math.min(26, (gw - 14) / n - 2);
+  groups.forEach((g, gi) => {
+    const x0 = L + gi * gw + (gw - n * (bw + 2) + 2) / 2;
+    series.forEach((s, si) => {
+      const v = s.vals[gi]; if (v == null) return;
+      const x = x0 + si * (bw + 2), top = y(v), h = base - top, r = Math.min(3, h);
+      el("path", { d: `M${x},${base} V${top + r} Q${x},${top} ${x + r},${top} H${x + bw - r} Q${x + bw},${top} ${x + bw},${top + r} V${base} Z`, fill: C[s.key] }, svg);
+      el("text", { x: x + bw / 2, y: top - 3.5, "text-anchor": "middle", class: "val" }, svg, s.labels ? s.labels[gi] : v.toFixed(1));
+    });
+    if (g) el("text", { x: L + gi * gw + gw / 2, y: H - 5, "text-anchor": "middle" }, svg, g);
+  });
+}
+const passes = ["0", "10", "25", "50"];
+bars("b1", [""], [{ key: "opus", vals: [4], labels: ["4/4"] }, { key: "fable", vals: [3], labels: ["3/4"] }, { key: "astra", vals: [4], labels: ["4/4"] }], { ymax: 4 });
+bars("b2", [""], [{ key: "opus", vals: [3], labels: ["3/3"] }, { key: "fable", vals: [2], labels: ["2/3"] }, { key: "astra", vals: [3], labels: ["3/3"] }], { ymax: 3 });
+bars("b3", [""], [{ key: "opus", vals: [57.1], labels: ["4/7"] }, { key: "fable", vals: [66.7], labels: ["4/6"] }, { key: "astra", vals: [100], labels: ["6/6"] }]);
+bars("b4", [""], [{ key: "opus", vals: [1.7], labels: ["1.7"] }, { key: "fable", vals: [96.2], labels: ["96.2"] }, { key: "astra", vals: [3.5], labels: ["3.5"] }]);
+bars("b5", ["Breakout", "Seaquest", "Asterix"], [{ key: "opus", vals: [95.5, 21.9, 88.3] }, { key: "fable", vals: [7.6, 97.7, 92.9] }], { ref: 100, ymax: 112 });
+bars("b6", passes, [{ key: "opus", vals: [59.3, 81.1, 48.7, 58.3] }, { key: "astra", vals: [54.5, 66.5, 69.2, 82.4] }]);
+bars("b7", ["attention tool", "weights only"], [{ key: "opus", vals: [94.7, 41.9] }, { key: "astra", vals: [80.7, 50.5] }]);
+bars("b8", passes, [{ key: "opus", vals: [8.8, 56.2, 33.3, 54.4] }, { key: "astra", vals: [7.9, 12.3, 14.1, 48.1] }]);
+</script>

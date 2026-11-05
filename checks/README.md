@@ -11,8 +11,8 @@ for example `uv run python checks/exp5_validate.py`. Scripts that use Modal need
 | exp5 evaluator: Astra's networks give the released scores | `exp5_validate.py` |
 | exp5: how a written Breakout network loses the ball | `exp5_breakout_losses.py` |
 | exp6 Go engine: Astra's networks against the released PPO networks give the published results | `exp6_modal.py` (result in `exp6_validation.json`) |
-| exp6 rebuilt opponents | `exp6_opp_verify.py` |
-| exp6 budget 0: who makes the repeating move | `exp6_rep.py`, then `exp6_cycle.py` |
+| exp6 rebuilt opponents (needs a local environment with jax 0.4.38 and pgx 2.6.0) | `exp6_opp_verify.py` |
+| exp6 budget 0: who makes the repeating move (`exp6_rep.py` writes `exp6_rep.pkl`, which `exp6_cycle.py` reads) | `exp6_rep.py`, then `exp6_cycle.py` |
 | exp6, exp7 and exp8 turn handlers on scripted replies | `exp6_step_test.py`, `exp7_step_test.py`, `exp8_step_test.py` |
 | exp7 rebuilt models: behaviour, release IDs and answer keys | `exp7_behaviour.py` |
 | exp7 attention tool on the Figure 2 texts | `exp7_fig2.py` |

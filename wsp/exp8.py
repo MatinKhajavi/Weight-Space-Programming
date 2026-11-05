@@ -129,6 +129,9 @@ class Kernel:
         q.put(None)
 
     def restart(self):
+        if self.sb.poll() is not None:   # the sandbox itself is gone
+            self.new_sandbox()
+            return
         self.sb.exec("pkill", "-f", "/k/kernel.py").wait()
         self.start()
 
@@ -143,12 +146,11 @@ class Kernel:
         self.p.stdin.write(json.dumps({"code": code}) + "\n")
         self.p.stdin.drain()
         deadline, extra = time.time() + RUN_TIMEOUT, ""
-        while True:
+        while (left := deadline - time.time()) > 0:   # also ends a run that keeps printing below Python
             try:
-                line = self.q.get(timeout=max(1.0, deadline - time.time()))
+                line = self.q.get(timeout=left)
             except queue.Empty:
-                self.restart()
-                return extra + TIMED_OUT
+                break
             if line is None:
                 self.restart()
                 return extra + DIED
@@ -156,17 +158,19 @@ class Kernel:
                 before, _, rest = line.partition(MARK)
                 return extra + before + json.loads(rest)["out"]
             extra += line   # output written below Python (e.g. by a C library)
+        self.restart()
+        return extra + TIMED_OUT
 
     def text(self, path: str) -> str:
         try:
             return self.sb.filesystem.read_text(path)
-        except Exception:   # noqa: BLE001 - missing file
+        except Exception:   # missing file
             return ""
 
     def ls(self, path: str) -> list[str]:
         try:
             return sorted(f.name for f in self.sb.filesystem.list_files(path))
-        except Exception:   # noqa: BLE001 - missing folder
+        except Exception:   # missing folder
             return []
 
 
@@ -175,12 +179,12 @@ class Turns:
     starts a new conversation); None when final."""
 
     def __init__(self, run: str, out: Path, sample: int):
-        self.b, self.explain_at, self.notices = BUDGETS[run], EXPLAIN_AT[run], NOTICES[run]
+        self.budget, self.explain_at, self.notices = BUDGETS[run], EXPLAIN_AT[run], NOTICES[run]
         self.out, self.first = out, message(run)
         self.with_explain = (EXP / "runs" / run / "message.txt").read_text(encoding="utf-8")
         self.work_volume = f"wsp-exp8-{run}-s{sample}-{int(time.time())}"
         (out / "work_volume.txt").write_text(self.work_volume + "\n")
-        self.k = Kernel(self.work_volume)
+        self.kernel = Kernel(self.work_volume)
         self.turn = self.thread_turns = 1
         self.runs = self.passes = self.requests = self.streak = self.handoffs = 0
         self.tool_log = ToolLog(out / "tool_calls.jsonl")
@@ -196,29 +200,30 @@ class Turns:
         if bare and self.turn >= self.explain_at and self.streak < 2:
             self.streak += 1
             self.log({"kind": "sent_back", "streak": self.streak})
-            return self.wrap(SENT_BACK, nxt)
+            return self.wrap(SENT_BACK)
         self.streak = 0
         if block is None:
-            if self.passes >= self.b:
+            if self.passes >= self.budget:
                 self.log({"kind": "final", "runs": self.runs, "passes": self.passes, "requests": self.requests,
                           "handoffs": self.handoffs})
                 return None
             self.log({"kind": "nudge"})
-            return self.wrap(NUDGE.format(left=self.b - self.passes, b=self.b), nxt)
+            return self.wrap(NUDGE.format(left=self.budget - self.passes, b=self.budget))
         kind, body = block.groups()
         msg = self.run_python(body) if kind == "python" else self.forward_pass(body)
         if bare and nxt >= self.explain_at:   # upstream's switch turn carries the reminder too
             msg += REMINDER
-        return self.wrap(msg, nxt)
+        return self.wrap(msg)
 
-    def wrap(self, msg: str, nxt: int) -> tuple[str, bool]:
+    def wrap(self, msg: str) -> tuple[str, bool]:
         """Add what comes with the next turn: a kernel restart note, a notice from the experimenters, the EXPLAIN
         switch and, every 40 turns, the handoff to a new conversation."""
-        if self.k.fresh():
+        nxt = self.turn + 1
+        if self.kernel.fresh():
             msg = RESTARTED + msg
         if nxt in self.notices:
             if self.notices[nxt] == "002_tool_facts":
-                self.k.sb.filesystem.write_text(EVAL_PROMPT_FORMAT, "/work/eval_prompt_format.txt")
+                self.kernel.sb.filesystem.write_text(EVAL_PROMPT_FORMAT, "/work/eval_prompt_format.txt")
             notice = (EXP / "notices" / (self.notices[nxt] + ".txt")).read_text().strip()
             msg = f"[note from the experimenters] {notice}\n\n" + msg
         if nxt == self.explain_at:
@@ -239,20 +244,20 @@ class Turns:
             return NO_RUNS
         self.runs += 1
         t0 = time.time()
-        raw = self.k.run(code)
+        raw = self.kernel.run(code)
         self.log({"kind": "python", "run": self.runs, "s": round(time.time() - t0, 1), "code": code,
-                  "out": raw[:20000]})
+                  "out": raw[:20000]})   # the log keeps 20,000 characters; the model is shown 10,000 (shown)
         return f"OUTPUT of Python run {self.runs} of at most {MAX_RUNS}:\n```\n{shown(raw) or '(no output)'}\n```"
 
     def forward_pass(self, body: str) -> str:
-        if self.passes >= self.b:
+        if self.passes >= self.budget:
             return NO_PASSES
         self.requests += 1
         n, t0 = self.requests, time.time()
         try:
             req = json.loads(body)
-            done = run_forward(self.k.sb.object_id, n, req)
-        except Exception as e:   # noqa: BLE001 - a failed request is reported and not counted
+            done = run_forward(self.kernel.sb.object_id, n, req)
+        except Exception as e:   # a failed request is reported and not counted
             done = {"ok": False, "error": f"{type(e).__name__}: {e}"}
         self.log({"kind": "forward", "k": n, "s": round(time.time() - t0, 1), "request": body, "result": done})
         if not done.get("ok"):
@@ -261,23 +266,24 @@ class Turns:
         where = {"teacher_forced": f"/work/fwd_{n}/"}.get(req["type"]) or (
             f"/work/gen_{n}_original.jsonl and /work/gen_{n}_edited.jsonl" if req.get("model") == "both"
             else f"/work/gen_{n}.jsonl")
-        msg = (f"Forward pass {self.passes} of {self.b} done ({req['type']}); results in {where}. Summary:\n```\n"
-               f"{json.dumps(done, indent=1)}\n```\nForward passes left: {self.b - self.passes}.")
-        return msg + (LAST_PASS if self.passes == self.b else "")
+        msg = (f"Forward pass {self.passes} of {self.budget} done ({req['type']}); results in {where}. Summary:\n```\n"
+               f"{json.dumps(done, indent=1)}\n```\nForward passes left: {self.budget - self.passes}.")
+        return msg + (LAST_PASS if self.passes == self.budget else "")
 
     def handoff(self, msg: str, nxt: int) -> str:
-        edited = [f[:-4] for f in self.k.ls("/work/edited") if f.endswith(".npy")]
-        notes, files = self.k.text("/work/notes.md"), self.k.ls("/work")
+        edited = [f[:-4] for f in self.kernel.ls("/work/edited") if f.endswith(".npy")]
+        notes, files = self.kernel.text("/work/notes.md"), self.kernel.ls("/work")
         return (f"{self.with_explain if nxt > self.explain_at else self.first}\n\nTHIS IS A RESTARTED CONVERSATION (to "
-                f"keep it short): {nxt - 1} replies happened before. Forward passes used: {self.passes} of {self.b}; "
-                f"Python runs used: {self.runs} of {MAX_RUNS}. Your kernel is still running with its variables. "
+                f"keep it short): {nxt - 1} replies happened before. Forward passes used: {self.passes} of "
+                f"{self.budget}; Python runs used: {self.runs} of {MAX_RUNS}. Your kernel is still running with its "
+                f"variables. "
                 f"Tensors currently edited: {repr(edited) if edited else 'none'}. Files in /work: {files!r}.\n"
                 f"YOUR NOTEBOOK (/work/notes.md, last 8,000 characters):\n```\n{notes[-8000:]}\n```\nContinue from "
                 f"here.\n\nLast result:\n{msg}")
 
     def close(self):
         """Stop the sandbox (its final commit saves /work), then keep the submitted edits and the notebook locally."""
-        self.k.sb.terminate()
+        self.kernel.sb.terminate()
         dst = self.out / "work"
         dst.mkdir(exist_ok=True)
         for path in ["edited", "notes.md"]:
@@ -310,4 +316,7 @@ def prepare():
 
 
 if __name__ == "__main__":
-    {"prepare": prepare}[__import__("sys").argv[1]]()
+    import sys
+    if sys.argv[1:] != ["prepare"]:
+        sys.exit("usage: python -m wsp.exp8 prepare")
+    prepare()
