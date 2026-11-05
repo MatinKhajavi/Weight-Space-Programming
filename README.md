@@ -4,8 +4,7 @@ A replication of [*Sparks of Weight-Space Programming: LLMs can natively read & 
 weights*](https://rikiyat.github.io/blog/weight-space-programming/) (Takehi, Teoh, Zhang, Khattab; MIT CSAIL,
 November 2026), running its eight experiments with **Claude Opus 5.5** and **Claude Fable 5.1** in place of GPT-6 Astra.
 
-**Status:** all eight experiments done for Claude Opus 5.5, experiments 1-5 for Claude Fable 5.1 (exp3: several
-conversations per network, the rest one sample per item).
+**Status:** all eight experiments done for Claude Opus 5.5, experiments 1-5 for Claude Fable 5.1.
 
 ## What this is
 
@@ -36,7 +35,7 @@ Every setting, where it comes from, and every known deviation from the original 
 | 7 | Which language model is sycophantic? | xhigh | done |
 | 8 | Make Qwen3.5-0.8B better at math | max | done |
 
-## Results (one sample per item unless noted)
+## Results
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/figures/results-dark.png">
